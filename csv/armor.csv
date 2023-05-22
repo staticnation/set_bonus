@@ -1,0 +1,2201 @@
+chitin cuirass,Chitin Cuirass
+chitin pauldron - left,Chitin Left Pauldron
+chitin pauldron - right,Chitin Right Pauldron
+chitin boots,Chitin Boots
+chitin greaves,Chitin Greaves
+chitin helm,Chitin Helm
+chitin guantlet - left,Chitin Left Gauntlet
+chitin guantlet - right,Chitin Right Gauntlet
+indoril shield,Indoril Shield
+templar_pauldron_right,Imperial Templar Right Pauldron
+templar boots,Imperial Templar Boots
+indoril pauldron left,Indoril Left Pauldron
+indoril pauldron right,Indoril Right Pauldron
+templar bracer left,Imperial Templar Left Bracer
+templar bracer right,Imperial Templar Right Bracer
+templar_pauldron_left,Imperial Templar Left Pauldron
+templar_cuirass,Imperial Templar Knight Cuirass
+imperial left pauldron,Imperial Steel Left Pauldron
+imperial right pauldron,Imperial Steel Right Pauldron
+imperial left gauntlet,Imperial Steel Left Gauntlet
+imperial right gauntlet,Imperial Steel Right Gauntlet
+imperial boots,Imperial Steel Boots
+indoril helmet,Indoril Helmet
+imperial helmet armor,Imperial Steel Helmet
+indoril cuirass,Indoril Cuirass
+indoril left gauntlet,Indoril Left Gauntlet
+indoril right gauntlet,Indoril Right Gauntlet
+indoril boots,Indoril Boots
+right leather bracer,Leather Right Bracer
+left leather bracer,Leather Left Bracer
+cloth bracer left,Cloth Left Bracer
+cloth bracer right,Cloth Right Bracer
+imperial shield,Imperial Shield
+netch_leather_helm,Netch Leather Helm
+netch_leather_boiled_helm,Boiled Netch Leather Helm
+netch_leather_pauldron_left,Netch Leather Left Pauldron
+netch_leather_cuirass,Netch Leather Cuirass
+netch_leather_boiled_cuirass,Boiled Netch Leather Cuirass
+netch_leather_gauntlet_left,Netch Leather Left Gauntlet
+netch_leather_gauntlet_right,Netch Leather Right Gauntlet
+netch_leather_greaves,Netch Leather Greaves
+netch_leather_boots,Netch Leather Boots
+netch_leather_shield,Netch Leather Shield
+netch_leather_towershield,Netch Leather Tower Shield
+fur_helm,Nordic Fur Helm
+fur_colovian_helm,Colovian Fur Helm
+fur_pauldron_left,Nordic Fur Left Pauldron
+fur_cuirass,Nordic Fur Cuirass
+fur_bearskin_cuirass,Nordic Bearskin Cuirass
+fur_bracer_left,Nordic Fur Left Bracer
+fur_bracer_right,Nordic Fur Right Bracer
+fur_greaves,Nordic Fur Greaves
+fur_boots,Nordic Fur Boots
+nordic_leather_shield,Nordic Leather Shield
+dust_adept_helm,Telvanni Dust Adept Helm
+mole_crab_helm,Telvanni Mole Crab Helm
+cephalopod_helm,Telvanni Cephalopod Helm
+imperial_studded_cuirass,Imperial Studded Cuirass
+imperial_chain_coif_helm,Imperial Chain Coif
+imperial_chain_cuirass,Imperial Chain Cuirass
+nordic_ringmail_cuirass,Nordic Ringmail Cuirass
+chitin_mask_helm,Chitin Mask Helm
+chitin_watchman_helm,Redoran Watchman's Helm
+chitin_shield,Chitin Shield
+chitin_towershield,Chitin Tower Shield
+newtscale_cuirass,Imperial Newtscale Cuirass
+silver_helm,Imperial Silver Helm
+silver_cuirass,Imperial Silver Cuirass
+silver_dukesguard_cuirass,Duke's Guard Silver Cuirass
+imperial_greaves,Imperial Steel Greaves
+nordic_iron_helm,Nordic Iron Helm
+nordic_iron_cuirass,Nordic Iron Cuirass
+templar_greaves,Imperial Templar Greaves
+steel_helm,Steel Helm
+steel_pauldron_left,Steel Left Pauldron
+steel_pauldron_right,Steel Right Pauldron
+steel_cuirass,Steel Cuirass
+steel_shield,Steel Shield
+steel_towershield,Steel Tower Shield
+steel_gauntlet_left,Steel Left Gauntlet
+steel_gauntlet_right,Steel Right Gauntlet
+steel_greaves,Steel Greaves
+iron_pauldron_left,Iron Left Pauldron
+iron_pauldron_right,Iron Right Pauldron
+iron_cuirass,Iron Cuirass
+iron_shield,Iron Shield
+iron_towershield,Iron Tower Shield
+slave_bracer_left,Slave's Left Bracer
+slave_bracer_right,Slave's Right Bracer
+iron_bracer_left,Iron Left Bracer
+iron_bracer_right,Iron Right Bracer
+iron_greaves,Iron Greaves
+bonemold_gah-julan_helm,Native Gah-Julan Bonemold Helm
+bonemold_chuzei_helm,Native Chuzei Bonemold Helm
+bonemold_armun-an_helm,Native Armun-An Bonemold Helm
+morag_tong_helm,Morag Tong Helm
+bonemold_gah-julan_pauldron_r,Gah-Julan Right Pauldron
+bonemold_armun-an_pauldron_r,Armun-An Right Pauldron
+bonemold_gah-julan_pauldron_l,Gah-Julan Left Pauldron
+bonemold_armun-an_pauldron_l,Armun-An Left Pauldron
+bonemold_gah-julan_cuirass,Gah-Julan Bonemold Cuirass
+bonemold_armun-an_cuirass,Armun-An Bonemold Cuirass
+bonemold_bracer_left,Bonemold Left Bracer
+bonemold_bracer_right,Bonemold Right Bracer
+bonemold_greaves,Bonemold Greaves
+bonemold_boots,Bonemold Boots
+bonemold_shield,Bonemold Shield
+bonemold_towershield,Bonemold Tower Shield
+trollbone_helm,Nordic Trollbone Helm
+trollbone_cuirass,Nordic Trollbone Cuirass
+trollbone_shield,Nordic Trollbone Shield
+dragonscale_helm,Imperial Dragonscale Helm
+dragonscale_cuirass,Imperial Dragonscale Cuirass
+dragonscale_towershield,Dragonscale Tower Shield
+dwemer_helm,Dwemer Helm
+dwemer_pauldron_right,Dwemer Right Pauldron
+dwemer_pauldron_left,Dwemer Left Pauldron
+dwemer_cuirass,Dwemer Cuirass
+dwemer_bracer_left,Dwemer Left Bracer
+dwemer_bracer_right,Dwemer Right Bracer
+dwemer_greaves,Dwemer Greaves
+dwemer_boots,Dwemer Boots
+dwemer_shield,Dwemer Shield
+orcish_helm,Orcish Helm
+orcish_pauldron_right,Orcish Right Pauldron
+orcish_pauldron_left,Orcish Left Pauldron
+orcish_cuirass,Orcish Cuirass
+orcish_bracer_left,Orcish Left Bracer
+orcish_greaves,Orcish Greaves
+orcish_boots,Orcish Boots
+orcish_towershield,Orcish Tower Shield
+dreugh_helm,Dreugh Helm
+dreugh_cuirass,Dreugh Cuirass
+dreugh_shield,Dreugh Shield
+redoran_master_helm,Redoran Master Helm
+glass_helm,Glass Helm
+glass_cuirass,Glass Cuirass
+glass_shield,Glass Shield
+glass_towershield,Glass Tower Shield
+ebony_closed_helm,Ebony Closed Helm
+ebony_pauldron_right,Ebony Right Pauldron
+ebony_pauldron_left,Ebony Left Pauldron
+ebony_cuirass,Ebony Cuirass
+ebony_bracer_left,Ebony Left Bracer
+ebony_bracer_right,Ebony Right Bracer
+ebony_greaves,Ebony Greaves
+ebony_boots,Ebony Boots
+ebony_shield,Ebony Shield
+ebony_towershield,Ebony Tower Shield
+daedric_fountain_helm,Daedric Face of Inspiration
+daedric_terrifying_helm,Daedric Face of Terror
+daedric_god_helm,Daedric Face of God
+daedric_pauldron_right,Daedric Right Pauldron
+daedric_pauldron_left,Daedric Left Pauldron
+daedric_cuirass,Daedric Cuirass
+daedric_gauntlet_left,Daedric Left Gauntlet
+daedric_gauntlet_right,Daedric Right Gauntlet
+daedric_greaves,Daedric Greaves
+daedric_boots,Daedric Boots
+daedric_shield,Daedric Shield
+daedric_towershield,Daedric Tower Shield
+netch_leather_pauldron_right,Netch Leather Right Pauldron
+fur_pauldron_right,Nordic Fur Right Pauldron
+orcish_bracer_right,Orcish Right Bracer
+imperial_chain_greaves,Imperial Chain Greaves
+templar_helmet_armor,Imperial Templar Helmet
+imperial cuirass_armor,Imperial Steel Cuirass
+fur_gauntlet_left,Nordic Fur Left Gauntlet
+fur_gauntlet_right,Nordic Fur Right Gauntlet
+imperial_chain_pauldron_right,Imperial Chain Right Pauldron
+imperial_chain_pauldron_left,Imperial Chain Left Pauldron
+iron_gauntlet_left,Iron Left Gauntlet
+iron_gauntlet_right,Iron Right Gauntlet
+iron_helmet,Iron Helmet
+bonemold_tshield_hlaaluguard,Hlaalu Guard Shield
+bonemold_tshield_redoranguard,Redoran Guard Shield
+bonemold_tshield_telvanniguard,Telvanni Guard Shield
+bonemold_founders_helm,Redoran Founder's Helm
+glass_pauldron_left,Glass Left Pauldron
+glass_pauldron_right,Glass Right Pauldron
+ebony_closed_helm_fghl,Sarano Ebony Helm
+merisan_cuirass,Merisan Cuirass
+shield_of_light,Shield of Light
+the_chiding_cuirass,The Chiding Cuirass
+velothian_helm,Velothian Helm
+feather_shield,Feather Shield
+velothis_shield,Velothi's Shield
+holy_shield,Holy Shield
+blessed_shield,Blessed Shield
+veloths_tower_shield,Veloth's Tower Shield
+holy_tower_shield,Holy Tower Shield
+demon helm,Demon Helm
+demon mole crab,Demon Mole Crab Helm
+demon cephalopod,Demon Cephalopod Helm
+right horny fist gauntlet,Right Glove of the Horny Fist
+left_horny_fist_gauntlet,Left Glove of the Horny Fist
+helm of wounding,Helm of Wounding
+shield of wounds,Shield of Wounds
+storm helm,Storm Helm
+heart wall,Heart Wall
+right gauntlet of horny fist,Right Gauntlet of Horny Fist
+left gauntlet of the horny fist,Left Gauntlet of the Horny Fist
+velothian shield,Velothian Shield
+succour of indoril,Succour of Indoril
+merisan helm,Merisan Helm
+chest of fire,Chest of Fire
+lbonemold brace of horny fist,Bonemold Bracer of Horny Fist
+rbonemold bracer of horny fist,Bonemold R Bracer of Horny Fist
+helm of holy fire,Helm of Holy Fire
+spirit of indoril,Spirit of Indoril
+saint's shield,Saint's Shield
+azura's servant,Azura's Servant
+bound_cuirass,Bound Cuirass
+bound_helm,Bound Helm
+bound_boots,Bound Boots
+bound_shield,Bound Shield
+fiend helm,Fiend Helm
+devil helm,Devil Helm
+devil mole crab helm,Devil Mole Crab Helm
+devil cephalopod helm,Devil Cephalopod Helm
+right cloth horny fist bracer,Right Cloth Horny Fist Bracer
+left cloth horny fist bracer,Left Cloth Horny Fist Bracer
+steel_boots,Steel Boots
+bonemold_tshield_hrlb,Redoran Banner Shield
+bonemold_gah-julan_hhda,Native Gah-Julan Bonemold Helm
+dwemer_boots of flying,Dwemer Boots of Flying
+bonemold_helm,Bonemold Helm
+bonemold_pauldron_r,Bonemold Right Pauldron
+bonemold_pauldron_l,Bonemold Left Pauldron
+bonemold_cuirass,Bonemold Cuirass
+iron boots,Iron Boots
+heavy_leather_boots,Heavy Leather Boots
+daedric_cuirass_htab,Daedric Cuirass
+daedric_greaves_htab,Daedric Greaves
+shadow_shield,Shadow Shield
+wraithguard,Wraithguard
+wraithguard_jury_rig,Wraithguard
+tenpaceboots,Ten Pace Boots
+glass_boots,Glass Boots
+glass_greaves,Glass Greaves
+dreugh_cuirass_ttrm,Dreugh Cuirass
+ebony_shield_auriel,Auriel's Shield
+daedric_helm_clavicusvile,Masque of Clavicus Vile
+bound_gauntlet_right,Bound Right Gauntlet
+bound_gauntlet_left,Bound Left Gauntlet
+ebony_bracer_left_tgeb,Ebony Left Bracer
+ebony_bracer_right_tgeb,Ebony Right Bracer
+boots of blinding speed[unique],Boots of Blinding Speed
+veloths_shield,Veloth's Shield
+gauntlet_horny_fist_r,Right Gauntlet of Horny Fist
+gauntlet _horny_fist_l,Left Gauntlet of the Horny Fist
+blessed_tower_shield,Blessed Tower Shield
+lords_cuirass_unique,Lord's Mail
+ebon_plate_cuirass_unique,Ebony Mail
+spell_breaker_unique,Spell Breaker
+cuirass_savior_unique,Cuirass of the Savior's Hide
+gauntlet_fists_l_unique,Left Fist of Randagulf
+gauntlet_fists_r_unique,Right Fist of Randagulf
+towershield_eleidon_unique,Eleidon's Ward
+dragonbone_cuirass_unique,Dragonbone Cuirass
+helm_bearclaw_unique,Helm of Oreyn Bearclaw
+boots_apostle_unique,Boots of the Apostle
+shield of the undaunted,Shield of the Undaunted
+imperial_helm_frald_uniq,Helm of Graff the White
+erur_dan_cuirass_unique,Erur-Dan's Cuirass
+conoon_chodala_boots_unique,Conoon Chodala's Boots
+icecap_unique,The Icecap
+boneweave gauntlet,Boneweave Gauntlet
+bonedancer gauntlet,Bonedancer Gauntlet
+Mountain Spirit,Mountain Spirit
+darksun_shield_unique,Darksun Shield
+bloodworm_helm_unique,Bloodworm Helm
+cephalopod_helm_HTNK,Gothren's Cephalopod Helm
+Blood_Feast_Shield,Blood Feast Shield
+Gauntlet_of_Glory_left,Left Gauntlet of Glory
+gauntlet_of_glory_right,Right Gauntlet of Glory
+gondolier_helm,Gondolier's Helm
+imperial helmet armor_Dae_curse,Imperial Steel Helmet
+glass_bracer_left,Glass Left Bracer
+glass_bracer_right,Glass Right Bracer
+towershield_eleidon_unique_x,Eleidon's Ward
+lords_cuirass_unique_x,Lord's Mail
+cuirass_savior_unique_x,Cuirass of the Savior's Hide
+tenpaceboots_x,Ten Pace Boots
+ebon_plate_cuirass_unique_x,Ebony Mail
+boots_apostle_unique_x,Boots of the Apostle
+ebony_shield_auriel_x,Auriel's Shield
+boots of blinding speed_x,Boots of Blinding Speed
+dragonbone_cuirass_unique_x,Dragonbone Cuirass
+helm_bearclaw_unique_x,Helm of Oreyn Bearclaw
+spell_breaker_unique_x,Spell Breaker
+bloodworm_helm_unique_x,Bloodworm Helm
+ebony_cuirass_soscean,Soscean's Cuirass
+silver_helm_uvenim,Imperial Silver Helm
+Indoril_Almalexia_helmet,Her Hand's Helmet
+Indoril_Almalexia_boots,Her Hand's Boots
+Indoril_Almalexia_Cuirass,Her Hand's Cuirass
+Indoril_Almalexia_Greaves,Her Hand's Greaves
+Indoril_Almalexia_Pauldron_L,Her Hand's Left Pauldron
+Indoril_Almalexia_Pauldron_R,Her Hand's Right Pauldron
+Indoril_Almalexia_gauntlet_R,Her Hand's Right Gauntlet
+Indoril_Almalexia_gauntlet_L,Her Hand's Left Gauntlet
+Helsethguard_Helmet,Royal Guard Helm
+Helsethguard_boots,Royal Guard Boots
+Helsethguard_cuirass,Royal Guard Cuirass
+Helsethguard_greaves,Royal Guard Greaves
+Helsethguard_gauntlet_left,Royal Guard Left Gauntlet
+Helsethguard_gauntlet_right,Royal Guard Right Gauntlet
+Helsethguard_pauldron_left,Royal Guard Left Pauldron
+Helsethguard_pauldron_right,Royal Guard Right Pauldron
+DarkBrotherhood Helm,Dark Brotherhood Helm
+DarkBrotherhood Cuirass,Dark Brotherhood Cuirass
+DarkBrotherhood greaves,Dark Brotherhood Greaves
+DarkBrotherhood pauldron_L,Dark Brotherhood Left Pauldron
+DarkBrotherhood pauldron_R,Dark Brotherhood Right Pauldron
+DarkBrotherhood gauntlet_L,Dark Brotherhood Left Gauntlet
+DarkBrotherhood gauntlet_R,Dark Brotherhood Right Gauntlet
+DarkBrotherhood Boots,Dark Brotherhood Boots
+adamantium boots,Adamantium Boots
+adamantium_bracer_left,Adamantium Left Bracer
+adamantium_bracer_right,Adamantium Right Bracer
+adamantium_cuirass,Adamantium Cuirass
+adamantium_greaves,Adamantium Greaves
+adamantium_pauldron_right,Adamantium Right Pauldron
+adamantium_pauldron_left,Adamantium Left Pauldron
+addamantium_helm,Adamantium Helm
+goblin_shield,Goblin Buckler
+Indoril_Almalexia_shield,Her Hand's Shield
+dwemer_shield_battle_unique,Dwemer Battle Shield
+Indoril_MH_Guard_boots,Her Hand's Boots
+Indoril_MH_Guard_Cuirass,Her Hand's Cuirass
+Indoril_MH_Guard_gauntlet_L,Her Hand's Left Gauntlet
+Indoril_MH_Guard_gauntlet_R,Her Hand's Right Gauntlet
+Indoril_MH_Guard_Greaves,Her Hand's Greaves
+Indoril_MH_Guard_helmet,Her Hand's Helmet
+Indoril_MH_Guard_Pauldron_L,Her Hand's Left Pauldron
+Indoril_MH_Guard_Pauldron_R,Her Hand's Right Pauldron
+Indoril_MH_Guard_shield,Her Hand's Shield
+goblin_shield_durgok_uni,Goblin Buckler
+adamantium_helm,Adamantium Helm
+BM bear boots,Bear Boots
+BM bear cuirass,Bear Cuirass
+bm bear left gauntlet,Bear Left Gauntlet
+BM bear right gauntlet,Bear Right Gauntlet
+BM bear greaves,Bear Greaves
+BM Bear Helmet,Bear Helmet
+BM bear right pauldron,Bear Right Pauldron
+BM Bear left Pauldron,Bear Left Pauldron
+BM wolf cuirass,Wolf Cuirass
+BM wolf greaves,Wolf Greaves
+BM Wolf Helmet,Wolf Helmet
+bm wolf left gauntlet,Wolf Left Gauntlet
+BM Wolf Left Pauldron,Wolf Left Pauldron
+BM wolf right gauntlet,Wolf Right Gauntlet
+BM Wolf right pauldron,Wolf Right Pauldron
+steel_boots_ancient,Ancient Steel Boots
+steel_cuirass_ancient,Ancient Steel Cuirass
+steel_gauntlet_left_ancient,Ancient Steel Left Gauntlet
+steel_gauntlet_right_ancient,Ancient Steel Right Gauntlet
+steel_greaves_ancient,Ancient Steel Greaves
+steel_helm_ancient,Ancient Steel Helm
+steel_pauldron_left_ancient,Ancient Steel Left Pauldron
+steel_pauldron_right_ancient,Ancient Steel Right Pauldron
+steel_towershield_ancient,Ancient Steel Tower Shield
+BM wolf boots,Wolf Boots
+fur_colovian_helm_red,Red Colovian Fur Helm
+fur_colovian_helm_white,White Colovian Fur Helm
+BM_Ice minion_Shield1,Riekling Shield
+BM_wolf_cuirass_snow,Snow Wolf Cuirass
+BM_wolf_greaves_snow,Snow Wolf Greaves
+BM_wolf_helmet_snow,Snow Wolf Helmet
+BM_wolf_left_gauntlet_snow,Snow Wolf Left Gauntlet
+BM_wolf_left_pauldron_snow,Snow Wolf Left Pauldron
+BM_wolf_right_gauntlet_snow,Snow Wolf Right Gauntlet
+BM_wolf_right_pauldron_snow,Snow Wolf Right Pauldron
+BM_bear_boots_snow,Snow Bear Boots
+BM_bear_cuirass_snow,Snow Bear Cuirass
+BM_bear_greaves_snow,Snow Bear Greaves
+BM_bear_helmet_snow,Snow Bear Helmet
+BM_bear_left_gauntlet_snow,Snow Bear Left Gauntlet
+BM_Bear_left_Pauldron_snow,Snow Bear Left Pauldron
+BM_bear_right_gauntlet_snow,Snow Bear Right Gauntlet
+BM_bear_right_pauldron_snow,Snow Bear Right Pauldron
+BM_wolf_boots_snow,Snow Wolf Boots
+BM Bear Helmet eddard,Helm of Bear Scent
+BM_NordicMail_Boots,Nordic Mail Boots
+BM_NordicMail_cuirass,Nordic Mail Cuirass
+BM_NordicMail_PauldronL,Nordic Mail Left Pauldron
+BM_NordicMail_PauldronR,Nordic Mail Right Pauldron
+BM_NordicMail_gauntletL,Nordic Mail Left Gauntlet
+BM_NordicMail_gauntletR,Nordic Mail Right Gauntlet
+BM_NordicMail_Helmet,Nordic Mail Helmet
+BM_NordicMail_greaves,Nordic Mail Greaves
+BM_Ice_Boots,Ice Armor Boots
+BM_Ice_cuirass,Ice Armor Cuirass
+BM_Ice_gauntletL,Ice Armor Left Gauntlet
+BM_Ice_gauntletR,Ice Armor Right Gauntlet
+BM_Ice_greaves,Ice Armor Greaves
+BM_Ice_Helmet,Ice Armor Helmet
+BM_Ice_PauldronL,Ice Armor Left Pauldron
+BM_Ice_PauldronR,Ice Armor Right Pauldron
+BM Bear Helmet_ber,Helmet of Bearkind
+BM_NordicMail_Shield,Nordic Mail Shield
+BM_Ice_Shield,Ice Shield
+BM wolf shield,Wolf Shield
+BM bear shield,Bear Shield
+BM Wolf Helmet_heartfang,Helm of the Wolf's Heart
+wolfwalkers,Paws of the Wolf-Runner
+GDR_a_dwrv_cuirass_01,Steam Centurion Chest
+GDR_a_dwrv_helm_01,Steam Centurion Head
+GDR_a_dwrv_pauldr_l,Steam Centurion Left Pauldron
+GDR_a_dwrv_pauldr_r,Steam Centurion Right Pauldron
+GDR_a_dwrv_twrshield,Dwarven Towershield
+GDR_a_dwrv_twrshield02,Dwarven Towershield
+AB_a_Backbasket,Basket
+AB_a_BonemHelmOpen,Bonemold Open Helm
+AB_a_BonemLightBoots,Sal-Amur Bonemold Boots
+AB_a_BonemLightBracerL,Sal-Amur Bonemold Bracer L
+AB_a_BonemLightBracerR,Sal-Amur Bonemold Bracer R
+AB_a_BonemLightCuirass,Sal-Amur Bonemold Cuirass
+AB_a_BonemLightGreaves,Sal-Amur Bonemold Greaves
+AB_a_BonemLightHelm,Sal-Amur Bonemold Helm
+AB_a_BonemLightPaulL,Sal-Amur Bonemold Pauldron L
+AB_a_BonemLightPaulR,Sal-Amur Bonemold Pauldron R
+AB_a_BugBlueBoots,Blue Bug Boots
+AB_a_BugBlueCuirass,Blue Bug Cuirass
+AB_a_BugBlueGntLeft,Blue Bug Gauntlet - Left
+AB_a_BugBlueGntRight,Blue Bug Gauntlet - Right
+AB_a_BugBlueGreaves,Blue Bug Greaves
+AB_a_BugBlueHelm,Blue Bug Helm
+AB_a_BugBluePldLeft,Blue Bug Left Pauldron
+AB_a_BugBluePldRight,Blue Bug Right Pauldron
+AB_a_BugBlueShield,Blue Bug Shield
+AB_a_BugGreenBoots,Green Bug Boots
+AB_a_BugGreenCuirass,Green Bug Cuirass
+AB_a_BugGreenGntLeft,Green Bug Gauntlet - Left
+AB_a_BugGreenGntRight,Green Bug Gauntlet - Right
+AB_a_BugGreenGreaves,Green Bug Greaves
+AB_a_BugGreenHelm,Green Bug Helm
+AB_a_BugGreenPldLeft,Green Bug Left Pauldron
+AB_a_BugGreenPldRight,Green Bug Right Pauldron
+AB_a_BugGreenShield,Green Bug Shield
+AB_a_CephHelmOpen,Telvanni Cephalopod Helm
+AB_a_CephPauldronLeft,Cephalopod Left Pauldron
+AB_a_CephPauldronRight,Cephalopod Right Pauldron
+AB_a_ChitinHelmOpen,Chitin Open Helm
+AB_a_ChitinHlaHelm01,Khestis Chitin Helmet
+AB_a_ChitinRedHelm01,Sho-Hadad Chitin Helmet
+AB_a_ChitinScoutHelm,Chitin Scout Helm
+AB_a_ChitinTelHelm01,Mir-Moljuhn Chitin Helmet
+AB_a_ClothHelm1,Cloth Neck Wrap
+AB_a_ClothHelm2,Cloth Neck Wrap
+AB_a_ClothHelm3,Cloth Neck Wrap
+AB_a_DaeAzuraHelm,Daedric Face of Revelation
+AB_a_DaeDagonHelm,Face of the Husband of Fire
+AB_a_DaeMolagHelm,Face of the Forbidden Tickle
+AB_a_DaeSheogHelm,Face of Comforting Tendrils 
+AB_a_DreughBoots,Dreugh Boots
+AB_a_DreughBracerL,Dreugh Bracer Left
+AB_a_DreughBracerR,Dreugh Bracer Right
+AB_a_DreughGreaves,Dreugh Greaves
+AB_a_DreughHelmClose,Dreugh Helm
+AB_a_DreughPldLeft,Dreugh Pauldron Left
+AB_a_DreughPldRight,Dreugh Pauldron Right
+AB_a_DustBoots,Dust Merchant Boots
+AB_a_DustBracerLeft,Dust Merchant Bracer L.
+AB_a_DustBracerRight,Dust Merchant Bracer R.
+AB_a_DustChest,Dust Merchant Coat
+AB_a_DustGreaves,Dust Merchant Greaves
+AB_a_DustHelm,Dust Merchant Helmet
+AB_a_DustPldrLeft,Dust Merchant Pauldron L.
+AB_a_DustPldrRight,Dust Merchant Pauldron R.
+AB_a_EggminerHelm,Egg Miner's Mask
+AB_a_GlassAssassinPauldronLeft,Glass Assassin Pauldron Left
+AB_a_GlassAssassinPauldronRight,Glass Assassin Pauldron Right
+AB_a_GlassHelmClose,Glass Helm
+AB_a_ImpBmBoots,Imperial Battlemage Boots
+AB_a_ImpBmCuirass,Imperial Battlemage Cuirass
+AB_a_ImpBmGreaves,Imperial Battlemage Greaves
+AB_a_ImpBmHelm,Imperial Battlemage Hood
+AB_a_ImpBmPldLeft,Imperial Battlemage Pauldron L
+AB_a_ImpBmPldRight,Imperial Battlemage Pauldron R
+AB_a_InvisShield,Shield
+AB_a_IronDeBoots,Dunmer Iron Boots
+AB_a_IronDeCuirass,Dunmer Iron Cuirass
+AB_a_IronDeHelm,Dunmer Iron Helmet
+AB_a_IronDeHelmTong,Native Tongman Iron Helm
+AB_a_IronDePldLeft,Dunmer Iron Left Pauldron
+AB_a_IronDePldRight,Dunmer Iron Right Pauldron
+AB_a_LeatherHat,Leather Hat
+AB_a_MoragTongHelm01,Morag Tong Ar-Hadaz Mask
+AB_a_MoragTongHelm02,Morag Tong Dun-Saro Hood
+AB_a_MoragTongHelm03,Morag Tong Mar-Roth Mask
+AB_a_MoragTongHelm04,Morag Tong Irovonei Helm
+AB_a_NetchBoilPldLeft,Boiled Netch Leather Pauldron L
+AB_a_NetchBoilPldRight,Boiled Netch Leather Pauldron R
+AB_a_NetchimanCap,Netchiman's Cap
+AB_a_OrcHelmOpen,Orcish Open Helm
+AB_a_SteelBoots,Light Steel Boots
+AB_a_SteelCuirass,Light Steel Cuirass
+AB_a_SteelGntlLeft,Light Steel Gauntlet L.
+AB_a_SteelGntlRight,Light Steel Gauntlet R.
+AB_a_SteelGreaves,Light Steel Greaves
+AB_a_SteelHelm,Light Steel Helmet
+AB_a_SteelHelmOpen,Steel Helm
+AB_a_SteelPldrLeft,Light Steel Pauldron L.
+AB_a_SteelPldrRight,Light Steel Pauldron R.
+AB_a_WickerHelm,Wicker Hat
+AB_a_WickerHelm02,Wicker Hat
+AB_c_CommonHood01,Common Hood
+AB_c_CommonHood02,Common Hood
+AB_c_CommonHood02h,Common Hood
+AB_c_CommonHood02hh,Common Hood
+AB_c_CommonHood02r,Common Hood
+AB_c_CommonHood02rr,Common Hood
+AB_c_CommonHood02t,Common Hood
+AB_c_CommonHood02tt,Common Hood
+AB_c_CommonHood03,Common Hood
+AB_c_CommonHood03a,Common Hood
+AB_c_CommonHood03b,Common Hood
+AB_c_CommonHood04,Common Hood
+AB_c_CommonHood05,Common Hood
+AB_c_CommonHood05a,Common Hood
+AB_c_CommonHood05b,Common Hood
+AB_c_CommonHood05c,Common Hood
+AB_c_CommonHoodBlack,Common Hood
+AB_c_DwrvHat,Dwemer Hat
+AB_c_ExpensiveHood01,Expensive Hood
+AB_c_ExpensiveHood02,Expensive Hood
+AB_c_ExpensiveHood02a,Expensive Hood
+AB_c_ExpensiveHood03,Expensive Hood
+AB_c_ExquisiteHood01,Exquisite Hood
+AB_c_ExtravagantHood01,Extravagant Hood
+AB_c_ExtravagantHood01a,Extravagant Hood
+AB_c_ExtravagantHood01b,Extravagant Hood
+AB_c_ExtravagantHood01c,Extravagant Hood
+AB_c_ExtravagantHood01h,Extravagant Hood
+AB_c_ExtravagantHood01r,Extravagant Hood
+AB_c_ExtravagantHood01t,Extravagant Hood
+AB_c_ExtravagantHood02,Extravagant Hood
+T_Aka_Regular_Shield_01,Akaviri Shield
+T_Arg_Hist_Cuirass_01,Hist Cuirass
+T_Arg_Hist_Cuirass_Freedom,Hist Cuirass of Freedom
+T_Arg_Hist_Cuirass_Visitor,Hist Cuirass of the Visitor
+T_Ayl_Saliache_Boots_01,Saliache Boots
+T_Ayl_Saliache_BracerL_01,Saliache Left Bracer
+T_Ayl_Saliache_BracerR_01,Saliache Right Bracer
+T_Ayl_Saliache_Cuirass_01,Saliache Cuirass
+T_Ayl_Saliache_Greaves_01,Saliache Greaves
+T_Ayl_Saliache_Helm_01,Saliache Helm
+T_Ayl_Saliache_PauldronL_01,Saliache Left Pauldron
+T_Ayl_Saliache_PauldronR_01,Saliache Right Pauldron
+T_Ayl_Saliache_Shield_01,Saliache Shield
+T_Bre_BjoulsaeFur_Helm_01,Bjoulsae Fur Helm
+T_Bre_Ep_HatWizard_01,Expensive Wizard Hat
+T_Bre_Ep_HatWizard_02,Expensive Wizard Hat
+T_Bre_Mithril_Shield_01,Mithril Shield
+T_Bre_UNI_LordlyHeaterShield,Shield of the Lord Commander
+T_Bre_UNI_TricksterShield,Shield of the Trickster
+T_Bre_WoodenHeater_Shield_01,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_02,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_03,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_04,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_05,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_06,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_07,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_08,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_09,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_10,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_11,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_12,Wooden Heater Shield
+T_Bre_WoodenHeater_Shield_13,Wooden Heater Shield
+T_Com_Bound_Greaves_01,Bound Greaves
+T_Com_Bound_PauldronL_01,Bound Left Pauldron
+T_Com_Bound_PauldronR_01,Bound Right Pauldron
+T_Com_Chain_Cuirass_01,Chain Cuirass
+T_Com_Chain_Cuirass_02,Chain Cuirass
+T_Com_Chain_Cuirass_03,Chain Cuirass
+T_Com_Iron_Boots_01,Iron Boots
+T_Com_Iron_Boots_02,Iron Boots
+T_Com_Iron_BracerL_01,Iron Left Bracer
+T_Com_Iron_BracerL_02,Iron Left Bracer
+T_Com_Iron_BracerR_01,Iron Right Bracer
+T_Com_Iron_BracerR_02,Iron Right Bracer
+T_Com_Iron_Cuirass_01,Iron Cuirass
+T_Com_Iron_Cuirass_02,Iron Cuirass
+T_Com_Iron_Greaves_01,Iron Greaves
+T_Com_Iron_Greaves_02,Iron Greaves
+T_Com_Iron_Helm_01,Iron Helmet
+T_Com_Iron_Helm_02,Iron Helmet
+T_Com_Iron_Helm_Open,Iron Helmet
+T_Com_Iron_PauldronL_01,Iron Left Pauldron
+T_Com_Iron_PauldronL_02,Iron Left Pauldron
+T_Com_Iron_PauldronR_01,Iron Right Pauldron
+T_Com_Iron_PauldronR_02,Iron Right Pauldron
+T_Com_IronSkull_PauldronL_01,Gruesome Iron Left Pauldron
+T_Com_IronSkull_PauldronR_01,Gruesome Iron Right Pauldron
+T_Com_IronSpike_PauldronL_01,Spiked Iron Left Pauldron
+T_Com_IronSpike_PauldronR_01,Spiked Iron Right Pauldron
+T_Com_Steel_Boots_Consuming,Boots of Consuming Indwelling
+T_Com_Steel_Boots_Creeping,Boots of the Creeping Things
+T_Com_Steel_Boots_Glacial,Boots of Glacial Hue
+T_Com_Steel_Boots_Perfection,Boots of Exquisite Perfection
+T_Com_Steel_Cuirass_01,Steel Cuirass
+T_Com_Steel_Cuirass_02,Steel Cuirass
+T_Com_Steel_Cuirass_03,Steel Cuirass
+T_Com_Steel_Cuirass_04,Steel Cuirass
+T_Com_Steel_Cuirass_DuskDawn,Cuirass of Dusk and the Dawn
+T_Com_Steel_Cuirass_FinalVirtue,Cuirass of Final Virtue
+T_Com_Steel_Cuirass_Outermost,Cuirass of the Outermost Wastes
+T_Com_Steel_Cuirass_ScalyPelt,Cuirass of the Scaly Pelt
+T_Com_Steel_Cuirass_Steelhearth,Cuirass of Steelhearth
+T_Com_Steel_GauntletL_RainFire,L Gauntlet of the Rain of Fire
+T_Com_Steel_GauntletL_Scathing,Left Gauntlet of Scathing
+T_Com_Steel_GauntletL_Summer,L Gauntlet of the Summer's Day
+T_Com_Steel_GauntletL_Wonder,L Gauntlet of Expectant Wonder
+T_Com_Steel_GauntletR_RainFire,R Gauntlet of the Rain of Fire
+T_Com_Steel_GauntletR_Scathing,Right Gauntlet of Scathing
+T_Com_Steel_GauntletR_Summer,R Gauntlet of the Summer's Day
+T_Com_Steel_GauntletR_Wonder,R Gauntlet of Expectant Wonder
+T_Com_Steel_Greaves_BitingPains,Greaves of the Biting Pains
+T_Com_Steel_Greaves_Kings,Greaves of Kings
+T_Com_Steel_Greaves_StampToad,Greaves of Stamp of the Toad
+T_Com_Steel_Greaves_Unrequited,Greaves of Unrequited Intent
+T_Com_Steel_Helm_01,Steel Helm
+T_Com_Steel_Helm_Despair,Helmet of Despair
+T_Com_Steel_Helm_Open_01,Steel Helm
+T_Com_Steel_Helm_Open_02,Steel Helm
+T_Com_Steel_Helm_Preciptious,Helm of Precipitous Revelation
+T_Com_Steel_Helm_TongueWyrm,Helm of the Tongue of the Wyrm
+T_Com_Steel_Helm_WindingRoad,Helmet of the Winding Road
+T_Com_Steel_PauldronL_01,Steel Left Pauldron
+T_Com_Steel_PauldronL_02,Steel Left Pauldron
+T_Com_Steel_PauldronL_03,Steel Left Pauldron
+T_Com_Steel_PauldronL_MisHand,L Pauldron of Mischievous Hand
+T_Com_Steel_PauldronL_MonkeyApp,L Pauldron Monkey Apprehension
+T_Com_Steel_PauldronL_Sacred,Left Pauldron of Sacred Honor
+T_Com_Steel_PauldronL_WinterWin,L Pauldron of Winter's Winds
+T_Com_Steel_PauldronR_01,Steel Right Pauldron
+T_Com_Steel_PauldronR_02,Steel Right Pauldron
+T_Com_Steel_PauldronR_03,Steel Right Pauldron
+T_Com_Steel_PauldronR_MisHand,R Pauldron of Mischievous Hand
+T_Com_Steel_PauldronR_MonkeyApp,R Pauldron Monkey Apprehension
+T_Com_Steel_PauldronR_Sacred,Right Pauldron of Sacred Honor
+T_Com_Steel_PauldronR_WinterWin,R Pauldron of Winter's Winds
+T_Com_SteelSpike_PauldronL_01,Spiked Steel Left Pauldron
+T_Com_SteelSpike_PauldronR_01,Spiked Steel Right Pauldron
+T_Cr_Goblin_Helm_01,Goblin Helmet
+T_Cr_Goblin_PauldronL_01,Goblin Left Pauldron
+T_Cr_Goblin_PauldronR_01,Goblin Right Pauldron
+T_Cr_Goblin_Shield_01,Goblin Shield
+T_Dae_Lord_Boots_01,<Deprecated>
+T_Dae_Lord_GauntletL_01,<Deprecated>
+T_Dae_Lord_GauntletR_01,<Deprecated>
+T_Dae_Lord_Helm_01,<Deprecated>
+T_Dae_Lord_PauldronL_01,<Deprecated>
+T_Dae_Lord_PauldronR_01,<Deprecated>
+T_Dae_Regular_HelmConsolat_01,Daedric Face of Consolation
+T_Dae_Regular_HelmHumiliat_01,<Deprecated>
+T_Dae_Regular_HelmHumiliat_02,Daedric Face of Humiliation
+T_Dae_Regular_HelmRebellion_01,Daedric Face of Rebellion
+T_Dae_Regular_PauldronL_01,<Deprecated>
+T_Dae_Regular_PauldronR_01,<Deprecated>
+T_Dae_Regular_ShieldTower_01,<Deprecated>
+T_Dae_UNI_AuroranGauntletL,Auroran Left Gauntlet
+T_Dae_UNI_AuroranGauntletR,Auroran Right Gauntlet
+T_Dae_UNI_BootsOfAtronach,Boots of the Atronach
+T_Dae_UNI_BootsOfPeace_01,Boots of Peace
+T_Dae_UNI_BootsSaviorsHide,Boots of the Savior's Hide
+T_Dae_UNI_Fearstruck,Fearstruck
+T_Dae_UNI_GauntletOfPoor_L,Left Gauntlet of the Poor
+T_Dae_UNI_GauntletOfPoor_R,Right Gauntlet of the Poor
+T_Dae_UNI_GreavesSaviorsHide,Greaves of the Savior's Hide
+T_Dae_UNI_HelmLightWithin_01,Helm of Light Within
+T_Dae_UNI_HelmSaviorsHide,Helm of the Savior's Hide
+T_Dae_UNI_LGauntSaviorsHide,L Gauntlet of the Savior's Hide
+T_Dae_UNI_LMethatsPauldron,Lord Methats' Left Pauldron
+T_Dae_UNI_LPauldSaviorsHide,L Pauldron of the Savior's Hide
+T_Dae_UNI_Polyhedrascope_01,Bizarre Helmet
+T_Dae_UNI_RGauntSaviorsHide,R Gauntlet of the Savior's Hide
+T_Dae_UNI_RMethatsPauldron,Lord Methats' Right Pauldron
+T_Dae_UNI_RPauldSaviorsHide,R Pauldron of the Savior's Hide
+T_De_AlmaRula_Helm_UNI,Mask of the Alma Rula
+T_De_Bonemold_Chuzei_Boots,Chuzei Bonemold Boots
+T_De_Bonemold_Chuzei_Boots_E,Engraved Chuzei Boots
+T_De_Bonemold_Chuzei_BracerL,Chuzei Bonemold L Bracer
+T_De_Bonemold_Chuzei_BracerL_E,Engraved Chuzei L Bracer
+T_De_Bonemold_Chuzei_BracerR,Chuzei Bonemold R Bracer
+T_De_Bonemold_Chuzei_BracerR_E,Engraved Chuzei R Bracer
+T_De_Bonemold_Chuzei_Cuirass,Chuzei Bonemold Cuirass
+T_De_Bonemold_Chuzei_Cuirass_E,Engraved Chuzei Cuirass
+T_De_Bonemold_Chuzei_Greaves,Chuzei Bonemold Greaves
+T_De_Bonemold_Chuzei_Greaves_E,Engraved Chuzei Greaves
+T_De_Bonemold_Chuzei_Helm_E,Engraved Chuzei Helmet
+T_De_Bonemold_Chuzei_PauldL,Chuzei Bonemold L Pauldron
+T_De_Bonemold_Chuzei_PauldL_E,Engraved Chuzei L Pauldron
+T_De_Bonemold_Chuzei_PauldR,Chuzei Bonemold R Pauldron
+T_De_Bonemold_Chuzei_PauldR_E,Engraved Chuzei R Pauldron
+T_De_Bonemold_HelmOpen_01,Bonemold Open Helm
+T_De_Bonemold_HelmRider_01,Bonemold Rider Helm
+T_De_Bonemold_Stone_Boots,Bal-Darum Bonemold Boots
+T_De_Bonemold_Stone_Cuirass,Bal-Darum Bonemold Cuirass
+T_De_Bonemold_Stone_GauntletL,Bal-Darum Bonemold L Gauntlet
+T_De_Bonemold_Stone_GauntletR,Bal-Darum Bonemold R Gauntlet
+T_De_Bonemold_Stone_Greaves,Bal-Darum Bonemold Greaves
+T_De_Bonemold_Stone_Helm,Bal-Darum Bonemold Helm
+T_De_Bonemold_Stone_PauldL,Bal-Darum Bonemold L Pauldron
+T_De_Bonemold_Stone_PauldR,Bal-Darum Bonemold R Pauldron
+T_De_Bonemold_Ulvra_Boots,Ulvra-Serad Bonemold Boots
+T_De_Bonemold_Ulvra_BracerL,Ulvra-Serad Bonemold L Bracer
+T_De_Bonemold_Ulvra_BracerR,Ulvra-Serad Bonemold R Bracer
+T_De_Bonemold_Ulvra_Cuirass,Ulvra-Serad Bonemold Cuirass
+T_De_Bonemold_Ulvra_Greaves,Ulvra-Serad Bonemold Greaves
+T_De_Bonemold_Ulvra_Helm,Ulvra-Serad Bonemold Helm
+T_De_Bonemold_Ulvra_PauldL,Ulvra-Serad Bonemold L Pauldron
+T_De_Bonemold_Ulvra_PauldR,Ulvra-Serad Bonemold R Pauldron
+T_De_BonemoldKrage_Boots_01,Kragen Bonemold Boots
+T_De_BonemoldKrage_Cuirass_01,Kragen Bonemold Cuirass
+T_De_BonemoldKrage_GauntletL_01,Kragen Bonemold Left Gauntlet
+T_De_BonemoldKrage_GauntletR_01,Kragen Bonemold Right Gauntlet
+T_De_BonemoldKrage_Greaves_01,Kragen Bonemold Greaves
+T_De_BonemoldKrage_Helm_01,Native Kragen Bonemold Helm
+T_De_BonemoldKrage_PauldronL_01,Kragen Bonemold Left Pauldron
+T_De_BonemoldKrage_PauldronR_01,Kragen Bonemold Right Pauldron
+T_De_BonemoldKragen_Helm_01,Native Kragen Bonemold Helm
+T_De_BonemoldMarad_Cuirass_01,Maradlai Bonemold Cuirass
+T_De_BonemoldMarad_Helm_01,Native Maradlai Bonemold Helm
+T_De_BonemoldMarad_Helm_02,Native Maradlai Veteran Helm
+T_De_BonemoldMarad_PauldronL_01,Maradlai Bonemold L Pauldron
+T_De_BonemoldMarad_PauldronR_01,Maradlai Bonemold R Pauldron
+T_De_BonemoldMarad_Shield_01,Maradlai Bonemold Shield
+T_De_BonemoldSammas_Helm_01,Native Sammas Bonemold Helm
+T_De_CanyonWatch_Boots_01,Shipal-Arai Bonemold Boots
+T_De_CanyonWatch_BracerL_01,Shipal-Arai Bonemold L Bracer
+T_De_CanyonWatch_BracerR_01,Shipal-Arai Bonemold R Bracer
+T_De_CanyonWatch_Cuirass_01,Shipal-Arai Bonemold Cuirass
+T_De_CanyonWatch_Greaves_01,Shipal-Arai Bonemold Greaves
+T_De_CanyonWatch_Helm_01,Shipal-Arai Bonemold Helm
+T_De_CanyonWatch_PauldronL_01,Shipal-Arai Bonemold L Pauldron
+T_De_CanyonWatch_PauldronR_01,Shipal-Arai Bonemold R Pauldron
+T_De_Caravaner_Helm_01,Caravaner's Helm
+T_De_Chitin_HelmOpen_01,Chitin Open Helm
+T_De_Chitin_PauldrL_01,Chitin Light Left Pauldron
+T_De_Chitin_PauldrR_01,Chitin Light Right Pauldron
+T_De_Chitin_PioneerHelm_01,Chitin Pioneer Helm
+T_De_Chitin_PioneerHelm_02,Advanced Chitin Pioneer Helm
+T_De_Cm_HatTelv_01,Common Telvanni Hat
+T_De_Cm_HatTelv_02,Common Telvanni Hat
+T_De_Cm_HatTelv_03,Common Telvanni Hat
+T_De_Cm_HatTelv_04,Common Telvanni Hat
+T_De_Cm_HatTelv_05,Common Telvanni Hat
+T_De_DaedricHide_Boots_01,<Deprecated>
+T_De_DaedricHide_Cuirass_01,<Deprecated>
+T_De_DaedricHide_GauntletL_01,<Deprecated>
+T_De_DaedricHide_GauntletR_01,<Deprecated>
+T_De_DaedricHide_Greaves_01,<Deprecated>
+T_De_DaedricHide_PauldronL_01,<Deprecated>
+T_De_DaedricHide_PauldronR_01,<Deprecated>
+T_De_Diviner_Helm_01,Diviner Helm
+T_De_DresBonemold_Boots_01,Native Gah'Kogo Boots
+T_De_DresBonemold_Cuirass_01,Native Gah'Kogo Cuirass
+T_De_DresBonemold_GauntletL_01,Native Gah'Kogo Left Gauntlet
+T_De_DresBonemold_GauntletR_01,Native Gah'Kogo Right Gauntlet
+T_De_DresBonemold_Greaves_01,Native Gah'Kogo Greaves
+T_De_DresBonemold_Helm_01,Native Gah'Kogo Helm
+T_De_DresBonemold_PauldronL_01,Native Gah'Kogo Left Pauldron
+T_De_DresBonemold_PauldronR_01,Native Gah'Kogo Right Pauldron
+T_De_DresBonemold_ShieldTow_01,Native Gah'Kogo Tower Shield
+T_De_DresChapthil_Helm_01a,Chap-thil Hat
+T_De_DresChapthil_Helm_01b,Chap-thil Hat
+T_De_DresChapthil_Helm_01c,Chap-thil Hat
+T_De_DresChapthil_Helm_01d,Chap-thil Hat
+T_De_DresChapthil_Helm_01e,Chap-thil Hat
+T_De_DresChapthil_Helm_02a,Chap-thil Hat
+T_De_DresChapthil_Helm_02b,Chap-thil Hat
+T_De_DresChapthil_Helm_02c,Chap-thil Hat
+T_De_DresChapthil_Helm_02d,Chap-thil Hat
+T_De_DresChapthil_Helm_02e,Chap-thil Hat
+T_De_DresChapthil_Helm_03a,Chap-thil Hat
+T_De_DresChapthil_Helm_03b,Chap-thil Hat
+T_De_DresChapthil_Helm_03c,Chap-thil Hat
+T_De_DresChapthil_Helm_03d,Chap-thil Hat
+T_De_DresChapthil_Helm_03e,Chap-thil Hat
+T_De_DresHunter_Cuirass_01,Dres Hunter Cuirass
+T_De_DresHunter_Greaves_01,Dres Hunter Greaves
+T_De_DresHunter_Helm_01,Dres Hunter Helm
+T_De_DresHunter_PauldronL_01,Dres Hunter Left Pauldron
+T_De_DresHunter_PauldronR_01,Dres Hunter Right Pauldron
+T_De_DresSaltMerc_Helm_01,Dres Salt Merchant Helm
+T_De_DresSaltMerc_Helm_02,Dres Salt Merchant Helm
+T_De_Dreugh_Boots_01,Dreugh Boots
+T_De_Dreugh_BracerL_01,Dreugh Left Bracer
+T_De_Dreugh_BracerR_01,Dreugh Right Bracer
+T_De_Dreugh_Greaves_01,Dreugh Greaves
+T_De_Dreugh_Helm_Closed,Dreugh Helm
+T_De_Dreugh_Hunter_Helm_01,Dreugh Hunter Helm
+T_De_Dreugh_Hunter_Helm_02,Dreugh Warlord Helm
+T_De_Dreugh_PauldronL_01,Dreugh Left Pauldron
+T_De_Dreugh_PauldronL_Swim,Dreugh Left Pauldron-Fin
+T_De_Dreugh_PauldronR_01,Dreugh Right Pauldron
+T_De_Dreugh_PauldronR_Swim,Dreugh Right Pauldron-Fin
+T_De_Dreugh_Shield_Swim,Dreugh Shield of Meriyon's Fins
+T_De_Ebony_Helm_02,Ebony Helm
+T_De_Ebony_HelmOpen_01,Ebony Open Helm
+T_De_Ep_HatTelv_01,Expensive Telvanni Hat
+T_De_Ep_HatTelv_02,Expensive Telvanni Hat
+T_De_Ep_HatTelv_03,Expensive Telvanni Hat
+T_De_Et_HatTelv_01,Extravagant Telvanni Hat
+T_De_Et_HatTelv_02,Extravagant Telvanni Hat
+T_De_Ex_HatTelv_01,Exquisite Telvanni Hat
+T_De_Ex_HatTelv_02,Exquisite Telvanni Hat
+T_De_FiendCephalopodHelm_01,Fiend Cephalopod Helm
+T_De_FiendMoleCrabHelm_01,Fiend Mole Crab Helm
+T_De_Glass_Helm_Closed_01,Glass Closed Helm
+T_De_HvChit_Boots,Heavy Chitin Boots
+T_De_HvChit_Cuirass,Heavy Chitin Cuirass
+T_De_HvChit_Gauntlet_L,Heavy Chitin Left Gauntlet
+T_De_HvChit_Gauntlet_R,Heavy Chitin Right Gauntlet
+T_De_HvChit_Greaves,Heavy Chitin Greaves
+T_De_HvChit_Helmet,Heavy Chitin Helmet
+T_De_HvChit_Pauldron_L,Heavy Chitin Left Pauldron
+T_De_HvChit_Pauldron_R,Heavy Chitin Right Pauldron
+T_De_IndBonemold_Boots_01,Native Chuzei Bonemold Boots
+T_De_IndBonemold_Cuirass_01,Native Chuzei Bonemold Cuirass
+T_De_IndBonemold_GauntletL_01,Native Chuzei Left Gauntlet
+T_De_IndBonemold_GauntletR_01,Native Chuzei Right Gauntlet
+T_De_IndBonemold_Greaves_01,Native Chuzei Bonemold Greaves
+T_De_IndBonemold_HelmSaviour_01,Indoril Savior Helmet
+T_De_IndBonemold_PauldronL_01,Native Chuzei Left Pauldron
+T_De_IndBonemold_PauldronL_02,Native Chuzei Left Pauldron
+T_De_IndBonemold_PauldronR_01,Native Chuzei Right Pauldron
+T_De_IndBonemold_PauldronR_02,Native Chuzei Right Pauldron
+T_De_IndBonemold_Shield_01,Native Chuzei Bonemold Shield
+T_De_IndBonemold_Shield_02,Native Chuzei Bonemold Shield
+T_De_IndBonemold_Shield_03,Native Chuzei Bonemold Shield
+T_De_IndBonemold_Shield_04,Native Chuzei Bonemold Shield
+T_De_IndBonemold_Shield_05,Native Chuzei Bonemold Shield
+T_De_IndChevAram_Boots_01,Chev-Aram Chitin Boots
+T_De_IndChevAram_BracerL_01,Chev-Aram Chitin Left Bracer
+T_De_IndChevAram_BracerR_01,Chev-Aram Chitin Right Bracer
+T_De_IndChevAram_Cuirass_01,Chev-Aram Chitin Cuirass
+T_De_IndChevAram_Greaves_01,Chev-Aram Chitin Greaves
+T_De_IndChevAram_Helm_01,Native Chev-Aram Chitin Helm
+T_De_IndChevAram_Helm_02,Native Chev-Aram Chitin Helm
+T_De_IndChevAram_PauldrL_01,Chev-Aram Chitin Left Pauldron
+T_De_IndChevAram_PauldrR_01,Chev-Aram Chitin Right Pauldron
+T_De_Molecrab_Boots_01,Telvanni Molecrab Boots
+T_De_Molecrab_BracerL_01,Telvanni Molecrab Left Bracer
+T_De_Molecrab_BracerR_01,Telvanni Molecrab Right Bracer
+T_De_Molecrab_Cuirass_01,Telvanni Molecrab Cuirass
+T_De_Molecrab_Greaves_01,Telvanni Molecrab Greaves
+T_De_Molecrab_PauldronL_01,Telvanni Molecrab L Pauldron
+T_De_Molecrab_PauldronR_01,Telvanni Molecrab R Pauldron
+T_De_NativeEbony_Boots_01,Native Ebony Boots
+T_De_NativeEbony_Cuirass_01,Native Ebony Cuirass
+T_De_NativeEbony_GauntletL_01,Native Ebony Left Gauntlet
+T_De_NativeEbony_GauntletR_01,Native Ebony Right Gauntlet
+T_De_NativeEbony_Greaves_01,Native Ebony Greaves
+T_De_NativeEbony_HelmClosed_01,Native Ebony Closed Helmet
+T_De_NativeEbony_HelmClosed_02,Native Ebony Closed Helmet
+T_De_NativeEbony_HelmOpen_01,Native Ebony Open Helmet
+T_De_NativeEbony_HelmOpen_02,Native Ebony Open Helmet
+T_De_NativeEbony_PauldronL_01,Native Ebony Left Pauldron
+T_De_NativeEbony_PauldronR_01,Native Ebony Right Pauldron
+T_De_Necrom_Boots_01,Necrom Indoril Boots
+T_De_Necrom_Cuirass_01,Necrom Indoril Cuirass
+T_De_Necrom_Cuirass_02,Necrom Speaker Cuirass
+T_De_Necrom_GauntletL_01,Necrom Indoril Left Gauntlet
+T_De_Necrom_GauntletR_01,Necrom Indoril Right Gauntlet
+T_De_Necrom_Greaves_01,Necrom Indoril Greaves
+T_De_Necrom_Helm_01,Necrom Indoril Helmet
+T_De_Necrom_PauldronL_01,Necrom Indoril Left Pauldron
+T_De_Necrom_PauldronR_01,Necrom Indoril Right Pauldron
+T_De_Necrom_Shield_01,Necrom Indoril Shield
+T_De_Netch_Cuirass_01,Netch Leather Cuirass
+T_De_Netch_Cuirass_02,Netch Leather Cuirass
+T_De_Netch_Cuirass_03,Netch Leather Cuirass
+T_De_Netch_Helm_01,Netch Leather Helm
+T_De_Netch_Helm_02,Netch Leather Helm
+T_De_NetchRogue_Cuirass_01,Netch Leather Rogue Cuirass
+T_De_NetchRogue_Helm_01,Netch Leather Rogue Helm
+T_De_NetchRogue_Helm_02,Netch Leather Rogue Hood
+T_De_NetchStalker_Helm_01,Netch Leather Stalker Helm
+T_De_Ordinator_Greaves_01,Indoril Greaves
+T_De_RedBonemold_HelmOpen_01,Redoran Open Helm
+T_De_RedHeroBonemold_Cuirass_01,Redoran Cuirass
+T_De_RedHeroBonemold_Helm_01,Redoran Helm
+T_De_RedHeroBonemold_Helm_02,Redoran Helm
+T_De_RedHeroBonemold_Helm_03,Redoran Mushroom Helm
+T_De_RedHeroBonemold_PauldrL_01,Redoran Left Pauldron
+T_De_RedHeroBonemold_PauldrR_01,Redoran Right Pauldron
+T_De_RedMastBonemold_Cuirass_01,Redoran Master Cuirass
+T_De_RedMastBonemold_PauldrL_01,Redoran Master Left Pauldron
+T_De_RedMastBonemold_PauldrR_01,Redoran Master Right Pauldron
+T_De_RedoranWatchman_Boots,Redoran Watchman's Boots
+T_De_RedoranWatchman_Cuirass,Redoran Watchman's Cuirass
+T_De_RedoranWatchman_GauntletL,Redoran Watchman's L Gauntlet
+T_De_RedoranWatchman_GauntletR,Redoran Watchman's R Gauntlet
+T_De_RedoranWatchman_Greaves,Redoran Watchman's Greaves
+T_De_RedoranWatchman_PauldronL,Redoran Watchman's L Pauldron
+T_De_RedoranWatchman_PauldronR,Redoran Watchman's R Pauldron
+T_De_RedWatchChitin_Boots_01,<Deprecated>
+T_De_RedWatchChitin_Cuirass_01,<Deprecated>
+T_De_RedWatchChitin_GauntlL_01,<Deprecated>
+T_De_RedWatchChitin_GauntlR_01,<Deprecated>
+T_De_RedWatchChitin_Greaves_01,<Deprecated>
+T_De_RedWatchChitin_PauldrL_01,<Deprecated>
+T_De_RedWatchChitin_PauldrR_01,<Deprecated>
+T_De_TelvCephalopod_Boots_01,Telvanni Cephalopod Boots
+T_De_TelvCephalopod_Cuirass_01,Telvanni Cephalopod Cuirass
+T_De_TelvCephalopod_GauntL_01,Telvanni Cephalopod L Gauntlet
+T_De_TelvCephalopod_GauntR_01,Telvanni Cephalopod R Gauntlet
+T_De_TelvCephalopod_Greaves_01,Telvanni Cephalopod Greaves
+T_De_TelvCephalopod_PauldL_01,Telvanni Cephalopod L Pauldron
+T_De_TelvCephalopod_PauldR_01,Telvanni Cephalopod R Pauldron
+T_De_ThirrBonemold_Boots_01,Native Thirr Bonemold Boots
+T_De_ThirrBonemold_Bracer_01_L,Native Thirr Left Bracer
+T_De_ThirrBonemold_Bracer_01_R,Native Thirr Right Bracer
+T_De_ThirrBonemold_Cuirass_01,Native Thirr Bonemold Cuirass
+T_De_ThirrBonemold_Greaves_01,Native Thirr Bonemold Greaves
+T_De_ThirrBonemold_Helm_01,Native Thirr Bonemold Helm
+T_De_ThirrBonemold_Pauldrn_01_L,Native Thirr Left Pauldron
+T_De_ThirrBonemold_Pauldrn_01_R,Native Thirr Right Pauldron
+T_De_UNI_FacelessHelm,Indoril Helmet
+T_De_UNI_IrfeidsShoulderL,Irfeid's Left Shoulder
+T_De_UNI_IrfeidsShoulderR,Irfeid's Right Shoulder
+T_De_UNI_PreyseekerHelm,Preyseeker
+T_De_UNI_Shield_Abernanit,Shield of Abernanit
+T_De_UNI_ShoulderOfGhostlightL,Left Shoulder of Ghostlight
+T_De_UNI_ShoulderOfGhostlightR,Right Shoulder of Ghostlight
+T_De_UNI_UshuDimmuCrown,Crown of Ushu-Dimmu
+T_De_UNI_Vanguard,Vanguard
+T_De_UNI_VivecShield,Bug Shield of Vivec
+T_Dwe_Regular_ShieldTower_01,Dwarven Towershield
+T_Dwe_Scrap_boots,Dwemer Scrap Boots
+T_Dwe_Scrap_Bracer_L,Dwemer Scrap Left Bracer
+T_Dwe_Scrap_Bracer_R,Dwemer Scrap Right Bracer
+T_Dwe_Scrap_cuirass,Dwemer Scrap Cuirass
+T_Dwe_Scrap_greaves,Dwemer Scrap Greaves
+T_Dwe_Scrap_helmet,Dwemer Scrap Helmet
+T_Dwe_Scrap_Pauldron_L,Dwemer Scrap Left Pauldron
+T_Dwe_Scrap_Pauldron_R,Dwemer Scrap Right Pauldron
+T_Dwe_UNI_MaskOfPurity,Masque of Purity
+T_Glb_Var_HeadFixer,Vampire Head Fixer
+T_He_AltmerGlass_Boots_01,Altmer Glass Boots
+T_He_AltmerGlass_Cuirass_01,Altmer Glass Cuirass
+T_He_AltmerGlass_Greaves_01,Altmer Glass Greaves
+T_He_AltmerGlass_Helm_01,Altmer Closed Glass Helmet
+T_He_AltmerGlass_Helm_02,Altmer Glass Open Helmet
+T_He_AltmerGlass_L_Bracer_01,Altmer Glass Left Bracer
+T_He_AltmerGlass_L_Pauldron_01,Altmer Glass Left Pauldron
+T_He_AltmerGlass_R_Bracer_01,Altmer Glass Right Bracer
+T_He_AltmerGlass_R_Pauldron_01,Altmer Glass Right Pauldron
+T_He_Direnni_Boots_01,Direnni Armor Boots
+T_He_Direnni_BracerL_01,Direnni Bracer Left
+T_He_Direnni_BracerR_01,Direnni Bracer Right
+T_He_Direnni_Cuirass_01,Direnni Cuirass
+T_He_Direnni_Greaves_01,Direnni Greaves
+T_He_Direnni_Helm_01,Direnni Helmet
+T_He_Direnni_PauldronL_01,Direnni Pauldron Left
+T_He_Direnni_PauldronR_01,Direnni Pauldron Right
+T_Imp_Chain_Boots_01,Imperial Chain Boots
+T_Imp_Chain_GauntletL_01,Imperial Chain Left Gauntlet
+T_Imp_Chain_GauntletR_02,Imperial Chain Right Gauntlet
+T_Imp_Chainmail_cuirass_01,Strident Chain Cuirass
+T_Imp_Chainmail_cuirass_02,Massiquerra Chain Cuirass
+T_Imp_Chainmail_cuirass_03,Brumath Chain Cuirass
+T_Imp_Chainmail_cuirass_04,Kvetchi Chain Cuirass
+T_Imp_Chainmail_Helm_01,Strident Chain Coif
+T_Imp_Chainmail_Helm_02,Massiquerra Chain Coif
+T_Imp_Chainmail_Helm_03,Brumath Chain Coif
+T_Imp_Chainmail_Helm_04,Kvetchi Chain Coif
+T_Imp_Cm_BootsCol_01,Common Leather Boots
+T_Imp_Cm_BootsCol_02,Common Leather Boots
+T_Imp_Cm_BootsCol_03,Common Leather Boots
+T_Imp_Cm_BootsCol_04,Common Leather Boots
+T_Imp_Cm_HatColWest_01,Common Cloth Cap
+T_Imp_Cm_HatColWest_02,Common Cloth Cap
+T_Imp_ColBronzeOld_Helm_01,Bronze Helm
+T_Imp_ColFur_Boots_01,Colovian Fur Boots
+T_Imp_ColFur_Boots_02,Colovian Fur Boots
+T_Imp_ColFur_Boots_03,Colovian Fur Boots
+T_Imp_ColFur_Boots_04,Colovian Fur Boots
+T_Imp_ColFur_Cuirass_01,Colovian Fur Cuirass
+T_Imp_ColFur_Cuirass_02,Colovian Fur Cuirass
+T_Imp_ColFur_Cuirass_03,Colovian Fur Cuirass
+T_Imp_ColFur_Cuirass_04,Colovian Fur Cuirass
+T_Imp_ColFur_GauntL_01,Colovian Fur Left Gauntlet
+T_Imp_ColFur_GauntL_02,Colovian Fur Left Gauntlet
+T_Imp_ColFur_GauntL_03,Colovian Fur Left Gauntlet
+T_Imp_ColFur_GauntL_04,Colovian Fur Left Gauntlet
+T_Imp_ColFur_GauntR_01,Colovian Fur Right Gauntlet
+T_Imp_ColFur_GauntR_02,Colovian Fur Right Gauntlet
+T_Imp_ColFur_GauntR_03,Colovian Fur Right Gauntlet
+T_Imp_ColFur_GauntR_04,Colovian Fur Right Gauntlet
+T_Imp_ColFur_HelmBl_01,Colovian Fur Helm
+T_Imp_ColFur_HelmEx_01,Extravagant Colovian Fur Helm
+T_Imp_ColFur_HelmR_01,Colovian Fur Helm
+T_Imp_ColFur_HelmTiger_01,Colovian Tiger Helm
+T_Imp_ColIron1_Boots_01,<Deprecated>
+T_Imp_ColIron1_Boots_02,<Deprecated>
+T_Imp_ColIron1_Boots_03,<Deprecated>
+T_Imp_ColIron1_Boots_04,<Deprecated>
+T_Imp_ColIron1_Cuirass_01,<Deprecated>
+T_Imp_ColIron1_Cuirass_02,<Deprecated>
+T_Imp_ColIron1_Cuirass_03,<Deprecated>
+T_Imp_ColIron1_Cuirass_04,<Deprecated>
+T_Imp_ColIron1_GauntletL_01,<Deprecated>
+T_Imp_ColIron1_GauntletL_02,<Deprecated>
+T_Imp_ColIron1_GauntletL_03,<Deprecated>
+T_Imp_ColIron1_GauntletL_04,<Deprecated>
+T_Imp_ColIron1_GauntletR_01,<Deprecated>
+T_Imp_ColIron1_GauntletR_02,<Deprecated>
+T_Imp_ColIron1_GauntletR_03,<Deprecated>
+T_Imp_ColIron1_GauntletR_04,<Deprecated>
+T_Imp_ColIron1_Greaves_01,<Deprecated>
+T_Imp_ColIron1_Greaves_02,<Deprecated>
+T_Imp_ColIron1_Greaves_03,<Deprecated>
+T_Imp_ColIron1_Greaves_04,<Deprecated>
+T_Imp_ColIron1_Helm_01,<Deprecated>
+T_Imp_ColIron1_Helm_02,<Deprecated>
+T_Imp_ColIron1_Helm_03,<Deprecated>
+T_Imp_ColIron1_Helm_04,<Deprecated>
+T_Imp_ColIron1_PauldronL_01,<Deprecated>
+T_Imp_ColIron1_PauldronL_02,<Deprecated>
+T_Imp_ColIron1_PauldronL_03,<Deprecated>
+T_Imp_ColIron1_PauldronL_04,<Deprecated>
+T_Imp_ColIron1_PauldronR_01,<Deprecated>
+T_Imp_ColIron1_PauldronR_02,<Deprecated>
+T_Imp_ColIron1_PauldronR_03,<Deprecated>
+T_Imp_ColIron1_PauldronR_04,<Deprecated>
+T_Imp_ColIron2_Boots_01,<Deprecated>
+T_Imp_ColIron2_BracerL_01,<Deprecated>
+T_Imp_ColIron2_BracerR_01,<Deprecated>
+T_Imp_ColIron2_Cuirass_01,<Deprecated>
+T_Imp_ColIron2_Greaves_01,<Deprecated>
+T_Imp_ColIron2_Helm_01,<Deprecated>
+T_Imp_ColIron2_PauldronL_01,<Deprecated>
+T_Imp_ColIron2_PauldronR_01,<Deprecated>
+T_Imp_ColIron_Boots_01,Colovian Iron Boots
+T_Imp_ColIron_BracerL_01,Colovian Iron Left Bracer
+T_Imp_ColIron_BracerR_01,Colovian Iron Right Bracer
+T_Imp_ColIron_Cuirass_01,Colovian Iron Cuirass
+T_Imp_ColIron_Greaves_01,Colovian Iron Greaves
+T_Imp_ColIron_Helmet_01,Colovian Iron Helmet
+T_Imp_ColIron_Helmet_02,Colovian Iron Helmet
+T_Imp_ColIron_PauldronL_01,Colovian Iron Left Paldron
+T_Imp_ColIron_PauldronR_01,Colovian Iron Right Pauldron
+T_Imp_ColSteel1_Boots_01,<Deprecated>
+T_Imp_ColSteel1_Boots_02,<Deprecated>
+T_Imp_ColSteel1_Boots_03,<Deprecated>
+T_Imp_ColSteel1_Boots_04,<Deprecated>
+T_Imp_ColSteel1_BracerL_01,<Deprecated>
+T_Imp_ColSteel1_BracerL_02,<Deprecated>
+T_Imp_ColSteel1_BracerL_03,<Deprecated>
+T_Imp_ColSteel1_BracerL_04,<Deprecated>
+T_Imp_ColSteel1_BracerR_01,<Deprecated>
+T_Imp_ColSteel1_BracerR_02,<Deprecated>
+T_Imp_ColSteel1_BracerR_03,<Deprecated>
+T_Imp_ColSteel1_BracerR_04,<Deprecated>
+T_Imp_ColSteel1_Cuirass_01,<Deprecated>
+T_Imp_ColSteel1_Cuirass_02,<Deprecated>
+T_Imp_ColSteel1_Cuirass_03,<Deprecated>
+T_Imp_ColSteel1_Cuirass_04,<Deprecated>
+T_Imp_ColSteel1_Greaves_01,<Deprecated>
+T_Imp_ColSteel1_Greaves_02,<Deprecated>
+T_Imp_ColSteel1_Greaves_03,<Deprecated>
+T_Imp_ColSteel1_Greaves_04,<Deprecated>
+T_Imp_ColSteel1_Helm_01,<Deprecated>
+T_Imp_ColSteel1_Helm_02,<Deprecated>
+T_Imp_ColSteel1_Helm_03,<Deprecated>
+T_Imp_ColSteel1_Helm_04,<Deprecated>
+T_Imp_ColSteel1_PauldronL_01,<Deprecated>
+T_Imp_ColSteel1_PauldronL_02,<Deprecated>
+T_Imp_ColSteel1_PauldronL_03,<Deprecated>
+T_Imp_ColSteel1_PauldronL_04,<Deprecated>
+T_Imp_ColSteel1_PauldronR_01,<Deprecated>
+T_Imp_ColSteel1_PauldronR_02,<Deprecated>
+T_Imp_ColSteel1_PauldronR_03,<Deprecated>
+T_Imp_ColSteel1_PauldronR_04,<Deprecated>
+T_Imp_ColSteel_Boots_01,Colovian Steel Boots
+T_Imp_ColSteel_Boots_02,Kvetchi Steel Boots
+T_Imp_ColSteel_Boots_03,Oloman Steel Boots
+T_Imp_ColSteel_Boots_04,Skingrad Steel Boots
+T_Imp_ColSteel_BracerL_03,Oloman Steel Left Bracer
+T_Imp_ColSteel_BracerL_04,Skingrad Steel Left Bracer
+T_Imp_ColSteel_BracerR_03,Oloman Steel Right Bracer
+T_Imp_ColSteel_BracerR_04,Skingrad Steel Right Bracer
+T_Imp_ColSteel_Cuirass_01,Colovian Steel Cuirass
+T_Imp_ColSteel_Cuirass_02,Kvetchi Steel Cuirass
+T_Imp_ColSteel_Cuirass_03,Oloman Steel Cuirass
+T_Imp_ColSteel_Cuirass_04,Skingrad Steel Cuirass
+T_Imp_ColSteel_GauntletL_01,Colovian Steel Left Gauntlet
+T_Imp_ColSteel_GauntletL_02,Kvetchi Steel Left Gauntlet
+T_Imp_ColSteel_GauntletR_01,Colovian Steel Right Gauntlet
+T_Imp_ColSteel_GauntletR_02,Kvetchi Steel Right Gauntlet
+T_Imp_ColSteel_Greaves_01,Colovian Steel Greaves
+T_Imp_ColSteel_Greaves_02,Kvetchi Steel Greaves
+T_Imp_ColSteel_Greaves_03,Oloman Steel Greaves
+T_Imp_ColSteel_Greaves_04,Skingrad Steel Greaves
+T_Imp_ColSteel_Helm_01,Colovian Steel Helm
+T_Imp_ColSteel_Helm_02,Kvetchi Steel Helm
+T_Imp_ColSteel_Helm_03,Oloman Steel Helm
+T_Imp_ColSteel_Helm_04,Skingrad Steel Helm
+T_Imp_ColSteel_Helm_05,Colovian Steel Helm
+T_Imp_ColSteel_Helm_06,Kvetchi Steel Helm
+T_Imp_ColSteel_PauldronL_01,Colovian Steel Left Pauldron
+T_Imp_ColSteel_PauldronL_02,Kvetchi Steel Left Pauldron
+T_Imp_ColSteel_PauldronL_03,Oloman Steel Left Pauldron
+T_Imp_ColSteel_PauldronL_04,Skingrad Steel Left Pauldron
+T_Imp_ColSteel_PauldronR_01,Colovian Steel Right Pauldron
+T_Imp_ColSteel_PauldronR_02,Kvetchi Steel Right Pauldron
+T_Imp_ColSteel_PauldronR_03,Oloman Steel Right Pauldron
+T_Imp_ColSteel_PauldronR_04,Skingrad Steel Right Pauldron
+T_Imp_Domina_Boots_01,Domina Boots
+T_Imp_Domina_Cuirass_01,Domina Cuirass
+T_Imp_Domina_GauntletL_01,Domina Left Gauntlet
+T_Imp_Domina_GauntletR_01,Domina Right Gauntlet
+T_Imp_Domina_Greaves_01,Domina Greaves
+T_Imp_Domina_Helm_01,Domina Helmet
+T_Imp_Domina_PauldronL_01,Domina Left Pauldron
+T_Imp_Domina_PauldronR_01,Domina Right Pauldron
+T_Imp_Dragonscale_BarcerL_01,Dragonscale Left Bracer
+T_Imp_Dragonscale_BarcerR_01,Dragonscale Right Bracer
+T_Imp_Dragonscale_Boots_01,Dragonscale Boots
+T_Imp_Dragonscale_cuirass_01,Dragonscale Cuirass
+T_Imp_Dragonscale_Greaves_01,Dragonscale Greaves
+T_Imp_Dragonscale_helm_01,Dragonscale Helm
+T_Imp_Dragonscale_PauldronL_01,Dragonscale Left Pauldron
+T_Imp_Dragonscale_PauldronR_01,Dragonscale Right Pauldron
+T_Imp_Ebony_Boots,Imperial Ebony Boots
+T_Imp_Ebony_BracerL,Imperial Ebony Left Bracer
+T_Imp_Ebony_BracerR,Imperial Ebony Right Bracer
+T_Imp_Ebony_Cuirass,Imperial Ebony Cuirass
+T_Imp_Ebony_Helmet_01,Imperial Ebony Helm
+T_Imp_Ebony_PauldronL,Imperial Ebony Left Pauldron
+T_Imp_Ebony_PauldronR,Imperial Ebony Right Pauldron
+T_Imp_Ebony_ShieldTower_01,Imperial Ebony Shield
+T_Imp_Ep_Hat_02,Expensive Imperial Cap
+T_Imp_Ep_HatColWest_01,Expensive Leather Hat
+T_Imp_Ep_HatColWest_02,Expensive Leather Hat
+T_Imp_Et_HatColNorth_01,Extravagant Colovian Hat
+T_Imp_Et_HatColNorth_02,Extravagant Colovian Hat
+T_Imp_Et_HatColNorth_03,Extravagant Colovian Hat
+T_Imp_Et_HatColNorth_04,Extravagant Colovian Hat
+T_Imp_Et_HatColNorth_05,Extravagant Colovian Hat
+T_Imp_Gold_Boots_02,Imperial Gold Boots
+T_Imp_Gold_BracerL_02,Imperial Gold Left Bracer
+T_Imp_Gold_BracerR_02,Imperial Gold Right Bracer
+T_Imp_Gold_Cuirass_01,Gold Armor Cuirass
+T_Imp_Gold_Cuirass_02,Imperial Gold Cuirass
+T_Imp_Gold_GauntletL_02,Imperial Gold Left Gauntlet
+T_Imp_Gold_GauntletR_02,Imperial Gold Right Gauntlet
+T_Imp_Gold_Greaves_02,Imperial Gold Greaves
+T_Imp_Gold_Helm_01,Gold Armor Helmet
+T_Imp_Gold_Helm_02,Imperial Gold Helm
+T_Imp_Gold_PauldronL_01,Gold Armor Left Pauldron
+T_Imp_Gold_PauldronL_02,Imperial Gold Left Pauldron
+T_Imp_Gold_PauldronR_01,Gold Armor Right Pauldron
+T_Imp_Gold_PauldronR_02,Imperial Gold Right Pauldron
+T_Imp_Gold_Shield_01,Imperial Gold Shield
+T_Imp_Gold_ShieldBuckler_01,Gold Armor Buckler
+T_Imp_GuardTown1_Boots_01,Cataphract Steel Boots
+T_Imp_GuardTown1_Cuirass_01,Cataphract Mail Cuirass
+T_Imp_GuardTown1_GauntletL_01,Cataphract Left Gauntlet
+T_Imp_GuardTown1_GauntletR_01,Cataphract Right Gauntlet
+T_Imp_GuardTown1_Greaves_01,Cataphract Mail Greaves
+T_Imp_GuardTown1_Helm_01,Cataphract Steel Helmet
+T_Imp_GuardTown1_HelmAnv_01,Cataphract Steel Helmet
+T_Imp_GuardTown1_HelmStr_01,Cataphract Steel Helmet
+T_Imp_GuardTown1_HelmSut_01,Cataphract Steel Helmet
+T_Imp_GuardTown1_PauldrL_01,Cataphract Left Pauldron
+T_Imp_GuardTown1_PauldrR_01,Cataphract Right Pauldron
+T_Imp_GuardTown1_ShieldAnv_01,Anvil Guard Shield
+T_Imp_GuardTown2_Boots_01,Kalantar Mail Boots
+T_Imp_GuardTown2_Cuirass_01,Kalantar Mail Cuirass
+T_Imp_GuardTown2_GauntletL_01,Kalantar Left Gauntlet
+T_Imp_GuardTown2_GauntletR_01,Kalantar Right Gauntlet
+T_Imp_GuardTown2_Greaves_01,Kalantar Greaves
+T_Imp_GuardTown2_Helm_01,Kalantar Steel Helmet
+T_Imp_GuardTown2_HelmArt_01,Kalantar Steel Helmet
+T_Imp_GuardTown2_HelmBru_01,Kalantar Steel Helmet
+T_Imp_GuardTown2_HelmCho_01,Kalantar Steel Helmet
+T_Imp_GuardTown2_PauldrL_01,Kalantar Left Pauldron
+T_Imp_GuardTown2_PauldrR_01,Kalantar Right Pauldron
+T_Imp_GuardTown3_Boots_01,Klibanion Steel Boots
+T_Imp_GuardTown3_Cuirass_01,Klibanion Mail Cuirass
+T_Imp_GuardTown3_GauntletL_01,Klibanion Steel Left Gauntlet
+T_Imp_GuardTown3_GauntletR_01,Klibanion Steel Right Gauntlet
+T_Imp_GuardTown3_Greaves_01,Klibanion Steel Greaves
+T_Imp_GuardTown3_Helm_01,Klibanion Steel Helmet
+T_Imp_GuardTown3_HelmKva_01,Klibanion Steel Helmet
+T_Imp_GuardTown3_HelmSar_01,Klibanion Steel Helmet
+T_Imp_GuardTown3_HelmSkn_01,Klibanion Steel Helmet
+T_Imp_GuardTown3_PauldrL_01,Klibanion Mail Left Pauldron
+T_Imp_GuardTown3_PauldrR_01,Klibanion Mail Right Pauldron
+T_Imp_Mananaut_Helm_01,Imperial Mananaut Helmet
+T_Imp_Militia_Boots_01,Militia Steel Boots
+T_Imp_Militia_Cuirass_01,Militia Cuirass
+T_Imp_Militia_GauntL_01,Militia Left Gauntlet
+T_Imp_Militia_GauntR_01,Militia Right Gauntlet
+T_Imp_Militia_Greaves_01,Militia Steel Greaves
+T_Imp_Militia_Helm_01,Militia Steel Helmet
+T_Imp_Militia_PauldronL_01,Militia Steel Left Pauldron
+T_Imp_Militia_PauldronR_01,Militia Steel Right Pauldron
+T_Imp_MothHerder_Helmet_01,Moth Herder Helmet
+T_Imp_NavyOff_Boots_01,Imperial Navy Elite Boots
+T_Imp_NavyOff_BracerL_01,Imperial Navy Elite L. Bracer
+T_Imp_NavyOff_BracerR_01,Imperial Navy Elite R. Bracer
+T_Imp_NavyOff_Cuirass_01,Imperial Navy Elite Cuirass
+T_Imp_NavyOff_Greaves_01,Imperial Navy Elite Greaves
+T_Imp_NavyOff_Helmet_01,Imperial Navy Elite Helmet
+T_Imp_NavyOff_PauldronL_01,Imperial Navy Elite L. Pauldron
+T_Imp_NavyOff_PauldronR_01,Imperial Navy Elite R. Pauldron
+T_Imp_NavyStud_Boots_01,Imperial Navy Leather Boots
+T_Imp_NavyStud_Cuirass_01,Imperial Navy Leather Cuirass
+T_Imp_NavyStud_GauntletL_01,Imperial Navy Left Gauntlet
+T_Imp_NavyStud_GauntletR_01,Imperial Navy Right Gauntlet
+T_Imp_NavyStud_Helm_01,Imperial Navy Leather Helm
+T_Imp_NavyStud_PauldrL_01,Imperial Navy Left Pauldron
+T_Imp_NavyStud_PauldrR_01,Imperial Navy Right Pauldron
+T_Imp_Newtscale_Boots_01,Imperial Newtscale Boots
+T_Imp_Newtscale_Cuirass_01,Imperial Newtscale Cuirass
+T_Imp_Newtscale_GauntletL_01,Imperial Newtscale L Gauntlet
+T_Imp_Newtscale_GauntletR_01,Imperial Newtscale R Gauntlet
+T_Imp_Newtscale_Greaves_01,Imperial Newtscale Greaves
+T_Imp_Newtscale_Helm_01,Imperial Newtscale Helmet
+T_Imp_Newtscale_PauldronL_01,Imperial Newtscale L Pauldron
+T_Imp_Newtscale_PauldronR_01,Imperial Newtscale R Pauldron
+T_Imp_NibBronze_Boots_01,Nibenese Bronze Boots
+T_Imp_NibBronze_BracerL_01,Nibenese Bronze Left Bracer
+T_Imp_NibBronze_BracerR_01,Nibenese Bronze Right Bracer
+T_Imp_NibBronze_Cuirass_01,Nibenese Bronze Cuirass
+T_Imp_NibBronze_Greaves_01,Nibenese Bronze Greaves
+T_Imp_NibBronze_Helm_01,Nibenese Bronze Helmet
+T_Imp_NibBronze_PauldronL_01,Nibenese Bronze Left Pauldron
+T_Imp_NibBronze_PauldronR_01,Nibenese Bronze Right Pauldron
+T_Imp_Reman_Boots_01,Reman Legion Boots
+T_Imp_Reman_BracerL_01,Reman Legion Left Bracer
+T_Imp_Reman_BracerR_01,Reman Legion Right Bracer
+T_Imp_Reman_Cuirass_01,Reman Legion Cuirass
+T_Imp_Reman_Greaves_01,Reman Legion Greaves
+T_Imp_Reman_Helm_01,Reman Legion Helmet
+T_Imp_Reman_PauldronL_01,Reman Legion Left Pauldron
+T_Imp_Reman_PauldronR_01,Reman Legion Right Pauldron
+T_Imp_Reman_Shield_01,Reman Legion Shield
+T_Imp_Silver_Boots_01,Imperial Silver Boots
+T_Imp_Silver_BracerL_01,Imperial Silver Left Bracer
+T_Imp_Silver_BracerR_01,Imperial Silver Right Bracer
+T_Imp_Silver_Cap_01,Imperial Silver Cap
+T_Imp_Silver_Cap_02,Imperial Silver Cap
+T_Imp_Silver_CuirassFW_01,Duchess' Guard Silver Cuirass
+T_Imp_Silver_CuirassRed_01,Imperial Silver Cuirass
+T_Imp_Silver_Greaves_01,Imperial Silver Greaves
+T_Imp_Silver_Helm_Mask,Temple Guard Silver Mask
+T_Imp_Silver_PauldronL_01,Imperial Silver Left Pauldron
+T_Imp_Silver_PauldronR_01,Imperial Silver Right Pauldron
+T_Imp_StuddedLeather_Boots_01,Studded Leather Boots
+T_Imp_StuddedLeather_BracerL_01,Studded Leather Left Bracer
+T_Imp_StuddedLeather_BracerR_01,Studded Leather Right Bracer
+T_Imp_StuddedLeather_cuirass_02,Brena Studded Leather Cuirass
+T_Imp_StuddedLeather_cuirass_03,Kreath Studded Leather Cuirass
+T_Imp_StuddedLeather_Greaves_01,Studded Leather Greaves
+T_Imp_StuddedLeather_Helm_01,Studded Leather Helm
+T_Imp_StuddedLeather_Helm_02,Brena Studded Leather Helm
+T_Imp_StuddedLeather_Helm_03,Kreath Studded Leather Helm
+T_Imp_StuddedLeather_PauldrL_01,Studded Leather Left Pauldron
+T_Imp_StuddedLeather_PauldrR_01,Studded Leather Right Pauldron
+T_Imp_Templar_ShieldTower_01,Imperial Templar Shield
+T_Imp_UNI_BenduOloHelm,Bendu Olo's Helmet
+T_Imp_UNI_BlacksmithsHandL,Blacksmith's Left Hand
+T_Imp_UNI_BlacksmithsHandR,Blacksmith's Right Hand
+T_Imp_UNI_Dragoneye,Dragoneye Helm
+T_Imp_UNI_KatariahsDeathMask,Death Mask of Empress Katariah
+T_Imp_Uni_NafaalilargusScales,Scales of Nafaalilargus
+T_Imp_UNI_Shadowweave,Shadowweave
+T_Imp_UNI_UrielShield_01,Shield of the Emperor
+T_Imp_UNI_WardofAkavir,Ward of Akavir
+T_Imp_Wood_ShieldTower_01,Wooden Tower Shield
+T_Nor_Bearskin_Boots_01,Nordic Bearskin Boots
+T_Nor_Bearskin_BracerL_01,Nordic Bearskin Left Bracer
+T_Nor_Bearskin_BracerL_Claw,Bearclaw of Grizzled Strength
+T_Nor_Bearskin_BracerR_01,Nordic Bearskin Right Bracer
+T_Nor_Bearskin_BracerR_Claw,Bearclaw of Grizzled Ingenuity
+T_Nor_Bearskin_Greaves_01,Nordic Bearskin Greaves
+T_Nor_Bearskin_Helm_01,Nordic Bearskin Helm
+T_Nor_Bearskin_Helm_Hiber,Helm of Hibernation
+T_Nor_Bearskin_PauldronL_01,Nordic Bearskin Left Pauldron
+T_Nor_Bearskin_PauldronR_01,Nordic Bearskin Right Pauldron
+T_Nor_Companion_Boots_01,Companion Boots
+T_Nor_Companion_Cuirass_01,Companion Cuirass
+T_Nor_Companion_GauntletL_01,Companion Armor Left Gauntlet
+T_Nor_Companion_GauntletR_01,Companion Armor Right Gauntlet
+T_Nor_Companion_Greaves_01,Companion Greaves
+T_Nor_Companion_Helm_01,Berserker Helmet
+T_Nor_Companion_PauldronL_01,Companion Armor Left Pauldron
+T_Nor_Companion_PauldronR_01,Companion Armor Right Pauldron
+T_Nor_Guard_Boots_01,Nord Guard Boots
+T_Nor_Guard_Cuirass_01,Nord Guard Cuirass
+T_Nor_Guard_GauntletL_01,Nord Guard Left Gauntlet
+T_Nor_Guard_GauntletR_01,Nord Guard Right Gauntlet
+T_Nor_Guard_Greaves_01,Nord Guard Greaves
+T_Nor_Guard_Helm_01,Nord Guard Helmet
+T_Nor_Guard_PauldronL_01,Nord Guard Left Pauldron
+T_Nor_Guard_PauldronR_01,Nord Guard Right Pauldron
+T_Nor_Iron_Boots_01,Nordic Iron Boots
+T_Nor_Iron_Boots_Leap,Boots of Mountain's Leap
+T_Nor_Iron_Cuirass_Wintery,Wintery Breastplate
+T_Nor_Iron_GauntletL_01,Nordic Iron Left Gauntlet
+T_Nor_Iron_GauntletR_01,Nordic Iron Right Gauntlet
+T_Nor_Iron_Greaves_01,Nordic Iron Greaves
+T_Nor_Iron_PauldronL_01,Nordic Iron Left Pauldron
+T_Nor_Iron_PauldronR_01,Nordic Iron Right Pauldron
+T_Nor_Ironwood_Shield_01,Ironwood Shield
+T_Nor_Ironwood_Shield_02,Black Ironwood Shield
+T_Nor_Ringmail_Boots_01,Nordic Ringmail Boots
+T_Nor_Ringmail_Boots_02,Nordic Ringmail Boots
+T_Nor_Ringmail_BracerL_02,Nordic Ringmail Left Bracer
+T_Nor_Ringmail_BracerR_02,Nordic Ringmail Right Bracer
+T_Nor_Ringmail_Cuirass_01,Nordic Ringmail Cuirass
+T_Nor_Ringmail_Greaves_01,Nordic Ringmail Greaves
+T_Nor_Ringmail_Greaves_02,Nordic Ringmail Greaves
+T_Nor_Ringmail_Helmet_01,Nordic Ringmail Helmet
+T_Nor_Ringmail_Helmet_02,Nordic Ringmail Helmet
+T_Nor_Ringmail_PauldronL_02,Nordic Ringmail Left Pauldron
+T_Nor_Ringmail_PauldronR_02,Nordic Ringmail Right Pauldron
+T_Nor_Sabrecat_Helm_01,Sabre Cat Helmet
+T_Nor_Sabrecat_Helm_02,Snow Sabre Cat Helmet
+T_Nor_Sabrecat_Helm_Sight,Snowcat's Sight
+T_Nor_Steel_Boots_01,Nord Steel Boots
+T_Nor_Steel_Cuirass_01,Nord Steel Cuirass
+T_Nor_Steel_Cuirass_SteelHearth,Cuirass of Steelhearth
+T_Nor_Steel_GauntletL_01,Nord Steel Left Gauntlet
+T_Nor_Steel_GauntletR_01,Nord Steel Right Gauntlet
+T_Nor_Steel_Greaves_01,Nord Steel Greaves
+T_Nor_Steel_Helm_01,Nord Steel Helmet
+T_Nor_Steel_PauldronL_01,Nord Steel Left Pauldron
+T_Nor_Steel_PauldronR_01,Nord Steel Right Pauldron
+T_Nor_Trollbone_Boots_01,Nordic Trollbone Boots
+T_Nor_Trollbone_BracerL_01,Nordic Trollbone Left Bracer
+T_Nor_Trollbone_BracerR_01,Nordic Trollbone Right Bracer
+T_Nor_Trollbone_Greaves_01,Nordic Trollbone Greaves
+T_Nor_Trollbone_Greaves_Vigor,Troll's Vigor
+T_Nor_Trollbone_PauldronL_01,Nordic Trollbone Left Pauldron
+T_Nor_Trollbone_PauldronR_01,Nordic Trollbone Right Pauldron
+T_Nor_UNI_Kvisahjaelmur,Kvisahjaelmur
+T_Nor_UNI_PredatorsGrace,Predator's Grace
+T_Nor_UNI_SnowDrakePelt,Snow Drake's Pelt
+T_Nor_UNI_TargeBlooded,Targe of the Blooded
+T_Nor_Wood_Shield_01,Round Shield
+T_Nor_Wood_Shield_02,Round Shield
+T_Nor_Wood_Shield_03,Round Shield
+T_Nor_Wood_ShieldBuckler_01,Wooden Shield
+T_Nor_Wood_ShieldBuckler_02,Wooden Shield
+T_Nor_Wood_ShieldBuckler_03,Wooden Shield
+T_Nor_Wood_ShieldBuckler_04,Wooden Shield
+T_Nor_Wood_ShieldBuckler_05,Wooden Shield
+T_Nor_Wood_ShieldBuckler_06,Wooden Shield
+T_Nor_Wood_ShieldBuckler_07,Wooden Shield
+T_Nor_Wood_ShieldBuckler_08,Wooden Shield
+T_Orc_Leather_Boots_01,Orc Leather Boots
+T_Orc_Leather_Cuirass_01,Orc Leather Cuirass
+T_Orc_Leather_GauntletL_01,Orc Leather Left Gauntlet
+T_Orc_Leather_GauntletR_01,Orc Leather Right Gauntlet
+T_Orc_Leather_Greaves_01,Orc Leather Greaves
+T_Orc_Leather_Helm_01,Orc Leather Helmet
+T_Orc_Leather_PauldronL_01,Orc Leather Left Pauldron
+T_Orc_Leather_PauldronR_01,Orc Leather Right Pauldron
+T_Orc_Regular_HelmOpen_01,Orcish Open Helm
+T_QC_Shellmold_Boots_01,Shellmold Boots
+T_QC_Shellmold_BracerL_01,Shellmold Left Bracer
+T_QC_Shellmold_BracerR_01,Shellmold Right Bracer
+T_QC_Shellmold_Cuirass_01,Shellmold Cuirass
+T_QC_Shellmold_Greaves_01,Shellmold Greaves
+T_QC_Shellmold_Helm_01,Shellmold Helm
+T_QC_Shellmold_PauldL_01,Shellmold Left Pauldron
+T_QC_Shellmold_PauldR_01,Shellmold Right Pauldron
+T_Rea_Leather_Hat_01,Reachmen Hat
+T_Rea_Leather_Hat_Witchery,Reachmen Cap of Witchery
+T_Rea_UNI_FeatherCrown,Feathered Crown
+T_Rea_Wormmouth_Boots_01,Wormmouth Boots
+T_Rea_Wormmouth_BracerL_01,Wormmouth Left Bracer
+T_Rea_Wormmouth_BracerR_01,Wormmouth Right Bracer
+T_Rea_Wormmouth_Cuirass_01,Wormmouth Cuirass
+T_Rea_Wormmouth_Greaves_01,Wormmouth Greaves
+T_Rea_Wormmouth_Helm_01,Wormmouth Helmet
+T_Rea_Wormmouth_Helm_Poison,Poisonbeak Helmet
+T_Rea_Wormmouth_PauldronL_01,Wormmouth Left Pauldron
+T_Rea_Wormmouth_PauldronR_01,Wormmouth Right Pauldron
+T_Rga_Alikr_Buckler,Alik'r Buckler
+T_Rga_CrownGuard1_Boots_01,Crown Chain Boots
+T_Rga_CrownGuard1_Cuirass_01,Crown Chain Mail
+T_Rga_CrownGuard1_Greaves_01,Crown Chain Greaves
+T_Rga_CrownGuard1_Helm_01,Crown Chain Helmet
+T_Rga_CrownGuard1_PauldronL_01,Crown Chain Left Pauldron
+T_Rga_CrownGuard1_PauldronR_01,Crown Chain Right Pauldron
+T_Rga_Ep_Headdress_01,Expensive Redguard Hat
+T_Rga_Lamellar_Bracer_L_01,Redguard Lamellar Left Bracer
+T_Rga_Lamellar_Bracer_R_01,Redguard Lamellar Right Bracer
+T_Rga_Lamellar_Cuirass,Redguard Lamellar Cuirass
+T_Rga_Lamellar_Cuirass_B,Redguard Lamellar Cuirass
+T_Rga_Lamellar_Cuirass_G,Redguard Lamellar Cuirass
+T_Rga_Lamellar_Cuirass_Y,Redguard Lamellar Cuirass
+T_Rga_Lamellar_Helm,Redguard Lamellar Helmet
+T_Rga_Lamellar_Helm_B,Redguard Lamellar Helmet
+T_Rga_Lamellar_Helm_G,Redguard Lamellar Helmet
+T_Rga_Lamellar_Helm_Y,Redguard Lamellar Helmet
+T_Rga_Wicker_Shield,Redguard Wicker Shield
+Sky_iRe_DH_RaindropBoots,Raindrop Boots
+Sky_iRe_DH_TsunsLeftArm,Tsun's Left Arm
+Sky_iRe_DH_TsunsRightArm,Tsun's Right Arm
+Sky_iRe_DSE_HelmetTirasch,Helmet of Tirasch
+Sky_iRe_DSE_TanyinCuirass,Tanyin's Cuirass
+Sky_iRe_DSW_Galewrapped,Galewrapped Cuirass
+Sky_iRe_DSW_VeteransHelm,Veteran's Helm
+Sky_iRe_KW_HelmetAngar,Helmet of Angar Blood-Beard
+Sky_iRe_KW_HelmSoftStep,Helm of Soft Step
+Sky_iRe_KW_HelmVitalization,Helm of Vitalization
+Sky_iRe_KW_OrcChestIron,Orc Chest of Iron
+Sky_iRe_LH_ChargingBoar,Shield of the Charging Boar
+Sky_iRe_VF_AlikrDustBoots,Alik'r Dust Boots
+Sky_qRe_DSE4_EdricShield,Edric's Shield
+Sky_qRe_KG1_KerlingroffHelm,Kerlingroff Helmet
+Sky_qRe_KG5_Bracer,Bracer of the Sudden Storm
+Sky_qRe_KWTG7_Heirloom,Redguard Family Heirloom
+Sky_qRe_MAI1_Boots,Fitted Wormmouth Boots
+Sky_qRe_MAI1_BracerL,Fitted Wormmouth Left Bracer
+Sky_qRe_MAI1_BracerR,Fitted Wormmouth Right Bracer
+Sky_qRe_MAI1_Cuirass,Fitted Wormmouth Cuirass
+Sky_qRe_MAI1_Greaves,Fitted Wormmouth Greaves
+Sky_qRe_MAI1_Helm,Fitted Wormmouth Helmet
+Sky_qRe_MAI1_PauldronL,Fitted Wormmouth Left Pauldron
+Sky_qRe_MAI1_PauldronR,Fitted Wormmouth Right Pauldron
+Sky_qRe_MAI4_Boots,Rainwatcher's Boots
+TR_a-m2-56-gashcrown,Gashcrown
+TR_a_i3-737_Tarons_Reach,Captain Taron's Reach
+TR_Alandro_towershield,Alandro's Shield
+TR_i2-235_bonemold_towershield,Bonemold Tower Shield
+TR_i2-235_dragonscale_tower,Dragonscale Tower Shield
+TR_i2-235_dwemer_shield,Dwemer Shield
+TR_i2-235_goblin_shield,Goblin Buckler
+TR_i2-235_imperial shield,Imperial Shield
+TR_i2-235_iron_towershield,Iron Tower Shield
+TR_i2-235_steel_towershield,Steel Tower Shield
+TR_i2-410_a_dres_cuirass_broken,Native Gah'Kogo Cuirass
+TR_i3-280_a_ProvocativeHelm,Provocative Helmet
+TR_i3-649_imp shield nopickup,Imperial Shield
+TR_m1_Ench_Shield_i62,Lleneris Darys' Shield
+TR_m1_Ench_Shield_i62_free,Lleneris Darys' Shield
+TR_m1_Ench_Towershield,Mirror Shield
+TR_m1_FW_WizardRestraintL,Left Wizard's Shackle
+TR_m1_FW_WizardRestraintR,Right Wizard's Shackle
+TR_m1_FWMG_BootsOfCapacity,Boots of Capacity
+TR_m1_g_boots_jump,Acrobat's Boots
+TR_m1_Goblin_Trophy,Goblin Slayer's Trophy
+TR_m1_GrazgobShield,Grazgob gro-Muzbog's Shield
+TR_m1_molecrab_cuirass_protect,Molecrab Cuirass of Fortitude
+TR_m1_q_GadavesGreaves,Gadaves' Dreugh Greaves
+TR_m1_q_RanShield1,Iron Shield
+TR_m1_q_RanShield2,Iron Shield
+TR_m1_raptures fist,Rapture's Fist
+TR_m1_silver_duchguard_cuirass,Duchess' Guard Silver Cuirass
+TR_m2_a_Crabwalker_boots,Boots of the Crabwalker
+TR_m2_a_explorer_boots,Boots of the Explorer
+TR_m2_a_Gidaves'_Bracer,Gidaves' Bracer
+TR_m2_a_Lzigat_PauldL_Uni,Left Pauldron of Lzigat
+TR_m2_a_Lzigat_PauldR_Uni,Right Pauldron of Lzigat
+TR_m2_a_RepairHelm_uni,Dwemer Mechanic's Headgear
+TR_m2_face_hortator_uni,Face of the Hortator
+TR_M2_MG_Lamp_Kaishi_Cuirass,Cuirass of Star's Benison
+TR_m2_q_22_CursedShield,Dwemer Shield
+TR_m2_q_22_CursedShieldEx,Dwemer Shield
+TR_m2_q_22_CursedShieldEx2,Dwemer Shield
+TR_m2_q_27_SBheelkur,Heel-Kur's Left Slave Bracer
+TR_m2_q_27_SBlijarra,Lijarra's Left Slave Bracer
+TR_m2_q_29_gauntlet_left,Left Gauntlet of Shieldbearing
+TR_m2_q_29_gauntlet_right,Right Gauntlet of Blind Rage
+TR_m2_q_A9_6_Shield,Solusi's Shield
+TR_m2_Sailen_Vulgate_sh,Vulgate
+TR_m3-278_a_dwrvhelm,Radack-Dizvir
+TR_m3-278_a_rebelbracer_l,Left Hand of Freedom
+TR_m3-278_a_rebelbracer_r,Right Hand of Freedom
+TR_m3-512_helm,Ice Ward of St. Felms
+TR_m3-718 Decorative Armor,Decorative Armor
+TR_m3-743_a_DB_Boots,Old Brotherhood Boots
+TR_m3-743_a_DB_Cuirass,Old Brotherhood Cuirass
+TR_m3-743_a_DB_greaves,Old Brotherhood Greaves
+TR_m3-743_a_DB_Helm,Old Brotherhood Helm
+TR_m3-758_a_tadrils_temper,Tadril's Temper
+TR_m3_A8_rickshaw_helm,Rickshaw Puller Helmet
+TR_m3_a_antumbral_shield_uni,Antumbral Shield
+TR_m3_Brother_IndorilHelm,Indoril Helm of Verity
+TR_m3_calcius_mail_uni,Mail of Calcius Fire-Walker
+TR_M3_i605_Greaves,Lucky Helga's Legs
+TR_m3_indshield_i3-606-ind,Indoril Guard Shield
+TR_m3_lightningboots,Boots of Lightning Speed
+TR_m3_OE_a_madhoosa_uni,Shield of Mad-Hoosa's Gaze
+TR_m3_OE_CassynderArmor,Cuirass of Cassynder Septim
+TR_m3_OE_TG_KatariahDisp01,Death Mask of Empress Katariah
+TR_m3_OE_TG_SnowHareBoots,Hhontjulf's Snow Hare Boots
+TR_m3_q_ST_Honns_1,Honns' Lockbane Boots
+TR_m3_q_ST_Honns_2,Honns' Crotchkicker Boots
+TR_m3_q_ST_Honns_3,Honns' Dungfinder Boots
+TR_m3_q_ST_Honns_4,Honns' Snowtrekker Boots
+TR_m3_speaker_boots,Boots of the Speaker
+TR_m3_speaker_cuirass,Heart of the Speaker
+TR_m3_speaker_gauntlet_L,Left Hand of the Speaker
+TR_m3_speaker_gauntlet_R,Right Hand of the Speaker
+TR_m3_speaker_greaves,Greaves of the Speaker
+TR_m3_speaker_helm,Helmet of the Speaker
+TR_m3_speaker_pauldron_L,Left Pauldron of the Speaker
+TR_m3_speaker_pauldron_R,Right Pauldron of the Speaker
+TR_m3_steel_fireheart_i3-647,Steel Fireheart
+TR_m4-476_hartwigs_grip,Hartwig's Iron Right Grip
+TR_m4-518_spellweavers_skins,Spellweaver's Cuirass
+TR_m4_A_AlverLegBrace,Nols Alver's Leg Brace
+TR_m4_a_Atsiru-Din_Shield_uni,Atsiru-Din's Fire Shield
+TR_m4_Ando_MG_Polyhedrascope,Polyhedrascope
+TR_m4_AndothTGThreeEyedHelm,Advanced Vault-Stalker Helmet
+TR_m4_Hendor_Cuirass,Master Forger's Mail
+TR_m4_HH_AND_Demand,Demand
+TR_m4_HH_And_Supply,Supply
+TR_m4_IL_Bracerleft,Silver Bracer of Diplomacy
+TR_m4_IL_Bracerright,Silver Bracer of Assertion
+TR_m4_IL_chaincuirass,Chains of Credibility
+TR_m4_immetarca_boots,Boots of Wayward Flying
+TR_m4_olmshelm_i4-261-hla,Helm of St. Olms
+TR_m4_orcish_boots_uni,Goreriders
+TR_m4_orcish_helmofbattle_uni,Orcish Helm of Battle
+TR_m4_q_ArvenasHelmet,Arvena's Helmet
+TR_m4_q_ArvenasHelmet_ar,Arvena's Helmet
+TR_m4_RR_VCave_4_Footpads,Explorer's Footpads
+TR_m4_Shield_Leftunch,Escutcheon of Duunmarkng
+TR_m4_TT_OrcNoCuirass,Orcish Cuirass
+TR_m4_TT_OrcNoGreaves,Orcish Greaves
+TR_m4_TT_OrcNoHelm,Orcish Helm
+TR_m4_UshuDimmuCrown_01,Cursed Crown of Ushu-Dimmu
+TR_m4_UshuDimmuCrown_02,Cursed Crown of Ushu-Dimmu
+TR_m4_vesidur_helm,Baris' Diving Helmet
+AATL_ART_Targe_Blooded,Targe of the Blooded
+AATL_ART_Visage_Mzund,Visage of Mzund
+AATL_ART_Fearstruck,Fearstruck
+AATL_a_buck_chitin,Chitin Buckler
+AATL_a_buck_chitin_h,Reinforced Chitin Buckler
+AATL_a_buck_dwemer_h,Dwemer Buckler
+AATL_a_buck_glass,Glass Buckler
+AATL_a_buck_glass_h,Buoyant Armiger Buckler
+AATL_a_buck_iron,Iron Buckler
+AATL_a_buck_netch_h,Netch Leather Buckler
+AATL_a_buck_niron,Nordic Iron Buckler
+NOD_hat_turban04_WAR_KHA_br,Expensive Turban
+NOD_hat_turban04_WAR_KHA_w,Expensive Turban
+NOD_hat_turban04_WAR_KHA_x_br,Expensive Turban (Masked)
+NOD_hat_turban04_WAR_KHA_wx,Expensive Turban (Masked)
+NOD_hat_WAR_KHA_MASK01,Mask
+NOD_hat_WAR_KHA_MASK02,Mask
+NOD_WAR_MISC_BACKPACK01a,Adventurer's Pack (Leather)
+NOD_WAR_MISC_BACKPACK02a,Adventurer's Pack (Tapestry)
+NOD_WAR_MISC_POUCH01,Adventurer's Satchel
+NOD_WAR_MISC_POUCH04,Adventurer's Satchel
+NOD_dnk_qor_cuirass,Artificer's Folly
+NOD_dnk_qor_p_left,Enchanter's Left Pauldron
+NOD_dnk_qor_p_right,Enchanter's Right Pauldron
+NOD_dnk_missun_cuirass,Hiomaste's Legacy
+NOD_dnk_sarano_cuirass,Dreamers' Bane
+NOD_dnk_eno_cuirass,The Eighth Shadow
+NOD_dnk_virith_cuirass,Loyalty's Embrace
+NOD_dnk_virith_p_left,Virith's Left Pauldron
+NOD_dnk_virith_p_right,Virith's Right Pauldron
+NOD_dnk_sixth_cuirass,Heart Unmourned
+NOD_dnk_hlaalu_cuirass,Pride of Narsis
+NOD_dnk_mandas_cuirass,The Heart of Madness
+NOD_dnk_mandas_p_left,Ebony Left Pauldron
+NOD_dnk_mandas_p_right,Ebony Right Pauldron
+NOD_dnk_duke_cuirass,The Duke's Ceremonial Cuirass
+NOD_dnk_seanwen_cuirass,Heavy Ebony Cuirass
+NOD_dnk_seanwen_p_left,Heavy Ebony Left Pauldron
+NOD_dnk_seanwen_p_right,Heavy Ebony Right Pauldron
+NOD_dnk_sala_cuirass,Indoril Commander Cuirass
+NOD_dnk_sala_p_left,Indoril Commander L Pauldron
+NOD_dnk_sala_p_right,Indoril Commander R Pauldron
+NOD_dnk_duke_p_left,The Duke's Left Pauldron
+NOD_dnk_duke_p_right,The Duke's Right Pauldron
+NOD_dnk_dagoth_cuirass,Ancient Bonemold Cuirass
+NOD_dnk_dwem_boots,Salvaged Dwarven Boots
+NOD_dnk_dwem_cuirass,Salvaged Dwarven Cuirass
+NOD_dnk_dwem_grv,Salvaged Dwarven Greaves
+NOD_dnk_dwem_l_gaunt,Salvaged Dwarven Left Gauntlet
+NOD_dnk_dwem_l_pauldron,Salvaged Dwarven Left Pauldron
+NOD_dnk_dwem_mask,Salvaged Odd Mask
+NOD_dnk_dwem_r_gaunt,Salvaged Dwarven Right Gauntlet
+NOD_dnk_dwem_r_pauldron,Salvaged Dwarven Right Pauldron
+NOD_RV_Chitin Helm D_hr,Balmhadod Shogan Chitin Helmet
+NOD_RV_Chitin Helm E_ht,Miragad Moljuhn Chitin Helmet
+NOD_RV_Chitin Helm F_hh,Khestis Periud Chitin Helmet
+NOD_hat_netch_RV_Netchimans Cap,Netchiman's Cap
+NOD_1ba_pauldron_right,Buoyant Armiger R. Pauldron
+NOD_1ba_pauldron_left,Buoyant Armiger L. Pauldron
+NOD_1ba_guantlet_right,Buoyant Armiger R. Gauntlet
+NOD_1ba_bracer_left,Buoyant Armiger L. Bracer
+NOD_1ba_greaves,Buoyant Armiger Greaves
+NOD_1ba_cuirass,Buoyant Armiger Cuirass
+NOD_1ba_boots,Buoyant Armiger Boots
+NOD_1ba_cuirass02,Buoyant Armiger Battle Robe
+NOD_1ba_helm,Buoyant Armiger Helmet
+NOD_1ba_hood_,Buoyant Armiger Hood
+NOD_1ba_scarf_g,Buoyant Armiger Scarf
+NOD_ARdres,Dres Armored Robe
+NOD_ARhlaalu,Hlaalu Armored Robe
+NOD_ARimpBattlemage,Imp. Battlemage Armored Robe
+NOD_ARimpOfficial,Reinforced Robe of Imp. Agent
+NOD_ARindoril,Temple Armored Robe
+NOD_ARindoril2,Indoril Armored Robe
+NOD_ARnightblade,Nightblade Armored Robe
+NOD_ARredoran,Redoran Armored Robe
+NOD_ARspellsword,Spellsword Armored Robe
+NOD_ARtelvanni,Telvanni Armored Robe
+NOD_AR_LegionBM,Legion's Battlemage Armor
+NOD_AR_IndRobe1,Indoril Armored Robe
+NOD_AR_IndHelm,Indoril Helmet (opened ears)
+NOD_AR_IndRobe_nC1,Indoril Armored Robe (no Cloak)
+NOD_ARindoril_hood,Order of Inquisition Hood
+NOD_ARindoril_hood&Mask,Order of Inquisition Hood&Mask
+NOD_AR_indoril helmet2,Order of Doctrine Helmet
+NOD_AR_pauldron left,Order of Inquisition Pauldron L
+NOD_AR_pauldron right,Order of Inquisition Pauldron R
+NOD_Mabrigash_AR01,Mabrigash Armored Robe
+NOD_Mabrigash_AR02,Mabrigash Armored Robe
+NOD_Mabrigash_AR04,Mabrigash Armored Robe
+NOD_Mabrigash_AR03,Mabrigash Armored Robe
+AdNetch Pauldron Left,Netch Adamantium Left Pauldron
+AdNetch Boots,Netch Adamantium Boots
+AdNetch Gauntlet Left,Netch Adamantium Left Gauntlet
+AdNetch Gauntlet Right,Netch Adamantium Right Gauntlet
+AdNetch Cuirass,Netch Adamantium Cuirass
+AdNetch Greaves,Netch Adamantium Greaves
+AdNetch Pauldron Right,Netch Adamantium Right Pauldron
+AdNetch Cuirass_II,Netch Adamantium Dark Cuirass
+AdNetch Cuirass_III,Netch Adamantium Light Cuirass
+AdNetch Coat,Netch Adamantium Coat
+AdNetch Glove Left,Netch Adamantium Left Glove
+AdNetch Glove Right,Netch Adamantium Right Glove
+AdNetch Pauldron Left II,Netch Adamantium L Light Paul
+AdNetch Pauldron Right II,Netch Adamantium R Light Paul
+AdNetch Beast Boots,Netch Adamantium Beast Boots
+Adnetch Shield,Netch Adamantium Shield
+NOD_RV_adamantium boots,Ceremonial Adamantium Boots
+NOD_RV_adamantium_cuirass,Ceremonial Adamantium Cuirass
+NOD_RV_adamantium_helmet,Ceremonial Adamantium Helm
+NOD_RV_adamantium_greaves,Ceremonial Adamantium Greaves
+NOD_RV_adamantium_Gauntlet_left,Ceremonial Adamantium Gauntlt.L
+NOD_RV_adamantium_Gauntlet_r,Ceremonial Adamantium Gauntlt.R
+NOD_RV_adamantium_pauldron_left,Ceremonial Adamantium Pauldrn.L
+NOD_RV_adamantium_pauldron_r,Ceremonial Adamantium Pauldrn.R
+NOD_RV_adamantium_robe_left,Ceremonial Adamantium Sleeve.L
+NOD_RV_adamantium_robe_right,Ceremonial Adamantium Sleeve.R
+NOD_RV_adamantium_cuirass 2,Ceremonial Adamantium Cuirass 2
+NOD_RV_adamantium boots_red,Ceremonial Adamantium Boots
+NOD_RV_adamantium_cuirass_red,Ceremonial Adamantium Cuirass
+NOD_RV_adamantium_cuirass 2_red,Ceremonial Adamantium Cuirass
+NOD_RV_adamantium_Gntlet_left_r,Ceremonial Adamantium Gauntlt.L
+NOD_RV_adamantium_Gauntlet_r_r,Ceremonial Adamantium Gauntlt.R
+NOD_RV_adamantium_helmet_red,Ceremonial Adamantium Helm
+NOD_RV_adamantium_pauldron_l_rd,Ceremonial Adamantium Pauldrn.L
+NOD_RV_adamantium_pauldron_r_r,Ceremonial Adamantium Pauldrn.R
+NOD_RV_adamantium_robe_left_r,Ceremonial Adamantium Sleeve.L
+NOD_RV_adamantium_robe_right_r,Ceremonial Adamantium Sleeve.R
+NOD_RV_Duke's_helmet,Duke's Guard Silver Helmet
+NOD_RV_Duke's_greaves,Duke's Guard Silver Greaves
+NOD_RV_Duke's_Boots,Duke's Guard Silver Boots
+NOD_RV_Duke's_pauld_R,Duke's Guard Silver R Pauldron
+NOD_RV_Duke's_pauld_L,Duke's Guard Silver L Pauldron
+NOD_RV_Duke's_Gauntlet_R,Duke's Guard Silver R Gauntlet
+NOD_RV_Duke's_Gauntlet_L,Duke's Guard Silver L Gauntlet
+NOD_rv_Daedric_helm_dagon,Face of the Husband of Fire
+NOD_rv_Daedric_helm_molag,Face of the Forbidden Tickle
+NOD_rv_Daedric_helm_sheo,Face of Comforting Tendrils 
+NOD_RV_dwemscr_boots,Dwemer Scrap Boots
+NOD_RV_dwemscr_bracer_left,Dwemer Scrap Left Bracer
+NOD_RV_dwemscr_bracer_right,Dwemer Scrap Right Bracer
+NOD_RV_dwemscr_cuirass,Dwemer Scrap Cuirass
+NOD_RV_dwemscr_helmet,Dwemer Scrap Helm
+NOD_RV_dwemscr_greaves,Dwemer Scrap Greaves
+NOD_RV_dwemscr_pauldron_left,Dwemer Scrap Left Pauldron
+NOD_RV_dwemscr_pauldron_right,Dwemer Scrap Right Pauldron
+NOD_RV_HC_cuirass,Heavy Chitin Cuirass
+NOD_RV_HC_greaves,Heavy Chitin Greaves
+NOD_RV_HC_helmet,Heavy Chitin Helm
+NOD_RV_HC_boots,Heavy Chitin Boots
+NOD_RV_HC_pauldron - left,Heavy Chitin Left Pauldron
+NOD_RV_HC_pauldron - right,Heavy Chitin Right Pauldron
+NOD_RV_HC_guantlet - left,Heavy Chitin Left Gauntlet
+NOD_RV_HC_guantlet - right,Heavy Chitin Right Gauntlet
+NOD_ADMScarfRed,Expensive Scarf
+NOD_ADMScarfOrange,Expensive Scarf
+NOD_ADMScarfYellow,Expensive Scarf
+NOD_ADMScarfGreen,Expensive Scarf
+NOD_ADMScarfBlue,Expensive Scarf
+NOD_ADMScarfDeepBlue,Expensive Scarf
+NOD_ADMScarfPurple,Expensive Scarf
+NOD_ADMScarfRose,Expensive Scarf
+NOD_ADMScarfGrey,Expensive Scarf
+NOD_ADMScarfBlack,Expensive Scarf
+NOD_KD_FemGDia,Golden Earrings with Diamonds
+NOD_KD_FemGEm,Golden Earrings with Emeralds
+NOD_KD_FemGRu,Golden Earrings with Rubies
+NOD_KD_FemGSa,Golden Earrings with Sapphires
+NOD_KD_FemSSa,Silver Earrings with Sapphires
+NOD_KD_FemSDia,Silver Earrings with Diamonds
+NOD_KD_FemSEm,Silver Earrings with Emeralds
+NOD_KD_FemSRu,Silver Earrings with Rubies
+NOD_Earrings_01,Exquisite Earrings
+NOD_Earrings_02,Simple Earrings with Pearls
+NOD_Earrings_03,Expensive Earrings
+NOD_Earrings_03a,Expensive Earrings
+NOD_!aoi_veil_black,Black Veil
+NOD_!aoi_veil_blue,Blue Veil
+NOD_!aoi_veil_green,Green Veil
+NOD_!aoi_veil_lavender,Lavender Veil
+NOD_!aoi_veil_olive,Olive Veil
+NOD_!aoi_veil_pink,Pink Veil
+NOD_KD_BandCopper,Copper Band
+NOD_KD_BandGold,Golden Band
+NOD_KD_BandMithril,Mithril Band
+NOD_KD_BandOrc,Orc Band
+NOD_KD_ChainBlack,Black Chain
+NOD_KD_ChainBlackGems,Black Chain with Gems
+NOD_KD_ChainGold,Golden Chain
+NOD_KD_ChainSilver,Silver Chain
+NOD_KD_ChainSilverGems,Silver Chain with Gems
+NOD_KD_ChainGoldGems,Golden Chain with Gems
+NOD_KD_CircletBBlue,Black Circlet with Moonstone
+NOD_KD_CircletBGreen,Black Circlet with Green Stone
+NOD_KD_CircletBPearl,Black Circlet with Pearl
+NOD_KD_CircletBRed,Black Circlet with Red Stone
+NOD_KD_CircletBTopaz,Black Circlet with Topaz
+NOD_KD_CircletGTopaz,Golden Circlet with Topaz
+NOD_KD_CircletGBlue,Golden Circlet with Moonstone
+NOD_KD_CircletGGreen,Golden Circlet with Green Stone
+NOD_KD_CircletGPearl,Golden Circlet with Pearl
+NOD_KD_CircletGRed,Golden Circlet with Red Stone
+NOD_KD_CircletSTopaz,Silver Circlet with Topaz
+NOD_KD_CircletSRed,Silver Circlet with Red Stone
+NOD_KD_CircletSPearl,Silver Circlet with Pearl
+NOD_KD_CircletSGreen,Silver Circlet with Green Stone
+NOD_KD_CircletSBlue,Silver Circlet with Moonstone
+NOD_KD_DiaG,Golden Diadem
+NOD_KD_DiaS,Silver Diadem
+NOD_KD_DiaGDia,Golden Diadem with Diamond
+NOD_KD_elvDia,Elven Diadem with Diamond
+NOD_KD_elvEm,Elven Diadem with Emerald
+NOD_KD_elvRu,Elven Diadem with Ruby
+NOD_KD_twin,Twin Golden Diadem
+NOD_KD_twinS,Twin Silver Diadem
+NOD_KD_DiaGEm,Golden Diadem with Emerald
+NOD_KD_DiaGRu,Golden Diadem with Ruby
+NOD_KD_DiaGSa,Golden Diadem with Saphire
+NOD_KD_DiaSDia,Silver Diadem with Diamond
+NOD_KD_DiaSEm,Silver Diadem with Emerald
+NOD_KD_DiaSRu,Silver Diadem with Ruby
+NOD_KD_DiaSSa,Silver Diadem with Saphire
+NOD_!aoi_scarf_black,Black Silk Scarf
+NOD_!aoi_scarf_blue,Blue Silk Scarf
+NOD_!aoi_scarf_green,Green Silk Scarf
+NOD_!aoi_scarf_purple,Purple Silk Scarf
+NOD_!aoi_scarf_red,Red Silk Scarf
+NOD_!aoi_scarf_silver,Silver Silk Scarf
+NOD_!aoi_scarf_teal,Teal Silk Scarf
+NOD_!aoi_scarf_yellow,Yellow Silk Scarf
+NOD_KD_G01,Golden Piercing (left ear)
+NOD_KD_G02,Golden Piercing (left ear)
+NOD_KD_G03,Golden Piercing (left ear)
+NOD_KD_G04,Golden Piercing (left ear)
+NOD_KD_G05,Golden Piercing (left ear)
+NOD_KD_G06,Golden Piercing (left ear)
+NOD_KD_G01r,Golden Piercing (right ear)
+NOD_KD_G06r,Golden Piercing (right ear)
+NOD_KD_G05r,Golden Piercing (right ear)
+NOD_KD_G04r,Golden Piercing (right ear)
+NOD_KD_G03r,Golden Piercing (right ear)
+NOD_KD_G02r,Golden Piercing (right ear)
+NOD_KD_S06r,Silver Piercing (right ear)
+NOD_KD_S06,Silver Piercing (left ear)
+NOD_KD_S05r,Silver Piercing (right ear)
+NOD_KD_S05,Silver Piercing (left ear)
+NOD_KD_S04r,Silver Piercing (right ear)
+NOD_KD_S04,Silver Piercing (left ear)
+NOD_KD_S03r,Silver Piercing (right ear)
+NOD_KD_S03,Silver Piercing (left ear)
+NOD_KD_S02r,Silver Piercing (right ear)
+NOD_KD_S02,Silver Piercing (left ear)
+NOD_KD_S01r,Silver Piercing (right ear)
+NOD_KD_S01,Silver Piercing (left ear)
+NOD_!aoi_01black1,Dunmer Noble Wig (Black01-1)
+NOD_!aoi_01black2,Dunmer Noble Wig (Black01-2)
+NOD_!aoi_01brown1,Dunmer Noble Wig (Brown01-1)
+NOD_!aoi_01brown2,Dunmer Noble Wig (Brown01-2)
+NOD_!aoi_01red1,Dunmer Noble Wig (Red01-1)
+NOD_!aoi_01red2,Dunmer Noble Wig (Red01-2
+NOD_!aoi_02black1,Dunmer Noble Wig (Black02-1)
+NOD_!aoi_02black2,Dunmer Noble Wig (Black02-2)
+NOD_!aoi_02black3,Dunmer Noble Wig (Black02-3)
+NOD_!aoi_02brown1,Dunmer Noble Wig (Brown02-1)
+NOD_!aoi_02brown2,Dunmer Noble Wig (Brown02-2)
+NOD_!aoi_02brown3,Dunmer Noble Wig (Brown02-3)
+NOD_!aoi_02red1,Dunmer Noble Wig (Red02-1)
+NOD_!aoi_02white3,Dunmer Noble Wig (White02-3)
+NOD_!aoi_03black1,Dunmer Noble Wig (Black03-1)
+NOD_!aoi_03black1S,Dunmer Noble Wig (Black03-1S)
+NOD_!aoi_03brown1,Dunmer Noble Wig (Brown03-1)
+NOD_!aoi_03red1,Dunmer Noble Wig (Red03-1)
+NOD_!aoi_03white1,Dunmer Noble Wig (White03-1)
+NOD_!aoi_20black1,Dres Noble Wig (Black01-1)
+NOD_!aoi_20black1S,Dres Noble Wig (Black01-1S)
+NOD_!aoi_20brown2,Dres Noble Wig (Brown01-2)
+NOD_!aoi_20red1S,Dres Noble Wig (Red01-1S)
+NOD_!aoi_20white1,Dres Noble Wig (White01-1)
+NOD_!aoi_21black1,Dres Noble Wig (Black02-1)
+NOD_!aoi_21black1S,Dres Noble Wig (Black02-1S)
+NOD_!aoi_21brown1,Dres Noble Wig (Brown02-1)
+NOD_!aoi_21brown2,Dres Noble Wig (Brown02-2)
+NOD_!aoi_21white1,Dres Noble Wig (White02-1)
+NOD_!aoi_22black1,Dres Noble Wig (Black03-1)
+NOD_!aoi_22red1,Dres Noble Wig (Red03-1)
+NOD_!aoi_23black2,Dres Noble Wig (Black04-2)
+NOD_!aoi_23black2S,Dres Noble Wig (Black04-2S)
+NOD_!aoi_23red1,Dres Noble Wig (Red04-1)
+NOD_!aoi_11black1,Hlaalu Noble Wig (Black01)
+NOD_!aoi_11black1S,Hlaalu Noble Wig (Black01-S)
+NOD_!aoi_11brown1,Hlaalu Noble Wig (Brown01)
+NOD_!aoi_11red1S,Hlaalu Noble Wig (Re01-1S)
+NOD_!aoi_11brown1S,Hlaalu Noble Wig (Brown01-S)
+NOD_!aoi_11white1,Hlaalu Noble Wig (White01-1)
+NOD_!aoi_17black,Hlaalu Noble Wig (Black02)
+NOD_!aoi_17blackS,Hlaalu Noble Wig (Black02-S)
+NOD_!aoi_17brown,Hlaalu Noble Wig (Brown02)
+NOD_!aoi_17brownS,Hlaalu Noble Wig (Brown02-S)
+NOD_!aoi_17redS,Hlaalu Noble Wig (Red02-S)
+NOD_!aoi_17white,Hlaalu Noble Wig (White02)
+NOD_!aoi_12black1,Indoril Noble Wig (Black01-1)
+NOD_!aoi_12black1S,Indoril Noble Wig (Black01-1S)
+NOD_!aoi_12black2,Indoril Noble Wig (Black01-2)
+NOD_!aoi_12brown1,Indoril Noble Wig (Brown01-1)
+NOD_!aoi_12brown2,Indoril Noble Wig (Brown01-2)
+NOD_!aoi_12red2,Indoril Noble Wig (Red01-2)
+NOD_!aoi_12white2,Indoril Noble Wig (White01-2)
+NOD_!aoi_24red1,Indoril Noble Wig (Red02-1)
+NOD_!aoi_24black2,Indoril Noble Wig (Black02-2)
+NOD_!aoi_24black3,Indoril Noble Wig (Black02-3)
+NOD_!aoi_24black4,Indoril Noble Wig (Black02-4)
+NOD_!aoi_24brown1,Indoril Noble Wig (Brown02-1)
+NOD_!aoi_24brown2,Indoril Noble Wig (Brown02-2)
+NOD_!aoi_24brown3,Indoril Noble Wig (Brown02-3)
+NOD_!aoi_24red4,Indoril Noble Wig (Red02-4)
+NOD_!aoi_24white1,Indoril Noble Wig (White02-1)
+NOD_!aoi_13black1,Redoran Noble Wig (Black01-1)
+NOD_!aoi_13black1S,Redoran Noble Wig (Black01-1S)
+NOD_!aoi_13brown1,Redoran Noble Wig (Brown01-1)
+NOD_!aoi_13brown1S,Redoran Noble Wig (Brown01-1S)
+NOD_!aoi_13red1,Redoran Noble Wig (Red01-1)
+NOD_!aoi_13white1,Redoran Noble Wig (White01-1)
+NOD_!aoi_14black,Redoran Noble Wig (Black02)
+NOD_!aoi_14blackS,Redoran Noble Wig (Black02-S)
+NOD_!aoi_14brownS,Redoran Noble Wig (Brown02-S)
+NOD_!aoi_14redS,Redoran Noble Wig (Red02-S)
+NOD_!aoi_14white,Redoran Noble Wig (White02)
+NOD_!aoi_16black,Redoran Noble Wig (Black03)
+NOD_!aoi_16blackS,Redoran Noble Wig (Black03-S)
+NOD_!aoi_16brown,Redoran Noble Wig (Brown03)
+NOD_!aoi_16red,Redoran Noble Wig (Red03)
+NOD_!aoi_16whiteS,Redoran Noble Wig (White03-S)
+NOD_!aoi_15black,Telvanni Noble Wig (Black01)
+NOD_!aoi_15blackS,Telvanni Noble Wig (Black01-S)
+NOD_!aoi_15brown,Telvanni Noble Wig (Brown01)
+NOD_!aoi_15brownS,Telvanni Noble Wig (Brown01-S)
+NOD_!aoi_15red,Telvanni Noble Wig (Red01)
+NOD_!aoi_15white,Telvanni Noble Wig (White01)
+NOD_!aoi_31black1,Telvanni Noble Wig (Black02-1)
+NOD_!aoi_31black2,Telvanni Noble Wig (Black02-2)
+NOD_!aoi_31red2S,Telvanni Noble Wig (Red02-2S)
+NOD_!aoi_31black3,Telvanni Noble Wig (Black02-3)
+NOD_!aoi_31brown1,Telvanni Noble Wig (Brown02-1)
+NOD_!aoi_31white2,Telvanni Noble Wig (White02-2)
+NOD_!aoi_31brown3,Telvanni Noble Wig (Brown02-3)
+NOD_!aoi_31brown3S,Telvanni Noble Wig (Brown02-3S)
+NOD_!aoi_31red1,Telvanni Noble Wig (Red02-1)
+NOD_!aoi_31white2S,Telvanni Noble Wig (White02-2S)
+NOD_!aoi_35black,Hlaalu Noble Wig (Black03)
+NOD_!aoi_35brown,Hlaalu Noble Wig (Brown03)
+NOD_!aoi_35red,Hlaalu Noble Wig (Red03)
+NOD_!aoi_35white,Hlaalu Noble Wig (White03)
+NOD_!aoi_23white2,Dres Noble Wig (White04-2)
+NOD_!aoi_23brown2S,Dres Noble Wig (Brown04-2S)
+NOD_RV_Sacred_Necro_Boots,Sacred Necromancer Boots
+NOD_RV_Sacred_Necro_Cuirass,Sacred Necromancer Cuirass
+NOD_RV_Sacred_Necro_Bracer_L,Sacred Necromancer Left Bracer
+NOD_RV_Sacred_Necro_Bracer_R,Sacred Necromancer Right Bracer
+NOD_RV_Sacred_Necro_greaves,Sacred Necromancer Greaves
+NOD_RV_Sacred_Necro_Hood,Sacred Necromancer Hood
+NOD_RV_Sacred_Necro_Pauld_L,Sacred Necromancer Pauldron.L
+NOD_RV_Sacred_Necro_Pauld_R,Sacred Necromancer Pauldron.R
+NOD_RV_Necromask,Necromancer's Mask
+NOD_RV_ArchNecromask,Arch-Necromancer's Mask
+NOD_RV_Necroboots,Necromancers Boots
+NOD_RV_Necrohood,Necromancer's Hood
+NOD_RV_ArchNecrohood,Arch-Necromancer's Hood
+NOD_RETEX_6th_robe1,RETEX 6th House Armored Robe
+NOD_pb_neen-enamor_cuirass,Neen'Enamor Bonemold Cuirass
+NOD_pb_neen-enamor_pauldron_l,Nee'Enamor Bonemold L Pauldron
+NOD_pb_neen-enamor_pauldron_r,Nee'Enamor Bonemold R Pauldron
+NOD_pb_neen-enamor_helm_01,Neen'Enamor Bonemold Mask
+NOD_pb_neen-enamor_helm_02,Neen'Enamor Horned Mask
+NOD_pb_neen-enamor_helm_03,Neen'Enamor Shemagh
+NOD_pb_tshield_dagoth,Neen'Enamor Tower Shield
+NOD_pb_tshield_dagoth_g,Neen'Enamor Sancted Shield
+NOD_pb_neen-enamor_greaves,Neen'Enamor Bonemold Greaves
+NOD_RETEX_6th_ar_lbcuirass2,RETEX 6th House Warrior Cuirass
+AK_cloth_helm_uni,Cloth of St. Seryn
+NOD_hat_ash_ah_dustmask,Ashlands Dust Mask
+NOD_hat_ash_r0_gogglehood_w,Ashlands Masked Cowl
+NOD_hat_mabrigash_r0_mask,Mabrigash Mask
+NOD_hat_shroomcap_emperor,Emperor Mushroom Hat
+NOD_hat_shroomcap_b,Blue Mushroom Hat
+NOD_hat_shroomcap_br,Brown Mushroom Hat
+NOD_hat_shroomcap_w,Muckpod Hat
+NOD_hat_bug_g,Green Hat
+NOD_hat_bug_b,Blue Bug Hat
+NOD_hat_mabrigash_ah_buglord,Mabrigash Buglord Helm
+NOD_hat_shroomcap_telvanni,Telvanni Mushroom Hat
+NOD_hat_shroomcowl,Telvanni Cowl
+NOD_hat_crab_ah_crabhatmask,Faded Crabmask
+NOD_hat_turban01_RM,Common Turban
+NOD_hat_turban02_RM,Common Turban
+NOD_hat_turban03_RM,Common Turban
+NOD_hat_crab_RM_MCrabHelm01,Crab Hat
+NOD_hat_crab_RM_MCrabHelm02,Crab Hat
+NOD_hat_crab_RM_MCrabHelm03,Crab Hat
+NOD_RM_MCrabShield01,Crab Shield
+NOD_RM_MCrabShield02,Crab Shield
+NOD_RM_MCrabShield03,Crab Shield
+NOD_hat_iron_RM_HeadWear04,Iron Helmet
+NOD_hat_iron_RM_HeadWear05,Iron Helmet
+NOD_hat_iron_RM_HeadWear06,Iron Helmet
+NOD_hat_straw_RM_WickerHelmet01,Straw Helmet
+NOD_hat_straw_RM_WickerHelmet02,Straw Helmet
+NOD_hat_straw_RM_WickerHelmet03,Straw Helmet
+NOD_RM_WickerShield01,Straw Shield
+NOD_RM_WickerShield02,Straw Shield
+NOD_RM_WickerShield03,Straw Shield
+NOD_hat_iron_RM_HeadWear_07,Iron helmet
+NOD_hat_iron_RM_HeadWear_08,Iron helmet
+NOD_hat_iron_RM_HeadWear_09,Iron helmet
+NOD_hat_telv_RM_HeadWear_10,Telvanni Hat
+NOD_hat_telv_RM_HeadWear_11,Telvanni Hat
+NOD_hat_telv_RM_HeadWear_12,Telvanni Hat
+NOD_R0_netch_leather_pauldron_l,Shulki's Left Pauldron
+NOD_R0_netch_leather_pauldron_r,Shulki's Right Pauldron
+NOD_ah_woodenshield,Ashwood Shield
+NOD_hat_straw_vd_helmclosed,Straw Hat
+NOD_hat_crab_vd_mudcrabhat,Crab Hat
+NOD_hat_straw_vd_helm_cloth,Straw Hat and Scarf
+NOD_hat_crab_Vd_03cloth_googles,Crab Hat & Scarf
+NOD_hat_netch_vd_boil_helm_open,Boiled Netch Leather Helm
+NOD_hat_ash_ah_gogglehood_br,Ashlands Masked Cowl
+NOD_hat_crab_VD_MCrabHelmgoggle,Crab Hat & Goggles
+NOD_hat_netch_vd_moragtong_mask,Wrap and Googles
+NOD_hat_ash_vd_gondaliergoggles,Gondolier's Googles
+NOD_RETEX_2pl_mvest_1,RETEX Laced Leather Vest
+NOD_RETEX_2pl_mvest_1_dk,RETEX Laced Leather Vest
+NOD_RETEX_2pl_mvest_1_k,RETEX Laced Leather Vest
+NOD_as_goth3_hat_01,Green Feathered Cap
+NOD_as_goth3_hat_02,Grey Feathered Cap
+NOD_as_goth3_hat_03,Brown Feathered Cap
+NOD_as_goth3_hat_04,Blue Feathered Cap
+NOD_as_goth3_hat_05,Red Feathered Cap
+NOD_as_goth3_hat_06,Purple Feathered Cap
+NOD_as_goth3_hat_07,Black Feathered Cap
+NOD_as_goth3_hat_10,Black Leather Feathered Cap
+NOD_as_goth3_hat_11,Brown Leather Feathered Cap
+NOD_as_goth3_hat_12,Red Leather Feathered Cap
+NOD_as_goth4_velvcoat1_r,Extravagant Coat
+NOD_as_goth4_velvcoat2_bl,Extravagant Coat
+NOD_as_goth4_velvcoat3_p,Extravagant Coat
+NOD_as_goth4_velvcoat4_g,Extravagant Coat
+NOD_as_goth4_velvcoat5_bk,Extravagant Coat
+NOD_as_goth4_broccoat1_p,Extravagant Coat
+NOD_as_goth4_broccoat2_r,Extravagant Coat
+NOD_as_goth4_broccoat3_g,Extravagant Coat
+NOD_as_goth4_broccoat4_bl,Extravagant Coat
+NOD_as_goth4_broccoat5_bk,Extravagant Coat
+NOD_as_goth4_webscoat,Exquisite Coat
+NOD_as_goth4_workboot_1_bk,Common Boots
+NOD_as_goth4_workboot_2_br,Common Boots
+NOD_RV_Necromask_nolens,Necromancer's Mask
+_RV_antlers_1,Bosmer Antlers
+_RV_antlers_2,Huntsman's Antlers
+_RV_horns_1,Dremora Horns
+_RV_horns_2,Ram Horns
+_RV_horns_3,Argonian Horns
+_RV_ears_1,Cat Ears 
+_RV_ears_2,Cat Ears (Tilted)
+_RV_Glasses1,Half Moon Spectacles
+_RV_Glasses2,Spectacles
+_RV_Glasses3,Tinted Spectacles
+_RV_Glasses4,Monocle
+_RV_Goggles1,Dark Brotherhood Goggles
+_RV_Goggles2,Morag Tong Goggles
+_RV_Goggles3,Dust Goggles
+_RV_Goggles4,Dwemer Scouter
+_RV_Glasses4s,Silver Monocle
+_RV_Glasses2s,Silver Spectacles
+_RV_Glasses1s,Silver Half Moon Spectacles
+_RV_Goggles5,Splatter Goggles
+_RV_Goggles6,Tinted Goggles
+_RV_Goggles7,Dwemer Goggles
+_RV_Goggles8,Ashlander Goggles
+_RV_Lenses1,Alchemist's Lenses
+_RV_Blindfold1,Blindfold
+_RV_Eyepatch1L,Eyepatch - Left
+_RV_Lenses2,Enchanter's Lens
+_RV_Eyepatch1R,Eyepatch - Right
+_RV_Facewrap_1,Morag Tong Facewrap
+_RV_Facewrap_2,Dark Brotherhood Facewrap
+_RV_Facewrap_3,Grey Cloth Facewrap
+_RV_Facewrap_4,Brown Cloth Facewrap
+_RV_Facewrap_5,Chitin Cloth Facewrap
+_RV_Facewrap_6,Orange Cloth Facewrap
+_RV_Facewrap_7,Blue Cloth Facewrap
+_RV_Facewrap_8,Red Cloth Facewrap
+_RV_Ashmask_1,Dunmer Ashmask
+_RV_Ashmask_2,Dwemer Ashmask
+_RV_Ashmask_3,Visorless Dwemer Ashmask
+_RV_Daedramask_1,Daedric Facemask
+_RV_Daedramask_2,Daedric Facemask
+_RV_Daedramask_3,Daedric Facemask
+_RV_Orcishmask_1,Orcish Facemask
+_RV_Daedramask_4,Daedric Facemask
+_RV_Orcishmask_2,Orcish Facemask
+NOD_AdNetch Pauldron Left,Reinforced Netch Left Pauldron
+NOD_AdNetch Boots,Reinforced Netch Boots
+NOD_AdNetch Gauntlet Left,Reinforced Netch Left Gauntlet
+NOD_AdNetch Gauntlet Right,Reinforced Netch Right Gauntlet
+NOD_AdNetch Cuirass,Reinforced Netch Cuirass
+NOD_AdNetch Greaves,Reinforced Netch Greaves
+NOD_AdNetch Pauldron Right,Reinforced Netch Right Pauldron
+NOD_AdNetch Cuirass_II,Reinforced Netch Dark Cuirass
+NOD_AdNetch Cuirass_III,Reinforced Netch Light Cuirass
+NOD_AdNetch Coat,Reinforced Netch Coat
+NOD_AdNetch Glove Left,Reinforced Netch Left Glove
+NOD_AdNetch Glove Right,Reinforced Netch Right Glove
+NOD_AdNetch Pauldron Left II,Reinforced Netch L Light Paul
+NOD_AdNetch Pauldron Right II,Reinforced Netch R Light Pauldr
+NOD_AdNetch Beast Boots,Reinforced Netch Beast Boots
+NOD_Adnetch Shield,Reinforced Netch Shield
+NOD_BKA2_FemCoat_K06,Expensive Dress
+NOD_BKA2_FemCoat_K07,Expensive Dress
+NOD_BKA2_FemCoat_K08,Expensive Dress
+NOD_BKA2_FemCoat_K02,Expensive Dress
+NOD_BKA2_FemCoat_K03,Expensive Dress
+NOD_BKA2_thief_armor2,Common Shirt
+NOD_RETEX_BKA2_Coat_of_arm1,RETEX Crusader long Coat
+NOD_RETEX_BKA2_Coat_of_arm2,RETEX Crusader short Coat
+NOD_BKA2_FemCoat_K09,Expensive Dress
+KO_eye_patch_armor,Eye Patch
+NOD_KO_Professional_Curiass,Professional Bodice and Bracers
+NOD_KO_Professional_Boots_arm,Professional Leather Boots
+aa_bonemold_boots_bad,Low quality Bonemold Boots
+ATL_a_buck_chitin,Chitin Buckler
+ATL_a_buck_chitin_h,Heavy Chitin Buckler
+ATL_a_buck_daed,Daedric Buckler
+ATL_a_buck_daed_h,Heavy Daedric Buckler
+ATL_a_buck_daed_mana,Daedric Mana-Buckler
+ATL_a_buck_dwemer,Dwemer Buckler
+ATL_a_buck_dwemer_h,Heavy Dwemer Buckler
+ATL_a_buck_ebony,Ebony Buckler
+ATL_a_buck_ebony_h,Heavy Ebony Buckler
+ATL_a_buck_glass,Glass Buckler
+ATL_a_buck_glass_h,Heavy Glass Buckler
+ATL_a_buck_iron,Iron Buckler
+ATL_a_buck_iron_h,Heavy Iron Buckler
+ATL_a_buck_netch,Netch Buckler
+ATL_a_buck_netch_h,Heavy Netch Buckler
+ATL_a_buck_niron,Nordic Iron Buckler
+ATL_a_buck_niron_h,Heavy Nordic Iron Buckler
+ATL_a_buck_orc,Orcish Buckler
+ATL_a_buck_orc_h,Heavy Orcish Buckler
+ATL_a_buck_steel,Steel Buckler
+ATL_a_buck_steel_h,Heavy Steel Buckler
+ATL_a_buck_wood,Wooden Buckler
+ATL_a_buck_wood_h,Heavy Wooden Buckler
+ATL_Art_Targe_Blooded,Targe of the Blooded
+ATL_a_buck_chitin_Almsivi,Almsivi's Redaction
+ATL_a_buck_steel_Divines,Buckler of the Nine
+ATL_a_buck_wood_Alessia,Alessia's Passion
+ATL_a_buck_ebony_h_Firestorm,Firestorm
+ATL_a_buck_niron_avalanche,Buckler of the Avalanche
+ATL_a_buck_niron_h_iceward,Ward of the North
+ATL_a_buck_daed_h_Thunderward,Thunder Ward Buckler
+ATL_a_buck_daed_LightningStrike,Lightning Buckler
+ATL_a_buck_ebony_Flameward,Flame Ward Buckler
+ATL_a_buck_glass_KissAlessia,Alessia's Kiss
+ATL_a_buck_dwemer_h_Vampirism,Buckler of the Night
+ATL_a_buck_glass_h_Delyns_Kiln,Delyn's Kiln
+ATL_a_buck_chitin_h_OlmsCanvas,St. Olm's Canvas
+ATL_a_buck_iron_h_Thunderwave,Thunderwave
+ATL_a_buck_wood_Demon,Demon Buckler
+ATL_a_buck_iron_Devil,Devil Buckler
+ATL_a_buck_netch_h_Vampire,Vampiric Buckler
+ATL_a_buck_orc_h_Blood,Blood-Heist Buckler
+ATL_a_buck_ice,Stalhrim Buckler
+ATL_a_buck_ice_h,Heavy Stalhrim Buckler
+ATL_a_buck_imp,Imperial Buckler
+ATL_a_buck_orc_Kazul,Kazul's Fury
+ATL_a_buck_wood_h_Adventure,Adventurer's Ward
+ATL_a_buck_netch_RedOak,Red Oak Buckler
+ATL_a_buck_imp_Divine_Faith,Buckler of Divine Faith
+ATL_a_buck_ice_h_Iceward,Ice Buckler
+ATL_a_buck_dwemer_Mzal,Mzalch's Stunning Gazer
+ATL_a_buck_ebony_Shockward,Ward of the West
+ATL_a_buck_chitin_Seryns_Brew,Seryn's Lucky Brew
+ATL_a_buck_iron_h_WarriorsWard,Warrior's Ward
+ATL_a_buck_glass_Wizards_Ward,Wizard's Ward
+ATL_a_buck_steel_h_Vesicle,Ryn's Vesicle
+ATL_a_buck_netch_ThiefsWard,Thief's Ward
+daedric_helm_clavicusvile_x,Masque of Clavicus Vile
+wraithguard_x,Wraithguard
+gauntlet_fists_l_unique_x,Fist of Randagulf Left Gauntlet
+gauntlet_fists_r_unique_x,Fist of Randagulf Rt Gauntlet
+wraithguard_jury_rig_x,Wraithguard
+RoHT_HelmOfBoethiasRock,Golden Helm of Boethiah's Rock
+RoHT_edwinna2_dwe_boots,Dwemer Boots
+RoHT_edwinna2_dwe_helm,Dwemer Helm
+RoHT_DagonFel_imperial_helmet,Imperial Steel Helmet
+_WYRM_kynareth_gauntlet_right,Kynaran Right Gauntlet
+_WYRM_kynareth_pauldron_right,Kynaran Right Pauldron
+_WYRM_kynareth_gauntlet_left,Kynaran Left Gauntlet
+_WYRM_kynareth_pauldron_left,Kynaran Left Pauldron
+_WYRM_kynareth_shield_battle,Kynaran Battle Shield
+_WYRM_kynareth_shield_round,Kynaran Round Shield
+_WYRM_black_gauntlet_right,Black Steel Right Gauntlet
+_WYRM_black_gauntlet_left,Black Steel Left Gauntlet
+_WYRM_bronze_helm_crested,Ancient Bronze Crested Helmet
+_WYRM_bronze_towershield,Ancient Bronze Tower Shield
+_WYRM_kynareth_open_helm,Kynaran Open Helm
+_WYRM_sitting_pants_feet,Feet
+_WYRM_missing_right_arm,Missing Right Arm
+_WYRM_missing_right_leg,Missing Right Leg
+_WYRM_severed_right_arm,Severed Right Arm
+_WYRM_severed_right_leg,Severed Right Leg
+_WYRM_kynareth_cuirass,Kynaran Cuirass
+_WYRM_kynareth_greaves,Kynaran Greaves
+_WYRM_missing_left_arm,Missing Left Arm
+_WYRM_missing_left_leg,Missing Left Leg
+_WYRM_severed_left_arm,Severed Left Arm
+_WYRM_severed_left_leg,Severed Left Leg
+_WYRM_sir_uldor_corpse,Sir Uldor
+_WYRM_kynareth_quiver,Kynaran Quiver
+_WYRM_kynareth_shield,Kynaran Shield
+_WYRM_kynareth_tabard,Kynaran Tabard
+_WYRM_training_shield,Iron Shield
+_WYRM_archer_cuirass,Imperial Archer Cuirass
+_WYRM_imperial_pld_l,Imperial Steel Left Pauldron
+_WYRM_imperial_pld_r,Imperial Steel Right Pauldron
+_WYRM_kynareth_boots,Kynaran Boots
+_WYRM_longbow_shield,Longbow
+_WYRM_sitting_pants1,Sitting Pants
+_WYRM_sitting_pants2,Sitting Pants
+_WYRM_sitting_pants3,Sitting Pants
+_WYRM_bronze_helmet,Ancient Bronze Helmet
+_WYRM_bronze_shield,Ancient Bronze Round Shield
+_WYRM_kynareth_helm,Kynaran Helm
+_WYRM_templar_pld_l,Imperial Templar Left Pauldron
+_WYRM_templar_pld_r,Imperial Templar Right Pauldron
+_WYRM_black_tabard,Black Tabard
+_WYRM_jb_msk2_boot,Leather Boots
+_WYRM_jb_msk3_boot,Leather Boots
+_WYRM_pf_shield01a,Metal Shield
+_WYRM_pf_shield04a,Wooden Shield
+_WYRM_round_shield,Nord Round Shield
+_WYRM_black_boots,Black Steel Boots
+_WYRM_jb_msk_boot,Leather Boots
+_WYRM_pf_shield01,Metal Shield
+_WYRM_pf_shield02,Metal Shield
+_WYRM_pf_shield03,Wooden Shield
+_WYRM_pf_shield04,Wooden Shield
+_WYRM_SmithHammer,Smith's Hammer
+_WYRM_black_helm,Black Steel Helm
+_WYRM_kettle_hat,Kettle Hat
+_WYRM_mykul_hood,Black Hood
+_WYRM_red_tabard,Red Tabard
+_WYRM_MinerPick,Miner's Pick
+_WYRM_no_tail,
+_WYRM_quiver,Quiver
+_WYRM_quill,Quill
+_WYRM_meat,Meat
+_WYRM_kynareth_quiver2,Kynaran Quiver
+_WYRM_guard_tabard,Wyrmhaven Tabard
+_WYRM_chain_coif,Chain Coif
+_WYRM_guard_tabard_prison,Wyrmhaven Tabard
+SP_Nor_UNI_SwimHelm,Nordic Helm of Buoyancy
+SP_Nor_UNI_SwimHelm_02,Nordic Helm of Buoyancy
