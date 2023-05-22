@@ -41,18 +41,15 @@ local function initAll(path)
     end
 end
 
-
 -- Load set files using interop
 initAll("") -- Make sure this "sets" folder is present in the project directory
-
--- Load set files using interop
-initAll("sets") -- Make sure this "sets" folder is present in the project directory
 
 -- Loop over sets to create links
 for id, set in pairs(sets) do
     mwse.log("Creating links for set: %s", set.name)
     for _, item in ipairs(set.items) do
         mwse.log("  setLinks[%s] = sets[%s]", item, id)
+        -- Convert item to lowercase before adding it to setLinks
         setLinks[item:lower()] = set
     end
 end
@@ -116,13 +113,16 @@ local function equipsChanged(e)
     -- Now we know e.item.id exists, it's safe to log it.
     mwse.log("equipsChanged event fired for item: %s", e.item.id)
     
-    local set = setLinks[id:lower()]
+    -- Convert id to lowercase to match the case used in set registration
+    local lowercaseId = id:lower()
+    
+    local set = setLinks[lowercaseId]
     if not set then
-        mwse.log("Item: %s is not linked to any set", id)
+        mwse.log("Item: %s is not linked to any set", lowercaseId)
         return
     end
 
-    mwse.log("Item: %s is linked to set: %s", id, set.name)
+    mwse.log("Item: %s is linked to set: %s", lowercaseId, set.name)
     local numEquipped = countItemsEquipped(e.reference, set.items)
 
     if e.reference == tes3.player then
