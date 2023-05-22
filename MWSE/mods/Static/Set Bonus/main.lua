@@ -14,10 +14,36 @@ local function initAll(path)
             local modulePath = path .. file:match("(.+)%.lua$")
             mwse.log("Loading set file: %s", modulePath) -- Debug log
             local set = require(modulePath)
+            -- Check if set is a table
+            if type(set) ~= "table" then
+                mwse.log("Error: set file %s did not return a table", modulePath)
+                return
+            end
+            -- Check if set has the expected fields
+            if type(set.items) ~= "table" or type(set.name) ~= "string" then
+                mwse.log("Error: set file %s has incorrect structure", modulePath)
+                return
+            end
+            -- Convert all item names to lowercase
+            for i, item in ipairs(set.items) do
+                if type(item) ~= "string" then
+                    mwse.log("Error: set file %s contains non-string item", modulePath)
+                    return
+                end
+                set.items[i] = item:lower()
+            end
+            mwse.log("Loaded set: %s", set.name) -- Debug log
+            for _, item in ipairs(set.items) do
+                mwse.log("  Item: %s", item) -- Debug log
+            end
             interop.registerSet(set)
         end
     end
 end
+
+
+-- Load set files using interop
+initAll("") -- Make sure this "sets" folder is present in the project directory
 
 -- Load set files using interop
 initAll("sets") -- Make sure this "sets" folder is present in the project directory
@@ -36,12 +62,13 @@ local function countItemsEquipped(ref, items)
     local count = 0
     for _, item in ipairs(items) do
         mwse.log("Checking if item %s is equipped...", item) -- Debug log
-        if mwscript.hasItemEquipped{reference=ref, item=item} then
+        if mwscript.hasItemEquipped{reference=ref, item=item:lower()} then
             count = count + 1
         end
     end
     return count
 end
+
 
 -- Function to add a spell
 local function addSpell(t)
@@ -131,6 +158,7 @@ local function npcLoaded(e)
         addSetBonus(set, e.reference, count)
     end
 end
+
 
 -- Registering events
 event.register("mobileActivated", npcLoaded)
