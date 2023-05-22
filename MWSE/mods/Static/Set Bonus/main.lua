@@ -79,10 +79,15 @@ end
 
 -- Function to handle change in equipped items
 local function equipsChanged(e)
+    mwse.log("equipsChanged event fired for item: %s", e.item.id)
     local id = e and e.item and e.item.id
     if not id then return end
     local set = setLinks[id:lower()]
-    if not set then return end
+    if not set then
+        mwse.log("Item: %s is not linked to any set", id)
+        return
+    end
+    mwse.log("Item: %s is linked to set: %s", id, set.name)
     local numEquipped = countItemsEquipped(e.reference, set.items)
     if e.reference == tes3.player then
         tes3.messageBox("You have %s items of the %s set equipped", numEquipped, set.name)
@@ -97,6 +102,7 @@ event.register("loaded", equipsChanged)
 
 -- Function to handle NPC load event
 local function npcLoaded(e)
+    mwse.log("mobileActivated event fired")
     if not e.reference then return end
     local set_counts = {}
 
