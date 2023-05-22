@@ -79,19 +79,29 @@ end
 
 -- Function to handle change in equipped items
 local function equipsChanged(e)
-    mwse.log("equipsChanged event fired for item: %s", e.item.id)
+    -- Perform the nil check first.
     local id = e and e.item and e.item.id
-    if not id then return end
+    if not id then 
+        mwse.log("equipsChanged event fired, but no item data was found.")
+        return 
+    end
+
+    -- Now we know e.item.id exists, it's safe to log it.
+    mwse.log("equipsChanged event fired for item: %s", e.item.id)
+    
     local set = setLinks[id:lower()]
     if not set then
         mwse.log("Item: %s is not linked to any set", id)
         return
     end
+
     mwse.log("Item: %s is linked to set: %s", id, set.name)
     local numEquipped = countItemsEquipped(e.reference, set.items)
+
     if e.reference == tes3.player then
         tes3.messageBox("You have %s items of the %s set equipped", numEquipped, set.name)
     end
+
     addSetBonus(set, e.reference, numEquipped)
 end
 
