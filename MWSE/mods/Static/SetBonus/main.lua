@@ -4,9 +4,12 @@ local init = require("Static.SetBonus.init")
 local config = require("Static.SetBonus.config")
 local interop = require("Static.SetBonus.interop") -- The interop module we defined
 
+-- Accessing the config table from the init module
+local config = init.config
+
 -- Load and register set data
 local function initAll(path)
-    path = "sets/" .. path .. "/"
+    path = "sets" .. path .. "/"
     for file in lfs.dir(path) do
         if file:match("(.+)%.lua$") then
             local modulePath = path .. file:match("(.+)%.lua$")
@@ -19,6 +22,9 @@ local function initAll(path)
             interop.mergeTables(config.sets[set.name], set) -- Merge the existing set with the new set
         end
     end
+
+-- Load and register your custom sets
+    init.registerSetDirectory("sets") -- Replace with the path to your custom set directory
 end
 
 -- Load set files using interop
