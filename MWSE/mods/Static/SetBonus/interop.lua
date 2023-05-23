@@ -15,6 +15,10 @@ function interop.registerSet(setData)
     for i, item in ipairs(setData.items) do
         assert(type(item) == "string", "Error: set contains non-string item")
         setData.items[i] = item:lower()
+
+        -- Add a link from the item to the set in the setLinks table
+        config.setLinks[setData.items[i]] = setData
+        mwse.log("Linked item %s to set %s", setData.items[i], setData.name)
     end
 
     config.sets[setData.name] = setData
@@ -36,7 +40,13 @@ end
 function interop.registerSetDirectory(directoryPath)
     for file in lfs.dir(directoryPath) do
         if file:match("(.+)%.lua$") then
-            local setData = dofile(directoryPath .. "/" .. file)
+            local setFilePath = directoryPath .. "/" .. file
+            mwse.log("Registering set file: %s", setFilePath)
+            
+            local setData = dofile(setFilePath)
+            local setName = setData.name or "unknown"
+            
+            mwse.log("Loaded set data: %s", setName)
             interop.registerSet(setData)
         end
     end

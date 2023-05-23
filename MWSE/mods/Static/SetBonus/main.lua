@@ -1,12 +1,11 @@
 -- Importing modules
 local lfs = require("lfs") -- lfs is LuaFileSystem, a library to handle directory in Lua
-
 local config = require("Static.SetBonus.config")
 local interop = require("Static.SetBonus.interop") -- The interop module we defined
 
 -- Load and register set data
 local function initAll(path)
-    path = "Data Files/MWSE/mods/Static/ArmorBonus/sets/" .. path .. "/"
+    path = "Data Files/MWSE/mods/Static/ArmorBonus/sets" .. path .. "/"
     for file in lfs.dir(path) do
         if file:match("(.+)%.lua$") then
             local modulePath = dofile(path .. "/" .. file)
@@ -23,6 +22,15 @@ local function initAll(path)
                 end
                 interop.registerSet(set)
             end
+        end
+    end
+
+    -- Loop over sets to create links
+    for _, set in pairs(config.sets) do
+        mwse.log("Creating links for set: %s", set.name)
+        for _, item in ipairs(set.items) do
+            mwse.log("  Linking item to set: %s -> %s", item, set.name)
+            config.setLinks[item] = set
         end
     end
 end
