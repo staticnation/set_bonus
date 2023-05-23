@@ -5,7 +5,8 @@
 
 local config = {
     sets = {},
-    setLinks = {}
+    setLinks = {},
+    setsArray = {}
 }
 
 return config

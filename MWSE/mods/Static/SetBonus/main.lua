@@ -1,34 +1,40 @@
 -- Importing modules
-local lfs = require('lfs')
+local lfs = require("lfs") -- lfs is LuaFileSystem, a library to handle directory in Lua
+
 local config = require("Static.SetBonus.config")
 local interop = require("Static.SetBonus.interop") -- The interop module we defined
 
 -- Load and register set data
 local function initAll(path)
-    path = "sets/" .. path .. "/"
-    for file in lfs.dir(path) do
+    for _, file in lfs.dir(path) do
         if file:match("(.+)%.lua$") then
-            local modulePath = path .. file:match("(.+)%.lua$")
+            local modulePath = path .. "/" .. file
             mwse.log("Loading set file: %s", modulePath)
-            local set = dofile(modulePath)
+            local success, set = xpcall(function() return require(modulePath) end, 
+                function(err) 
+                    mwse.log("Error loading set file: %s. Error: %s", modulePath, err)
+                end)
 
-            mwse.log("Loaded set: %s", set.name or "")
-
-            interop.registerSet(set)
-            interop.mergeTables(config.sets[set.name], set) -- Merge the existing set with the new set
+            if success then
+                mwse.log("Loaded set: %s", set.name or "")
+                for _, item in ipairs(set.items) do
+                    mwse.log("  Item in set: %s", item)
+                end
+                interop.registerSet(set)
+            end
         end
     end
 end
 
 -- Load set files using interop
-initAll("")
+initAll("Static.ArmorBonus.sets")
 
 -- Loop over sets to create links
-for name, set in pairs(config.sets) do
-    mwse.log("Creating links for set: %s", name)
+for _, set in pairs(config.sets) do
+    mwse.log("Creating links for set: %s", set.name)
     for _, item in ipairs(set.items) do
-        mwse.log("  setLinks[%s] = sets[%s]", item, name)
-        config.setLinks[item:lower()] = config.sets[name:lower()]
+        mwse.log("  Linking item to set: %s -> %s", item, set.name)
+        config.setLinks[item] = set
     end
 end
 
@@ -37,7 +43,7 @@ local function countItemsEquipped(ref, items)
     local count = 0
     for _, item in ipairs(items) do
         mwse.log("Checking if item %s is equipped...", item)
-        if tes3.hasItemEquipped(ref, item) then
+        if mwscript.hasItemEquipped{reference=ref, item=item} then
             count = count + 1
         end
     end
@@ -47,9 +53,9 @@ end
 -- Function to add a spell
 local function addSpell(t)
     for _, spell in ipairs(t.spell) do
-        mwse.log("Trying to add spell: %s", spell)
-        if not tes3.hasSpell(t.reference, spell) then
-            tes3.addSpell(t.reference, spell)
+        mwse.log("Trying to add spell: %s", spell) -- Debug log
+        if not mwscript.getSpellEffects{reference=t.reference, spell=spell} then
+            mwscript.addSpell{reference=t.reference, spell=spell}
         end
     end
 end
@@ -57,35 +63,28 @@ end
 -- Function to remove a spell
 local function removeSpell(t)
     for _, spell in ipairs(t.spell) do
-        mwse.log("Trying to remove spell: %s", spell)
-        if tes3.hasSpell(t.reference, spell) then
-            tes3.removeSpell(t.reference, spell)
+        mwse.log("Trying to remove spell: %s", spell) -- Debug log
+        if mwscript.getSpellEffects{reference=t.reference, spell=spell} then
+            mwscript.removeSpell{reference=t.reference, spell=spell}
         end
     end
 end
 
+
 -- Function to add set bonus
 local function addSetBonus(set, ref, numEquipped)
-    local minBonus = set.minBonus or {}
-    local maxBonus = set.maxBonus or {}
-
-    if type(minBonus) == "string" then
-        minBonus = { minBonus }
-    end
-
-    if type(maxBonus) == "string" then
-        maxBonus = { maxBonus }
-    end
-
     if numEquipped >= 6 then
-        removeSpell{ reference = ref, spell = minBonus }
-        addSpell{ reference = ref, spell = maxBonus }
+        removeSpell{ reference = ref, spell = set.minBonus }
+        addSpell{ reference = ref, spell = set.maxBonus }
+        mwse.log("Added max set bonus for set %s", set.name)
     elseif numEquipped >= 4 then
-        addSpell{ reference = ref, spell = minBonus }
-        removeSpell{ reference = ref, spell = maxBonus }
+        addSpell{ reference = ref, spell = set.minBonus }
+        removeSpell{ reference = ref, spell = set.maxBonus }
+        mwse.log("Added min set bonus for set %s", set.name)
     else
-        removeSpell{ reference = ref, spell = minBonus }
-        removeSpell{ reference = ref, spell = maxBonus }
+        removeSpell{ reference = ref, spell = set.minBonus }
+        removeSpell{ reference = ref, spell = set.maxBonus }
+        mwse.log("No set bonus added for set %s", set.name)
     end
 end
 
@@ -99,14 +98,13 @@ local function equipsChanged(e)
 
     mwse.log("equipsChanged event fired for item: %s", e.item.id)
 
-    local lowercaseId = id:lower()
-    local set = config.setLinks[lowercaseId]
+    local set = config.setLinks[id:lower()]
     if not set then
-        mwse.log("Item: %s is not linked to any set", lowercaseId)
+        mwse.log("Item: %s is not linked to any set", id)
         return
     end
 
-    mwse.log("Item: %s is linked to set: %s", lowercaseId, set.name)
+    mwse.log("Item: %s is linked to set: %s", id, set.name)
     local numEquipped = countItemsEquipped(e.reference, set.items)
 
     if e.reference == tes3.player then
@@ -123,6 +121,9 @@ event.register("loaded", equipsChanged)
 
 -- Function to handle NPC load event
 local function npcLoaded(e)
+    if not e.reference then 
+        return 
+    end
     mwse.log("mobileActivated event fired")
     local setCounts = {}
 
@@ -131,13 +132,17 @@ local function npcLoaded(e)
             mwse.log("Checking equipment stack: %s", stack.object.id)
             local set = config.setLinks[stack.object.id:lower()] -- Ensure the ID is in lowercase
             if set then
-                setCounts[set] = (setCounts[set] or 0) + 1
+                mwse.log("Item: %s is linked to set: %s", stack.object.id, set.name)
+                setCounts[set.name] = (setCounts[set.name] or 0) + 1
+            else
+                mwse.log("Item: %s is not linked to any set", stack.object.id)
             end
         end
     end
 
-    for set, count in pairs(setCounts) do
-        mwse.log("Adding set bonus for set: %s", set.name)
+    for _, setName, count in pairs(setCounts) do
+        mwse.log("Adding set bonus for set: %s", setName)
+        local set = config.sets[setName]
         addSetBonus(set, e.reference, count)
     end
 end
