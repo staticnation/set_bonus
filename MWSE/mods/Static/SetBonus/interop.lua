@@ -32,8 +32,8 @@ end
 function interop.registerSetDirectory(directoryPath)
     for file in lfs.dir(directoryPath) do
         if file:match("(.+)%.lua$") then
-            local setData = dofile(directoryPath .. "/" .. file:match("(.+)%.lua$"))
-            interop.registerSet(setData)
+            local setData = dofile(directoryPath .. "/" .. file:match("(.+)%.lua$")) -- Load each Lua file in the directory
+            interop.registerSet(setData) -- Registers the set using the interop module
         end
     end
 end
@@ -43,12 +43,12 @@ function interop.mergeTables(t1, t2)
     for k, v in pairs(t2) do
         if type(v) == "table" then
             if type(t1[k] or false) == "table" then
-                interop.mergeTables(t1[k] or {}, t2[k] or {})
+                interop.mergeTables(t1[k] or {}, t2[k] or {}) -- If both values are tables, merge them recursively
             else
-                t1[k] = v
+                t1[k] = v -- If the value in t1 is not a table, overwrite it
             end
         else
-            t1[k] = v
+            t1[k] = v -- If the value in t2 is not a table, overwrite the value in t1
         end
     end
     return t1
