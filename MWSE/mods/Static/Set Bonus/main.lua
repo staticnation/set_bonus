@@ -13,8 +13,9 @@ local function initAll(path)
             local set = dofile(modulePath)
 
             mwse.log("Loaded set: %s", set.name or "")
-            
+
             interop.registerSet(set)
+            interop.mergeTables(config.sets[set.name], set) -- Merge the existing set with the new set
         end
     end
 end
@@ -65,15 +66,26 @@ end
 
 -- Function to add set bonus
 local function addSetBonus(set, ref, numEquipped)
+    local minBonus = set.minBonus or {}
+    local maxBonus = set.maxBonus or {}
+
+    if type(minBonus) == "string" then
+        minBonus = { minBonus }
+    end
+
+    if type(maxBonus) == "string" then
+        maxBonus = { maxBonus }
+    end
+
     if numEquipped >= 6 then
-        removeSpell{ reference = ref, spell = set.minBonus }
-        addSpell{ reference = ref, spell = set.maxBonus }
+        removeSpell{ reference = ref, spell = minBonus }
+        addSpell{ reference = ref, spell = maxBonus }
     elseif numEquipped >= 4 then
-        addSpell{ reference = ref, spell = set.minBonus }
-        removeSpell{ reference = ref, spell = set.maxBonus }
+        addSpell{ reference = ref, spell = minBonus }
+        removeSpell{ reference = ref, spell = maxBonus }
     else
-        removeSpell{ reference = ref, spell = set.minBonus }
-        removeSpell{ reference = ref, spell = set.maxBonus }
+        removeSpell{ reference = ref, spell = minBonus }
+        removeSpell{ reference = ref, spell = maxBonus }
     end
 end
 
