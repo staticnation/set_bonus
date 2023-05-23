@@ -1,56 +1,33 @@
 -- Importing modules
-local lfs = require('lfs') -- filesystem functions
-local config = require("Static.Set Bonus.config") -- your custom configuration
-local sets = config.sets -- sets from the configuration
-local setLinks = config.setLinks -- setLinks from the configuration
-local interop = require("Static.Set Bonus.init") -- your custom initialization code
-local util = require("Static.Set Bonus.util") -- your custom utility functions
+local lfs = require('lfs')
+local config = require("Static.SetBonus.config")
+local interop = require("Static.SetBonus.interop") -- The interop module we defined
 
--- Function to load and register set data
+-- Load and register set data
 local function initAll(path)
-    path = "sets" .. path .. "/"
+    path = "sets/" .. path .. "/"
     for file in lfs.dir(path) do
         if file:match("(.+)%.lua$") then
             local modulePath = path .. file:match("(.+)%.lua$")
-            mwse.log("Loading set file: %s", modulePath) -- Debug log
-            local set = require(modulePath)
-            -- Check if set is a table
-            if type(set) ~= "table" then
-                mwse.log("Error: set file %s did not return a table", modulePath)
-                return
-            end
-            -- Check if set has the expected fields
-            if type(set.items) ~= "table" or type(set.name) ~= "string" then
-                mwse.log("Error: set file %s has incorrect structure", modulePath)
-                return
-            end
-            -- Convert all item names to lowercase
-            for i, item in ipairs(set.items) do
-                if type(item) ~= "string" then
-                    mwse.log("Error: set file %s contains non-string item", modulePath)
-                    return
-                end
-                set.items[i] = item:lower()
-            end
-            mwse.log("Loaded set: %s", set.name) -- Debug log
-            for _, item in ipairs(set.items) do
-                mwse.log("  Item: %s", item) -- Debug log
-            end
+            mwse.log("Loading set file: %s", modulePath)
+            local set = dofile(modulePath)
+
+            mwse.log("Loaded set: %s", set.name or "")
+            
             interop.registerSet(set)
         end
     end
 end
 
 -- Load set files using interop
-initAll("") -- Make sure this "sets" folder is present in the project directory
+initAll("")
 
 -- Loop over sets to create links
-for id, set in pairs(sets) do
-    mwse.log("Creating links for set: %s", set.name)
+for name, set in pairs(config.sets) do
+    mwse.log("Creating links for set: %s", name)
     for _, item in ipairs(set.items) do
-        mwse.log("  setLinks[%s] = sets[%s]", item, id)
-        -- Convert item to lowercase before adding it to setLinks
-        setLinks[item:lower()] = set
+        mwse.log("  setLinks[%s] = sets[%s]", item, name)
+        config.setLinks[item:lower()] = config.sets[name:lower()]
     end
 end
 
@@ -58,21 +35,20 @@ end
 local function countItemsEquipped(ref, items)
     local count = 0
     for _, item in ipairs(items) do
-        mwse.log("Checking if item %s is equipped...", item) -- Debug log
-        if mwscript.hasItemEquipped{reference=ref, item=item:lower()} then
+        mwse.log("Checking if item %s is equipped...", item)
+        if tes3.hasItemEquipped(ref, item) then
             count = count + 1
         end
     end
     return count
 end
 
-
 -- Function to add a spell
 local function addSpell(t)
     for _, spell in ipairs(t.spell) do
-        mwse.log("Trying to add spell: %s", spell) -- Debug log
-        if not mwscript.getSpellEffects{reference=t.reference, spell=spell} then
-            mwscript.addSpell{reference=t.reference, spell=spell}
+        mwse.log("Trying to add spell: %s", spell)
+        if not tes3.hasSpell(t.reference, spell) then
+            tes3.addSpell(t.reference, spell)
         end
     end
 end
@@ -80,9 +56,9 @@ end
 -- Function to remove a spell
 local function removeSpell(t)
     for _, spell in ipairs(t.spell) do
-        mwse.log("Trying to remove spell: %s", spell) -- Debug log
-        if mwscript.getSpellEffects{reference=t.reference, spell=spell} then
-            mwscript.removeSpell{reference=t.reference, spell=spell}
+        mwse.log("Trying to remove spell: %s", spell)
+        if tes3.hasSpell(t.reference, spell) then
+            tes3.removeSpell(t.reference, spell)
         end
     end
 end
@@ -90,33 +66,29 @@ end
 -- Function to add set bonus
 local function addSetBonus(set, ref, numEquipped)
     if numEquipped >= 6 then
-        removeSpell{reference=ref, spell=set.minBonus}
-        addSpell{reference=ref, spell=set.maxBonus}
+        removeSpell{ reference = ref, spell = set.minBonus }
+        addSpell{ reference = ref, spell = set.maxBonus }
     elseif numEquipped >= 4 then
-        addSpell{reference=ref, spell=set.minBonus}
-        removeSpell{reference=ref, spell=set.maxBonus}
+        addSpell{ reference = ref, spell = set.minBonus }
+        removeSpell{ reference = ref, spell = set.maxBonus }
     else
-        removeSpell{reference=ref, spell=set.minBonus}
-        removeSpell{reference=ref, spell=set.maxBonus}
+        removeSpell{ reference = ref, spell = set.minBonus }
+        removeSpell{ reference = ref, spell = set.maxBonus }
     end
 end
 
 -- Function to handle change in equipped items
 local function equipsChanged(e)
-    -- Perform the nil check first.
     local id = e and e.item and e.item.id
-    if not id then 
+    if not id then
         mwse.log("equipsChanged event fired, but no item data was found.")
-        return 
+        return
     end
 
-    -- Now we know e.item.id exists, it's safe to log it.
     mwse.log("equipsChanged event fired for item: %s", e.item.id)
-    
-    -- Convert id to lowercase to match the case used in set registration
+
     local lowercaseId = id:lower()
-    
-    local set = setLinks[lowercaseId]
+    local set = config.setLinks[lowercaseId]
     if not set then
         mwse.log("Item: %s is not linked to any set", lowercaseId)
         return
@@ -140,26 +112,27 @@ event.register("loaded", equipsChanged)
 -- Function to handle NPC load event
 local function npcLoaded(e)
     mwse.log("mobileActivated event fired")
-    if not e.reference then return end
-    local set_counts = {}
+    local setCounts = {}
 
     for stack in tes3.iterate(e.reference.object.equipment) do
         if stack.object.objectType == tes3.objectType.armor then
-            mwse.log("Checking equipment stack: %s", stack.object.id) -- Debug log
-            local set = setLinks[stack.object.id:lower()]
+            mwse.log("Checking equipment stack: %s", stack.object.id)
+            local set = config.setLinks[stack.object.id:lower()] -- Ensure the ID is in lowercase
             if set then
-                set_counts[set] = (set_counts[set] or 0) + 1
+                setCounts[set] = (setCounts[set] or 0) + 1
             end
         end
     end
 
-    for set, count in pairs(set_counts) do
-        mwse.log("Adding set bonus for set: %s", set.name) -- Debug log
+    for set, count in pairs(setCounts) do
+        mwse.log("Adding set bonus for set: %s", set.name)
         addSetBonus(set, e.reference, count)
     end
 end
 
-
 -- Registering events
 event.register("mobileActivated", npcLoaded)
 event.register("loaded", npcLoaded)
+
+-- Create a global variable for other mods to use the interop module
+_G.StaticSetBonusInterop = interop
