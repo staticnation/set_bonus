@@ -6,9 +6,11 @@ local interop = require("Static.SetBonus.interop") -- The interop module we defi
 
 -- Load and register set data
 local function initAll(path)
-    for _, file in lfs.dir(path) do
+    path = "Data Files/MWSE/mods/Static/ArmorBonus/sets/" .. path .. "/"
+    for file in lfs.dir(path) do
         if file:match("(.+)%.lua$") then
             local modulePath = path .. "/" .. file
+            dofile(path .. file)
             mwse.log("Loading set file: %s", modulePath)
             local success, set = xpcall(function() return require(modulePath) end, 
                 function(err) 
@@ -27,7 +29,7 @@ local function initAll(path)
 end
 
 -- Load set files using interop
-initAll("Static.ArmorBonus.sets")
+initAll("Data Files/MWSE/mods/Static/ArmorBonus/sets")
 
 -- Loop over sets to create links
 for _, set in pairs(config.sets) do
@@ -142,7 +144,7 @@ local function npcLoaded(e)
 
     for _, setName, count in pairs(setCounts) do
         mwse.log("Adding set bonus for set: %s", setName)
-        local set = config.sets[setName]
+        local set = config.sets[setName:lower()]
         addSetBonus(set, e.reference, count)
     end
 end
