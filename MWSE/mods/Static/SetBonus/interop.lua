@@ -5,9 +5,6 @@ local lfs = require('lfs')
 local interop = {}
 
 -- Function to register a set
--- It checks whether the input `setData` is structured correctly,
--- normalizes the case of item IDs to lowercase, and then
--- stores the set in `config.sets` using the set's name as the key.
 function interop.registerSet(setData)
     assert(type(setData) == "table", "Error: set data did not return a table")
     assert(type(setData.items) == "table", "Error: set data has incorrect structure")
@@ -21,9 +18,17 @@ function interop.registerSet(setData)
     config.sets[setData.name:lower()] = setData
 end
 
+-- Function to register set link
+function interop.registerSetLink(setLinkData)
+    assert(type(setLinkData.item) == "string", "Error: setLink data has incorrect structure")
+    assert(type(setLinkData.set) == "string", "Error: setLink data has incorrect structure")
+    setLinkData.item = setLinkData.item:lower()
+    setLinkData.set = setLinkData.set:lower()
+    config.setLinks[setLinkData.item] = setLinkData.set
+end
+
+
 -- Function to register a directory containing sets
--- It iterates over each Lua file in the given directory,
--- loads the set data from the file, and then registers the set.
 function interop.registerSetDirectory(directoryPath)
     for file in lfs.dir(directoryPath) do
         if file:match("(.+)%.lua$") then
@@ -34,9 +39,6 @@ function interop.registerSetDirectory(directoryPath)
 end
 
 -- Function to deeply merge two tables
--- It recursively merges the keys and values of `t2` into `t1`.
--- If a key exists in both `t1` and `t2` and its values are tables, then the tables are merged.
--- Otherwise, the value from `t2` overwrites the value in `t1`.
 function interop.mergeTables(t1, t2)
     for k, v in pairs(t2) do
         if type(v) == "table" then
