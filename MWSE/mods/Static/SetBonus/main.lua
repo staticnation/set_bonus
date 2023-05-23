@@ -9,8 +9,7 @@ local function initAll(path)
     path = "Data Files/MWSE/mods/Static/ArmorBonus/sets/" .. path .. "/"
     for file in lfs.dir(path) do
         if file:match("(.+)%.lua$") then
-            local modulePath = path .. "/" .. file
-            dofile(path .. file)
+            local modulePath = dofile(path .. "/" .. file)
             mwse.log("Loading set file: %s", modulePath)
             local success, set = xpcall(function() return require(modulePath) end, 
                 function(err) 
