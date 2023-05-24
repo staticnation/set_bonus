@@ -6,7 +6,7 @@ local lfs = require("lfs")
 local config = require("Static.SetBonus.config")
 local interop = require("Static.SetBonus.interop") -- Importing the interop module we defined earlier
 
-local debugMode = true -- Set this to true to enable debugging. Change to false to turn off debug logs.
+local debugMode = false -- Set this to true to enable debugging. Change to false to turn off debug logs.
 
 -- This is our logging function which we'll use throughout the script
 local function mwseLogger(message, ...)
@@ -18,7 +18,7 @@ end
 -- initAll: A function that takes a directory path as input, reads all Lua files in the directory,
 -- and registers the sets and items defined in the Lua files. It then creates links between each item and its set.
 local function initAll(path)
-
+    debug.log(path)
     -- Using LuaFileSystem to iterate through all files in the directory
     mwseLogger("Initializing sets from path: %s", path)
 
@@ -85,31 +85,8 @@ local function countItemsEquipped(ref, items)
     return count -- Return the count
 end
 
--- addSpell: A function to add a spell or a list of spells to a reference (usually a character)
-local function addSpell(t)
-    local spells = type(t.spell) == "table" and t.spell or {t.spell} -- Make sure the spell parameter is a table (for multiple spells)
-    
-    -- Loop over the spells
-    for _, spell in ipairs(spells) do
-        mwseLogger("Trying to add spell: %s", spell) -- Debug log
-        if not mwscript.getSpellEffects{reference=t.reference, spell=spell} then -- If the reference does not already have the spell
-            mwscript.addSpell{reference=t.reference, spell=spell} -- Add the spell to the reference
-        end
-    end
-end
-
--- removeSpell: A function to remove a spell or a list of spells from a reference (usually a character)
-local function removeSpell(t)
-    local spells = type(t.spell) == "table" and t.spell or {t.spell} -- Make sure the spell parameter is a table (for multiple spells)
-    
-    -- Loop over the spells
-    for _, spell in ipairs(spells) do
-        mwseLogger("Trying to remove spell: %s", spell) -- Debug log
-        if mwscript.getSpellEffects{reference=t.reference, spell=spell} then -- Check if the reference has the spell
-            mwscript.removeSpell{reference=t.reference, spell=spell} -- Remove the spell from the reference
-        end
-    end
-end
+local function addSpell(t) return mwscript.getSpellEffects(t) or mwscript.addSpell(t) end
+local function removeSpell(t) return mwscript.getSpellEffects(t) and mwscript.removeSpell(t) end
 
 -- addSetBonus: A function to add set bonus based on the number of equipped items from the same set
 local function addSetBonus(set, ref, numEquipped)
@@ -145,7 +122,7 @@ local function equipsChanged(e)
 
     -- Lookup the set the item belongs to
     local set = config.setLinks[id:lower()]
-    if not set then
+    if (set == nil) then
         mwseLogger("Item: %s is not linked to any set", id)
         return
     end
@@ -156,6 +133,7 @@ local function equipsChanged(e)
 
     if e.reference == tes3.player then
         tes3.messageBox("You have %s items of the %s set equipped", numEquipped, set.name)
+        mwseLogger("Player has %s items of the %s set equipped", numEquipped, set.name)
     end
     -- Apply set bonus
     addSetBonus(set, e.reference, numEquipped)
@@ -179,7 +157,8 @@ local function npcLoaded(e)
         if stack.object.objectType == tes3.objectType.armor then
             mwseLogger("Checking equipment stack: %s", stack.object.id)
             local set = config.setLinks[stack.object.id:lower()] -- Ensure the ID is in lowercase
-            if set then
+            mwseLoggger("  %s is wearing %s from set %s", e.reference, stack.object, (set and set.name))
+            if set ~= nil then
                 mwseLogger("Item: %s is linked to set: %s", stack.object.id, set.name)
                 setCounts[set.name] = (setCounts[set.name] or 0) + 1
             else
