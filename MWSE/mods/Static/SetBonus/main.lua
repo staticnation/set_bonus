@@ -6,21 +6,11 @@ local lfs = require("lfs")
 local config = require("Static.SetBonus.config")
 local interop = require("Static.SetBonus.interop") -- Importing the interop module we defined earlier
 
-local debugMode = false -- Set this to true to enable debugging. Change to false to turn off debug logs.
-
--- This is our logging function which we'll use throughout the script
-local function mwseLogger(message, ...)
-    if debugMode then
-        mwse.log(message, ...)
-    end
-end
-
 -- initAll: A function that takes a directory path as input, reads all Lua files in the directory,
 -- and registers the sets and items defined in the Lua files. It then creates links between each item and its set.
 local function initAll(path)
     debug.log(path)
     -- Using LuaFileSystem to iterate through all files in the directory
-    mwseLogger("Initializing sets from path: %s", path)
 
     -- Loop through all files in the given path
     for file in lfs.dir(path) do
@@ -28,20 +18,16 @@ local function initAll(path)
         -- If the file ends in .lua (indicating it's a Lua file), we try to load it as a module
         if file:match("(.+)%.lua$") then -- Only processing Lua files
             local modulePath = path .. "/" .. file
-            mwseLogger("Loading set file: %s", modulePath)
             
             -- Use pcall to call the dofile function, which loads and runs the Lua file. This way, if there are any errors, it won't crash the script
             local success, set = pcall(dofile, modulePath) -- Using pcall to handle any errors when loading the Lua files
             if success then
-                mwseLogger("Loaded set: %s", set.name or "")
                 
                 -- Loop through the items in the set
                 for _, item in ipairs(set.items) do
-                    mwseLogger("  Item in set: %s", item)
                 end
                 interop.registerSet(set) -- If the Lua file is loaded successfully, register the set using the interop module's function
             else
-                mwseLogger("Error loading set file: %s. Error: %s", modulePath, set) -- If there was an error loading the module, we log the error message
             end
         end
     end
@@ -49,9 +35,7 @@ local function initAll(path)
     -- After registering all sets and items, create links in the setLinks table in the config module
     -- Loop over the registered sets to create links between items and their sets
     for _, set in pairs(config.sets) do
-        mwseLogger("Creating links for set: %s", set.name)
         for _, item in ipairs(set.items) do
-            mwseLogger("  Linking item to set: %s -> %s", item, set.name)
             config.setLinks[item] = set
         end
     end
@@ -63,9 +47,7 @@ initAll("Data Files/MWSE/mods/Static/ArmorBonus/sets")
 -- After loading the sets, create links in the setLinks table in the config module again
 -- Loop over sets to create links
 for _, set in pairs(config.sets) do
-    mwseLogger("Creating links for set: %s", set.name)
     for _, item in ipairs(set.items) do
-        mwseLogger("  Linking item to set: %s -> %s", item, set.name)
         config.setLinks[item] = set
     end
 end
@@ -75,7 +57,6 @@ local function countItemsEquipped(ref, items)
     local count = 0
     -- Loop over the items
     for _, item in ipairs(items) do
-        mwseLogger("Checking if item %s is equipped...", item)
         
         -- Check if the item is equipped by the given reference (most likely the player or an NPC)
         if mwscript.hasItemEquipped{reference=ref, item=item} then
@@ -115,25 +96,20 @@ local function equipsChanged(e)
     -- Get the item id from the event
     local id = e and e.item and e.item.id
     if not id then
-        mwseLogger("equipsChanged event fired, but no item data was found.")
         return
     end
-    mwseLogger("equipsChanged event fired for item: %s", e.item.id)
 
     -- Lookup the set the item belongs to
     local set = config.setLinks[id:lower()]
     if (set == nil) then
-        mwseLogger("Item: %s is not linked to any set", id)
         return
     end
-    mwseLogger("Item: %s is linked to set: %s", id, set.name)
 
     -- Count the number of items equipped from the same set
     local numEquipped = countItemsEquipped(e.reference, set.items)
 
     if e.reference == tes3.player then
         tes3.messageBox("You have %s items of the %s set equipped", numEquipped, set.name)
-        mwseLogger("Player has %s items of the %s set equipped", numEquipped, set.name)
     end
     -- Apply set bonus
     addSetBonus(set, e.reference, numEquipped)
@@ -149,27 +125,21 @@ local function npcLoaded(e)
     if not e.reference then
         return
     end
-    mwseLogger("mobileActivated event fired")
 
     -- Create a table to store the count of items from each set the NPC has equipped
     local setCounts = {}    
     for stack in tes3.iterate(e.reference.object.equipment) do
-        if stack.object.objectType == tes3.objectType.armor then
-            mwseLogger("Checking equipment stack: %s", stack.object.id)
+        if stack.object.objectType == tes3.objectType.armor or tes3.objectType.clothing then
             local set = config.setLinks[stack.object.id:lower()] -- Ensure the ID is in lowercase
-            mwseLoggger("  %s is wearing %s from set %s", e.reference, stack.object, (set and set.name))
             if set ~= nil then
-                mwseLogger("Item: %s is linked to set: %s", stack.object.id, set.name)
                 setCounts[set.name] = (setCounts[set.name] or 0) + 1
             else
-                mwseLogger("Item: %s is not linked to any set", stack.object.id)
             end
         end
     end
 
     -- For each set, apply the set bonus
     for setName, count in pairs(setCounts) do
-        mwseLogger("Adding set bonus for set: %s", setName)
         local set = config.sets[setName:lower()]
         addSetBonus(set, e.reference, count)
     end
