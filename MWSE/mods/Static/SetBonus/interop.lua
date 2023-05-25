@@ -72,6 +72,7 @@ function interop.initAll(path)
                 end
                 interop.registerSet(set) -- If the Lua file is loaded successfully, register the set using the interop module's function
             else
+                mwse.log("Error: Failed to load Lua file: " .. modulePath .. ". Skipping this file.")
             end
         end
     end
