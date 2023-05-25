@@ -61,6 +61,27 @@ function interop.registerSetDirectory(directoryPath)
     end
 end
 
+function interop.initAll(path)
+    debug.log(path)
+    for file in lfs.dir(path) do
+        if file:match("(.+)%.lua$") then -- Only processing Lua files
+            local modulePath = path .. "/" .. file
+            local success, set = pcall(dofile, modulePath) -- Using pcall to handle any errors when loading the Lua files
+            if success then
+                for _, item in ipairs(set.items) do
+                end
+                interop.registerSet(set) -- If the Lua file is loaded successfully, register the set using the interop module's function
+            else
+            end
+        end
+    end
+    for _, set in pairs(config.sets) do
+        for _, item in ipairs(set.items) do
+            config.setLinks[item] = set
+        end
+    end
+end
+
 -- Function to deeply merge two tables
 -- This function takes two tables as input and returns a new table that combines the data from both.
 function interop.mergeTables(t1, t2)
