@@ -1,59 +1,68 @@
--- Importing modules
+-- Importing necessary modules
 -- lfs is LuaFileSystem, a library to handle directory operations in Lua
--- config module is the configuration data for the Set Bonus mod
--- interop is the previously defined module providing functions to register sets, items, and set directories
+-- The 'config' module holds the configuration data for the Set Bonus mod
+-- The 'interop' module contains functions for registering sets, items, and set directories
 local lfs = require("lfs")
 local config = require("Static.SetBonus.config")
 local interop = require("Static.SetBonus.interop") -- Importing the interop module we defined earlier
 
--- countItemsEquipped: A function that checks if a reference (usually a character) has each item in a given list equipped
+-- 'countItemsEquipped' function checks if a character reference has each item from a given list equipped
 local function countItemsEquipped(ref, items)
     local count = 0
+    
     -- Loop over the items
     for _, item in ipairs(items) do
         
-        -- Check if the item is equipped by the given reference (most likely the player or an NPC)
+        -- Check if the item is equipped by the given reference (typically a character)
         if mwscript.hasItemEquipped{reference=ref, item=item} then
             count = count + 1
         end
     end
-    return count -- Return the count
+    return count -- Returns the count of equipped items
 end
 
-local function addSpell(t) return mwscript.getSpellEffects(t) or mwscript.addSpell(t) end
-local function removeSpell(t) return mwscript.getSpellEffects(t) and mwscript.removeSpell(t) end
+-- 'addSpell' function: If the provided target (t) already has the spell effect, 
+-- it returns the spell effect. If not, it adds the spell to the target.
+local function addSpell(t) 
+    return mwscript.getSpellEffects(t) or mwscript.addSpell(t) 
+end
 
--- addSetBonus: A function to add set bonus based on the number of equipped items from the same set
+-- 'removeSpell' function: If the provided target (t) has the spell effect, 
+-- it returns the spell effect and also removes the spell from the target. If not, it simply returns false.
+local function removeSpell(t) 
+    return mwscript.getSpellEffects(t) and mwscript.removeSpell(t) 
+end
+
+-- 'addSetBonus' function applies a set bonus based on the number of items a character has equipped from the same set
 local function addSetBonus(set, ref, numEquipped)
-    -- If the player has equipped 6 or more items from the set, remove the minimum bonus and add the maximum bonus
+
+    -- If the character has equipped 6 or more items from the set, remove the minimum bonus and add the maximum bonus
     if numEquipped >= 6 then
         removeSpell{ reference = ref, spell = set.minBonus }
         addSpell{ reference = ref, spell = set.maxBonus }
-        mwseLogger("Added max set bonus for set %s", set.name)
         
-    -- If the player has equipped 4 or more items from the set, add the minimum bonus and remove the maximum bonus
+    -- If the character has equipped 4 or more items from the set, add the minimum bonus and remove the maximum bonus
     elseif numEquipped >= 4 then
         addSpell{ reference = ref, spell = set.minBonus }
         removeSpell{ reference = ref, spell = set.maxBonus }
-        mwseLogger("Added min set bonus for set %s", set.name)
-        
-    -- If the player has equipped less than 4 items from the set, remove both bonuses
+
+    -- If the character has equipped less than 4 items from the set, remove both bonuses
     else
         removeSpell{ reference = ref, spell = set.minBonus }
         removeSpell{ reference = ref, spell = set.maxBonus }
-        mwseLogger("No set bonus added for set %s", set.name)
     end
 end
 
--- equipsChanged: A function to handle the event when a character's equipment changes
+-- 'equipsChanged' function handles the event when a character's equipment changes
 local function equipsChanged(e)
+
     -- Get the item id from the event
     local id = e and e.item and e.item.id
     if not id then
         return
     end
 
-    -- Lookup the set the item belongs to
+    -- Find the set that the item belongs to
     local set = config.setLinks[id:lower()]
     if (set == nil) then
         return
@@ -62,25 +71,27 @@ local function equipsChanged(e)
     -- Count the number of items equipped from the same set
     local numEquipped = countItemsEquipped(e.reference, set.items)
 
+    -- Provide a notification if the character is the player
     if e.reference == tes3.player then
         tes3.messageBox("You have %s items of the %s set equipped", numEquipped, set.name)
     end
+
     -- Apply set bonus
     addSetBonus(set, e.reference, numEquipped)
 end
 
--- Registering events to call equipsChanged function when equipment changes
+-- Registering events to call 'equipsChanged' function when equipment changes
 event.register("equipped", equipsChanged)
 event.register("unequipped", equipsChanged)
 event.register("loaded", equipsChanged)
 
--- npcLoaded: A function to handle the event when an NPC is loaded into the game
+-- 'npcLoaded' function handles the event when an NPC is loaded into the game
 local function npcLoaded(e)
     if not e.reference then
         return
     end
 
-        -- Create a table to store the count of items from each set the NPC has equipped
+    -- Create a table to store the count of items from each set the NPC has equipped
     local setCounts = {}    
     for stack in tes3.iterate(e.reference.object.equipment) do
         local allowedTypes = {
@@ -102,44 +113,39 @@ local function npcLoaded(e)
     end
 end
 
--- Registering events to call npcLoaded function when an NPC is loaded
+-- Registering events to call 'npcLoaded' function when an NPC is loaded
 event.register("mobileActivated", npcLoaded)
 event.register("loaded", npcLoaded)
 
--- Create a global variable for other mods to use the interop module
+-- Create a global variable 'StaticSetBonusInterop' for other mods to use the interop module
 _G.StaticSetBonusInterop = interop
 
--- #####################################################################
--- This script is designed to initialize and manage an armor set bonus
--- system in Morrowind. It imports three modules, lfs for filesystem 
--- operations, config for accessing and modifying the configuration 
--- data for the Set Bonus mod, and interop to utilize previously 
--- defined functions for registering and managing sets and their items.
+--[[ 
+SUMMARY OF FUNCTIONS AND LOOPS:
 
--- Key functions are `initAll`, `countItemsEquipped`, `addSpell`, 
--- `removeSpell`, `addSetBonus`, `equipsChanged`, and `npcLoaded`. 
+1. Function 'countItemsEquipped':
+    - This function checks if a character reference (like a player or NPC) has each item from a provided list equipped.
+    - It iterates over the provided list of items, checking if each item is equipped by the reference, and increments a counter if it is.
+    - Finally, it returns the total count of equipped items.
 
--- `initAll` initializes and registers all sets and items contained in
--- Lua files in a specified directory path and creates links between 
--- items and their sets in the `config.setLinks` table.
+2. Functions 'addSpell' and 'removeSpell':
+    - These functions manage the spells associated with a character based on their equipped set.
+    - 'addSpell' either returns the spell effects of a character or adds a new spell to the character.
+    - 'removeSpell' either returns the spell effects of a character or removes a spell from the character.
 
--- `countItemsEquipped` checks if a reference (typically a character)
---  has each item in a given list equipped and returns the count of 
--- equipped items.
+3. Function 'addSetBonus':
+    - This function applies a set bonus to a character based on the number of items the character has equipped from the same set.
+    - It checks the number of equipped items, and depending on the number, it applies the appropriate bonus or removes existing bonuses.
 
--- addSpell and removeSpell are used to manage the spells associated 
--- with a character, depending on the status of their equipment set.
+4. Function 'equipsChanged':
+    - This function handles the event when a character's equipment changes.
+    - It identifies the set to which the changed item belongs, counts the number of items equipped from that set, and applies the set bonus using the 'addSetBonus' function.
 
--- addSetBonus determines and applies a bonus based on the number of 
--- items from the same set a character has equipped.
+5. Function 'npcLoaded':
+    - This function handles the event when an NPC is loaded into the game.
+    - It counts the number of equipped items from each set the NPC has and applies the relevant set bonuses.
 
--- equipsChanged handles the event of equipment changes. It finds the
--- set to which the item belongs, counts the number of items equipped
--- from that set, and calls addSetBonus to apply the appropriate bonus.
-
--- npcLoaded is designed to handle the event when an NPC is loaded into
--- the game. It counts the number of equipped items from each set the 
--- NPC has and applies the relevant set bonuses.
-
--- Finally, a global variable StaticSetBonusInterop is created for other
--- mods to use the interop module.
+6. Loops:
+    - Several loops are used to iterate over items and equipment. For example, the loop in 'countItemsEquipped' iterates over the item list to count equipped items.
+    - The loop in 'npcLoaded' iterates over an NPC's equipment to count the number of items from each set.
+]]

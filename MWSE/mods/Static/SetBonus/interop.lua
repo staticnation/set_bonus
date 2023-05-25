@@ -1,55 +1,52 @@
--- Required libraries
+-- Import required modules
+-- The 'config' module holds the configuration data for the Set Bonus mod
 local config = require("Static.SetBonus.config")
 local lfs = require('lfs')
 
--- Create a table to hold the functions for the module
+-- Define the interop table to contain the module's functions
 local interop = {}
 
--- Function to register a set
--- This function takes as input a table containing set data. It first checks the input data for validity
--- and then proceeds to register the set in the configuration.
+-- 'registerSet' function: registers a set in the configuration
+-- The function asserts the validity of input set data before proceeding with registration
 function interop.registerSet(setData)
-    -- Assertions to ensure the validity of the input set data
+    -- Validating the set data
     assert(type(setData) == "table", "Error: set data did not return a table")
     assert(type(setData.items) == "table", "Error: set data has incorrect structure")
     assert(type(setData.name) == "string", "Error: set data has incorrect structure")
 
-    -- Convert the set name to lowercase for consistency
+    -- Standardize set name to lowercase for consistency
     setData.name = setData.name:lower()
 
-    -- Loop through each item in the set, validate the item, convert it to lowercase, 
-    -- and register the item in the setLinks table.
+    -- Loop over each item in the set, validate the item, convert to lowercase, and register in the 'setLinks' table
     for i, item in ipairs(setData.items) do
         assert(type(item) == "string", "Error: set contains non-string item")
         setData.items[i] = item:lower()
-
-        -- Add a link from the item to the set in the setLinks table
-        config.setLinks[setData.items[i]] = setData
+        config.setLinks[setData.items[i]] = setData  -- Link item to set in the 'setLinks' table
     end
 
-    -- Register the set in the sets table
+    -- Register set in the 'sets' table
     config.sets[setData.name] = setData
-    -- Add set to array-like structure for additional functionality
+    -- Add set to an array-like structure for additional functionality
     table.insert(config.setsArray, setData) 
 end
 
--- Function to register a set link
--- This function takes a table containing set link data and registers it in the setLinks table.
+-- 'registerSetLink' function: registers a set link in the configuration
+-- The function validates the input set link data before registration
 function interop.registerSetLink(setLinkData)
-    -- Assertions to ensure the validity of the input set link data
+    -- Validate set link data
     assert(type(setLinkData.item) == "string", "Error: setLink data has incorrect structure")
     assert(type(setLinkData.set) == "string", "Error: setLink data has incorrect structure")
 
-    -- Convert the item ID and set name to lowercase for consistency
+    -- Standardize item ID and set name to lowercase for consistency
     setLinkData.item = setLinkData.item:lower()
     setLinkData.set = setLinkData.set:lower()
 
-    -- Register the set link in the setLinks table
+    -- Register set link in the 'setLinks' table
     config.setLinks[setLinkData.item] = setLinkData.set
 end
 
--- Function to register a directory containing sets
--- This function takes a directory path as input and registers all Lua files in the directory as sets.
+-- 'registerSetDirectory' function: registers all Lua files in a directory as sets
+-- The function iterates over the directory files and registers each Lua file as a set
 function interop.registerSetDirectory(directoryPath)
     for file in lfs.dir(directoryPath) do
         if file:match("(.+)%.lua$") then
@@ -61,21 +58,21 @@ function interop.registerSetDirectory(directoryPath)
     end
 end
 
+-- 'initAll' function: initializes and registers all sets in a specified directory path
+-- This function iterates over each Lua file in the directory, loads it, and registers it as a set
 function interop.initAll(path)
-    debug.log(path)
     for file in lfs.dir(path) do
-        if file:match("(.+)%.lua$") then -- Only processing Lua files
+        if file:match("(.+)%.lua$") then
             local modulePath = path .. "/" .. file
-            local success, set = pcall(dofile, modulePath) -- Using pcall to handle any errors when loading the Lua files
+            local success, set = pcall(dofile, modulePath)
             if success then
-                for _, item in ipairs(set.items) do
-                end
-                interop.registerSet(set) -- If the Lua file is loaded successfully, register the set using the interop module's function
+                interop.registerSet(set)
             else
                 mwse.log("Error: Failed to load Lua file: " .. modulePath .. ". Skipping this file.")
             end
         end
     end
+    -- Add links for each item to its set in the 'setLinks' table
     for _, set in pairs(config.sets) do
         for _, item in ipairs(set.items) do
             config.setLinks[item] = set
@@ -83,8 +80,8 @@ function interop.initAll(path)
     end
 end
 
--- Function to deeply merge two tables
--- This function takes two tables as input and returns a new table that combines the data from both.
+-- 'mergeTables' function: merges two tables deeply
+-- This function recursively merges two tables and returns the merged result
 function interop.mergeTables(t1, t2)
     for k, v in pairs(t2) do
         if type(v) == "table" then
@@ -100,10 +97,17 @@ function interop.mergeTables(t1, t2)
     return t1
 end
 
--- Return the module table
+-- Return the interop module
 return interop
 
--- This code is for a module named interop, which provides functions to register and manage sets 
--- and their items for the Set Bonus mod. The module provides functions to register a set, 
--- register a set link, register a directory containing sets, and merge two tables. It uses the 
--- configuration data defined in config.lua.
+--[[ 
+SUMMARY:
+
+1. The interop module provides functions to register and manage sets and their items for the Set Bonus mod.
+2. 'registerSet' registers a new set after validating its data. It ensures all names are in lowercase for consistency.
+3. 'registerSetLink' registers a set link, connecting an item to a set.
+4. 'registerSetDirectory' registers all Lua files within a specified directory as sets.
+5. 'initAll' initializes and registers all sets within a specific directory. It also adds links for each item to its set in the 'setLinks' table.
+6. 'mergeTables' is a utility function that merges two tables deeply, including nested tables.
+7. All functions utilize configuration data defined in 'config.lua'.
+]]
