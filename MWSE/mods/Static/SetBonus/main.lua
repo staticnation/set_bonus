@@ -96,7 +96,8 @@ local function npcLoaded(e)
     for stack in tes3.iterate(e.reference.object.equipment) do
         local allowedTypes = {
           [tes3.objectType.armor] = true,
-          [tes3.objectType.clothing] = true
+          [tes3.objectType.clothing] = true,
+          [tes3.objectType.weapon] = true
         }
         if allowedTypes[stack.object.objectType] then
             local set = config.setLinks[stack.object.id:lower()] -- Ensure the ID is in lowercase
