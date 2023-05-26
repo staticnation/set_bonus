@@ -113,7 +113,7 @@ SUMMARY:
 1. The interop module provides functions to register and manage sets and their items for the Set Bonus mod.
 2. 'registerSet' registers a new set after validating its data. It ensures all names are in lowercase for consistency.
 3. 'registerSetLink' registers a set link, connecting an item to a set.
-4. 'registerSetDirectory' registers all Lua files within a specified directory as sets.
+4. 'initFile' registers a defined Lua file as sets.
 5. 'initAll' initializes and registers all sets within a specific directory. It also adds links for each item to its set in the 'setLinks' table.
 6. 'mergeTables' is a utility function that merges two tables deeply, including nested tables.
 7. All functions utilize configuration data defined in 'config.lua'.
