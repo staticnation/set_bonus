@@ -108,7 +108,7 @@ local function npcLoaded(e)
     end
 
     -- For each set, apply the set bonus
-    for set, count in pairs(setCounts) do
+    for setName, count in pairs(setCounts) do
         local set = config.sets[setName:lower()]
         addSetBonus(set, e.reference, count)
     end
@@ -122,7 +122,7 @@ event.register("loaded", npcLoaded)
 _G.StaticSetBonusInterop = interop
 
 --[[ 
-SUMMARY OF FUNCTIONS AND LOOPS:
+SUMMARY OF FUNCTIONS:
 
 1. Function 'countItemsEquipped':
     - This function checks if a character reference (like a player or NPC) has each item from a provided list equipped.
@@ -145,8 +145,4 @@ SUMMARY OF FUNCTIONS AND LOOPS:
 5. Function 'npcLoaded':
     - This function handles the event when an NPC is loaded into the game.
     - It counts the number of equipped items from each set the NPC has and applies the relevant set bonuses.
-
-6. Loops:
-    - Several loops are used to iterate over items and equipment. For example, the loop in 'countItemsEquipped' iterates over the item list to count equipped items.
-    - The loop in 'npcLoaded' iterates over an NPC's equipment to count the number of items from each set.
 ]]

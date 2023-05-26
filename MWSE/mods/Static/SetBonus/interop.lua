@@ -45,15 +45,22 @@ function interop.registerSetLink(setLinkData)
     config.setLinks[setLinkData.item] = setLinkData.set
 end
 
--- 'registerSetDirectory' function: registers all Lua files in a directory as sets
+-- 'registerSetFile' function: registers all Lua files in a directory as sets
 -- The function iterates over the directory files and registers each Lua file as a set
-function interop.registerSetDirectory(directoryPath)
-    for file in lfs.dir(directoryPath) do
+function interop.initFile(filePath)
+    for file in lfs.dir(filePath) do
         if file:match("(.+)%.lua$") then
-            local setFilePath = directoryPath .. "/" .. file
-            local setData = dofile(setFilePath)
-            local setName = setData.name or "unknown"
-            interop.registerSet(setData)
+            local successFile, set = dofile(filePath)
+        if successFile then
+            interop.registerSet(set)
+        else
+            mwse.log("Error loading set file: %s. Error: %s", filePath, set)
+        end
+    end
+        -- Add links for each item to its set in the 'setLinks' table
+    for _, set in pairs(config.sets) do
+        for _, item in ipairs(set.items) do
+            config.setLinks[item] = set
         end
     end
 end
@@ -68,7 +75,7 @@ function interop.initAll(path)
             if success then
                 interop.registerSet(set)
             else
-                mwse.log("Error: Failed to load Lua file: " .. modulePath .. ". Skipping this file.")
+                mwse.log("Error loading set file: %s. Error: %s", modulePath, set)
             end
         end
     end
