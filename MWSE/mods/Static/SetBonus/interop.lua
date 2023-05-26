@@ -51,10 +51,11 @@ function interop.initFile(filePath)
     for file in lfs.dir(filePath) do
         if file:match("(.+)%.lua$") then
             local successFile, set = dofile(filePath)
-        if successFile then
-            interop.registerSet(set)
-        else
-            mwse.log("Error loading set file: %s. Error: %s", filePath, set)
+            if successFile then
+                interop.registerSet(set)
+            else
+                mwse.log("Error loading set file: %s. Error: %s", filePath, set)
+            end
         end
     end
         -- Add links for each item to its set in the 'setLinks' table
