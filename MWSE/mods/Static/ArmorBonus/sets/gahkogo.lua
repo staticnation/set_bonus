@@ -1,6 +1,7 @@
-return {
+﻿return {
         name = "Gah'Kogo",
-        items = { "" },
+        items = { "T_De_DresBonemold_Boots_01", "T_De_DresBonemold_Cuirass_01", "T_De_DresBonemold_GauntletL_01", "T_De_DresBonemold_GauntletR_01", "T_De_DresBonemold_Greaves_01", "T_De_DresBonemold_Helm_01", "T_De_DresBonemold_PauldronL_01", "T_De_DresBonemold_PauldronR_01", "T_De_DresBonemold_ShieldTow_01" },
         minBonus = "_sn_gahkogo_min",
-        maxBonus = "_sn_gahkogo_max"
+        maxBonus = "_sn_gahkogo_max",
+        midBonus = "_sn_gahkogo_mid",
 }
