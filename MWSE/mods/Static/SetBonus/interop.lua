@@ -14,6 +14,10 @@ function interop.registerSet(setData)
     assert(type(setData) == "table", "Error: set data did not return a table")
     assert(type(setData.items) == "table", "Error: set data has incorrect structure")
     assert(type(setData.name) == "string", "Error: set data has incorrect structure")
+    assert(type(setData.minBonus) == "string", "Error: set data does not have valid minBonus")
+    assert(type(setData.midBonus) == "string", "Error: set data does not have valid midBonus")
+    assert(type(setData.maxBonus) == "string", "Error: set data does not have valid maxBonus")
+
 
     -- Standardize set name to lowercase for consistency
     setData.name = setData.name:lower()
@@ -22,13 +26,19 @@ function interop.registerSet(setData)
     for i, item in ipairs(setData.items) do
         assert(type(item) == "string", "Error: set contains non-string item")
         setData.items[i] = item:lower()
-        config.setLinks[setData.items[i]] = setData  -- Link item to set in the 'setLinks' table
+        -- If item already linked to a set, add this set to the list. If not, create a new list for this item
+        if not config.setLinks[setData.items[i]] then
+            config.setLinks[setData.items[i]] = {} -- Initialize a new table for this item
+        end
+
+        -- Add the current set to the list of sets that this item belongs to
+        config.setLinks[setData.items[i]][setData.name] = true -- Link the item to the set
     end
 
     -- Register set in the 'sets' table
     config.sets[setData.name] = setData
     -- Add set to an array-like structure for additional functionality
-    table.insert(config.setsArray, setData) 
+    table.insert(config.setsArray, setData)
 end
 
 -- 'registerSetLink' function: registers a set link in the configuration
@@ -43,8 +53,13 @@ function interop.registerSetLink(setLinkData)
     setLinkData.item = setLinkData.item:lower()
     setLinkData.set = setLinkData.set:lower()
 
-    -- Register set link in the 'setLinks' table
-    config.setLinks[setLinkData.item] = setLinkData.set
+    -- If this item hasn't been added to config.setLinks yet, add it as a new table
+    if not config.setLinks[setLinkData.item] then
+        config.setLinks[setLinkData.item] = {}
+    end
+
+    -- Add the current set to the list of sets that this item belongs to
+    config.setLinks[setLinkData.item][setLinkData.set] = true
 end
 
 -- 'initFile' function: registers a defined Lua file as sets
@@ -59,12 +74,6 @@ function interop.initFile(filePath)
             else
                 mwse.log("Error loading set file: %s. Error: %s", filePath, set)
             end
-        end
-    end
-        -- Add links for each item to its set in the 'setLinks' table
-    for _, set in pairs(config.sets) do
-        for _, item in ipairs(set.items) do
-            config.setLinks[item] = set
         end
     end
 end
@@ -82,12 +91,6 @@ function interop.initAll(pathDir)
             else
                 mwse.log("Error loading set file: %s. Error: %s", modulePath, set)
             end
-        end
-    end
-    -- Add links for each item to its set in the 'setLinks' table
-    for _, set in pairs(config.sets) do
-        for _, item in ipairs(set.items) do
-            config.setLinks[item] = set
         end
     end
 end
@@ -114,14 +117,3 @@ end
 -- Return the interop module
 return interop
 
---[[ 
-SUMMARY:
-
-1. The interop module provides functions to register and manage sets and their items for the Set Bonus mod.
-2. 'registerSet' registers a new set after validating its data. It ensures all names are in lowercase for consistency.
-3. 'registerSetLink' registers a set link, connecting an item to a set.
-4. 'initFile' registers a defined Lua file as sets.  It also adds links for each item to its set in the 'setLinks' table.
-5. 'initAll' initializes and registers all sets within a specific directory. It also adds links for each item to its set in the 'setLinks' table.
-6. 'mergeTables' is a utility function that merges two tables deeply, including nested tables.
-7. All functions utilize configuration data defined in 'config.lua'.
-]]
