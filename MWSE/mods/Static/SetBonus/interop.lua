@@ -8,6 +8,7 @@ local interop = {}
 
 -- 'registerSet' function: registers a set in the configuration
 -- The function asserts the validity of input set data before proceeding with registration
+---@param setData table responsible for registering a new set with its items into the system
 function interop.registerSet(setData)
     -- Validating the set data
     assert(type(setData) == "table", "Error: set data did not return a table")
@@ -32,6 +33,7 @@ end
 
 -- 'registerSetLink' function: registers a set link in the configuration
 -- The function validates the input set link data before registration
+---@param setLinkData table responsible for creating a link between an already registered item and set
 function interop.registerSetLink(setLinkData)
     -- Validate set link data
     assert(type(setLinkData.item) == "string", "Error: setLink data has incorrect structure")
@@ -47,6 +49,7 @@ end
 
 -- 'initFile' function: registers a defined Lua file as sets
 -- The function scans the files and registers each set in the file
+---@param filePath string The path to the file to initialize
 function interop.initFile(filePath)
     for file in lfs.dir(filePath) do
         if file:match("(.+)%.lua$") then
@@ -68,6 +71,7 @@ end
 
 -- 'initAll' function: initializes and registers all sets in a specified directory path
 -- This function iterates over each Lua file in the directory, loads it, and registers it as a set
+---@param pathDir string The path to the directory containing the files to initialize
 function interop.initAll(pathDir)
     for file in lfs.dir(pathDir) do
         if file:match("(.+)%.lua$") then
@@ -90,6 +94,8 @@ end
 
 -- 'mergeTables' function: merges two tables deeply
 -- This function recursively merges two tables and returns the merged result
+---@param t1 table The first table to merge
+---@param t2 table The second table to merge
 function interop.mergeTables(t1, t2)
     for k, v in pairs(t2) do
         if type(v) == "table" then
