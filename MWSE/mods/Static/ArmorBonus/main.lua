@@ -5,12 +5,6 @@ local interop = require("Static.SetBonus.interop")
 -- 'initAll' function from 'interop' module is used to initialize all set files in a specific directory
 interop.initAll("Data Files/MWSE/mods/Static/ArmorBonus/sets")
 
--- This loop registers each item to its set in the 'setLinks' table
-for _, set in pairs(config.sets) do
-    for _, item in ipairs(set.items) do
-        config.setLinks[item] = set
-    end
-end
 
 --[[ 
 SUMMARY:
