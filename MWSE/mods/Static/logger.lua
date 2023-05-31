@@ -2,8 +2,8 @@
 local logger = require("logging.logger")
 local log = logger.new{
     name = "SetBonus",
-    logLevel = "TRACE",
-    logToConsole = false,
+    logLevel = "ERROR",
+    logToConsole = true,
     includeTimestamp = true,
 }
 
