@@ -3,7 +3,7 @@ local logger = require("logging.logger")
 local log = logger.new{
     name = "SetBonus",
     logLevel = "TRACE",
-    logToConsole = true,
+    logToConsole = false,
     includeTimestamp = true,
 }
 
