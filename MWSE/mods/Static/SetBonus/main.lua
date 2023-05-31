@@ -35,35 +35,27 @@ local function addSetBonus(set, ref, numEquipped)
     if numEquipped >= 6 then
         log:debug("addSetBonus: Attempting to add max bonus spell. Reference: %s, Spell: %s", ref, set.maxBonus)
         log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.maxBonus))
-        tes3.addSpell{ reference = ref, spell = set.maxBonus }
         tes3.removeSpell{ reference = ref, spell = set.midBonus }
-    elseif numEquipped >= 4 and numEquipped < 6 then
+        tes3.removeSpell{ reference = ref, spell = set.minBonus }
+        tes3.addSpell{ reference = ref, spell = set.maxBonus }
+    elseif numEquipped >= 4 then
         log:debug("addSetBonus: Attempting to add mid bonus spell. Reference: %s, Spell: %s", ref, set.midBonus)
         log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.midBonus))
-        tes3.addSpell{ reference = ref, spell = set.midBonus }
+        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
         tes3.removeSpell{ reference = ref, spell = set.minBonus }
-    elseif numEquipped >= 2 and numEquipped < 4 then
+        tes3.addSpell{ reference = ref, spell = set.midBonus }
+    elseif numEquipped >= 2 then
         log:debug("addSetBonus: Attempting to add min bonus spell. Reference: %s, Spell: %s", ref, set.minBonus)
         log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.minBonus))
+        tes3.removeSpell{ reference = ref, spell = set.midBonus }
+        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
         tes3.addSpell{ reference = ref, spell = set.minBonus }
     else
-        log:info("addSetBonus: No bonuses applicable")
-    end
-    -- Remove non-applicable bonuses
-    if numEquipped < 2 and tes3.hasSpell({reference = ref, spell = set.minBonus}) then
-        log:debug("addSetBonus: Attempting to remove min bonus spell. Reference: %s, Spell: %s", ref, set.minBonus)
-        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.minBonus))
+        log:debug("addSetBonus: Attempting to remove all bonus spells. Reference: %s", ref)
         tes3.removeSpell{ reference = ref, spell = set.minBonus }
-    end
-    if numEquipped < 4 and tes3.hasSpell({reference = ref, spell = set.midBonus}) then
-        log:debug("addSetBonus: Attempting to remove mid bonus spell. Reference: %s, Spell: %s", ref, set.midBonus)
-        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.midBonus))
         tes3.removeSpell{ reference = ref, spell = set.midBonus }
-    end
-    if numEquipped < 6 and tes3.hasSpell({reference = ref, spell = set.maxBonus}) then
-        log:debug("addSetBonus: Attempting to remove max bonus spell. Reference: %s, Spell: %s", ref, set.maxBonus)
-        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.maxBonus))
         tes3.removeSpell{ reference = ref, spell = set.maxBonus }
+        log:info("addSetBonus: No bonuses applicable")
     end
     log:info("addSetBonus: Exit point")
 end
@@ -92,8 +84,11 @@ local function equipsChanged(e)
             if e.reference == tes3.player then
                 tes3.messageBox("You have %s items of the %s set equipped", numEquipped, setName)
             end
-            -- Apply set bonus
-            addSetBonus(set, e.reference, numEquipped)
+            --- Apply set bonus using timer
+            local function applyBonus()
+                addSetBonus(set, e.reference, numEquipped)
+            end
+            timer.frame.delayOneFrame(applyBonus)
         end
     end
     log:info("equipsChanged: Exit point")
@@ -101,6 +96,7 @@ end
 -- Registering events to call 'equipsChanged' function when equipment changes
 event.register("equipped", equipsChanged)
 event.register("unequipped", equipsChanged)
+event.register(tes3.event.loaded, equipsChanged)
 -- 'npcLoaded' function handles the event when an NPC is loaded into the game
 ---@param e mobileActivatedEventData
 local function npcLoaded(e)
