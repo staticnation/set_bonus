@@ -30,42 +30,40 @@ end
 ---@param numEquipped number
 local function addSetBonus(set, ref, numEquipped)
     log:info("addSetBonus: Entry point")
-    -- Remove all bonuses initially
-    -- If the character has less than the 2 items from the set, remove that set bonus
-    if set.minBonus and tes3.hasSpell({reference = ref, spell = set.minBonus}) then
-        tes3.removeSpell{ reference = ref, spell = set.minBonus }
-    end
-    if set.midBonus and tes3.hasSpell({reference = ref, spell = set.midBonus}) then
-        tes3.removeSpell{ reference = ref, spell = set.midBonus }
-    end
-    if set.maxBonus and tes3.hasSpell({reference = ref, spell = set.maxBonus}) then
-        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
-    end
+
     -- Add bonuses based on the number of equipped items
-    -- If the character has equipped 6 items or more from the set, add the maximum bonus
-    if numEquipped >= 6 and set.maxBonus then
-        -- If the character has equipped 6 items or more from the set, add the maximum bonus
-        if set.maxBonus then
-            log:debug("addSetBonus: Attempting to add max bonus spell. Reference: %s, Spell: %s", ref, set.maxBonus)
-            log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.maxBonus))
-            tes3.addSpell{ reference = ref, spell = set.maxBonus }
-        end
-    elseif numEquipped >= 4 and set.midBonus then
-        -- If the character has equipped 4 to 5 items from the set, add the mid bonus
-        if set.midBonus then
-            log:debug("addSetBonus: Attempting to add mid bonus spell. Reference: %s, Spell: %s", ref, set.midBonus)
-            log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.midBonus))
-            tes3.addSpell{ reference = ref, spell = set.midBonus }
-        end
-    elseif numEquipped >=2 then
-        -- If the character has equipped 2 or 3 items from the set, add the minimum bonus
-        if set.minBonus and set.minBonus then
-            log:debug("addSetBonus: Attempting to add min bonus spell. Reference: %s, Spell: %s", ref, set.minBonus)
-            log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.minBonus))
-            tes3.addSpell{ reference = ref, spell = set.minBonus }
-        end
+    if numEquipped >= 6 then
+        log:debug("addSetBonus: Attempting to add max bonus spell. Reference: %s, Spell: %s", ref, set.maxBonus)
+        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.maxBonus))
+        tes3.addSpell{ reference = ref, spell = set.maxBonus }
+        tes3.removeSpell{ reference = ref, spell = set.midBonus }
+    elseif numEquipped >= 4 and numEquipped < 6 then
+        log:debug("addSetBonus: Attempting to add mid bonus spell. Reference: %s, Spell: %s", ref, set.midBonus)
+        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.midBonus))
+        tes3.addSpell{ reference = ref, spell = set.midBonus }
+        tes3.removeSpell{ reference = ref, spell = set.minBonus }
+    elseif numEquipped >= 2 and numEquipped < 4 then
+        log:debug("addSetBonus: Attempting to add min bonus spell. Reference: %s, Spell: %s", ref, set.minBonus)
+        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.minBonus))
+        tes3.addSpell{ reference = ref, spell = set.minBonus }
     else
         log:info("addSetBonus: No bonuses applicable")
+    end
+    -- Remove non-applicable bonuses
+    if numEquipped < 2 and tes3.hasSpell({reference = ref, spell = set.minBonus}) then
+        log:debug("addSetBonus: Attempting to remove min bonus spell. Reference: %s, Spell: %s", ref, set.minBonus)
+        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.minBonus))
+        tes3.removeSpell{ reference = ref, spell = set.minBonus }
+    end
+    if numEquipped < 4 and tes3.hasSpell({reference = ref, spell = set.midBonus}) then
+        log:debug("addSetBonus: Attempting to remove mid bonus spell. Reference: %s, Spell: %s", ref, set.midBonus)
+        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.midBonus))
+        tes3.removeSpell{ reference = ref, spell = set.midBonus }
+    end
+    if numEquipped < 6 and tes3.hasSpell({reference = ref, spell = set.maxBonus}) then
+        log:debug("addSetBonus: Attempting to remove max bonus spell. Reference: %s, Spell: %s", ref, set.maxBonus)
+        log:debug("addSetBonus: Types - Reference: %s, Spell: %s", type(ref), type(set.maxBonus))
+        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
     end
     log:info("addSetBonus: Exit point")
 end

@@ -3,10 +3,8 @@
 local log = require("Static.logger")
 local config = require("Static.SetBonus.config")
 local lfs = require('lfs')
-
 -- Define the interop table to contain the module's functions
 local interop = {}
-
 -- 'registerSet' function: registers a set in the config
 -- The function asserts the validity of input set data before proceeding with registration
 ---@param setData table responsible for registering a new set with its items into the system
@@ -19,13 +17,11 @@ function interop.registerSet(setData)
     assert(type(setData.minBonus) == "string", "Error: set data does not have valid minBonus")
     assert(type(setData.midBonus) == "string", "Error: set data does not have valid midBonus")
     assert(type(setData.maxBonus) == "string", "Error: set data does not have valid maxBonus")
-
     -- Standardize set name to lowercase for consistency
     setData.name = setData.name:lower()
     setData.minBonus = setData.minBonus:lower()
     setData.midBonus = setData.midBonus:lower()
     setData.maxBonus = setData.maxBonus:lower()
-
     -- Loop over each item in the set, validate the item, convert to lowercase, and register in the 'setLinks' table
     for i, item in ipairs(setData.items) do
         assert(type(item) == "string", "Error: set contains non-string item")
@@ -34,18 +30,15 @@ function interop.registerSet(setData)
         if not config.setLinks[setData.items[i]] then
             config.setLinks[setData.items[i]] = {} -- Initialize a new table for this item
         end
-
         -- Add the current set to the list of sets that this item belongs to
         config.setLinks[setData.items[i]][setData.name] = true -- Link the item to the set
     end
-
     -- Register set in the 'sets' table
     config.sets[setData.name] = setData
     -- Add set to an array-like structure for additional functionality
     table.insert(config.setsArray, setData)
     log:info("registerSet: Exit point")
 end
-
 -- 'registerSetLink' function: registers a set link in the configuration
 -- The function validates the input set link data before registration
 ---@param setLinkData table responsible for creating a link between an already registered item and set
@@ -54,21 +47,17 @@ function interop.registerSetLink(setLinkData)
     -- Validate set link data
     assert(type(setLinkData.item) == "string", "Error: setLink data has incorrect structure")
     assert(type(setLinkData.set) == "string", "Error: setLink data has incorrect structure")
-
     -- Standardize item ID and set name to lowercase for consistency
     setLinkData.item = setLinkData.item:lower()
     setLinkData.set = setLinkData.set:lower()
-
     -- If this item hasn't been added to config.setLinks yet, add it as a new table
     if not config.setLinks[setLinkData.item] then
         config.setLinks[setLinkData.item] = {}
     end
-
     -- Add the current set to the list of sets that this item belongs to
     config.setLinks[setLinkData.item][setLinkData.set] = true
     log:info("registerSetLink: Exit point")
 end
-
 -- 'initFile' function: registers a defined Lua file as sets
 -- The function scans the files and registers each set in the file
 ---@param filePath string The path to the file to initialize
@@ -86,7 +75,6 @@ function interop.initFile(filePath)
     end
     log:info("initFile: Exit point")
 end
-
 -- 'initAll' function: initializes and registers all sets in a specified directory path
 -- This function iterates over each Lua file in the directory, loads it, and registers it as a set
 ---@param pathDir string The path to the directory containing the files to initialize
@@ -105,7 +93,6 @@ function interop.initAll(pathDir)
     end
     log:info("initAll: Exit point")
 end
-
 -- 'mergeTables' function: merges two tables deeply
 -- This function recursively merges two tables and returns the merged result
 ---@param t1 table The first table to merge
@@ -126,6 +113,5 @@ function interop.mergeTables(t1, t2)
     log:info("mergeTables: Exit point")
     return t1
 end
-
 -- Return the interop module
 return interop

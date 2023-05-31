@@ -3,5 +3,4 @@ local config = {
     setLinks = {},
     setsArray = {}
 }
-
 return config
