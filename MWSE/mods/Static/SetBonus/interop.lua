@@ -1,26 +1,30 @@
 -- Import required modules
 -- The 'config' module holds the configuration data for the Set Bonus mod
+local log = require("Static.logger")
 local config = require("Static.SetBonus.config")
 local lfs = require('lfs')
 
 -- Define the interop table to contain the module's functions
 local interop = {}
 
--- 'registerSet' function: registers a set in the configuration
+-- 'registerSet' function: registers a set in the config
 -- The function asserts the validity of input set data before proceeding with registration
 ---@param setData table responsible for registering a new set with its items into the system
 function interop.registerSet(setData)
+    log:info("registerSet: Entry point")
     -- Validating the set data
     assert(type(setData) == "table", "Error: set data did not return a table")
-    assert(type(setData.items) == "table", "Error: set data has incorrect structure")
     assert(type(setData.name) == "string", "Error: set data has incorrect structure")
+    assert(type(setData.items) == "table", "Error: set data has incorrect structure")
     assert(type(setData.minBonus) == "string", "Error: set data does not have valid minBonus")
     assert(type(setData.midBonus) == "string", "Error: set data does not have valid midBonus")
     assert(type(setData.maxBonus) == "string", "Error: set data does not have valid maxBonus")
 
-
     -- Standardize set name to lowercase for consistency
     setData.name = setData.name:lower()
+    setData.minBonus = setData.minBonus:lower()
+    setData.midBonus = setData.midBonus:lower()
+    setData.maxBonus = setData.maxBonus:lower()
 
     -- Loop over each item in the set, validate the item, convert to lowercase, and register in the 'setLinks' table
     for i, item in ipairs(setData.items) do
@@ -39,12 +43,14 @@ function interop.registerSet(setData)
     config.sets[setData.name] = setData
     -- Add set to an array-like structure for additional functionality
     table.insert(config.setsArray, setData)
+    log:info("registerSet: Exit point")
 end
 
 -- 'registerSetLink' function: registers a set link in the configuration
 -- The function validates the input set link data before registration
 ---@param setLinkData table responsible for creating a link between an already registered item and set
 function interop.registerSetLink(setLinkData)
+    log:info("registerSetLink: Entry point")
     -- Validate set link data
     assert(type(setLinkData.item) == "string", "Error: setLink data has incorrect structure")
     assert(type(setLinkData.set) == "string", "Error: setLink data has incorrect structure")
@@ -60,28 +66,32 @@ function interop.registerSetLink(setLinkData)
 
     -- Add the current set to the list of sets that this item belongs to
     config.setLinks[setLinkData.item][setLinkData.set] = true
+    log:info("registerSetLink: Exit point")
 end
 
 -- 'initFile' function: registers a defined Lua file as sets
 -- The function scans the files and registers each set in the file
 ---@param filePath string The path to the file to initialize
 function interop.initFile(filePath)
+    log:info("initFile: Entry point")
     for file in lfs.dir(filePath) do
         if file:match("(.+)%.lua$") then
             local successFile, set = dofile(filePath)
             if successFile then
                 interop.registerSet(set)
             else
-                mwse.log("Error loading set file: %s. Error: %s", filePath, set)
+                log:debug("Error loading set file: %s. Error: %s", filePath, set)
             end
         end
     end
+    log:info("initFile: Exit point")
 end
 
 -- 'initAll' function: initializes and registers all sets in a specified directory path
 -- This function iterates over each Lua file in the directory, loads it, and registers it as a set
 ---@param pathDir string The path to the directory containing the files to initialize
 function interop.initAll(pathDir)
+    log:info("initAll: Entry point")
     for file in lfs.dir(pathDir) do
         if file:match("(.+)%.lua$") then
             local modulePath = pathDir .. "/" .. file
@@ -89,10 +99,11 @@ function interop.initAll(pathDir)
             if successScan then
                 interop.registerSet(set)
             else
-                mwse.log("Error loading set file: %s. Error: %s", modulePath, set)
+                log:debug("Error loading set file: %s. Error: %s", modulePath, set)
             end
         end
     end
+    log:info("initAll: Exit point")
 end
 
 -- 'mergeTables' function: merges two tables deeply
@@ -100,6 +111,7 @@ end
 ---@param t1 table The first table to merge
 ---@param t2 table The second table to merge
 function interop.mergeTables(t1, t2)
+    log:info("mergeTables: Entry point")
     for k, v in pairs(t2) do
         if type(v) == "table" then
             if type(t1[k] or false) == "table" then
@@ -111,9 +123,9 @@ function interop.mergeTables(t1, t2)
             t1[k] = v
         end
     end
+    log:info("mergeTables: Exit point")
     return t1
 end
 
 -- Return the interop module
 return interop
-
