@@ -1,6 +1,6 @@
 local config = {
     sets = {},
     setLinks = {},
-    setsArray = {}
+    setsArray = {},
 }
 return config
