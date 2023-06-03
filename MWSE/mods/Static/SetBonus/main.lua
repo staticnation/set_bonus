@@ -2,7 +2,6 @@
 --- The 'config' module holds the configuration data for the Set Bonus mod
 local log = require("Static.logger")
 local config = require("Static.SetBonus.config")
-local configMCM = require("Static.SetBonus.setBonusMCM")
 -- 'countItemsEquipped' function checks if a character reference has each item from a given list equipped
 ---@param ref tes3reference
 ---@param items tes3item[]
@@ -59,9 +58,6 @@ end
 -- 'equipsChanged' function handles the event when a character's equipment changes
 ---@param e equippedEventData
 local function equipsChanged(e)
-    if not configMCM.enabled then
-        return
-    end
     log:trace("equipsChanged: Starting function with event data: %s", e)
     -- Get the item id from the event
     local id = e and e.item and e.item.id
@@ -97,9 +93,6 @@ event.register(tes3.event.unequipped, equipsChanged)
 -- 'npcLoaded' function handles the event when an NPC is loaded into the game
 ---@param e mobileActivatedEventData
 local function npcLoaded(e)
-    if not configMCM.enabled then
-        return
-    end
     log:trace("npcLoaded: Starting function with event data: %s", e)
     if not e.reference or not e.reference.object.equipment then 
         log:error("npcLoaded: Event data is missing NPC reference or equipment.")
