@@ -3,24 +3,6 @@ local configMCM = require("Static.SetBonus.configMCM")
 -- Load the sets data
 local config = require("Static.SetBonus.config")
 
-local function displaySpellEffects(setPage, spellId)
-    -- Fetch the spell
-    local spell = tes3.dataHandler.nonDynamicData.spells[spellId]
-    if spell then
-        mwse.log("[Set Bonus Mod] Found spell with ID: %s", spellId)
-        -- Iterate over the spell's effects
-        for _, effect in ipairs(spell.effects) do
-            -- Fetch effect's name from the game's data
-            local effectName = tes3.getMagicEffect(effect.id).name
-            -- Add a label for each effect
-            setPage:createInfo({ text = string.format("Effect ID: %s, Effect Name: %s", effect.id, effectName) })
-            mwse.log("[Set Bonus Mod] Effect ID: %s, Effect Name: %s", effect.id, effectName)
-        end
-    else
-        mwse.log("[Set Bonus Mod] Could not find spell with ID: %s", spellId)
-    end
-end
-
 local function registerModConfig()
     -- Create the template for the MCM
     local template = mwse.mcm.createTemplate({ name = "Set Bonus Mod" })
@@ -38,15 +20,20 @@ local function registerModConfig()
     for setName, set in pairs(config.sets) do
         -- Create a page for each set
         local setPage = template:createSideBarPage({ label = setName })
+        -- Add a header for the items list
+        setPage:createInfo({ text = "Items in the Set:" })
         -- Iterate over each item in the set
         for _, itemName in ipairs(set.items) do
             -- Create a label for each item
-            setPage:createInfo({ text = itemName })
+            setPage:createInfo({ text = "  " .. itemName })
         end
+        -- Add some space before the bonuses
+        setPage:createLabel({ text = "" })
         -- Display bonus spells
-        displaySpellEffects(setPage, set.minBonus)
-        displaySpellEffects(setPage, set.midBonus)
-        displaySpellEffects(setPage, set.maxBonus)
+        setPage:createInfo({ text = "Bonuses:" })
+        setPage:createInfo({ text = "  Min: " .. set.minBonus })
+        setPage:createInfo({ text = "  Mid: " .. set.midBonus })
+        setPage:createInfo({ text = "  Max: " .. set.maxBonus })
     end
     -- Register the MCM
     template:register()
