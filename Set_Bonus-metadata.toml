@@ -4,7 +4,7 @@
     homepage = "https://www.nexusmods.com/morrowind/mods/52911"
     repository = "https://github.com/static/set_bonus"
     authors = ["StaticNation"]
-    version = "0.9.8"
+    version = "0.9.9"
 
     [dependencies]
     assets = [ "Set_Bonus.esp", "MWSE/mods/Static/SetBonus", ]
