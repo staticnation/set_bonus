@@ -1,4 +1,4 @@
-﻿return {
+return {
         name = "Plate",
         items = { "" },
         minBonus = "_sn_plate_min",

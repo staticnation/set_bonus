@@ -1,4 +1,4 @@
-﻿return {
+return {
         name = "Scale Mail",
         items = { "newtscale_cuirass", "dragonscale_helm", "dragonscale_cuirass", "dragonscale_towershield" },
         minBonus = "_sn_scale_min",

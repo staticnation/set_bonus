@@ -1,4 +1,4 @@
-﻿return {
+return {
         name = "Padded",
         items = { "" },
         minBonus = "_sn_padded_min",

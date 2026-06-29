@@ -1,4 +1,4 @@
-﻿return {
+return {
         name = "Guard",
         items = { "" },
         minBonus = "_sn_guard_min",

@@ -1,4 +1,4 @@
-﻿return {
+return {
         name = "Engraved",
         items = { "" },
         minBonus = "_sn_engraved_min",

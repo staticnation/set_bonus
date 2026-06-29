@@ -1,4 +1,4 @@
-﻿return {
+return {
         name = "Splint",
         items = { "" },
         minBonus = "_sn_splint_min",
