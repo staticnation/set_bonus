@@ -1,142 +1,156 @@
--- Importing necessary modules
---- The 'config' module holds the configuration data for the Set Bonus mod
+-- Static Set Bonus -- core runtime: counts equipped set pieces and applies the
+-- matching tier ability. Registration/data lives in SetBonus/interop.lua.
 local log = require("Static.logger")
 local config = require("Static.SetBonus.config")
--- 'countItemsEquipped' function checks if a character reference has each item from a given list equipped
+
+-- Fallback thresholds if a set somehow lacks them (registerSet normally sets these).
+local DEFAULT_THRESHOLDS = { min = 2, mid = 4, max = 6 }
+
+-- Per-reference cache of the currently-applied tier per set.
+-- Weak keys so dead references can be garbage-collected.
+-- Shape: appliedTier[ref] = { [setName] = "min"|"mid"|"max" }
+local appliedTier = setmetatable({}, { __mode = "k" })
+
+-- 'countItemsEquipped' counts how many items from a list a reference has equipped.
 ---@param ref tes3reference
 ---@param items tes3item[]
 ---@return number
 local function countItemsEquipped(ref, items)
-    log:trace("countItemsEquipped: Starting function with ref: %s, items: %s", ref, items)
     if not items or type(items) ~= "table" then
-        log:error("countItemsEquipped: Invalid items input. Must be a table.")
+        log:error("countItemsEquipped: invalid items input; must be a table.")
         return 0
     end
     local count = 0
-    -- Loop over the items
     for _, item in ipairs(items) do
-        -- Check if the item is equipped by the given reference (typically a character)
         ---@diagnostic disable-next-line
         if ref.object:hasItemEquipped(item) then
             count = count + 1
         end
     end
-    -- Log the counted items
-    log:debug("countItemsEquipped: Counted %s equipped items for ref: %s", count, ref)
-    return count -- Returns the count of equipped items
+    return count
 end
--- 'addSetBonus' function applies a set bonus based on the number of items a character has equipped from the same set
+
+-- 'tierFor' maps an equipped-piece count to a tier name (or nil below the minimum),
+-- using the set's own thresholds.
+---@param set table
+---@param numEquipped number
+---@return string|nil
+local function tierFor(set, numEquipped)
+    local t = set.thresholds or DEFAULT_THRESHOLDS
+    if numEquipped >= t.max then
+        return "max"
+    elseif numEquipped >= t.mid then
+        return "mid"
+    elseif numEquipped >= t.min then
+        return "min"
+    end
+    return nil
+end
+
+-- 'applySetBonus' applies the correct tier spell, only touching spells when the
+-- tier actually changes. Fires "Static:SetBonusChanged" on change.
 ---@param set table
 ---@param ref tes3reference
 ---@param numEquipped number
-local function addSetBonus(set, ref, numEquipped)
-    log:trace("addSetBonus: Starting function with set: %s, ref: %s, numEquipped: %s", set, ref, numEquipped)
-        -- Add bonuses based on the number of equipped items
-    if numEquipped >= 6 then
-        log:debug("addSetBonus: Adding max bonus spell for ref: %s, Spell: %s", ref, set.maxBonus)
-        tes3.removeSpell{ reference = ref, spell = set.midBonus }
-        tes3.removeSpell{ reference = ref, spell = set.minBonus }
-        tes3.addSpell{ reference = ref, spell = set.maxBonus }
-    elseif numEquipped >= 4 then
-        log:debug("addSetBonus: Adding mid bonus spell for ref: %s, Spell: %s", ref, set.midBonus)
-        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
-        tes3.removeSpell{ reference = ref, spell = set.minBonus }
-        tes3.addSpell{ reference = ref, spell = set.midBonus }
-    elseif numEquipped >= 2 then
-        log:debug("addSetBonus: Adding min bonus spell for ref: %s, Spell: %s", ref, set.minBonus)
-        tes3.removeSpell{ reference = ref, spell = set.midBonus }
-        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
-        tes3.addSpell{ reference = ref, spell = set.minBonus }
+---@return string|nil tier, boolean changed
+local function applySetBonus(set, ref, numEquipped)
+    local tier = tierFor(set, numEquipped)
+
+    local refTiers = appliedTier[ref]
+    if not refTiers then
+        refTiers = {}
+        appliedTier[ref] = refTiers
+    end
+    local oldTier = refTiers[set.name]
+    if oldTier == tier then
+        return tier, false
+    end
+
+    -- Clear all tier spells, then add the desired one (if any).
+    tes3.removeSpell{ reference = ref, spell = set.minBonus }
+    tes3.removeSpell{ reference = ref, spell = set.midBonus }
+    tes3.removeSpell{ reference = ref, spell = set.maxBonus }
+    local spell = (tier == "max" and set.maxBonus)
+        or (tier == "mid" and set.midBonus)
+        or (tier == "min" and set.minBonus)
+        or nil
+    if spell then
+        tes3.addSpell{ reference = ref, spell = spell }
+        log:debug("applySetBonus: %s -> %s tier (%s) on %s", set.name, tier, tostring(spell), ref)
     else
-        log:debug("addSetBonus: No bonuses applicable for ref: %s", ref)
-        tes3.removeSpell{ reference = ref, spell = set.minBonus }
-        tes3.removeSpell{ reference = ref, spell = set.midBonus }
-        tes3.removeSpell{ reference = ref, spell = set.maxBonus }
+        log:debug("applySetBonus: %s -> no bonus on %s", set.name, ref)
     end
-    log:trace("addSetBonus: Exit point")
+
+    refTiers[set.name] = tier
+
+    -- Let other mods react to the tier change.
+    event.trigger("Static:SetBonusChanged", {
+        reference = ref,
+        set = set,
+        setName = set.name,
+        oldTier = oldTier,
+        newTier = tier,
+        count = numEquipped,
+    })
+
+    return tier, true
 end
--- 'equipsChanged' function handles the event when a character's equipment changes
----@param e equippedEventData
+
+-- 'equipsChanged' recomputes affected sets whenever equipment changes.
+---@param e equippedEventData|unequippedEventData
 local function equipsChanged(e)
-    log:trace("equipsChanged: Starting function with event data: %s", e)
-    -- Get the item id from the event
     local id = e and e.item and e.item.id
-    if not id then
-        return
-    end
-    -- Find the set that the item belongs to
+    if not id then return end
     local linkSet = config.setLinks[id:lower()]
-    if not linkSet then
-        log:debug("equipsChanged: No set associated with item ID: %s", id)
-        return
-    end
-    -- Iterate over each set in the linkSet dictionary
+    if not linkSet then return end
+
     for setName, _ in pairs(linkSet) do
         local set = config.sets[setName]
         if set then
             local numEquipped = countItemsEquipped(e.reference, set.items)
-            -- Log the number of equipped items
-            log:debug("equipsChanged: Reference: %s has %s items from set: %s equipped", e.reference, numEquipped, setName)
-            -- Provide a notification if the character is the player
-            if e.reference == tes3.player then
-                tes3.messageBox("You have %s items of the %s set equipped", numEquipped, setName)
+            local tier, changed = applySetBonus(set, e.reference, numEquipped)
+            -- Notify the player, but only when the tier actually changes.
+            if changed and e.reference == tes3.player then
+                if tier then
+                    tes3.messageBox("%s set bonus active (%s, %d pieces).", set.displayName, tier, numEquipped)
+                else
+                    tes3.messageBox("%s set bonus lost.", set.displayName)
+                end
             end
-            --- Apply set bonus using timer
-            addSetBonus(set, e.reference, numEquipped)
         end
     end
-    log:trace("equipsChanged: Exit point")
 end
--- Registering events to call 'equipsChanged' function when equipment changes
 event.register(tes3.event.equipped, equipsChanged)
 event.register(tes3.event.unequipped, equipsChanged)
--- 'npcLoaded' function handles the event when an NPC is loaded into the game
+
+-- 'actorLoaded' applies bonuses for an actor based on what they currently wear.
+-- Fires on mobileActivated, which also covers the player after a game load.
 ---@param e mobileActivatedEventData
-local function npcLoaded(e)
-    log:trace("npcLoaded: Starting function with event data: %s", e)
-    if not e.reference or not e.reference.object.equipment then 
-        log:error("npcLoaded: Event data is missing NPC reference or equipment.")
-        return
-    end
-    log:debug("npcLoaded: NPC reference and equipment are valid.")
-    -- Create a table to store the count of items from each set the NPC has equipped
+local function actorLoaded(e)
+    if not e.reference or not e.reference.object.equipment then return end
+
     local setCounts = {}
     local allowedTypes = {
-      [tes3.objectType.armor] = true,
-      [tes3.objectType.clothing] = true,
-      [tes3.objectType.weapon] = true
+        [tes3.objectType.armor] = true,
+        [tes3.objectType.clothing] = true,
+        [tes3.objectType.weapon] = true,
     }
-    log:debug("npcLoaded: Defined allowed equipment types: %s", allowedTypes)
     for _, stack in pairs(e.reference.object.equipment) do
-        log:trace("npcLoaded: Evaluating equipment item with stack: %s", stack)
         if allowedTypes[stack.object.objectType] then
-            log:debug("npcLoaded: Equipment item type is allowed: %s", stack.object.objectType)
-            local keySets = config.setLinks[stack.object.id:lower()] -- Ensure the ID is in lowercase
-            log:trace("npcLoaded: Checking if item belongs to a set, item id: %s", stack.object.id)
+            local keySets = config.setLinks[stack.object.id:lower()]
             if keySets ~= nil then
-                log:debug("npcLoaded: Item belongs to a set(s): %s", keySets)
                 for set, _ in pairs(keySets) do
                     setCounts[set] = (setCounts[set] or 0) + 1
-                    log:debug("npcLoaded: Increased count for set: %s, new count: %s", set, setCounts[set])
                 end
-            else
-                log:debug("npcLoaded: Item does not belong to any set.")
             end
         end
     end
-    -- For each set, apply the set bonus
+
     for setName, count in pairs(setCounts) do
-        log:trace("npcLoaded: Evaluating set: %s with count: %s", setName, count)
-        local set = config.sets[setName:lower()]
+        local set = config.sets[setName]
         if set then
-            log:debug("npcLoaded: Found set in configuration: %s", setName)
-            addSetBonus(set, e.reference, count)
-        else
-            log:debug("npcLoaded: Set not found in configuration: %s", setName)
+            applySetBonus(set, e.reference, count)
         end
     end
-    log:trace("npcLoaded: Function execution finished.")
 end
--- Registering events to call 'npcLoaded' function when an NPC is loaded
-event.register(tes3.event.mobileActivated, npcLoaded)
-event.register(tes3.event.loaded, npcLoaded)
+event.register(tes3.event.mobileActivated, actorLoaded)
