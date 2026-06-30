@@ -1,7 +1,21 @@
 return {
         name = "Cephalopod",
-        items = { "cephalopod_helm", "demon cephalopod", "devil cephalopod helm", "cephalopod_helm_HTNK", "T_De_FiendCephalopodHelm_01", "T_De_TelvCephalopod_Boots_01", "T_De_TelvCephalopod_Cuirass_01", "T_De_TelvCephalopod_GauntL_01", "T_De_TelvCephalopod_GauntR_01", "T_De_TelvCephalopod_Greaves_01", "T_De_TelvCephalopod_PauldL_01", "T_De_TelvCephalopod_PauldR_01", "AB_a_CephHelmOpen", "AB_a_CephPauldronLeft", "AB_a_CephPauldronRight" },
-        minBonus = "_sn_cephalopod_min",
-        midBonus = "_sn_cephalopod_mid",
-        maxBonus = "_sn_cephalopod_max"
+        items = { "cephalopod_helm", "demon cephalopod", "devil cephalopod helm", "cephalopod_helm_HTNK", "AB_a_CephHelmOpen", "AB_a_CephPauldronLeft", "AB_a_CephPauldronRight" },
+	bonuses = {
+		min = {
+			{ effect = "swiftSwim", magnitude = 30 },
+			{ effect = "waterBreathing", magnitude = 1 },
+		},
+		mid = {
+			{ effect = "swiftSwim", magnitude = 50 },
+			{ effect = "waterBreathing", magnitude = 1 },
+			{ effect = "sanctuary", magnitude = 8 },
+		},
+		max = {
+			{ effect = "swiftSwim", magnitude = 70 },
+			{ effect = "waterBreathing", magnitude = 1 },
+			{ effect = "sanctuary", magnitude = 15 },
+			{ effect = "resistFrost", magnitude = 25 },
+		},
+	},
 }

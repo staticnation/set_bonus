@@ -1,7 +1,19 @@
 return {
         name = "Dragonscale",
-        items = { "dragonscale_helm", "dragonscale_cuirass", "dragonscale_towershield", "T_Imp_Dragonscale_BarcerL_01", "T_Imp_Dragonscale_BarcerR_01", "T_Imp_Dragonscale_Boots_01", "T_Imp_Dragonscale_cuirass_01", "T_Imp_Dragonscale_Greaves_01", "T_Imp_Dragonscale_helm_01", "T_Imp_Dragonscale_PauldronL_01", "T_Imp_Dragonscale_PauldronR_01", "TR_i2-235_dragonscale_tower" },
-        minBonus = "_sn_dragons_min",
-        midBonus = "_sn_dragons_mid",
-        maxBonus = "_sn_dragons_max"
+        items = { "dragonscale_helm", "dragonscale_cuirass", "dragonscale_towershield" },
+	bonuses = {
+		min = {
+			{ effect = "resistFire", magnitude = 20 },
+		},
+		mid = {
+			{ effect = "resistFire", magnitude = 35 },
+			{ effect = "resistMagicka", magnitude = 15 },
+		},
+		max = {
+			{ effect = "resistFire", magnitude = 60 },
+			{ effect = "resistMagicka", magnitude = 25 },
+			{ effect = "shield", magnitude = 10 },
+			{ effect = "fortifyAttribute", attribute = "agility", magnitude = 10 },
+		},
+	},
 }

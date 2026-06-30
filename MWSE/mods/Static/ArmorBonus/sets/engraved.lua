@@ -1,7 +1,18 @@
 return {
         name = "Engraved",
         items = { "" },
-        minBonus = "_sn_engraved_min",
-        midBonus = "_sn_engraved_mid",
-        maxBonus = "_sn_engraved_max"
+	bonuses = {
+		min = {
+			{ effect = "resistMagicka", magnitude = 10 },
+		},
+		mid = {
+			{ effect = "resistMagicka", magnitude = 20 },
+			{ effect = "fortifyAttribute", attribute = "personality", magnitude = 10 },
+		},
+		max = {
+			{ effect = "resistMagicka", magnitude = 30 },
+			{ effect = "fortifyAttribute", attribute = "personality", magnitude = 15 },
+			{ effect = "spellAbsorption", magnitude = 10 },
+		},
+	},
 }

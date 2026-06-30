@@ -1,7 +1,21 @@
 return {
         name = "Newtscale",
-        items = { "T_Imp_Newtscale_Boots_01", "T_Imp_Newtscale_Cuirass_01", "T_Imp_Newtscale_GauntletL_01", "T_Imp_Newtscale_GauntletR_01", "T_Imp_Newtscale_Greaves_01", "T_Imp_Newtscale_Helm_01", "T_Imp_Newtscale_PauldronL_01", "T_Imp_Newtscale_PauldronR_01", "newtscale_cuirass" },
-        minBonus = "_sn_newtscale_min",
-        midBonus = "_sn_newtscale_mid",
-        maxBonus = "_sn_newtscale_max"
+        items = { "newtscale_cuirass" },
+	bonuses = {
+		min = {
+			{ effect = "resistPoison", magnitude = 15 },
+			{ effect = "swiftSwim", magnitude = 20 },
+		},
+		mid = {
+			{ effect = "resistPoison", magnitude = 25 },
+			{ effect = "swiftSwim", magnitude = 40 },
+			{ effect = "waterBreathing", magnitude = 1 },
+		},
+		max = {
+			{ effect = "resistPoison", magnitude = 40 },
+			{ effect = "swiftSwim", magnitude = 60 },
+			{ effect = "waterBreathing", magnitude = 1 },
+			{ effect = "resistCommonDisease", magnitude = 30 },
+		},
+	},
 }

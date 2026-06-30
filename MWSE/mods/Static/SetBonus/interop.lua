@@ -152,15 +152,22 @@ function interop.registerSet(setData)
         max = t.max or interop.defaultThresholds.max,
     }
 
-    -- Lowercase and link each item to this set.
+    -- Lowercase, de-duplicate, and link each item to this set.
+    -- De-duping matters: countItemsEquipped() tallies one hit per list entry, so a
+    -- repeated item ID would inflate the equipped-piece count and trigger a tier early.
+    local seen, unique = {}, {}
     for i, item in ipairs(setData.items) do
         assert(type(item) == "string",
             string.format("[SetBonus] set '%s' contains a non-string item at index %d.", setData.name, i))
         local key = item:lower()
-        setData.items[i] = key
-        if not config.setLinks[key] then config.setLinks[key] = {} end
-        config.setLinks[key][setData.name] = true
+        if not seen[key] then
+            seen[key] = true
+            unique[#unique + 1] = key
+            if not config.setLinks[key] then config.setLinks[key] = {} end
+            config.setLinks[key][setData.name] = true
+        end
     end
+    setData.items = unique
 
     config.sets[setData.name] = setData
     table.insert(config.setsArray, setData)
@@ -198,9 +205,11 @@ function interop.addItems(setName, items)
     assert(type(items) == "table", "[SetBonus] addItems: 'items' must be a table.")
     for _, item in ipairs(items) do
         local key = item:lower()
-        table.insert(set.items, key)
-        if not config.setLinks[key] then config.setLinks[key] = {} end
-        config.setLinks[key][setName] = true
+        if not (config.setLinks[key] and config.setLinks[key][setName]) then
+            table.insert(set.items, key)
+            if not config.setLinks[key] then config.setLinks[key] = {} end
+            config.setLinks[key][setName] = true
+        end
     end
     return set
 end

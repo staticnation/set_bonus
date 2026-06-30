@@ -1,11 +1,20 @@
--- STUB: no armor items for the Embossed set were found in the provided dumps (armor.csv / raw.csv).
--- The spells (_sn_embossed_min/mid/max) exist in Set_Bonus.esp, so just fill in the
--- equippable item IDs below (lowercase or any case; they are lowercased on load) and the
--- set bonus will start working. An empty list is harmless: the set simply never triggers.
+-- STUB: fill in this set's equippable item IDs below; the bonus is already
+-- defined in Lua (no ESP needed). An empty list is harmless (set never triggers).
 return {
 	name = "Embossed",
 	items = {  },
-	minBonus = "_sn_embossed_min",
-	midBonus = "_sn_embossed_mid",
-	maxBonus = "_sn_embossed_max"
+	bonuses = {
+		min = {
+			{ effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
+		},
+		mid = {
+			{ effect = "fortifyAttribute", attribute = "personality", magnitude = 10 },
+			{ effect = "fortifySkill", skill = "speechcraft", magnitude = 10 },
+		},
+		max = {
+			{ effect = "fortifyAttribute", attribute = "personality", magnitude = 15 },
+			{ effect = "fortifySkill", skill = "speechcraft", magnitude = 20 },
+			{ effect = "fortifyAttribute", attribute = "luck", magnitude = 5 },
+		},
+	},
 }

@@ -2,6 +2,7 @@
 -- matching tier ability. Registration/data lives in SetBonus/interop.lua.
 local log = require("Static.logger")
 local config = require("Static.SetBonus.config")
+local settings = require("Static.SetBonus.settings")
 
 -- Fallback thresholds if a set somehow lacks them (registerSet normally sets these).
 local DEFAULT_THRESHOLDS = { min = 2, mid = 4, max = 6 }
@@ -103,6 +104,8 @@ local function equipsChanged(e)
     if not id then return end
     local linkSet = config.setLinks[id:lower()]
     if not linkSet then return end
+    -- Respect the "apply to NPCs" setting.
+    if e.reference ~= tes3.player and not settings.npcBonuses then return end
 
     for setName, _ in pairs(linkSet) do
         local set = config.sets[setName]
@@ -110,7 +113,7 @@ local function equipsChanged(e)
             local numEquipped = countItemsEquipped(e.reference, set.items)
             local tier, changed = applySetBonus(set, e.reference, numEquipped)
             -- Notify the player, but only when the tier actually changes.
-            if changed and e.reference == tes3.player then
+            if changed and e.reference == tes3.player and settings.notifications then
                 if tier then
                     tes3.messageBox("%s set bonus active (%s, %d pieces).", set.displayName, tier, numEquipped)
                 else
@@ -128,6 +131,8 @@ event.register(tes3.event.unequipped, equipsChanged)
 ---@param e mobileActivatedEventData
 local function actorLoaded(e)
     if not e.reference or not e.reference.object.equipment then return end
+    -- Respect the "apply to NPCs" setting.
+    if e.reference ~= tes3.player and not settings.npcBonuses then return end
 
     local setCounts = {}
     local allowedTypes = {
@@ -154,3 +159,42 @@ local function actorLoaded(e)
     end
 end
 event.register(tes3.event.mobileActivated, actorLoaded)
+
+-- Remove every tier spell of a set from a reference (nil-safe).
+local function removeAllTiers(ref, set)
+    if set.minBonus then tes3.removeSpell{ reference = ref, spell = set.minBonus } end
+    if set.midBonus then tes3.removeSpell{ reference = ref, spell = set.midBonus } end
+    if set.maxBonus then tes3.removeSpell{ reference = ref, spell = set.maxBonus } end
+end
+
+-- Re-evaluate NPC bonuses immediately when the "Apply bonuses to NPCs" setting
+-- changes (so the player doesn't have to wait for a cell reload).
+local function refreshNpcBonuses()
+    if settings.npcBonuses then
+        -- Re-apply: scan actors in the currently-active cells.
+        for _, cell in ipairs(tes3.getActiveCells()) do
+            for ref in cell:iterateReferences() do
+                if ref ~= tes3.player and ref.mobile and ref.object and ref.object.equipment then
+                    actorLoaded({ reference = ref })
+                end
+            end
+        end
+        log:debug("refreshNpcBonuses: re-applied bonuses to active NPCs.")
+    else
+        -- Remove: strip bonuses from every non-player reference we've applied to.
+        for ref, refTiers in pairs(appliedTier) do
+            if ref ~= tes3.player then
+                for setName, tier in pairs(refTiers) do
+                    local set = config.sets[setName]
+                    if set and tier then removeAllTiers(ref, set) end
+                    refTiers[setName] = nil
+                end
+            end
+        end
+        log:debug("refreshNpcBonuses: cleared bonuses from NPCs.")
+    end
+end
+event.register("Static:RefreshNpcBonuses", refreshNpcBonuses)
+
+-- Mod Config Menu.
+require("Static.SetBonus.mcm")

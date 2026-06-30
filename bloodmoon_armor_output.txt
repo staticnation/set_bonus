@@ -1,0 +1,936 @@
+
+Record: ARMO "nordic_leather_shield" Flags:0x0000 ()
+  NAME: ID:nordic_leather_shield
+  MODL: Model:a\Shield_Nordic_leather.NIF
+  FNAM: Name:Nordic Leather Shield
+  AODT: Type:(Shield)  Weight:4.50 (Light)  Value:25  Health:100  Enchantment:150  AR:5
+  ITEX: Icon:a\Tx_shield_Nordic_leather.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_nordic_leather
+
+Record: ARMO "steel_helm" Flags:0x0000 ()
+  NAME: ID:steel_helm
+  MODL: Model:a\A_Steel_Helmet.nif
+  FNAM: Name:Steel Helm
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:60  Health:150  Enchantment:250  AR:15
+  ITEX: Icon:a\TX_Steel_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_steel_helmet
+
+Record: ARMO "steel_pauldron_right" Flags:0x0000 ()
+  NAME: ID:steel_pauldron_right
+  MODL: Model:a\A_Steel_Pauldron_GND.nif
+  FNAM: Name:Steel Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:48  Health:150  Enchantment:20  AR:15
+  ITEX: Icon:a\TX_Steel_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_steel_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_steel_pauldron_cl
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:a_steel_pauldron_fa
+
+Record: ARMO "steel_cuirass" Flags:0x0000 ()
+  NAME: ID:steel_cuirass
+  MODL: Model:a\A_Steel_Cuirass_GND.nif
+  FNAM: Name:Steel Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:150  Health:450  Enchantment:200  AR:15
+  ITEX: Icon:a\TX_Steel_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_steel_cuirass
+
+Record: ARMO "steel_shield" Flags:0x0000 ()
+  NAME: ID:steel_shield
+  MODL: Model:a\shield_steel.NIF
+  FNAM: Name:Steel Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:68  Health:300  Enchantment:500  AR:15
+  ITEX: Icon:a\Tx_shield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_steel
+
+Record: ARMO "steel_greaves" Flags:0x0000 ()
+  NAME: ID:steel_greaves
+  MODL: Model:a\A_Steel_Greaves_GND.nif
+  FNAM: Name:Steel Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:88  Health:150  Enchantment:25  AR:15
+  ITEX: Icon:a\TX_Steel_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_steel_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_steel_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_steel_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_steel_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_steel_greaves_k
+
+Record: ARMO "templar_helmet_armor" Flags:0x0000 ()
+  NAME: ID:templar_helmet_armor
+  MODL: Model:a\A_Templar_M_Helmet.nif
+  FNAM: Name:Imperial Templar Helmet
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:75  Health:180  Enchantment:250  AR:18
+  ITEX: Icon:a\Tx_Templar_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:templar_helmet
+
+Record: ARMO "blessed_shield" Flags:0x0000 ()
+  NAME: ID:blessed_shield
+  MODL: Model:a\shield_steel.NIF
+  FNAM: Name:Blessed Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:130  Health:300  Enchantment:500  AR:15
+  ITEX: Icon:a\Tx_shield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_steel
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "storm helm" Flags:0x0000 ()
+  NAME: ID:storm helm
+  MODL: Model:a\A_Bonemold_Gah_Julan_h.nif
+  FNAM: Name:Storm Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:215  Health:160  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_h
+  ENAM: Enchanting:lightning shield_en
+
+Record: ARMO "saint's shield" Flags:0x0000 ()
+  NAME: ID:saint's shield
+  MODL: Model:a\Shield_ebony.NIF
+  FNAM: Name:Saint's Shield
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:15000  Health:1200  Enchantment:1000  AR:60
+  ITEX: Icon:a\tx_shield_ebony.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_ebony
+  ENAM: Enchanting:saint's shield_en
+
+Record: ARMO "steel_boots" Flags:0x0000 ()
+  NAME: ID:steel_boots
+  MODL: Model:a\A_Steel_Boots_GND.nif
+  FNAM: Name:Steel Boots
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:40  Health:150  Enchantment:88  AR:15
+  ITEX: Icon:a\Tx_Steel_boot.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_steel_boot_f
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_steel_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_steel_boot_a
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_steel_boot_a
+
+Record: ARMO "bm bear boots" Flags:0x0000 ()
+  NAME: ID:BM bear boots
+  MODL: Model:a\A_Bear_Boot_GND.NIF
+  FNAM: Name:Bear Boots
+  AODT: Type:(Boots)  Weight:14.00 (Medium)  Value:50  Health:105  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Bear_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_Bear_Boot_F
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:A_Bear_Boot_A
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:A_Bear_Boot_A
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_Bear_Boot_F
+
+Record: ARMO "bm bear cuirass" Flags:0x0000 ()
+  NAME: ID:BM bear cuirass
+  MODL: Model:a\A_Bear_Cuirass_GND.NIF
+  FNAM: Name:Bear Cuirass
+  AODT: Type:(Cuirass)  Weight:25.00 (Medium)  Value:150  Health:325  Enchantment:60  AR:15
+  ITEX: Icon:A\Tx_Bear_Cuirass.dds
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_Bear_Cuirass
+  CNAM: Female_Body_ID:A_Bear_Skin_f
+
+Record: ARMO "bm bear left gauntlet" Flags:0x0000 ()
+  NAME: ID:bm bear left gauntlet
+  MODL: Model:a\A_Bear_Gauntlet_GND.NIF
+  FNAM: Name:Bear Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:4.00 (Medium)  Value:40  Health:80  Enchantment:10  AR:15
+  ITEX: Icon:A\Tx_Bear_Gauntlet.dds
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:A_Bear_Gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "bm bear right gauntlet" Flags:0x0000 ()
+  NAME: ID:BM bear right gauntlet
+  MODL: Model:a\A_Bear_Gauntlet_GND.NIF
+  FNAM: Name:Bear Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:4.00 (Medium)  Value:40  Health:80  Enchantment:10  AR:15
+  ITEX: Icon:A\Tx_Bear_Gauntlet.dds
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:A_Bear_Gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "bm bear greaves" Flags:0x0000 ()
+  NAME: ID:BM bear greaves
+  MODL: Model:a\A_Bear_Greaves_GND.NIF
+  FNAM: Name:Bear Greaves
+  AODT: Type:(Greaves)  Weight:10.00 (Medium)  Value:120  Health:220  Enchantment:45  AR:15
+  ITEX: Icon:A\Tx_Bear_Greaves.dds
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:A_Bear_Greaves_G
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:A_Bear_Greaves_UL
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:A_Bear_Greaves_UL
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:A_Bear_Greaves_K
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:A_Bear_Greaves_K
+
+Record: ARMO "bm bear helmet" Flags:0x0000 ()
+  NAME: ID:BM Bear Helmet
+  MODL: Model:a\A_Bear_Helmet.NIF
+  FNAM: Name:Bear Helmet
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:40  Health:100  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Bear_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Bear_Helmet
+
+Record: ARMO "bm bear right pauldron" Flags:0x0000 ()
+  NAME: ID:BM bear right pauldron
+  MODL: Model:a\A_Bear_Pauldron_GND.NIF
+  FNAM: Name:Bear Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:7.00 (Medium)  Value:60  Health:100  Enchantment:16  AR:15
+  ITEX: Icon:A\Tx_Bear_Pauldron.dds
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:A_bear_Pauldron_UA
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:A_Bear_Pauldron_FA
+
+Record: ARMO "bm bear left pauldron" Flags:0x0000 ()
+  NAME: ID:BM Bear left Pauldron
+  MODL: Model:a\A_Bear_Pauldron_GND.NIF
+  FNAM: Name:Bear Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:7.00 (Medium)  Value:60  Health:100  Enchantment:16  AR:15
+  ITEX: Icon:A\Tx_Bear_Pauldron.dds
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:A_bear_Pauldron_UA
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:A_Bear_Pauldron_FA
+
+Record: ARMO "bm wolf cuirass" Flags:0x0000 ()
+  NAME: ID:BM wolf cuirass
+  MODL: Model:a\A_Wolf2_Cuirass_GND.NIF
+  FNAM: Name:Wolf Cuirass
+  AODT: Type:(Cuirass)  Weight:9.00 (Light)  Value:150  Health:325  Enchantment:60  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Cuirass.dds
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_Wolf2_Cuirass
+  CNAM: Female_Body_ID:A_Wolf2_Skinf
+
+Record: ARMO "bm wolf greaves" Flags:0x0000 ()
+  NAME: ID:BM wolf greaves
+  MODL: Model:a\A_Wolf2_Greaves_GND.NIF
+  FNAM: Name:Wolf Greaves
+  AODT: Type:(Greaves)  Weight:7.00 (Light)  Value:120  Health:220  Enchantment:45  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Greaves.dds
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:A_Wolf2_Greaves_G
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:A_Wolf2_Greaves_UL
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:A_Wolf2_Greaves_UL
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:A_Wolf2_Greaves_K
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:A_Wolf2_Greaves_K
+
+Record: ARMO "bm wolf helmet" Flags:0x0000 ()
+  NAME: ID:BM Wolf Helmet
+  MODL: Model:a\A_Wolf2_Helmet.NIF
+  FNAM: Name:Wolf Helmet
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:40  Health:100  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Wolf2_Helmet
+
+Record: ARMO "bm wolf left gauntlet" Flags:0x0000 ()
+  NAME: ID:bm wolf left gauntlet
+  MODL: Model:a\A_Wolf2_Gauntlet_GND.NIF
+  FNAM: Name:Wolf Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:1.50 (Light)  Value:40  Health:80  Enchantment:10  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Gauntlet.dds
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:A_Wolf2_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "bm wolf left pauldron" Flags:0x0000 ()
+  NAME: ID:BM Wolf Left Pauldron
+  MODL: Model:a\A_Wolf2_Pauldron_GND.NIF
+  FNAM: Name:Wolf Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:2.40 (Light)  Value:60  Health:100  Enchantment:16  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Pauldron.dds
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:A_Wolf2_Pauldron_UA
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:A_Wolf2_Pauldron_FA
+
+Record: ARMO "bm wolf right gauntlet" Flags:0x0000 ()
+  NAME: ID:BM wolf right gauntlet
+  MODL: Model:a\A_Wolf2_Gauntlet_GND.NIF
+  FNAM: Name:Wolf Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:1.50 (Light)  Value:40  Health:80  Enchantment:10  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Gauntlet.dds
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:A_Wolf2_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "bm wolf right pauldron" Flags:0x0000 ()
+  NAME: ID:BM Wolf right pauldron
+  MODL: Model:a\A_Wolf2_Pauldron_GND.NIF
+  FNAM: Name:Wolf Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:2.40 (Light)  Value:60  Health:100  Enchantment:16  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Pauldron.dds
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:A_Wolf2_Pauldron_UA
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:A_Wolf2_Pauldron_FA
+
+Record: ARMO "steel_boots_ancient" Flags:0x0000 ()
+  NAME: ID:steel_boots_ancient
+  MODL: Model:a\A_Steel_Boots_GND.nif
+  FNAM: Name:Ancient Steel Boots
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:40  Health:75  Enchantment:88  AR:16
+  ITEX: Icon:a\Tx_Steel_boot.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_steel_boot_f
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_steel_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_steel_boot_a
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_steel_boot_a
+
+Record: ARMO "steel_cuirass_ancient" Flags:0x0000 ()
+  NAME: ID:steel_cuirass_ancient
+  MODL: Model:a\A_Steel_Cuirass_GND.nif
+  FNAM: Name:Ancient Steel Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:150  Health:225  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Steel_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_steel_cuirass
+
+Record: ARMO "steel_gauntlet_left_ancient" Flags:0x0000 ()
+  NAME: ID:steel_gauntlet_left_ancient
+  MODL: Model:a\A_Steel_Gauntlet_GND.NIF
+  FNAM: Name:Ancient Steel Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:5.00 (Heavy)  Value:28  Health:37  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Steel_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_steel_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "steel_gauntlet_right_ancient" Flags:0x0000 ()
+  NAME: ID:steel_gauntlet_right_ancient
+  MODL: Model:a\A_Steel_Gauntlet_GND.NIF
+  FNAM: Name:Ancient Steel Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:5.00 (Heavy)  Value:28  Health:37  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Steel_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_steel_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "steel_greaves_ancient" Flags:0x0000 ()
+  NAME: ID:steel_greaves_ancient
+  MODL: Model:a\A_Steel_Greaves_GND.nif
+  FNAM: Name:Ancient Steel Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:88  Health:75  Enchantment:25  AR:16
+  ITEX: Icon:a\TX_Steel_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_steel_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_steel_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_steel_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_steel_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_steel_greaves_k
+
+Record: ARMO "steel_helm_ancient" Flags:0x0000 ()
+  NAME: ID:steel_helm_ancient
+  MODL: Model:a\A_Steel_Helmet.nif
+  FNAM: Name:Ancient Steel Helm
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:60  Health:75  Enchantment:250  AR:16
+  ITEX: Icon:a\TX_Steel_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_steel_helmet
+
+Record: ARMO "steel_pauldron_left_ancient" Flags:0x0000 ()
+  NAME: ID:steel_pauldron_left_ancient
+  MODL: Model:a\A_Steel_Pauldron_GND.nif
+  FNAM: Name:Ancient Steel Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:48  Health:75  Enchantment:20  AR:16
+  ITEX: Icon:a\TX_Steel_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_steel_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_steel_pauldron_cl
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:a_steel_pauldron_fa
+
+Record: ARMO "steel_pauldron_right_ancient" Flags:0x0000 ()
+  NAME: ID:steel_pauldron_right_ancient
+  MODL: Model:a\A_Steel_Pauldron_GND.nif
+  FNAM: Name:Ancient Steel Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:48  Health:75  Enchantment:20  AR:16
+  ITEX: Icon:a\TX_Steel_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_steel_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_steel_pauldron_cl
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:a_steel_pauldron_fa
+
+Record: ARMO "steel_towershield_ancient" Flags:0x0000 ()
+  NAME: ID:steel_towershield_ancient
+  MODL: Model:a\TowerShield_steel.NIF
+  FNAM: Name:Ancient Steel Tower Shield
+  AODT: Type:(Shield)  Weight:20.00 (Heavy)  Value:100  Health:180  Enchantment:750  AR:19
+  ITEX: Icon:a\Tx_towershield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_steel
+
+Record: ARMO "bm wolf boots" Flags:0x0000 ()
+  NAME: ID:BM wolf boots
+  MODL: Model:a\A_Wolf2_Boot_GND.NIF
+  FNAM: Name:Wolf Boots
+  AODT: Type:(Boots)  Weight:4.00 (Light)  Value:50  Health:105  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_F
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_A
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_A
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_F
+
+Record: ARMO "fur_colovian_helm_red" Flags:0x2000 (Blocked)
+  NAME: ID:fur_colovian_helm_red
+  MODL: Model:a\A_Helm_Colovian.NIF
+  FNAM: Name:Red Colovian Fur Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:25  Health:70  Enchantment:75  AR:7
+  ITEX: Icon:a\Tx_Fur_Colovian_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_helm_colovian
+
+Record: ARMO "fur_colovian_helm_white" Flags:0x0000 ()
+  NAME: ID:fur_colovian_helm_white
+  MODL: Model:a\A_Helm_Colovian_W.NIF
+  FNAM: Name:White Colovian Fur Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:25  Health:70  Enchantment:75  AR:7
+  ITEX: Icon:A\Tx_ColovianHelm_W.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Helm_Colovian_W
+
+Record: ARMO "bm_ice minion_shield1" Flags:0x0000 ()
+  NAME: ID:BM_Ice minion_Shield1
+  MODL: Model:a\A_Ice minions_Shield1.NIF
+  FNAM: Name:Riekling Shield
+  AODT: Type:(Shield)  Weight:2.00 (Light)  Value:50  Health:200  Enchantment:80  AR:12
+  ITEX: Icon:A\TX_IceM_Shield1.dds
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:A_Ice minions_Shield1
+
+Record: ARMO "bm_wolf_cuirass_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_cuirass_snow
+  MODL: Model:a\A_Wolf_Cuirass_GND.NIF
+  FNAM: Name:Snow Wolf Cuirass
+  AODT: Type:(Cuirass)  Weight:9.00 (Light)  Value:10000  Health:325  Enchantment:60  AR:35
+  ITEX: Icon:A\Tx_Wolf_Cuirass.dds
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_wolf_Cuirass
+  CNAM: Female_Body_ID:A_Wolf_Skinf
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_greaves_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_greaves_snow
+  MODL: Model:a\A_Wolf_Greaves_GND.NIF
+  FNAM: Name:Snow Wolf Greaves
+  AODT: Type:(Greaves)  Weight:7.00 (Light)  Value:8500  Health:220  Enchantment:45  AR:35
+  ITEX: Icon:A\Tx_Wolf_Greaves.dds
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:A_wolf_Greaves_G
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:A_wolf_Greaves_UL
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:A_wolf_Greaves_UL
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:A_wolf_Greaves_K
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:A_wolf_Greaves_K
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_helmet_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_helmet_snow
+  MODL: Model:a\A_Wolf_Helmet.NIF
+  FNAM: Name:Snow Wolf Helmet
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:3500  Health:100  Enchantment:20  AR:35
+  ITEX: Icon:A\Tx_Wolf_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_wolf_Helmet
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_left_gauntlet_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_left_gauntlet_snow
+  MODL: Model:a\A_Wolf_Gauntlet_GND.NIF
+  FNAM: Name:Snow Wolf Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:1.50 (Light)  Value:2000  Health:80  Enchantment:10  AR:35
+  ITEX: Icon:A\Tx_Wolf_Gauntlet.dds
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:A_wolf_Gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_left_pauldron_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_left_pauldron_snow
+  MODL: Model:a\A_Wolf_Pauldron_GND.NIF
+  FNAM: Name:Snow Wolf Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:2.40 (Light)  Value:2000  Health:100  Enchantment:16  AR:35
+  ITEX: Icon:A\Tx_Wolf_Pauldron.dds
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:A_wolf_Pauldron_UA
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:A_wolf_Pauldron_FA
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_right_gauntlet_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_right_gauntlet_snow
+  MODL: Model:a\A_Wolf_Gauntlet_GND.NIF
+  FNAM: Name:Snow Wolf Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:1.50 (Light)  Value:2000  Health:80  Enchantment:10  AR:35
+  ITEX: Icon:A\Tx_Wolf_Gauntlet.dds
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:A_wolf_Gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_right_pauldron_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_right_pauldron_snow
+  MODL: Model:a\A_Wolf_Pauldron_GND.NIF
+  FNAM: Name:Snow Wolf Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:2.40 (Light)  Value:2000  Health:100  Enchantment:16  AR:35
+  ITEX: Icon:A\Tx_Wolf_Pauldron.dds
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:A_wolf_Pauldron_UA
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:A_wolf_Pauldron_FA
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_boots_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_boots_snow
+  MODL: Model:a\A_Bear2_Boot_GND.NIF
+  FNAM: Name:Snow Bear Boots
+  AODT: Type:(Boots)  Weight:14.00 (Medium)  Value:5000  Health:105  Enchantment:20  AR:35
+  ITEX: Icon:A\Tx_Bear2_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_Bear2_Boot_F
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:A_Bear2_Boot_A
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:A_Bear2_Boot_A
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_Bear2_Boot_F
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_cuirass_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_cuirass_snow
+  MODL: Model:a\A_Bear2_Cuirass_GND.NIF
+  FNAM: Name:Snow Bear Cuirass
+  AODT: Type:(Cuirass)  Weight:25.00 (Medium)  Value:10000  Health:325  Enchantment:60  AR:35
+  ITEX: Icon:A\Tx_Bear2_Cuirass.dds
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_Bear2_cuirass
+  CNAM: Female_Body_ID:A_Bear2_skinf
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_greaves_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_greaves_snow
+  MODL: Model:a\A_Bear2_Greaves_GND.NIF
+  FNAM: Name:Snow Bear Greaves
+  AODT: Type:(Greaves)  Weight:10.00 (Medium)  Value:8500  Health:220  Enchantment:45  AR:35
+  ITEX: Icon:A\Tx_Bear2_Greaves.dds
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:A_Bear2_Greaves_G
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:A_Bear2_Greaves_UL
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:A_Bear2_Greaves_UL
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:A_Bear2_Greaves_K
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:A_Bear2_Greaves_K
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_helmet_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_helmet_snow
+  MODL: Model:a\A_Bear2_Helmet.NIF
+  FNAM: Name:Snow Bear Helmet
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:3500  Health:100  Enchantment:20  AR:35
+  ITEX: Icon:A\Tx_Bear2_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Bear2_Helmet
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_left_gauntlet_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_left_gauntlet_snow
+  MODL: Model:a\A_Bear2_Gauntlet_GND.NIF
+  FNAM: Name:Snow Bear Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:4.00 (Medium)  Value:2000  Health:80  Enchantment:10  AR:35
+  ITEX: Icon:A\Tx_Bear2_Gauntlet.dds
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:A_Bear2_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_left_pauldron_snow" Flags:0x0000 ()
+  NAME: ID:BM_Bear_left_Pauldron_snow
+  MODL: Model:a\A_Bear2_Pauldron_GND.NIF
+  FNAM: Name:Snow Bear Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:7.00 (Medium)  Value:2000  Health:100  Enchantment:16  AR:35
+  ITEX: Icon:A\Tx_Bear2_Pauldron.dds
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:A_Bear2_Pauldron_UA
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:A_Bear2_Pauldron_FA
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_right_gauntlet_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_right_gauntlet_snow
+  MODL: Model:a\A_Bear2_Gauntlet_GND.NIF
+  FNAM: Name:Snow Bear Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:4.00 (Medium)  Value:2000  Health:80  Enchantment:10  AR:35
+  ITEX: Icon:A\Tx_Bear2_Gauntlet.dds
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:A_Bear2_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_bear_right_pauldron_snow" Flags:0x0000 ()
+  NAME: ID:BM_bear_right_pauldron_snow
+  MODL: Model:a\A_Bear2_Pauldron_GND.NIF
+  FNAM: Name:Snow Bear Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:7.00 (Medium)  Value:2000  Health:100  Enchantment:16  AR:35
+  ITEX: Icon:A\Tx_Bear2_Pauldron.dds
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:A_Bear2_Pauldron_UA
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:A_Bear2_Pauldron_FA
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm_wolf_boots_snow" Flags:0x0000 ()
+  NAME: ID:BM_wolf_boots_snow
+  MODL: Model:a\A_Wolf_Boot_GND.NIF
+  FNAM: Name:Snow Wolf Boots
+  AODT: Type:(Boots)  Weight:4.00 (Light)  Value:5000  Health:105  Enchantment:20  AR:35
+  ITEX: Icon:A\Tx_Wolf_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_wolf_Boot_F
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:A_wolf_Boot_A
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:A_wolf_Boot_A
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_wolf_Boot_F
+  ENAM: Enchanting:snow shield
+
+Record: ARMO "bm bear helmet eddard" Flags:0x0000 ()
+  NAME: ID:BM Bear Helmet eddard
+  MODL: Model:a\A_Bear_Helmet.NIF
+  FNAM: Name:Helm of Bear Scent
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:500  Health:250  Enchantment:500  AR:50
+  ITEX: Icon:A\Tx_Bear_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Bear_Helmet
+  ENAM: Enchanting:detect animal eddard
+
+Record: ARMO "bm_nordicmail_boots" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_Boots
+  MODL: Model:a\A_NordicMail_M_Boot_GND.NIF
+  FNAM: Name:Nordic Mail Boots
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:5000  Health:500  Enchantment:85  AR:66
+  ITEX: Icon:A\NordicMail_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_NordicMail_M_boots
+  CNAM: Female_Body_ID:A_NordicMail_F_boots
+ *INDX: Part_Index:(Left_Ankle)
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_NordicMail_M_boots
+  CNAM: Female_Body_ID:A_NordicMail_F_boots
+ *INDX: Part_Index:(Right_Ankle)
+
+Record: ARMO "bm_nordicmail_cuirass" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_cuirass
+  MODL: Model:a\A_NordicMail_M_C_GND.NIF
+  FNAM: Name:Nordic Mail Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:5000  Health:1000  Enchantment:300  AR:66
+  ITEX: Icon:A\NordicMail_Chest.dds
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_NordicMail_M_C
+  CNAM: Female_Body_ID:A_NordicMail_F_C
+
+Record: ARMO "bm_nordicmail_pauldronl" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_PauldronL
+  MODL: Model:a\A_NordicMail_Pauldron_GND.NIF
+  FNAM: Name:Nordic Mail Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:1000  Health:100  Enchantment:100  AR:66
+  ITEX: Icon:A\NordicMail_Pauldron.dds
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:A_NordicMail_M_Pauldron
+  CNAM: Female_Body_ID:A_NordicMail_F_Pauldron
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:A_NordicMail_M_UA
+  CNAM: Female_Body_ID:A_NordicMail_F_UA
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:A_NordicMail_M_FA
+  CNAM: Female_Body_ID:A_NordicMail_F_FA
+
+Record: ARMO "bm_nordicmail_pauldronr" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_PauldronR
+  MODL: Model:a\A_NordicMail_Pauldron_GND.NIF
+  FNAM: Name:Nordic Mail Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:1000  Health:100  Enchantment:100  AR:66
+  ITEX: Icon:A\NordicMail_Pauldron.dds
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:A_NordicMail_M_Pauldron
+  CNAM: Female_Body_ID:A_NordicMail_F_Pauldron
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:A_NordicMail_M_UA
+  CNAM: Female_Body_ID:A_NordicMail_F_UA
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:A_NordicMail_M_FA
+  CNAM: Female_Body_ID:A_NordicMail_F_FA
+
+Record: ARMO "bm_nordicmail_gauntletl" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_gauntletL
+  MODL: Model:a\A_NordicMail_M_Ga_GND.NIF
+  FNAM: Name:Nordic Mail Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:8.00 (Heavy)  Value:1000  Health:100  Enchantment:100  AR:66
+  ITEX: Icon:A\NordicMail_Grove.dds
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:A_NordicMail_M_gauntlet
+  CNAM: Female_Body_ID:A_NordicMail_F_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "bm_nordicmail_gauntletr" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_gauntletR
+  MODL: Model:a\A_NordicMail_M_Ga_GND.NIF
+  FNAM: Name:Nordic Mail Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:8.00 (Heavy)  Value:1000  Health:100  Enchantment:100  AR:66
+  ITEX: Icon:A\NordicMail_Grove.dds
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:A_NordicMail_M_gauntlet
+  CNAM: Female_Body_ID:A_NordicMail_F_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "bm_nordicmail_helmet" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_Helmet
+  MODL: Model:a\A_NordicMail_M_Helmet.NIF
+  FNAM: Name:Nordic Mail Helmet
+  AODT: Type:(Helmet)  Weight:8.00 (Heavy)  Value:1000  Health:350  Enchantment:200  AR:66
+  ITEX: Icon:A\NordicMail_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_NordicMail_M_Helmet
+  CNAM: Female_Body_ID:A_NordicMail_F_Helmet
+
+Record: ARMO "bm_nordicmail_greaves" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_greaves
+  MODL: Model:a\A_NordicMail_Greaves_GND.NIF
+  FNAM: Name:Nordic Mail Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:2000  Health:300  Enchantment:80  AR:66
+  ITEX: Icon:A\NordicMail_Greaves.dds
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:A_NordicMail_M_Groin
+  CNAM: Female_Body_ID:A_NordicMail_F_Groin
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:A_NordicMail_M_UL
+  CNAM: Female_Body_ID:A_NordicMail_F_UL
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:A_NordicMail_M_K
+  CNAM: Female_Body_ID:A_NordicMail_F_K
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:A_NordicMail_M_UL
+  CNAM: Female_Body_ID:A_NordicMail_F_UL
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:A_NordicMail_M_K
+  CNAM: Female_Body_ID:A_NordicMail_F_K
+
+Record: ARMO "bm_ice_boots" Flags:0x0000 ()
+  NAME: ID:BM_Ice_Boots
+  MODL: Model:a\A_Ice_Boot_GND.NIF
+  FNAM: Name:Ice Armor Boots
+  AODT: Type:(Boots)  Weight:17.00 (Medium)  Value:5000  Health:200  Enchantment:100  AR:50
+  ITEX: Icon:A\Ice_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_Ice_M_boots
+  CNAM: Female_Body_ID:A_Ice_F_boot
+ *INDX: Part_Index:(Left_Ankle)
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_Ice_M_boots
+  CNAM: Female_Body_ID:A_Ice_F_boot
+ *INDX: Part_Index:(Right_Ankle)
+
+Record: ARMO "bm_ice_cuirass" Flags:0x0000 ()
+  NAME: ID:BM_Ice_cuirass
+  MODL: Model:a\A_Ice_M_Cuirass_GND.NIF
+  FNAM: Name:Ice Armor Cuirass
+  AODT: Type:(Cuirass)  Weight:27.00 (Medium)  Value:5000  Health:1000  Enchantment:180  AR:50
+  ITEX: Icon:A\Ice_M_Chest.dds
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_Ice_M_cuirass
+  CNAM: Female_Body_ID:A_Ice_F_Cuirass
+
+Record: ARMO "bm_ice_gauntletl" Flags:0x0000 ()
+  NAME: ID:BM_Ice_gauntletL
+  MODL: Model:a\A_Ice_Gauntlet_GND.NIF
+  FNAM: Name:Ice Armor Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:4.00 (Medium)  Value:1000  Health:300  Enchantment:100  AR:50
+  ITEX: Icon:A\Ice_Grove.dds
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:A_Ice_M_gauntlet
+  CNAM: Female_Body_ID:A_Ice_F_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "bm_ice_gauntletr" Flags:0x0000 ()
+  NAME: ID:BM_Ice_gauntletR
+  MODL: Model:a\A_Ice_Gauntlet_GND.NIF
+  FNAM: Name:Ice Armor Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:4.00 (Medium)  Value:1000  Health:300  Enchantment:100  AR:50
+  ITEX: Icon:A\Ice_Grove.dds
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:A_Ice_M_gauntlet
+  CNAM: Female_Body_ID:A_Ice_F_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "bm_ice_greaves" Flags:0x0000 ()
+  NAME: ID:BM_Ice_greaves
+  MODL: Model:a\A_Ice_Greaves_GND.NIF
+  FNAM: Name:Ice Armor Greaves
+  AODT: Type:(Greaves)  Weight:12.00 (Medium)  Value:1000  Health:600  Enchantment:100  AR:50
+  ITEX: Icon:A\Ice_Greaves.dds
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:A_Ice_M_Groin
+  CNAM: Female_Body_ID:A_Ice_F_Groin
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:A_Ice_M_UL
+  CNAM: Female_Body_ID:A_Ice_F_UL
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:A_Ice_K
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:A_Ice_M_UL
+  CNAM: Female_Body_ID:A_Ice_F_UL
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:A_Ice_K
+
+Record: ARMO "bm_ice_helmet" Flags:0x0000 ()
+  NAME: ID:BM_Ice_Helmet
+  MODL: Model:a\A_Icel_M_Helmet.NIF
+  FNAM: Name:Ice Armor Helmet
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:2000  Health:500  Enchantment:175  AR:50
+  ITEX: Icon:A\Ice_M_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Icel_M_Helmet
+  CNAM: Female_Body_ID:A_Icel_F_Helmet
+
+Record: ARMO "bm_ice_pauldronl" Flags:0x0000 ()
+  NAME: ID:BM_Ice_PauldronL
+  MODL: Model:a\A_Ice_Pauldron_GND.NIF
+  FNAM: Name:Ice Armor Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:8.00 (Medium)  Value:12000  Health:550  Enchantment:18  AR:50
+  ITEX: Icon:A\Ice_Pauldron.dds
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:A_Ice_Pauldron
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:A_Ice_UA
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:A_Ice_FA
+
+Record: ARMO "bm_ice_pauldronr" Flags:0x0000 ()
+  NAME: ID:BM_Ice_PauldronR
+  MODL: Model:a\A_Ice_Pauldron_GND.NIF
+  FNAM: Name:Ice Armor Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:8.00 (Medium)  Value:12000  Health:550  Enchantment:18  AR:50
+  ITEX: Icon:A\Ice_Pauldron.dds
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:A_Ice_Pauldron
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:A_Ice_UA
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:A_Ice_FA
+
+Record: ARMO "bm bear helmet_ber" Flags:0x0000 ()
+  NAME: ID:BM Bear Helmet_ber
+  MODL: Model:a\A_Bear_Helmet.NIF
+  FNAM: Name:Helmet of Bearkind
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:40  Health:100  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Bear_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Bear_Helmet
+  ENAM: Enchanting:bearkind
+
+Record: ARMO "bm_nordicmail_shield" Flags:0x0000 ()
+  NAME: ID:BM_NordicMail_Shield
+  MODL: Model:a\A_Nord_Shield.NIF
+  FNAM: Name:Nordic Mail Shield
+  AODT: Type:(Shield)  Weight:20.00 (Heavy)  Value:1000  Health:500  Enchantment:100  AR:66
+  ITEX: Icon:A\Nord_shield.dds
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:bm_shield_nordicmail
+
+Record: ARMO "bm_ice_shield" Flags:0x0000 ()
+  NAME: ID:BM_Ice_Shield
+  MODL: Model:a\A_Ice_Shield.NIF
+  FNAM: Name:Ice Shield
+  AODT: Type:(Shield)  Weight:13.00 (Medium)  Value:1000  Health:400  Enchantment:400  AR:50
+  ITEX: Icon:A\Ice_shield.dds
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:bm_shield_ice
+
+Record: ARMO "bm wolf shield" Flags:0x0000 ()
+  NAME: ID:BM wolf shield
+  MODL: Model:a\A_Wolf_Shield.NIF
+  FNAM: Name:Wolf Shield
+  AODT: Type:(Shield)  Weight:8.00 (Light)  Value:100  Health:100  Enchantment:50  AR:15
+  ITEX: Icon:A\Tx_Wolf_Shield.dds
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:bm_shield_wolf
+
+Record: ARMO "bm bear shield" Flags:0x0000 ()
+  NAME: ID:BM bear shield
+  MODL: Model:a\A_Bear_Shield.NIF
+  FNAM: Name:Bear Shield
+  AODT: Type:(Shield)  Weight:10.00 (Medium)  Value:100  Health:150  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Bear_Shield.dds
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:bm_bearshield
+
+Record: ARMO "bm wolf helmet_heartfang" Flags:0x0400 (Persistent)
+  NAME: ID:BM Wolf Helmet_heartfang
+  MODL: Model:a\A_Wolf2_Helmet.NIF
+  FNAM: Name:Helm of the Wolf's Heart
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:500  Health:300  Enchantment:200  AR:20
+  ITEX: Icon:A\Tx_Wolf2_Helmet.dds
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Wolf2_Helmet
+  ENAM: Enchanting:bm_wolfspirit
+
+Record: ARMO "wolfwalkers" Flags:0x0000 ()
+  NAME: ID:wolfwalkers
+  MODL: Model:a\A_Wolf2_Boot_GND.NIF
+  FNAM: Name:Paws of the Wolf-Runner
+  AODT: Type:(Boots)  Weight:4.00 (Light)  Value:1000  Health:105  Enchantment:20  AR:15
+  ITEX: Icon:A\Tx_Wolf2_Boot.dds
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_F
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_A
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_A
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:A_Wolf2_Boot_F
+  ENAM: Enchanting:wolfwalking_en

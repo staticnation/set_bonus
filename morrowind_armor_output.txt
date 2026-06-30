@@ -1,0 +1,2932 @@
+
+Record: ARMO "chitin cuirass" Flags:0x0000 ()
+  NAME: ID:chitin cuirass
+  MODL: Model:a\A_M_Chitin_Cuirass_GND.nif
+  FNAM: Name:Chitin Cuirass
+  AODT: Type:(Cuirass)  Weight:6.00 (Light)  Value:45  Health:300  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_m_chitin_chest
+
+Record: ARMO "chitin pauldron - left" Flags:0x0000 ()
+  NAME: ID:chitin pauldron - left
+  MODL: Model:a\A_M_Chitin_UA_Pauldron.nif
+  FNAM: Name:Chitin Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:2.00 (Light)  Value:16  Health:100  Enchantment:10  AR:10
+  ITEX: Icon:a\TX_Chitin_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_m_chitin_ua_pauldron
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:A_M_Chitin_pauldron_CL
+
+Record: ARMO "chitin pauldron - right" Flags:0x0000 ()
+  NAME: ID:chitin pauldron - right
+  MODL: Model:a\A_M_Chitin_UA_Pauldron.nif
+  FNAM: Name:Chitin Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:2.00 (Light)  Value:16  Health:100  Enchantment:10  AR:10
+  ITEX: Icon:a\TX_Chitin_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_m_chitin_ua_pauldron
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:A_M_Chitin_pauldron_CL
+
+Record: ARMO "chitin boots" Flags:0x0000 ()
+  NAME: ID:chitin boots
+  MODL: Model:a\A_M_Chitin_Boot_GND.nif
+  FNAM: Name:Chitin Boots
+  AODT: Type:(Boots)  Weight:6.00 (Light)  Value:13  Health:100  Enchantment:44  AR:10
+  ITEX: Icon:a\TX_Chitin_boot.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_m_chitin_f_boots
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_m_chitin_a_boot
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_m_chitin_f_boots
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_m_chitin_a_boot
+
+Record: ARMO "chitin greaves" Flags:0x0000 ()
+  NAME: ID:chitin greaves
+  MODL: Model:a\A_M_Chitin_Greaves_GND.nif
+  FNAM: Name:Chitin Greaves
+  AODT: Type:(Greaves)  Weight:5.40 (Light)  Value:29  Health:100  Enchantment:13  AR:10
+  ITEX: Icon:a\TX_Chitin_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_m_chitin_g_greaves
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_m_chitin_ul_greaves
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_m_chitin_ul_greaves
+
+Record: ARMO "chitin helm" Flags:0x0000 ()
+  NAME: ID:chitin helm
+  MODL: Model:a\A_M_Chitin_Helmet.nif
+  FNAM: Name:Chitin Helm
+  AODT: Type:(Helmet)  Weight:1.00 (Light)  Value:19  Health:100  Enchantment:125  AR:10
+  ITEX: Icon:a\TX_Chitin_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_m_chitin_helmet
+
+Record: ARMO "chitin guantlet - left" Flags:0x0000 ()
+  NAME: ID:chitin guantlet - left
+  MODL: Model:a\A_M_Chitin_Gauntlet_GND.nif
+  FNAM: Name:Chitin Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:1.00 (Light)  Value:9  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_m_chitin_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "chitin guantlet - right" Flags:0x0000 ()
+  NAME: ID:chitin guantlet - right
+  MODL: Model:a\A_M_Chitin_Gauntlet_GND.nif
+  FNAM: Name:Chitin Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:1.00 (Light)  Value:9  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_m_chitin_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "indoril shield" Flags:0x0000 ()
+  NAME: ID:indoril shield
+  MODL: Model:a\Shield_Indoril.nif
+  FNAM: Name:Indoril Shield
+  AODT: Type:(Shield)  Weight:13.50 (Medium)  Value:2000  Health:900  Enchantment:450  AR:45
+  ITEX: Icon:a\Tx_Indoril_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:Shield_Indoril
+
+Record: ARMO "templar_pauldron_right" Flags:0x0000 ()
+  NAME: ID:templar_pauldron_right
+  MODL: Model:a\A_Templar_M_CL_Pauldron.nif
+  FNAM: Name:Imperial Templar Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:60  Health:180  Enchantment:20  AR:18
+  ITEX: Icon:a\Tx_Templar_pauldron.tga
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_templar_m_cl_pauldron
+
+Record: ARMO "templar boots" Flags:0x0000 ()
+  NAME: ID:templar boots
+  MODL: Model:a\A_Templar_M_Boot_GND.nif
+  FNAM: Name:Imperial Templar Boots
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:50  Health:180  Enchantment:88  AR:18
+  ITEX: Icon:a\Tx_Templar_boot.tga
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_templar_m_f_boot
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_templar_m_a_boot
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_templar_m_f_boot
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_templar_m_a_boot
+
+Record: ARMO "indoril pauldron left" Flags:0x0000 ()
+  NAME: ID:indoril pauldron left
+  MODL: Model:a\A_Indoril_M_Pauldron_GND.nif
+  FNAM: Name:Indoril Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:9.00 (Medium)  Value:2400  Health:450  Enchantment:10  AR:45
+  ITEX: Icon:a\Tx_Indoril_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_indoril_m_ua_pauldron
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_indoril_m_cl_pauldron
+
+Record: ARMO "indoril pauldron right" Flags:0x0000 ()
+  NAME: ID:indoril pauldron right
+  MODL: Model:a\A_Indoril_M_Pauldron_GND.nif
+  FNAM: Name:Indoril Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:9.00 (Medium)  Value:2400  Health:450  Enchantment:10  AR:45
+  ITEX: Icon:a\Tx_Indoril_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_indoril_m_ua_pauldron
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_indoril_m_cl_pauldron
+
+Record: ARMO "templar bracer left" Flags:0x0000 ()
+  NAME: ID:templar bracer left
+  MODL: Model:a\A_Templar_M_W_Bracer.nif
+  FNAM: Name:Imperial Templar Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:5.00 (Heavy)  Value:25  Health:90  Enchantment:200  AR:18
+  ITEX: Icon:a\Tx_Templar_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_templar_m_w_bracer
+
+Record: ARMO "templar bracer right" Flags:0x0000 ()
+  NAME: ID:templar bracer right
+  MODL: Model:a\A_Templar_M_W_Bracer.nif
+  FNAM: Name:Imperial Templar Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:5.00 (Heavy)  Value:25  Health:90  Enchantment:200  AR:18
+  ITEX: Icon:a\Tx_Templar_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_templar_m_w_bracer
+
+Record: ARMO "templar_pauldron_left" Flags:0x0000 ()
+  NAME: ID:templar_pauldron_left
+  MODL: Model:a\A_Templar_M_CL_Pauldron.nif
+  FNAM: Name:Imperial Templar Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:60  Health:180  Enchantment:20  AR:18
+  ITEX: Icon:a\Tx_Templar_pauldron.tga
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_templar_m_cl_pauldron
+
+Record: ARMO "templar_cuirass" Flags:0x0000 ()
+  NAME: ID:templar_cuirass
+  MODL: Model:a\A_Templar_M_Cuirass_GND.nif
+  FNAM: Name:Imperial Templar Knight Cuirass
+  SCRI: Script:LegionUniform
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:175  Health:540  Enchantment:200  AR:18
+  ITEX: Icon:a\Tx_Templar_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:templar_chest
+
+Record: ARMO "imperial left pauldron" Flags:0x0000 ()
+  NAME: ID:imperial left pauldron
+  MODL: Model:a\A_Imperial_Pauldron_GND.nif
+  FNAM: Name:Imperial Steel Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:53  Health:160  Enchantment:20  AR:16
+  ITEX: Icon:a\Tx_Imperial_pauldron.tga
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:imperial cl pauldron
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:imperial ua
+
+Record: ARMO "imperial right pauldron" Flags:0x0000 ()
+  NAME: ID:imperial right pauldron
+  MODL: Model:a\A_Imperial_Pauldron_GND.nif
+  FNAM: Name:Imperial Steel Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:53  Health:160  Enchantment:20  AR:16
+  ITEX: Icon:a\Tx_Imperial_pauldron.tga
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:imperial cl pauldron
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:imperial ua
+
+Record: ARMO "imperial left gauntlet" Flags:0x0000 ()
+  NAME: ID:imperial left gauntlet
+  MODL: Model:a\A_Imperial_A_Gauntlet_GND.nif
+  FNAM: Name:Imperial Steel Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:5.00 (Heavy)  Value:33  Health:80  Enchantment:200  AR:16
+  ITEX: Icon:a\Tx_Imperial_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_imperial_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "imperial right gauntlet" Flags:0x0000 ()
+  NAME: ID:imperial right gauntlet
+  MODL: Model:a\A_Imperial_A_Gauntlet_GND.nif
+  FNAM: Name:Imperial Steel Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:5.00 (Heavy)  Value:33  Health:80  Enchantment:200  AR:16
+  ITEX: Icon:a\Tx_Imperial_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_imperial_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "imperial boots" Flags:0x0000 ()
+  NAME: ID:imperial boots
+  MODL: Model:a\A_Imperial_A_Boot_GND.nif
+  FNAM: Name:Imperial Steel Boots
+  AODT: Type:(Boots)  Weight:19.00 (Heavy)  Value:50  Health:170  Enchantment:88  AR:16
+  ITEX: Icon:a\Tx_Imperial_boot.tga
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:imperial boot foot
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:imperial boot ankle
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:imperial boot ankle
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:imperial boot foot
+
+Record: ARMO "indoril helmet" Flags:0x0000 ()
+  NAME: ID:indoril helmet
+  MODL: Model:a\A_Indoril_M_Helmet.nif
+  FNAM: Name:Indoril Helmet
+  SCRI: Script:OrdinatorUniform
+  AODT: Type:(Helmet)  Weight:4.50 (Medium)  Value:3000  Health:450  Enchantment:225  AR:45
+  ITEX: Icon:a\Tx_Indoril_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:indoril hlelmet
+
+Record: ARMO "imperial helmet armor" Flags:0x0000 ()
+  NAME: ID:imperial helmet armor
+  MODL: Model:a\A_Imperial_M_Helmet.nif
+  FNAM: Name:Imperial Steel Helmet
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:70  Health:160  Enchantment:250  AR:16
+  ITEX: Icon:a\Tx_Imperial_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:imperial helmet
+
+Record: ARMO "indoril cuirass" Flags:0x0000 ()
+  NAME: ID:indoril cuirass
+  MODL: Model:a\A_Indoril_M_Cuirass_GND.nif
+  FNAM: Name:Indoril Cuirass
+  SCRI: Script:OrdinatorUniform
+  AODT: Type:(Cuirass)  Weight:27.00 (Medium)  Value:7000  Health:1350  Enchantment:180  AR:45
+  ITEX: Icon:a\Tx_Indoril_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_indoril_m_chest
+
+Record: ARMO "indoril left gauntlet" Flags:0x0000 ()
+  NAME: ID:indoril left gauntlet
+  MODL: Model:a\A_Indoril_M_Gauntlet_GND.nif
+  FNAM: Name:Indoril Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:4.50 (Medium)  Value:1400  Health:225  Enchantment:60  AR:45
+  ITEX: Icon:a\Tx_Indoril_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_indoril_m_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "indoril right gauntlet" Flags:0x0000 ()
+  NAME: ID:indoril right gauntlet
+  MODL: Model:a\A_Indoril_M_Gauntlet_GND.nif
+  FNAM: Name:Indoril Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:4.50 (Medium)  Value:1400  Health:225  Enchantment:60  AR:45
+  ITEX: Icon:a\Tx_Indoril_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_indoril_m_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "indoril boots" Flags:0x0000 ()
+  NAME: ID:indoril boots
+  MODL: Model:a\A_Indoril_M_boot_GND.nif
+  FNAM: Name:Indoril Boots
+  AODT: Type:(Boots)  Weight:18.00 (Medium)  Value:2000  Health:450  Enchantment:26  AR:45
+  ITEX: Icon:a\Tx_Indoril_boot.tga
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_indoril_m_f_boot
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_indoril_m_a_boot
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_indoril_m_a_boot
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_indoril_m_f_boot
+
+Record: ARMO "right leather bracer" Flags:0x0000 ()
+  NAME: ID:right leather bracer
+  MODL: Model:c\C_M_Bracer_W_leather01.nif
+  FNAM: Name:Right Leather Bracer
+  AODT: Type:(Right_Bracer)  Weight:1.50 (Light)  Value:5  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:c\TX_C_bracerleather01.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:c_m_bracer_w_leather01
+
+Record: ARMO "left leather bracer" Flags:0x0000 ()
+  NAME: ID:left leather bracer
+  MODL: Model:c\C_M_Bracer_W_leather01.nif
+  FNAM: Name:Left Leather Bracer
+  AODT: Type:(Left_Bracer)  Weight:1.50 (Light)  Value:5  Health:20  Enchantment:60  AR:5
+  ITEX: Icon:c\TX_C_bracerleather01.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:c_m_bracer_w_leather01
+
+Record: ARMO "cloth bracer left" Flags:0x0000 ()
+  NAME: ID:cloth bracer left
+  MODL: Model:c\C_M_Bracer_W_clothwrap02.nif
+  FNAM: Name:Cloth Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:1.50 (Light)  Value:3  Health:20  Enchantment:60  AR:4
+  ITEX: Icon:c\TX_C_bracerCloth.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:c_m_bracer_w_clothwrap02
+
+Record: ARMO "cloth bracer right" Flags:0x0000 ()
+  NAME: ID:cloth bracer right
+  MODL: Model:c\C_M_Bracer_W_clothwrap02.nif
+  FNAM: Name:Cloth Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:1.50 (Light)  Value:3  Health:20  Enchantment:60  AR:4
+  ITEX: Icon:c\TX_C_bracerCloth.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:c_m_bracer_w_clothwrap02
+
+Record: ARMO "imperial shield" Flags:0x0000 ()
+  NAME: ID:imperial shield
+  MODL: Model:a\A_Shield_Imperial.nif
+  FNAM: Name:Imperial Shield
+  AODT: Type:(Shield)  Weight:14.00 (Heavy)  Value:78  Health:320  Enchantment:500  AR:16
+  ITEX: Icon:a\Tx_Imperial_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:a_shield_imperial
+
+Record: ARMO "netch_leather_helm" Flags:0x0000 ()
+  NAME: ID:netch_leather_helm
+  MODL: Model:a\A_Netch_M_Helmet.nif
+  FNAM: Name:Netch Leather Helm
+  AODT: Type:(Helmet)  Weight:3.00 (Light)  Value:15  Health:50  Enchantment:75  AR:5
+  ITEX: Icon:a\Tx_Netch_Helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_netch_m_helmet
+
+Record: ARMO "netch_leather_boiled_helm" Flags:0x0000 ()
+  NAME: ID:netch_leather_boiled_helm
+  MODL: Model:a\A_Netch_boiled_helm.NIF
+  FNAM: Name:Boiled Netch Leather Helm
+  AODT: Type:(Helmet)  Weight:3.00 (Light)  Value:17  Health:70  Enchantment:75  AR:7
+  ITEX: Icon:a\Tx_Netch_boiled_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_netch_boiled_helm
+
+Record: ARMO "netch_leather_pauldron_left" Flags:0x0000 ()
+  NAME: ID:netch_leather_pauldron_left
+  MODL: Model:a\A_Netch_M_Pauldron_GND.nif
+  FNAM: Name:Netch Leather Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:4.00 (Light)  Value:12  Health:50  Enchantment:10  AR:5
+  ITEX: Icon:a\Tx_Netch_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_netch_m_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_netch_m_pauldron_cl
+
+Record: ARMO "netch_leather_cuirass" Flags:0x0000 ()
+  NAME: ID:netch_leather_cuirass
+  MODL: Model:a\A_Netch_M_Currais2_GND.NIF
+  FNAM: Name:Netch Leather Cuirass
+  AODT: Type:(Cuirass)  Weight:12.00 (Light)  Value:35  Health:150  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_Netch_cuirass2.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:A_Netch_M_cuirass2
+
+Record: ARMO "netch_leather_boiled_cuirass" Flags:0x0000 ()
+  NAME: ID:netch_leather_boiled_cuirass
+  MODL: Model:a\A_Netch_M_cuirass_GND.nif
+  FNAM: Name:Boiled Netch Leather Cuirass
+  AODT: Type:(Cuirass)  Weight:12.00 (Light)  Value:37  Health:210  Enchantment:60  AR:7
+  ITEX: Icon:a\Tx_Netch_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_netch_m_chest
+
+Record: ARMO "netch_leather_gauntlet_left" Flags:0x0000 ()
+  NAME: ID:netch_leather_gauntlet_left
+  MODL: Model:a\A_Netch_M_gauntlet_GND.nif
+  FNAM: Name:Netch Leather Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:3.00 (Light)  Value:7  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_Netch_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_netch_m_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "netch_leather_gauntlet_right" Flags:0x0000 ()
+  NAME: ID:netch_leather_gauntlet_right
+  MODL: Model:a\A_Netch_M_gauntlet_GND.nif
+  FNAM: Name:Netch Leather Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:3.00 (Light)  Value:7  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_Netch_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_netch_m_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "netch_leather_greaves" Flags:0x0000 ()
+  NAME: ID:netch_leather_greaves
+  MODL: Model:a\A_Netch_M_Greave_GND.nif
+  FNAM: Name:Netch Leather Greaves
+  AODT: Type:(Greaves)  Weight:7.00 (Light)  Value:22  Health:50  Enchantment:10  AR:5
+  ITEX: Icon:a\Tx_Netch_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_netch_m_greave_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_netch_m_greave_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_netch_m_greave_ul
+
+Record: ARMO "netch_leather_boots" Flags:0x0000 ()
+  NAME: ID:netch_leather_boots
+  MODL: Model:a\A_Netch_M_boot_GND.nif
+  FNAM: Name:Netch Leather Boots
+  AODT: Type:(Boots)  Weight:8.00 (Light)  Value:10  Health:50  Enchantment:26  AR:5
+  ITEX: Icon:a\Tx_Netch_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_netch_m_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_netch_m_boot_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_netch_m_boot_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_netch_m_boot_a
+
+Record: ARMO "netch_leather_shield" Flags:0x0000 ()
+  NAME: ID:netch_leather_shield
+  MODL: Model:a\Shield_Netch_leather.NIF
+  FNAM: Name:Netch Leather Shield
+  AODT: Type:(Shield)  Weight:6.00 (Light)  Value:17  Health:100  Enchantment:150  AR:5
+  ITEX: Icon:a\Tx_shield_Nordic_leather.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_netch_leather
+
+Record: ARMO "netch_leather_towershield" Flags:0x0000 ()
+  NAME: ID:netch_leather_towershield
+  MODL: Model:a\TowerShield_Netch_leather.NIF
+  FNAM: Name:Netch Leather Tower Shield
+  AODT: Type:(Shield)  Weight:9.00 (Light)  Value:25  Health:100  Enchantment:225  AR:5
+  ITEX: Icon:a\Tx_Towershield_Netch.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_netch_leather
+
+Record: ARMO "fur_helm" Flags:0x0000 ()
+  NAME: ID:fur_helm
+  MODL: Model:a\A_NordicFur_Helmet.nif
+  FNAM: Name:Nordic Fur Helm
+  AODT: Type:(Helmet)  Weight:1.50 (Light)  Value:15  Health:50  Enchantment:75  AR:5
+  ITEX: Icon:a\TX_NordicFur_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_nordicfur_helmet
+
+Record: ARMO "fur_colovian_helm" Flags:0x0000 ()
+  NAME: ID:fur_colovian_helm
+  MODL: Model:a\A_Helm_Colovian.NIF
+  FNAM: Name:Colovian Fur Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:25  Health:70  Enchantment:75  AR:7
+  ITEX: Icon:a\Tx_Fur_Colovian_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_helm_colovian
+
+Record: ARMO "fur_pauldron_left" Flags:0x0000 ()
+  NAME: ID:fur_pauldron_left
+  MODL: Model:a\A_NordicFur_Pauldron_GND.nif
+  FNAM: Name:Nordic Fur Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:3.00 (Light)  Value:12  Health:50  Enchantment:10  AR:5
+  ITEX: Icon:a\Tx_NordicFur_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_nordicfur_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_nordicfur_pauldron_cl
+
+Record: ARMO "fur_cuirass" Flags:0x0000 ()
+  NAME: ID:fur_cuirass
+  MODL: Model:a\A_NordicFur_M_Cuirass_GND.nif
+  FNAM: Name:Nordic Fur Cuirass
+  AODT: Type:(Cuirass)  Weight:9.00 (Light)  Value:35  Health:150  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_NordicFur_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_nordicfur_cuirass
+
+Record: ARMO "fur_bearskin_cuirass" Flags:0x0000 ()
+  NAME: ID:fur_bearskin_cuirass
+  MODL: Model:a\A_fur_cuirass_GND.NIF
+  FNAM: Name:Nordic Bearskin Cuirass
+  AODT: Type:(Cuirass)  Weight:9.00 (Light)  Value:35  Health:150  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_fur_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_fur_cuirass
+
+Record: ARMO "fur_bracer_left" Flags:0x0000 ()
+  NAME: ID:fur_bracer_left
+  MODL: Model:a\A_NordicFur_Bracer_W.NIF
+  FNAM: Name:Nordic Fur Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:1.50 (Light)  Value:5  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\tx_NordicFur_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:A_NordicFur_Bracer_W
+
+Record: ARMO "fur_bracer_right" Flags:0x0000 ()
+  NAME: ID:fur_bracer_right
+  MODL: Model:a\A_NordicFur_Bracer_W.NIF
+  FNAM: Name:Nordic Fur Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:1.50 (Light)  Value:5  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\tx_NordicFur_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:A_NordicFur_Bracer_W
+
+Record: ARMO "fur_greaves" Flags:0x0000 ()
+  NAME: ID:fur_greaves
+  MODL: Model:a\A_NordicFur_Greave_GND.nif
+  FNAM: Name:Nordic Fur Greaves
+  AODT: Type:(Greaves)  Weight:5.40 (Light)  Value:22  Health:50  Enchantment:10  AR:5
+  ITEX: Icon:a\TX_NordicFur_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_nordicfur_greave_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_nordicfur_greave_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_nordicfur_greave_ul
+
+Record: ARMO "fur_boots" Flags:0x0000 ()
+  NAME: ID:fur_boots
+  MODL: Model:a\A_NordicFur_Boot_GND.nif
+  FNAM: Name:Nordic Fur Boots
+  AODT: Type:(Boots)  Weight:6.00 (Light)  Value:10  Health:50  Enchantment:26  AR:5
+  ITEX: Icon:a\Tx_NordicFur_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_nordicfur_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_nordicfur_boot_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_nordicfur_boot_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_nordicfur_boot_a
+
+Record: ARMO "nordic_leather_shield" Flags:0x0000 ()
+  NAME: ID:nordic_leather_shield
+  MODL: Model:a\Shield_Nordic_leather.NIF
+  FNAM: Name:Nordic Leather Shield
+  AODT: Type:(Shield)  Weight:4.50 (Light)  Value:25  Health:100  Enchantment:150  AR:5
+  ITEX: Icon:a\Tx_shield_Nordic_leather.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_nordic_leather
+
+Record: ARMO "dust_adept_helm" Flags:0x0000 ()
+  NAME: ID:dust_adept_helm
+  MODL: Model:a\A_DustAdept_Helm.NIF
+  FNAM: Name:Telvanni Dust Adept Helm
+  AODT: Type:(Helmet)  Weight:1.50 (Light)  Value:30  Health:50  Enchantment:250  AR:5
+  ITEX: Icon:a\Tx_dustAdept_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_dustadept_helm
+
+Record: ARMO "mole_crab_helm" Flags:0x0000 ()
+  NAME: ID:mole_crab_helm
+  MODL: Model:a\A_molecrab_helm.NIF
+  FNAM: Name:Telvanni Mole Crab Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:19  Health:60  Enchantment:500  AR:6
+  ITEX: Icon:a\tx_molecrab_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_molecrab_helm
+
+Record: ARMO "cephalopod_helm" Flags:0x0000 ()
+  NAME: ID:cephalopod_helm
+  MODL: Model:a\A_Cephalopod_helm.NIF
+  FNAM: Name:Telvanni Cephalopod Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:50  Health:80  Enchantment:1000  AR:8
+  ITEX: Icon:a\Tx_cephalopod_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_cephalopod_helm
+
+Record: ARMO "imperial_studded_cuirass" Flags:0x0000 ()
+  NAME: ID:imperial_studded_cuirass
+  MODL: Model:a\A_StuddedLeather_C_GND.nif
+  FNAM: Name:Imperial Studded Leather Cuiras
+  AODT: Type:(Cuirass)  Weight:9.00 (Light)  Value:65  Health:300  Enchantment:60  AR:10
+  ITEX: Icon:a\Tx_StuddedLeather_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_studdedleather_cuirass
+
+Record: ARMO "imperial_chain_coif_helm" Flags:0x0000 ()
+  NAME: ID:imperial_chain_coif_helm
+  MODL: Model:a\A_M_ImperialChain_Helmet.nif
+  FNAM: Name:Imperial Chain Coif
+  AODT: Type:(Helmet)  Weight:3.50 (Medium)  Value:35  Health:100  Enchantment:175  AR:10
+  ITEX: Icon:a\Tx_ImperialChain_Helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_m_imperialchain_helmet
+
+Record: ARMO "imperial_chain_cuirass" Flags:0x0000 ()
+  NAME: ID:imperial_chain_cuirass
+  MODL: Model:a\A_M_ImperialChain_C_GND.nif
+  FNAM: Name:Imperial Chain Cuirass
+  SCRI: Script:LegionUniform
+  AODT: Type:(Cuirass)  Weight:21.00 (Medium)  Value:90  Health:300  Enchantment:140  AR:12
+  ITEX: Icon:a\Tx_ImperialChain_Cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_m_imperialchain_cuirass
+
+Record: ARMO "nordic_ringmail_cuirass" Flags:0x0000 ()
+  NAME: ID:nordic_ringmail_cuirass
+  MODL: Model:a\A_Ringmail_Cuirass_GND.nif
+  FNAM: Name:Nordic Ringmail Cuirass
+  AODT: Type:(Cuirass)  Weight:21.00 (Medium)  Value:80  Health:300  Enchantment:140  AR:10
+  ITEX: Icon:a\Tx_Ringmail_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_ringmail_cuirass
+
+Record: ARMO "chitin_mask_helm" Flags:0x0000 ()
+  NAME: ID:chitin_mask_helm
+  MODL: Model:a\A_M_Chitin_Helmet.nif
+  FNAM: Name:Chitin Mask Helm
+  AODT: Type:(Helmet)  Weight:1.00 (Light)  Value:19  Health:100  Enchantment:125  AR:10
+  ITEX: Icon:a\TX_Chitin_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_m_chitin_helmet
+
+Record: ARMO "chitin_watchman_helm" Flags:0x0000 ()
+  NAME: ID:chitin_watchman_helm
+  MODL: Model:a\A_WatchmansHelm.NIF
+  FNAM: Name:Redoran Watchman's Helm
+  AODT: Type:(Helmet)  Weight:1.00 (Light)  Value:24  Health:110  Enchantment:125  AR:11
+  ITEX: Icon:a\Tx_watchmansHelm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_watchmanshelm
+
+Record: ARMO "chitin_shield" Flags:0x0000 ()
+  NAME: ID:chitin_shield
+  MODL: Model:a\Shield_Chitin.NIF
+  FNAM: Name:Chitin Shield
+  AODT: Type:(Shield)  Weight:4.00 (Light)  Value:22  Health:200  Enchantment:250  AR:10
+  ITEX: Icon:a\Tx_shield_chitin.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_chitin
+
+Record: ARMO "chitin_towershield" Flags:0x0000 ()
+  NAME: ID:chitin_towershield
+  MODL: Model:a\TowerShield_Chitin.NIF
+  FNAM: Name:Chitin Tower Shield
+  AODT: Type:(Shield)  Weight:6.00 (Light)  Value:32  Health:240  Enchantment:375  AR:12
+  ITEX: Icon:a\Tx_Towershield_chitin.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_chitin
+
+Record: ARMO "newtscale_cuirass" Flags:0x0000 ()
+  NAME: ID:newtscale_cuirass
+  MODL: Model:a\A_Newstscale_C_GND.NIF
+  FNAM: Name:Imperial Newtscale Cuirass
+  AODT: Type:(Cuirass)  Weight:9.00 (Light)  Value:100  Health:300  Enchantment:100  AR:10
+  ITEX: Icon:a\tx_Newtscale_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_newtscale_cuirass
+
+Record: ARMO "silver_helm" Flags:0x0000 ()
+  NAME: ID:silver_helm
+  MODL: Model:a\A_Helm_silver.NIF
+  FNAM: Name:Imperial Silver Helm
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:120  Health:170  Enchantment:200  AR:17
+  ITEX: Icon:a\tx_helm_silver.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_helm_silver
+
+Record: ARMO "silver_cuirass" Flags:0x0000 ()
+  NAME: ID:silver_cuirass
+  MODL: Model:a\A_Silver_Cuir_GND.NIF
+  FNAM: Name:Imperial Silver Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:280  Health:540  Enchantment:160  AR:18
+  ITEX: Icon:a\tx_silver_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_silver_cuirass
+
+Record: ARMO "silver_dukesguard_cuirass" Flags:0x0000 ()
+  NAME: ID:silver_dukesguard_cuirass
+  MODL: Model:a\A_silver_duke_GND.NIF
+  FNAM: Name:Duke's Guard Silver Cuirass
+  SCRI: Script:LegionUniform
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:350  Health:600  Enchantment:160  AR:20
+  ITEX: Icon:a\tx_silver_dukes_cuir.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_silver_cuirass_duke
+
+Record: ARMO "imperial_greaves" Flags:0x0000 ()
+  NAME: ID:imperial_greaves
+  MODL: Model:a\A_Imperial_Greaves_GND.NIF
+  FNAM: Name:Imperial Steel Greaves
+  AODT: Type:(Greaves)  Weight:17.00 (Heavy)  Value:98  Health:170  Enchantment:25  AR:16
+  ITEX: Icon:a\Tx_Imperial_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_imperial_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_imperial_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_imperial_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_imperial_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_imperial_greaves_k
+
+Record: ARMO "nordic_iron_helm" Flags:0x0000 ()
+  NAME: ID:nordic_iron_helm
+  MODL: Model:a\A_NordicIron_Helm.NIF
+  FNAM: Name:Nordic Iron Helm
+  AODT: Type:(Helmet)  Weight:8.00 (Heavy)  Value:50  Health:160  Enchantment:250  AR:16
+  ITEX: Icon:a\tx_NordicIron_Helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_nordiciron_helm
+
+Record: ARMO "nordic_iron_cuirass" Flags:0x0000 ()
+  NAME: ID:nordic_iron_cuirass
+  MODL: Model:a\A_NordicIron_C_GND.NIF
+  FNAM: Name:Nordic Iron Cuirass
+  AODT: Type:(Cuirass)  Weight:35.00 (Heavy)  Value:130  Health:480  Enchantment:200  AR:16
+  ITEX: Icon:a\Tx_NordicIron_Cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_nordiciron_c
+
+Record: ARMO "templar_greaves" Flags:0x0000 ()
+  NAME: ID:templar_greaves
+  MODL: Model:a\A_Templar_Greaves_GND.NIF
+  FNAM: Name:Imperial Templar Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:110  Health:180  Enchantment:25  AR:18
+  ITEX: Icon:a\tx_Templar_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_templar_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_templar_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_templar_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_templar_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_templar_greaves_k
+
+Record: ARMO "steel_helm" Flags:0x0000 ()
+  NAME: ID:steel_helm
+  MODL: Model:a\A_Steel_Helmet.nif
+  FNAM: Name:Steel Helm
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:60  Health:150  Enchantment:250  AR:15
+  ITEX: Icon:a\TX_Steel_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_steel_helmet
+
+Record: ARMO "steel_pauldron_left" Flags:0x0000 ()
+  NAME: ID:steel_pauldron_left
+  MODL: Model:a\A_Steel_Pauldron_GND.nif
+  FNAM: Name:Steel Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:48  Health:150  Enchantment:20  AR:15
+  ITEX: Icon:a\TX_Steel_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_steel_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_steel_pauldron_cl
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:a_steel_pauldron_fa
+
+Record: ARMO "steel_pauldron_right" Flags:0x0000 ()
+  NAME: ID:steel_pauldron_right
+  MODL: Model:a\A_Steel_Pauldron_GND.nif
+  FNAM: Name:Steel Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:48  Health:150  Enchantment:20  AR:15
+  ITEX: Icon:a\TX_Steel_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_steel_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_steel_pauldron_cl
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:a_steel_pauldron_fa
+
+Record: ARMO "steel_cuirass" Flags:0x0000 ()
+  NAME: ID:steel_cuirass
+  MODL: Model:a\A_Steel_Cuirass_GND.nif
+  FNAM: Name:Steel Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:150  Health:450  Enchantment:200  AR:15
+  ITEX: Icon:a\TX_Steel_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_steel_cuirass
+
+Record: ARMO "steel_shield" Flags:0x0000 ()
+  NAME: ID:steel_shield
+  MODL: Model:a\shield_steel.NIF
+  FNAM: Name:Steel Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:68  Health:300  Enchantment:500  AR:15
+  ITEX: Icon:a\Tx_shield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_steel
+
+Record: ARMO "steel_towershield" Flags:0x0000 ()
+  NAME: ID:steel_towershield
+  MODL: Model:a\TowerShield_steel.NIF
+  FNAM: Name:Steel Tower Shield
+  AODT: Type:(Shield)  Weight:20.00 (Heavy)  Value:100  Health:360  Enchantment:750  AR:18
+  ITEX: Icon:a\Tx_towershield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_steel
+
+Record: ARMO "steel_gauntlet_left" Flags:0x0000 ()
+  NAME: ID:steel_gauntlet_left
+  MODL: Model:a\A_Steel_Gauntlet_GND.NIF
+  FNAM: Name:Steel Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:5.00 (Heavy)  Value:28  Health:75  Enchantment:200  AR:15
+  ITEX: Icon:a\TX_Steel_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_steel_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "steel_gauntlet_right" Flags:0x0000 ()
+  NAME: ID:steel_gauntlet_right
+  MODL: Model:a\A_Steel_Gauntlet_GND.NIF
+  FNAM: Name:Steel Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:5.00 (Heavy)  Value:28  Health:75  Enchantment:200  AR:15
+  ITEX: Icon:a\TX_Steel_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_steel_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "steel_greaves" Flags:0x0000 ()
+  NAME: ID:steel_greaves
+  MODL: Model:a\A_Steel_Greaves_GND.nif
+  FNAM: Name:Steel Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:88  Health:150  Enchantment:25  AR:15
+  ITEX: Icon:a\TX_Steel_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_steel_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_steel_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_steel_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_steel_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_steel_greaves_k
+
+Record: ARMO "iron_pauldron_left" Flags:0x0000 ()
+  NAME: ID:iron_pauldron_left
+  MODL: Model:a\A_Iron_Pauldron_GND.nif
+  FNAM: Name:Iron Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:24  Health:100  Enchantment:20  AR:10
+  ITEX: Icon:a\Tx_Iron_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_iron_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_iron_pauldron_cl
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:a_iron_pauldron_fa
+
+Record: ARMO "iron_pauldron_right" Flags:0x0000 ()
+  NAME: ID:iron_pauldron_right
+  MODL: Model:a\A_Iron_Pauldron_GND.nif
+  FNAM: Name:Iron Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:24  Health:100  Enchantment:20  AR:10
+  ITEX: Icon:a\Tx_Iron_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_iron_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_iron_pauldron_cl
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:a_iron_pauldron_fa
+
+Record: ARMO "iron_cuirass" Flags:0x0000 ()
+  NAME: ID:iron_cuirass
+  MODL: Model:a\A_Iron_Cuirass_GND.nif
+  FNAM: Name:Iron Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:70  Health:2000  Enchantment:200  AR:10
+  ITEX: Icon:a\Tx_Iron_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_iron_cuirass
+
+Record: ARMO "iron_shield" Flags:0x0000 ()
+  NAME: ID:iron_shield
+  MODL: Model:a\Shield_iron.NIF
+  FNAM: Name:Iron Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:34  Health:200  Enchantment:500  AR:10
+  ITEX: Icon:a\tx_shield_iron.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_iron
+
+Record: ARMO "iron_towershield" Flags:0x0000 ()
+  NAME: ID:iron_towershield
+  MODL: Model:a\TowerShield_iron.NIF
+  FNAM: Name:Iron Tower Shield
+  AODT: Type:(Shield)  Weight:18.00 (Heavy)  Value:50  Health:240  Enchantment:750  AR:12
+  ITEX: Icon:a\tx_Towershield_iron.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_iron
+
+Record: ARMO "slave_bracer_left" Flags:0x0000 ()
+  NAME: ID:slave_bracer_left
+  MODL: Model:c\C_Slave_Bracer.NIF
+  FNAM: Name:Slave's Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:5.00 (Heavy)  Value:5  Health:25  Enchantment:200  AR:5
+  ITEX: Icon:c\tx_slavebracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:c_slave_bracer
+  ENAM: Enchanting:slave_bracer_en
+
+Record: ARMO "slave_bracer_right" Flags:0x0000 ()
+  NAME: ID:slave_bracer_right
+  MODL: Model:c\C_Slave_Bracer.NIF
+  FNAM: Name:Slave's Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:5.00 (Heavy)  Value:5  Health:25  Enchantment:200  AR:5
+  ITEX: Icon:c\tx_slavebracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:c_slave_bracer
+  ENAM: Enchanting:slave_bracer_en
+
+Record: ARMO "iron_bracer_left" Flags:0x0000 ()
+  NAME: ID:iron_bracer_left
+  MODL: Model:a\A_Iron_Bracer_W.nif
+  FNAM: Name:Iron Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:5.00 (Heavy)  Value:10  Health:50  Enchantment:200  AR:10
+  ITEX: Icon:a\Tx_Iron_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:A_Iron_Bracer_W
+
+Record: ARMO "iron_bracer_right" Flags:0x0000 ()
+  NAME: ID:iron_bracer_right
+  MODL: Model:a\A_Iron_Bracer_W.nif
+  FNAM: Name:Iron Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:5.00 (Heavy)  Value:10  Health:50  Enchantment:200  AR:10
+  ITEX: Icon:a\Tx_Iron_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:A_Iron_Bracer_W
+
+Record: ARMO "iron_greaves" Flags:0x0000 ()
+  NAME: ID:iron_greaves
+  MODL: Model:a\A_Iron_Greaves_GND.nif
+  FNAM: Name:Iron Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:44  Health:100  Enchantment:25  AR:10
+  ITEX: Icon:a\Tx_Iron_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_iron_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_iron_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_iron_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_iron_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_iron_greaves_k
+
+Record: ARMO "bonemold_gah-julan_helm" Flags:0x0000 ()
+  NAME: ID:bonemold_gah-julan_helm
+  MODL: Model:a\A_Bonemold_Gah_Julan_h.nif
+  FNAM: Name:Native Gah-Julan Bonemold Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:165  Health:160  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_h
+
+Record: ARMO "bonemold_chuzei_helm" Flags:0x0000 ()
+  NAME: ID:bonemold_chuzei_helm
+  MODL: Model:a\A_Bonemold_Chuzei_helmet.nif
+  FNAM: Name:Native Chuzei Bonemold Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:175  Health:170  Enchantment:200  AR:17
+  ITEX: Icon:a\TX_Bonemold_chuzei_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_chuzei_helmet
+
+Record: ARMO "bonemold_armun-an_helm" Flags:0x0000 ()
+  NAME: ID:bonemold_armun-an_helm
+  MODL: Model:a\A_Bonemold_Armun_An_helm.nif
+  FNAM: Name:Native Armun-An Bonemold Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:150  Health:180  Enchantment:200  AR:18
+  ITEX: Icon:a\TX_Bonemold_Armun_An_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_armun_an_helm
+
+Record: ARMO "morag_tong_helm" Flags:0x0000 ()
+  NAME: ID:morag_tong_helm
+  MODL: Model:a\A_MoragTong_Helm.NIF
+  FNAM: Name:Morag Tong Helm
+  AODT: Type:(Helmet)  Weight:3.00 (Light)  Value:20  Health:120  Enchantment:200  AR:12
+  ITEX: Icon:a\Tx_MoragTong_Helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_moragtong_helm
+
+Record: ARMO "bonemold_gah-julan_pauldron_r" Flags:0x0000 ()
+  NAME: ID:bonemold_gah-julan_pauldron_r
+  MODL: Model:a\A_Bonemold_Gah_J_UA_GND.nif
+  FNAM: Name:Gah-Julan Bonemold R Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:8.00 (Medium)  Value:140  Health:170  Enchantment:16  AR:17
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_Pau.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_cl
+
+Record: ARMO "bonemold_armun-an_pauldron_r" Flags:0x0000 ()
+  NAME: ID:bonemold_armun-an_pauldron_r
+  MODL: Model:a\A_Bonemold_Armun_UA_GND.nif
+  FNAM: Name:Armun-An Bonemold R Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:8.00 (Medium)  Value:120  Health:150  Enchantment:16  AR:15
+  ITEX: Icon:a\TX_Bonemold_Armun_An_Pau.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_bonemold_armun_an_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_bonemold_armun_an_cl
+
+Record: ARMO "bonemold_gah-julan_pauldron_l" Flags:0x0000 ()
+  NAME: ID:bonemold_gah-julan_pauldron_l
+  MODL: Model:a\A_Bonemold_Gah_J_UA_GND.nif
+  FNAM: Name:Gah-Julan Bonemold L Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:8.00 (Medium)  Value:140  Health:170  Enchantment:16  AR:17
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_Pau.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_cl
+
+Record: ARMO "bonemold_armun-an_pauldron_l" Flags:0x0000 ()
+  NAME: ID:bonemold_armun-an_pauldron_l
+  MODL: Model:a\A_Bonemold_Armun_UA_GND.nif
+  FNAM: Name:Armun-An Bonemold L Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:8.00 (Medium)  Value:120  Health:150  Enchantment:16  AR:15
+  ITEX: Icon:a\TX_Bonemold_Armun_An_Pau.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_bonemold_armun_an_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_bonemold_armun_an_cl
+
+Record: ARMO "bonemold_gah-julan_cuirass" Flags:0x0000 ()
+  NAME: ID:bonemold_gah-julan_cuirass
+  MODL: Model:a\A_Bonemold_Gah_Julan_CGND.NIF
+  FNAM: Name:Gah-Julan Bonemold Cuirass
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:360  Health:510  Enchantment:160  AR:17
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_c.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_c
+
+Record: ARMO "bonemold_armun-an_cuirass" Flags:0x0000 ()
+  NAME: ID:bonemold_armun-an_cuirass
+  MODL: Model:a\A_Bonemold_cuirass_GND.nif
+  FNAM: Name:Armun-An Bonemold Cuirass
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:350  Health:480  Enchantment:160  AR:16
+  ITEX: Icon:a\TX_Bonemold_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_bonemold_cuirass_c
+
+Record: ARMO "bonemold_bracer_left" Flags:0x0000 ()
+  NAME: ID:bonemold_bracer_left
+  MODL: Model:a\A_Bonemold_Bracer_GND.nif
+  FNAM: Name:Bonemold Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:4.00 (Medium)  Value:50  Health:75  Enchantment:160  AR:15
+  ITEX: Icon:a\TX_Bonemold_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_bonemold_bracer_w
+
+Record: ARMO "bonemold_bracer_right" Flags:0x0000 ()
+  NAME: ID:bonemold_bracer_right
+  MODL: Model:a\A_Bonemold_Bracer_GND.nif
+  FNAM: Name:Bonemold Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:4.00 (Medium)  Value:50  Health:75  Enchantment:160  AR:15
+  ITEX: Icon:a\TX_Bonemold_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_bonemold_bracer_w
+
+Record: ARMO "bonemold_greaves" Flags:0x0000 ()
+  NAME: ID:bonemold_greaves
+  MODL: Model:a\A_Bonemold_Greaves_GND.nif
+  FNAM: Name:Bonemold Greaves
+  AODT: Type:(Greaves)  Weight:13.40 (Medium)  Value:220  Health:150  Enchantment:20  AR:15
+  ITEX: Icon:a\TX_Bonemold_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_bonemold_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_bonemold_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_bonemold_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_bonemold_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_bonemold_greaves_k
+
+Record: ARMO "bonemold_boots" Flags:0x0000 ()
+  NAME: ID:bonemold_boots
+  MODL: Model:a\A_Bonemold_Boot_GND.nif
+  FNAM: Name:Bonemold Boots
+  AODT: Type:(Boots)  Weight:16.00 (Medium)  Value:100  Health:150  Enchantment:70  AR:15
+  ITEX: Icon:a\TX_Bonemold_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_bonemold_boots_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_bonemold_boots_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_bonemold_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_bonemold_boots_a
+
+Record: ARMO "bonemold_shield" Flags:0x0000 ()
+  NAME: ID:bonemold_shield
+  MODL: Model:a\Shield_bonemold.NIF
+  FNAM: Name:Bonemold Shield
+  AODT: Type:(Shield)  Weight:10.00 (Medium)  Value:170  Health:300  Enchantment:400  AR:15
+  ITEX: Icon:a\tx_bonemold_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_bonemold
+
+Record: ARMO "bonemold_towershield" Flags:0x0000 ()
+  NAME: ID:bonemold_towershield
+  MODL: Model:a\Towershield_bonemold.nif
+  FNAM: Name:Bonemold Tower Shield
+  AODT: Type:(Shield)  Weight:13.00 (Medium)  Value:250  Health:340  Enchantment:600  AR:17
+  ITEX: Icon:a\tx_towershield_bonemold.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_bonemold
+
+Record: ARMO "trollbone_helm" Flags:0x0000 ()
+  NAME: ID:trollbone_helm
+  MODL: Model:a\A_Trollbone_Helm.NIF
+  FNAM: Name:Nordic Trollbone Helm
+  AODT: Type:(Helmet)  Weight:8.00 (Heavy)  Value:65  Health:180  Enchantment:200  AR:18
+  ITEX: Icon:a\tx_Trollbone_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_trollbone_helm
+
+Record: ARMO "trollbone_cuirass" Flags:0x0000 ()
+  NAME: ID:trollbone_cuirass
+  MODL: Model:a\A_Trollbone_Cuirass_GND.NIF
+  FNAM: Name:Nordic Trollbone Cuirass
+  AODT: Type:(Cuirass)  Weight:32.00 (Heavy)  Value:165  Health:540  Enchantment:160  AR:18
+  ITEX: Icon:a\tx_trollbone_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_trollbone_cuir
+
+Record: ARMO "trollbone_shield" Flags:0x0000 ()
+  NAME: ID:trollbone_shield
+  MODL: Model:a\TowerShield_Trollbone.NIF
+  FNAM: Name:Nordic Trollbone Shield
+  AODT: Type:(Shield)  Weight:16.00 (Heavy)  Value:78  Health:360  Enchantment:400  AR:18
+  ITEX: Icon:a\tx_towershield_trollbone.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_trollbone
+
+Record: ARMO "dragonscale_helm" Flags:0x0000 ()
+  NAME: ID:dragonscale_helm
+  MODL: Model:a\A_Dragonscale_Helm.NIF
+  FNAM: Name:Imperial Dragonscale Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:130  Health:200  Enchantment:200  AR:20
+  ITEX: Icon:a\tx_dragonscale_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_dragonscale_helm
+
+Record: ARMO "dragonscale_cuirass" Flags:0x0000 ()
+  NAME: ID:dragonscale_cuirass
+  MODL: Model:a\A_Dragonscale_Cuir_GND.NIF
+  FNAM: Name:Imperial Dragonscale Cuirass
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:340  Health:600  Enchantment:160  AR:20
+  ITEX: Icon:a\tx_dragonscale_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_dragonscale_cuirass
+
+Record: ARMO "dragonscale_towershield" Flags:0x0000 ()
+  NAME: ID:dragonscale_towershield
+  MODL: Model:a\Towershield_Dragonscale.NIF
+  FNAM: Name:Dragonscale Tower Shield
+  AODT: Type:(Shield)  Weight:12.00 (Medium)  Value:230  Health:440  Enchantment:600  AR:22
+  ITEX: Icon:a\tx_Towershield_dragon.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_dragonscale
+
+Record: ARMO "dwemer_helm" Flags:0x0000 ()
+  NAME: ID:dwemer_helm
+  MODL: Model:a\A_Dwemer_Helmet.NIF
+  FNAM: Name:Dwemer Helm
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:450  Health:200  Enchantment:250  AR:20
+  ITEX: Icon:a\TX_Dwemer_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_dwemer_helmet
+
+Record: ARMO "dwemer_pauldron_right" Flags:0x0000 ()
+  NAME: ID:dwemer_pauldron_right
+  MODL: Model:a\A_Dwemer_Pauldron_UA.nif
+  FNAM: Name:Dwemer Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:360  Health:200  Enchantment:20  AR:20
+  ITEX: Icon:a\TX_Dwemer_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_dwemer_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_dwemer_cl_pauldron
+
+Record: ARMO "dwemer_pauldron_left" Flags:0x0000 ()
+  NAME: ID:dwemer_pauldron_left
+  MODL: Model:a\A_Dwemer_Pauldron_UA.nif
+  FNAM: Name:Dwemer Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:360  Health:200  Enchantment:20  AR:20
+  ITEX: Icon:a\TX_Dwemer_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_dwemer_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_dwemer_cl_pauldron
+
+Record: ARMO "dwemer_cuirass" Flags:0x0000 ()
+  NAME: ID:dwemer_cuirass
+  MODL: Model:a\A_Dwemer_Cuir_GND.NIF
+  FNAM: Name:Dwemer Cuirass
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:1050  Health:600  Enchantment:200  AR:20
+  ITEX: Icon:a\TX_Dwemer_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_dwemer_cuirass_c
+
+Record: ARMO "dwemer_bracer_left" Flags:0x0000 ()
+  NAME: ID:dwemer_bracer_left
+  MODL: Model:a\A_Dwemer_Bracer_W.nif
+  FNAM: Name:Dwemer Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:5.00 (Heavy)  Value:150  Health:100  Enchantment:200  AR:20
+  ITEX: Icon:a\TX_Dwemer_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_dwemer_bracer_w
+
+Record: ARMO "dwemer_bracer_right" Flags:0x0000 ()
+  NAME: ID:dwemer_bracer_right
+  MODL: Model:a\A_Dwemer_Bracer_W.nif
+  FNAM: Name:Dwemer Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:5.00 (Heavy)  Value:150  Health:100  Enchantment:200  AR:20
+  ITEX: Icon:a\TX_Dwemer_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_dwemer_bracer_w
+
+Record: ARMO "dwemer_greaves" Flags:0x0000 ()
+  NAME: ID:dwemer_greaves
+  MODL: Model:a\A_Dwemer_Greaves_GND.nif
+  FNAM: Name:Dwemer Greaves
+  AODT: Type:(Greaves)  Weight:18.00 (Heavy)  Value:660  Health:200  Enchantment:25  AR:20
+  ITEX: Icon:a\TX_Dwemer_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_dwemer_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_dwemer_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_dwemer_greaves_ul
+
+Record: ARMO "dwemer_boots" Flags:0x0000 ()
+  NAME: ID:dwemer_boots
+  MODL: Model:a\A_Dwemer_Boots_GND.nif
+  FNAM: Name:Dwemer Boots
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:300  Health:200  Enchantment:88  AR:20
+  ITEX: Icon:a\TX_Dwemer_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_dwemer_boots_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_dwemer_boots_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_dwemer_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_dwemer_boots_a
+
+Record: ARMO "dwemer_shield" Flags:0x0000 ()
+  NAME: ID:dwemer_shield
+  MODL: Model:a\Shield_Dwemer.nif
+  FNAM: Name:Dwemer Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:510  Health:400  Enchantment:500  AR:20
+  ITEX: Icon:a\Tx_Dwemer_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_dwemer
+
+Record: ARMO "orcish_helm" Flags:0x0000 ()
+  NAME: ID:orcish_helm
+  MODL: Model:a\A_Orcish_Helmet.nif
+  FNAM: Name:Orcish Helm
+  AODT: Type:(Helmet)  Weight:4.40 (Medium)  Value:1200  Health:300  Enchantment:300  AR:30
+  ITEX: Icon:a\TX_Orcish_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_orcish_helmet
+
+Record: ARMO "orcish_pauldron_right" Flags:0x0000 ()
+  NAME: ID:orcish_pauldron_right
+  MODL: Model:a\A_Orcish_Pauldron_UA.nif
+  FNAM: Name:Orcish Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:8.00 (Medium)  Value:960  Health:300  Enchantment:24  AR:30
+  ITEX: Icon:a\TX_Orcish_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_orcish_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:A_Orcish_CL_Pauldron
+
+Record: ARMO "orcish_pauldron_left" Flags:0x0000 ()
+  NAME: ID:orcish_pauldron_left
+  MODL: Model:a\A_Orcish_Pauldron_GND.nif
+  FNAM: Name:Orcish Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:8.00 (Medium)  Value:960  Health:300  Enchantment:24  AR:30
+  ITEX: Icon:a\TX_Orcish_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_orcish_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:A_Orcish_CL_Pauldron
+
+Record: ARMO "orcish_cuirass" Flags:0x0000 ()
+  NAME: ID:orcish_cuirass
+  MODL: Model:a\A_Orcish_Cuirass_GND.nif
+  FNAM: Name:Orcish Cuirass
+  AODT: Type:(Cuirass)  Weight:26.50 (Medium)  Value:2800  Health:900  Enchantment:240  AR:30
+  ITEX: Icon:a\TX_Orcish_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_orcish_cuirass
+
+Record: ARMO "orcish_bracer_left" Flags:0x0000 ()
+  NAME: ID:orcish_bracer_left
+  MODL: Model:a\A_Orcish_Bracer_GND.nif
+  FNAM: Name:Orcish Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:4.40 (Medium)  Value:400  Health:150  Enchantment:240  AR:30
+  ITEX: Icon:a\TX_Orcish_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_orcish_bracer_w
+
+Record: ARMO "orcish_greaves" Flags:0x0000 ()
+  NAME: ID:orcish_greaves
+  MODL: Model:a\A_Orcish_Greaves_GND.nif
+  FNAM: Name:Orcish Greaves
+  AODT: Type:(Greaves)  Weight:13.45 (Medium)  Value:1760  Health:300  Enchantment:30  AR:30
+  ITEX: Icon:a\TX_Orcish_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_orcish_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_orcish_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_orcish_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_orcish_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_orcish_greaves_k
+
+Record: ARMO "orcish_boots" Flags:0x0000 ()
+  NAME: ID:orcish_boots
+  MODL: Model:a\A_Orcish_Boots_GND.nif
+  FNAM: Name:Orcish Boots
+  AODT: Type:(Boots)  Weight:17.00 (Medium)  Value:800  Health:300  Enchantment:105  AR:30
+  ITEX: Icon:a\TX_Orcish_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_orcish_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_orcish_boot_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_orcish_boot_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_orcish_boot_a
+
+Record: ARMO "orcish_towershield" Flags:0x0000 ()
+  NAME: ID:orcish_towershield
+  MODL: Model:a\Towershield_Orcish.nif
+  FNAM: Name:Orcish Tower Shield
+  AODT: Type:(Shield)  Weight:13.40 (Medium)  Value:2000  Health:640  Enchantment:900  AR:32
+  ITEX: Icon:a\TX_towershield_orcish.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_orcish
+
+Record: ARMO "dreugh_helm" Flags:0x0000 ()
+  NAME: ID:dreugh_helm
+  MODL: Model:a\A_Dreugh_Helm.NIF
+  FNAM: Name:Dreugh Helm
+  AODT: Type:(Helmet)  Weight:4.50 (Medium)  Value:2250  Health:400  Enchantment:225  AR:40
+  ITEX: Icon:a\tx_dreugh_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_dreugh_helm
+
+Record: ARMO "dreugh_cuirass" Flags:0x0000 ()
+  NAME: ID:dreugh_cuirass
+  MODL: Model:a\A_Dreugh_Cuirass_GND.NIF
+  FNAM: Name:Dreugh Cuirass
+  AODT: Type:(Cuirass)  Weight:27.00 (Medium)  Value:5250  Health:1200  Enchantment:180  AR:40
+  ITEX: Icon:a\tx_dreugh_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_dreugh_cuirass
+
+Record: ARMO "dreugh_shield" Flags:0x0000 ()
+  NAME: ID:dreugh_shield
+  MODL: Model:a\Shield_dreugh.NIF
+  FNAM: Name:Dreugh Shield
+  AODT: Type:(Shield)  Weight:13.50 (Medium)  Value:2550  Health:800  Enchantment:450  AR:40
+  ITEX: Icon:a\tx_shield_dreugh.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_dreugh
+
+Record: ARMO "redoran_master_helm" Flags:0x0000 ()
+  NAME: ID:redoran_master_helm
+  MODL: Model:a\A_RedoranMaster_H.NIF
+  FNAM: Name:Redoran Master Helm
+  AODT: Type:(Helmet)  Weight:4.50 (Medium)  Value:3000  Health:450  Enchantment:225  AR:45
+  ITEX: Icon:a\tx_redoranMaster_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_redoranmaster_h
+
+Record: ARMO "glass_helm" Flags:0x0000 ()
+  NAME: ID:glass_helm
+  MODL: Model:a\A_Glass_Helmet.nif
+  FNAM: Name:Glass Helm
+  AODT: Type:(Helmet)  Weight:3.00 (Light)  Value:12000  Health:500  Enchantment:150  AR:50
+  ITEX: Icon:a\TX_Glass_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_glass_helmet
+
+Record: ARMO "glass_cuirass" Flags:0x0000 ()
+  NAME: ID:glass_cuirass
+  MODL: Model:a\A_Glass_cuirass_GND.nif
+  FNAM: Name:Glass Cuirass
+  AODT: Type:(Cuirass)  Weight:18.00 (Light)  Value:28000  Health:1500  Enchantment:120  AR:50
+  ITEX: Icon:a\TX_Glass_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_glass_cuirass
+
+Record: ARMO "glass_shield" Flags:0x0000 ()
+  NAME: ID:glass_shield
+  MODL: Model:a\Shield_Glass.nif
+  FNAM: Name:Glass Shield
+  AODT: Type:(Shield)  Weight:9.00 (Light)  Value:13600  Health:1000  Enchantment:300  AR:50
+  ITEX: Icon:a\TX_shield_glass.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_glass
+
+Record: ARMO "glass_towershield" Flags:0x0000 ()
+  NAME: ID:glass_towershield
+  MODL: Model:a\Towershield_Glass.nif
+  FNAM: Name:Glass Tower Shield
+  AODT: Type:(Shield)  Weight:9.00 (Light)  Value:20000  Health:1100  Enchantment:450  AR:55
+  ITEX: Icon:a\TX_towershield_glass.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_glass
+
+Record: ARMO "ebony_closed_helm" Flags:0x0000 ()
+  NAME: ID:ebony_closed_helm
+  MODL: Model:a\A_Ebony_Helmet.nif
+  FNAM: Name:Ebony Closed Helm
+  AODT: Type:(Helmet)  Weight:10.00 (Heavy)  Value:15000  Health:600  Enchantment:500  AR:60
+  ITEX: Icon:a\Tx_Ebony_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_ebony_helmet
+
+Record: ARMO "ebony_pauldron_right" Flags:0x0000 ()
+  NAME: ID:ebony_pauldron_right
+  MODL: Model:a\A_Ebony_Pauldron_GND.nif
+  FNAM: Name:Ebony Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:20.00 (Heavy)  Value:12000  Health:600  Enchantment:40  AR:60
+  ITEX: Icon:a\Tx_Ebony_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_ebony_pauldron_ua
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:a_ebony_pauldron_fa
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_ebony_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_ebony_cl_pauldron
+
+Record: ARMO "ebony_pauldron_left" Flags:0x0000 ()
+  NAME: ID:ebony_pauldron_left
+  MODL: Model:a\A_Ebony_Pauldron_GND.nif
+  FNAM: Name:Ebony Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:20.00 (Heavy)  Value:12000  Health:600  Enchantment:40  AR:60
+  ITEX: Icon:a\Tx_Ebony_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_ebony_pauldron_ua
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:a_ebony_pauldron_fa
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_ebony_cl_pauldron
+
+Record: ARMO "ebony_cuirass" Flags:0x0000 ()
+  NAME: ID:ebony_cuirass
+  MODL: Model:a\A_Ebony_Cuirass_GND.nif
+  FNAM: Name:Ebony Cuirass
+  AODT: Type:(Cuirass)  Weight:60.00 (Heavy)  Value:35000  Health:1800  Enchantment:400  AR:60
+  ITEX: Icon:a\Tx_Ebony_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_ebony_cuirass
+
+Record: ARMO "ebony_bracer_left" Flags:0x0000 ()
+  NAME: ID:ebony_bracer_left
+  MODL: Model:a\A_Ebony_Bracer_w.nif
+  FNAM: Name:Ebony Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:10.00 (Heavy)  Value:5000  Health:300  Enchantment:400  AR:60
+  ITEX: Icon:a\Tx_Ebony_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_ebony_bracer_w
+
+Record: ARMO "ebony_bracer_right" Flags:0x0000 ()
+  NAME: ID:ebony_bracer_right
+  MODL: Model:a\A_Ebony_Bracer_w.nif
+  FNAM: Name:Ebony Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:10.00 (Heavy)  Value:5000  Health:300  Enchantment:400  AR:60
+  ITEX: Icon:a\Tx_Ebony_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_ebony_bracer_w
+
+Record: ARMO "ebony_greaves" Flags:0x0000 ()
+  NAME: ID:ebony_greaves
+  MODL: Model:a\A_Ebony_Greaves_GND.nif
+  FNAM: Name:Ebony Greaves
+  AODT: Type:(Greaves)  Weight:36.00 (Heavy)  Value:22000  Health:600  Enchantment:50  AR:60
+  ITEX: Icon:a\Tx_Ebony_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_ebony_g_greaves
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_ebony_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_ebony_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_ebony_greaves_k
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_ebony_greaves_k
+
+Record: ARMO "ebony_boots" Flags:0x0000 ()
+  NAME: ID:ebony_boots
+  MODL: Model:a\A_Ebony_Boot_GND.nif
+  FNAM: Name:Ebony Boots
+  AODT: Type:(Boots)  Weight:40.00 (Heavy)  Value:10000  Health:600  Enchantment:175  AR:60
+  ITEX: Icon:a\Tx_Ebony_boot.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_ebony_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_ebony_boot_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_ebony_boot_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_ebony_boot_a
+
+Record: ARMO "ebony_shield" Flags:0x0000 ()
+  NAME: ID:ebony_shield
+  MODL: Model:a\Shield_ebony.NIF
+  FNAM: Name:Ebony Shield
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:17000  Health:1200  Enchantment:1000  AR:60
+  ITEX: Icon:a\tx_shield_ebony.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_ebony
+
+Record: ARMO "ebony_towershield" Flags:0x0000 ()
+  NAME: ID:ebony_towershield
+  MODL: Model:a\TowerShield_ebony.NIF
+  FNAM: Name:Ebony Tower Shield
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:25000  Health:1200  Enchantment:1500  AR:60
+  ITEX: Icon:a\tx_towershield_ebony.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_ebony
+
+Record: ARMO "daedric_fountain_helm" Flags:0x0000 ()
+  NAME: ID:daedric_fountain_helm
+  MODL: Model:a\A_Daedric_fountain_h.NIF
+  FNAM: Name:Daedric Face of Inspiration
+  AODT: Type:(Helmet)  Weight:15.00 (Heavy)  Value:13000  Health:650  Enchantment:750  AR:65
+  ITEX: Icon:a\TX_Daedric_fountain_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_daedric_fountain_h
+
+Record: ARMO "daedric_terrifying_helm" Flags:0x0000 ()
+  NAME: ID:daedric_terrifying_helm
+  MODL: Model:a\A_Daedric_terrifying_h.nif
+  FNAM: Name:Daedric Face of Terror
+  AODT: Type:(Helmet)  Weight:15.00 (Heavy)  Value:14000  Health:750  Enchantment:750  AR:75
+  ITEX: Icon:a\TX_Daedric_terrifying_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_daedric_terrifying_h
+
+Record: ARMO "daedric_god_helm" Flags:0x0000 ()
+  NAME: ID:daedric_god_helm
+  MODL: Model:a\A_Daedric_god_h.NIF
+  FNAM: Name:Daedric Face of God
+  AODT: Type:(Helmet)  Weight:15.00 (Heavy)  Value:15000  Health:800  Enchantment:750  AR:80
+  ITEX: Icon:a\TX_Daedric_god_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_daedric_god_h
+
+Record: ARMO "daedric_pauldron_right" Flags:0x0000 ()
+  NAME: ID:daedric_pauldron_right
+  MODL: Model:a\A_Daedric_Pauldron_GND.nif
+  FNAM: Name:Daedric Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:30.00 (Heavy)  Value:24000  Health:800  Enchantment:60  AR:80
+  ITEX: Icon:a\Tx_Daedric_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_daedric_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_daedric_pauldron_cl
+
+Record: ARMO "daedric_pauldron_left" Flags:0x0000 ()
+  NAME: ID:daedric_pauldron_left
+  MODL: Model:a\A_Daedric_Pauldron_GND.nif
+  FNAM: Name:Daedric Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:30.00 (Heavy)  Value:24000  Health:800  Enchantment:60  AR:80
+  ITEX: Icon:a\Tx_Daedric_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_daedric_pauldron_ua
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_daedric_pauldron_cl
+
+Record: ARMO "daedric_cuirass" Flags:0x0000 ()
+  NAME: ID:daedric_cuirass
+  MODL: Model:a\A_Daedric_cuirass_GND.nif
+  FNAM: Name:Daedric Cuirass
+  AODT: Type:(Cuirass)  Weight:90.00 (Heavy)  Value:70000  Health:2400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_daedric_cuirass
+
+Record: ARMO "daedric_gauntlet_left" Flags:0x0000 ()
+  NAME: ID:daedric_gauntlet_left
+  MODL: Model:a\A_Daedric_gauntlet_GND.nif
+  FNAM: Name:Daedric Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:15.00 (Heavy)  Value:14000  Health:400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_daedric_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "daedric_gauntlet_right" Flags:0x0000 ()
+  NAME: ID:daedric_gauntlet_right
+  MODL: Model:a\A_Daedric_gauntlet_GND.nif
+  FNAM: Name:Daedric Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:15.00 (Heavy)  Value:14000  Health:400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_daedric_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "daedric_greaves" Flags:0x0000 ()
+  NAME: ID:daedric_greaves
+  MODL: Model:a\A_Daedric_Greaves_GND.nif
+  FNAM: Name:Daedric Greaves
+  AODT: Type:(Greaves)  Weight:54.00 (Heavy)  Value:44000  Health:800  Enchantment:75  AR:80
+  ITEX: Icon:a\Tx_Daedric_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_daedric_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_daedric_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_daedric_greaves_ul
+
+Record: ARMO "daedric_boots" Flags:0x0000 ()
+  NAME: ID:daedric_boots
+  MODL: Model:a\A_Daedric_Boots_GND.nif
+  FNAM: Name:Daedric Boots
+  AODT: Type:(Boots)  Weight:60.00 (Heavy)  Value:20000  Health:800  Enchantment:263  AR:80
+  ITEX: Icon:a\Tx_Daedric_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_daedric_boots_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_daedric_boots_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_daedric_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_daedric_boots_a
+
+Record: ARMO "daedric_shield" Flags:0x0000 ()
+  NAME: ID:daedric_shield
+  MODL: Model:a\Shield_Daedric.nif
+  FNAM: Name:Daedric Shield
+  AODT: Type:(Shield)  Weight:45.00 (Heavy)  Value:34000  Health:1600  Enchantment:1500  AR:80
+  ITEX: Icon:a\TX_shield_daedric.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_daedric
+
+Record: ARMO "daedric_towershield" Flags:0x0000 ()
+  NAME: ID:daedric_towershield
+  MODL: Model:a\Towershield_Daedric.nif
+  FNAM: Name:Daedric Tower Shield
+  AODT: Type:(Shield)  Weight:45.00 (Heavy)  Value:50000  Health:1600  Enchantment:2250  AR:80
+  ITEX: Icon:a\TX_Towershield_daedric.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_daedric
+
+Record: ARMO "netch_leather_pauldron_right" Flags:0x0000 ()
+  NAME: ID:netch_leather_pauldron_right
+  MODL: Model:a\A_Netch_M_Pauldron_GND.nif
+  FNAM: Name:Netch Leather Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:4.00 (Light)  Value:12  Health:50  Enchantment:10  AR:5
+  ITEX: Icon:a\Tx_Netch_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_netch_m_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_netch_m_pauldron_cl
+
+Record: ARMO "fur_pauldron_right" Flags:0x0000 ()
+  NAME: ID:fur_pauldron_right
+  MODL: Model:a\A_NordicFur_Pauldron_GND.nif
+  FNAM: Name:Nordic Fur Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:3.00 (Light)  Value:12  Health:50  Enchantment:10  AR:5
+  ITEX: Icon:a\Tx_NordicFur_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_nordicfur_pauldron_ua
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_nordicfur_pauldron_cl
+
+Record: ARMO "orcish_bracer_right" Flags:0x0000 ()
+  NAME: ID:orcish_bracer_right
+  MODL: Model:a\A_Orcish_Bracer_GND.nif
+  FNAM: Name:Orcish Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:4.40 (Medium)  Value:400  Health:150  Enchantment:240  AR:30
+  ITEX: Icon:a\TX_Orcish_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_orcish_bracer_w
+
+Record: ARMO "imperial_chain_greaves" Flags:0x0000 ()
+  NAME: ID:imperial_chain_greaves
+  MODL: Model:a\A_M_ImperialChain_Gr_GND.nif
+  FNAM: Name:Imperial Chain Greaves
+  AODT: Type:(Greaves)  Weight:10.00 (Medium)  Value:50  Health:200  Enchantment:70  AR:20
+  ITEX: Icon:a\Tx_ImperialChain_Greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_m_imperialchain_gr_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_m_imperialchain_gr_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_m_imperialchain_gr_ul
+
+Record: ARMO "templar_helmet_armor" Flags:0x0000 ()
+  NAME: ID:templar_helmet_armor
+  MODL: Model:a\A_Templar_M_Helmet.nif
+  FNAM: Name:Imperial Templar Helmet
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:75  Health:180  Enchantment:250  AR:18
+  ITEX: Icon:a\Tx_Templar_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:templar_helmet
+
+Record: ARMO "imperial cuirass_armor" Flags:0x0000 ()
+  NAME: ID:imperial cuirass_armor
+  MODL: Model:a\A_Imperial_M_Cuirass_GND.nif
+  FNAM: Name:Imperial Steel Cuirass
+  SCRI: Script:LegionUniform
+  AODT: Type:(Cuirass)  Weight:29.00 (Heavy)  Value:150  Health:460  Enchantment:200  AR:16
+  ITEX: Icon:a\Tx_Imperial_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:imperial cuirass
+
+Record: ARMO "fur_gauntlet_left" Flags:0x0000 ()
+  NAME: ID:fur_gauntlet_left
+  MODL: Model:a\A_NordicFur_Gauntlet_GND.nif
+  FNAM: Name:Nordic Fur Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:1.50 (Light)  Value:7  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_NordicFur_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_nordicfur_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "fur_gauntlet_right" Flags:0x0000 ()
+  NAME: ID:fur_gauntlet_right
+  MODL: Model:a\A_NordicFur_Gauntlet_GND.nif
+  FNAM: Name:Nordic Fur Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:1.50 (Light)  Value:7  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_NordicFur_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_nordicfur_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "imperial_chain_pauldron_right" Flags:0x0000 ()
+  NAME: ID:imperial_chain_pauldron_right
+  MODL: Model:a\A_M_ImperialChain_Pa_GND.nif
+  FNAM: Name:Imperial Chain Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:10.00 (Heavy)  Value:28  Health:200  Enchantment:70  AR:20
+  ITEX: Icon:a\Tx_ImperialChain_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_m_imperialchain_pa_ua
+
+Record: ARMO "imperial_chain_pauldron_left" Flags:0x0000 ()
+  NAME: ID:imperial_chain_pauldron_left
+  MODL: Model:a\A_M_ImperialChain_Pa_UA.nif
+  FNAM: Name:Imperial Chain Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:10.00 (Heavy)  Value:28  Health:200  Enchantment:70  AR:20
+  ITEX: Icon:a\Tx_ImperialChain_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_m_imperialchain_pa_ua
+
+Record: ARMO "iron_gauntlet_left" Flags:0x0000 ()
+  NAME: ID:iron_gauntlet_left
+  MODL: Model:a\A_Iron_Gauntlet_GND.nif
+  FNAM: Name:Iron Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:7.00 (Heavy)  Value:14  Health:50  Enchantment:25  AR:10
+  ITEX: Icon:a\Tx_Iron_Gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_iron_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+
+Record: ARMO "iron_gauntlet_right" Flags:0x0000 ()
+  NAME: ID:iron_gauntlet_right
+  MODL: Model:a\A_Iron_Gauntlet_GND.nif
+  FNAM: Name:Iron Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:7.00 (Heavy)  Value:14  Health:50  Enchantment:10  AR:10
+  ITEX: Icon:a\Tx_Iron_Gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_iron_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+
+Record: ARMO "iron_helmet" Flags:0x0000 ()
+  NAME: ID:iron_helmet
+  MODL: Model:a\A_Iron_Helm_01.nif
+  FNAM: Name:Iron Helmet
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:30  Health:100  Enchantment:25  AR:10
+  ITEX: Icon:a\Tx_Iron_Helm_01.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_iron_helm_01
+
+Record: ARMO "bonemold_tshield_hlaaluguard" Flags:0x0000 ()
+  NAME: ID:bonemold_tshield_hlaaluguard
+  MODL: Model:a\Towershield_Hlaluu.NIF
+  FNAM: Name:Hlaalu Guard Shield
+  AODT: Type:(Shield)  Weight:13.00 (Medium)  Value:250  Health:340  Enchantment:600  AR:17
+  ITEX: Icon:a\tx_Towershield_Hlaalu.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_hlaluu
+
+Record: ARMO "bonemold_tshield_redoranguard" Flags:0x0000 ()
+  NAME: ID:bonemold_tshield_redoranguard
+  MODL: Model:a\Towershield_RedoranM.NIF
+  FNAM: Name:Redoran Guard Shield
+  AODT: Type:(Shield)  Weight:13.00 (Medium)  Value:250  Health:340  Enchantment:600  AR:17
+  ITEX: Icon:a\Tx_Towershield_RedoranM.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_redoranm
+
+Record: ARMO "bonemold_tshield_telvanniguard" Flags:0x0000 ()
+  NAME: ID:bonemold_tshield_telvanniguard
+  MODL: Model:a\Towershield_Telvanni.NIF
+  FNAM: Name:Telvanni Guard Shield
+  AODT: Type:(Shield)  Weight:13.00 (Medium)  Value:250  Health:340  Enchantment:600  AR:17
+  ITEX: Icon:a\tx_towershield_Telv.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_telvanni
+
+Record: ARMO "bonemold_founders_helm" Flags:0x0000 ()
+  NAME: ID:bonemold_founders_helm
+  MODL: Model:a\A_Bonemold_Helmet.nif
+  FNAM: Name:Redoran Founder's Helm
+  AODT: Type:(Helmet)  Weight:4.40 (Medium)  Value:150  Health:180  Enchantment:200  AR:18
+  ITEX: Icon:a\TX_Bonemold_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_helmet
+
+Record: ARMO "glass_pauldron_left" Flags:0x0000 ()
+  NAME: ID:glass_pauldron_left
+  MODL: Model:a\A_Glass_Pauldron_GND.nif
+  FNAM: Name:Glass Left Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:3.00 (Light)  Value:9600  Health:500  Enchantment:15  AR:50
+  ITEX: Icon:a\TX_Glass_pauldron.tga
+ *INDX: Part_Index:(Left_Pauldron)
+  BNAM: Male_Body_ID:a_glass_cl_pauldron
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_glass_pauldron_ua
+ *INDX: Part_Index:(Left_Forearm)
+  BNAM: Male_Body_ID:a_glass_pauldron_fa
+
+Record: ARMO "glass_pauldron_right" Flags:0x0000 ()
+  NAME: ID:glass_pauldron_right
+  MODL: Model:a\A_Glass_Pauldron_GND.nif
+  FNAM: Name:Glass Right Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:3.00 (Light)  Value:9600  Health:500  Enchantment:15  AR:50
+  ITEX: Icon:a\TX_Glass_pauldron.tga
+ *INDX: Part_Index:(Right_Pauldron)
+  BNAM: Male_Body_ID:a_glass_cl_pauldron
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_glass_pauldron_ua
+ *INDX: Part_Index:(Right_Forearm)
+  BNAM: Male_Body_ID:a_glass_pauldron_fa
+
+Record: ARMO "ebony_closed_helm_fghl" Flags:0x0000 ()
+  NAME: ID:ebony_closed_helm_fghl
+  MODL: Model:a\A_Ebony_Helmet.nif
+  FNAM: Name:Sarano Ebony Helm
+  AODT: Type:(Helmet)  Weight:10.00 (Heavy)  Value:15000  Health:600  Enchantment:500  AR:60
+  ITEX: Icon:a\Tx_Ebony_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_ebony_helmet
+
+Record: ARMO "merisan_cuirass" Flags:0x0000 ()
+  NAME: ID:merisan_cuirass
+  MODL: Model:a\A_Netch_M_cuirass_GND.nif
+  FNAM: Name:Merisan Cuirass
+  AODT: Type:(Cuirass)  Weight:12.00 (Light)  Value:55  Health:150  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_Netch_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_netch_m_chest
+  ENAM: Enchanting:rest of st. merris_en
+
+Record: ARMO "shield_of_light" Flags:0x0000 ()
+  NAME: ID:shield_of_light
+  MODL: Model:a\A_Shield_Imperial.nif
+  FNAM: Name:Shield of Light
+  AODT: Type:(Shield)  Weight:6.00 (Light)  Value:85  Health:100  Enchantment:375  AR:5
+  ITEX: Icon:a\Tx_Imperial_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:a_shield_imperial
+  ENAM: Enchanting:light_en
+
+Record: ARMO "the_chiding_cuirass" Flags:0x0000 ()
+  NAME: ID:the_chiding_cuirass
+  MODL: Model:a\A_M_Chitin_Cuirass_GND.nif
+  FNAM: Name:The Chiding Cuirass
+  AODT: Type:(Cuirass)  Weight:6.00 (Light)  Value:280  Health:300  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_m_chitin_chest
+  ENAM: Enchanting:weariness_en
+
+Record: ARMO "velothian_helm" Flags:0x0000 ()
+  NAME: ID:velothian_helm
+  MODL: Model:a\A_M_Chitin_Helmet.nif
+  FNAM: Name:Velothian Helm
+  AODT: Type:(Helmet)  Weight:1.00 (Light)  Value:75  Health:100  Enchantment:125  AR:10
+  ITEX: Icon:a\TX_Chitin_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_m_chitin_helmet
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "feather_shield" Flags:0x0000 ()
+  NAME: ID:feather_shield
+  MODL: Model:a\A_Shield_Imperial.nif
+  FNAM: Name:Feather Shield
+  AODT: Type:(Shield)  Weight:6.00 (Light)  Value:120  Health:240  Enchantment:150  AR:12
+  ITEX: Icon:a\Tx_Imperial_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:a_shield_imperial
+  ENAM: Enchanting:feather_en
+
+Record: ARMO "velothis_shield" Flags:0x0000 ()
+  NAME: ID:velothis_shield
+  MODL: Model:a\A_Shield_Imperial.nif
+  FNAM: Name:Velothi's Shield
+  AODT: Type:(Shield)  Weight:4.00 (Light)  Value:85  Health:200  Enchantment:250  AR:10
+  ITEX: Icon:a\Tx_Imperial_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:a_shield_imperial
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "holy_shield" Flags:0x0000 ()
+  NAME: ID:holy_shield
+  MODL: Model:a\Shield_bonemold.NIF
+  FNAM: Name:Holy Shield
+  AODT: Type:(Shield)  Weight:12.00 (Medium)  Value:220  Health:300  Enchantment:400  AR:15
+  ITEX: Icon:a\tx_bonemold_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_bonemold
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "blessed_shield" Flags:0x0000 ()
+  NAME: ID:blessed_shield
+  MODL: Model:a\shield_steel.NIF
+  FNAM: Name:Blessed Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:130  Health:300  Enchantment:500  AR:15
+  ITEX: Icon:a\Tx_shield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_steel
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "veloths_tower_shield" Flags:0x0000 ()
+  NAME: ID:veloths_tower_shield
+  MODL: Model:a\TowerShield_Netch_leather.NIF
+  FNAM: Name:Veloth's Tower Shield
+  AODT: Type:(Shield)  Weight:9.00 (Light)  Value:150  Health:100  Enchantment:225  AR:12
+  ITEX: Icon:a\Tx_Towershield_Netch.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_netch_leather
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "holy_tower_shield" Flags:0x0000 ()
+  NAME: ID:holy_tower_shield
+  MODL: Model:a\Towershield_bonemold.nif
+  FNAM: Name:Holy Tower Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:3100  Health:340  Enchantment:600  AR:17
+  ITEX: Icon:a\tx_towershield_bonemold.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_bonemold
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "demon helm" Flags:0x0000 ()
+  NAME: ID:demon helm
+  MODL: Model:a\A_DustAdept_Helm.NIF
+  FNAM: Name:Demon Helm
+  AODT: Type:(Helmet)  Weight:1.50 (Light)  Value:800  Health:50  Enchantment:250  AR:5
+  ITEX: Icon:a\Tx_dustAdept_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_dustadept_helm
+  ENAM: Enchanting:bound gauntlets_en
+
+Record: ARMO "demon mole crab" Flags:0x0000 ()
+  NAME: ID:demon mole crab
+  MODL: Model:a\A_molecrab_helm.NIF
+  FNAM: Name:Demon Mole Crab
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:900  Health:60  Enchantment:500  AR:6
+  ITEX: Icon:a\tx_molecrab_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_molecrab_helm
+  ENAM: Enchanting:bound boots_en
+
+Record: ARMO "demon cephalopod" Flags:0x0000 ()
+  NAME: ID:demon cephalopod
+  MODL: Model:a\A_Cephalopod_helm.NIF
+  FNAM: Name:Demon Cephalopod
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:1500  Health:80  Enchantment:1000  AR:8
+  ITEX: Icon:a\Tx_cephalopod_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_cephalopod_helm
+  ENAM: Enchanting:bound cuirass_en
+
+Record: ARMO "right horny fist gauntlet" Flags:0x0000 ()
+  NAME: ID:right horny fist gauntlet
+  MODL: Model:a\A_Netch_M_gauntlet_GND.nif
+  FNAM: Name:Right Glove of the Horny Fist
+  AODT: Type:(Right_Gauntlet)  Weight:3.00 (Light)  Value:10  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_Netch_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_netch_m_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:dynamic horny fist_enu
+
+Record: ARMO "left_horny_fist_gauntlet" Flags:0x0000 ()
+  NAME: ID:left_horny_fist_gauntlet
+  MODL: Model:a\A_Netch_M_gauntlet_GND.nif
+  FNAM: Name:Left Glove of the Horny Fist
+  AODT: Type:(Left_Gauntlet)  Weight:3.00 (Light)  Value:10  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_Netch_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_netch_m_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:dynamic horny fist_en
+
+Record: ARMO "helm of wounding" Flags:0x0000 ()
+  NAME: ID:helm of wounding
+  MODL: Model:a\A_Dwemer_Helmet.NIF
+  FNAM: Name:Helm of Wounding
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:500  Health:200  Enchantment:250  AR:20
+  ITEX: Icon:a\TX_Dwemer_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_dwemer_helmet
+  ENAM: Enchanting:wound_enu
+
+Record: ARMO "shield of wounds" Flags:0x0000 ()
+  NAME: ID:shield of wounds
+  MODL: Model:a\Shield_Dwemer.nif
+  FNAM: Name:Shield of Wounds
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:620  Health:400  Enchantment:500  AR:20
+  ITEX: Icon:a\Tx_Dwemer_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_dwemer
+  ENAM: Enchanting:wound_enu
+
+Record: ARMO "storm helm" Flags:0x0000 ()
+  NAME: ID:storm helm
+  MODL: Model:a\A_Bonemold_Gah_Julan_h.nif
+  FNAM: Name:Storm Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:215  Health:160  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_h
+  ENAM: Enchanting:lightning shield_en
+
+Record: ARMO "heart wall" Flags:0x0000 ()
+  NAME: ID:heart wall
+  MODL: Model:a\A_Bonemold_Gah_Julan_CGND.NIF
+  FNAM: Name:Heart Wall
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:100  Health:510  Enchantment:160  AR:17
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_c.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_c
+  ENAM: Enchanting:great resist magicka_en
+
+Record: ARMO "right gauntlet of horny fist" Flags:0x0000 ()
+  NAME: ID:right gauntlet of horny fist
+  MODL: Model:a\A_M_Chitin_Gauntlet_GND.nif
+  FNAM: Name:Right Gauntlet of Horny Fist
+  AODT: Type:(Right_Gauntlet)  Weight:1.00 (Light)  Value:15  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_m_chitin_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:masterful horny fist_en
+
+Record: ARMO "left gauntlet of the horny fist" Flags:0x0000 ()
+  NAME: ID:left gauntlet of the horny fist
+  MODL: Model:a\A_M_Chitin_Gauntlet_GND.nif
+  FNAM: Name:Left Gauntlet of the Horny Fist
+  AODT: Type:(Left_Gauntlet)  Weight:1.00 (Light)  Value:15  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_m_chitin_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:masterful horny fist_en
+
+Record: ARMO "velothian shield" Flags:0x0000 ()
+  NAME: ID:velothian shield
+  MODL: Model:a\Shield_Chitin.NIF
+  FNAM: Name:Velothian Shield
+  AODT: Type:(Shield)  Weight:4.00 (Light)  Value:85  Health:200  Enchantment:250  AR:10
+  ITEX: Icon:a\Tx_shield_chitin.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_chitin
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "succour of indoril" Flags:0x0000 ()
+  NAME: ID:succour of indoril
+  MODL: Model:a\Shield_Indoril.nif
+  FNAM: Name:Succour of Indoril
+  AODT: Type:(Shield)  Weight:13.50 (Medium)  Value:4200  Health:900  Enchantment:450  AR:45
+  ITEX: Icon:a\Tx_Indoril_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:Shield_Indoril
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "merisan helm" Flags:0x0000 ()
+  NAME: ID:merisan helm
+  MODL: Model:a\A_M_Chitin_Helmet.nif
+  FNAM: Name:Merisan Helm
+  AODT: Type:(Helmet)  Weight:1.00 (Light)  Value:45  Health:100  Enchantment:125  AR:10
+  ITEX: Icon:a\TX_Chitin_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_m_chitin_helmet
+  ENAM: Enchanting:rest of st. merris_en
+
+Record: ARMO "chest of fire" Flags:0x0000 ()
+  NAME: ID:chest of fire
+  MODL: Model:a\A_M_Chitin_Cuirass_GND.nif
+  FNAM: Name:Chest of Fire
+  AODT: Type:(Cuirass)  Weight:6.00 (Light)  Value:80  Health:300  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_curaiss.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_m_chitin_chest
+  ENAM: Enchanting:fire shield_en
+
+Record: ARMO "lbonemold brace of horny fist" Flags:0x0000 ()
+  NAME: ID:lbonemold brace of horny fist
+  MODL: Model:a\A_Bonemold_Bracer_GND.nif
+  FNAM: Name:Bonemold Brace of Horny Fist
+  AODT: Type:(Left_Bracer)  Weight:4.00 (Medium)  Value:30  Health:75  Enchantment:160  AR:15
+  ITEX: Icon:a\TX_Bonemold_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_bonemold_bracer_w
+  ENAM: Enchanting:dynamic horny fist_en
+
+Record: ARMO "rbonemold bracer of horny fist" Flags:0x0000 ()
+  NAME: ID:rbonemold bracer of horny fist
+  MODL: Model:a\A_Bonemold_Bracer_GND.nif
+  FNAM: Name:Bonemold Bracer of Horny Fist
+  AODT: Type:(Right_Bracer)  Weight:4.00 (Medium)  Value:30  Health:75  Enchantment:160  AR:15
+  ITEX: Icon:a\TX_Bonemold_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_bonemold_bracer_w
+  ENAM: Enchanting:dynamic horny fist_en
+
+Record: ARMO "helm of holy fire" Flags:0x0000 ()
+  NAME: ID:helm of holy fire
+  MODL: Model:a\A_Dreugh_Helm.NIF
+  FNAM: Name:Helm of Holy Fire
+  AODT: Type:(Helmet)  Weight:4.50 (Medium)  Value:7050  Health:400  Enchantment:225  AR:40
+  ITEX: Icon:a\tx_dreugh_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_dreugh_helm
+  ENAM: Enchanting:fire shield_en
+
+Record: ARMO "spirit of indoril" Flags:0x0000 ()
+  NAME: ID:spirit of indoril
+  MODL: Model:a\Shield_Indoril.nif
+  FNAM: Name:Spirit of Indoril
+  AODT: Type:(Shield)  Weight:13.50 (Medium)  Value:5400  Health:900  Enchantment:450  AR:45
+  ITEX: Icon:a\Tx_Indoril_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:Shield_Indoril
+  ENAM: Enchanting:summon ancestral ghost_en
+
+Record: ARMO "saint's shield" Flags:0x0000 ()
+  NAME: ID:saint's shield
+  MODL: Model:a\Shield_ebony.NIF
+  FNAM: Name:Saint's Shield
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:15000  Health:1200  Enchantment:1000  AR:60
+  ITEX: Icon:a\tx_shield_ebony.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_ebony
+  ENAM: Enchanting:saint's shield_en
+
+Record: ARMO "azura's servant" Flags:0x0000 ()
+  NAME: ID:azura's servant
+  MODL: Model:a\Shield_Daedric.nif
+  FNAM: Name:Azura's Servant
+  AODT: Type:(Shield)  Weight:45.00 (Heavy)  Value:30000  Health:1600  Enchantment:1500  AR:80
+  ITEX: Icon:a\TX_shield_daedric.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_daedric
+  ENAM: Enchanting:azura's servant_en
+
+Record: ARMO "bound_cuirass" Flags:0x0000 ()
+  NAME: ID:bound_cuirass
+  MODL: Model:a\A_Daedric_cuirass_GND.nif
+  FNAM: Name:Bound Cuirass
+  AODT: Type:(Cuirass)  Weight:0.00 (Light)  Value:0  Health:2400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_daedric_cuirass
+  ENAM: Enchanting:bound cuirass_effects_en
+
+Record: ARMO "bound_helm" Flags:0x0000 ()
+  NAME: ID:bound_helm
+  MODL: Model:a\A_Daedric_terrifying_h.nif
+  FNAM: Name:Bound_Helm
+  AODT: Type:(Helmet)  Weight:0.00 (Light)  Value:0  Health:750  Enchantment:750  AR:75
+  ITEX: Icon:a\TX_Daedric_terrifying_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_daedric_terrifying_h
+  ENAM: Enchanting:bound helm_effect_en
+
+Record: ARMO "bound_boots" Flags:0x0000 ()
+  NAME: ID:bound_boots
+  MODL: Model:a\A_Daedric_Boots_GND.nif
+  FNAM: Name:Bound Boots
+  AODT: Type:(Boots)  Weight:0.00 (Light)  Value:0  Health:800  Enchantment:263  AR:80
+  ITEX: Icon:a\Tx_Daedric_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_daedric_boots_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_daedric_boots_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_daedric_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_daedric_boots_a
+  ENAM: Enchanting:bound boots_effect_en
+
+Record: ARMO "bound_shield" Flags:0x0000 ()
+  NAME: ID:bound_shield
+  MODL: Model:a\Shield_Daedric.nif
+  FNAM: Name:Bound Shield
+  AODT: Type:(Shield)  Weight:0.00 (Light)  Value:0  Health:1600  Enchantment:1500  AR:80
+  ITEX: Icon:a\TX_shield_daedric.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_daedric
+  ENAM: Enchanting:bound shield_effect_en
+
+Record: ARMO "fiend helm" Flags:0x0000 ()
+  NAME: ID:fiend helm
+  MODL: Model:a\A_DustAdept_Helm.NIF
+  FNAM: Name:Fiend Helm
+  AODT: Type:(Helmet)  Weight:1.50 (Light)  Value:6000  Health:50  Enchantment:250  AR:5
+  ITEX: Icon:a\Tx_dustAdept_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_dustadept_helm
+  ENAM: Enchanting:fiend_helm_en
+
+Record: ARMO "devil helm" Flags:0x0000 ()
+  NAME: ID:devil helm
+  MODL: Model:a\A_DustAdept_Helm.NIF
+  FNAM: Name:Devil Helm
+  AODT: Type:(Helmet)  Weight:1.50 (Light)  Value:1000  Health:50  Enchantment:250  AR:5
+  ITEX: Icon:a\Tx_dustAdept_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_dustadept_helm
+  ENAM: Enchanting:devil helm_en
+
+Record: ARMO "devil mole crab helm" Flags:0x0000 ()
+  NAME: ID:devil mole crab helm
+  MODL: Model:a\A_molecrab_helm.NIF
+  FNAM: Name:Devil Mole Crab Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:1200  Health:50  Enchantment:500  AR:6
+  ITEX: Icon:a\tx_molecrab_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_molecrab_helm
+  ENAM: Enchanting:devil mole crab
+
+Record: ARMO "devil cephalopod helm" Flags:0x0000 ()
+  NAME: ID:devil cephalopod helm
+  MODL: Model:a\A_Cephalopod_helm.NIF
+  FNAM: Name:Devil Cephalopod Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:1700  Health:80  Enchantment:1000  AR:8
+  ITEX: Icon:a\Tx_cephalopod_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_cephalopod_helm
+  ENAM: Enchanting:devil cephalopod
+
+Record: ARMO "right cloth horny fist bracer" Flags:0x0000 ()
+  NAME: ID:right cloth horny fist bracer
+  MODL: Model:c\C_M_Bracer_W_clothwrap02.nif
+  FNAM: Name:Right Cloth Horny Fist Bracer
+  AODT: Type:(Right_Bracer)  Weight:1.50 (Light)  Value:7  Health:20  Enchantment:60  AR:4
+  ITEX: Icon:c\TX_C_bracerCloth.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:c_m_bracer_w_clothwrap02
+  ENAM: Enchanting:dynamic horny fist_en
+
+Record: ARMO "left cloth horny fist bracer" Flags:0x0000 ()
+  NAME: ID:left cloth horny fist bracer
+  MODL: Model:c\C_M_Bracer_W_clothwrap02.nif
+  FNAM: Name:Left Cloth Horny Fist Bracer
+  AODT: Type:(Left_Bracer)  Weight:1.50 (Light)  Value:7  Health:20  Enchantment:60  AR:4
+  ITEX: Icon:c\TX_C_bracerCloth.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:c_m_bracer_w_clothwrap02
+  ENAM: Enchanting:dynamic horny fist_en
+
+Record: ARMO "steel_boots" Flags:0x0000 ()
+  NAME: ID:steel_boots
+  MODL: Model:a\A_Steel_Boots_GND.nif
+  FNAM: Name:Steel Boots
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:40  Health:150  Enchantment:88  AR:15
+  ITEX: Icon:a\Tx_Steel_boot.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_steel_boot_f
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_steel_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_steel_boot_a
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_steel_boot_a
+
+Record: ARMO "bonemold_tshield_hrlb" Flags:0x0000 ()
+  NAME: ID:bonemold_tshield_hrlb
+  MODL: Model:a\Towershield_RedoranM.NIF
+  FNAM: Name:Redoran Banner Shield
+  AODT: Type:(Shield)  Weight:13.00 (Medium)  Value:250  Health:340  Enchantment:600  AR:17
+  ITEX: Icon:a\Tx_Towershield_RedoranM.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_bonemold
+
+Record: ARMO "bonemold_gah-julan_hhda" Flags:0x0000 ()
+  NAME: ID:bonemold_gah-julan_hhda
+  MODL: Model:a\A_Bonemold_Gah_Julan_h.nif
+  FNAM: Name:Native Gah-Julan Bonemold Helm
+  SCRI: Script:disguisedArmor
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:167  Health:160  Enchantment:200  AR:16
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_h.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_h
+
+Record: ARMO "dwemer_boots of flying" Flags:0x0000 ()
+  NAME: ID:dwemer_boots of flying
+  MODL: Model:a\A_Dwemer_Boots_GND.nif
+  FNAM: Name:Dwemer Boots of Flying
+  AODT: Type:(Boots)  Weight:20.00 (Heavy)  Value:470  Health:200  Enchantment:88  AR:20
+  ITEX: Icon:a\TX_Dwemer_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_dwemer_boots_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_dwemer_boots_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_dwemer_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_dwemer_boots_a
+  ENAM: Enchanting:wild levitate_en
+
+Record: ARMO "bonemold_helm" Flags:0x0000 ()
+  NAME: ID:bonemold_helm
+  MODL: Model:a\A_Bonemold_Helmet.nif
+  FNAM: Name:Bonemold Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:150  Health:180  Enchantment:200  AR:18
+  ITEX: Icon:a\TX_Bonemold_helmet.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_bonemold_helmet
+
+Record: ARMO "bonemold_pauldron_r" Flags:0x0000 ()
+  NAME: ID:bonemold_pauldron_r
+  MODL: Model:a\A_Bonemold_Pauldron_GND.nif
+  FNAM: Name:Bonemold R Pauldron
+  AODT: Type:(Right_Pauldron)  Weight:8.00 (Medium)  Value:120  Health:150  Enchantment:16  AR:15
+  ITEX: Icon:a\TX_Bonemold_pauldron.tga
+ *INDX: Part_Index:(Right_Upper_Arm)
+  BNAM: Male_Body_ID:a_bonemold_pauldron_ua
+
+Record: ARMO "bonemold_pauldron_l" Flags:0x0000 ()
+  NAME: ID:bonemold_pauldron_l
+  MODL: Model:a\A_Bonemold_Pauldron_GND.nif
+  FNAM: Name:Bonemold L Pauldron
+  AODT: Type:(Left_Pauldron)  Weight:8.00 (Medium)  Value:120  Health:150  Enchantment:16  AR:15
+  ITEX: Icon:a\TX_Bonemold_pauldron.tga
+ *INDX: Part_Index:(Left_Upper_Arm)
+  BNAM: Male_Body_ID:a_bonemold_pauldron_ua
+
+Record: ARMO "bonemold_cuirass" Flags:0x0000 ()
+  NAME: ID:bonemold_cuirass
+  MODL: Model:a\A_Bonemold_cuirass_GND.nif
+  FNAM: Name:Bonemold Cuirass
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:350  Health:480  Enchantment:160  AR:16
+  ITEX: Icon:a\TX_Bonemold_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_bonemold_cuirass_c
+
+Record: ARMO "iron boots" Flags:0x0000 ()
+  NAME: ID:iron boots
+  MODL: Model:a\A_Iron_Boot_GND.nif
+  FNAM: Name:Iron Boots
+  AODT: Type:(Boots)  Weight:19.00 (Heavy)  Value:20  Health:450  Enchantment:26  AR:10
+  ITEX: Icon:a\Tx_Iron_boots.tga
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_iron_boot_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_iron_boot_a
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_iron_boot_a
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_iron_boot_f
+
+Record: ARMO "heavy_leather_boots" Flags:0x0000 ()
+  NAME: ID:heavy_leather_boots
+  MODL: Model:a\A_Boot_hvy_leather_GND.NIF
+  FNAM: Name:Heavy Leather Boots
+  AODT: Type:(Boots)  Weight:8.00 (Light)  Value:100  Health:500  Enchantment:26  AR:50
+  ITEX: Icon:a\Tx_Boot_heavy_leather.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_boots_heavy_leather
+ *INDX: Part_Index:(Left_Ankle)
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_boots_heavy_leather
+ *INDX: Part_Index:(Right_Ankle)
+
+Record: ARMO "daedric_cuirass_htab" Flags:0x0000 ()
+  NAME: ID:daedric_cuirass_htab
+  MODL: Model:a\A_Daedric_cuirass_GND.nif
+  FNAM: Name:Daedric Cuirass
+  AODT: Type:(Cuirass)  Weight:90.00 (Heavy)  Value:70000  Health:2400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_daedric_cuirass
+  ENAM: Enchanting:theranafeather_en_uniq
+
+Record: ARMO "daedric_greaves_htab" Flags:0x0000 ()
+  NAME: ID:daedric_greaves_htab
+  MODL: Model:a\A_Daedric_Greaves_GND.nif
+  FNAM: Name:Daedric Greaves
+  AODT: Type:(Greaves)  Weight:54.00 (Heavy)  Value:60000  Health:800  Enchantment:75  AR:80
+  ITEX: Icon:a\Tx_Daedric_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_daedric_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_daedric_greaves_ul
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_daedric_greaves_ul
+  ENAM: Enchanting:theranafeather_en_uniq
+
+Record: ARMO "shadow_shield" Flags:0x0000 ()
+  NAME: ID:shadow_shield
+  MODL: Model:a\Shield_Dwemer.nif
+  FNAM: Name:Shadow Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:2400  Health:2000  Enchantment:500  AR:20
+  ITEX: Icon:a\Tx_Dwemer_shield.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_dwemer
+  ENAM: Enchanting:shadow_shield_en
+
+Record: ARMO "wraithguard" Flags:0x0000 ()
+  NAME: ID:wraithguard
+  MODL: Model:a\A_ART_Wraithguard_GND.NIF
+  FNAM: Name:Wraithguard
+  SCRI: Script:wraithguardScript
+  AODT: Type:(Right_Gauntlet)  Weight:15.00 (Heavy)  Value:500000  Health:400  Enchantment:600  AR:80
+  ITEX: Icon:a\TX_Art_wraithguard.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_art_wraithguard
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:wraithguard_en
+
+Record: ARMO "wraithguard_jury_rig" Flags:0x0000 ()
+  NAME: ID:wraithguard_jury_rig
+  MODL: Model:a\A_Art_Wraithguard_GND.NIF
+  FNAM: Name:Wraithguard
+  SCRI: Script:ouch_wraithguard
+  AODT: Type:(Left_Gauntlet)  Weight:15.00 (Heavy)  Value:10000  Health:400  Enchantment:600  AR:80
+  ITEX: Icon:a\TX_Art_wraithguard.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_daedric_gauntlet
+  ENAM: Enchanting:wraithguard_en
+
+Record: ARMO "tenpaceboots" Flags:0x0000 ()
+  NAME: ID:tenpaceboots
+  MODL: Model:a\A_TenPaceboot_GND.NIF
+  FNAM: Name:Ten Pace Boots
+  AODT: Type:(Boots)  Weight:60.00 (Heavy)  Value:140000  Health:800  Enchantment:263  AR:80
+  ITEX: Icon:a\tx_TenPaceBoot.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_tenpaceboot
+ *INDX: Part_Index:(Left_Ankle)
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_tenpaceboot
+ *INDX: Part_Index:(Right_Ankle)
+  ENAM: Enchanting:tenpaceboots_en
+
+Record: ARMO "glass_boots" Flags:0x0000 ()
+  NAME: ID:glass_boots
+  MODL: Model:a\A_Glass_Boots_GND.nif
+  FNAM: Name:Glass Boots
+  AODT: Type:(Boots)  Weight:3.00 (Light)  Value:8000  Health:500  Enchantment:100  AR:50
+  ITEX: Icon:a\TX_Glass_boots.tga
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_glass_boots_a
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_glass_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_glass_boots_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_glass_boots_f
+
+Record: ARMO "glass_greaves" Flags:0x0000 ()
+  NAME: ID:glass_greaves
+  MODL: Model:a\A_Glass_Greaves_GND.nif
+  FNAM: Name:Glass Greaves
+  AODT: Type:(Greaves)  Weight:9.00 (Light)  Value:17600  Health:500  Enchantment:100  AR:50
+  ITEX: Icon:a\TX_Glass_greaves.tga
+ *INDX: Part_Index:(Groin)
+  BNAM: Male_Body_ID:a_glass_greaves_g
+ *INDX: Part_Index:(Left_Upper_Leg)
+  BNAM: Male_Body_ID:a_glass_greaves_ul
+ *INDX: Part_Index:(Left_Knee)
+  BNAM: Male_Body_ID:a_glass_greaves_k
+ *INDX: Part_Index:(Right_Upper_Leg)
+  BNAM: Male_Body_ID:a_glass_greaves_ul
+ *INDX: Part_Index:(Right_Knee)
+  BNAM: Male_Body_ID:a_glass_greaves_k
+
+Record: ARMO "dreugh_cuirass_ttrm" Flags:0x0000 ()
+  NAME: ID:dreugh_cuirass_ttrm
+  MODL: Model:a\A_Dreugh_Cuirass_GND.NIF
+  FNAM: Name:Dreugh Cuirass
+  AODT: Type:(Cuirass)  Weight:27.00 (Medium)  Value:5250  Health:1200  Enchantment:180  AR:40
+  ITEX: Icon:a\tx_dreugh_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_dreugh_cuirass
+  ENAM: Enchanting:daedric endurance_en
+
+Record: ARMO "ebony_shield_auriel" Flags:0x0000 ()
+  NAME: ID:ebony_shield_auriel
+  MODL: Model:a\Shield_Art_Auriel.NIF
+  FNAM: Name:Auriel's Shield
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:17000  Health:1200  Enchantment:1000  AR:60
+  ITEX: Icon:a\tx_shield_auriel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_art_auriel
+
+Record: ARMO "daedric_helm_clavicusvile" Flags:0x0000 ()
+  NAME: ID:daedric_helm_clavicusvile
+  MODL: Model:a\A_Masque_Clavicus_Vile.NIF
+  FNAM: Name:Masque of Clavicus Vile
+  AODT: Type:(Helmet)  Weight:15.00 (Heavy)  Value:15000  Health:800  Enchantment:750  AR:80
+  ITEX: Icon:a\tx_Masque_Clavicus.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_masque_clavicus_vile
+  ENAM: Enchanting:Masque of Clavicus
+
+Record: ARMO "bound_gauntlet_right" Flags:0x0000 ()
+  NAME: ID:bound_gauntlet_right
+  MODL: Model:a\A_Daedric_gauntlet_GND.nif
+  FNAM: Name:Bound Right Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:0.00 (Light)  Value:0  Health:400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_daedric_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:bound gauntlet_right_effect_en
+
+Record: ARMO "bound_gauntlet_left" Flags:0x0000 ()
+  NAME: ID:bound_gauntlet_left
+  MODL: Model:a\A_Daedric_gauntlet_GND.nif
+  FNAM: Name:Bound Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:0.00 (Light)  Value:0  Health:400  Enchantment:600  AR:80
+  ITEX: Icon:a\Tx_Daedric_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_daedric_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:bound gauntlet_left_effect_en
+
+Record: ARMO "ebony_bracer_left_tgeb" Flags:0x0000 ()
+  NAME: ID:ebony_bracer_left_tgeb
+  MODL: Model:a\A_Ebony_Bracer_w.nif
+  FNAM: Name:Ebony Left Bracer
+  AODT: Type:(Left_Bracer)  Weight:10.00 (Heavy)  Value:5000  Health:300  Enchantment:400  AR:60
+  ITEX: Icon:a\Tx_Ebony_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_ebony_bracer_w
+
+Record: ARMO "ebony_bracer_right_tgeb" Flags:0x0000 ()
+  NAME: ID:ebony_bracer_right_tgeb
+  MODL: Model:a\A_Ebony_Bracer_w.nif
+  FNAM: Name:Ebony Right Bracer
+  AODT: Type:(Right_Bracer)  Weight:10.00 (Heavy)  Value:5000  Health:300  Enchantment:400  AR:60
+  ITEX: Icon:a\Tx_Ebony_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_ebony_bracer_w
+
+Record: ARMO "boots of blinding speed[unique]" Flags:0x0000 ()
+  NAME: ID:boots of blinding speed[unique]
+  MODL: Model:a\A_Netch_M_boot_GND.nif
+  FNAM: Name:Boots of Blinding Speed
+  AODT: Type:(Boots)  Weight:8.00 (Light)  Value:500  Health:50  Enchantment:26  AR:5
+  ITEX: Icon:a\Tx_Netch_boots.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_netch_m_boot_f
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_netch_m_boot_a
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_netch_m_boot_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_netch_m_boot_a
+  ENAM: Enchanting:blinding speed
+
+Record: ARMO "veloths_shield" Flags:0x0000 ()
+  NAME: ID:veloths_shield
+  MODL: Model:a\Shield_Chitin.NIF
+  FNAM: Name:Veloth's Shield
+  AODT: Type:(Shield)  Weight:4.00 (Light)  Value:85  Health:200  Enchantment:250  AR:10
+  ITEX: Icon:a\Tx_shield_chitin.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_chitin
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "gauntlet_horny_fist_r" Flags:0x0000 ()
+  NAME: ID:gauntlet_horny_fist_r
+  MODL: Model:a\A_Netch_M_gauntlet_GND.nif
+  FNAM: Name:Right Gauntlet of Horny Fist
+  AODT: Type:(Right_Gauntlet)  Weight:1.00 (Light)  Value:40  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\Tx_Netch_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_netch_m_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:masterful horny fist_en
+
+Record: ARMO "gauntlet _horny_fist_l" Flags:0x0000 ()
+  NAME: ID:gauntlet _horny_fist_l
+  MODL: Model:a\A_Netch_M_gauntlet_GND.nif
+  FNAM: Name:Left Gauntlet of the Horny Fist
+  AODT: Type:(Left_Gauntlet)  Weight:1.00 (Light)  Value:40  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\Tx_Netch_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_netch_m_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:masterful horny fist_en
+
+Record: ARMO "blessed_tower_shield" Flags:0x0000 ()
+  NAME: ID:blessed_tower_shield
+  MODL: Model:a\TowerShield_steel.NIF
+  FNAM: Name:Blessed Tower Shield
+  AODT: Type:(Shield)  Weight:15.00 (Heavy)  Value:130  Health:300  Enchantment:500  AR:15
+  ITEX: Icon:a\Tx_towershield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_steel
+  ENAM: Enchanting:veloth's benison_en
+
+Record: ARMO "lords_cuirass_unique" Flags:0x0000 ()
+  NAME: ID:lords_cuirass_unique
+  MODL: Model:a\A_art_cuirass_lords_GND.NIF
+  FNAM: Name:Lord's Mail
+  SCRI: Script:LegionUniform
+  AODT: Type:(Cuirass)  Weight:30.00 (Heavy)  Value:190000  Health:3000  Enchantment:600  AR:100
+  ITEX: Icon:a\A_cuirass_lords.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_cuirass_lords_c
+  ENAM: Enchanting:lord's praise
+
+Record: ARMO "ebon_plate_cuirass_unique" Flags:0x0000 ()
+  NAME: ID:ebon_plate_cuirass_unique
+  MODL: Model:a\A_art_ebon_Cuirass_GND.NIF
+  FNAM: Name:Ebony Mail
+  AODT: Type:(Cuirass)  Weight:20.00 (Medium)  Value:120000  Health:3000  Enchantment:600  AR:100
+  ITEX: Icon:a\A_cuirass_ebon.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_ebon_cuirass_c
+  ENAM: Enchanting:watchful spirit
+
+Record: ARMO "spell_breaker_unique" Flags:0x0400 (Persistent)
+  NAME: ID:spell_breaker_unique
+  MODL: Model:a\A_art_shield_breaker.NIF
+  FNAM: Name:Spell Breaker
+  AODT: Type:(Shield)  Weight:25.00 (Heavy)  Value:115000  Health:1400  Enchantment:600  AR:70
+  ITEX: Icon:a\A_shield_breaker.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:a_art_shield_breaker
+  ENAM: Enchanting:Spell Breaker
+
+Record: ARMO "cuirass_savior_unique" Flags:0x0000 ()
+  NAME: ID:cuirass_savior_unique
+  MODL: Model:a\A_art_cuirass_savior_GND.NIF
+  FNAM: Name:Cuirass of the Savior's Hide
+  AODT: Type:(Cuirass)  Weight:15.00 (Light)  Value:150000  Health:2400  Enchantment:600  AR:80
+  ITEX: Icon:a\A_cuirass_savior.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_art_cuirass_savior_c
+  ENAM: Enchanting:hircine's blessing
+
+Record: ARMO "gauntlet_fists_l_unique" Flags:0x0000 ()
+  NAME: ID:gauntlet_fists_l_unique
+  MODL: Model:a\A_art_gauntlet_fist_GND.NIF
+  FNAM: Name:Fist of Randagulf Left Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:16.00 (Heavy)  Value:35000  Health:450  Enchantment:600  AR:90
+  ITEX: Icon:a\A_gauntlet_fists.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_art_fists_gauntlets
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:randagulf's agility
+
+Record: ARMO "gauntlet_fists_r_unique" Flags:0x0000 ()
+  NAME: ID:gauntlet_fists_r_unique
+  MODL: Model:a\A_art_gauntlet_fist_GND.NIF
+  FNAM: Name:Fist of Randagulf Rt Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:16.00 (Heavy)  Value:35000  Health:450  Enchantment:600  AR:90
+  ITEX: Icon:a\A_gauntlet_fists.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_art_fists_gauntlets
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:randagulf's strength
+
+Record: ARMO "towershield_eleidon_unique" Flags:0x0000 ()
+  NAME: ID:towershield_eleidon_unique
+  MODL: Model:a\A_art_towershield_eleidon.NIF
+  FNAM: Name:Eleidon's Ward
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:200000  Health:2000  Enchantment:30000  AR:100
+  ITEX: Icon:a\A_shieled_eleidon.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:a_art_towershield_eleidon
+  ENAM: Enchanting:eleidon's grace
+
+Record: ARMO "dragonbone_cuirass_unique" Flags:0x0000 ()
+  NAME: ID:dragonbone_cuirass_unique
+  MODL: Model:a\A_art_dragon_GND.NIF
+  FNAM: Name:Dragonbone cuirass
+  AODT: Type:(Cuirass)  Weight:50.00 (Heavy)  Value:180000  Health:3000  Enchantment:1500  AR:100
+  ITEX: Icon:a\A_cuirass_dragon.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_art_dragon_cuirass_c
+  ENAM: Enchanting:dragon aura
+
+Record: ARMO "helm_bearclaw_unique" Flags:0x0000 ()
+  NAME: ID:helm_bearclaw_unique
+  MODL: Model:a\A_art_helm_bearclaw.NIF
+  FNAM: Name:Helm of Oreyn Bearclaw
+  AODT: Type:(Helmet)  Weight:10.00 (Heavy)  Value:125000  Health:900  Enchantment:1200  AR:90
+  ITEX: Icon:a\A_helm_bearclaw.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_art_helm_bearclaw
+  ENAM: Enchanting:oreyn's courage
+
+Record: ARMO "boots_apostle_unique" Flags:0x0000 ()
+  NAME: ID:boots_apostle_unique
+  MODL: Model:a\A_art_Apostle_Boots_GND.NIF
+  FNAM: Name:Boots of the Apostle
+  AODT: Type:(Boots)  Weight:10.00 (Light)  Value:55000  Health:800  Enchantment:700  AR:80
+  ITEX: Icon:a\A_boots_apostle.tga
+ *INDX: Part_Index:(Left_Ankle)
+  BNAM: Male_Body_ID:a_art_apostle_boots_r
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_apostle_boots_f
+ *INDX: Part_Index:(Right_Ankle)
+  BNAM: Male_Body_ID:a_art_apostle_boots_r
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_apostle_boots_f
+  ENAM: Enchanting:weight of the apostle
+
+Record: ARMO "shield of the undaunted" Flags:0x0000 ()
+  NAME: ID:shield of the undaunted
+  MODL: Model:a\Shield_Chitin.NIF
+  FNAM: Name:Shield of the Undaunted
+  AODT: Type:(Shield)  Weight:4.00 (Light)  Value:35  Health:300  Enchantment:250  AR:15
+  ITEX: Icon:a\Tx_shield_chitin.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_chitin
+  ENAM: Enchanting:stamina_en
+
+Record: ARMO "imperial_helm_frald_uniq" Flags:0x0000 ()
+  NAME: ID:imperial_helm_frald_uniq
+  MODL: Model:a\A_Imperial_M_Helmet.nif
+  FNAM: Name:Helm of Graff the White
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:70  Health:160  Enchantment:250  AR:16
+  ITEX: Icon:a\Tx_Imperial_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:imperial helmet
+  ENAM: Enchanting:fralds_helm_uniq
+
+Record: ARMO "erur_dan_cuirass_unique" Flags:0x0000 ()
+  NAME: ID:erur_dan_cuirass_unique
+  MODL: Model:a\A_Bonemold_cuirass_GND.nif
+  FNAM: Name:Erur-Dan's Cuirass
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:350  Health:1800  Enchantment:160  AR:16
+  ITEX: Icon:a\TX_Bonemold_cuirass.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_bonemold_cuirass_c
+  ENAM: Enchanting:renewal_en
+
+Record: ARMO "conoon_chodala_boots_unique" Flags:0x0000 ()
+  NAME: ID:conoon_chodala_boots_unique
+  MODL: Model:a\A_Boot_hvy_leather_GND.NIF
+  FNAM: Name:Conoon Chodala's Boots
+  AODT: Type:(Boots)  Weight:8.00 (Light)  Value:100  Health:500  Enchantment:26  AR:50
+  ITEX: Icon:a\Tx_Boot_heavy_leather.tga
+ *INDX: Part_Index:(Left_Foot)
+  BNAM: Male_Body_ID:a_boots_heavy_leather
+ *INDX: Part_Index:(Left_Ankle)
+ *INDX: Part_Index:(Right_Foot)
+  BNAM: Male_Body_ID:a_boots_heavy_leather
+ *INDX: Part_Index:(Right_Ankle)
+  ENAM: Enchanting:wideranging_en
+
+Record: ARMO "icecap_unique" Flags:0x0000 ()
+  NAME: ID:icecap_unique
+  MODL: Model:a\A_NordicFur_Helmet.nif
+  FNAM: Name:The Icecap
+  AODT: Type:(Helmet)  Weight:1.50 (Light)  Value:65  Health:50  Enchantment:75  AR:5
+  ITEX: Icon:a\TX_NordicFur_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_nordicfur_helmet
+  ENAM: Enchanting:icecap_en
+
+Record: ARMO "boneweave gauntlet" Flags:0x0000 ()
+  NAME: ID:boneweave gauntlet
+  MODL: Model:a\A_M_Chitin_Gauntlet_GND.nif
+  FNAM: Name:Boneweave Gauntlet
+  AODT: Type:(Left_Gauntlet)  Weight:1.00 (Light)  Value:130  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_m_chitin_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:boneweave_en
+
+Record: ARMO "bonedancer gauntlet" Flags:0x0000 ()
+  NAME: ID:bonedancer gauntlet
+  MODL: Model:a\A_M_Chitin_Gauntlet_GND.nif
+  FNAM: Name:Bonedancer Gauntlet
+  AODT: Type:(Right_Gauntlet)  Weight:1.00 (Light)  Value:130  Health:50  Enchantment:100  AR:10
+  ITEX: Icon:a\TX_Chitin_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_m_chitin_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:bonedancer_en
+
+Record: ARMO "mountain spirit" Flags:0x0000 ()
+  NAME: ID:Mountain Spirit
+  MODL: Model:a\A_Bonemold_Gah_Julan_CGND.NIF
+  FNAM: Name:Mountain Spirit
+  AODT: Type:(Cuirass)  Weight:24.00 (Medium)  Value:3600  Health:510  Enchantment:160  AR:17
+  ITEX: Icon:a\TX_Bonemold_Gah_Julan_c.tga
+ *INDX: Part_Index:(Cuirass)
+  BNAM: Male_Body_ID:a_bonemold_gah_julan_c
+  ENAM: Enchanting:protector_en
+
+Record: ARMO "darksun_shield_unique" Flags:0x0400 (Persistent)
+  NAME: ID:darksun_shield_unique
+  MODL: Model:a\Shield_ebony.NIF
+  FNAM: Name:Darksun Shield
+  SCRI: Script:darksunScript
+  AODT: Type:(Shield)  Weight:30.00 (Heavy)  Value:17000  Health:1200  Enchantment:1000  AR:60
+  ITEX: Icon:a\tx_shield_ebony.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:shield_ebony
+  ENAM: Enchanting:darksun_en
+
+Record: ARMO "bloodworm_helm_unique" Flags:0x0000 ()
+  NAME: ID:bloodworm_helm_unique
+  MODL: Model:a\A_Trollbone_Helm.NIF
+  FNAM: Name:Bloodworm Helm
+  AODT: Type:(Helmet)  Weight:8.00 (Heavy)  Value:34000  Health:600  Enchantment:1500  AR:18
+  ITEX: Icon:a\tx_Trollbone_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:a_trollbone_helm
+  ENAM: Enchanting:grip of death
+
+Record: ARMO "cephalopod_helm_htnk" Flags:0x0000 ()
+  NAME: ID:cephalopod_helm_HTNK
+  MODL: Model:a\A_Cephalopod_helm.NIF
+  FNAM: Name:Gothren's Cephalopod Helm
+  AODT: Type:(Helmet)  Weight:2.00 (Light)  Value:50  Health:80  Enchantment:1000  AR:8
+  ITEX: Icon:a\Tx_cephalopod_helm.tga
+ *INDX: Part_Index:(Head)
+  BNAM: Male_Body_ID:a_cephalopod_helm
+  ENAM: Enchanting:cephalopod_HTNK_en
+
+Record: ARMO "blood_feast_shield" Flags:0x0000 ()
+  NAME: ID:Blood_Feast_Shield
+  MODL: Model:a\TowerShield_steel.NIF
+  FNAM: Name:Blood Feat Shield
+  AODT: Type:(Shield)  Weight:20.00 (Heavy)  Value:1000  Health:360  Enchantment:750  AR:18
+  ITEX: Icon:a\Tx_towershield_steel.tga
+ *INDX: Part_Index:(Shield)
+  BNAM: Male_Body_ID:towershield_steel
+  ENAM: Enchanting:blood feast_en
+
+Record: ARMO "gauntlet_of_glory_left" Flags:0x0000 ()
+  NAME: ID:Gauntlet_of_Glory_left
+  MODL: Model:a\A_NordicFur_Gauntlet_GND.nif
+  FNAM: Name:Left Gauntlet of Glory
+  AODT: Type:(Left_Gauntlet)  Weight:1.50 (Light)  Value:1100  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_NordicFur_gauntlet.tga
+ *INDX: Part_Index:(Left_Hand)
+  BNAM: Male_Body_ID:a_nordicfur_gauntlet
+ *INDX: Part_Index:(Left_Wrist)
+  ENAM: Enchanting:Glory_left_en
+
+Record: ARMO "gauntlet_of_glory_right" Flags:0x0000 ()
+  NAME: ID:gauntlet_of_glory_right
+  MODL: Model:a\A_NordicFur_Gauntlet_GND.nif
+  FNAM: Name:Right Gauntlet of Glory
+  AODT: Type:(Right_Gauntlet)  Weight:1.50 (Light)  Value:1100  Health:25  Enchantment:60  AR:5
+  ITEX: Icon:a\Tx_NordicFur_gauntlet.tga
+ *INDX: Part_Index:(Right_Hand)
+  BNAM: Male_Body_ID:a_nordicfur_gauntlet
+ *INDX: Part_Index:(Right_Wrist)
+  ENAM: Enchanting:Glory_right_en
+
+Record: ARMO "gondolier_helm" Flags:0x0000 ()
+  NAME: ID:gondolier_helm
+  MODL: Model:a\A_Gondolier_M_Helmet.NIF
+  FNAM: Name:Gondolier's Helm
+  AODT: Type:(Helmet)  Weight:4.00 (Medium)  Value:10  Health:100  Enchantment:100  AR:1
+  ITEX: Icon:a\tx_gondolier_helm.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:A_Gondolier_M_Helmet
+
+Record: ARMO "imperial helmet armor_dae_curse" Flags:0x0000 ()
+  NAME: ID:imperial helmet armor_Dae_curse
+  MODL: Model:a\A_Imperial_M_Helmet.nif
+  FNAM: Name:Imperial Steel Helmet
+  SCRI: Script:BILL_MarksDaedraSummon
+  AODT: Type:(Helmet)  Weight:5.00 (Heavy)  Value:70  Health:160  Enchantment:250  AR:16
+  ITEX: Icon:a\Tx_Imperial_helmet.tga
+ *INDX: Part_Index:(Hair)
+  BNAM: Male_Body_ID:imperial helmet
+
+Record: ARMO "glass_bracer_left" Flags:0x0000 ()
+  NAME: ID:glass_bracer_left
+  MODL: Model:a\A_Glass_Bracer_W.nif
+  FNAM: Name:Left Glass Bracer
+  AODT: Type:(Left_Bracer)  Weight:3.00 (Light)  Value:4000  Health:400  Enchantment:100  AR:50
+  ITEX: Icon:a\TX_Glass_bracer.tga
+ *INDX: Part_Index:(Left_Wrist)
+  BNAM: Male_Body_ID:a_glass_bracer_w
+
+Record: ARMO "glass_bracer_right" Flags:0x0000 ()
+  NAME: ID:glass_bracer_right
+  MODL: Model:a\A_Glass_Bracer_W.nif
+  FNAM: Name:Right Glass Bracer
+  AODT: Type:(Right_Bracer)  Weight:3.00 (Light)  Value:4000  Health:400  Enchantment:100  AR:50
+  ITEX: Icon:a\TX_Glass_bracer.tga
+ *INDX: Part_Index:(Right_Wrist)
+  BNAM: Male_Body_ID:a_glass_bracer_w

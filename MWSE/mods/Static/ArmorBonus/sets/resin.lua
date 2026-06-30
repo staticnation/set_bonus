@@ -1,11 +1,20 @@
--- STUB: no armor items for the Resin Molded set were found in the provided dumps (armor.csv / raw.csv).
--- The spells (_sn_resin_min/mid/max) exist in Set_Bonus.esp, so just fill in the
--- equippable item IDs below (lowercase or any case; they are lowercased on load) and the
--- set bonus will start working. An empty list is harmless: the set simply never triggers.
+-- STUB: fill in this set's equippable item IDs below; the bonus is already
+-- defined in Lua (no ESP needed). An empty list is harmless (set never triggers).
 return {
 	name = "Resin Molded",
 	items = {  },
-	minBonus = "_sn_resin_min",
-	midBonus = "_sn_resin_mid",
-	maxBonus = "_sn_resin_max"
+	bonuses = {
+		min = {
+			{ effect = "resistBlightDisease", magnitude = 15 },
+		},
+		mid = {
+			{ effect = "resistBlightDisease", magnitude = 25 },
+			{ effect = "fortifyFatigue", magnitude = 30 },
+		},
+		max = {
+			{ effect = "resistBlightDisease", magnitude = 40 },
+			{ effect = "fortifyFatigue", magnitude = 50 },
+			{ effect = "resistPoison", magnitude = 25 },
+		},
+	},
 }

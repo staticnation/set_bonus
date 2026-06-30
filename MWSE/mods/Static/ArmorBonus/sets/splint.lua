@@ -1,7 +1,19 @@
 return {
         name = "Splint",
         items = { "" },
-        minBonus = "_sn_splint_min",
-        midBonus = "_sn_splint_mid",
-        maxBonus = "_sn_splint_max"
+	bonuses = {
+		min = {
+			{ effect = "shield", magnitude = 8 },
+			{ effect = "fortifyHealth", magnitude = 10 },
+		},
+		mid = {
+			{ effect = "shield", magnitude = 12 },
+			{ effect = "fortifyHealth", magnitude = 20 },
+		},
+		max = {
+			{ effect = "shield", magnitude = 18 },
+			{ effect = "fortifyHealth", magnitude = 35 },
+			{ effect = "resistNormalWeapons", magnitude = 8 },
+		},
+	},
 }

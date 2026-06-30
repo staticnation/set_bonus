@@ -1,7 +1,21 @@
 return {
         name = "Goblin",
-        items = { "TR_m1_Goblin_Trophy", "TR_i2-235_goblin_shield", "T_Cr_Goblin_Helm_01", "T_Cr_Goblin_PauldronL_01", "T_Cr_Goblin_PauldronR_01", "T_Cr_Goblin_Shield_01", "goblin_shield_durgok_uni", "goblin_shield" },
-        minBonus = "_sn_goblin_min",
-        midBonus = "_sn_goblin_mid",
-        maxBonus = "_sn_goblin_max"
+        items = { "goblin_shield_durgok_uni", "goblin_shield" },
+	bonuses = {
+		min = {
+			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 5 },
+			{ effect = "resistCommonDisease", magnitude = 15 },
+		},
+		mid = {
+			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 10 },
+			{ effect = "resistCommonDisease", magnitude = 25 },
+			{ effect = "fortifyFatigue", magnitude = 30 },
+		},
+		max = {
+			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 15 },
+			{ effect = "resistCommonDisease", magnitude = 40 },
+			{ effect = "fortifyFatigue", magnitude = 50 },
+			{ effect = "fortifyAttackBonus", magnitude = 10 },
+		},
+	},
 }

@@ -1,550 +1,753 @@
-# Set Bonus — Spell Design Reference
-
-Lore-themed bonuses for all 109 armor sets. Vanilla Morrowind/Tribunal/Bloodmoon effects only. Constant abilities while wearing the set.
-
-Tiers: **min** = 2-3 pieces, **mid** = 4-5 pieces, **max** = 6+ pieces. "/s" marks per-second Restore effects (duration 1); all others are constant state (duration 0).
-
-## Adamantium  `adam`
-- **min:** ResistMagicka 10
-- **mid:** ResistMagicka 20, Reflect 8
-- **max:** ResistMagicka 30, Reflect 12, Shield 10
-
-## Anvil  `anvil`
-- **min:** WaterBreathing 1, SwiftSwim 30
-- **mid:** WaterBreathing 1, SwiftSwim 50, ResistFrost 20
-- **max:** WaterBreathing 1, SwiftSwim 70, ResistFrost 35, FortifyAttribute Personality 10
-
-## Argonian  `argonian`
-- **min:** WaterBreathing 1, ResistPoison 15
-- **mid:** WaterBreathing 1, ResistPoison 25, ResistCommonDisease 30, SwiftSwim 40
-- **max:** WaterBreathing 1, ResistPoison 40, ResistCommonDisease 50, SwiftSwim 60, RestoreHealth 1 /s
-
-## Armun-An  `armun-an`
-- **min:** ResistFire 15
-- **mid:** ResistFire 25, FortifyHealth 20
-- **max:** ResistFire 40, FortifyHealth 35, Shield 10
-
-## Artifacts  `artifacts`
-- **min:** ResistMagicka 10, FortifyAttribute Luck 5
-- **mid:** ResistMagicka 20, FortifyAttribute Luck 10, Reflect 8
-- **max:** ResistMagicka 30, FortifyAttribute Luck 15, Reflect 12, SpellAbsorption 15
-
-## Ayleid  `ayleid`
-- **min:** RestoreMagicka 1 /s, Light 10
-- **mid:** RestoreMagicka 2 /s, SpellAbsorption 10
-- **max:** RestoreMagicka 3 /s, SpellAbsorption 18, ResistMagicka 25
-
-## Bal-Darum  `bal-darum`
-- **min:** ResistBlightDisease 15, Shield 5
-- **mid:** ResistBlightDisease 25, Shield 10, FortifyHealth 20
-- **max:** ResistBlightDisease 40, Shield 15, FortifyHealth 35
-
-## Bear Fur  `bear`
-- **min:** ResistFrost 20
-- **mid:** ResistFrost 35, FortifyAttribute Endurance 10
-- **max:** ResistFrost 50, FortifyAttribute Endurance 15, FortifyHealth 25
-
-## Bearskin  `bearskin`
-- **min:** ResistFrost 15, FortifyAttribute Strength 5
-- **mid:** ResistFrost 30, FortifyAttribute Strength 10, FortifyHealth 20
-- **max:** ResistFrost 45, FortifyAttribute Strength 15, FortifyHealth 35
-
-## Bonemold  `bonemold`
-- **min:** FortifyHealth 10, ResistBlightDisease 10
-- **mid:** FortifyHealth 20, ResistBlightDisease 20, RestoreFatigue 1 /s
-- **max:** FortifyHealth 35, ResistBlightDisease 30, RestoreFatigue 2 /s, Shield 10
-
-## Breton  `breton`
-- **min:** ResistMagicka 15
-- **mid:** ResistMagicka 30, SpellAbsorption 10
-- **max:** ResistMagicka 50, SpellAbsorption 18, FortifySkill Conjuration 15
-
-## Bronze  `bronze`
-- **min:** Shield 5, ResistShock 10
-- **mid:** Shield 10, ResistShock 20, FortifyAttribute Endurance 5
-- **max:** Shield 15, ResistShock 35, FortifyAttribute Endurance 10
-
-## Cataphract  `cataphract`
-- **min:** FortifyHealth 10, FortifyAttackBonus 5
-- **mid:** FortifyHealth 20, FortifyAttackBonus 10, Shield 8
-- **max:** FortifyHealth 35, FortifyAttackBonus 15, Shield 12
-
-## Cephalopod  `cephalopod`
-- **min:** SwiftSwim 30, WaterBreathing 1
-- **mid:** SwiftSwim 50, WaterBreathing 1, Sanctuary 8
-- **max:** SwiftSwim 70, WaterBreathing 1, Sanctuary 15, ResistFrost 25
-
-## Chain Mail  `chain`
-- **min:** FortifyFatigue 25
-- **mid:** FortifyFatigue 40, ResistNormalWeapons 5
-- **max:** FortifyFatigue 60, ResistNormalWeapons 10, Shield 5
-
-## Chap-thil  `chap-thil`
-- **min:** ResistFire 15, FortifyFatigue 20
-- **mid:** ResistFire 25, FortifyFatigue 35
-- **max:** ResistFire 40, FortifyFatigue 55, FortifyAttribute Endurance 10
-
-## Chev-Aram  `chev-aram`
-- **min:** ResistFire 15, FortifyAttackBonus 5
-- **mid:** ResistFire 25, FortifyAttackBonus 10, FortifyHealth 20
-- **max:** ResistFire 40, FortifyAttackBonus 15, FortifyHealth 35
-
-## Chitin  `chitin`
-- **min:** ResistBlightDisease 15, ResistPoison 15
-- **mid:** ResistBlightDisease 25, ResistPoison 25, ResistParalysis 15
-- **max:** ResistBlightDisease 40, ResistPoison 40, ResistParalysis 30, FortifyAttribute Agility 10
-
-## Chuzei  `chuzei`
-- **min:** FortifyHealth 10, ResistBlightDisease 10
-- **mid:** FortifyHealth 25, ResistBlightDisease 20, Shield 10
-- **max:** FortifyHealth 40, ResistBlightDisease 30, Shield 15, ResistFire 25
-
-## Cloth  `cloth`
-- **min:** RestoreMagicka 1 /s, Feather 5
-- **mid:** RestoreMagicka 2 /s, Feather 10, FortifySkill Alteration 10
-- **max:** RestoreMagicka 3 /s, Feather 20, FortifySkill Alteration 20, FortifyAttribute Intelligence 10
-
-## Colovian  `colovian`
-- **min:** ResistFrost 15, FortifyAttribute Endurance 5
-- **mid:** ResistFrost 30, FortifyAttribute Endurance 10, FortifyAttackBonus 10
-- **max:** ResistFrost 45, FortifyAttribute Endurance 15, FortifyAttackBonus 15, FortifyHealth 25
-
-## Companions  `companions`
-- **min:** FortifyAttackBonus 5, FortifyFatigue 25
-- **mid:** FortifyAttackBonus 10, FortifyFatigue 40, FortifyHealth 20
-- **max:** FortifyAttackBonus 15, FortifyFatigue 60, FortifyHealth 35, FortifyAttribute Personality 10
-
-## Crown Guard  `crown`
-- **min:** FortifyHealth 10, Shield 5
-- **mid:** FortifyHealth 20, Shield 10, FortifyAttribute Personality 10
-- **max:** FortifyHealth 35, Shield 15, FortifyAttribute Personality 15, FortifyAttackBonus 10
-
-## Daedric Hide  `daedhide`
-- **min:** SpellAbsorption 8
-- **mid:** SpellAbsorption 12, ResistMagicka 15, Sanctuary 8
-- **max:** SpellAbsorption 18, ResistMagicka 25, Sanctuary 12, RestoreMagicka 1 /s
-
-## Daedric  `daedric`
-- **min:** SpellAbsorption 10
-- **mid:** SpellAbsorption 15, ResistMagicka 20
-- **max:** SpellAbsorption 20, ResistMagicka 30, ResistNormalWeapons 10, FortifyAttackBonus 15
-
-## Dark Brotherhood  `darkbh`
-- **min:** FortifySkill Sneak 10, ResistPoison 10
-- **mid:** FortifySkill Sneak 20, ResistPoison 20, Chameleon 10
-- **max:** FortifySkill Sneak 30, ResistPoison 35, Chameleon 20, FortifyAttackBonus 15
-
-## Dunmer  `darkelf`
-- **min:** ResistFire 25
-- **mid:** ResistFire 50, FortifySkill Destruction 10
-- **max:** ResistFire 75, FortifySkill Destruction 20, FortifyAttribute Speed 10
-
-## House Direnni  `direnni`
-- **min:** ResistMagicka 15, RestoreMagicka 1 /s
-- **mid:** ResistMagicka 30, RestoreMagicka 2 /s, SpellAbsorption 10
-- **max:** ResistMagicka 50, RestoreMagicka 2 /s, SpellAbsorption 18, FortifySkill Alteration 20
-
-## Domina  `domina`
-- **min:** FortifyAttribute Personality 5, FortifyAttackBonus 5
-- **mid:** FortifyAttribute Personality 10, FortifyAttackBonus 10, FortifyHealth 20
-- **max:** FortifyAttribute Personality 15, FortifyAttackBonus 15, FortifyHealth 35, Shield 10
-
-## Dragonbone  `dragonb`
-- **min:** ResistFire 20, FortifyHealth 15
-- **mid:** ResistFire 35, FortifyHealth 25, Shield 10
-- **max:** ResistFire 60, FortifyHealth 45, Shield 15, ResistMagicka 20
-
-## Dragonscale  `dragons`
-- **min:** ResistFire 20
-- **mid:** ResistFire 35, ResistMagicka 15
-- **max:** ResistFire 60, ResistMagicka 25, Shield 10, FortifyAttribute Agility 10
-
-## House Dres  `dres`
-- **min:** ResistPoison 15, ResistFire 15
-- **mid:** ResistPoison 25, ResistFire 25, FortifySkill LongBlade 10
-- **max:** ResistPoison 40, ResistFire 40, FortifySkill LongBlade 20, FortifyAttribute Endurance 10
-
-## Dreugh  `dreugh`
-- **min:** ResistShock 15, WaterBreathing 1
-- **mid:** ResistShock 30, WaterBreathing 1, SwiftSwim 40
-- **max:** ResistShock 50, WaterBreathing 1, SwiftSwim 60, LightningShield 10
-
-## Dwemer  `dwemer`
-- **min:** ResistShock 15
-- **mid:** ResistShock 30, Reflect 8
-- **max:** ResistShock 50, Reflect 12, Sanctuary 10
-
-## Ebony  `ebony`
-- **min:** ResistFire 15, FortifyHealth 15
-- **mid:** ResistFire 25, FortifyHealth 25, Shield 10
-- **max:** ResistFire 40, FortifyHealth 40, Shield 15, ResistMagicka 15
-
-## Embossed  `embossed`
-- **min:** FortifyAttribute Personality 5
-- **mid:** FortifyAttribute Personality 10, FortifySkill Speechcraft 10
-- **max:** FortifyAttribute Personality 15, FortifySkill Speechcraft 20, FortifyAttribute Luck 5
-
-## Engraved  `engraved`
-- **min:** ResistMagicka 10
-- **mid:** ResistMagicka 20, FortifyAttribute Personality 10
-- **max:** ResistMagicka 30, FortifyAttribute Personality 15, SpellAbsorption 10
-
-## Falmer  `falmer`
-- **min:** ResistFrost 20, Chameleon 5
-- **mid:** ResistFrost 35, Chameleon 10, NightEye 25
-- **max:** ResistFrost 60, Chameleon 15, NightEye 50, FrostShield 10
-
-## Fighters Guild  `fightersguild`
-- **min:** FortifyAttackBonus 5, FortifyHealth 10
-- **mid:** FortifyAttackBonus 10, FortifyHealth 20, FortifyFatigue 40
-- **max:** FortifyAttackBonus 15, FortifyHealth 35, FortifyFatigue 60, FortifyAttribute Strength 10
-
-## Fur  `fur`
-- **min:** ResistFrost 15, FortifyFatigue 20
-- **mid:** ResistFrost 30, FortifyFatigue 35
-- **max:** ResistFrost 50, FortifyFatigue 50, FortifyAttribute Endurance 10
-
-## Gah-Julan  `gah-julan`
-- **min:** FortifyHealth 10, ResistBlightDisease 10
-- **mid:** FortifyHealth 25, ResistBlightDisease 20, Shield 10
-- **max:** FortifyHealth 40, ResistBlightDisease 30, Shield 15, ResistFire 20
-
-## Gah'Kogo  `gahkogo`
-- **min:** ResistPoison 15, ResistBlightDisease 10
-- **mid:** ResistPoison 25, ResistBlightDisease 20, ResistParalysis 15
-- **max:** ResistPoison 40, ResistBlightDisease 30, ResistParalysis 25, FortifyAttribute Agility 10
-
-## Glass  `glass`
-- **min:** FortifyAttribute Agility 5, ResistFire 10
-- **mid:** FortifyAttribute Agility 10, ResistFire 20, Sanctuary 8
-- **max:** FortifyAttribute Agility 15, ResistFire 30, Sanctuary 12, Chameleon 15
-
-## Goblin  `goblin`
-- **min:** FortifyAttribute Strength 5, ResistCommonDisease 15
-- **mid:** FortifyAttribute Strength 10, ResistCommonDisease 25, FortifyFatigue 30
-- **max:** FortifyAttribute Strength 15, ResistCommonDisease 40, FortifyFatigue 50, FortifyAttackBonus 10
-
-## Gold  `gold`
-- **min:** FortifyAttribute Personality 5
-- **mid:** FortifyAttribute Personality 10, FortifySkill Mercantile 10
-- **max:** FortifyAttribute Personality 15, FortifySkill Mercantile 20, ResistMagicka 15
-
-## Guard  `guard`
-- **min:** FortifyHealth 10, Shield 5
-- **mid:** FortifyHealth 20, Shield 10, FortifyAttribute Endurance 10
-- **max:** FortifyHealth 35, Shield 15, FortifyAttribute Endurance 15
-
-## Heavy Armor  `heavyarmor`
-- **min:** Shield 5, FortifyHealth 10
-- **mid:** Shield 10, FortifyHealth 25, FortifyAttribute Endurance 10
-- **max:** Shield 15, FortifyHealth 40, FortifyAttribute Endurance 15, ResistNormalWeapons 8
-
-## Her Hand  `herhand`
-- **min:** ResistMagicka 15, FortifyHealth 10
-- **mid:** ResistMagicka 25, FortifyHealth 20, FortifySkill Restoration 15
-- **max:** ResistMagicka 40, FortifyHealth 35, TurnUndead 30, FortifySkill Restoration 25
-
-## Hide  `hide`
-- **min:** FortifyFatigue 20
-- **mid:** FortifyFatigue 35, FortifySkill Athletics 10
-- **max:** FortifyFatigue 50, FortifySkill Athletics 20, FortifyAttribute Speed 5
-
-## Altmer  `highelf`
-- **min:** RestoreMagicka 1 /s, FortifyAttribute Intelligence 5
-- **mid:** RestoreMagicka 2 /s, FortifyAttribute Intelligence 10, FortifySkill Destruction 10
-- **max:** RestoreMagicka 3 /s, FortifyAttribute Intelligence 15, FortifySkill Destruction 20, FortifySkill Alteration 15
-
-## House Hlaalu  `hlaalu`
-- **min:** FortifySkill Mercantile 10, FortifyAttribute Personality 5
-- **mid:** FortifySkill Mercantile 20, FortifyAttribute Personality 10, FortifySkill Speechcraft 15
-- **max:** FortifySkill Mercantile 30, FortifyAttribute Personality 15, FortifySkill Speechcraft 25, FortifyAttribute Luck 10
-
-## Imperial  `imperial`
-- **min:** FortifyAttribute Personality 5, FortifySkill Speechcraft 10
-- **mid:** FortifyAttribute Personality 10, FortifySkill Speechcraft 15, FortifySkill Mercantile 15
-- **max:** FortifyAttribute Personality 15, FortifySkill Speechcraft 25, FortifySkill Mercantile 20, FortifyAttackBonus 10
-
-## House Indoril  `indoril`
-- **min:** ResistMagicka 15, FortifySkill Restoration 10
-- **mid:** ResistMagicka 25, FortifySkill Restoration 20, FortifyAttribute Personality 10
-- **max:** ResistMagicka 40, FortifySkill Restoration 30, FortifyAttribute Personality 15, TurnUndead 25
-
-## Iron  `iron`
-- **min:** FortifyHealth 10
-- **mid:** FortifyHealth 20, FortifyFatigue 25
-- **max:** FortifyHealth 35, FortifyFatigue 50, Shield 10
-
-## Kalantar  `kalantar`
-- **min:** ResistFire 15, FortifyAttackBonus 5
-- **mid:** ResistFire 25, FortifyAttackBonus 10, FortifyAttribute Strength 5
-- **max:** ResistFire 40, FortifyAttackBonus 15, FortifyAttribute Strength 10, FortifyHealth 25
-
-## Khajiit  `khajiit`
-- **min:** NightEye 25, FortifyAttribute Agility 5
-- **mid:** NightEye 50, FortifyAttribute Agility 10, FortifySkill Acrobatics 10
-- **max:** NightEye 75, FortifyAttribute Agility 15, FortifySkill Acrobatics 20, FortifySkill HandToHand 20
-
-## Klibanion  `klibanion`
-- **min:** Shield 8, FortifyAttribute Endurance 5
-- **mid:** Shield 12, FortifyAttribute Endurance 10
-- **max:** Shield 18, FortifyAttribute Endurance 15, FortifyHealth 25
-
-## Kragen  `kragen`
-- **min:** ResistFire 15, FortifySkill Mercantile 10
-- **mid:** ResistFire 25, FortifySkill Mercantile 20, FortifyHealth 15
-- **max:** ResistFire 40, FortifySkill Mercantile 30, FortifyHealth 25, FortifyAttribute Personality 10
-
-## Kvetchi  `kvetchi`
-- **min:** ResistBlightDisease 15, FortifyFatigue 20
-- **mid:** ResistBlightDisease 25, FortifyFatigue 35, ResistPoison 20
-- **max:** ResistBlightDisease 40, FortifyFatigue 50, ResistPoison 35, FortifyAttribute Endurance 10
-
-## Kynareth  `kynareth`
-- **min:** SlowFall 10, ResistShock 10
-- **mid:** SlowFall 20, ResistShock 20, FortifyAttribute Speed 10
-- **max:** SlowFall 30, ResistShock 35, FortifyAttribute Speed 15, FortifyFatigue 50
-
-## Lamellar  `lamellar`
-- **min:** Shield 5, FortifyFatigue 25
-- **mid:** Shield 10, FortifyFatigue 40
-- **max:** Shield 15, FortifyFatigue 60, FortifyHealth 25
-
-## Leather  `leather`
-- **min:** FortifyFatigue 20, FortifySkill Acrobatics 5
-- **mid:** FortifyFatigue 35, FortifySkill Acrobatics 10, FortifySkill Sneak 10
-- **max:** FortifyFatigue 50, FortifySkill Acrobatics 15, FortifySkill Sneak 15, FortifyAttribute Agility 10
-
-## Light Armor  `lightarmor`
-- **min:** FortifyFatigue 25, FortifyAttribute Agility 5
-- **mid:** FortifyFatigue 40, FortifyAttribute Agility 10, Sanctuary 8
-- **max:** FortifyFatigue 60, FortifyAttribute Agility 15, Sanctuary 12, FortifySkill Acrobatics 15
-
-## Mages Guild  `magesguild`
-- **min:** RestoreMagicka 1 /s, FortifySkill Destruction 5
-- **mid:** RestoreMagicka 2 /s, FortifySkill Destruction 10, ResistMagicka 15
-- **max:** RestoreMagicka 3 /s, FortifySkill Destruction 20, ResistMagicka 25, FortifyAttribute Intelligence 15
-
-## Maradlai  `maradlai`
-- **min:** ResistFire 15, FortifyAttribute Speed 5
-- **mid:** ResistFire 25, FortifyAttribute Speed 10, FortifyFatigue 30
-- **max:** ResistFire 40, FortifyAttribute Speed 15, FortifyFatigue 50, FortifySkill Athletics 15
-
-## Master  `master`
-- **min:** FortifyAttribute Luck 5, FortifyFatigue 20
-- **mid:** FortifyAttribute Luck 10, FortifyFatigue 40, FortifyHealth 20
-- **max:** FortifyAttribute Luck 15, FortifyFatigue 60, FortifyHealth 30, FortifyAttackBonus 10
-
-## Medium Armor  `mediumarmor`
-- **min:** FortifyFatigue 25, Shield 5
-- **mid:** FortifyFatigue 40, Shield 8, FortifyHealth 20
-- **max:** FortifyFatigue 60, Shield 12, FortifyHealth 30, FortifyAttribute Endurance 10
-
-## Militia  `militia`
-- **min:** FortifyFatigue 20, FortifyHealth 10
-- **mid:** FortifyFatigue 35, FortifyHealth 20, Shield 5
-- **max:** FortifyFatigue 50, FortifyHealth 30, Shield 10
-
-## Molecrab  `molecrab`
+# Set Bonus — Spell Reference
+
+Constant-effect armour set bonuses: wearing several pieces of a set grants a scaling ability, by default at **2 / 4 / 6+** pieces (some sets override this).
+
+All bonuses are **defined in Lua and built at runtime — no ESP required**. Vanilla Morrowind/Tribunal/Bloodmoon magic effects only. "/s" marks per-second Restore effects.
+
+**Layout**
+
+- **Base mod** (`MWSE/mods/Static/ArmorBonus`) — 69 sets of base-game / other-mod armour.
+- **Tamriel Rebuilt add-on** (`MWSE/mods/Static/SetBonusTR`, active only when TR is installed) — 27 new TR sets + 40 TR-only sets relocated from the base mod, and 42 existing sets that gain TR items.
+
+
+---
+
+## Base mod sets (69)
+
+### Adamantium
+- **min:** Resist Magicka 10
+- **mid:** Resist Magicka 20, Reflect 8
+- **max:** Resist Magicka 30, Reflect 12, Shield 10
+
+### Armun-An
+- **min:** Resist Fire 15
+- **mid:** Resist Fire 25, Fortify Health 20
+- **max:** Resist Fire 40, Fortify Health 35, Shield 10
+
+### Artifacts
+- **min:** Resist Magicka 10, Fortify Luck 5
+- **mid:** Resist Magicka 20, Fortify Luck 10, Reflect 8
+- **max:** Resist Magicka 30, Fortify Luck 15, Reflect 12, Spell Absorption 15
+
+### Bear Fur
+- **min:** Resist Frost 20
+- **mid:** Resist Frost 35, Fortify Endurance 10
+- **max:** Resist Frost 50, Fortify Endurance 15, Fortify Health 25
+
+### Bearskin
+- **min:** Resist Frost 15, Fortify Strength 5
+- **mid:** Resist Frost 30, Fortify Strength 10, Fortify Health 20
+- **max:** Resist Frost 45, Fortify Strength 15, Fortify Health 35
+
+### Bonemold
+- **min:** Fortify Health 10, Resist Blight Disease 10
+- **mid:** Fortify Health 20, Resist Blight Disease 20, Restore Fatigue 1 /s
+- **max:** Fortify Health 35, Resist Blight Disease 30, Restore Fatigue 2 /s, Shield 10
+
+### Bosmer
+- **min:** Resist Poison 15, Fortify Agility 5
+- **mid:** Resist Poison 25, Fortify Agility 10, Fortify Marksman 15
+- **max:** Resist Poison 40, Fortify Agility 15, Fortify Marksman 25, Resist Common Disease 30
+
+### Bronze
+- **min:** Shield 5, Resist Shock 10
+- **mid:** Shield 10, Resist Shock 20, Fortify Endurance 5
+- **max:** Shield 15, Resist Shock 35, Fortify Endurance 10
+
+### Cephalopod
+- **min:** Swift Swim 30, Water Breathing 1
+- **mid:** Swift Swim 50, Water Breathing 1, Sanctuary 8
+- **max:** Swift Swim 70, Water Breathing 1, Sanctuary 15, Resist Frost 25
+
+### Chain Mail
+- **min:** Fortify Fatigue 25
+- **mid:** Fortify Fatigue 40, Resist Normal Weapons 5
+- **max:** Fortify Fatigue 60, Resist Normal Weapons 10, Shield 5
+
+### Chitin
+- **min:** Resist Blight Disease 15, Resist Poison 15
+- **mid:** Resist Blight Disease 25, Resist Poison 25, Resist Paralysis 15
+- **max:** Resist Blight Disease 40, Resist Poison 40, Resist Paralysis 30, Fortify Agility 10
+
+### Cloth
+- **min:** Restore Magicka 1 /s, Feather 5
+- **mid:** Restore Magicka 2 /s, Feather 10, Fortify Alteration 10
+- **max:** Restore Magicka 3 /s, Feather 20, Fortify Alteration 20, Fortify Intelligence 10
+
+### Colovian
+- **min:** Resist Frost 15, Fortify Endurance 5
+- **mid:** Resist Frost 30, Fortify Endurance 10, Fortify Attack Bonus 10
+- **max:** Resist Frost 45, Fortify Endurance 15, Fortify Attack Bonus 15, Fortify Health 25
+
+### Daedric
+- **min:** Spell Absorption 10
+- **mid:** Spell Absorption 15, Resist Magicka 20
+- **max:** Spell Absorption 20, Resist Magicka 30, Resist Normal Weapons 10, Fortify Attack Bonus 15
+
+### Dark Brotherhood
+- **min:** Fortify Sneak 10, Resist Poison 10
+- **mid:** Fortify Sneak 20, Resist Poison 20, Chameleon 10
+- **max:** Fortify Sneak 30, Resist Poison 35, Chameleon 20, Fortify Attack Bonus 15
+
+### Dragonbone  *(stub — add items to enable)*
+- **min:** Resist Fire 20, Fortify Health 15
+- **mid:** Resist Fire 35, Fortify Health 25, Shield 10
+- **max:** Resist Fire 60, Fortify Health 45, Shield 15, Resist Magicka 20
+
+### Dragonscale
+- **min:** Resist Fire 20
+- **mid:** Resist Fire 35, Resist Magicka 15
+- **max:** Resist Fire 60, Resist Magicka 25, Shield 10, Fortify Agility 10
+
+### House Dres
+- **min:** Resist Poison 15, Resist Fire 15
+- **mid:** Resist Poison 25, Resist Fire 25, Fortify Long Blade 10
+- **max:** Resist Poison 40, Resist Fire 40, Fortify Long Blade 20, Fortify Endurance 10
+
+### Dreugh
+- **min:** Resist Shock 15, Water Breathing 1
+- **mid:** Resist Shock 30, Water Breathing 1, Swift Swim 40
+- **max:** Resist Shock 50, Water Breathing 1, Swift Swim 60, Lightning Shield 10
+
+### Dwemer
+- **min:** Resist Shock 15
+- **mid:** Resist Shock 30, Reflect 8
+- **max:** Resist Shock 50, Reflect 12, Sanctuary 10
+
+### Ebony
+- **min:** Resist Fire 15, Fortify Health 15
+- **mid:** Resist Fire 25, Fortify Health 25, Shield 10
+- **max:** Resist Fire 40, Fortify Health 40, Shield 15, Resist Magicka 15
+
+### Embossed  *(stub — add items to enable)*
+- **min:** Fortify Personality 5
+- **mid:** Fortify Personality 10, Fortify Speechcraft 10
+- **max:** Fortify Personality 15, Fortify Speechcraft 20, Fortify Luck 5
+
+### Engraved
+- **min:** Resist Magicka 10
+- **mid:** Resist Magicka 20, Fortify Personality 10
+- **max:** Resist Magicka 30, Fortify Personality 15, Spell Absorption 10
+
+### Falmer  *(stub — add items to enable)*
+- **min:** Resist Frost 20, Chameleon 5
+- **mid:** Resist Frost 35, Chameleon 10, Night Eye 25
+- **max:** Resist Frost 60, Chameleon 15, Night Eye 50, Frost Shield 10
+
+### Fighters Guild  *(stub — add items to enable)*
+- **min:** Fortify Attack Bonus 5, Fortify Health 10
+- **mid:** Fortify Attack Bonus 10, Fortify Health 20, Fortify Fatigue 40
+- **max:** Fortify Attack Bonus 15, Fortify Health 35, Fortify Fatigue 60, Fortify Strength 10
+
+### Fur
+- **min:** Resist Frost 15, Fortify Fatigue 20
+- **mid:** Resist Frost 30, Fortify Fatigue 35
+- **max:** Resist Frost 50, Fortify Fatigue 50, Fortify Endurance 10
+
+### Gah-Julan
+- **min:** Fortify Health 10, Resist Blight Disease 10
+- **mid:** Fortify Health 25, Resist Blight Disease 20, Shield 10
+- **max:** Fortify Health 40, Resist Blight Disease 30, Shield 15, Resist Fire 20
+
+### Glass
+- **min:** Fortify Agility 5, Resist Fire 10
+- **mid:** Fortify Agility 10, Resist Fire 20, Sanctuary 8
+- **max:** Fortify Agility 15, Resist Fire 30, Sanctuary 12, Chameleon 15
+
+### Goblin
+- **min:** Fortify Strength 5, Resist Common Disease 15
+- **mid:** Fortify Strength 10, Resist Common Disease 25, Fortify Fatigue 30
+- **max:** Fortify Strength 15, Resist Common Disease 40, Fortify Fatigue 50, Fortify Attack Bonus 10
+
+### Guard
+- **min:** Fortify Health 10, Shield 5
+- **mid:** Fortify Health 20, Shield 10, Fortify Endurance 10
+- **max:** Fortify Health 35, Shield 15, Fortify Endurance 15
+
+### Heavy Armor
+- **min:** Shield 5, Fortify Health 10
+- **mid:** Shield 10, Fortify Health 25, Fortify Endurance 10
+- **max:** Shield 15, Fortify Health 40, Fortify Endurance 15, Resist Normal Weapons 8
+
+### Her Hand
+- **min:** Resist Magicka 15, Fortify Health 10
+- **mid:** Resist Magicka 25, Fortify Health 20, Fortify Restoration 15
+- **max:** Resist Magicka 40, Fortify Health 35, Turn Undead 30, Fortify Restoration 25
+
+### Hide
+- **min:** Fortify Fatigue 20
+- **mid:** Fortify Fatigue 35, Fortify Athletics 10
+- **max:** Fortify Fatigue 50, Fortify Athletics 20, Fortify Speed 5
+
+### House Hlaalu
+- **min:** Fortify Mercantile 10, Fortify Personality 5
+- **mid:** Fortify Mercantile 20, Fortify Personality 10, Fortify Speechcraft 15
+- **max:** Fortify Mercantile 30, Fortify Personality 15, Fortify Speechcraft 25, Fortify Luck 10
+
+### Imperial
+- **min:** Fortify Personality 5, Fortify Speechcraft 10
+- **mid:** Fortify Personality 10, Fortify Speechcraft 15, Fortify Mercantile 15
+- **max:** Fortify Personality 15, Fortify Speechcraft 25, Fortify Mercantile 20, Fortify Attack Bonus 10
+
+### House Indoril
+- **min:** Resist Magicka 15, Fortify Restoration 10
+- **mid:** Resist Magicka 25, Fortify Restoration 20, Fortify Personality 10
+- **max:** Resist Magicka 40, Fortify Restoration 30, Fortify Personality 15, Turn Undead 25
+
+### Iron
+- **min:** Fortify Health 10
+- **mid:** Fortify Health 20, Fortify Fatigue 25
+- **max:** Fortify Health 35, Fortify Fatigue 50, Shield 10
+
+### Khajiit
+- **min:** Night Eye 25, Fortify Agility 5
+- **mid:** Night Eye 50, Fortify Agility 10, Fortify Acrobatics 10
+- **max:** Night Eye 75, Fortify Agility 15, Fortify Acrobatics 20, Fortify Hand To Hand 20
+
+### Kynareth
+- **min:** Slow Fall 10, Resist Shock 10
+- **mid:** Slow Fall 20, Resist Shock 20, Fortify Speed 10
+- **max:** Slow Fall 30, Resist Shock 35, Fortify Speed 15, Fortify Fatigue 50
+
+### Leather
+- **min:** Fortify Fatigue 20, Fortify Acrobatics 5
+- **mid:** Fortify Fatigue 35, Fortify Acrobatics 10, Fortify Sneak 10
+- **max:** Fortify Fatigue 50, Fortify Acrobatics 15, Fortify Sneak 15, Fortify Agility 10
+
+### Light Armor
+- **min:** Fortify Fatigue 25, Fortify Agility 5
+- **mid:** Fortify Fatigue 40, Fortify Agility 10, Sanctuary 8
+- **max:** Fortify Fatigue 60, Fortify Agility 15, Sanctuary 12, Fortify Acrobatics 15
+
+### Mages Guild  *(stub — add items to enable)*
+- **min:** Restore Magicka 1 /s, Fortify Destruction 5
+- **mid:** Restore Magicka 2 /s, Fortify Destruction 10, Resist Magicka 15
+- **max:** Restore Magicka 3 /s, Fortify Destruction 20, Resist Magicka 25, Fortify Intelligence 15
+
+### Master
+- **min:** Fortify Luck 5, Fortify Fatigue 20
+- **mid:** Fortify Luck 10, Fortify Fatigue 40, Fortify Health 20
+- **max:** Fortify Luck 15, Fortify Fatigue 60, Fortify Health 30, Fortify Attack Bonus 10
+
+### Medium Armor
+- **min:** Fortify Fatigue 25, Shield 5
+- **mid:** Fortify Fatigue 40, Shield 8, Fortify Health 20
+- **max:** Fortify Fatigue 60, Shield 12, Fortify Health 30, Fortify Endurance 10
+
+### Morag Tong
+- **min:** Resist Poison 15, Fortify Short Blade 10
+- **mid:** Resist Poison 25, Fortify Short Blade 20, Fortify Sneak 15
+- **max:** Resist Poison 40, Fortify Short Blade 30, Fortify Sneak 25, Chameleon 15
+
+### Native
+- **min:** Resist Blight Disease 15, Resist Poison 15
+- **mid:** Resist Blight Disease 25, Resist Poison 25, Fortify Athletics 10
+- **max:** Resist Blight Disease 40, Resist Poison 40, Fortify Athletics 20, Resist Fire 25
+
+### Netch Leather
+- **min:** Fortify Fatigue 25, Resist Poison 10
+- **mid:** Fortify Fatigue 40, Resist Poison 20, Fortify Athletics 10
+- **max:** Fortify Fatigue 60, Resist Poison 35, Fortify Athletics 20, Fortify Speed 10
+
+### Newtscale
+- **min:** Resist Poison 15, Swift Swim 20
+- **mid:** Resist Poison 25, Swift Swim 40, Water Breathing 1
+- **max:** Resist Poison 40, Swift Swim 60, Water Breathing 1, Resist Common Disease 30
+
+### Nordic
+- **min:** Resist Frost 25, Resist Shock 10
+- **mid:** Resist Frost 40, Resist Shock 20, Fortify Strength 10
+- **max:** Resist Frost 60, Resist Shock 35, Fortify Strength 15, Fortify Health 25
+
+### Orcish
+- **min:** Fortify Health 15, Fortify Strength 5
+- **mid:** Fortify Health 25, Fortify Strength 10, Fortify Fatigue 30
+- **max:** Fortify Health 40, Fortify Strength 15, Fortify Fatigue 50, Fortify Attack Bonus 10
+
+### Orsimer
+- **min:** Fortify Strength 5, Fortify Health 10
+- **mid:** Fortify Strength 10, Fortify Health 20, Resist Magicka 10
+- **max:** Fortify Strength 15, Fortify Health 35, Resist Magicka 20, Fortify Attack Bonus 10
+
+### Padded
+- **min:** Fortify Fatigue 25
+- **mid:** Fortify Fatigue 40, Resist Frost 10
+- **max:** Fortify Fatigue 60, Resist Frost 20, Fortify Health 15
+
+### Plate
+- **min:** Shield 10, Fortify Health 10
+- **mid:** Shield 15, Fortify Health 25, Resist Normal Weapons 8
+- **max:** Shield 20, Fortify Health 45, Resist Normal Weapons 15
+
+### Resin Molded  *(stub — add items to enable)*
+- **min:** Resist Blight Disease 15
+- **mid:** Resist Blight Disease 25, Fortify Fatigue 30
+- **max:** Resist Blight Disease 40, Fortify Fatigue 50, Resist Poison 25
+
+### Ring Mail
+- **min:** Fortify Fatigue 20, Fortify Agility 5
+- **mid:** Fortify Fatigue 35, Fortify Agility 10
+- **max:** Fortify Fatigue 50, Fortify Agility 15, Shield 5
+
+### Royal Guard
+- **min:** Fortify Health 15, Shield 8
+- **mid:** Fortify Health 25, Shield 12, Resist Magicka 15
+- **max:** Fortify Health 45, Shield 18, Resist Magicka 25, Fortify Attack Bonus 15
+
+### Scale Mail
+- **min:** Shield 5, Resist Normal Weapons 5
+- **mid:** Shield 10, Resist Normal Weapons 8
+- **max:** Shield 15, Resist Normal Weapons 12, Fortify Health 20
+
+### Scrap
+- **min:** Fortify Luck 5
+- **mid:** Fortify Luck 10, Fortify Fatigue 25
+- **max:** Fortify Luck 15, Fortify Fatigue 50, Shield 5
+
+### Silver
+- **min:** Resist Magicka 10
+- **mid:** Resist Magicka 20, Turn Undead 15
+- **max:** Resist Magicka 30, Turn Undead 30, Spell Absorption 10
+
+### Splint
+- **min:** Shield 8, Fortify Health 10
+- **mid:** Shield 12, Fortify Health 20
+- **max:** Shield 18, Fortify Health 35, Resist Normal Weapons 8
+
+### Stalhrim
+- **min:** Resist Frost 20
+- **mid:** Resist Frost 35, Restore Magicka 1 /s
+- **max:** Resist Frost 60, Restore Magicka 2 /s, Frost Shield 15
+
+### Steel
+- **min:** Fortify Health 10, Fortify Attack Bonus 5
+- **mid:** Fortify Health 20, Fortify Attack Bonus 10
+- **max:** Fortify Health 30, Fortify Attack Bonus 15, Shield 10
+
+### Studded
+- **min:** Fortify Fatigue 20, Resist Normal Weapons 3
+- **mid:** Fortify Fatigue 35, Resist Normal Weapons 5
+- **max:** Fortify Fatigue 50, Resist Normal Weapons 10, Shield 5
+
+### House Telvanni
+- **min:** Restore Magicka 1 /s, Fortify Intelligence 5
+- **mid:** Restore Magicka 2 /s, Fortify Intelligence 10, Fortify Mysticism 15
+- **max:** Restore Magicka 3 /s, Fortify Intelligence 15, Fortify Mysticism 25, Fortify Destruction 20
+
+### Templar
+- **min:** Fortify Health 10, Turn Undead 15
+- **mid:** Fortify Health 20, Turn Undead 25, Resist Magicka 15
+- **max:** Fortify Health 35, Turn Undead 40, Resist Magicka 25, Fortify Attack Bonus 10
+
+### Thieves Guild  *(stub — add items to enable)*
+- **min:** Fortify Sneak 10, Fortify Security 10
+- **mid:** Fortify Sneak 15, Fortify Security 20, Chameleon 10
+- **max:** Fortify Sneak 25, Fortify Security 30, Chameleon 20, Fortify Agility 10
+
+### Tribunal Temple
+- **min:** Resist Magicka 15, Fortify Restoration 10
+- **mid:** Resist Magicka 25, Fortify Restoration 20, Restore Health 1 /s
+- **max:** Resist Magicka 40, Fortify Restoration 30, Restore Health 2 /s, Turn Undead 30
+
+### Trollbone
+- **min:** Restore Health 1 /s
+- **mid:** Restore Health 2 /s, Resist Frost 15
+- **max:** Restore Health 3 /s, Resist Frost 30, Fortify Health 25
+
+### Wolf Fur
+- **min:** Resist Frost 15, Fortify Speed 5
+- **mid:** Resist Frost 30, Fortify Speed 10, Night Eye 25
+- **max:** Resist Frost 45, Fortify Speed 15, Night Eye 50, Fortify Athletics 15
+
+
+---
+
+## Add-on sets (67)
+
+*Tag: (relocated) = was an all-TR set moved out of the base mod; otherwise newly added.*
+
+### Alessian Bronze
+- **min:** Fortify Health 10, Resist Magicka 10
+- **mid:** Fortify Health 20, Resist Magicka 20, Fortify Attack Bonus 10
+- **max:** Fortify Health 35, Resist Magicka 30, Fortify Attack Bonus 15, Turn Undead 25
+
+### Alit Hide
+- **min:** Fortify Agility 5, Resist Poison 10
+- **mid:** Fortify Agility 10, Resist Poison 20, Fortify Athletics 15
+- **max:** Fortify Agility 15, Resist Poison 35, Fortify Athletics 25, Fortify Attack Bonus 10
+
+### Altmer  *(relocated)*
+- **min:** Restore Magicka 1 /s, Fortify Intelligence 5
+- **mid:** Restore Magicka 2 /s, Fortify Intelligence 10, Fortify Destruction 10
+- **max:** Restore Magicka 3 /s, Fortify Intelligence 15, Fortify Destruction 20, Fortify Alteration 15
+
+### Ancient Nordic
+- **min:** Resist Frost 20, Fortify Health 10
+- **mid:** Resist Frost 35, Fortify Health 25, Shield 10
+- **max:** Resist Frost 50, Fortify Health 40, Shield 15, Turn Undead 25
+
+### Anvil  *(relocated)*
+- **min:** Water Breathing 1, Swift Swim 30
+- **mid:** Water Breathing 1, Swift Swim 50, Resist Frost 20
+- **max:** Water Breathing 1, Swift Swim 70, Resist Frost 35, Fortify Personality 10
+
+### Argonian  *(relocated)*
+- **min:** Water Breathing 1, Resist Poison 15
+- **mid:** Water Breathing 1, Resist Poison 25, Resist Common Disease 30, Swift Swim 40
+- **max:** Water Breathing 1, Resist Poison 40, Resist Common Disease 50, Swift Swim 60, Restore Health 1 /s
+
+### Ayleid  *(relocated)*
+- **min:** Restore Magicka 1 /s, Light 10
+- **mid:** Restore Magicka 2 /s, Spell Absorption 10
+- **max:** Restore Magicka 3 /s, Spell Absorption 18, Resist Magicka 25
+
+### Bal-Darum  *(relocated)*
+- **min:** Resist Blight Disease 15, Shield 5
+- **mid:** Resist Blight Disease 25, Shield 10, Fortify Health 20
+- **max:** Resist Blight Disease 40, Shield 15, Fortify Health 35
+
+### Breton  *(relocated)*
+- **min:** Resist Magicka 15
+- **mid:** Resist Magicka 30, Spell Absorption 10
+- **max:** Resist Magicka 50, Spell Absorption 18, Fortify Conjuration 15
+
+### Cataphract  *(relocated)*
+- **min:** Fortify Health 10, Fortify Attack Bonus 5
+- **mid:** Fortify Health 20, Fortify Attack Bonus 10, Shield 8
+- **max:** Fortify Health 35, Fortify Attack Bonus 15, Shield 12
+
+### Chap-thil  *(relocated)*
+- **min:** Resist Fire 15, Fortify Fatigue 20
+- **mid:** Resist Fire 25, Fortify Fatigue 35
+- **max:** Resist Fire 40, Fortify Fatigue 55, Fortify Endurance 10
+
+### Chev-Aram  *(relocated)*
+- **min:** Resist Fire 15, Fortify Attack Bonus 5
+- **mid:** Resist Fire 25, Fortify Attack Bonus 10, Fortify Health 20
+- **max:** Resist Fire 40, Fortify Attack Bonus 15, Fortify Health 35
+
+### Chuzei  *(relocated)*
+- **min:** Fortify Health 10, Resist Blight Disease 10
+- **mid:** Fortify Health 25, Resist Blight Disease 20, Shield 10
+- **max:** Fortify Health 40, Resist Blight Disease 30, Shield 15, Resist Fire 25
+
+### Colovian Leather
+- **min:** Fortify Fatigue 25, Fortify Agility 5
+- **mid:** Fortify Fatigue 40, Fortify Agility 10, Fortify Sneak 10
+- **max:** Fortify Fatigue 60, Fortify Agility 15, Fortify Sneak 20, Fortify Acrobatics 15
+
+### Companions  *(relocated)*
+- **min:** Fortify Attack Bonus 5, Fortify Fatigue 25
+- **mid:** Fortify Attack Bonus 10, Fortify Fatigue 40, Fortify Health 20
+- **max:** Fortify Attack Bonus 15, Fortify Fatigue 60, Fortify Health 35, Fortify Personality 10
+
+### Crown Guard  *(relocated)*
+- **min:** Fortify Health 10, Shield 5
+- **mid:** Fortify Health 20, Shield 10, Fortify Personality 10
+- **max:** Fortify Health 35, Shield 15, Fortify Personality 15, Fortify Attack Bonus 10
+
+### Daedric Hide  *(relocated)*
+- **min:** Spell Absorption 8
+- **mid:** Spell Absorption 12, Resist Magicka 15, Sanctuary 8
+- **max:** Spell Absorption 18, Resist Magicka 25, Sanctuary 12, Restore Magicka 1 /s
+
+### Domina  *(relocated)*
+- **min:** Fortify Personality 5, Fortify Attack Bonus 5
+- **mid:** Fortify Personality 10, Fortify Attack Bonus 10, Fortify Health 20
+- **max:** Fortify Personality 15, Fortify Attack Bonus 15, Fortify Health 35, Shield 10
+
+### Dunmer  *(relocated)*
+- **min:** Resist Fire 25
+- **mid:** Resist Fire 50, Fortify Destruction 10
+- **max:** Resist Fire 75, Fortify Destruction 20, Fortify Speed 10
+
+### Ebonweave
+- **min:** Restore Magicka 1, Fortify Fatigue 20
+- **mid:** Restore Magicka 2, Fortify Fatigue 35, Resist Magicka 15
+- **max:** Restore Magicka 3, Fortify Fatigue 50, Resist Magicka 25, Spell Absorption 10
+
+### Falkreath Guard
+- **min:** Fortify Health 10, Resist Frost 15
+- **mid:** Fortify Health 20, Resist Frost 30, Shield 10
+- **max:** Fortify Health 35, Resist Frost 45, Shield 15, Fortify Endurance 10
+
+### Gah'Kogo  *(relocated)*
+- **min:** Resist Poison 15, Resist Blight Disease 10
+- **mid:** Resist Poison 25, Resist Blight Disease 20, Resist Paralysis 15
+- **max:** Resist Poison 40, Resist Blight Disease 30, Resist Paralysis 25, Fortify Agility 10
+
+### Gilded Glass
+- **min:** Fortify Agility 5, Fortify Personality 5
+- **mid:** Fortify Agility 10, Resist Fire 20, Fortify Personality 10
+- **max:** Fortify Agility 15, Resist Fire 35, Sanctuary 12, Fortify Personality 15
+
+### Gold  *(relocated)*
+- **min:** Fortify Personality 5
+- **mid:** Fortify Personality 10, Fortify Mercantile 10
+- **max:** Fortify Personality 15, Fortify Mercantile 20, Resist Magicka 15
+
+### Golden Saint
+- **min:** Resist Magicka 15, Spell Absorption 8
+- **mid:** Resist Magicka 25, Spell Absorption 12, Reflect 8
+- **max:** Resist Magicka 40, Spell Absorption 18, Reflect 12, Fortify Attack Bonus 10
+
+### Guar Hide
+- **min:** Fortify Fatigue 25, Resist Blight Disease 10
+- **mid:** Fortify Fatigue 40, Resist Blight Disease 20, Fortify Endurance 10
+- **max:** Fortify Fatigue 60, Resist Blight Disease 30, Fortify Endurance 15, Fortify Athletics 15
+
+### House Direnni  *(relocated)*
+- **min:** Resist Magicka 15, Restore Magicka 1 /s
+- **mid:** Resist Magicka 30, Restore Magicka 2 /s, Spell Absorption 10
+- **max:** Resist Magicka 50, Restore Magicka 2 /s, Spell Absorption 18, Fortify Alteration 20
+
+### House Redoran  *(relocated)*
+- **min:** Fortify Health 10, Resist Blight Disease 10
+- **mid:** Fortify Health 25, Resist Blight Disease 20, Fortify Endurance 10
+- **max:** Fortify Health 40, Resist Blight Disease 30, Fortify Endurance 15, Shield 12
+
+### Kagouti Hide
+- **min:** Fortify Speed 5, Fortify Athletics 10
+- **mid:** Fortify Speed 10, Fortify Athletics 15, Resist Poison 20
+- **max:** Fortify Speed 15, Fortify Athletics 25, Resist Poison 35, Fortify Attack Bonus 10
+
+### Kalantar  *(relocated)*
+- **min:** Resist Fire 15, Fortify Attack Bonus 5
+- **mid:** Resist Fire 25, Fortify Attack Bonus 10, Fortify Strength 5
+- **max:** Resist Fire 40, Fortify Attack Bonus 15, Fortify Strength 10, Fortify Health 25
+
+### Klibanion  *(relocated)*
+- **min:** Shield 8, Fortify Endurance 5
+- **mid:** Shield 12, Fortify Endurance 10
+- **max:** Shield 18, Fortify Endurance 15, Fortify Health 25
+
+### Kragen  *(relocated)*
+- **min:** Resist Fire 15, Fortify Mercantile 10
+- **mid:** Resist Fire 25, Fortify Mercantile 20, Fortify Health 15
+- **max:** Resist Fire 40, Fortify Mercantile 30, Fortify Health 25, Fortify Personality 10
+
+### Kvetchi  *(relocated)*
+- **min:** Resist Blight Disease 15, Fortify Fatigue 20
+- **mid:** Resist Blight Disease 25, Fortify Fatigue 35, Resist Poison 20
+- **max:** Resist Blight Disease 40, Fortify Fatigue 50, Resist Poison 35, Fortify Endurance 10
+
+### Lamellar  *(relocated)*
+- **min:** Shield 5, Fortify Fatigue 25
+- **mid:** Shield 10, Fortify Fatigue 40
+- **max:** Shield 15, Fortify Fatigue 60, Fortify Health 25
+
+### Mananaut
+*Thresholds: 2 / 3 / 5 pieces*  
+- **min:** Resist Shock 15, Water Breathing 1
+- **mid:** Resist Shock 30, Water Breathing 1, Fortify Intelligence 10
+- **max:** Resist Shock 50, Water Breathing 1, Fortify Intelligence 15, Reflect 10
+
+### Manatee Leather
+- **min:** Water Breathing 1, Swift Swim 30
+- **mid:** Water Breathing 1, Swift Swim 50, Fortify Fatigue 35
+- **max:** Water Breathing 1, Swift Swim 70, Fortify Fatigue 50, Resist Frost 25
+
+### Maormer
+- **min:** Water Breathing 1, Swift Swim 30
+- **mid:** Water Breathing 1, Swift Swim 50, Resist Shock 20
+- **max:** Water Breathing 1, Swift Swim 70, Resist Shock 35, Chameleon 15
+
+### Maradlai  *(relocated)*
+- **min:** Resist Fire 15, Fortify Speed 5
+- **mid:** Resist Fire 25, Fortify Speed 10, Fortify Fatigue 30
+- **max:** Resist Fire 40, Fortify Speed 15, Fortify Fatigue 50, Fortify Athletics 15
+
+### Militia  *(relocated)*
+- **min:** Fortify Fatigue 20, Fortify Health 10
+- **mid:** Fortify Fatigue 35, Fortify Health 20, Shield 5
+- **max:** Fortify Fatigue 50, Fortify Health 30, Shield 10
+
+### Molecrab  *(relocated)*
 - **min:** Shield 8
-- **mid:** Shield 12, ResistNormalWeapons 5
-- **max:** Shield 18, ResistNormalWeapons 10, FortifyHealth 20
+- **mid:** Shield 12, Resist Normal Weapons 5
+- **max:** Shield 18, Resist Normal Weapons 10, Fortify Health 20
 
-## Morag Tong  `moragtong`
-- **min:** ResistPoison 15, FortifySkill ShortBlade 10
-- **mid:** ResistPoison 25, FortifySkill ShortBlade 20, FortifySkill Sneak 15
-- **max:** ResistPoison 40, FortifySkill ShortBlade 30, FortifySkill Sneak 25, Chameleon 15
+### Narsis Watch
+- **min:** Fortify Health 10, Shield 5
+- **mid:** Fortify Health 20, Shield 10, Fortify Endurance 10
+- **max:** Fortify Health 35, Shield 15, Fortify Endurance 15, Fortify Mercantile 15
 
-## Native  `native`
-- **min:** ResistBlightDisease 15, ResistPoison 15
-- **mid:** ResistBlightDisease 25, ResistPoison 25, FortifySkill Athletics 10
-- **max:** ResistBlightDisease 40, ResistPoison 40, FortifySkill Athletics 20, ResistFire 25
+### Navy  *(relocated)*
+- **min:** Swift Swim 30, Water Breathing 1
+- **mid:** Swift Swim 50, Water Breathing 1, Resist Frost 20
+- **max:** Swift Swim 70, Water Breathing 1, Resist Frost 35, Fortify Fatigue 50
 
-## Imperial Navy  `navy`
-- **min:** SwiftSwim 30, WaterBreathing 1
-- **mid:** SwiftSwim 50, WaterBreathing 1, ResistFrost 20
-- **max:** SwiftSwim 70, WaterBreathing 1, ResistFrost 35, FortifyFatigue 50
+### Necrom Guard  *(relocated)*
+- **min:** Turn Undead 15, Resist Magicka 10
+- **mid:** Turn Undead 25, Resist Magicka 20, Fortify Health 20
+- **max:** Turn Undead 40, Resist Magicka 30, Fortify Health 35, Fortify Restoration 20
 
-## Necrom Guard  `necrom`
-- **min:** TurnUndead 15, ResistMagicka 10
-- **mid:** TurnUndead 25, ResistMagicka 20, FortifyHealth 20
-- **max:** TurnUndead 40, ResistMagicka 30, FortifyHealth 35, FortifySkill Restoration 20
+### Nibenese  *(relocated)*
+- **min:** Restore Magicka 1 /s, Fortify Mercantile 10
+- **mid:** Restore Magicka 2 /s, Fortify Mercantile 20, Resist Magicka 15
+- **max:** Restore Magicka 2 /s, Fortify Mercantile 30, Resist Magicka 25, Fortify Personality 15
 
-## Netch Leather  `netch`
-- **min:** FortifyFatigue 25, ResistPoison 10
-- **mid:** FortifyFatigue 40, ResistPoison 20, FortifySkill Athletics 10
-- **max:** FortifyFatigue 60, ResistPoison 35, FortifySkill Athletics 20, FortifyAttribute Speed 10
+### Oloman  *(relocated)*
+- **min:** Resist Fire 15, Shield 5
+- **mid:** Resist Fire 25, Shield 10, Fortify Health 20
+- **max:** Resist Fire 40, Shield 15, Fortify Health 35, Fortify Endurance 10
 
-## Newtscale  `newtscale`
-- **min:** ResistPoison 15, SwiftSwim 20
-- **mid:** ResistPoison 25, SwiftSwim 40, WaterBreathing 1
-- **max:** ResistPoison 40, SwiftSwim 60, WaterBreathing 1, ResistCommonDisease 30
+### Quey Chitin
+- **min:** Water Breathing 1, Resist Poison 15
+- **mid:** Water Breathing 1, Resist Poison 25, Shield 10
+- **max:** Water Breathing 1, Resist Poison 40, Shield 15, Swift Swim 50
 
-## Nibenese  `nibenese`
-- **min:** RestoreMagicka 1 /s, FortifySkill Mercantile 10
-- **mid:** RestoreMagicka 2 /s, FortifySkill Mercantile 20, ResistMagicka 15
-- **max:** RestoreMagicka 2 /s, FortifySkill Mercantile 30, ResistMagicka 25, FortifyAttribute Personality 15
+### Reach
+- **min:** Resist Frost 15, Fortify Endurance 5
+- **mid:** Resist Frost 30, Fortify Endurance 10, Fortify Attack Bonus 10
+- **max:** Resist Frost 45, Fortify Endurance 15, Fortify Attack Bonus 15, Spell Absorption 10
 
-## Nordic  `nord`
-- **min:** ResistFrost 25, ResistShock 10
-- **mid:** ResistFrost 40, ResistShock 20, FortifyAttribute Strength 10
-- **max:** ResistFrost 60, ResistShock 35, FortifyAttribute Strength 15, FortifyHealth 25
+### Reach Royal Guard
+- **min:** Fortify Health 10, Resist Frost 15
+- **mid:** Fortify Health 20, Resist Frost 30, Shield 10
+- **max:** Fortify Health 35, Resist Frost 45, Shield 15, Fortify Attack Bonus 15
 
-## Oloman  `oloman`
-- **min:** ResistFire 15, Shield 5
-- **mid:** ResistFire 25, Shield 10, FortifyHealth 20
-- **max:** ResistFire 40, Shield 15, FortifyHealth 35, FortifyAttribute Endurance 10
+### Red Dome Templar
+- **min:** Fortify Health 10, Resist Magicka 10
+- **mid:** Fortify Health 20, Resist Magicka 20, Turn Undead 20
+- **max:** Fortify Health 35, Resist Magicka 30, Turn Undead 35, Fortify Restoration 20
 
-## Orsimer  `orc`
-- **min:** FortifyAttribute Strength 5, FortifyHealth 10
-- **mid:** FortifyAttribute Strength 10, FortifyHealth 20, ResistMagicka 10
-- **max:** FortifyAttribute Strength 15, FortifyHealth 35, ResistMagicka 20, FortifyAttackBonus 10
+### Redguard  *(relocated)*
+- **min:** Resist Poison 15, Fortify Endurance 5
+- **mid:** Resist Poison 25, Fortify Endurance 10, Fortify Fatigue 40
+- **max:** Resist Poison 40, Fortify Endurance 15, Fortify Fatigue 60, Fortify Attack Bonus 15
 
-## Orichalcum  `orcish`
-- **min:** FortifyHealth 15, FortifyAttribute Strength 5
-- **mid:** FortifyHealth 25, FortifyAttribute Strength 10, FortifyFatigue 30
-- **max:** FortifyHealth 40, FortifyAttribute Strength 15, FortifyFatigue 50, FortifyAttackBonus 10
+### Redguard Iron Lamellar
+- **min:** Shield 8, Fortify Health 10
+- **mid:** Shield 12, Fortify Health 20, Fortify Attack Bonus 10
+- **max:** Shield 18, Fortify Health 35, Fortify Attack Bonus 15, Fortify Endurance 10
 
-## Padded  `padded`
-- **min:** FortifyFatigue 25
-- **mid:** FortifyFatigue 40, ResistFrost 10
-- **max:** FortifyFatigue 60, ResistFrost 20, FortifyHealth 15
+### Reman  *(relocated)*
+- **min:** Fortify Health 10, Fortify Attack Bonus 5
+- **mid:** Fortify Health 25, Fortify Attack Bonus 10, Fortify Personality 10
+- **max:** Fortify Health 40, Fortify Attack Bonus 15, Fortify Personality 15, Shield 10
 
-## Plate  `plate`
-- **min:** Shield 10, FortifyHealth 10
-- **mid:** Shield 15, FortifyHealth 25, ResistNormalWeapons 8
-- **max:** Shield 20, FortifyHealth 45, ResistNormalWeapons 15
+### Rihad Guard
+- **min:** Resist Poison 15, Fortify Fatigue 20
+- **mid:** Resist Poison 25, Fortify Fatigue 35, Shield 10
+- **max:** Resist Poison 40, Fortify Fatigue 55, Shield 15, Fortify Endurance 10
 
-## Redguard  `redguard`
-- **min:** ResistPoison 15, FortifyAttribute Endurance 5
-- **mid:** ResistPoison 25, FortifyAttribute Endurance 10, FortifyFatigue 40
-- **max:** ResistPoison 40, FortifyAttribute Endurance 15, FortifyFatigue 60, FortifyAttackBonus 15
+### Riverwatch
+- **min:** Fortify Health 10, Water Walking 1
+- **mid:** Fortify Health 20, Water Walking 1, Shield 10
+- **max:** Fortify Health 35, Water Walking 1, Shield 15, Resist Blight Disease 30
 
-## House Redoran  `redoran`
-- **min:** FortifyHealth 10, ResistBlightDisease 10
-- **mid:** FortifyHealth 25, ResistBlightDisease 20, FortifyAttribute Endurance 10
-- **max:** FortifyHealth 40, ResistBlightDisease 30, FortifyAttribute Endurance 15, Shield 12
+### Rourken
+- **min:** Resist Shock 15, Fortify Health 10
+- **mid:** Resist Shock 30, Fortify Health 20, Shield 10
+- **max:** Resist Shock 50, Fortify Health 35, Shield 15, Reflect 10
 
-## Reman  `reman`
-- **min:** FortifyHealth 10, FortifyAttackBonus 5
-- **mid:** FortifyHealth 25, FortifyAttackBonus 10, FortifyAttribute Personality 10
-- **max:** FortifyHealth 40, FortifyAttackBonus 15, FortifyAttribute Personality 15, Shield 10
+### Sacred Lands
+- **min:** Resist Magicka 15, Fortify Health 10
+- **mid:** Resist Magicka 25, Fortify Health 20, Fortify Restoration 15
+- **max:** Resist Magicka 40, Fortify Health 35, Fortify Restoration 25, Turn Undead 25
 
-## Resin Molded  `resin`
-- **min:** ResistBlightDisease 15
-- **mid:** ResistBlightDisease 25, FortifyFatigue 30
-- **max:** ResistBlightDisease 40, FortifyFatigue 50, ResistPoison 25
+### Saliache  *(relocated)*
+- **min:** Resist Blight Disease 15, Fortify Athletics 10
+- **mid:** Resist Blight Disease 25, Fortify Athletics 15, Resist Poison 20
+- **max:** Resist Blight Disease 40, Fortify Athletics 25, Resist Poison 35, Fortify Agility 10
 
-## Ring Mail  `ring`
-- **min:** FortifyFatigue 20, FortifyAttribute Agility 5
-- **mid:** FortifyFatigue 35, FortifyAttribute Agility 10
-- **max:** FortifyFatigue 50, FortifyAttribute Agility 15, Shield 5
+### Shellmold  *(relocated)*
+- **min:** Shield 5, Resist Shock 10
+- **mid:** Shield 10, Resist Shock 20
+- **max:** Shield 15, Resist Shock 35, Fortify Health 20
 
-## Royal Guard  `royal`
-- **min:** FortifyHealth 15, Shield 8
-- **mid:** FortifyHealth 25, Shield 12, ResistMagicka 15
-- **max:** FortifyHealth 45, Shield 18, ResistMagicka 25, FortifyAttackBonus 15
+### Shinathi Chitin
+- **min:** Resist Poison 15, Resist Blight Disease 15
+- **mid:** Resist Poison 25, Resist Blight Disease 25, Resist Paralysis 15
+- **max:** Resist Poison 40, Resist Blight Disease 40, Resist Paralysis 30, Fortify Agility 10
 
-## Saliache  `saliache`
-- **min:** ResistBlightDisease 15, FortifySkill Athletics 10
-- **mid:** ResistBlightDisease 25, FortifySkill Athletics 15, ResistPoison 20
-- **max:** ResistBlightDisease 40, FortifySkill Athletics 25, ResistPoison 35, FortifyAttribute Agility 10
+### Shipal-Arai  *(relocated)*
+- **min:** Resist Blight Disease 15, Resist Poison 15
+- **mid:** Resist Blight Disease 25, Resist Poison 25, Fortify Spear 15
+- **max:** Resist Blight Disease 40, Resist Poison 40, Fortify Spear 25, Fortify Agility 10
 
-## Scale Mail  `scale`
-- **min:** Shield 5, ResistNormalWeapons 5
-- **mid:** Shield 10, ResistNormalWeapons 8
-- **max:** Shield 15, ResistNormalWeapons 12, FortifyHealth 20
+### Skingrad  *(relocated)*
+- **min:** Resist Poison 15, Resist Common Disease 20
+- **mid:** Resist Poison 25, Resist Common Disease 35, Fortify Personality 10
+- **max:** Resist Poison 40, Resist Common Disease 50, Fortify Personality 15, Resist Magicka 15
 
-## Scrap  `scrap`
-- **min:** FortifyAttribute Luck 5
-- **mid:** FortifyAttribute Luck 10, FortifyFatigue 25
-- **max:** FortifyAttribute Luck 15, FortifyFatigue 50, Shield 5
+### Sutch Mail
+- **min:** Fortify Health 10, Shield 5
+- **mid:** Fortify Health 20, Shield 10, Fortify Attack Bonus 10
+- **max:** Fortify Health 35, Shield 15, Fortify Attack Bonus 15, Fortify Fatigue 40
 
-## Shellmold  `shellmold`
-- **min:** Shield 5, ResistShock 10
-- **mid:** Shield 10, ResistShock 20
-- **max:** Shield 15, ResistShock 35, FortifyHealth 20
+### Thirr  *(relocated)*
+- **min:** Resist Fire 15, Water Breathing 1
+- **mid:** Resist Fire 25, Water Breathing 1, Fortify Health 20
+- **max:** Resist Fire 40, Water Breathing 1, Fortify Health 35, Swift Swim 40
 
-## Shipal-arai  `shipal-arai`
-- **min:** ResistBlightDisease 15, ResistPoison 15
-- **mid:** ResistBlightDisease 25, ResistPoison 25, FortifySkill Spear 15
-- **max:** ResistBlightDisease 40, ResistPoison 40, FortifySkill Spear 25, FortifyAttribute Agility 10
+### Toadscale
+- **min:** Resist Poison 15, Resist Frost 15
+- **mid:** Resist Poison 25, Resist Frost 30, Resist Common Disease 30
+- **max:** Resist Poison 40, Resist Frost 45, Resist Common Disease 50, Fortify Fatigue 40
 
-## Silver  `silver`
-- **min:** ResistMagicka 10
-- **mid:** ResistMagicka 20, TurnUndead 15
-- **max:** ResistMagicka 30, TurnUndead 30, SpellAbsorption 10
+### Watchman  *(relocated)*
+- **min:** Night Eye 25, Fortify Fatigue 20
+- **mid:** Night Eye 50, Fortify Fatigue 35, Fortify Health 15
+- **max:** Night Eye 75, Fortify Fatigue 50, Fortify Health 25, Detect Animal 50
 
-## Skingrad  `skingrad`
-- **min:** ResistPoison 15, ResistCommonDisease 20
-- **mid:** ResistPoison 25, ResistCommonDisease 35, FortifyAttribute Personality 10
-- **max:** ResistPoison 40, ResistCommonDisease 50, FortifyAttribute Personality 15, ResistMagicka 15
+### Wenbone
+- **min:** Resist Poison 15, Fortify Marksman 10
+- **mid:** Resist Poison 25, Fortify Marksman 15, Fortify Agility 10
+- **max:** Resist Poison 40, Fortify Marksman 25, Fortify Agility 15, Fortify Sneak 15
 
-## Splint  `splint`
-- **min:** Shield 8, FortifyHealth 10
-- **mid:** Shield 12, FortifyHealth 20
-- **max:** Shield 18, FortifyHealth 35, ResistNormalWeapons 8
+### Wormmouth  *(relocated)*
+- **min:** Resist Poison 15
+- **mid:** Resist Poison 25, Resist Blight Disease 20
+- **max:** Resist Poison 40, Resist Blight Disease 35, Resist Paralysis 20
 
-## Stalhrim  `stalhrim`
-- **min:** ResistFrost 20
-- **mid:** ResistFrost 35, RestoreMagicka 1 /s
-- **max:** ResistFrost 60, RestoreMagicka 2 /s, FrostShield 15
 
-## Steel  `steel`
-- **min:** FortifyHealth 10, FortifyAttackBonus 5
-- **mid:** FortifyHealth 20, FortifyAttackBonus 10
-- **max:** FortifyHealth 30, FortifyAttackBonus 15, Shield 10
+---
 
-## Studded  `studded`
-- **min:** FortifyFatigue 20, ResistNormalWeapons 3
-- **mid:** FortifyFatigue 35, ResistNormalWeapons 5
-- **max:** FortifyFatigue 50, ResistNormalWeapons 10, Shield 5
+## TR items folded into existing sets
 
-## House Telvanni  `telvanni`
-- **min:** RestoreMagicka 1 /s, FortifyAttribute Intelligence 5
-- **mid:** RestoreMagicka 2 /s, FortifyAttribute Intelligence 10, FortifySkill Mysticism 15
-- **max:** RestoreMagicka 3 /s, FortifyAttribute Intelligence 15, FortifySkill Mysticism 25, FortifySkill Destruction 20
+When TR is installed these sets also recognise their Tamriel Rebuilt armour (re-linked via `addItems`):
 
-## Templar  `templar`
-- **min:** FortifyHealth 10, TurnUndead 15
-- **mid:** FortifyHealth 20, TurnUndead 25, ResistMagicka 15
-- **max:** FortifyHealth 35, TurnUndead 40, ResistMagicka 25, FortifyAttackBonus 10
-
-## Theives Guild  `theivesguild`
-- **min:** FortifySkill Sneak 10, FortifySkill Security 10
-- **mid:** FortifySkill Sneak 15, FortifySkill Security 20, Chameleon 10
-- **max:** FortifySkill Sneak 25, FortifySkill Security 30, Chameleon 20, FortifyAttribute Agility 10
-
-## Thirr  `thirr`
-- **min:** ResistFire 15, WaterBreathing 1
-- **mid:** ResistFire 25, WaterBreathing 1, FortifyHealth 20
-- **max:** ResistFire 40, WaterBreathing 1, FortifyHealth 35, SwiftSwim 40
-
-## Tribunal Temple  `tribunal`
-- **min:** ResistMagicka 15, FortifySkill Restoration 10
-- **mid:** ResistMagicka 25, FortifySkill Restoration 20, RestoreHealth 1 /s
-- **max:** ResistMagicka 40, FortifySkill Restoration 30, RestoreHealth 2 /s, TurnUndead 30
-
-## Trollbone  `troll`
-- **min:** RestoreHealth 1 /s
-- **mid:** RestoreHealth 2 /s, ResistFrost 15
-- **max:** RestoreHealth 3 /s, ResistFrost 30, FortifyHealth 25
-
-## Watchman  `watchman`
-- **min:** NightEye 25, FortifyFatigue 20
-- **mid:** NightEye 50, FortifyFatigue 35, FortifyHealth 15
-- **max:** NightEye 75, FortifyFatigue 50, FortifyHealth 25, DetectAnimal 50
-
-## Wolf Fur  `wolf`
-- **min:** ResistFrost 15, FortifyAttribute Speed 5
-- **mid:** ResistFrost 30, FortifyAttribute Speed 10, NightEye 25
-- **max:** ResistFrost 45, FortifyAttribute Speed 15, NightEye 50, FortifySkill Athletics 15
-
-## Bosmer  `woodelf`
-- **min:** ResistPoison 15, FortifyAttribute Agility 5
-- **mid:** ResistPoison 25, FortifyAttribute Agility 10, FortifySkill Marksman 15
-- **max:** ResistPoison 40, FortifyAttribute Agility 15, FortifySkill Marksman 25, ResistCommonDisease 30
-
-## Wormmouth  `wormmouth`
-- **min:** ResistPoison 15
-- **mid:** ResistPoison 25, ResistBlightDisease 20
-- **max:** ResistPoison 40, ResistBlightDisease 35, ResistParalysis 20
+- **Bearskin** (+7 TR items)
+- **Bonemold** (+92 TR items)
+- **Bronze** (+9 TR items)
+- **Cephalopod** (+8 TR items)
+- **Chain Mail** (+15 TR items)
+- **Chitin** (+17 TR items)
+- **Colovian** (+136 TR items)
+- **Daedric** (+57 TR items)
+- **Dragonscale** (+9 TR items)
+- **Dreugh** (+12 TR items)
+- **Dwemer** (+9 TR items)
+- **Ebony** (+19 TR items)
+- **Fur** (+21 TR items)
+- **Glass** (+10 TR items)
+- **Goblin** (+6 TR items)
+- **Heavy Armor** (+3 TR items)
+- **Hide** (+14 TR items)
+- **House Dres** (+32 TR items)
+- **House Hlaalu** (+1 TR items)
+- **House Indoril** (+26 TR items)
+- **House Telvanni** (+26 TR items)
+- **Imperial** (+5 TR items)
+- **Iron** (+16 TR items)
+- **Lamellar** (+11 TR items)
+- **Leather** (+16 TR items)
+- **Light Armor** (+13 TR items)
+- **Master** (+3 TR items)
+- **Morag Tong** (+7 TR items)
+- **Native** (+101 TR items)
+- **Netch Leather** (+14 TR items)
+- **Newtscale** (+8 TR items)
+- **Nordic** (+81 TR items)
+- **Orcish** (+6 TR items)
+- **Orsimer** (+14 TR items)
+- **Ring Mail** (+11 TR items)
+- **Scrap** (+8 TR items)
+- **Shellmold** (+8 TR items)
+- **Silver** (+12 TR items)
+- **Steel** (+8 TR items)
+- **Studded** (+5 TR items)
+- **Templar** (+1 TR items)
+- **Trollbone** (+7 TR items)

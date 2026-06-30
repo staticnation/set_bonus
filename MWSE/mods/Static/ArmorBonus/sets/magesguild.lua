@@ -1,11 +1,23 @@
--- STUB: no armor items for the Mages Guild set were found in the provided dumps (armor.csv / raw.csv).
--- The spells (_sn_magesguild_min/mid/max) exist in Set_Bonus.esp, so just fill in the
--- equippable item IDs below (lowercase or any case; they are lowercased on load) and the
--- set bonus will start working. An empty list is harmless: the set simply never triggers.
+-- STUB: fill in this set's equippable item IDs below; the bonus is already
+-- defined in Lua (no ESP needed). An empty list is harmless (set never triggers).
 return {
 	name = "Mages Guild",
 	items = {  },
-	minBonus = "_sn_magesguild_min",
-	midBonus = "_sn_magesguild_mid",
-	maxBonus = "_sn_magesguild_max"
+	bonuses = {
+		min = {
+			{ effect = "restoreMagicka", magnitude = 1, duration = 1 },
+			{ effect = "fortifySkill", skill = "destruction", magnitude = 5 },
+		},
+		mid = {
+			{ effect = "restoreMagicka", magnitude = 2, duration = 1 },
+			{ effect = "fortifySkill", skill = "destruction", magnitude = 10 },
+			{ effect = "resistMagicka", magnitude = 15 },
+		},
+		max = {
+			{ effect = "restoreMagicka", magnitude = 3, duration = 1 },
+			{ effect = "fortifySkill", skill = "destruction", magnitude = 20 },
+			{ effect = "resistMagicka", magnitude = 25 },
+			{ effect = "fortifyAttribute", attribute = "intelligence", magnitude = 15 },
+		},
+	},
 }

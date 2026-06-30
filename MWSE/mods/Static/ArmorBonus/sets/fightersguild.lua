@@ -1,11 +1,23 @@
--- STUB: no armor items for the Fighters Guild set were found in the provided dumps (armor.csv / raw.csv).
--- The spells (_sn_fightersguild_min/mid/max) exist in Set_Bonus.esp, so just fill in the
--- equippable item IDs below (lowercase or any case; they are lowercased on load) and the
--- set bonus will start working. An empty list is harmless: the set simply never triggers.
+-- STUB: fill in this set's equippable item IDs below; the bonus is already
+-- defined in Lua (no ESP needed). An empty list is harmless (set never triggers).
 return {
 	name = "Fighters Guild",
 	items = {  },
-	minBonus = "_sn_fightersguild_min",
-	midBonus = "_sn_fightersguild_mid",
-	maxBonus = "_sn_fightersguild_max"
+	bonuses = {
+		min = {
+			{ effect = "fortifyAttackBonus", magnitude = 5 },
+			{ effect = "fortifyHealth", magnitude = 10 },
+		},
+		mid = {
+			{ effect = "fortifyAttackBonus", magnitude = 10 },
+			{ effect = "fortifyHealth", magnitude = 20 },
+			{ effect = "fortifyFatigue", magnitude = 40 },
+		},
+		max = {
+			{ effect = "fortifyAttackBonus", magnitude = 15 },
+			{ effect = "fortifyHealth", magnitude = 35 },
+			{ effect = "fortifyFatigue", magnitude = 60 },
+			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 10 },
+		},
+	},
 }

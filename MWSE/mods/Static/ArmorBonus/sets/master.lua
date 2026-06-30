@@ -1,7 +1,21 @@
 return {
         name = "Master",
-        items = { "redoran_master_helm", "T_De_RedMastBonemold_Cuirass_01", "T_De_RedMastBonemold_PauldrL_01", "T_De_RedMastBonemold_PauldrR_01" },
-        minBonus = "_sn_master_min",
-        midBonus = "_sn_master_mid",
-        maxBonus = "_sn_master_max"
+        items = { "redoran_master_helm" },
+	bonuses = {
+		min = {
+			{ effect = "fortifyAttribute", attribute = "luck", magnitude = 5 },
+			{ effect = "fortifyFatigue", magnitude = 20 },
+		},
+		mid = {
+			{ effect = "fortifyAttribute", attribute = "luck", magnitude = 10 },
+			{ effect = "fortifyFatigue", magnitude = 40 },
+			{ effect = "fortifyHealth", magnitude = 20 },
+		},
+		max = {
+			{ effect = "fortifyAttribute", attribute = "luck", magnitude = 15 },
+			{ effect = "fortifyFatigue", magnitude = 60 },
+			{ effect = "fortifyHealth", magnitude = 30 },
+			{ effect = "fortifyAttackBonus", magnitude = 10 },
+		},
+	},
 }
