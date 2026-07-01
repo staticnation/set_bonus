@@ -52,6 +52,9 @@ OpenMW **0.51+** (or a recent dev build) — runtime spell-record creation is re
 - **Settings page:** open *Options > Scripts > Set Bonus* in-game for three toggles:
   - *Tier-change notifications* (player) — show a message when your bonus tier changes.
   - *Apply bonuses to NPCs* (global) — toggling off immediately clears NPC bonuses.
+  - *Match enchanted/copied items by icon* (global) — on by default; also matches
+    set pieces by inventory icon so a player-enchanted or copied item (new record
+    ID, same icon) still counts. Turn off for strict ID-only matching.
   - *Benefit magnitude scale* (global) — multiplier for the helpful effects
     (0.25–3.0, default 1.0). Magnitudes stay whole numbers and never round to 0,
     so over-time effects keep ticking. Rebuilds and re-applies immediately.

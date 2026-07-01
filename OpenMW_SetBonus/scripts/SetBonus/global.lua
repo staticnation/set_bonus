@@ -11,6 +11,7 @@ local data    = require('scripts.SetBonus.data')
 
 local SPELL = {}      -- [setIndex][tier] = generated spell record (object)
 local itemLink = {}   -- itemId(lower) -> { setIndex, ... }
+local iconLink = {}   -- iconPath(lower) -> { setIndex, ... }  (matches enchanted/copied items)
 local stateOf = {}    -- [actorId] = { [setIndex] = tier }
 local cleaned = {}    -- [actorId] = true once stale spells purged
 local ready = false
@@ -19,6 +20,12 @@ local cfg  -- global settings section
 
 local function npcBonusesEnabled()
     local v = cfg and cfg:get('npcBonuses')
+    if v == nil then return true end
+    return v
+end
+
+local function matchByIconEnabled()
+    local v = cfg and cfg:get('matchByIcon')
     if v == nil then return true end
     return v
 end
@@ -45,6 +52,44 @@ local function roundScale(base, scale)
     return v
 end
 
+-- Icon matching: a player-enchanted or copied set piece gets a new record id but
+-- keeps the base item's inventory icon, so we also index sets by icon path.
+local ICON_TYPES = { types.Armor, types.Clothing, types.Weapon }
+local function iconForRecordId(id)
+    for _, t in ipairs(ICON_TYPES) do
+        local ok, rec = pcall(t.record, id)
+        if ok and rec and rec.icon and rec.icon ~= '' then return rec.icon end
+    end
+    return nil
+end
+local function iconForObject(obj)
+    for _, t in ipairs(ICON_TYPES) do
+        if t.objectIsInstance(obj) then
+            local rec = t.record(obj)
+            if rec and rec.icon and rec.icon ~= '' then return rec.icon end
+            return nil
+        end
+    end
+    return nil
+end
+local function listHas(list, si)
+    if not list then return false end
+    for _, x in ipairs(list) do if x == si then return true end end
+    return false
+end
+-- Map one set's item icons to its index (deduped).
+local function linkIconsForSet(si)
+    for _, it in ipairs(data[si].items) do
+        local icon = iconForRecordId(it)
+        if icon then
+            local k = icon:lower()
+            local list = iconLink[k]
+            if not list then list = {}; iconLink[k] = list end
+            if not listHas(list, si) then list[#list + 1] = si end
+        end
+    end
+end
+
 local function dbg(...)
     if cfg and cfg:get('debug') then print('[SetBonus]', ...) end
 end
@@ -63,6 +108,13 @@ local function registerSettings()
                 renderer = 'checkbox',
                 name = 'Apply bonuses to NPCs',
                 description = 'If on, NPCs wearing full sets also receive set bonuses. Turn off for player-only bonuses.',
+                default = true,
+            },
+            {
+                key = 'matchByIcon',
+                renderer = 'checkbox',
+                name = 'Match enchanted/copied items by icon',
+                description = 'Also match set pieces by their inventory icon, so a player-enchanted or copied set item (new internal ID, same icon) still counts toward the set. Turn off for strict ID-only matching.',
                 default = true,
             },
             {
@@ -109,14 +161,16 @@ local function linkItems(si)
 end
 
 local function buildItemLinks()
-    for si in ipairs(data) do linkItems(si) end
+    for si in ipairs(data) do linkItems(si); linkIconsForSet(si) end
 end
 
--- Drop every item link that points at a set index (used when a set is replaced).
+-- Drop every item/icon link that points at a set index (used when a set is replaced).
 local function unlinkSet(si)
-    for k, list in pairs(itemLink) do
-        for i = #list, 1, -1 do if list[i] == si then table.remove(list, i) end end
-        if #list == 0 then itemLink[k] = nil end
+    for _, index in ipairs({ itemLink, iconLink }) do
+        for k, list in pairs(index) do
+            for i = #list, 1, -1 do if list[i] == si then table.remove(list, i) end end
+            if #list == 0 then index[k] = nil end
+        end
     end
 end
 
@@ -224,6 +278,7 @@ local function registerSet(sd)
         byName[key] = si
     end
     linkItems(si)
+    linkIconsForSet(si)
     if ready then
         buildSpellsForSet(si)
         if replaced then
@@ -284,6 +339,7 @@ local function amendSet(name, patch)
         end
     end
     linkItems(si)
+    linkIconsForSet(si)
     if ready then
         buildSpellsForSet(si)
         cleaned = {}
@@ -307,6 +363,7 @@ local function addItems(name, items)
         end
     end
     linkItems(si)
+    linkIconsForSet(si)
     if ready then recomputeAll() end
 end
 
@@ -320,6 +377,7 @@ local function registerSetLink(t)
     for _, it in ipairs(s.items) do if it:lower() == k then have = true; break end end
     if not have then s.items[#s.items + 1] = k end
     linkItems(si)
+    linkIconsForSet(si)
     if ready then recomputeAll() end
 end
 
@@ -368,13 +426,17 @@ local function tierFor(s, count)
     return nil
 end
 
-local function equippedIds(actor)
-    local ids = {}
+local function equippedList(actor)
+    local list = {}
     for _, slot in pairs(types.Actor.EQUIPMENT_SLOT) do
         local obj = types.Actor.getEquipment(actor, slot)
-        if obj and obj.recordId then ids[obj.recordId:lower()] = true end
+        if obj then
+            local id = obj.recordId and obj.recordId:lower() or nil
+            local icon = iconForObject(obj)
+            list[#list + 1] = { id = id, icon = icon and icon:lower() or nil }
+        end
     end
-    return ids
+    return list
 end
 
 local function recompute(actor)
@@ -399,16 +461,26 @@ local function recompute(actor)
 
     local new = {}
     if isPlayer or npcBonusesEnabled() then
-        local equipped = equippedIds(actor)
+        local eq = equippedList(actor)
+        local useIcon = matchByIconEnabled()
         local candidates = {}
-        for itemId in pairs(equipped) do
-            local links = itemLink[itemId]
-            if links then for _, si in ipairs(links) do candidates[si] = true end end
+        for _, it in ipairs(eq) do
+            local byId = it.id and itemLink[it.id]
+            if byId then for _, si in ipairs(byId) do candidates[si] = true end end
+            if useIcon and it.icon then
+                local byIcon = iconLink[it.icon]
+                if byIcon then for _, si in ipairs(byIcon) do candidates[si] = true end end
+            end
         end
         for si in pairs(candidates) do
             local s = data[si]
             local count = 0
-            for _, it in ipairs(s.items) do if equipped[it:lower()] then count = count + 1 end end
+            for _, it in ipairs(eq) do
+                if listHas(it.id and itemLink[it.id], si)
+                    or (useIcon and listHas(it.icon and iconLink[it.icon], si)) then
+                    count = count + 1
+                end
+            end
             local tier = tierFor(s, count)
             if tier and SPELL[si] and SPELL[si][tier] then new[si] = tier end
         end
