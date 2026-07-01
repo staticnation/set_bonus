@@ -16,7 +16,7 @@ return {
 			{ effect = "fortifyHealth", magnitude = 18 },
 			{ effect = "resistNormalWeapons", magnitude = 8 },
 			{ effect = "resistMagicka", magnitude = 12 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 			{ effect = "weaknesstoFire", magnitude = 20 },
 		},
 	},

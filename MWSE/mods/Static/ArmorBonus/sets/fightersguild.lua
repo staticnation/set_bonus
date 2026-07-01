@@ -5,16 +5,16 @@ return {
 	items = {  },
 	bonuses = {
 		min = {
-			{ effect = "fortifyAttackBonus", magnitude = 3 },
+			{ effect = "fortifyAttack", magnitude = 3 },
 			{ effect = "fortifyHealth", magnitude = 8 },
 		},
 		mid = {
-			{ effect = "fortifyAttackBonus", magnitude = 5 },
+			{ effect = "fortifyAttack", magnitude = 5 },
 			{ effect = "fortifyHealth", magnitude = 12 },
 			{ effect = "fortifyFatigue", magnitude = 20 },
 		},
 		max = {
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 			{ effect = "fortifyHealth", magnitude = 18 },
 			{ effect = "fortifyFatigue", magnitude = 28 },
 			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },

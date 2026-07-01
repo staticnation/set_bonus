@@ -1,5 +1,5 @@
 -- mcm.lua -- Mod Config Menu for Static Set Bonus.
-local log = require("Static.logger")
+local log = require("Static.SetBonus.logger")
 local settings = require("Static.SetBonus.settings")
 local configPath = "Set Bonus"
 
@@ -73,32 +73,4 @@ local function registerModConfig()
     general:createSlider{
         label = "Weakness (drawback) scale (%)",
         description = "Scales the thematic Weakness drawbacks independently of the " ..
-            "benefits. 100% = default, 50% = milder, 200% = harsher, 0% = no drawbacks " ..
-            "at all. Applies live to the player; NPCs update on their next equipment " ..
-            "change or on reload.",
-        min = 0,
-        max = 300,
-        step = 5,
-        jump = 25,
-        configKey = "weaknessPct",
-        callback = function(self)
-            event.trigger("Static:RescaleBonuses")
-        end,
-    }
-
-    local logOptions = {}
-    for _, level in ipairs(LOG_LEVELS) do
-        logOptions[#logOptions + 1] = { label = level, value = level }
-    end
-    general:createDropdown{
-        label = "Log level",
-        description = "Verbosity of this mod's log output. Leave at ERROR unless troubleshooting.",
-        options = logOptions,
-        configKey = "logLevel",
-        callback = function(self)
-            log:setLogLevel(self.variable.value)
-        end,
-    }
-end
-
-event.register(tes3.event.modConfigReady, registerModConfig)
+            "benefits. 100% = default, 

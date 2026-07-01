@@ -15,7 +15,7 @@ return {
 			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
 			{ effect = "resistCommonDisease", magnitude = 20 },
 			{ effect = "fortifyFatigue", magnitude = 28 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 		},
 	},
 }

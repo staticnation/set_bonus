@@ -16,7 +16,7 @@ return {
 			{ effect = "fortifyHealth", magnitude = 18 },
 			{ effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
 			{ effect = "fortifyFatigue", magnitude = 28 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 			{ effect = "weaknesstoShock", magnitude = 20 },
 		},
 	},

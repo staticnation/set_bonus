@@ -14,7 +14,7 @@ return {
 			{ effect = "spellAbsorption", magnitude = 8 },
 			{ effect = "resistMagicka", magnitude = 12 },
 			{ effect = "resistNormalWeapons", magnitude = 8 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 			{ effect = "weaknesstoShock", magnitude = 20 },
 		},
 	},

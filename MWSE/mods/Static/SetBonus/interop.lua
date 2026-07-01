@@ -13,7 +13,7 @@
 --  See SetBonus_Interop_Guide.md for full documentation and examples.
 -- =========================================================================
 
-local log = require("Static.logger")
+local log = require("Static.SetBonus.logger")
 local config = require("Static.SetBonus.config")
 local lfs = require("lfs")
 
@@ -459,38 +459,4 @@ function interop.initAll(pathDir)
                 log:error("initAll: could not load set file %s: %s", modulePath, tostring(set))
             end
         end
-    end
-end
-
--- -------------------------------------------------------------------------
--- Deferred runtime spell creation: build all Lua-defined sets once the game
--- is ready. Sets registered after this point are built immediately above.
--- -------------------------------------------------------------------------
-event.register(tes3.event.initialized, function()
-    gameInitialized = true
-    for _, set in ipairs(config.setsArray) do
-        if set.bonuses then
-            local ok, err = pcall(interop.buildSpellsForSet, set)
-            if not ok then
-                log:error("initialized: buildSpellsForSet failed for '%s': %s", set.displayName, err)
-            end
-        end
-    end
-    -- Bulk-build the icon index for every item registered so far (file-scope sets).
-    -- Items added later at runtime (e.g. companion add-ons) link their icons via
-    -- linkIconFor as they are added.
-    for itemId, setmap in pairs(config.setLinks) do
-        local obj = tes3.getObject(itemId)
-        local icon = obj and obj.icon
-        if icon then
-            icon = icon:lower()
-            local dst = config.iconLinks[icon] or {}
-            for setName in pairs(setmap) do dst[setName] = true end
-            config.iconLinks[icon] = dst
-        end
-    end
-    log:debug("interop initialized: %d set(s), %d icon(s) indexed.",
-        #config.setsArray, (function() local n = 0; for _ in pairs(config.iconLinks) do n = n + 1 end; return n end)())
-end)
-
-return interop
+ 

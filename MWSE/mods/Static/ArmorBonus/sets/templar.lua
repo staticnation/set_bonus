@@ -15,7 +15,7 @@ return {
 			{ effect = "fortifyHealth", magnitude = 18 },
 			{ effect = "turnUndead", magnitude = 20 },
 			{ effect = "resistMagicka", magnitude = 12 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 		},
 	},
 }

@@ -15,7 +15,7 @@ return {
 			{ effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
 			{ effect = "fortifySkill", skill = "speechcraft", magnitude = 12 },
 			{ effect = "fortifySkill", skill = "mercantile", magnitude = 12 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 		},
 	},
 }

@@ -4,16 +4,16 @@ return {
 	bonuses = {
 		min = {
 			{ effect = "fortifyHealth", magnitude = 8 },
-			{ effect = "fortifyAttackBonus", magnitude = 3 },
+			{ effect = "fortifyAttack", magnitude = 3 },
 		},
 		mid = {
 			{ effect = "fortifyHealth", magnitude = 12 },
-			{ effect = "fortifyAttackBonus", magnitude = 5 },
+			{ effect = "fortifyAttack", magnitude = 5 },
 			{ effect = "weaknesstoShock", magnitude = 10 },
 		},
 		max = {
 			{ effect = "fortifyHealth", magnitude = 18 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 			{ effect = "resistNormalWeapons", magnitude = 8 },
 			{ effect = "weaknesstoShock", magnitude = 20 },
 		},

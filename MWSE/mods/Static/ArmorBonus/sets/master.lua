@@ -15,7 +15,7 @@ return {
 			{ effect = "fortifyAttribute", attribute = "luck", magnitude = 8 },
 			{ effect = "fortifyFatigue", magnitude = 28 },
 			{ effect = "fortifyHealth", magnitude = 18 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 		},
 	},
 }

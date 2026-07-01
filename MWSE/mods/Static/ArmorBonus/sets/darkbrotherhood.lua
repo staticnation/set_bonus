@@ -15,7 +15,7 @@ return {
 			{ effect = "fortifySkill", skill = "sneak", magnitude = 12 },
 			{ effect = "resistPoison", magnitude = 20 },
 			{ effect = "chameleon", magnitude = 10 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 		},
 	},
 }

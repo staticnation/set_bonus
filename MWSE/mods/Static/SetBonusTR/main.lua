@@ -6,7 +6,7 @@
 -- =========================================================================
 
 local setBonus = require("Static.SetBonus.interop")
-local log = require("Static.logger")
+local log = require("Static.SetBonus.logger")
 
 local function present(id) return tes3.getObject(id) ~= nil end
 
@@ -36,12 +36,12 @@ local function registerTRSets()
                 mid = {
                     { effect = "resistFrost", magnitude = 15 },
                     { effect = "fortifyAttribute", attribute = "endurance", magnitude = 5 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                 },
                 max = {
                     { effect = "resistFrost", magnitude = 20 },
                     { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "spellAbsorption", magnitude = 8 },
                 },
             },
@@ -160,7 +160,7 @@ local function registerTRSets()
                     { effect = "fortifyAttribute", attribute = "speed", magnitude = 8 },
                     { effect = "fortifySkill", skill = "athletics", magnitude = 12 },
                     { effect = "resistPoison", magnitude = 20 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "weaknesstoFire", magnitude = 20 },
                 },
             },
@@ -286,7 +286,7 @@ local function registerTRSets()
                     { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
                     { effect = "resistPoison", magnitude = 20 },
                     { effect = "fortifySkill", skill = "athletics", magnitude = 12 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "weaknesstoFire", magnitude = 20 },
                 },
             },
@@ -395,13 +395,13 @@ local function registerTRSets()
                 mid = {
                     { effect = "fortifyHealth", magnitude = 12 },
                     { effect = "resistMagicka", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "weaknesstoShock", magnitude = 10 },
                 },
                 max = {
                     { effect = "fortifyHealth", magnitude = 18 },
                     { effect = "resistMagicka", magnitude = 12 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "turnUndead", magnitude = 20 },
                     { effect = "weaknesstoShock", magnitude = 20 },
                 },
@@ -490,7 +490,7 @@ local function registerTRSets()
                     { effect = "resistMagicka", magnitude = 12 },
                     { effect = "spellAbsorption", magnitude = 8 },
                     { effect = "reflect", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "weaknesstoShock", magnitude = 20 },
                 },
             },
@@ -544,12 +544,12 @@ local function registerTRSets()
                 mid = {
                     { effect = "fortifyHealth", magnitude = 12 },
                     { effect = "resistNormalWeapons", magnitude = 5 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                 },
                 max = {
                     { effect = "fortifyHealth", magnitude = 18 },
                     { effect = "resistNormalWeapons", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyFatigue", magnitude = 28 },
                 },
             },
@@ -630,13 +630,13 @@ local function registerTRSets()
                 mid = {
                     { effect = "resistNormalWeapons", magnitude = 5 },
                     { effect = "fortifyHealth", magnitude = 12 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "weaknesstoShock", magnitude = 10 },
                 },
                 max = {
                     { effect = "resistNormalWeapons", magnitude = 8 },
                     { effect = "fortifyHealth", magnitude = 18 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
                     { effect = "weaknesstoShock", magnitude = 20 },
                 },
@@ -818,7 +818,7 @@ local function registerTRSets()
                     { effect = "fortifyHealth", magnitude = 18 },
                     { effect = "resistFrost", magnitude = 20 },
                     { effect = "resistNormalWeapons", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "weaknesstoFire", magnitude = 20 },
                 },
             },
@@ -1011,17 +1011,17 @@ local function registerTRSets()
             bonuses = {
                 min = {
                     { effect = "fortifyHealth", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 3 },
+                    { effect = "fortifyAttack", magnitude = 3 },
                 },
                 mid = {
                     { effect = "fortifyHealth", magnitude = 12 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "resistNormalWeapons", magnitude = 5 },
                     { effect = "weaknesstoShock", magnitude = 10 },
                 },
                 max = {
                     { effect = "fortifyHealth", magnitude = 18 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "resistNormalWeapons", magnitude = 8 },
                     { effect = "weaknesstoShock", magnitude = 20 },
                 },
@@ -1070,16 +1070,16 @@ local function registerTRSets()
             bonuses = {
                 min = {
                     { effect = "resistFire", magnitude = 10 },
-                    { effect = "fortifyAttackBonus", magnitude = 3 },
+                    { effect = "fortifyAttack", magnitude = 3 },
                 },
                 mid = {
                     { effect = "resistFire", magnitude = 15 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "fortifyHealth", magnitude = 12 },
                 },
                 max = {
                     { effect = "resistFire", magnitude = 20 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyHealth", magnitude = 18 },
                 },
             },
@@ -1133,16 +1133,16 @@ local function registerTRSets()
             },
             bonuses = {
                 min = {
-                    { effect = "fortifyAttackBonus", magnitude = 3 },
+                    { effect = "fortifyAttack", magnitude = 3 },
                     { effect = "fortifyFatigue", magnitude = 12 },
                 },
                 mid = {
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "fortifyFatigue", magnitude = 20 },
                     { effect = "fortifyHealth", magnitude = 12 },
                 },
                 max = {
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyFatigue", magnitude = 28 },
                     { effect = "fortifyHealth", magnitude = 18 },
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
@@ -1173,7 +1173,7 @@ local function registerTRSets()
                     { effect = "fortifyHealth", magnitude = 18 },
                     { effect = "resistNormalWeapons", magnitude = 8 },
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "weaknesstoFire", magnitude = 20 },
                 },
             },
@@ -1220,16 +1220,16 @@ local function registerTRSets()
             bonuses = {
                 min = {
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 3 },
-                    { effect = "fortifyAttackBonus", magnitude = 3 },
+                    { effect = "fortifyAttack", magnitude = 3 },
                 },
                 mid = {
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "fortifyHealth", magnitude = 12 },
                 },
                 max = {
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyHealth", magnitude = 18 },
                     { effect = "resistNormalWeapons", magnitude = 8 },
                 },
@@ -1473,16 +1473,16 @@ local function registerTRSets()
             bonuses = {
                 min = {
                     { effect = "resistFire", magnitude = 10 },
-                    { effect = "fortifyAttackBonus", magnitude = 3 },
+                    { effect = "fortifyAttack", magnitude = 3 },
                 },
                 mid = {
                     { effect = "resistFire", magnitude = 15 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "fortifyAttribute", attribute = "strength", magnitude = 5 },
                 },
                 max = {
                     { effect = "resistFire", magnitude = 20 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
                     { effect = "fortifyHealth", magnitude = 18 },
                 },
@@ -1832,7 +1832,7 @@ local function registerTRSets()
                     { effect = "resistPoison", magnitude = 20 },
                     { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
                     { effect = "fortifyFatigue", magnitude = 28 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "weaknesstoFire", magnitude = 20 },
                 },
             },
@@ -1850,16 +1850,16 @@ local function registerTRSets()
             bonuses = {
                 min = {
                     { effect = "fortifyHealth", magnitude = 8 },
-                    { effect = "fortifyAttackBonus", magnitude = 3 },
+                    { effect = "fortifyAttack", magnitude = 3 },
                 },
                 mid = {
                     { effect = "fortifyHealth", magnitude = 12 },
-                    { effect = "fortifyAttackBonus", magnitude = 5 },
+                    { effect = "fortifyAttack", magnitude = 5 },
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
                 },
                 max = {
                     { effect = "fortifyHealth", magnitude = 18 },
-                    { effect = "fortifyAttackBonus", magnitude = 8 },
+                    { effect = "fortifyAttack", magnitude = 8 },
                     { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
                     { effect = "resistNormalWeapons", magnitude = 8 },
                 },

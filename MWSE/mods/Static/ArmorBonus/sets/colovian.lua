@@ -9,12 +9,12 @@ return {
 		mid = {
 			{ effect = "resistFrost", magnitude = 15 },
 			{ effect = "fortifyAttribute", attribute = "endurance", magnitude = 5 },
-			{ effect = "fortifyAttackBonus", magnitude = 5 },
+			{ effect = "fortifyAttack", magnitude = 5 },
 		},
 		max = {
 			{ effect = "resistFrost", magnitude = 20 },
 			{ effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-			{ effect = "fortifyAttackBonus", magnitude = 8 },
+			{ effect = "fortifyAttack", magnitude = 8 },
 			{ effect = "fortifyHealth", magnitude = 18 },
 		},
 	},
