@@ -35,6 +35,25 @@ local function registerModConfig()
         end,
     }
 
+    general:createOnOffButton{
+        label = "Match enchanted/copied items by icon",
+        description = "When on, set pieces are also matched by their inventory icon, so a " ..
+            "player-enchanted or otherwise copied version of a set item (which gets a new " ..
+            "internal ID but keeps the same icon) still counts toward the set. Turn off for " ..
+            "strict ID-only matching (rare items that merely share an icon won't count).",
+        configKey = "matchByIcon",
+        callback = function(self)
+            event.trigger("Static:RescaleBonuses")
+        end,
+    }
+
+    general:createOnOffButton{
+        label = "Set info on item tooltips",
+        description = "Show which set an armour/clothing/weapon belongs to on its tooltip, " ..
+            "with your current progress and the bonus each tier grants (the active tier is highlighted).",
+        configKey = "showTooltip",
+    }
+
     general:createSlider{
         label = "Benefit magnitude scale (%)",
         description = "Scales the helpful set-bonus effects. 100% = default, " ..

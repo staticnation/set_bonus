@@ -125,6 +125,21 @@ local function tokenize(name)
     return (name:lower():gsub("[^%w]", "_"))
 end
 
+-- Map an item's inventory ICON to a set, so player-enchanted (or otherwise copied)
+-- versions of a set piece -- which get a new object id but keep the same icon --
+-- still count toward the set. Only resolvable in-game; file-scope registrations
+-- are covered by the bulk pass in the 'initialized' handler below.
+local function linkIconFor(itemId, setName)
+    if not gameInitialized then return end
+    local obj = tes3.getObject(itemId)
+    local icon = obj and obj.icon
+    if icon then
+        icon = icon:lower()
+        config.iconLinks[icon] = config.iconLinks[icon] or {}
+        config.iconLinks[icon][setName] = true
+    end
+end
+
 -- -------------------------------------------------------------------------
 -- Runtime spell creation for Lua-defined sets.
 -- -------------------------------------------------------------------------
@@ -274,6 +289,7 @@ function interop.registerSet(setData)
             unique[#unique + 1] = key
             if not config.setLinks[key] then config.setLinks[key] = {} end
             config.setLinks[key][setData.name] = true
+            linkIconFor(key, setData.name)
         end
     end
     setData.items = unique
@@ -310,6 +326,7 @@ function interop.registerSetLink(setLinkData)
     local setName = setLinkData.set:lower()
     if not config.setLinks[item] then config.setLinks[item] = {} end
     config.setLinks[item][setName] = true
+    linkIconFor(item, setName)
     log:debug("registerSetLink: linked '%s' -> '%s'", item, setName)
 end
 
@@ -328,6 +345,7 @@ function interop.addItems(setName, items)
             table.insert(set.items, key)
             if not config.setLinks[key] then config.setLinks[key] = {} end
             config.setLinks[key][setName] = true
+            linkIconFor(key, setName)
         end
     end
     return set
@@ -374,6 +392,7 @@ function interop.amendSet(setName, patch)
                     table.insert(set.items, key)
                     if not config.setLinks[key] then config.setLinks[key] = {} end
                     config.setLinks[key][setName] = true
+                    linkIconFor(key, setName)
                 end
             end
         end
@@ -457,7 +476,21 @@ event.register(tes3.event.initialized, function()
             end
         end
     end
-    log:debug("interop initialized: %d set(s) registered.", #config.setsArray)
+    -- Bulk-build the icon index for every item registered so far (file-scope sets).
+    -- Items added later at runtime (e.g. companion add-ons) link their icons via
+    -- linkIconFor as they are added.
+    for itemId, setmap in pairs(config.setLinks) do
+        local obj = tes3.getObject(itemId)
+        local icon = obj and obj.icon
+        if icon then
+            icon = icon:lower()
+            local dst = config.iconLinks[icon] or {}
+            for setName in pairs(setmap) do dst[setName] = true end
+            config.iconLinks[icon] = dst
+        end
+    end
+    log:debug("interop initialized: %d set(s), %d icon(s) indexed.",
+        #config.setsArray, (function() local n = 0; for _ in pairs(config.iconLinks) do n = n + 1 end; return n end)())
 end)
 
 return interop
