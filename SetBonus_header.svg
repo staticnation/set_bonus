@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="400" viewBox="0 0 1920 400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#1b2a30"/>
+      <stop offset="60%" stop-color="#0f161a"/>
+      <stop offset="100%" stop-color="#070a0c"/>
+    </radialGradient>
+    <radialGradient id="amber" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd98a" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#e0a44a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e0a44a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nodeglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe6a8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffe6a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbe9a6"/>
+      <stop offset="45%" stop-color="#e8c25e"/>
+      <stop offset="100%" stop-color="#a9742a"/>
+    </linearGradient>
+    <linearGradient id="goldH" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a9742a" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#e8c25e"/>
+      <stop offset="50%" stop-color="#fbe9a6"/>
+      <stop offset="80%" stop-color="#e8c25e"/>
+      <stop offset="100%" stop-color="#a9742a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e3e9ee"/>
+      <stop offset="50%" stop-color="#9aa6b0"/>
+      <stop offset="100%" stop-color="#5b6671"/>
+    </linearGradient>
+    <radialGradient id="disc" cx="42%" cy="36%" r="70%">
+      <stop offset="0%" stop-color="#2c3a42"/>
+      <stop offset="100%" stop-color="#121a1f"/>
+    </radialGradient>
+    <linearGradient id="gem" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bdfff3"/>
+      <stop offset="50%" stop-color="#39c7b3"/>
+      <stop offset="100%" stop-color="#0d8f7e"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="62%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="80%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="400" fill="url(#bg)"/>
+  <ellipse cx="960" cy="300" rx="760" ry="170" fill="url(#amber)"/>
+
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <text x="963" y="153" font-size="104" font-weight="bold" fill="#0a0d0f" fill-opacity="0.6" letter-spacing="14">SET BONUS</text>
+    <text x="960" y="148" font-size="104" font-weight="bold" fill="url(#gold)" letter-spacing="14">SET BONUS</text>
+    <text x="960" y="200" font-size="27" fill="#cfe7e1" letter-spacing="8" font-style="italic">Wear the whole set, reap the reward</text>
+  </g>
+
+  <line x1="430" y1="300" x2="1490" y2="300" stroke="url(#goldH)" stroke-width="3"/>
+  <line x1="430" y1="300" x2="1490" y2="300" stroke="#ffe6a8" stroke-width="11" stroke-opacity="0.06"/>
+
+  <g fill="url(#steel)" stroke="#2a343c" stroke-width="2.4">
+    <g transform="translate(480,300)">
+      <circle r="48" fill="url(#nodeglow)" stroke="none"/><circle r="36" fill="url(#disc)" stroke="url(#gold)" stroke-width="2"/>
+      <g transform="scale(0.74)"><path d="M-26,10 Q-26,-30 0,-30 Q26,-30 26,10 L26,16 L-26,16 Z"/><rect x="-22" y="-4" width="44" height="9" rx="2" fill="#1b242b" stroke="none"/><rect x="-3" y="-4" width="6" height="18" rx="2" fill="#1b242b" stroke="none"/></g>
+    </g>
+    <g transform="translate(620,300)">
+      <circle r="48" fill="url(#nodeglow)" stroke="none"/><circle r="36" fill="url(#disc)" stroke="url(#gold)" stroke-width="2"/>
+      <g transform="scale(0.74)"><path d="M-24,-22 L24,-22 L30,-6 L20,28 L-20,28 L-30,-6 Z"/><line x1="0" y1="-22" x2="0" y2="28" stroke="#1b242b" stroke-width="3"/></g>
+    </g>
+    <g transform="translate(760,300)">
+      <circle r="48" fill="url(#nodeglow)" stroke="none"/><circle r="36" fill="url(#disc)" stroke="url(#gold)" stroke-width="2"/>
+      <g transform="scale(0.74)"><path d="M-28,20 Q-30,-26 16,-28 Q32,-28 32,-6 Q32,16 8,20 Z"/><path d="M-16,8 Q-8,-14 18,-16" fill="none" stroke="#1b242b" stroke-width="2.5"/></g>
+    </g>
+    <g transform="translate(1160,300)">
+      <circle r="48" fill="url(#nodeglow)" stroke="none"/><circle r="36" fill="url(#disc)" stroke="url(#gold)" stroke-width="2"/>
+      <g transform="scale(0.74)"><rect x="-16" y="-2" width="32" height="30" rx="9"/><rect x="-14" y="-26" width="7" height="26" rx="3"/><rect x="-4" y="-30" width="8" height="30" rx="4"/><rect x="7" y="-26" width="7" height="26" rx="3"/></g>
+    </g>
+    <g transform="translate(1300,300)">
+      <circle r="48" fill="url(#nodeglow)" stroke="none"/><circle r="36" fill="url(#disc)" stroke="url(#gold)" stroke-width="2"/>
+      <g transform="scale(0.74)"><rect x="-23" y="-26" width="18" height="52" rx="7"/><rect x="5" y="-26" width="18" height="52" rx="7"/></g>
+    </g>
+    <g transform="translate(1440,300)">
+      <circle r="48" fill="url(#nodeglow)" stroke="none"/><circle r="36" fill="url(#disc)" stroke="url(#gold)" stroke-width="2"/>
+      <g transform="scale(0.74)"><path d="M-14,-28 L6,-28 L6,12 L28,12 L28,28 L-14,28 Z"/></g>
+    </g>
+  </g>
+
+  <g transform="translate(960,300)">
+    <circle r="76" fill="url(#amber)"/>
+    <g transform="rotate(45)">
+      <rect x="-31" y="-31" width="62" height="62" rx="5" fill="url(#gem)" stroke="#eafff9" stroke-opacity="0.5" stroke-width="2"/>
+      <path d="M-31,-31 L31,31 M31,-31 L-31,31 M0,-31 L0,31 M-31,0 L31,0" stroke="#0b6e60" stroke-opacity="0.55" stroke-width="2" fill="none"/>
+    </g>
+    <circle r="5" fill="#f6fffb"/>
+  </g>
+
+  <rect x="18" y="18" width="1884" height="364" fill="none" stroke="url(#gold)" stroke-width="2" stroke-opacity="0.55" rx="4"/>
+  <g stroke="url(#gold)" stroke-width="2.5" fill="none" stroke-opacity="0.8">
+    <path d="M40,64 L40,38 L66,38"/><path d="M1880,64 L1880,38 L1854,38"/>
+    <path d="M40,336 L40,362 L66,362"/><path d="M1880,336 L1880,362 L1854,362"/>
+  </g>
+  <g fill="url(#gold)" opacity="0.85">
+    <circle cx="215" cy="200" r="3"/><circle cx="1705" cy="200" r="3"/>
+  </g>
+
+  <g fill="#ffcf7a">
+    <circle cx="300" cy="120" r="2" opacity="0.6"/><circle cx="1620" cy="110" r="2.4" opacity="0.6"/>
+    <circle cx="150" cy="300" r="2" opacity="0.5"/><circle cx="1770" cy="300" r="2" opacity="0.5"/>
+    <circle cx="520" cy="120" r="1.6" opacity="0.5"/><circle cx="1400" cy="120" r="1.8" opacity="0.5"/>
+    <circle cx="960" cy="95" r="2" opacity="0.55"/>
+  </g>
+
+  <rect width="1920" height="400" fill="url(#vig)"/>
+</svg>

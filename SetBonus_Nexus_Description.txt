@@ -1,0 +1,117 @@
+[center][size=6][b]SET BONUS[/b][/size]
+[size=4][i]Wear the whole set, reap the reward.[/i][/size]
+
+[youtube]BHBtxWz5Xcg[/youtube]
+[color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+A framework that turns matched armour into a reward. Equip several pieces of the same set and gain a constant, lore-flavoured bonus that grows the more of the set you wear — Iron makes you tough, Glass keeps you nimble, Daedric wards off magic, Dark Brotherhood sharpens your sneak attacks. Over [b]130 sets[/b] in all, each themed to its material, culture, or faction (with a nod to ESO-style set design).
+
+Because a single piece can belong to more than one set (a Tamriel Rebuilt Reachman cuirass is both [i]Wormmouth[/i] and [i]Reach[/i]), bonuses [b]stack[/b] — and magnitudes are tuned with that in mind, so committing to a theme is rewarding without breaking the game.
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]⚙ Two versions — pick your engine[/b][/size]
+This page hosts both. Grab the one that matches your setup:
+[list]
+[*][b]Set Bonus (MWSE)[/b] — for the original engine with the Morrowind Script Extender.
+[*][b]Set Bonus (OpenMW)[/b] — a native OpenMW Lua port. Requires OpenMW [b]0.51+[/b].
+[/list]
+[i]Don't run both for the same game — they do the same thing.[/i]
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ Features[/b][/size]
+[list]
+[*][b]130+ armour sets[/b] across every vanilla material and culture, plus Tribunal & Bloodmoon.
+[*][b]Three tiers per set[/b] — bonuses scale up at [b]2[/b], [b]4[/b], and [b]6+[/b] equipped pieces.
+[*][b]Restrained, flat balance[/b] — modest bonuses that barely grow at the top tier, so they enhance rather than trivialise. Vanilla magic effects only.
+[*][b]Thematic trade-offs[/b] — many sets carry a mild Weakness at mid/max (metal → shock, fur/hide → fire, chitin/glass → frost, Altmer → magicka), giving each set an identity and counterplay (it applies to NPCs too).
+[*][b]Players and NPCs[/b] — fully-kitted NPCs benefit too (toggleable).
+[*][b]Tune it to taste[/b] — two independent sliders scale the [b]benefits[/b] and the [b]weakness drawbacks[/b] separately (25–300% / 0–300%). Want the flavour without the downside? Set drawbacks to 0. Want a bigger power fantasy? Crank benefits up. Changes apply instantly.
+[*][b]No plugin required[/b] — every bonus spell is built at runtime in Lua. Nothing to clutter your load order, no record conflicts.
+[*][b]In-game options[/b] — toggle notifications, NPC bonuses, debug logging, and the magnitude sliders (MWSE: MCM; OpenMW: Options › Scripts).
+[*][b]Mod-aware[/b] — automatically extends to Tamriel Rebuilt, OAAB, NOD, and AATL armour when those are installed.
+[*][b]Modder framework (both engines)[/b] — a small interop lets other mods register their own sets: on MWSE via [i]require[/i], on OpenMW via the [i]I.SetBonus[/i] interface or global events.
+[/list]
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ Balance at a glance[/b][/size]
+Constant-effect bonuses; default tiers at [b]2 / 4 / 6+[/b] pieces. All bonuses are [b]Lua-defined and built at runtime (no ESP)[/b], vanilla effects only.
+Values are deliberately low and flat (so a full set isn't far above a partial one): elemental/disease resist [b]10 / 15 / 20[/b], magic resist [b]5 / 8 / 12[/b], Reflect & Spell Absorption [b]3 / 5 / 8[/b], Sanctuary/Chameleon [b]5 / 7 / 10[/b], attributes [b]3 / 5 / 8[/b], skills [b]5 / 8 / 12[/b], health [b]8 / 12 / 18[/b], fatigue [b]12 / 20 / 28[/b], attack [b]3 / 5 / 8[/b].
+Most sets also carry a mild thematic [b]Weakness[/b] at mid/max ([b]~10 / 20[/b]). The defensive "Shield" effect is replaced with no-VFX equivalents (Resist Normal Weapons / elemental resists) so armoured characters don't all shimmer.
+Prefer different numbers? Two in-game sliders scale everything live: a [b]benefit[/b] multiplier and a separate [b]weakness/drawback[/b] multiplier (set it to 0 to drop drawbacks entirely). Magnitudes always stay whole numbers and over-time effects never scale down to nothing.
+[i]The full per-set effect breakdown is listed further down this page (and as Set_Bonus_Spell_Reference.md in the download).[/i]
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ Mod compatibility[/b][/size]
+Companion modules fold external-mod armour into the matching sets, but only when that mod is actually present:
+[list]
+[*][b]Tamriel Rebuilt[/b] — hundreds of TR pieces mapped, plus new TR-flavoured sets (Reachmen, Maormer, Ancient Nordic, Mananaut, Dark Brotherhood, Golden Saint, regional guards, and more).
+[*][b]OAAB_Data[/b], [b]NOD[/b], [b]AATL[/b] — their armour, bucklers, and artifacts re-linked to the right sets.
+[/list]
+It edits no armour or NPC records, so it's compatible with essentially everything and load order doesn't matter.
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ Requirements[/b][/size]
+[b]MWSE version[/b]
+[list]
+[*]Morrowind (GOTY)
+[*]A recent [url=https://www.nexusmods.com/morrowind/mods/45468]MWSE 2.1+[/url] — run MWSE-Update
+[/list]
+[b]OpenMW version[/b]
+[list]
+[*]OpenMW [b]0.51[/b] or newer (runtime spell creation is required)
+[/list]
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ Installation[/b][/size]
+[b]MWSE[/b] — Install with a mod manager, or extract into your Morrowind [b]Data Files[/b] folder so the scripts land in [i]Data Files\MWSE\mods\Static[/i]. No esp to tick.
+
+[b]OpenMW[/b] — Add the [b]OpenMW_SetBonus[/b] folder as a data directory and enable the content file:
+[code]data="C:\path\to\OpenMW_SetBonus"
+content=setbonus.omwscripts[/code]
+Point the data path at the [i]OpenMW_SetBonus[/i] folder itself — the one that directly contains [i]setbonus.omwscripts[/i].
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ How it works[/b][/size]
+While you wear a set you carry a constant-effect ability whose strength matches how many pieces you have on; swap gear and it updates instantly. The bonus spells are generated in Lua at load, so there are no spell records in any plugin to conflict or leave behind.
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ For mod authors (MWSE)[/b][/size]
+Register your own sets through a small, stable interop — define bonuses in Lua (built at runtime) or point at your own ESP spells:
+[code]local setBonus = require("Static.SetBonus.interop")
+setBonus.registerSet{
+    name = "My Set",
+    items = { "my_helm", "my_cuirass", "my_greaves", "my_boots" },
+    bonuses = {
+        min = { { effect = "resistFire", magnitude = 10 } },
+        max = { { effect = "resistFire", magnitude = 20 },
+                { effect = "fortifySkill", skill = "longBlade", magnitude = 12 } },
+    },
+}[/code]
+You can also [b]addItems[/b] to extend existing sets, [b]amendSet[/b] to append items/effects and tweak thresholds, or [b]registerSet[/b] with an existing name to fully replace a set — an empty definition [i]disables[/i] one, so you can override or switch off any set, including this mod's own. Set custom tier thresholds and listen for a [b]Static:SetBonusChanged[/b] event. Full guide is in the download (SetBonus_Interop_Guide.md). The bundled TR/OAAB/NOD/AATL modules are built entirely on this API.
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ For mod authors (OpenMW)[/b][/size]
+The OpenMW port is a framework too. From a global script, register your sets through the [b]I.SetBonus[/b] interface (or send the matching global events from any script type):
+[code]local I = require('openmw.interfaces')
+I.SetBonus.registerSet{
+    name  = 'My Set',
+    items = { 'my_helm', 'my_cuirass', 'my_greaves', 'my_boots' },
+    bonuses = {
+        min = { { effect = 'resistfire', mag = 10 } },
+        max = { { effect = 'resistfire', mag = 20 },
+                { effect = 'fortifyskill', skill = 'longblade', mag = 12 } },
+    },
+}[/code]
+Same helpers as MWSE — [b]addItems[/b], [b]amendSet[/b] (append items/effects, tweak thresholds), full-replace or [i]disable[/i] a set via [b]registerSet[/b] (empty = off), plus [b]getSet[/b]/[b]getSets[/b] queries. Everything's also available as global events for mods without a global script. Registered sets obey the magnitude sliders automatically. Full guide: SetBonus_Interop_OpenMW.md, with a ready-to-use example in the [b]OpenMW_SetBonus_Example[/b] folder.
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
+[size=5][b]Full per-set spell reference below ▼[/b][/size][/center]

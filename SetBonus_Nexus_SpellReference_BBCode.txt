@@ -1,0 +1,705 @@
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
+[size=5][b]✦ Full Spell Reference[/b][/size][/center]
+Default tiers at [b]2 / 4 / 6+[/b] pieces. Values are low and flat; many sets have a mild [b]Weakness[/b] drawback at mid/max. "/s" = per-second. Click to expand.
+
+[b]Base mod sets (69)[/b]
+[spoiler]
+[b]Adamantium[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Reflect 5, Weakness To Shock 10
+    [i]max[/i] — Resist Magicka 12, Reflect 8, Resist Normal Weapons 8, Weakness To Shock 20
+
+[b]Armun-An[/b]
+    [i]min[/i] — Resist Fire 10
+    [i]mid[/i] — Resist Fire 15, Fortify Health 12, Weakness To Frost 10
+    [i]max[/i] — Resist Fire 20, Fortify Health 18, Resist Normal Weapons 8, Weakness To Frost 20
+
+[b]Artifacts[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Luck 3
+    [i]mid[/i] — Resist Magicka 8, Fortify Luck 5, Reflect 5
+    [i]max[/i] — Resist Magicka 12, Fortify Luck 8, Reflect 8, Spell Absorption 8
+
+[b]Bear Fur[/b]
+    [i]min[/i] — Resist Frost 10
+    [i]mid[/i] — Resist Frost 15, Fortify Endurance 5, Weakness To Fire 10
+    [i]max[/i] — Resist Frost 20, Fortify Endurance 8, Fortify Health 18, Weakness To Fire 20
+
+[b]Bearskin[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Strength 3
+    [i]mid[/i] — Resist Frost 15, Fortify Strength 5, Fortify Health 12, Weakness To Fire 10
+    [i]max[/i] — Resist Frost 20, Fortify Strength 8, Fortify Health 18, Weakness To Fire 20
+
+[b]Bonemold[/b]
+    [i]min[/i] — Fortify Health 8, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Health 12, Resist Blight Disease 15, Restore Fatigue 2 /s, Weakness To Frost 10
+    [i]max[/i] — Fortify Health 18, Resist Blight Disease 20, Restore Fatigue 2 /s, Resist Normal Weapons 8, Weakness To Frost 20
+
+[b]Bosmer[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Agility 3
+    [i]mid[/i] — Resist Poison 15, Fortify Agility 5, Fortify Marksman 8
+    [i]max[/i] — Resist Poison 20, Fortify Agility 8, Fortify Marksman 12, Resist Common Disease 20
+
+[b]Bronze[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Resist Shock 10
+    [i]mid[/i] — Resist Normal Weapons 5, Resist Shock 15, Fortify Endurance 5
+    [i]max[/i] — Resist Normal Weapons 8, Resist Shock 20, Fortify Endurance 8
+
+[b]Cephalopod[/b]
+    [i]min[/i] — Swift Swim 20, Water Breathing 1
+    [i]mid[/i] — Swift Swim 30, Water Breathing 1, Sanctuary 7
+    [i]max[/i] — Swift Swim 40, Water Breathing 1, Sanctuary 10, Resist Frost 20
+
+[b]Chain Mail[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Resist Normal Weapons 5, Weakness To Shock 10
+    [i]max[/i] — Fortify Fatigue 28, Resist Normal Weapons 8, Weakness To Shock 20
+
+[b]Chitin[/b]
+    [i]min[/i] — Resist Blight Disease 10, Resist Poison 10
+    [i]mid[/i] — Resist Blight Disease 15, Resist Poison 15, Resist Paralysis 15, Weakness To Frost 10
+    [i]max[/i] — Resist Blight Disease 20, Resist Poison 20, Resist Paralysis 20, Fortify Agility 8, Weakness To Frost 20
+
+[b]Cloth[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Feather 5
+    [i]mid[/i] — Restore Magicka 1 /s, Feather 10, Fortify Alteration 8, Weakness To Normal Weapons 10
+    [i]max[/i] — Restore Magicka 2 /s, Feather 15, Fortify Alteration 12, Fortify Intelligence 8, Weakness To Normal Weapons 20
+
+[b]Colovian[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Endurance 3
+    [i]mid[/i] — Resist Frost 15, Fortify Endurance 5, Fortify Attack Bonus 5
+    [i]max[/i] — Resist Frost 20, Fortify Endurance 8, Fortify Attack Bonus 8, Fortify Health 18
+
+[b]Daedric[/b]
+    [i]min[/i] — Spell Absorption 3
+    [i]mid[/i] — Spell Absorption 5, Resist Magicka 8, Weakness To Shock 10
+    [i]max[/i] — Spell Absorption 8, Resist Magicka 12, Resist Normal Weapons 8, Fortify Attack Bonus 8, Weakness To Shock 20
+
+[b]Dark Brotherhood[/b]
+    [i]min[/i] — Fortify Sneak 5, Resist Poison 10
+    [i]mid[/i] — Fortify Sneak 8, Resist Poison 15, Chameleon 7
+    [i]max[/i] — Fortify Sneak 12, Resist Poison 20, Chameleon 10, Fortify Attack Bonus 8
+
+[b]Dragonbone (stub)[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Health 8
+    [i]mid[/i] — Resist Fire 15, Fortify Health 12, Resist Normal Weapons 5, Weakness To Frost 10
+    [i]max[/i] — Resist Fire 20, Fortify Health 18, Resist Normal Weapons 8, Resist Magicka 12, Weakness To Frost 20
+
+[b]Dragonscale[/b]
+    [i]min[/i] — Resist Fire 10
+    [i]mid[/i] — Resist Fire 15, Resist Magicka 8, Weakness To Frost 10
+    [i]max[/i] — Resist Fire 20, Resist Magicka 12, Resist Normal Weapons 8, Fortify Agility 8, Weakness To Frost 20
+
+[b]House Dres (stub)[/b]
+    [i]min[/i] — Resist Poison 10, Resist Fire 10
+    [i]mid[/i] — Resist Poison 15, Resist Fire 15, Fortify Long Blade 8
+    [i]max[/i] — Resist Poison 20, Resist Fire 20, Fortify Long Blade 12, Fortify Endurance 8
+
+[b]Dreugh[/b]
+    [i]min[/i] — Resist Shock 10, Water Breathing 1
+    [i]mid[/i] — Resist Shock 15, Water Breathing 1, Swift Swim 30, Weakness To Frost 10
+    [i]max[/i] — Resist Shock 20, Water Breathing 1, Swift Swim 40, Weakness To Frost 20
+
+[b]Dwemer[/b]
+    [i]min[/i] — Resist Shock 10
+    [i]mid[/i] — Resist Shock 15, Reflect 5
+    [i]max[/i] — Resist Shock 20, Reflect 8, Sanctuary 10
+
+[b]Ebony[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Health 8
+    [i]mid[/i] — Resist Fire 15, Fortify Health 12, Resist Normal Weapons 5, Weakness To Shock 10
+    [i]max[/i] — Resist Fire 20, Fortify Health 18, Resist Normal Weapons 8, Resist Magicka 12, Weakness To Shock 20
+
+[b]Embossed (stub)[/b]
+    [i]min[/i] — Fortify Personality 3
+    [i]mid[/i] — Fortify Personality 5, Fortify Speechcraft 8
+    [i]max[/i] — Fortify Personality 8, Fortify Speechcraft 12, Fortify Luck 8
+
+[b]Engraved[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Fortify Personality 5
+    [i]max[/i] — Resist Magicka 12, Fortify Personality 8, Spell Absorption 8
+
+[b]Falmer (stub)[/b]
+    [i]min[/i] — Resist Frost 10, Chameleon 5
+    [i]mid[/i] — Resist Frost 15, Chameleon 7, Night Eye 40
+    [i]max[/i] — Resist Frost 20, Chameleon 10, Night Eye 50
+
+[b]Fighters Guild (stub)[/b]
+    [i]min[/i] — Fortify Attack Bonus 3, Fortify Health 8
+    [i]mid[/i] — Fortify Attack Bonus 5, Fortify Health 12, Fortify Fatigue 20
+    [i]max[/i] — Fortify Attack Bonus 8, Fortify Health 18, Fortify Fatigue 28, Fortify Strength 8
+
+[b]Fur[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Frost 15, Fortify Fatigue 20, Weakness To Fire 10
+    [i]max[/i] — Resist Frost 20, Fortify Fatigue 28, Fortify Endurance 8, Weakness To Fire 20
+
+[b]Gah-Julan[/b]
+    [i]min[/i] — Fortify Health 8, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Health 12, Resist Blight Disease 15, Resist Normal Weapons 5
+    [i]max[/i] — Fortify Health 18, Resist Blight Disease 20, Resist Normal Weapons 8, Resist Fire 20
+
+[b]Glass[/b]
+    [i]min[/i] — Fortify Agility 3, Resist Fire 10
+    [i]mid[/i] — Fortify Agility 5, Resist Fire 15, Sanctuary 7, Weakness To Frost 10
+    [i]max[/i] — Fortify Agility 8, Resist Fire 20, Sanctuary 10, Chameleon 10, Weakness To Frost 20
+
+[b]Goblin[/b]
+    [i]min[/i] — Fortify Strength 3, Resist Common Disease 10
+    [i]mid[/i] — Fortify Strength 5, Resist Common Disease 15, Fortify Fatigue 20
+    [i]max[/i] — Fortify Strength 8, Resist Common Disease 20, Fortify Fatigue 28, Fortify Attack Bonus 8
+
+[b]Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Endurance 5, Weakness To Fire 10
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Endurance 8, Weakness To Fire 20
+
+[b]Heavy Armor[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Fortify Endurance 5
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Fortify Endurance 8
+
+[b]Her Hand[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Health 8
+    [i]mid[/i] — Resist Magicka 8, Fortify Health 12, Fortify Restoration 8
+    [i]max[/i] — Resist Magicka 12, Fortify Health 18, Turn Undead 20, Fortify Restoration 12
+
+[b]Hide[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Athletics 8, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Fortify Athletics 12, Fortify Speed 8, Weakness To Fire 20
+
+[b]House Hlaalu[/b]
+    [i]min[/i] — Fortify Mercantile 5, Fortify Personality 3
+    [i]mid[/i] — Fortify Mercantile 8, Fortify Personality 5, Fortify Speechcraft 8
+    [i]max[/i] — Fortify Mercantile 12, Fortify Personality 8, Fortify Speechcraft 12, Fortify Luck 8
+
+[b]Imperial[/b]
+    [i]min[/i] — Fortify Personality 3, Fortify Speechcraft 5
+    [i]mid[/i] — Fortify Personality 5, Fortify Speechcraft 8, Fortify Mercantile 8
+    [i]max[/i] — Fortify Personality 8, Fortify Speechcraft 12, Fortify Mercantile 12, Fortify Attack Bonus 8
+
+[b]House Indoril[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Restoration 5
+    [i]mid[/i] — Resist Magicka 8, Fortify Restoration 8, Fortify Personality 5
+    [i]max[/i] — Resist Magicka 12, Fortify Restoration 12, Fortify Personality 8, Turn Undead 20
+
+[b]Iron[/b]
+    [i]min[/i] — Fortify Health 8
+    [i]mid[/i] — Fortify Health 12, Fortify Fatigue 20, Weakness To Shock 10
+    [i]max[/i] — Fortify Health 18, Fortify Fatigue 28, Resist Normal Weapons 8, Weakness To Shock 20
+
+[b]Khajiit[/b]
+    [i]min[/i] — Night Eye 25, Fortify Agility 3
+    [i]mid[/i] — Night Eye 40, Fortify Agility 5, Fortify Acrobatics 8
+    [i]max[/i] — Night Eye 50, Fortify Agility 8, Fortify Acrobatics 12, Fortify Hand To Hand 12
+
+[b]Kynareth[/b]
+    [i]min[/i] — Slow Fall 10, Resist Shock 10
+    [i]mid[/i] — Slow Fall 15, Resist Shock 15, Fortify Speed 5
+    [i]max[/i] — Slow Fall 20, Resist Shock 20, Fortify Speed 8, Fortify Fatigue 28
+
+[b]Leather[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Acrobatics 5
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Acrobatics 8, Fortify Sneak 8, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Fortify Acrobatics 12, Fortify Sneak 12, Fortify Agility 8, Weakness To Fire 20
+
+[b]Light Armor[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Agility 3
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Agility 5, Sanctuary 7
+    [i]max[/i] — Fortify Fatigue 28, Fortify Agility 8, Sanctuary 10, Fortify Acrobatics 12
+
+[b]Mages Guild (stub)[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Destruction 5
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Destruction 8, Resist Magicka 8
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Destruction 12, Resist Magicka 12, Fortify Intelligence 8
+
+[b]Master[/b]
+    [i]min[/i] — Fortify Luck 3, Fortify Fatigue 12
+    [i]mid[/i] — Fortify Luck 5, Fortify Fatigue 20, Fortify Health 12
+    [i]max[/i] — Fortify Luck 8, Fortify Fatigue 28, Fortify Health 18, Fortify Attack Bonus 8
+
+[b]Medium Armor[/b]
+    [i]min[/i] — Fortify Fatigue 12, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Fatigue 20, Resist Normal Weapons 5, Fortify Health 12
+    [i]max[/i] — Fortify Fatigue 28, Resist Normal Weapons 8, Fortify Health 18, Fortify Endurance 8
+
+[b]Morag Tong[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Short Blade 5
+    [i]mid[/i] — Resist Poison 15, Fortify Short Blade 8, Fortify Sneak 8
+    [i]max[/i] — Resist Poison 20, Fortify Short Blade 12, Fortify Sneak 12, Chameleon 10
+
+[b]Native[/b]
+    [i]min[/i] — Resist Blight Disease 10, Resist Poison 10
+    [i]mid[/i] — Resist Blight Disease 15, Resist Poison 15, Fortify Athletics 8, Weakness To Frost 10
+    [i]max[/i] — Resist Blight Disease 20, Resist Poison 20, Fortify Athletics 12, Resist Fire 20, Weakness To Frost 20
+
+[b]Netch Leather[/b]
+    [i]min[/i] — Fortify Fatigue 12, Resist Poison 10
+    [i]mid[/i] — Fortify Fatigue 20, Resist Poison 15, Fortify Athletics 8, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Resist Poison 20, Fortify Athletics 12, Fortify Speed 8, Weakness To Fire 20
+
+[b]Newtscale[/b]
+    [i]min[/i] — Resist Poison 10, Swift Swim 20
+    [i]mid[/i] — Resist Poison 15, Swift Swim 30, Water Breathing 1, Weakness To Frost 10
+    [i]max[/i] — Resist Poison 20, Swift Swim 40, Water Breathing 1, Resist Common Disease 20, Weakness To Frost 20
+
+[b]Nordic[/b]
+    [i]min[/i] — Resist Frost 10, Resist Shock 10
+    [i]mid[/i] — Resist Frost 15, Resist Shock 15, Fortify Strength 5
+    [i]max[/i] — Resist Frost 20, Resist Shock 20, Fortify Strength 8, Fortify Health 18
+
+[b]Orcish[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Strength 3
+    [i]mid[/i] — Fortify Health 12, Fortify Strength 5, Fortify Fatigue 20, Weakness To Shock 10
+    [i]max[/i] — Fortify Health 18, Fortify Strength 8, Fortify Fatigue 28, Fortify Attack Bonus 8, Weakness To Shock 20
+
+[b]Orsimer[/b]
+    [i]min[/i] — Fortify Strength 3, Fortify Health 8
+    [i]mid[/i] — Fortify Strength 5, Fortify Health 12, Resist Magicka 8
+    [i]max[/i] — Fortify Strength 8, Fortify Health 18, Resist Magicka 12, Fortify Attack Bonus 8
+
+[b]Padded[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Resist Frost 15, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Resist Frost 20, Fortify Health 18, Weakness To Fire 20
+
+[b]Plate[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Weakness To Shock 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Weakness To Shock 20
+
+[b]Resin Molded (stub)[/b]
+    [i]min[/i] — Resist Blight Disease 10
+    [i]mid[/i] — Resist Blight Disease 15, Fortify Fatigue 20, Weakness To Frost 10
+    [i]max[/i] — Resist Blight Disease 20, Fortify Fatigue 28, Resist Poison 20, Weakness To Frost 20
+
+[b]Ring Mail[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Agility 3
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Agility 5, Weakness To Shock 10
+    [i]max[/i] — Fortify Fatigue 28, Fortify Agility 8, Resist Normal Weapons 8, Weakness To Shock 20
+
+[b]Royal Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Resist Magicka 8, Weakness To Fire 10
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Resist Magicka 12, Fortify Attack Bonus 8, Weakness To Fire 20
+
+[b]Scale Mail[/b]
+    [i]min[/i] — Resist Normal Weapons 3
+    [i]mid[/i] — Resist Normal Weapons 5, Weakness To Shock 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Weakness To Shock 20
+
+[b]Scrap (stub)[/b]
+    [i]min[/i] — Fortify Luck 3
+    [i]mid[/i] — Fortify Luck 5, Fortify Fatigue 20
+    [i]max[/i] — Fortify Luck 8, Fortify Fatigue 28, Resist Normal Weapons 8
+
+[b]Silver[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Turn Undead 15, Weakness To Shock 10
+    [i]max[/i] — Resist Magicka 12, Turn Undead 20, Spell Absorption 8, Weakness To Shock 20
+
+[b]Splint[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Weakness To Shock 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Weakness To Shock 20
+
+[b]Stalhrim[/b]
+    [i]min[/i] — Resist Frost 10
+    [i]mid[/i] — Resist Frost 15, Restore Magicka 1 /s, Weakness To Fire 10
+    [i]max[/i] — Resist Frost 20, Restore Magicka 2 /s, Weakness To Fire 20
+
+[b]Steel[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Attack Bonus 3
+    [i]mid[/i] — Fortify Health 12, Fortify Attack Bonus 5, Weakness To Shock 10
+    [i]max[/i] — Fortify Health 18, Fortify Attack Bonus 8, Resist Normal Weapons 8, Weakness To Shock 20
+
+[b]Studded[/b]
+    [i]min[/i] — Fortify Fatigue 12, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Fatigue 20, Resist Normal Weapons 5, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Resist Normal Weapons 8, Weakness To Fire 20
+
+[b]House Telvanni[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Intelligence 3
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Intelligence 5, Fortify Mysticism 8
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Intelligence 8, Fortify Mysticism 12, Fortify Destruction 12
+
+[b]Templar[/b]
+    [i]min[/i] — Fortify Health 8, Turn Undead 10
+    [i]mid[/i] — Fortify Health 12, Turn Undead 15, Resist Magicka 8
+    [i]max[/i] — Fortify Health 18, Turn Undead 20, Resist Magicka 12, Fortify Attack Bonus 8
+
+[b]Thieves Guild (stub)[/b]
+    [i]min[/i] — Fortify Sneak 5, Fortify Security 5
+    [i]mid[/i] — Fortify Sneak 8, Fortify Security 8, Chameleon 7
+    [i]max[/i] — Fortify Sneak 12, Fortify Security 12, Chameleon 10, Fortify Agility 8
+
+[b]Tribunal Temple[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Restoration 5
+    [i]mid[/i] — Resist Magicka 8, Fortify Restoration 8, Restore Health 1 /s
+    [i]max[/i] — Resist Magicka 12, Fortify Restoration 12, Restore Health 1 /s, Turn Undead 20
+
+[b]Trollbone[/b]
+    [i]min[/i] — Restore Health 1 /s
+    [i]mid[/i] — Restore Health 1 /s, Resist Frost 15, Weakness To Fire 10
+    [i]max[/i] — Restore Health 1 /s, Resist Frost 20, Fortify Health 18, Weakness To Fire 20
+
+[b]Wolf Fur[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Speed 3
+    [i]mid[/i] — Resist Frost 15, Fortify Speed 5, Night Eye 40, Weakness To Fire 10
+    [i]max[/i] — Resist Frost 20, Fortify Speed 8, Night Eye 50, Fortify Athletics 12, Weakness To Fire 20
+
+[/spoiler]
+[b]Tamriel Rebuilt add-on sets (67)[/b]
+[spoiler]
+[b]Alessian Bronze[/b]
+    [i]min[/i] — Fortify Health 8, Resist Magicka 5
+    [i]mid[/i] — Fortify Health 12, Resist Magicka 8, Fortify Attack Bonus 5, Weakness To Shock 10
+    [i]max[/i] — Fortify Health 18, Resist Magicka 12, Fortify Attack Bonus 8, Turn Undead 20, Weakness To Shock 20
+
+[b]Alit Hide[/b]
+    [i]min[/i] — Fortify Agility 3, Resist Poison 10
+    [i]mid[/i] — Fortify Agility 5, Resist Poison 15, Fortify Athletics 8, Weakness To Fire 10
+    [i]max[/i] — Fortify Agility 8, Resist Poison 20, Fortify Athletics 12, Fortify Attack Bonus 8, Weakness To Fire 20
+
+[b]Altmer[/b]  [i](relocated)[/i]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Intelligence 3
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Intelligence 5, Fortify Destruction 8, Weakness To Magicka 10
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Intelligence 8, Fortify Destruction 12, Fortify Alteration 12, Weakness To Magicka 20
+
+[b]Ancient Nordic[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Health 8
+    [i]mid[/i] — Resist Frost 15, Fortify Health 12, Resist Normal Weapons 5
+    [i]max[/i] — Resist Frost 20, Fortify Health 18, Resist Normal Weapons 8, Turn Undead 20
+
+[b]Anvil[/b]  [i](relocated)[/i]
+    [i]min[/i] — Water Breathing 1, Swift Swim 20
+    [i]mid[/i] — Water Breathing 1, Swift Swim 30, Resist Frost 15
+    [i]max[/i] — Water Breathing 1, Swift Swim 40, Resist Frost 20, Fortify Personality 8
+
+[b]Argonian[/b]  [i](relocated)[/i]
+    [i]min[/i] — Water Breathing 1, Resist Poison 10
+    [i]mid[/i] — Water Breathing 1, Resist Poison 15, Resist Common Disease 15, Swift Swim 30
+    [i]max[/i] — Water Breathing 1, Resist Poison 20, Resist Common Disease 20, Swift Swim 40, Restore Health 1 /s
+
+[b]Ayleid[/b]  [i](relocated)[/i]
+    [i]min[/i] — Restore Magicka 1 /s, Light 8
+    [i]mid[/i] — Restore Magicka 1 /s, Spell Absorption 5
+    [i]max[/i] — Restore Magicka 2 /s, Spell Absorption 8, Resist Magicka 12
+
+[b]Bal-Darum[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Blight Disease 10, Resist Normal Weapons 3
+    [i]mid[/i] — Resist Blight Disease 15, Resist Normal Weapons 5, Fortify Health 12
+    [i]max[/i] — Resist Blight Disease 20, Resist Normal Weapons 8, Fortify Health 18
+
+[b]Breton[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Spell Absorption 5
+    [i]max[/i] — Resist Magicka 12, Spell Absorption 8, Fortify Conjuration 12
+
+[b]Cataphract[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Health 8, Fortify Attack Bonus 3
+    [i]mid[/i] — Fortify Health 12, Fortify Attack Bonus 5, Resist Normal Weapons 5, Weakness To Shock 10
+    [i]max[/i] — Fortify Health 18, Fortify Attack Bonus 8, Resist Normal Weapons 8, Weakness To Shock 20
+
+[b]Chap-thil[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Fire 15, Fortify Fatigue 20, Weakness To Frost 10
+    [i]max[/i] — Resist Fire 20, Fortify Fatigue 28, Fortify Endurance 8, Weakness To Frost 20
+
+[b]Chev-Aram[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Fortify Attack Bonus 3
+    [i]mid[/i] — Resist Fire 15, Fortify Attack Bonus 5, Fortify Health 12
+    [i]max[/i] — Resist Fire 20, Fortify Attack Bonus 8, Fortify Health 18
+
+[b]Chuzei[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Health 8, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Health 12, Resist Blight Disease 15, Resist Normal Weapons 5, Weakness To Frost 10
+    [i]max[/i] — Fortify Health 18, Resist Blight Disease 20, Resist Normal Weapons 8, Resist Fire 20, Weakness To Frost 20
+
+[b]Colovian Leather[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Agility 3
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Agility 5, Fortify Sneak 8, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Fortify Agility 8, Fortify Sneak 12, Fortify Acrobatics 12, Weakness To Fire 20
+
+[b]Companions[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Attack Bonus 3, Fortify Fatigue 12
+    [i]mid[/i] — Fortify Attack Bonus 5, Fortify Fatigue 20, Fortify Health 12
+    [i]max[/i] — Fortify Attack Bonus 8, Fortify Fatigue 28, Fortify Health 18, Fortify Personality 8
+
+[b]Crown Guard[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Personality 5, Weakness To Fire 10
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Personality 8, Fortify Attack Bonus 8, Weakness To Fire 20
+
+[b]Daedric Hide[/b]  [i](relocated)[/i]
+    [i]min[/i] — Spell Absorption 3
+    [i]mid[/i] — Spell Absorption 5, Resist Magicka 8, Sanctuary 7, Weakness To Fire 10
+    [i]max[/i] — Spell Absorption 8, Resist Magicka 12, Sanctuary 10, Restore Magicka 2 /s, Weakness To Fire 20
+
+[b]Domina[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Personality 3, Fortify Attack Bonus 3
+    [i]mid[/i] — Fortify Personality 5, Fortify Attack Bonus 5, Fortify Health 12
+    [i]max[/i] — Fortify Personality 8, Fortify Attack Bonus 8, Fortify Health 18, Resist Normal Weapons 8
+
+[b]Dunmer[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10
+    [i]mid[/i] — Resist Fire 15, Fortify Destruction 8
+    [i]max[/i] — Resist Fire 20, Fortify Destruction 12, Fortify Speed 8
+
+[b]Ebonweave[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Fatigue 12
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Fatigue 20, Resist Magicka 8
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Fatigue 28, Resist Magicka 12, Spell Absorption 8
+
+[b]Falkreath Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Frost 10
+    [i]mid[/i] — Fortify Health 12, Resist Frost 15, Resist Normal Weapons 5, Weakness To Fire 10
+    [i]max[/i] — Fortify Health 18, Resist Frost 20, Resist Normal Weapons 8, Fortify Endurance 8, Weakness To Fire 20
+
+[b]Gah'Kogo[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Poison 10, Resist Blight Disease 10
+    [i]mid[/i] — Resist Poison 15, Resist Blight Disease 15, Resist Paralysis 15, Weakness To Frost 10
+    [i]max[/i] — Resist Poison 20, Resist Blight Disease 20, Resist Paralysis 20, Fortify Agility 8, Weakness To Frost 20
+
+[b]Gilded Glass[/b]
+    [i]min[/i] — Fortify Agility 3, Fortify Personality 3
+    [i]mid[/i] — Fortify Agility 5, Resist Fire 15, Fortify Personality 5, Weakness To Frost 10
+    [i]max[/i] — Fortify Agility 8, Resist Fire 20, Sanctuary 10, Fortify Personality 8, Weakness To Frost 20
+
+[b]Gold[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Personality 3
+    [i]mid[/i] — Fortify Personality 5, Fortify Mercantile 8, Weakness To Shock 10
+    [i]max[/i] — Fortify Personality 8, Fortify Mercantile 12, Resist Magicka 12, Weakness To Shock 20
+
+[b]Golden Saint[/b]
+    [i]min[/i] — Resist Magicka 5, Spell Absorption 3
+    [i]mid[/i] — Resist Magicka 8, Spell Absorption 5, Reflect 5, Weakness To Shock 10
+    [i]max[/i] — Resist Magicka 12, Spell Absorption 8, Reflect 8, Fortify Attack Bonus 8, Weakness To Shock 20
+
+[b]Guar Hide[/b]
+    [i]min[/i] — Fortify Fatigue 12, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Fatigue 20, Resist Blight Disease 15, Fortify Endurance 5, Weakness To Fire 10
+    [i]max[/i] — Fortify Fatigue 28, Resist Blight Disease 20, Fortify Endurance 8, Fortify Athletics 12, Weakness To Fire 20
+
+[b]House Direnni[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Magicka 5, Restore Magicka 1 /s
+    [i]mid[/i] — Resist Magicka 8, Restore Magicka 1 /s, Spell Absorption 5
+    [i]max[/i] — Resist Magicka 12, Restore Magicka 2 /s, Spell Absorption 8, Fortify Alteration 12
+
+[b]House Redoran[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Health 8, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Health 12, Resist Blight Disease 15, Fortify Endurance 5
+    [i]max[/i] — Fortify Health 18, Resist Blight Disease 20, Fortify Endurance 8, Resist Normal Weapons 8
+
+[b]Kagouti Hide[/b]
+    [i]min[/i] — Fortify Speed 3, Fortify Athletics 5
+    [i]mid[/i] — Fortify Speed 5, Fortify Athletics 8, Resist Poison 15, Weakness To Fire 10
+    [i]max[/i] — Fortify Speed 8, Fortify Athletics 12, Resist Poison 20, Fortify Attack Bonus 8, Weakness To Fire 20
+
+[b]Kalantar[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Fortify Attack Bonus 3
+    [i]mid[/i] — Resist Fire 15, Fortify Attack Bonus 5, Fortify Strength 5
+    [i]max[/i] — Resist Fire 20, Fortify Attack Bonus 8, Fortify Strength 8, Fortify Health 18
+
+[b]Klibanion[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Endurance 3
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Endurance 5, Weakness To Shock 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Endurance 8, Fortify Health 18, Weakness To Shock 20
+
+[b]Kragen[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Fortify Mercantile 5
+    [i]mid[/i] — Resist Fire 15, Fortify Mercantile 8, Fortify Health 12, Weakness To Frost 10
+    [i]max[/i] — Resist Fire 20, Fortify Mercantile 12, Fortify Health 18, Fortify Personality 8, Weakness To Frost 20
+
+[b]Kvetchi[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Blight Disease 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Blight Disease 15, Fortify Fatigue 20, Resist Poison 15, Weakness To Frost 10
+    [i]max[/i] — Resist Blight Disease 20, Fortify Fatigue 28, Resist Poison 20, Fortify Endurance 8, Weakness To Frost 20
+
+[b]Lamellar[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Fatigue 12
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Fatigue 20, Weakness To Shock 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Fatigue 28, Fortify Health 18, Weakness To Shock 20
+
+[b]Mananaut[/b] [i](pieces 2/3/5)[/i]
+    [i]min[/i] — Resist Shock 10, Water Breathing 1
+    [i]mid[/i] — Resist Shock 15, Water Breathing 1, Fortify Intelligence 5
+    [i]max[/i] — Resist Shock 20, Water Breathing 1, Fortify Intelligence 8, Reflect 8
+
+[b]Manatee Leather[/b]
+    [i]min[/i] — Water Breathing 1, Swift Swim 20
+    [i]mid[/i] — Water Breathing 1, Swift Swim 30, Fortify Fatigue 20, Weakness To Fire 10
+    [i]max[/i] — Water Breathing 1, Swift Swim 40, Fortify Fatigue 28, Resist Frost 20, Weakness To Fire 20
+
+[b]Maormer[/b]
+    [i]min[/i] — Water Breathing 1, Swift Swim 20
+    [i]mid[/i] — Water Breathing 1, Swift Swim 30, Resist Shock 15
+    [i]max[/i] — Water Breathing 1, Swift Swim 40, Resist Shock 20, Chameleon 10
+
+[b]Maradlai[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Fortify Speed 3
+    [i]mid[/i] — Resist Fire 15, Fortify Speed 5, Fortify Fatigue 20
+    [i]max[/i] — Resist Fire 20, Fortify Speed 8, Fortify Fatigue 28, Fortify Athletics 12
+
+[b]Militia[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Health 8
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Health 12, Resist Normal Weapons 5
+    [i]max[/i] — Fortify Fatigue 28, Fortify Health 18, Resist Normal Weapons 8
+
+[b]Molecrab[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Normal Weapons 3
+    [i]mid[/i] — Resist Normal Weapons 5, Weakness To Frost 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Weakness To Frost 20
+
+[b]Narsis Watch[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Endurance 5
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Endurance 8, Fortify Mercantile 12
+
+[b]Navy[/b]  [i](relocated)[/i]
+    [i]min[/i] — Swift Swim 20, Water Breathing 1
+    [i]mid[/i] — Swift Swim 30, Water Breathing 1, Resist Frost 15
+    [i]max[/i] — Swift Swim 40, Water Breathing 1, Resist Frost 20, Fortify Fatigue 28
+
+[b]Necrom Guard[/b]  [i](relocated)[/i]
+    [i]min[/i] — Turn Undead 10, Resist Magicka 5
+    [i]mid[/i] — Turn Undead 15, Resist Magicka 8, Fortify Health 12, Weakness To Fire 10
+    [i]max[/i] — Turn Undead 20, Resist Magicka 12, Fortify Health 18, Fortify Restoration 12, Weakness To Fire 20
+
+[b]Nibenese[/b]  [i](relocated)[/i]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Mercantile 5
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Mercantile 8, Resist Magicka 8
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Mercantile 12, Resist Magicka 12, Fortify Personality 8
+
+[b]Oloman[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Resist Normal Weapons 3
+    [i]mid[/i] — Resist Fire 15, Resist Normal Weapons 5, Fortify Health 12
+    [i]max[/i] — Resist Fire 20, Resist Normal Weapons 8, Fortify Health 18, Fortify Endurance 8
+
+[b]Quey Chitin[/b]
+    [i]min[/i] — Water Breathing 1, Resist Poison 10
+    [i]mid[/i] — Water Breathing 1, Resist Poison 15, Resist Normal Weapons 5, Weakness To Frost 10
+    [i]max[/i] — Water Breathing 1, Resist Poison 20, Resist Normal Weapons 8, Swift Swim 40, Weakness To Frost 20
+
+[b]Reach[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Endurance 3
+    [i]mid[/i] — Resist Frost 15, Fortify Endurance 5, Fortify Attack Bonus 5
+    [i]max[/i] — Resist Frost 20, Fortify Endurance 8, Fortify Attack Bonus 8, Spell Absorption 8
+
+[b]Reach Royal Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Frost 10
+    [i]mid[/i] — Fortify Health 12, Resist Frost 15, Resist Normal Weapons 5, Weakness To Fire 10
+    [i]max[/i] — Fortify Health 18, Resist Frost 20, Resist Normal Weapons 8, Fortify Attack Bonus 8, Weakness To Fire 20
+
+[b]Red Dome Templar[/b]
+    [i]min[/i] — Fortify Health 8, Resist Magicka 5
+    [i]mid[/i] — Fortify Health 12, Resist Magicka 8, Turn Undead 15
+    [i]max[/i] — Fortify Health 18, Resist Magicka 12, Turn Undead 20, Fortify Restoration 12
+
+[b]Redguard[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Poison 10, Fortify Endurance 3
+    [i]mid[/i] — Resist Poison 15, Fortify Endurance 5, Fortify Fatigue 20, Weakness To Fire 10
+    [i]max[/i] — Resist Poison 20, Fortify Endurance 8, Fortify Fatigue 28, Fortify Attack Bonus 8, Weakness To Fire 20
+
+[b]Redguard Iron Lamellar[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Fortify Attack Bonus 5, Weakness To Shock 10
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Fortify Attack Bonus 8, Fortify Endurance 8, Weakness To Shock 20
+
+[b]Reman[/b]  [i](relocated)[/i]
+    [i]min[/i] — Fortify Health 8, Fortify Attack Bonus 3
+    [i]mid[/i] — Fortify Health 12, Fortify Attack Bonus 5, Fortify Personality 5
+    [i]max[/i] — Fortify Health 18, Fortify Attack Bonus 8, Fortify Personality 8, Resist Normal Weapons 8
+
+[b]Rihad Guard[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Poison 15, Fortify Fatigue 20, Resist Normal Weapons 5, Weakness To Fire 10
+    [i]max[/i] — Resist Poison 20, Fortify Fatigue 28, Resist Normal Weapons 8, Fortify Endurance 8, Weakness To Fire 20
+
+[b]Riverwatch[/b]
+    [i]min[/i] — Fortify Health 8, Water Walking 1
+    [i]mid[/i] — Fortify Health 12, Water Walking 1, Resist Normal Weapons 5
+    [i]max[/i] — Fortify Health 18, Water Walking 1, Resist Normal Weapons 8, Resist Blight Disease 20
+
+[b]Rourken[/b]
+    [i]min[/i] — Resist Shock 10, Fortify Health 8
+    [i]mid[/i] — Resist Shock 15, Fortify Health 12, Resist Normal Weapons 5
+    [i]max[/i] — Resist Shock 20, Fortify Health 18, Resist Normal Weapons 8, Reflect 8
+
+[b]Sacred Lands[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Health 8
+    [i]mid[/i] — Resist Magicka 8, Fortify Health 12, Fortify Restoration 8
+    [i]max[/i] — Resist Magicka 12, Fortify Health 18, Fortify Restoration 12, Turn Undead 20
+
+[b]Saliache[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Blight Disease 10, Fortify Athletics 5
+    [i]mid[/i] — Resist Blight Disease 15, Fortify Athletics 8, Resist Poison 15, Weakness To Frost 10
+    [i]max[/i] — Resist Blight Disease 20, Fortify Athletics 12, Resist Poison 20, Fortify Agility 8, Weakness To Frost 20
+
+[b]Shellmold[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Normal Weapons 3, Resist Shock 10
+    [i]mid[/i] — Resist Normal Weapons 5, Resist Shock 15, Weakness To Frost 10
+    [i]max[/i] — Resist Normal Weapons 8, Resist Shock 20, Fortify Health 18, Weakness To Frost 20
+
+[b]Shinathi Chitin[/b]
+    [i]min[/i] — Resist Poison 10, Resist Blight Disease 10
+    [i]mid[/i] — Resist Poison 15, Resist Blight Disease 15, Resist Paralysis 15, Weakness To Frost 10
+    [i]max[/i] — Resist Poison 20, Resist Blight Disease 20, Resist Paralysis 20, Fortify Agility 8, Weakness To Frost 20
+
+[b]Shipal-Arai[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Blight Disease 10, Resist Poison 10
+    [i]mid[/i] — Resist Blight Disease 15, Resist Poison 15, Fortify Spear 8, Weakness To Frost 10
+    [i]max[/i] — Resist Blight Disease 20, Resist Poison 20, Fortify Spear 12, Fortify Agility 8, Weakness To Frost 20
+
+[b]Skingrad[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Poison 10, Resist Common Disease 10
+    [i]mid[/i] — Resist Poison 15, Resist Common Disease 15, Fortify Personality 5
+    [i]max[/i] — Resist Poison 20, Resist Common Disease 20, Fortify Personality 8, Resist Magicka 12
+
+[b]Sutch Mail[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Attack Bonus 5
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Attack Bonus 8, Fortify Fatigue 28
+
+[b]Thirr[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Fire 10, Water Breathing 1
+    [i]mid[/i] — Resist Fire 15, Water Breathing 1, Fortify Health 12, Weakness To Frost 10
+    [i]max[/i] — Resist Fire 20, Water Breathing 1, Fortify Health 18, Swift Swim 40, Weakness To Frost 20
+
+[b]Toadscale[/b]
+    [i]min[/i] — Resist Poison 10, Resist Frost 10
+    [i]mid[/i] — Resist Poison 15, Resist Frost 15, Resist Common Disease 15, Weakness To Fire 10
+    [i]max[/i] — Resist Poison 20, Resist Frost 20, Resist Common Disease 20, Fortify Fatigue 28, Weakness To Fire 20
+
+[b]Watchman[/b]  [i](relocated)[/i]
+    [i]min[/i] — Night Eye 25, Fortify Fatigue 12
+    [i]mid[/i] — Night Eye 40, Fortify Fatigue 20, Fortify Health 12
+    [i]max[/i] — Night Eye 50, Fortify Fatigue 28, Fortify Health 18, Detect Animal 50
+
+[b]Wenbone[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Marksman 5
+    [i]mid[/i] — Resist Poison 15, Fortify Marksman 8, Fortify Agility 5, Weakness To Fire 10
+    [i]max[/i] — Resist Poison 20, Fortify Marksman 12, Fortify Agility 8, Fortify Sneak 12, Weakness To Fire 20
+
+[b]Wormmouth[/b]  [i](relocated)[/i]
+    [i]min[/i] — Resist Poison 10
+    [i]mid[/i] — Resist Poison 15, Resist Blight Disease 15, Weakness To Frost 10
+    [i]max[/i] — Resist Poison 20, Resist Blight Disease 20, Resist Paralysis 20, Weakness To Frost 20
+
+[/spoiler]
+[b]External-mod armour folded into existing sets[/b]
+[spoiler]
+[b]Tamriel Rebuilt[/b] — 42 sets
+Bearskin (+7), Bonemold (+92), Bronze (+9), Cephalopod (+8), Chain Mail (+15), Chitin (+17), Colovian (+136), Daedric (+57), Dragonscale (+9), Dreugh (+12), Dwemer (+20), Ebony (+19), Fur (+21), Glass (+10), Goblin (+6), Heavy Armor (+3), Hide (+14), House Dres (+32), House Hlaalu (+1), House Indoril (+26), House Telvanni (+26), Imperial (+5), Iron (+97), Lamellar (+11), Leather (+37), Light Armor (+13), Master (+3), Morag Tong (+7), Native (+101), Netch Leather (+14), Newtscale (+8), Nordic (+81), Orcish (+6), Orsimer (+14), Ring Mail (+11), Scrap (+8), Shellmold (+8), Silver (+12), Steel (+133), Studded (+5), Templar (+1), Trollbone (+7)
+
+[b]OAAB[/b] — 16 sets
+Cephalopod (+3), Chitin (+5), Cloth (+3), Daedric (+4), Dreugh (+7), Glass (+3), House Hlaalu (+1), House Telvanni (+9), Iron (+6), Leather (+1), Morag Tong (+4), Native (+6), Netch Leather (+3), Orcish (+1), Orsimer (+1), Steel (+9)
+
+[b]NOD[/b] — 14 sets
+Adamantium (+53), Chitin (+3), Cloth (+2), Daedric (+3), Dwemer (+16), House Dres (+1), House Hlaalu (+3), House Indoril (+8), House Telvanni (+5), Iron (+6), Leather (+2), Netch Leather (+35), Orcish (+2), Scrap (+8)
+
+[b]AATL[/b] — 9 sets
+Artifacts (+8), Chitin (+5), Dark Brotherhood (+8), Dreugh (+1), Dwemer (+2), Glass (+4), House Redoran (+2), Iron (+5), Netch Leather (+2)
+
+[/spoiler]
