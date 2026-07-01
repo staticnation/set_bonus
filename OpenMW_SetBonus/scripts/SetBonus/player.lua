@@ -26,6 +26,13 @@ I.Settings.registerGroup{
             description = 'Show a message when your set bonus tier changes as you equip or remove pieces.',
             default = true,
         },
+        {
+            key = 'tooltip',
+            renderer = 'checkbox',
+            name = 'Set info on item tooltips',
+            description = 'Show set-bonus info on item tooltips. Requires the Inventory Extender mod (which provides the tooltip hook); has no effect without it.',
+            default = true,
+        },
     },
 }
 

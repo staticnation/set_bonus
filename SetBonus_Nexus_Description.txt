@@ -28,8 +28,10 @@ This page hosts both. Grab the one that matches your setup:
 [*][b]Thematic trade-offs[/b] — many sets carry a mild Weakness at mid/max (metal → shock, fur/hide → fire, chitin/glass → frost, Altmer → magicka), giving each set an identity and counterplay (it applies to NPCs too).
 [*][b]Players and NPCs[/b] — fully-kitted NPCs benefit too (toggleable).
 [*][b]Tune it to taste[/b] — two independent sliders scale the [b]benefits[/b] and the [b]weakness drawbacks[/b] separately (25–300% / 0–300%). Want the flavour without the downside? Set drawbacks to 0. Want a bigger power fantasy? Crank benefits up. Changes apply instantly.
+[*][b]Enchant-friendly[/b] — set pieces are matched by inventory icon as well as by ID, so a player-[i]enchanted[/i] copy of a set item still counts toward the bonus (toggleable).
+[*][b]Informative tooltips[/b] — hover a set piece to see the set, your current progress, and each tier's effects; the active tier is highlighted. Built in on MWSE; on OpenMW it works with [url=https://www.nexusmods.com/morrowind/mods/56680]Inventory Extender[/url] installed.
 [*][b]No plugin required[/b] — every bonus spell is built at runtime in Lua. Nothing to clutter your load order, no record conflicts.
-[*][b]In-game options[/b] — toggle notifications, NPC bonuses, debug logging, and the magnitude sliders (MWSE: MCM; OpenMW: Options › Scripts).
+[*][b]In-game options[/b] — toggle notifications, NPC bonuses, icon matching, debug logging, and the magnitude sliders (MWSE: MCM; OpenMW: Options › Scripts).
 [*][b]Mod-aware[/b] — automatically extends to Tamriel Rebuilt, OAAB, NOD, and AATL armour when those are installed.
 [*][b]Modder framework (both engines)[/b] — a small interop lets other mods register their own sets: on MWSE via [i]require[/i], on OpenMW via the [i]I.SetBonus[/i] interface or global events.
 [/list]
@@ -52,6 +54,12 @@ Companion modules fold external-mod armour into the matching sets, but only when
 [*][b]OAAB_Data[/b], [b]NOD[/b], [b]AATL[/b] — their armour, bucklers, and artifacts re-linked to the right sets.
 [/list]
 It edits no armour or NPC records, so it's compatible with essentially everything and load order doesn't matter.
+
+[b]Optional integrations[/b] (auto-detected, ignored if absent):
+[list]
+[*][b]Consistent Enchanting[/b] (MWSE) — player-enchanted set pieces are matched by their exact base item, so they keep their bonus with no false positives.
+[*][b]Inventory Extender[/b] (OpenMW) — provides the tooltip hook OpenMW lacks, enabling the set-info tooltip there.
+[/list]
 
 [center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
 

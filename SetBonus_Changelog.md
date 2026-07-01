@@ -1,5 +1,38 @@
 # Set Bonus — Changelog
 
+## 1.5.1 — Optional integrations: Consistent Enchanting & Inventory Extender
+
+**Added**
+
+- **Consistent Enchanting support** (MWSE, optional). If Consistent Enchanting is
+  installed with "store base object" on, player-enchanted set pieces are matched
+  by their exact base item — no false positives, and it works even with icon
+  matching turned off. Automatic when present.
+- **Item tooltips on OpenMW** via the **Inventory Extender** mod (optional).
+  Inventory Extender provides a tooltip hook OpenMW otherwise lacks; when it's
+  installed, set pieces show the same tooltip the MWSE version has (set name,
+  progress, per-tier effects, active tier highlighted, multi-set aware). Toggle in
+  Options › Scripts › Set Bonus. Without Inventory Extender, OpenMW shows no
+  tooltip (unchanged). The integration is fully guarded so it can never interfere
+  with Inventory Extender's own tooltips.
+
+## 1.5 — Enchant matching & item tooltips (MWSE & OpenMW)
+
+**Added**
+
+- **Set pieces are now matched by inventory icon as well as item ID** (MWSE &
+  OpenMW), so a player-enchanted (or otherwise copied) set item — which gets a new
+  internal ID but keeps the same icon — still counts toward its set. This restores
+  the original beta behaviour. Toggle **"Match enchanted/copied items by icon"**
+  (MWSE: MCM; OpenMW: Options › Scripts › Set Bonus), on by default. Turn it off
+  for strict ID-only matching if a rare item that merely reuses an icon shouldn't
+  count.
+- **Set info on item tooltips** (MWSE). Hovering an armour/clothing/weapon that
+  belongs to a set shows the set name, your current progress, and every tier's
+  effects (with magic-effect icons); the active tier is highlighted and Weakness
+  drawbacks are flagged in red. Multi-set items list each set they belong to
+  ("1 of 2"). Toggle in the MCM.
+
 ## 1.4.1 — Amend / replace / disable sets (MWSE & OpenMW)
 
 **Added**

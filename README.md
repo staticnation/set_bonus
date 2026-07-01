@@ -110,6 +110,17 @@ add-ons that only act when the target mod is present:
 It edits no armour or NPC records, so it's compatible with essentially everything
 and load order doesn't matter.
 
+## Optional integrations
+
+These are soft dependencies — they enhance the mod when present and are ignored
+otherwise:
+
+- **Consistent Enchanting** *(MWSE)* — when it records an item's base object,
+  player-enchanted set pieces are matched by that exact base item (no icon
+  false-positives, works with icon matching off).
+- **Inventory Extender** *(OpenMW)* — provides the tooltip hook OpenMW otherwise
+  lacks, enabling the item-tooltip set display on OpenMW.
+
 ## For mod authors
 
 Other mods can register their own sets and let Set Bonus build and manage the
@@ -176,6 +187,7 @@ OpenMW_SetBonus/
     global.lua               builds spells, applies tiers, framework API
     actor.lua                per-actor equipment watcher
     player.lua               settings page + notifications
+    ietooltip.lua            optional Inventory Extender tooltip integration
     data.lua                 all sets + item links (auto-generated from MWSE)
   README.md  SetBonus_Interop_OpenMW.md
 OpenMW_SetBonus_Example/     drop-in example add-on
@@ -189,8 +201,8 @@ generated from the MWSE set definitions so the two stay in sync.
 
 ## Changelog
 
-See `SetBonus_Changelog.md`. Current release: **1.5** (enchant matching and
-item tooltips).
+See `SetBonus_Changelog.md`. Current release: **1.5.1** (optional Consistent
+Enchanting and Inventory Extender integrations).
 
 ## Credits & license
 
