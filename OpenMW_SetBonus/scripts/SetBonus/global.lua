@@ -8,8 +8,10 @@ local storage = require('openmw.storage')
 local async   = require('openmw.async')
 local I       = require('openmw.interfaces')
 local data    = require('scripts.SetBonus.data')
+local C       = require('scripts.SetBonus.conditions')
 
 local SPELL = {}      -- [setIndex][tier] = generated spell record (object)
+local SPELLCOND = {} -- [setIndex][tier] = { { record=, condition= }, ... }
 local itemLink = {}   -- itemId(lower) -> { setIndex, ... }
 local iconLink = {}   -- iconPath(lower) -> { setIndex, ... }  (matches enchanted/copied items)
 local stateOf = {}    -- [actorId] = { [setIndex] = tier }
@@ -26,6 +28,12 @@ end
 
 local function matchByIconEnabled()
     local v = cfg and cfg:get('matchByIcon')
+    if v == nil then return true end
+    return v
+end
+
+local function conditionalEnabled()
+    local v = cfg and cfg:get('conditionalBonuses')
     if v == nil then return true end
     return v
 end
@@ -118,6 +126,13 @@ local function registerSettings()
                 default = true,
             },
             {
+                key = 'conditionalBonuses',
+                renderer = 'checkbox',
+                name = 'Conditional bonuses',
+                description = 'Enable condition-gated bonus effects (e.g. below 50% health, at night, or above a skill level). When off, such effects are not applied. Only affects sets that define conditions.',
+                default = true,
+            },
+            {
                 key = 'debug',
                 renderer = 'checkbox',
                 name = 'Debug logging',
@@ -179,51 +194,57 @@ local function indexByName()
 end
 
 local builtCount, failCount = 0, 0
--- Build (or rebuild) the tier spell records for one set, with the current scales.
+local function magFor(e)
+    if NOSCALE[e.effect] then return e.mag
+    elseif isWeakness(e.effect) then return roundScale(e.mag, drawbackScaleVal())
+    else return roundScale(e.mag, benefitScaleVal()) end
+end
+local function makeRecord(name, effs)
+    local ok, rec = pcall(function()
+        local draft = { name = name, type = core.magic.SPELL_TYPE.Ability, cost = 0, effects = {} }
+        for _, e in ipairs(effs) do
+            local m = magFor(e)
+            draft.effects[#draft.effects + 1] = {
+                id = e.effect,
+                affectedSkill = e.skill,
+                affectedAttribute = e.attribute,
+                range = core.magic.RANGE.Self,
+                area = 0,
+                duration = e.dur or 0,
+                magnitudeMin = m,
+                magnitudeMax = m,
+            }
+        end
+        return world.createRecord(core.magic.spells.createRecordDraft(draft))
+    end)
+    if ok and rec then builtCount = builtCount + 1; return rec end
+    failCount = failCount + 1
+    print('[SetBonus] could not create spell "' .. tostring(name) .. '": ' .. tostring(rec))
+    return nil
+end
+-- Build (or rebuild) the tier spells for one set. Unconditional effects go in the
+-- base tier spell; each conditional effect becomes its own toggled sub-spell.
 local function buildSpellsForSet(si)
     local s = data[si]
     SPELL[si] = {}
+    SPELLCOND[si] = {}
     for _, tier in ipairs({ 'min', 'mid', 'max' }) do
         local effs = s.bonuses[tier]
         if effs and #effs > 0 then
-            local ok, rec = pcall(function()
-                local draft = {
-                    name = s.name .. ' Set Bonus',
-                    type = core.magic.SPELL_TYPE.Ability,
-                    cost = 0,
-                    effects = {},
-                }
-                local bsc = benefitScaleVal()
-                local dsc = drawbackScaleVal()
-                for _, e in ipairs(effs) do
-                    local m
-                    if NOSCALE[e.effect] then
-                        m = e.mag
-                    elseif isWeakness(e.effect) then
-                        m = roundScale(e.mag, dsc)
-                    else
-                        m = roundScale(e.mag, bsc)
-                    end
-                    draft.effects[#draft.effects + 1] = {
-                        id = e.effect,
-                        affectedSkill = e.skill,
-                        affectedAttribute = e.attribute,
-                        range = core.magic.RANGE.Self,
-                        area = 0,
-                        duration = e.dur or 0,
-                        magnitudeMin = m,
-                        magnitudeMax = m,
-                    }
-                end
-                return world.createRecord(core.magic.spells.createRecordDraft(draft))
-            end)
-            if ok and rec then
-                SPELL[si][tier] = rec
-                builtCount = builtCount + 1
-            else
-                failCount = failCount + 1
-                print('[SetBonus] could not create spell for ' .. s.name .. ' ' .. tier .. ': ' .. tostring(rec))
+            local uncond, cond = {}, {}
+            for _, e in ipairs(effs) do
+                if e.condition then cond[#cond + 1] = e else uncond[#uncond + 1] = e end
             end
+            if #uncond > 0 then
+                local rec = makeRecord(s.name .. ' Set Bonus', uncond)
+                if rec then SPELL[si][tier] = rec end
+            end
+            local list = {}
+            for _, e in ipairs(cond) do
+                local rec = makeRecord(s.name .. ' Bonus', { e })
+                if rec then list[#list + 1] = { record = rec, condition = e.condition } end
+            end
+            SPELLCOND[si][tier] = list
         end
     end
 end
@@ -501,16 +522,46 @@ local function recompute(actor)
             end
         end
     end
+    -- Toggle conditional sub-spells for the actor's active tiers.
+    local desired = {}
+    if conditionalEnabled() then
+        for si, tier in pairs(new) do
+            local cl = SPELLCOND[si] and SPELLCOND[si][tier]
+            if cl then for _, e in ipairs(cl) do desired[#desired + 1] = e end end
+        end
+    end
+    if #desired > 0 or C.hasApplied(aid) then C.reconcileActor(actor, desired) end
     stateOf[aid] = new
 end
+
+-- Periodically re-toggle conditional sub-spells for state that changes without an
+-- equip event (health, time, ...).
+local function reevalConditions()
+    if not ready then return end
+    for _, actor in ipairs(world.activeActors) do
+        if actor:isValid() then
+            local st = stateOf[actor.id]
+            local desired = {}
+            if st and conditionalEnabled() then
+                for si, tier in pairs(st) do
+                    local cl = SPELLCOND[si] and SPELLCOND[si][tier]
+                    if cl then for _, e in ipairs(cl) do desired[#desired + 1] = e end end
+                end
+            end
+            if #desired > 0 or C.hasApplied(actor.id) then
+                C.reconcileActor(actor, desired)
+            end
+        end
+    end
+end
+local condTimer = 0
 
 return {
     interfaceName = 'SetBonus',
     interface = {
         version = 1,
-        -- Register a set: { name=, items={...}, bonuses={min/mid/max={ {effect=,mag=,skill=,attribute=,dur=}, ... }}, thresholds={min=2,mid=4,max=6} }
-        registerSet = function(sd) return registerSet(sd) end,   -- full (re)definition; replaces an existing name
-        amendSet = function(name, patch) return amendSet(name, patch) end,  -- additive merge into an existing set
+        registerSet = function(sd) return registerSet(sd) end,
+        amendSet = function(name, patch) return amendSet(name, patch) end,
         addItems = function(name, items) return addItems(name, items) end,
         registerSetLink = function(t) return registerSetLink(t) end,
         getSet = function(name)
@@ -520,20 +571,30 @@ return {
         getSets = function() return data end,
         getSetsForItem = function(itemId) return getSetsForItem(itemId) end,
         isItemInSet = function(itemId, name) return isItemInSet(itemId, name) end,
-        -- current magnitude multipliers (read-only helpers)
         benefitScale = function() return benefitScaleVal() end,
         drawbackScale = function() return drawbackScaleVal() end,
     },
     engineHandlers = {
-        onUpdate = function() init() end,
+        onUpdate = function(dt)
+            init()
+            condTimer = condTimer + (dt or 0)
+            if condTimer >= 1.0 then
+                condTimer = 0
+                reevalConditions()
+            end
+        end,
     },
     eventHandlers = {
         SetBonus_recompute = function(e) recompute(e.actor) end,
-        -- Registration over events (for mods without a global script). Payload is
-        -- the same data table you'd pass to the interface functions.
         SetBonus_registerSet = function(e) registerSet(e) end,
         SetBonus_amendSet = function(e) amendSet(e.name, e.patch) end,
         SetBonus_addItems = function(e) addItems(e.name, e.items) end,
         SetBonus_registerSetLink = function(e) registerSetLink(e) end,
+        -- External state hook: any script can push per-actor flags (combat, weather,
+        -- custom) that `flag`/`combat`/`weather` conditions read. { actor=, id=, value= }.
+        SetBonus_setFlag = function(e)
+            if e.actor then C.setFlag(e.actor.id, e.id, e.value) end
+            reevalConditions()
+        end,
     },
 }

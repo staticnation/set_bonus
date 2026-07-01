@@ -17,6 +17,7 @@ local util    = require('openmw.util')
 local storage = require('openmw.storage')
 local I       = require('openmw.interfaces')
 local data    = require('scripts.SetBonus.data')
+local C       = require('scripts.SetBonus.conditions')
 
 local v2 = util.vector2
 local GOLD  = util.color.rgb(0.86, 0.72, 0.36)
@@ -174,7 +175,9 @@ local function addSetRows(content, si, count, idx, total)
                 local name = effectName(e)
                 local unit = isPercentName(name) and '%' or ''
                 local color = active and (isWeakness(e.effect) and RED or WHITE) or GREY
-                textRow(content, ('  %s %d%s'):format(name, scaledMag(e), unit), color)
+                local row = ('  %s %d%s'):format(name, scaledMag(e), unit)
+                if e.condition then row = row .. '  (when ' .. C.describe(e.condition) .. ')' end
+                textRow(content, row, color)
             end
         end
     end

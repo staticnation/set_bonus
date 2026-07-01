@@ -157,6 +157,71 @@ Both rebuild just that set's spells and reconcile active actors immediately, so
 changes take effect live (no reload needed). Event equivalents:
 `SetBonus_registerSet` and `SetBonus_amendSet` (`{ name = ..., patch = {...} }`).
 
+## Conditional effects (1.6+)
+
+Any effect can carry a `condition` so it only applies while the wearer meets some
+runtime state (below 50% health, at night, above a skill level, and so on). Each
+conditional effect is built as its own sub-spell and toggled on/off as the
+condition flips, while the actor is at that tier. A player setting, **Conditional
+bonuses** (Options > Scripts > Set Bonus), gates the whole feature; when off,
+condition-gated effects are not applied.
+
+Conditions are **plain data**, identical to the MWSE version, so sets are portable
+across both engines and travel fine over the OpenMW event layer.
+
+```lua
+I.SetBonus.registerSet{
+    name  = 'Bloodmoon Reaver',
+    items = { ... },
+    bonuses = {
+        max = {
+            { effect = 'resistfrost', mag = 20 },                       -- always on
+            { effect = 'fortifyattack', mag = 12,
+              condition = { kind = 'health', op = '<', value = 0.5, fraction = true } },
+            { effect = 'chameleon', mag = 20,
+              condition = { { kind = 'time', value = 'night' }, { kind = 'location', value = 'exterior' } } },
+        },
+    },
+}
+```
+
+A `condition` is one descriptor, an array (all must hold = AND), `{ any = {...} }`
+(OR), or `{ all = {...} }` (AND).
+
+Thresholds (`op` is `<  <=  >  >=  ==  ~=`): `health` / `magicka` / `fatigue`
+(`value`, `fraction=true` for 0-1 of max), `attribute` (`id`), `skill` (`id`),
+`level`. State (equality; `value` may be a list = any-of): `time` (`day`/`night`),
+`sun` (`up`/`down`), `location` (`interior`/`exterior`), `weather`, `race`,
+`class`, `combat`.
+
+OpenMW notes:
+
+- Skill/attribute `id`s are lowercased before lookup, so the MWSE spellings work
+  too (`"longBlade"` -> `longblade`, `"strength"` -> `strength`).
+- Supported directly on OpenMW (0.51+): health/magicka/fatigue, attribute, skill,
+  level, location, race, class, time, sun (time/sun read the in-world `GameHour`).
+- `combat`, `weather`, and any custom `flag` are **fed in by another script**,
+  since OpenMW's Lua exposes neither current weather nor an actor's combat state.
+  Push state with the `SetBonus_setFlag` global event and the matching condition
+  reads it:
+
+  ```lua
+  local core = require('openmw.core')
+  -- wherever you detect combat (combat music, hit sounds, a combat overhaul, ...):
+  core.sendGlobalEvent('SetBonus_setFlag', { actor = someActor, id = 'combat', value = true })
+  -- feed current weather as a name:
+  core.sendGlobalEvent('SetBonus_setFlag', { actor = someActor, id = 'weather', value = 'rain' })
+  -- any custom flag, read by { kind = 'flag', id = 'myflag' }:
+  core.sendGlobalEvent('SetBonus_setFlag', { actor = someActor, id = 'myflag', value = true })
+  ```
+
+  Then `{ kind = 'combat', value = true }`, `{ kind = 'weather', value = 'rain' }`,
+  and `{ kind = 'flag', id = 'myflag' }` all evaluate against the pushed state.
+  Setting a flag re-evaluates that actor immediately.
+- Conditions are re-checked about once a second (a throttled global `onUpdate`)
+  plus immediately on tier change, and each is evaluated safely (a bad condition
+  reads as false, never an error).
+
 ## Magnitude scaling (automatic)
 
 Your sets obey the player's two magnitude sliders just like the base sets:

@@ -1,5 +1,5 @@
--- Set Bonus -- player script: registers the settings page + notification toggle,
--- and shows a message when the player's set bonus tier changes.
+-- Set Bonus -- player script: registers the settings page + toggles, and shows a
+-- message when the player's set bonus tier changes.
 local storage = require('openmw.storage')
 local ui      = require('openmw.ui')
 local I       = require('openmw.interfaces')
