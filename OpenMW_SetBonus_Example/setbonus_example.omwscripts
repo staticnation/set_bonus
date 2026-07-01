@@ -1,0 +1,4 @@
+# Example companion add-on for the Set Bonus OpenMW framework.
+# It registers one demo set through the I.SetBonus interface.
+# Requires the Set Bonus mod (setbonus.omwscripts) to be enabled.
+GLOBAL: scripts/SetBonusExample/register.lua

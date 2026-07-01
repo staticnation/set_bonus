@@ -1,0 +1,3089 @@
+
+Record: SPEL "tr_ad_aldrane's ward" Flags:0x0000 ()
+  NAME: ID:TR_AD_aldrane's ward
+  FNAM: Name:Aldrane's Ward
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:15  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Burden)  Range:(Touch)  Area:0  Duration:15  Mag_Min:30  Mag_Max:50
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:0  Duration:15  Mag_Min:30  Mag_Max:50
+
+Record: SPEL "tr_fm_ab_dozhir" Flags:0x0000 ()
+  NAME: ID:TR_FM_Ab_Dozhir
+  FNAM: Name:Weakness to Cold Iron
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Weakness_to_Normal_Weapons)  Range:(Self)  Area:0  Duration:0  Mag_Min:500  Mag_Max:500
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_fm_ab_grurn" Flags:0x0000 ()
+  NAME: ID:TR_FM_Ab_Grurn
+  FNAM: Name:Grurn's Restoration
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Spell_Absorption)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Maximum_Magicka)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Restore_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Attribute/Luck)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Attribute/Agility)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Attribute/Strength)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_fm_ab_weaknessfire25" Flags:0x0000 ()
+  NAME: ID:TR_FM_Ab_WeaknessFire25
+  FNAM: Name:Weakness to Fire
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_fm_sp_crackle" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_Crackle
+  FNAM: Name:Crackle
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:10  Duration:5  Mag_Min:10  Mag_Max:50
+
+Record: SPEL "tr_fm_sp_fireshield" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_FireShield
+  FNAM: Name:Fire Shield Companion
+  SPDT: Type:(Spell)  Spell_Cost:405  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Touch)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_fm_sp_grurnbuff" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_GrurnBuff
+  FNAM: Name:Grurn's Sanctuary
+  SPDT: Type:(Spell)  Spell_Cost:88  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Touch)  Area:0  Duration:5  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Touch)  Area:0  Duration:5  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Touch)  Area:0  Duration:5  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Touch)  Area:0  Duration:10  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_fm_sp_heal" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_Heal
+  FNAM: Name:Staying Alive
+  SPDT: Type:(Spell)  Spell_Cost:4  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:15  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Cure_Poison)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_fm_sp_holyfire" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_HolyFire
+  FNAM: Name:Meridia's Burning Gaze
+  SPDT: Type:(Spell)  Spell_Cost:39  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:10  Duration:10  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Turn_Undead)  Range:(Target)  Area:10  Duration:10  Mag_Min:60  Mag_Max:90
+
+Record: SPEL "tr_fm_sp_lightningcrown" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_LightningCrown
+  FNAM: Name:Lightning Crown
+  SPDT: Type:(Spell)  Spell_Cost:49  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:20  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_fm_sp_lightningcrown2" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_LightningCrown2
+  FNAM: Name:Lightning Crown
+  SPDT: Type:(Spell)  Spell_Cost:14  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:10  Duration:0  Mag_Min:5  Mag_Max:40
+
+Record: SPEL "tr_fm_sp_lightningcrown3" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_LightningCrown3
+  FNAM: Name:Lightning Crown
+  SPDT: Type:(Spell)  Spell_Cost:225  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Lightning_Shield)  Range:(Touch)  Area:0  Duration:30  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_fm_sp_luckleach" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_LuckLeach
+  FNAM: Name:Grurn's Lucky Break
+  SPDT: Type:(Spell)  Spell_Cost:66  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:10  Duration:30  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Target)  Area:10  Duration:0  Mag_Min:5  Mag_Max:15
+
+Record: SPEL "tr_fm_sp_summonhorde" Flags:0x0000 ()
+  NAME: ID:TR_FM_Sp_SummonHorde
+  FNAM: Name:Summon Skeletal Horde
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_follow_lv_fake" Flags:0x0000 ()
+  NAME: ID:TR_Follow_LV_Fake
+  FNAM: Name:TR_Follow_LV_Fake
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_follow_lv_real" Flags:0x0000 ()
+  NAME: ID:TR_Follow_LV_Real
+  FNAM: Name:TR_Follow_LV_Real
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_follow_ww_fake" Flags:0x0000 ()
+  NAME: ID:TR_Follow_WW_Fake
+  FNAM: Name:TR_Follow_WW_Fake
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Walking)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_follow_ww_real" Flags:0x0000 ()
+  NAME: ID:TR_Follow_WW_Real
+  FNAM: Name:TR_Follow_WW_Real
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Walking)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_q66_ght_summon" Flags:0x0000 ()
+  NAME: ID:TR_M1_Q66_GHT_Summon
+  FNAM: Name:Summon Dremora Curse
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Dremora)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_mg_lichgreater_ab" Flags:0x0000 ()
+  NAME: ID:TR_MG_LichGreater_Ab
+  FNAM: Name:Lichy Buff Suite
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:110  Mag_Max:110
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:0  Mag_Min:200  Mag_Max:200
+ *ENAM: Spell_Effect:(Fortify_Magicka)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_medensreech" Flags:0x0000 ()
+  NAME: ID:TR_MedensReech
+  FNAM: Name:Meden's Reach
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:50
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:1  Duration:20  Mag_Min:1  Mag_Max:10
+ *ENAM: Spell_Effect:(Sound)  Range:(Touch)  Area:1  Duration:20  Mag_Min:5  Mag_Max:20
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:1  Duration:20  Mag_Min:10  Mag_Max:50
+
+Record: SPEL "tr_medensspeed" Flags:0x0000 ()
+  NAME: ID:TR_MedensSpeed
+  FNAM: Name:Meden's Speed
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Feather)  Range:(Self)  Area:0  Duration:100  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:100  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:100  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Light)  Range:(Self)  Area:0  Duration:100  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_q_curse" Flags:0x0000 ()
+  NAME: ID:TR_Q_Curse
+  FNAM: Name:DEATH CURSE
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_rothroryn_monastery_almspell" Flags:0x0000 ()
+  NAME: ID:TR_RothRoryn_Monastery_AlmSpell
+  FNAM: Name:The Mother's Forgiveness
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Feather)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:25
+ *ENAM: Spell_Effect:(Resist_Common_Disease)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:30
+
+Record: SPEL "tr_weebem_naez_spell" Flags:0x0000 ()
+  NAME: ID:TR_Weebem_Naez_Spell
+  FNAM: Name:Weebem-Naez' Spell
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:200  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Boots)  Range:(Self)  Area:0  Duration:200  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:200  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Shield)  Range:(Self)  Area:0  Duration:200  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Longsword)  Range:(Self)  Area:0  Duration:200  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Helm)  Range:(Self)  Area:0  Duration:200  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_blindcurse" Flags:0x0000 ()
+  NAME: ID:TR_blindcurse
+  FNAM: Name:Blindness
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Self)  Area:0  Duration:0  Mag_Min:90  Mag_Max:90
+
+Record: SPEL "tr_m0_q_ic_fortifyattributes" Flags:0x0000 ()
+  NAME: ID:TR_m0_q_IC_FortifyAttributes
+  FNAM: Name:Reinforce Body and Mind
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:60  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Self)  Area:0  Duration:60  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_backstab" Flags:0x0000 ()
+  NAME: ID:TR_m1_Backstab
+  FNAM: Name:Backstab
+  SPDT: Type:(Spell)  Spell_Cost:70  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:15  Duration:40  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:15  Duration:20  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:5  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:15  Duration:1  Mag_Min:30  Mag_Max:40
+
+Record: SPEL "tr_m1_delvamdest" Flags:0x0000 ()
+  NAME: ID:TR_m1_DelvamDest
+  FNAM: Name:Deadlands' Seven Winds
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:7  Duration:0  Mag_Min:7  Mag_Max:17
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:7  Duration:0  Mag_Min:7  Mag_Max:17
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:7  Duration:0  Mag_Min:7  Mag_Max:17
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:7  Duration:0  Mag_Min:7  Mag_Max:17
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:7  Duration:0  Mag_Min:7  Mag_Max:17
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Target)  Area:7  Duration:0  Mag_Min:77  Mag_Max:77
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Target)  Area:7  Duration:0  Mag_Min:77  Mag_Max:77
+
+Record: SPEL "tr_m1_dral_attack" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_Attack
+  FNAM: Name:Prismatic Blast
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_dral_attacktouch" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_AttackTouch
+  FNAM: Name:Prismatic Blast
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:5  Mag_Min:4  Mag_Max:7
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_dral_aura" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_Aura
+  FNAM: Name:Dral's Presence
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_dral_bound" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_Bound
+  FNAM: Name:Dral's Arsenal
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Helm)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Spell_Absorption)  Range:(Self)  Area:0  Duration:120  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:120  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:120  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m1_dral_chameleon" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_Chameleon
+  FNAM: Name:Dral's Second Thoughts
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:120  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m1_dral_shield" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_Shield
+  FNAM: Name:Prismatic Bulwark
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Frost_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Lightning_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_dral_specialmix" Flags:0x0000 ()
+  NAME: ID:TR_m1_Dral_SpecialMix
+  FNAM: Name:Dral's Magnum Opus
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Skill/Long_Blade)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Skill/Heavy_Armor)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_draythen_damage" Flags:0x0000 ()
+  NAME: ID:TR_m1_Draythen_damage
+  FNAM: Name:Draythen's Final Word
+  SPDT: Type:(Spell)  Spell_Cost:99  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:15  Mag_Min:6  Mag_Max:6
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:15  Mag_Min:6  Mag_Max:6
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:15  Mag_Min:6  Mag_Max:6
+
+Record: SPEL "tr_m1_eldale_attack" Flags:0x0000 ()
+  NAME: ID:TR_m1_Eldale_Attack
+  FNAM: Name:Prismatic Spray
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+
+Record: SPEL "tr_m1_eldale_attacktouch" Flags:0x0000 ()
+  NAME: ID:TR_m1_Eldale_AttackTouch
+  FNAM: Name:Prismatic Spray
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:5  Mag_Min:3  Mag_Max:5
+
+Record: SPEL "tr_m1_eldale_shield" Flags:0x0000 ()
+  NAME: ID:TR_m1_Eldale_Shield
+  FNAM: Name:Prismatic Shield
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Frost_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Lightning_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:30  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m1_enaeroth_bolt" Flags:0x0000 ()
+  NAME: ID:TR_m1_Enaeroth_Bolt
+  FNAM: Name:Enaeroth's Spite
+  SPDT: Type:(Spell)  Spell_Cost:70  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:6  Mag_Min:15  Mag_Max:25
+
+Record: SPEL "tr_m1_fwmg_tathdest" Flags:0x0000 ()
+  NAME: ID:TR_m1_FWMG_TathDest
+  FNAM: Name:Tatho's Endless Blizzard
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Frost)  Range:(Target)  Area:10  Duration:20  Mag_Min:75  Mag_Max:100
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:10  Duration:20  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Drain_Skill/Acrobatics)  Range:(Target)  Area:10  Duration:20  Mag_Min:20  Mag_Max:40
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:10  Duration:20  Mag_Min:20  Mag_Max:40
+
+Record: SPEL "tr_m1_fwmg_tathshld" Flags:0x0000 ()
+  NAME: ID:TR_m1_FWMG_TathShld
+  FNAM: Name:Xivilai Tatho's Cuirass
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:60  Mag_Max:60
+ *ENAM: Spell_Effect:(Restore_Attribute/Speed)  Range:(Self)  Area:0  Duration:1  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m1_faruna_shield" Flags:0x0000 ()
+  NAME: ID:TR_m1_Faruna_Shield
+  FNAM: Name:Ward of Protection
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:30  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m1_faruna_specialmix_sp" Flags:0x0000 ()
+  NAME: ID:TR_m1_Faruna_SpecialMix_sp
+  FNAM: Name:Faruna's Special Mix
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Skill/Blunt_Weapon)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Skill/Unarmored)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:90  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_frostshock" Flags:0x0000 ()
+  NAME: ID:TR_m1_Frostshock
+  FNAM: Name:Frostshock
+  SPDT: Type:(Spell)  Spell_Cost:70  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:15  Duration:1  Mag_Min:65  Mag_Max:75
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:15  Duration:1  Mag_Min:65  Mag_Max:75
+
+Record: SPEL "tr_m1_ginyan_debuff" Flags:0x0000 ()
+  NAME: ID:TR_m1_Ginyan_Debuff
+  FNAM: Name:Ginyan's Lingering Lethargy
+  SPDT: Type:(Spell)  Spell_Cost:110  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:10  Duration:5  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:10  Duration:15  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:10  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Weakness_to_Magicka)  Range:(Target)  Area:10  Duration:15  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_il_thenimdrain" Flags:0x0000 ()
+  NAME: ID:TR_m1_IL_Thenimdrain
+  FNAM: Name:Thenim's Blademaw
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Skill/Long_Blade)  Range:(Target)  Area:10  Duration:5  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:10  Duration:3  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_liretha_damage" Flags:0x0000 ()
+  NAME: ID:TR_m1_Liretha_Damage
+  FNAM: Name:Flame Siphon
+  SPDT: Type:(Spell)  Spell_Cost:37  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:0  Duration:0  Mag_Min:15  Mag_Max:55
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:25  Mag_Max:60
+
+Record: SPEL "tr_m1_mithras_bound" Flags:0x0000 ()
+  NAME: ID:TR_m1_Mithras_Bound
+  FNAM: Name:Mithras' Armory
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Battle_Axe)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Helm)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Boots)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Silence)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:120  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m1_ptfly" Flags:0x0000 ()
+  NAME: ID:TR_m1_PtFly
+  FNAM: Name:Locust's Wing
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Touch)  Area:0  Duration:60  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_q50_g03_angondef" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q50_G03_AngonDef
+  FNAM: Name:Angon's Defender
+  SPDT: Type:(Spell)  Spell_Cost:36  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Boots)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Helm)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Shield)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Mace)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_q50_g03_angonfire" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q50_G03_AngonFire
+  FNAM: Name:Angon's Ball of Fire
+  SPDT: Type:(Spell)  Spell_Cost:37  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:20  Duration:1  Mag_Min:75  Mag_Max:100
+
+Record: SPEL "tr_m1_q50_g03_angonweak" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q50_G03_AngonWeak
+  FNAM: Name:Angon's Ball of Frost
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:20  Duration:10  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_q50_g03_rewspel" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q50_G03_RewSpel
+  FNAM: Name:Velrines' Eye Maze
+  SPDT: Type:(Spell)  Spell_Cost:33  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:100  Duration:10  Mag_Min:40  Mag_Max:50
+
+Record: SPEL "tr_m1_q50_g03_rewspela" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q50_G03_RewSpelA
+  FNAM: Name:Velrines' Long Jump
+  SPDT: Type:(Spell)  Spell_Cost:23  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Jump)  Range:(Self)  Area:0  Duration:10  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Slowfall)  Range:(Self)  Area:0  Duration:10  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m1_q50_g05paral_curse" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q50_G05Paral_Curse
+  FNAM: Name:Paralysis Curse
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_q_curse_end" Flags:0x0000 ()
+  NAME: ID:TR_m1_Q_Curse_End
+  FNAM: Name:Death Curse
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_rathra_attack" Flags:0x0000 ()
+  NAME: ID:TR_m1_Rathra_Attack
+  FNAM: Name:Rathra's Malice
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:1  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:5  Mag_Min:1  Mag_Max:5
+
+Record: SPEL "tr_m1_rathra_attacktouch" Flags:0x0000 ()
+  NAME: ID:TR_m1_Rathra_AttackTouch
+  FNAM: Name:Rathra's Malice
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:5
+
+Record: SPEL "tr_m1_rathra_fatigue" Flags:0x0000 ()
+  NAME: ID:TR_m1_Rathra_Fatigue
+  FNAM: Name:Touch of Fatigue
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Touch)  Area:0  Duration:5  Mag_Min:15  Mag_Max:20
+ *ENAM: Spell_Effect:(Burden)  Range:(Touch)  Area:0  Duration:5  Mag_Min:50  Mag_Max:100
+
+Record: SPEL "tr_m1_selurasummon" Flags:0x0000 ()
+  NAME: ID:TR_m1_SeluraSummon
+  FNAM: Name:Selura's Helper
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Summon_Storm_Atronach)  Range:(Self)  Area:0  Duration:120  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Resist_Shock)  Range:(Self)  Area:0  Duration:120  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m1_shalathbuff" Flags:0x0000 ()
+  NAME: ID:TR_m1_ShalathBuff
+  FNAM: Name:Sarrunabi's Caldera
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:60  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:60  Mag_Min:30  Mag_Max:40
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:60  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Frost_Shield)  Range:(Self)  Area:0  Duration:60  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m1_shalathdestr1" Flags:0x0000 ()
+  NAME: ID:TR_m1_ShalathDestr1
+  FNAM: Name:Pyroclastic Flow
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:20  Duration:30  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:20  Duration:30  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:20  Duration:30  Mag_Min:20  Mag_Max:40
+ *ENAM: Spell_Effect:(Sound)  Range:(Target)  Area:20  Duration:30  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Weakness_to_Common_Disease)  Range:(Target)  Area:20  Duration:30  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:20  Duration:30  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m1_shalathdestr2" Flags:0x0000 ()
+  NAME: ID:TR_m1_ShalathDestr2
+  FNAM: Name:Sarrunabi Fumes
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Poison)  Range:(Target)  Area:5  Duration:1  Mag_Min:10  Mag_Max:30
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:5  Duration:1  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:5  Duration:1  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m1_summoneffect" Flags:0x0000 ()
+  NAME: ID:TR_m1_SummonEffect
+  FNAM: Name:Pretty Sparkles
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Self)  Area:0  Duration:5  Mag_Min:0  Mag_Max:0
+
+Record: SPEL "tr_m1_tedryn_debuff" Flags:0x0000 ()
+  NAME: ID:TR_m1_Tedryn_debuff
+  FNAM: Name:Tedryn's Curse
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Attribute/Strength)  Range:(Target)  Area:15  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:15  Duration:15  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:15  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:15  Duration:15  Mag_Min:15  Mag_Max:45
+ *ENAM: Spell_Effect:(Drain_Attribute/Willpower)  Range:(Target)  Area:15  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Drain_Attribute/Agility)  Range:(Target)  Area:15  Duration:15  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m1_telwarlock" Flags:0x0000 ()
+  NAME: ID:TR_m1_TelWarlock
+  FNAM: Name:Warlock's Regeneration
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Absorb_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:20  Mag_Max:30
+
+Record: SPEL "tr_m1_telvanni_levitate" Flags:0x0000 ()
+  NAME: ID:TR_m1_Telvanni_Levitate
+  FNAM: Name:Telvanni Levitate
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m1_voun_ench_buff" Flags:0x0000 ()
+  NAME: ID:TR_m1_Voun_Ench_Buff
+  FNAM: Name:Blessing of the Fountain
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Enchant)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m1_cr_i2_drekbuff" Flags:0x0000 ()
+  NAME: ID:TR_m1_cr_i2_DrekBuff
+  FNAM: Name:Demigod Mantle
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:40  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Lightning_Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:1  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_cr_i2_drekdest" Flags:0x0000 ()
+  NAME: ID:TR_m1_cr_i2_DrekDest
+  FNAM: Name:Drekhva's Storm
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:5  Duration:10  Mag_Min:25  Mag_Max:100
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:5  Duration:10  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Target)  Area:5  Duration:10  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_cr_i2_dreksumm" Flags:0x0000 ()
+  NAME: ID:TR_m1_cr_i2_DrekSumm
+  FNAM: Name:Lordly Entourage
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Dremora)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Dremora)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_good_feather" Flags:0x0000 ()
+  NAME: ID:TR_m1_good_feather
+  FNAM: Name:Cliffracer Weightlessness
+  SPDT: Type:(Spell)  Spell_Cost:150  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Feather)  Range:(Self)  Area:0  Duration:120  Mag_Min:60  Mag_Max:60
+ *ENAM: Spell_Effect:(Jump)  Range:(Self)  Area:0  Duration:10  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_lud_paralyse" Flags:0x0000 ()
+  NAME: ID:TR_m1_lud_paralyse
+  FNAM: Name:Stasis
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:500  Mag_Max:500
+
+Record: SPEL "tr_m1_q_fw_mg02_levab" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_FW_MG02_LevAb
+  FNAM: Name:Experiment Gone Wrong
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_q_mg3_levab" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_MG3_LevAb
+  FNAM: Name:Experiment Gone Wrong
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_q_mg4dispel" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_MG4Dispel
+  FNAM: Name:Dispel Other
+  SPDT: Type:(Spell)  Spell_Cost:13  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Target)  Area:0  Duration:1  Mag_Min:30  Mag_Max:40
+
+Record: SPEL "tr_m1_q_rr_5_reward" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_RR_5_Reward
+  FNAM: Name:Mithras' Swift Restoral
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:4  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "tr_m1_q_ttshrine1_spell" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_TTShrine1_Spell
+  FNAM: Name:Vehk's Purging
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m1_q_ttshrine2_spell" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_TTShrine2_Spell
+  FNAM: Name:Salvation of Almsivi
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Breathing)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_q_ttshrine3_spell" Flags:0x0000 ()
+  NAME: ID:TR_m1_q_TTShrine3_Spell
+  FNAM: Name:Ayem's Foresight
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m1_sp_gindaman" Flags:0x0000 ()
+  NAME: ID:TR_m1_sp_Gindaman
+  FNAM: Name:Auridia Gematria
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Conjuration)  Range:(Self)  Area:0  Duration:60  Mag_Min:15  Mag_Max:30
+
+Record: SPEL "tr_m1_sp_i2_burden" Flags:0x0000 ()
+  NAME: ID:TR_m1_sp_i2_Burden
+  FNAM: Name:Weight of Oblivion
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:10  Duration:15  Mag_Min:200  Mag_Max:200
+
+Record: SPEL "tr_m1_sp_i2_glaivesplode" Flags:0x0000 ()
+  NAME: ID:TR_m1_sp_i2_GlaiveSplode
+  FNAM: Name:Dagon's Wrath
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:10  Duration:1  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m1_sp_i2_paralysis" Flags:0x0000 ()
+  NAME: ID:TR_m1_sp_i2_Paralysis
+  FNAM: Name:Death Grip
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:10  Duration:10  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m1_sp_i2_poison" Flags:0x0000 ()
+  NAME: ID:TR_m1_sp_i2_Poison
+  FNAM: Name:Vile Poison
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:10  Duration:5  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "tr_m1_sp_i2_shock" Flags:0x0000 ()
+  NAME: ID:TR_m1_sp_i2_Shock
+  FNAM: Name:Ball Lightning
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:10  Duration:2  Mag_Min:30  Mag_Max:50
+
+Record: SPEL "tr_m2_445_ayempower" Flags:0x0000 ()
+  NAME: ID:TR_m2_445_AyemPower
+  FNAM: Name:Mercy's Touch
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:60  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:60  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:60  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Spell_Absorption)  Range:(Self)  Area:0  Duration:60  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m2_445_fx_asv" Flags:0x0000 ()
+  NAME: ID:TR_m2_445_FX_ASV
+  FNAM: Name:Final Gift of the Tribunal
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Touch)  Area:10  Duration:0  Mag_Min:0  Mag_Max:0
+
+Record: SPEL "tr_m2_445_sehtpower" Flags:0x0000 ()
+  NAME: ID:TR_m2_445_SehtPower
+  FNAM: Name:Mystery's Traversal
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:60  Mag_Min:500  Mag_Max:500
+ *ENAM: Spell_Effect:(Invisibility)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_445_spikepoison" Flags:0x0000 ()
+  NAME: ID:TR_m2_445_SpikePoison
+  FNAM: Name:Ectoplasmic Spasm
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:7  Duration:0  Mag_Min:10  Mag_Max:15
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:7  Duration:5  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_445_vehkpower" Flags:0x0000 ()
+  NAME: ID:TR_m2_445_VehkPower
+  FNAM: Name:Mastery's Triumph
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:60  Mag_Min:70  Mag_Max:90
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:60  Mag_Min:20  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Skill/Spear)  Range:(Self)  Area:0  Duration:60  Mag_Min:30  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:60  Mag_Min:20  Mag_Max:25
+
+Record: SPEL "tr_m2_ancasarion_debuff" Flags:0x0000 ()
+  NAME: ID:TR_m2_Ancasarion_debuff
+  FNAM: Name:Despair
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:20  Duration:15  Mag_Min:5  Mag_Max:12
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:20  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Drain_Attribute/Willpower)  Range:(Target)  Area:20  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:20  Duration:15  Mag_Min:5  Mag_Max:20
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:7  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_ancasarion_debuff_2" Flags:0x0000 ()
+  NAME: ID:TR_m2_Ancasarion_debuff_2
+  FNAM: Name:Guilt
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:20  Duration:15  Mag_Min:5  Mag_Max:12
+ *ENAM: Spell_Effect:(Drain_Attribute/Strength)  Range:(Target)  Area:20  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:20  Duration:15  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:7  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Drain_Attribute/Agility)  Range:(Target)  Area:20  Duration:15  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m2_ancasarion_debuff_3" Flags:0x0000 ()
+  NAME: ID:TR_m2_Ancasarion_debuff_3
+  FNAM: Name:Envy
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:20  Duration:15  Mag_Min:5  Mag_Max:12
+ *ENAM: Spell_Effect:(Drain_Attribute/Intelligence)  Range:(Target)  Area:20  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Drain_Attribute/Personality)  Range:(Target)  Area:20  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Target)  Area:20  Duration:15  Mag_Min:1  Mag_Max:10
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:7  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_do_damageluck" Flags:0x0000 ()
+  NAME: ID:TR_m2_Do_damageluck
+  FNAM: Name:Damage luck
+  SPDT: Type:(Spell)  Spell_Cost:17  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Target)  Area:0  Duration:4  Mag_Min:7  Mag_Max:7
+
+Record: SPEL "tr_m2_do_damagestrength" Flags:0x0000 ()
+  NAME: ID:TR_m2_Do_damagestrength
+  FNAM: Name:Damage strength
+  SPDT: Type:(Spell)  Spell_Cost:17  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Target)  Area:0  Duration:4  Mag_Min:7  Mag_Max:7
+
+Record: SPEL "tr_m2_ensalda_chill" Flags:0x0000 ()
+  NAME: ID:TR_m2_Ensalda_Chill
+  FNAM: Name:Lingering Chill
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:10  Duration:15  Mag_Min:5  Mag_Max:15
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:10  Duration:15  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m2_fg_selynspell" Flags:0x0000 ()
+  NAME: ID:TR_m2_FG_Selynspell
+  FNAM: Name:Neloreth's Fumble
+  SPDT: Type:(Spell)  Spell_Cost:24  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Target)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m2_fg_paralysis" Flags:0x0000 ()
+  NAME: ID:TR_m2_FG_paralysis
+  FNAM: Name:Paralysis Curse
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_fatigueburn" Flags:0x0000 ()
+  NAME: ID:TR_m2_FatigueBurn
+  FNAM: Name:Knockout
+  SPDT: Type:(Disease)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m2_immolatingtouch" Flags:0x0000 ()
+  NAME: ID:TR_m2_Immolatingtouch
+  FNAM: Name:Immolating Touch
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:0  Mag_Min:70  Mag_Max:90
+
+Record: SPEL "tr_m2_mzankh_elec_ab" Flags:0x0000 ()
+  NAME: ID:TR_m2_Mzankh_elec_ab
+  FNAM: Name:electrical effect
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_mzankh_elec_sp" Flags:0x0000 ()
+  NAME: ID:TR_m2_Mzankh_elec_sp
+  FNAM: Name:electrical effect
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:4  Duration:6  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_va_weebemnaezsundmg" Flags:0x0000 ()
+  NAME: ID:TR_m2_Va_WeebemNaezSunDmg
+  FNAM: Name:Vampirism
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sun_Damage)  Range:(Self)  Area:0  Duration:0  Mag_Min:0  Mag_Max:0
+ *ENAM: Spell_Effect:(Vampirism)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m2_vaerin_attack" Flags:0x0000 ()
+  NAME: ID:TR_m2_Vaerin_Attack
+  FNAM: Name:Vaerin's Myopia
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:3  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Silence)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:0  Mag_Min:20  Mag_Max:80
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m2_vaerin_blind" Flags:0x0000 ()
+  NAME: ID:TR_m2_Vaerin_Blind
+  FNAM: Name:Shock and Awe
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:0  Duration:30  Mag_Min:25  Mag_Max:75
+ *ENAM: Spell_Effect:(Sound)  Range:(Target)  Area:0  Duration:30  Mag_Min:25  Mag_Max:50
+
+Record: SPEL "tr_m2_vaerin_chameleon" Flags:0x0000 ()
+  NAME: ID:TR_m2_Vaerin_Chameleon
+  FNAM: Name:Vaerin's Deception
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:120  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m2_crushing_burden_cheap" Flags:0x0000 ()
+  NAME: ID:TR_m2_crushing_burden_cheap
+  FNAM: Name:Crushing Burden of Sin
+  SPDT: Type:(Spell)  Spell_Cost:53  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:0  Duration:10  Mag_Min:60  Mag_Max:80
+
+Record: SPEL "tr_m2_kmlz_king_elec" Flags:0x0000 ()
+  NAME: ID:TR_m2_kmlz_King_Elec
+  FNAM: Name:electrical effect
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:10  Duration:6  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_q_21_flametrapex" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_21_FlameTrapEx
+  FNAM: Name:Flame Trap
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:3  Duration:2  Mag_Min:60  Mag_Max:60
+
+Record: SPEL "tr_m2_q_21_flametrapme" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_21_FlameTrapMe
+  FNAM: Name:Flame Trap
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:3  Duration:2  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m2_q_21_flametrapst" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_21_FlameTrapSt
+  FNAM: Name:Flame Trap
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:3  Duration:2  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m2_q_21_flametrapwe" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_21_FlameTrapWe
+  FNAM: Name:Flame Trap
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:3  Duration:2  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m2_q_22_effects" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_22_Effects
+  FNAM: Name:Restoration
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Remove_Curse)  Range:(Touch)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m2_q_29_2_invisible" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_29_2_invisible
+  FNAM: Name:Selari Danaran's Getaway
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:1  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m2_q_29_2_paralyze" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_29_2_paralyze
+  FNAM: Name:Danaran's Paralyzing Touch
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_q_29_4_surolchamp" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_29_4_SurolChamp
+  FNAM: Name:Surol's Daedric Get-Up
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Boots)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Helm)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_q_38_playertouch" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_38_playertouch
+  FNAM: Name:for the effect
+  SPDT: Type:(Spell)  Spell_Cost:700  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Target)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_q_5_trials_sp" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_5_Trials_sp
+  FNAM: Name:Damage Endurance
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m2_q_a8_5_firespell" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_A8_5_firespell
+  FNAM: Name:Varethi's Slowburn
+  SPDT: Type:(Spell)  Spell_Cost:35  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:200  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Touch)  Area:0  Duration:20  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m2_q_a8_5_spell" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_A8_5_spell
+  FNAM: Name:Shamirr's Suicide
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:20  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m2_q_nm_wake_suicidespell" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_Nm_Wake_suicidespell
+  FNAM: Name:Vanryth's Exit 
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Self)  Area:0  Duration:5  Mag_Min:9999  Mag_Max:9999
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Self)  Area:0  Duration:3  Mag_Min:9999  Mag_Max:9999
+
+Record: SPEL "tr_m2_q_ttshrine1_spell" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_TTShrine1_Spell
+  FNAM: Name:Ayem's Glory
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m2_q_ttshrine2_spell" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_TTShrine2_Spell
+  FNAM: Name:Virtues of Solitude
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:2880  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m2_q_ttshrine3_spell" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_TTShrine3_Spell
+  FNAM: Name:Wisdom of Hindsight
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Night_Eye)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:12  Mag_Max:12
+ *ENAM: Spell_Effect:(Fortify_Skill/Mysticism)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m2_q_vaerinpunaviteffect" Flags:0x0000 ()
+  NAME: ID:TR_m2_q_VaerinPunavitEffect
+  FNAM: Name:Punavit Haze
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Night_Eye)  Range:(Self)  Area:0  Duration:600  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m2_shambalu_trap" Flags:0x0000 ()
+  NAME: ID:TR_m2_shambalu_trap
+  FNAM: Name:Mephala's Web Snare
+  SPDT: Type:(Spell)  Spell_Cost:35  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:40  Duration:2  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:40  Duration:16  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:40  Duration:12  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:40  Duration:8  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:40  Duration:4  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m3-649_akatoshblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_AkatoshBlessing
+  FNAM: Name:Blessing of Akatosh
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_arkayblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_ArkayBlessing
+  FNAM: Name:Blessing of Arkay
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_dibellablessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_DibellaBlessing
+  FNAM: Name:Blessing of Dibella
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Personality)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_julianosblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_JulianosBlessing
+  FNAM: Name:Blessing of Julianos
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_kynarethblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_KynarethBlessing
+  FNAM: Name:Blessing of Kynareth
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_marablessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_MaraBlessing
+  FNAM: Name:Blessing of Mara
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_stendarrblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_StendarrBlessing
+  FNAM: Name:Blessing of Stendarr
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_talosblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_TalosBlessing
+  FNAM: Name:Blessing of Talos
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3-649_zenitharblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3-649_ZenitharBlessing
+  FNAM: Name:Blessing of Zenithar
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3_at_armiger_sp" Flags:0x0000 ()
+  NAME: ID:TR_m3_AT_Armiger_sp
+  FNAM: Name:Armiger's Rest
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:60  Mag_Min:15  Mag_Max:30
+
+Record: SPEL "tr_m3_at_calmwaters" Flags:0x0000 ()
+  NAME: ID:TR_m3_AT_CalmWaters
+  FNAM: Name:Calm Waters
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Walking)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fortify_Skill/Athletics)  Range:(Self)  Area:0  Duration:30  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m3_at_ratfriend_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_AT_RatFriend_Spell
+  FNAM: Name:Giacinia's Fortify Speed
+  SPDT: Type:(Spell)  Spell_Cost:200  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Target)  Area:0  Duration:600  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m3_bloodstoneblessing" Flags:0x0000 ()
+  NAME: ID:TR_m3_BloodstoneBlessing
+  FNAM: Name:Bloodstone Shrine Blessing
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Athletics)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m3_brother_aralorspell" Flags:0x0000 ()
+  NAME: ID:TR_m3_Brother_AralorSpell
+  FNAM: Name:Aralor's Rebirth
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:60  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Self)  Area:0  Duration:60  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Restore_Attribute/Personality)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Restore_Attribute/Willpower)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m3_dilavesa_explosion" Flags:0x0000 ()
+  NAME: ID:TR_m3_Dilavesa_Explosion
+  FNAM: Name:Boom.
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:15  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_hh_gm_dispel" Flags:0x0000 ()
+  NAME: ID:TR_m3_HH_GM_Dispel
+  FNAM: Name:Cowardice Revealed
+  SPDT: Type:(Spell)  Spell_Cost:197  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Target)  Area:50  Duration:1  Mag_Min:500  Mag_Max:500
+
+Record: SPEL "tr_m3_il_urenim_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_IL_Urenim_Spell
+  FNAM: Name:Weikal's Baleful Recall
+  SPDT: Type:(Spell)  Spell_Cost:120  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Target)  Area:5  Duration:300  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:5  Duration:0  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:5  Duration:0  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Target)  Area:5  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m3_kha_escape_sp" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_Escape_sp
+  FNAM: Name:Daedric Realm Curse
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Touch)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m3_kha_methatsheal" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_MethatsHeal
+  FNAM: Name:Dremora Lord Heal
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:3  Mag_Min:60  Mag_Max:90
+
+Record: SPEL "tr_m3_kha_sy_soulwound1" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_SY_SoulWound1
+  FNAM: Name:Soul Wound
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Touch)  Area:0  Duration:40  Mag_Min:1  Mag_Max:2
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Touch)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Damage_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Touch)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m3_kha_sy_soulwound2" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_SY_SoulWound2
+  FNAM: Name:Soul Wound
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Touch)  Area:0  Duration:50  Mag_Min:1  Mag_Max:2
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Touch)  Area:0  Duration:0  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Damage_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:0  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Touch)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m3_kha_sy_soulwound3" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_SY_SoulWound3
+  FNAM: Name:Soul Wound
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Touch)  Area:0  Duration:60  Mag_Min:1  Mag_Max:2
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Touch)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Touch)  Area:0  Duration:0  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m3_kha_scamp_fire" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_Scamp_Fire
+  FNAM: Name:Scamp's Fire
+  SPDT: Type:(Spell)  Spell_Cost:4  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:1  Mag_Min:2  Mag_Max:20
+
+Record: SPEL "tr_m3_kha_whisp_fountain_sp" Flags:0x0000 ()
+  NAME: ID:TR_m3_Kha_Whisp_Fountain_sp
+  FNAM: Name:Whisps' Succor
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Touch)  Area:0  Duration:10  Mag_Min:15  Mag_Max:25
+
+Record: SPEL "tr_m3_la_hengorspell" Flags:0x0000 ()
+  NAME: ID:TR_m3_LA_HengorSpell
+  FNAM: Name:Hengor's Clever Trap
+  SPDT: Type:(Spell)  Spell_Cost:102  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:5  Duration:15  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Weakness_to_Magicka)  Range:(Target)  Area:5  Duration:10  Mag_Min:33  Mag_Max:33
+
+Record: SPEL "tr_m3_oe_armisticeability" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_ArmisticeAbility
+  FNAM: Name:Lifeblood of the Armistice
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Personality)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m3_oe_armisticefiretrap" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_ArmisticeFireTrap
+  FNAM: Name:Fire Trap
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:12  Duration:10  Mag_Min:5  Mag_Max:20
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:12  Duration:10  Mag_Min:50  Mag_Max:75
+
+Record: SPEL "tr_m3_oe_armisticethiefmark" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_ArmisticeThiefMark
+  FNAM: Name:Mark of the Thief
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Burden)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m3_oe_ebontowerforgespell" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_EbonTowerForgeSpell
+  FNAM: Name:Bellowing Forge
+  SPDT: Type:(Spell)  Spell_Cost:39  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Skill/Armorer)  Range:(Touch)  Area:15  Duration:30  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:10  Duration:1  Mag_Min:0  Mag_Max:0
+
+Record: SPEL "tr_m3_oe_fakeenchant" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_FakeEnchant
+  FNAM: Name:Fake Enchant
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Feather)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_oe_fakesummon" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_FakeSummon
+  FNAM: Name:Fake Summon
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Summon_Ancestral_Ghost)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_oe_ghostglow" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_GhostGlow
+  FNAM: Name:GHOST GLOW
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Light)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3_oe_hhontratpoison" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_HhontRatPoison
+  FNAM: Name:Poisoned
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Poison)  Range:(Self)  Area:0  Duration:0  Mag_Min:7  Mag_Max:7
+
+Record: SPEL "tr_m3_oe_icarianflight" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_IcarianFlight
+  FNAM: Name:Icarian Flight
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Skill/Acrobatics)  Range:(Target)  Area:0  Duration:1  Mag_Min:175  Mag_Max:175
+
+Record: SPEL "tr_m3_oe_mg_debilitate" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_MG_Debilitate
+  FNAM: Name:Debilitating Touch
+  SPDT: Type:(Spell)  Spell_Cost:27  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:0  Duration:10  Mag_Min:10  Mag_Max:35
+ *ENAM: Spell_Effect:(Silence)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:5
+
+Record: SPEL "tr_m3_oe_songfatigue" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_SongFatigue
+  FNAM: Name:Road Most Travelled
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:2  Mag_Max:2
+
+Record: SPEL "tr_m3_oe_songhealth" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_SongHealth
+  FNAM: Name:Minstrel's Lament
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_oe_songmagicka" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_SongMagicka
+  FNAM: Name:Wings of Kynareth
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_oe_vaultshockspell" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_VaultShockSpell
+  FNAM: Name:Dwemer Apparatus Shock
+  SPDT: Type:(Spell)  Spell_Cost:72  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:13  Duration:3  Mag_Min:2  Mag_Max:3
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:11  Duration:1  Mag_Min:150  Mag_Max:175
+
+Record: SPEL "tr_m3_oe_beru_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_beru_spell
+  FNAM: Name:Beru's Escape
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Target)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_oe_haybale_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_OE_haybale_spell
+  FNAM: Name:Tarhiel's Hay Bale
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Slowfall)  Range:(Target)  Area:35  Duration:15  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m3_rd_daebarrier_par" Flags:0x0000 ()
+  NAME: ID:TR_m3_RD_DaeBarrier_par
+  FNAM: Name:Death Grip
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_reynard abilities" Flags:0x0000 ()
+  NAME: ID:TR_m3_Reynard abilities
+  FNAM: Name:Reynard's Endeavour
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Axe)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Bound_Battle_Axe)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:99  Mag_Max:99
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:1000  Mag_Max:1000
+ *ENAM: Spell_Effect:(Fortify_Skill/Unarmored)  Range:(Self)  Area:0  Duration:1  Mag_Min:1000  Mag_Max:1000
+
+Record: SPEL "tr_m3_sabine abilities" Flags:0x0000 ()
+  NAME: ID:TR_m3_Sabine abilities
+  FNAM: Name:Lichdom
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Common_Disease)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Blight_Disease)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Spell_Absorption)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m3_sabine unlife" Flags:0x0000 ()
+  NAME: ID:TR_m3_Sabine unlife
+  FNAM: Name:Unlife
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:150  Mag_Max:150
+
+Record: SPEL "tr_m3_tt_cohealgreat" Flags:0x0000 ()
+  NAME: ID:TR_m3_TT_CoHealGreat
+  FNAM: Name:Heal Companion
+  SPDT: Type:(Spell)  Spell_Cost:19  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Touch)  Area:5  Duration:5  Mag_Min:8  Mag_Max:15
+
+Record: SPEL "tr_m3_tt_dis_regen" Flags:0x0000 ()
+  NAME: ID:TR_m3_TT_Dis_regen
+  FNAM: Name:Ghost Regeneration
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:2  Mag_Max:5
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:75  Mag_Max:75
+
+Record: SPEL "tr_m3_tt_fs_backfire" Flags:0x0000 ()
+  NAME: ID:TR_m3_TT_FS_backfire
+  FNAM: Name:Face Stealer's Folly
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:5  Duration:25  Mag_Min:0  Mag_Max:0
+ *ENAM: Spell_Effect:(Burden)  Range:(Touch)  Area:5  Duration:25  Mag_Min:0  Mag_Max:0
+
+Record: SPEL "tr_m3_tt_fs_boon" Flags:0x0000 ()
+  NAME: ID:TR_m3_TT_FS_boon
+  FNAM: Name:Face Stealer's Reverse Drain
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_tt_fs_magic" Flags:0x0000 ()
+  NAME: ID:TR_m3_TT_FS_magic
+  FNAM: Name:Face Stealer's Fury
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:5  Duration:25  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:5  Duration:25  Mag_Min:25  Mag_Max:50
+
+Record: SPEL "tr_m3_tt_fs_nerf" Flags:0x0000 ()
+  NAME: ID:TR_m3_TT_FS_nerf
+  FNAM: Name:Face Stealer's Reverse Drain
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_yathosildebuff" Flags:0x0000 ()
+  NAME: ID:TR_m3_YathosilDebuff
+  FNAM: Name:Yathosil's Web
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Attribute/Agility)  Range:(Target)  Area:30  Duration:20  Mag_Min:30  Mag_Max:70
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:30  Duration:20  Mag_Min:30  Mag_Max:70
+ *ENAM: Spell_Effect:(Drain_Skill/Acrobatics)  Range:(Target)  Area:30  Duration:20  Mag_Min:30  Mag_Max:70
+ *ENAM: Spell_Effect:(Drain_Skill/Athletics)  Range:(Target)  Area:30  Duration:20  Mag_Min:30  Mag_Max:70
+ *ENAM: Spell_Effect:(Damage_Attribute/Speed)  Range:(Target)  Area:30  Duration:5  Mag_Min:2  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:30  Duration:20  Mag_Min:5  Mag_Max:11
+
+Record: SPEL "tr_m3_yathosilpoison" Flags:0x0000 ()
+  NAME: ID:TR_m3_YathosilPoison
+  FNAM: Name:Yathosil's Venom
+  SPDT: Type:(Spell)  Spell_Cost:95  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:15  Duration:10  Mag_Min:9  Mag_Max:18
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:15  Duration:4  Mag_Min:35  Mag_Max:65
+ *ENAM: Spell_Effect:(Sound)  Range:(Touch)  Area:15  Duration:4  Mag_Min:35  Mag_Max:65
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:15  Duration:2  Mag_Min:13  Mag_Max:27
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:15  Duration:2  Mag_Min:16  Mag_Max:33
+
+Record: SPEL "tr_m3_bartdrain" Flags:0x0000 ()
+  NAME: ID:TR_m3_bartdrain
+  FNAM: Name:Winds of Draining Despair
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:10  Duration:1  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:10  Duration:1  Mag_Min:3  Mag_Max:3
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:10  Duration:1  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m3_invisibility_touch" Flags:0x0000 ()
+  NAME: ID:TR_m3_invisibility_touch
+  FNAM: Name:Invisibility Touch
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Invisibility)  Range:(Touch)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_paruddma_absorb_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_paruddma_absorb_spell
+  FNAM: Name:Whispers in Darkness
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Magicka)  Range:(Touch)  Area:0  Duration:2  Mag_Min:15  Mag_Max:30
+
+Record: SPEL "tr_m3_paruddma_drown_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_paruddma_drown_spell
+  FNAM: Name:Crush Depth
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Touch)  Area:0  Duration:60  Mag_Min:3  Mag_Max:5
+
+Record: SPEL "tr_m3_paruddma_flesh_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_paruddma_flesh_spell
+  FNAM: Name:Foreign Flesh
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:0  Duration:30  Mag_Min:35  Mag_Max:50
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Touch)  Area:0  Duration:30  Mag_Min:30  Mag_Max:60
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:30  Mag_Min:5  Mag_Max:12
+
+Record: SPEL "tr_m3_q_3_burglar_sp" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_3_Burglar_sp
+  FNAM: Name:WooImInvisible
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Invisibility)  Range:(Touch)  Area:0  Duration:100  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Touch)  Area:0  Duration:30  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m3_q_at_mg01_summon" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_AT_MG01_summon
+  FNAM: Name:Summon Scamp
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Detect_Animal)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m3_q_kha_thul_power" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_Kha_Thul_power
+  FNAM: Name:Flower Power
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Light)  Range:(Self)  Area:0  Duration:0  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m3_q_oe_mg_effspell" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_OE_MG_EffSpell
+  FNAM: Name:Maniel's Summoning
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:4  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Dispel)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_q_sy_fakespell" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_SY_FakeSpell
+  FNAM: Name:Strange Pull
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Target)  Area:0  Duration:1  Mag_Min:0  Mag_Max:0
+
+Record: SPEL "tr_m3_q_sy_blessing" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_SY_blessing
+  FNAM: Name:Ancestral Blessing
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Target)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m3_q_chesteffect" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_chesteffect
+  FNAM: Name:Cursing Aura
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Light)  Range:(Touch)  Area:2  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m3_q_invisiblesadryn" Flags:0x0000 ()
+  NAME: ID:TR_m3_q_invisiblesadryn
+  FNAM: Name:Invisibility
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Invisibility)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_sephen_guardian_spell" Flags:0x0000 ()
+  NAME: ID:TR_m3_sephen_guardian_spell
+  FNAM: Name:Sephen's Watchful Wrath
+  SPDT: Type:(Spell)  Spell_Cost:27  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:45  Duration:7  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:26  Duration:7  Mag_Min:50  Mag_Max:150
+ *ENAM: Spell_Effect:(Sound)  Range:(Touch)  Area:45  Duration:7  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Weakness_to_Magicka)  Range:(Touch)  Area:45  Duration:7  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:46  Duration:3  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m3_summon zymel kaaz" Flags:0x0000 ()
+  NAME: ID:TR_m3_summon Zymel Kaaz
+  FNAM: Name:Summon Zymel Kaaz
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Detect_Key)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_trap_frostpara" Flags:0x0000 ()
+  NAME: ID:TR_m3_trap_frostpara
+  FNAM: Name:Frostgrip
+  SPDT: Type:(Spell)  Spell_Cost:3  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:1  Duration:10  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:1  Duration:4  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_unending_blind" Flags:0x0000 ()
+  NAME: ID:TR_m3_unending_blind
+  FNAM: Name:In Darkness, Courage
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:30
+
+Record: SPEL "tr_m3_unending_burden" Flags:0x0000 ()
+  NAME: ID:TR_m3_unending_burden
+  FNAM: Name:With Weight, Opportunity
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:30
+
+Record: SPEL "tr_m3_unending_drainhp" Flags:0x0000 ()
+  NAME: ID:TR_m3_unending_drainhp
+  FNAM: Name:While Bleeding, Furious
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m3_unending_poison" Flags:0x0000 ()
+  NAME: ID:TR_m3_unending_poison
+  FNAM: Name:If Tainted, Resourceful
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_unending_silence" Flags:0x0000 ()
+  NAME: ID:TR_m3_unending_silence
+  FNAM: Name:When Silent, Unstoppable
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:1  Mag_Min:15  Mag_Max:30
+
+Record: SPEL "tr_m4_ando_increaseprice" Flags:0x0000 ()
+  NAME: ID:TR_m4_Ando_IncreasePrice
+  FNAM: Name:Improve Haggling
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Skill/Mercantile)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m4_ando_mg_8a_rewardspell" Flags:0x0000 ()
+  NAME: ID:TR_m4_Ando_MG_8a_RewardSpell
+  FNAM: Name:Silmane's Binding
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:0  Duration:20  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Absorb_Attribute/Agility)  Range:(Touch)  Area:0  Duration:20  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m4_ando_mg_lightningburst" Flags:0x0000 ()
+  NAME: ID:TR_m4_Ando_MG_LightningBurst
+  FNAM: Name:Weir Gate Burst
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:10  Duration:1  Mag_Min:5  Mag_Max:25
+ *ENAM: Spell_Effect:(Drain_Magicka)  Range:(Touch)  Area:10  Duration:1  Mag_Min:1  Mag_Max:10
+
+Record: SPEL "tr_m4_ando_reduceprice" Flags:0x0000 ()
+  NAME: ID:TR_m4_Ando_ReducePrice
+  FNAM: Name:Impair Haggling
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Skill/Mercantile)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m4_ando_songblade" Flags:0x0000 ()
+  NAME: ID:TR_m4_Ando_SongBlade
+  FNAM: Name:Dance of Swords
+  SPDT: Type:(Spell)  Spell_Cost:578  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Long_Blade)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:1  Mag_Max:10
+
+Record: SPEL "tr_m4_ando_songblunt" Flags:0x0000 ()
+  NAME: ID:TR_m4_Ando_SongBlunt
+  FNAM: Name:Fall of the Hammer
+  SPDT: Type:(Spell)  Spell_Cost:578  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Blunt_Weapon)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:1  Mag_Max:10
+
+Record: SPEL "tr_m4_andoth_andasspell01" Flags:0x0000 ()
+  NAME: ID:TR_m4_Andoth_AndasSpell01
+  FNAM: Name:Wrothgarian Massage
+  SPDT: Type:(Spell)  Spell_Cost:496  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Touch)  Area:0  Duration:900  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Touch)  Area:0  Duration:900  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Touch)  Area:0  Duration:900  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Restore_Attribute/Strength)  Range:(Touch)  Area:0  Duration:1  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Touch)  Area:0  Duration:900  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m4_bal_alvayahtrap" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_AlvayahTrap
+  FNAM: Name:Alvayah's Trap
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Burden)  Range:(Self)  Area:0  Duration:30  Mag_Min:500  Mag_Max:500
+ *ENAM: Spell_Effect:(Silence)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_bal_amuletpower1" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_AmuletPower1
+  FNAM: Name:Ash Mastery
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Target)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_bal_amuletpower2" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_AmuletPower2
+  FNAM: Name:Daedric Mastery
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_bal_amuletpower3" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_AmuletPower3
+  FNAM: Name:Illusion Mastery
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Target)  Area:0  Duration:30  Mag_Min:60  Mag_Max:60
+
+Record: SPEL "tr_m4_bal_bloodlusttrap" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_BloodlustTrap
+  FNAM: Name:Bloodlust of Molag Bal
+  SPDT: Type:(Spell)  Spell_Cost:4  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:1  Duration:3  Mag_Min:3  Mag_Max:4
+
+Record: SPEL "tr_m4_bal_levitateother" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_LevitateOther
+  FNAM: Name:Levitate Other
+  SPDT: Type:(Spell)  Spell_Cost:11  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Touch)  Area:0  Duration:15  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m4_bal_vampseduction" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_VampSeduction
+  FNAM: Name:Vampire's Seduction
+  SPDT: Type:(Spell)  Spell_Cost:25  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Personality)  Range:(Touch)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Calm_Humanoid)  Range:(Touch)  Area:0  Duration:15  Mag_Min:35  Mag_Max:35
+
+Record: SPEL "tr_m4_bal_vampterror" Flags:0x0000 ()
+  NAME: ID:TR_m4_Bal_VampTerror
+  FNAM: Name:Vampire's Reign of Terror
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Demoralize_Humanoid)  Range:(Touch)  Area:0  Duration:15  Mag_Min:35  Mag_Max:35
+
+Record: SPEL "tr_m4_baurel_sanctuary" Flags:0x0000 ()
+  NAME: ID:TR_m4_Baurel_Sanctuary
+  FNAM: Name:Baurel's Sanctuary
+  SPDT: Type:(Spell)  Spell_Cost:32  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:15  Mag_Min:45  Mag_Max:45
+
+Record: SPEL "tr_m4_belbetublessing" Flags:0x0000 ()
+  NAME: ID:TR_m4_BelBetuBlessing
+  FNAM: Name:Bel-Betu's Blessing
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Enchant)  Range:(Self)  Area:0  Duration:5  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:5  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m4_belbetukillingshock" Flags:0x0000 ()
+  NAME: ID:TR_m4_BelBetuKillingShock
+  FNAM: Name:Wrath of Bel-Betu
+  SPDT: Type:(Spell)  Spell_Cost:186  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:7  Duration:5  Mag_Min:60  Mag_Max:80
+
+Record: SPEL "tr_m4_delvenubavani_d" Flags:0x0000 ()
+  NAME: ID:TR_m4_DelvenuBavani_D
+  FNAM: Name:Elemental Burst
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_emmurbalpitughost_en" Flags:0x0000 ()
+  NAME: ID:TR_m4_EmmurbalpituGhost_EN
+  FNAM: Name:Emmurbalpitu Ghost Abilities
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Light)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m4_fg_ushudimmusnake" Flags:0x0000 ()
+  NAME: ID:TR_m4_FG_UshuDimmuSnake
+  FNAM: Name:Ghost Snake
+  SPDT: Type:(Spell)  Spell_Cost:9  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:0  Duration:3  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Target)  Area:0  Duration:3  Mag_Min:1  Mag_Max:3
+ *ENAM: Spell_Effect:(Damage_Attribute/Endurance)  Range:(Target)  Area:0  Duration:3  Mag_Min:1  Mag_Max:3
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:0  Duration:3  Mag_Min:9  Mag_Max:21
+
+Record: SPEL "tr_m4_hautharmo unlife" Flags:0x0000 ()
+  NAME: ID:TR_m4_Hautharmo unlife
+  FNAM: Name:Hautharmo's Unlife
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:250  Mag_Max:250
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m4_kaariheal" Flags:0x0000 ()
+  NAME: ID:TR_m4_KaariHeal
+  FNAM: Name:Superior Heal Companion
+  SPDT: Type:(Spell)  Spell_Cost:305  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Touch)  Area:5  Duration:5  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Touch)  Area:5  Duration:20  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Touch)  Area:5  Duration:20  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Light)  Range:(Touch)  Area:5  Duration:20  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_lisklisskurabilities" Flags:0x0000 ()
+  NAME: ID:TR_m4_LisklissKurAbilities
+  FNAM: Name:Liskliss-Kur's Abilities
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Spell_Absorption)  Range:(Self)  Area:0  Duration:0  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:0  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m4_lodyna_fire" Flags:0x0000 ()
+  NAME: ID:TR_m4_Lodyna_Fire
+  FNAM: Name:Incinerate
+  SPDT: Type:(Spell)  Spell_Cost:51  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:10  Duration:10  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:10  Duration:10  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m4_naarie_absorb" Flags:0x0000 ()
+  NAME: ID:TR_m4_Naarie_absorb
+  FNAM: Name:Naarie's Inevitability
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:0  Duration:0  Mag_Min:25  Mag_Max:65
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Attribute/Endurance)  Range:(Target)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Attribute/Luck)  Range:(Target)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Attribute/Speed)  Range:(Target)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Damage_Attribute/Willpower)  Range:(Target)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m4_naarie_poison" Flags:0x0000 ()
+  NAME: ID:TR_m4_Naarie_poison
+  FNAM: Name:Naarie's Venomous Rebuke
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:4  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:4  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:0  Duration:8  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m4_naarie_summon" Flags:0x0000 ()
+  NAME: ID:TR_m4_Naarie_summon
+  FNAM: Name:Naarie's Bonewalkers
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Greater_Bonewalker)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Greater_Bonewalker)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Bonelord)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_nakedwitchparalyzation" Flags:0x0000 ()
+  NAME: ID:TR_m4_NakedWitchParalyzation
+  FNAM: Name:Witchwither
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_ostraladest" Flags:0x0000 ()
+  NAME: ID:TR_m4_OstralaDest
+  FNAM: Name:Sever the World Sinew
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:10  Duration:15  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Target)  Area:10  Duration:15  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Target)  Area:10  Duration:15  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Target)  Area:10  Duration:15  Mag_Min:20  Mag_Max:30
+
+Record: SPEL "tr_m4_rr_battlebodrumblessing" Flags:0x0000 ()
+  NAME: ID:TR_m4_RR_BattleBodrumBlessing
+  FNAM: Name:Battle of Bodrum Blessing
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Walking)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fortify_Skill/Spear)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Slowfall)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_rr_savrethiwinespell" Flags:0x0000 ()
+  NAME: ID:TR_m4_RR_SavrethiWineSpell
+  FNAM: Name:Unfermented Comberry Wine
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Touch)  Area:0  Duration:120  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Drain_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:120  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_rr_saylenusspell" Flags:0x0000 ()
+  NAME: ID:TR_m4_RR_SaylenusSpell
+  FNAM: Name:Saylenus' Advanced Shadowform
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:60  Mag_Min:50  Mag_Max:75
+
+Record: SPEL "tr_m4_rr_storigglow" Flags:0x0000 ()
+  NAME: ID:TR_m4_RR_StorigGlow
+  FNAM: Name:G-g-g-ghost!
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:0  Mag_Min:9  Mag_Max:9
+ *ENAM: Spell_Effect:(Light)  Range:(Self)  Area:0  Duration:0  Mag_Min:6  Mag_Max:6
+ *ENAM: Spell_Effect:(Water_Breathing)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Water_Walking)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_tg_andosneakspell" Flags:0x0000 ()
+  NAME: ID:TR_m4_TG_AndoSneakSpell
+  FNAM: Name:Nimble Fingers
+  SPDT: Type:(Spell)  Spell_Cost:900  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Sneak)  Range:(Touch)  Area:0  Duration:1800  Mag_Min:6  Mag_Max:12
+
+Record: SPEL "tr_m4_tj_ancg_court1_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_AncG_Court1_sp
+  FNAM: Name:Andathril's Wrath
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:0  Mag_Min:10  Mag_Max:25
+
+Record: SPEL "tr_m4_tj_ancg_court2_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_AncG_Court2_sp
+  FNAM: Name:Andathril's Weakness
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:0  Duration:0  Mag_Min:35  Mag_Max:65
+
+Record: SPEL "tr_m4_tj_ancg_court3_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_AncG_Court3_sp
+  FNAM: Name:Andathril's Rust
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Target)  Area:0  Duration:10  Mag_Min:25  Mag_Max:50
+
+Record: SPEL "tr_m4_tj_ancg_court4_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_AncG_Court4_sp
+  FNAM: Name:Andathril's Ruin
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Target)  Area:0  Duration:10  Mag_Min:25  Mag_Max:50
+
+Record: SPEL "tr_m4_tj_ancg_court5_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_AncG_Court5_sp
+  FNAM: Name:Andathril's Loss
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:5  Mag_Min:2  Mag_Max:2
+
+Record: SPEL "tr_m4_tj_ancg_court6_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_AncG_Court6_sp
+  FNAM: Name:Andathril's Limpness
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Target)  Area:0  Duration:5  Mag_Min:2  Mag_Max:2
+
+Record: SPEL "tr_m4_tj_court_drain" Flags:0x0000 ()
+  NAME: ID:TR_m4_TJ_Court_Drain
+  FNAM: Name:Andathril's Revenge
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Touch)  Area:2  Duration:10  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:2  Duration:10  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:300  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:300  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_tt_blessspeechcraft" Flags:0x0000 ()
+  NAME: ID:TR_m4_TT_BlessSpeechcraft
+  FNAM: Name:Preacher's Glibness
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Skill/Speechcraft)  Range:(Touch)  Area:0  Duration:1440  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_tt_orcvivecability" Flags:0x0000 ()
+  NAME: ID:TR_m4_TT_OrcVivecAbility
+  FNAM: Name:Champion of Vivec
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Breathing)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_tt_shrineolmsrefl_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TT_ShrineOlmsRefl_sp
+  FNAM: Name:Saint Olms' Reflection
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Reflect)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Rally_Humanoid)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_tt_shrineolmsrest_sp" Flags:0x0000 ()
+  NAME: ID:TR_m4_TT_ShrineOlmsRest_sp
+  FNAM: Name:Saint Olms' Rest
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Spell_Absorption)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_tt_stfelmsconviction" Flags:0x0000 ()
+  NAME: ID:TR_m4_TT_StFelmsConviction
+  FNAM: Name:St. Felms' Conviction
+  SPDT: Type:(Spell)  Spell_Cost:7400  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Attribute/Personality)  Range:(Touch)  Area:0  Duration:800  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Drain_Skill/Speechcraft)  Range:(Touch)  Area:0  Duration:800  Mag_Min:60  Mag_Max:60
+ *ENAM: Spell_Effect:(Fortify_Skill/Unarmored)  Range:(Touch)  Area:0  Duration:800  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Skill/Light_Armor)  Range:(Touch)  Area:0  Duration:800  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Skill/Medium_Armor)  Range:(Touch)  Area:0  Duration:800  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Skill/Heavy_Armor)  Range:(Touch)  Area:0  Duration:800  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Touch)  Area:0  Duration:800  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_tur_julan_sanctum_trap" Flags:0x0000 ()
+  NAME: ID:TR_m4_Tur_Julan_Sanctum_Trap
+  FNAM: Name:Curse of Tur Julan
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Touch)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m4_va_ashsleep_sundmg" Flags:0x0000 ()
+  NAME: ID:TR_m4_VA_AshSleep_SunDmg
+  FNAM: Name:Vampirism
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sun_Damage)  Range:(Self)  Area:0  Duration:0  Mag_Min:0  Mag_Max:0
+ *ENAM: Spell_Effect:(Vampirism)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_visthinahaste" Flags:0x0000 ()
+  NAME: ID:TR_m4_VisthinaHaste
+  FNAM: Name:Haste
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Touch)  Area:10  Duration:15  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Touch)  Area:10  Duration:15  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Touch)  Area:10  Duration:15  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Touch)  Area:10  Duration:15  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_visthinaleech" Flags:0x0000 ()
+  NAME: ID:TR_m4_VisthinaLeech
+  FNAM: Name:Life Siphon
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:10  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Absorb_Magicka)  Range:(Target)  Area:10  Duration:0  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Target)  Area:10  Duration:0  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m4_visthinasummon" Flags:0x0000 ()
+  NAME: ID:TR_m4_VisthinaSummon
+  FNAM: Name:Visthina's Summon
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:15  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Greater_Bonewalker)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Greater_Bonewalker)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Bonelord)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_willtogoon_curse" Flags:0x0000 ()
+  NAME: ID:TR_m4_WillToGoOn_Curse
+  FNAM: Name:Depression Curse
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Attribute/Willpower)  Range:(Self)  Area:0  Duration:30  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_aum_golgafrost" Flags:0x0000 ()
+  NAME: ID:TR_m4_aum_GolgaFrost
+  FNAM: Name:Golga's Early Grave
+  SPDT: Type:(Spell)  Spell_Cost:46  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:10  Duration:10  Mag_Min:2  Mag_Max:4
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:10  Duration:10  Mag_Min:2  Mag_Max:4
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:10  Duration:10  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_aum_krogdest" Flags:0x0000 ()
+  NAME: ID:TR_m4_aum_KrogDest
+  FNAM: Name:Winter Feast
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:15  Duration:3  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:15  Duration:3  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:15  Duration:3  Mag_Min:3  Mag_Max:6
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Target)  Area:15  Duration:3  Mag_Min:10  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Magicka)  Range:(Target)  Area:15  Duration:3  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "tr_m4_aum_krogskel" Flags:0x0000 ()
+  NAME: ID:TR_m4_aum_KrogSkel
+  FNAM: Name:Ald Ulman's Graves
+  SPDT: Type:(Spell)  Spell_Cost:70  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:40  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:40  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:40  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:40  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_bonewlk_uni_spell" Flags:0x0000 ()
+  NAME: ID:TR_m4_bonewlk_uni_spell
+  FNAM: Name:Hewed Marrow
+  SPDT: Type:(Spell)  Spell_Cost:18  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Touch)  Area:0  Duration:1  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_caeringil_skeletons" Flags:0x0000 ()
+  NAME: ID:TR_m4_caeringil_skeletons
+  FNAM: Name:Summon Skeletons
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_empowered_will" Flags:0x0000 ()
+  NAME: ID:TR_m4_empowered_will
+  FNAM: Name:Empowered Will
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Unarmored)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_ilvaalmu_abi" Flags:0x0000 ()
+  NAME: ID:TR_m4_ilvaalmu_abi
+  FNAM: Name:Ilvaalmu's Cursed Existence
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:15  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Self)  Area:0  Duration:1  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_ilvaalmu_icebreath" Flags:0x0000 ()
+  NAME: ID:TR_m4_ilvaalmu_icebreath
+  FNAM: Name:Ilvaalmu's Breath of Ice
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:1  Duration:58  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Touch)  Area:20  Duration:15  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_immetarca_boots_fail" Flags:0x0000 ()
+  NAME: ID:TR_m4_immetarca_boots_fail
+  FNAM: Name:Boots of Wayward Flying
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Skill/Acrobatics)  Range:(Self)  Area:0  Duration:15  Mag_Min:50  Mag_Max:70
+ *ENAM: Spell_Effect:(Burden)  Range:(Self)  Area:0  Duration:1  Mag_Min:60  Mag_Max:60
+
+Record: SPEL "tr_m4_immetarca_walks" Flags:0x0000 ()
+  NAME: ID:TR_m4_immetarca_walks
+  FNAM: Name:Immetarca Walks the Air
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m4_lightinvis" Flags:0x0000 ()
+  NAME: ID:TR_m4_lightInvis
+  FNAM: Name:Swift Invisibility
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Invisibility)  Range:(Self)  Area:0  Duration:15  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_menaan_int8_shock" Flags:0x0000 ()
+  NAME: ID:TR_m4_menaan_int8_shock
+  FNAM: Name:Shock
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:5  Duration:1  Mag_Min:0  Mag_Max:0
+
+Record: SPEL "tr_m4_pooreyesight" Flags:0x0000 ()
+  NAME: ID:TR_m4_pooreyesight
+  FNAM: Name:Poor Eyesight
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m4_q_ag_summon" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_AG_summon
+  FNAM: Name:Call of the Lost Tribe
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Detect_Animal)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_q_fakesound" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_FakeSound
+  FNAM: Name:Fake Sound
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Sound)  Range:(Self)  Area:0  Duration:2  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_q_nirnboundspell" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_NirnboundSpell
+  FNAM: Name:Sheogorath's Judgment
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Soultrap)  Range:(Touch)  Area:64  Duration:45  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Burden)  Range:(Touch)  Area:64  Duration:45  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m4_q_tmm_bolsdisease" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_TMM_Bolsdisease
+  FNAM: Name:Bols' Withering Disease
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Attribute/Strength)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m4_q_trollfregen" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_TrollFRegen
+  FNAM: Name:Regenerate
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m4_q_vf_spell" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_Vf_spell
+  FNAM: Name:Ashwalker's Perseverance
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:120  Mag_Min:6  Mag_Max:6
+
+Record: SPEL "tr_m4_q_mabrigash_ch" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_mabrigash_ch
+  FNAM: Name:Serpentine Mesmer
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Command_Humanoid)  Range:(Target)  Area:7  Duration:30  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m4_q_mm_mabrigashcurse" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_mm_MabrigashCurse
+  FNAM: Name:Mabrigash's Curse
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Attribute/Strength)  Range:(Target)  Area:0  Duration:25  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:25  Mag_Min:3  Mag_Max:3
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:0  Duration:25  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:0  Duration:3  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_q_mm_paralysis" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_mm_Paralysis
+  FNAM: Name:Mabrigash's Curse
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_q_mm_selfcurse" Flags:0x0000 ()
+  NAME: ID:TR_m4_q_mm_SelfCurse
+  FNAM: Name:Mabrigash's Curse
+  SPDT: Type:(Curse)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Drain_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:3  Mag_Max:3
+ *ENAM: Spell_Effect:(Blind)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m4_varoswrath" Flags:0x0000 ()
+  NAME: ID:TR_m4_varoswrath
+  FNAM: Name:Wrath of Varos
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Drain_Magicka)  Range:(Touch)  Area:0  Duration:60  Mag_Min:2  Mag_Max:2
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:0  Duration:60  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m4_vesidur_breath" Flags:0x0000 ()
+  NAME: ID:TR_m4_vesidur_breath
+  FNAM: Name:Baris' Waterbreathing Ability
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Water_Breathing)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m4_wickeddrainblood" Flags:0x0000 ()
+  NAME: ID:TR_m4_wickeddrainblood
+  FNAM: Name:Drain Blood
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Health)  Range:(Touch)  Area:0  Duration:10  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Drain_Magicka)  Range:(Touch)  Area:0  Duration:10  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m7_ai_savi_swim" Flags:0x0000 ()
+  NAME: ID:TR_m7_AI_Savi_Swim
+  FNAM: Name:Savi's Swift-Stroke
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Swift_Swim)  Range:(Self)  Area:0  Duration:15  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m7_aldkhanshrine_blessing" Flags:0x0000 ()
+  NAME: ID:TR_m7_AldKhanShrine_Blessing
+  FNAM: Name:Pomegranate Banquet
+  SPDT: Type:(Spell)  Spell_Cost:1440  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Spear)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fortify_Attribute/Personality)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_alvon_lightingshieldconst" Flags:0x0000 ()
+  NAME: ID:TR_m7_Alvon_LightingShieldConst
+  FNAM: Name:Alvon's Lightning Barrier
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Lightning_Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m7_alvonsbarrier" Flags:0x0000 ()
+  NAME: ID:TR_m7_AlvonsBarrier
+  FNAM: Name:Alvon's Barrier
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:80  Mag_Max:80
+
+Record: SPEL "tr_m7_alvonsnova" Flags:0x0000 ()
+  NAME: ID:TR_m7_AlvonsNova
+  FNAM: Name:Alvon's Shock Nova
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:50  Duration:2  Mag_Min:50  Mag_Max:100
+
+Record: SPEL "tr_m7_alvonsrangedshock" Flags:0x0000 ()
+  NAME: ID:TR_m7_AlvonsRangedShock
+  FNAM: Name:Alvon's Shockball
+  SPDT: Type:(Spell)  Spell_Cost:35  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:25  Duration:2  Mag_Min:20  Mag_Max:65
+
+Record: SPEL "tr_m7_alvonssweakness" Flags:0x0000 ()
+  NAME: ID:TR_m7_AlvonsSWeakness
+  FNAM: Name:Alvon's Shock Weakness
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Shock)  Range:(Target)  Area:50  Duration:120  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_alvonsshockbloom" Flags:0x0000 ()
+  NAME: ID:TR_m7_AlvonsShockbloom
+  FNAM: Name:Alvon's Shockbloom
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Weakness_to_Shock)  Range:(Target)  Area:25  Duration:120  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:20  Duration:40  Mag_Min:3  Mag_Max:6
+
+Record: SPEL "tr_m7_ashir_ahat_trap" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ashir_Ahat_Trap
+  FNAM: Name:Fightersap Trap
+  SPDT: Type:(Spell)  Spell_Cost:39  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Touch)  Area:1  Duration:1  Mag_Min:10  Mag_Max:15
+ *ENAM: Spell_Effect:(Damage_Attribute/Endurance)  Range:(Touch)  Area:1  Duration:1  Mag_Min:10  Mag_Max:15
+
+Record: SPEL "tr_m7_baezablind" Flags:0x0000 ()
+  NAME: ID:TR_m7_BaezaBlind
+  FNAM: Name:Light that Blinds
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:15  Duration:15  Mag_Min:80  Mag_Max:80
+ *ENAM: Spell_Effect:(Light)  Range:(Target)  Area:15  Duration:15  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_baezafear" Flags:0x0000 ()
+  NAME: ID:TR_m7_BaezaFear
+  FNAM: Name:Light that Scatters
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Demoralize_Creature)  Range:(Target)  Area:15  Duration:10  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Demoralize_Humanoid)  Range:(Target)  Area:15  Duration:10  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Turn_Undead)  Range:(Target)  Area:15  Duration:10  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Light)  Range:(Target)  Area:15  Duration:10  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_baezafire" Flags:0x0000 ()
+  NAME: ID:TR_m7_BaezaFire
+  FNAM: Name:Light that Engulfs
+  SPDT: Type:(Spell)  Spell_Cost:95  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:15  Duration:20  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:15  Duration:20  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Light)  Range:(Target)  Area:15  Duration:20  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_baezaparalyze" Flags:0x0000 ()
+  NAME: ID:TR_m7_BaezaParalyze
+  FNAM: Name:Light that Holds
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:10  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Light)  Range:(Target)  Area:10  Duration:20  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_baezapurify" Flags:0x0000 ()
+  NAME: ID:TR_m7_BaezaPurify
+  FNAM: Name:Light that Purifies
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Cure_Common_Disease)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Cure_Poison)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:5  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:5  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Light)  Range:(Self)  Area:0  Duration:5  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_cealuniafire" Flags:0x0000 ()
+  NAME: ID:TR_m7_CealuniaFire
+  FNAM: Name:Flamesear
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Magicka)  Range:(Target)  Area:15  Duration:5  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:15  Duration:5  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:15  Duration:3  Mag_Min:30  Mag_Max:55
+
+Record: SPEL "tr_m7_cealuniafrost" Flags:0x0000 ()
+  NAME: ID:TR_m7_CealuniaFrost
+  FNAM: Name:Icebite
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Frost)  Range:(Target)  Area:15  Duration:3  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:15  Duration:2  Mag_Min:40  Mag_Max:60
+
+Record: SPEL "tr_m7_cleliadamage" Flags:0x0000 ()
+  NAME: ID:TR_m7_CleliaDamage
+  FNAM: Name:Killing Blow
+  SPDT: Type:(Spell)  Spell_Cost:95  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Magicka)  Range:(Touch)  Area:0  Duration:3  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:3  Mag_Min:48  Mag_Max:73
+
+Record: SPEL "tr_m7_cleliaparalyze" Flags:0x0000 ()
+  NAME: ID:TR_m7_CleliaParalyze
+  FNAM: Name:Pin Down
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:0  Duration:15  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:0  Duration:15  Mag_Min:30  Mag_Max:70
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:15  Mag_Min:4  Mag_Max:6
+
+Record: SPEL "tr_m7_corridusleech" Flags:0x0000 ()
+  NAME: ID:TR_m7_CorridusLeech
+  FNAM: Name:Corridus' Weakening Touch
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Magicka)  Range:(Touch)  Area:0  Duration:2  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Weakness_to_Normal_Weapons)  Range:(Touch)  Area:0  Duration:10  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:0  Duration:15  Mag_Min:4  Mag_Max:24
+
+Record: SPEL "tr_m7_corridusscour" Flags:0x0000 ()
+  NAME: ID:TR_m7_CorridusScour
+  FNAM: Name:Corridus' Scouring Strike
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Target)  Area:0  Duration:0  Mag_Min:75  Mag_Max:150
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:0  Duration:3  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:80  Mag_Max:120
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:8  Mag_Max:24
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:10  Mag_Min:4  Mag_Max:10
+
+Record: SPEL "tr_m7_cruliusdamage" Flags:0x0000 ()
+  NAME: ID:TR_m7_CruliusDamage
+  FNAM: Name:Putrid Bolt
+  SPDT: Type:(Spell)  Spell_Cost:85  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:0  Mag_Min:35  Mag_Max:70
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:0  Mag_Min:35  Mag_Max:70
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:0  Duration:0  Mag_Min:35  Mag_Max:70
+
+Record: SPEL "tr_m7_cruliusdebuff" Flags:0x0000 ()
+  NAME: ID:TR_m7_CruliusDebuff
+  FNAM: Name:Necromancer's Curse
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:10  Mag_Min:2  Mag_Max:4
+ *ENAM: Spell_Effect:(Damage_Attribute/Willpower)  Range:(Target)  Area:0  Duration:10  Mag_Min:2  Mag_Max:4
+ *ENAM: Spell_Effect:(Damage_Attribute/Speed)  Range:(Target)  Area:0  Duration:10  Mag_Min:2  Mag_Max:4
+ *ENAM: Spell_Effect:(Weakness_to_Poison)  Range:(Target)  Area:0  Duration:10  Mag_Min:30  Mag_Max:50
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:10  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_cruliussummon" Flags:0x0000 ()
+  NAME: ID:TR_m7_CruliusSummon
+  FNAM: Name:Army of Bones
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Skeltal_Minion)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Bonelord)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_da_nam_curse" Flags:0x0000 ()
+  NAME: ID:TR_m7_DA_Nam_Curse
+  FNAM: Name:Namira's Curse
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Weakness_to_Poison)  Range:(Touch)  Area:0  Duration:60480  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Touch)  Area:0  Duration:60480  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Weakness_to_Common_Disease)  Range:(Touch)  Area:0  Duration:60480  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Blind)  Range:(Touch)  Area:0  Duration:60480  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m7_damagemagickatrap" Flags:0x0000 ()
+  NAME: ID:TR_m7_DamageMagickaTrap
+  FNAM: Name:Severe Damage Magicka
+  SPDT: Type:(Spell)  Spell_Cost:120  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Touch)  Area:0  Duration:2  Mag_Min:100  Mag_Max:200
+
+Record: SPEL "tr_m7_dro'jaaban_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_Dro'Jaaban_sp
+  FNAM: Name:Dro'Jaaban's Immolation
+  SPDT: Type:(Spell)  Spell_Cost:29  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:10  Duration:5  Mag_Min:10  Mag_Max:50
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Self)  Area:0  Duration:5  Mag_Min:10  Mag_Max:30
+
+Record: SPEL "tr_m7_eec_guarfever" Flags:0x0000 ()
+  NAME: ID:TR_m7_EEC_Guarfever
+  FNAM: Name:Guar Fever
+  SPDT: Type:(Disease)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_fainurin_fireball" Flags:0x0000 ()
+  NAME: ID:TR_m7_Fainurin_Fireball
+  FNAM: Name:Flare
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:35  Duration:0  Mag_Min:125  Mag_Max:300
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Target)  Area:35  Duration:10  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Target)  Area:35  Duration:10  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_fainurin_frostball" Flags:0x0000 ()
+  NAME: ID:TR_m7_Fainurin_Frostball
+  FNAM: Name:Freeze
+  SPDT: Type:(Spell)  Spell_Cost:110  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:35  Duration:0  Mag_Min:75  Mag_Max:125
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Target)  Area:35  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:35  Duration:10  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:35  Duration:10  Mag_Min:7  Mag_Max:7
+
+Record: SPEL "tr_m7_freedommovement" Flags:0x0000 ()
+  NAME: ID:TR_m7_FreedomMovement
+  FNAM: Name:Freedom of Movement
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:20  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_gahtha-lal_vanish" Flags:0x0000 ()
+  NAME: ID:TR_m7_Gahtha-Lal_vanish
+  FNAM: Name:Vanish
+  SPDT: Type:(Spell)  Spell_Cost:150  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:15  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:15  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:15  Mag_Min:200  Mag_Max:200
+
+Record: SPEL "tr_m7_gallus_blind" Flags:0x0000 ()
+  NAME: ID:TR_m7_Gallus_Blind
+  FNAM: Name:Flash
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:0  Duration:5  Mag_Min:80  Mag_Max:80
+
+Record: SPEL "tr_m7_gallus_burden" Flags:0x0000 ()
+  NAME: ID:TR_m7_Gallus_Burden
+  FNAM: Name:Hold
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:0  Duration:4  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:4  Mag_Min:4  Mag_Max:4
+
+Record: SPEL "tr_m7_hh_alvynu_4_luck" Flags:0x0000 ()
+  NAME: ID:TR_m7_HH_Alvynu_4_Luck
+  FNAM: Name:Tilted Fortune
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m7_hh_alvynu_7_explosion" Flags:0x0000 ()
+  NAME: ID:TR_m7_HH_Alvynu_7_Explosion
+  FNAM: Name:Flashgrit Explosion
+  SPDT: Type:(Spell)  Spell_Cost:26  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:10  Duration:10  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_hlevisbolt" Flags:0x0000 ()
+  NAME: ID:TR_m7_HlevisBolt
+  FNAM: Name:Entropic Bolt
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:2  Mag_Min:20  Mag_Max:45
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:2  Mag_Min:20  Mag_Max:45
+ *ENAM: Spell_Effect:(Damage_Attribute/Speed)  Range:(Target)  Area:0  Duration:2  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_hleviskill" Flags:0x0000 ()
+  NAME: ID:TR_m7_HlevisKill
+  FNAM: Name:Kill
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Health)  Range:(Target)  Area:0  Duration:1  Mag_Min:350  Mag_Max:350
+
+Record: SPEL "tr_m7_hlevisknockdown" Flags:0x0000 ()
+  NAME: ID:TR_m7_HlevisKnockdown
+  FNAM: Name:Knockdown
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Target)  Area:0  Duration:3  Mag_Min:600  Mag_Max:600
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:9  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_hlevisprotect" Flags:0x0000 ()
+  NAME: ID:TR_m7_HlevisProtect
+  FNAM: Name:Hlevis Relnim's Protection
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Boots)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Helm)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Clannfear)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Clannfear)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Clannfear)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:20  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m7_imeyracurse_1" Flags:0x0000 ()
+  NAME: ID:TR_m7_ImeyraCurse_1
+  FNAM: Name:Curse of Infirmity
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Speed)  Range:(Target)  Area:15  Duration:15  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Attribute/Strength)  Range:(Target)  Area:15  Duration:15  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Target)  Area:15  Duration:15  Mag_Min:10  Mag_Max:25
+
+Record: SPEL "tr_m7_imeyracurse_2" Flags:0x0000 ()
+  NAME: ID:TR_m7_ImeyraCurse_2
+  FNAM: Name:Curse of Ineptitude
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Intelligence)  Range:(Target)  Area:15  Duration:15  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Attribute/Agility)  Range:(Target)  Area:15  Duration:15  Mag_Min:20  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Magicka)  Range:(Target)  Area:15  Duration:15  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_imeyracurse_3" Flags:0x0000 ()
+  NAME: ID:TR_m7_ImeyraCurse_3
+  FNAM: Name:Curse of Decay
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:15  Duration:10  Mag_Min:5  Mag_Max:8
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:15  Duration:10  Mag_Min:7  Mag_Max:19
+
+Record: SPEL "tr_m7_indrasifire" Flags:0x0000 ()
+  NAME: ID:TR_m7_IndrasiFire
+  FNAM: Name:Flameblast
+  SPDT: Type:(Spell)  Spell_Cost:56  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:25  Duration:0  Mag_Min:54  Mag_Max:134
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:25  Duration:8  Mag_Min:4  Mag_Max:8
+
+Record: SPEL "tr_m7_indrasifrost" Flags:0x0000 ()
+  NAME: ID:TR_m7_IndrasiFrost
+  FNAM: Name:Freezing Gale
+  SPDT: Type:(Spell)  Spell_Cost:46  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:25  Duration:4  Mag_Min:18  Mag_Max:46
+
+Record: SPEL "tr_m7_indrasishock" Flags:0x0000 ()
+  NAME: ID:TR_m7_IndrasiShock
+  FNAM: Name:Conduction
+  SPDT: Type:(Spell)  Spell_Cost:48  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:10  Duration:0  Mag_Min:47  Mag_Max:102
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:20  Duration:0  Mag_Min:23  Mag_Max:48
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:30  Duration:0  Mag_Min:12  Mag_Max:25
+
+Record: SPEL "tr_m7_intercession" Flags:0x0000 ()
+  NAME: ID:TR_m7_Intercession
+  FNAM: Name:Intercession
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:10  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_jns_poisongas_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_JNS_PoisonGas_sp
+  FNAM: Name:K'Vatra's Poison Gas
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:999999  Duration:1  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_jns_thebossblind" Flags:0x0000 ()
+  NAME: ID:TR_m7_JNS_TheBossBlind
+  FNAM: Name:Confusion of Greydust
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:100  Duration:10  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Drain_Magicka)  Range:(Target)  Area:100  Duration:10  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_jns_thebossfly" Flags:0x0000 ()
+  NAME: ID:TR_m7_JNS_TheBossFly
+  FNAM: Name:Trick of Skyrender
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:100  Duration:20  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Levitate)  Range:(Target)  Area:100  Duration:20  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_jns_thebosshunger" Flags:0x0000 ()
+  NAME: ID:TR_m7_JNS_TheBossHunger
+  FNAM: Name:Retreat of Boethiah
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Summon_Hunger)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Hunger)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:10  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:10  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:15  Mag_Min:75  Mag_Max:75
+
+Record: SPEL "tr_m7_jns_thebosspoison" Flags:0x0000 ()
+  NAME: ID:TR_m7_JNS_TheBossPoison
+  FNAM: Name:Thrassian Menace
+  SPDT: Type:(Spell)  Spell_Cost:33  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Poison)  Range:(Target)  Area:10  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:20  Duration:1  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "tr_m7_jns_thebossscamp" Flags:0x0000 ()
+  NAME: ID:TR_m7_JNS_TheBossScamp
+  FNAM: Name:Scheme of Oblivion
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:10  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:15  Mag_Min:75  Mag_Max:75
+
+Record: SPEL "tr_m7_longjumpspell" Flags:0x0000 ()
+  NAME: ID:TR_m7_LongJumpSpell
+  FNAM: Name:Halomie's Masterful Leap
+  SPDT: Type:(Spell)  Spell_Cost:125  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Jump)  Range:(Self)  Area:0  Duration:20  Mag_Min:90  Mag_Max:95
+
+Record: SPEL "tr_m7_longjumptrack" Flags:0x0000 ()
+  NAME: ID:TR_m7_LongJumpTrack
+  FNAM: Name:Proculla's Get Position Spell
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Light)  Range:(Target)  Area:0  Duration:300  Mag_Min:1  Mag_Max:5
+
+Record: SPEL "tr_m7_mg_arch03_spell" Flags:0x0000 ()
+  NAME: ID:TR_m7_MG_Arch03_spell
+  FNAM: Name:Antimagic Curse
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Silence)  Range:(Target)  Area:10  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Target)  Area:10  Duration:10  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m7_mt_mephalablessing" Flags:0x0000 ()
+  NAME: ID:TR_m7_MT_MephalaBlessing
+  FNAM: Name:Anticipation of Mephala
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Skill/Sneak)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_mt_mephalablessing2" Flags:0x0000 ()
+  NAME: ID:TR_m7_MT_MephalaBlessing2
+  FNAM: Name:Black Hand of Mephala
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Skill/Sneak)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Skill/Acrobatics)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Skill/Illusion)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_mt_nightmothercurse" Flags:0x0000 ()
+  NAME: ID:TR_m7_MT_nightmothercurse
+  FNAM: Name:Curse of the Night Mother
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Target)  Area:0  Duration:5  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:0  Duration:5  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Charm)  Range:(Target)  Area:0  Duration:5  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_mt_nightmotherkiss" Flags:0x0000 ()
+  NAME: ID:TR_m7_MT_nightmotherkiss
+  FNAM: Name:Kiss of the Night Mother
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:0  Duration:1  Mag_Min:30  Mag_Max:50
+
+Record: SPEL "tr_m7_mt_nightmotherveil" Flags:0x0000 ()
+  NAME: ID:TR_m7_MT_nightmotherveil
+  FNAM: Name:Veil of the Night Mother
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:15  Mag_Min:90  Mag_Max:90
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:15  Mag_Min:90  Mag_Max:90
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:15  Mag_Min:90  Mag_Max:90
+
+Record: SPEL "tr_m7_marlenaantimage" Flags:0x0000 ()
+  NAME: ID:TR_m7_MarlenaAntiMage
+  FNAM: Name:Magicka Purge
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Magicka)  Range:(Target)  Area:0  Duration:6  Mag_Min:5  Mag_Max:20
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:6  Mag_Min:13  Mag_Max:16
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:0  Duration:6  Mag_Min:9  Mag_Max:14
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:6  Mag_Min:6  Mag_Max:9
+
+Record: SPEL "tr_m7_marlenadamage" Flags:0x0000 ()
+  NAME: ID:TR_m7_MarlenaDamage
+  FNAM: Name:Elemental Bolt
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:40  Mag_Max:54
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:38  Mag_Max:49
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:25  Mag_Max:38
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:0  Mag_Min:20  Mag_Max:34
+ *ENAM: Spell_Effect:(Absorb_Attribute/Intelligence)  Range:(Target)  Area:0  Duration:4  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m7_meer-ei_discount" Flags:0x0000 ()
+  NAME: ID:TR_m7_Meer-Ei_Discount
+  FNAM: Name:Impair Haggling
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Skill/Mercantile)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m7_mervisllarelbound" Flags:0x0000 ()
+  NAME: ID:TR_m7_MervisLlarelBound
+  FNAM: Name:Mervis Llarel's Bastion
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Boots)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Cuirass)  Range:(Self)  Area:0  Duration:60  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:40  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Bound_Shield)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:10  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "tr_m7_myron_discount" Flags:0x0000 ()
+  NAME: ID:TR_m7_Myron_Discount
+  FNAM: Name:Impair Haggling
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Skill/Mercantile)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_nroomsshrine_blessing" Flags:0x0000 ()
+  NAME: ID:TR_m7_NRoomsShrine_Blessing
+  FNAM: Name:Blessing of the Shield
+  SPDT: Type:(Spell)  Spell_Cost:1440  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Block)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fortify_Fatigue)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m7_narsis_songcanah" Flags:0x0000 ()
+  NAME: ID:TR_m7_Narsis_SongCanah
+  FNAM: Name:Oh Canah
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Feather)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_narsis_songwalk" Flags:0x0000 ()
+  NAME: ID:TR_m7_Narsis_SongWalk
+  FNAM: Name:We Still Walk Together
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m7_ns_antigonefrostfist" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_AntigoneFrostfist
+  FNAM: Name:Templar's Frostfist
+  SPDT: Type:(Spell)  Spell_Cost:66  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Frost)  Range:(Touch)  Area:0  Duration:1  Mag_Min:10  Mag_Max:60
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:24
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:3  Mag_Min:10  Mag_Max:24
+
+Record: SPEL "tr_m7_ns_antigonefrostfist_aoe" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_AntigoneFrostfist_AOE
+  FNAM: Name:Templar's Frostfist
+  SPDT: Type:(Spell)  Spell_Cost:66  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Frost)  Range:(Target)  Area:10  Duration:1  Mag_Min:10  Mag_Max:60
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:10  Duration:3  Mag_Min:10  Mag_Max:24
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:10  Duration:3  Mag_Min:10  Mag_Max:24
+
+Record: SPEL "tr_m7_ns_antigoneregen" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_AntigoneRegen
+  FNAM: Name:Talos' Blood
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m7_ns_arena_13_heal" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_Arena_13_Heal
+  FNAM: Name:Rapid Regenerate
+  SPDT: Type:(Spell)  Spell_Cost:38  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Touch)  Area:0  Duration:20  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_ns_ethalaspell" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_EthalaSpell
+  FNAM: Name:Ethala Faranis' Masterwork
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Touch)  Area:0  Duration:20  Mag_Min:25  Mag_Max:35
+
+Record: SPEL "tr_m7_ns_fg_5_skqupoison" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_FG_5_SkQuPoison
+  FNAM: Name:Poison Sting
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:0  Duration:10  Mag_Min:8  Mag_Max:14
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:5  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_ns_mg_alt_jump" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_MG_Alt_Jump
+  FNAM: Name:Tinur's Incredible Leap
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Jump)  Range:(Self)  Area:0  Duration:10  Mag_Min:1000  Mag_Max:1000
+
+Record: SPEL "tr_m7_ns_mg_arch02_spell01" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_MG_Arch02_Spell01
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:5  Duration:5  Mag_Min:50  Mag_Max:100
+
+Record: SPEL "tr_m7_ns_olms_gavel" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_Olms_Gavel
+  FNAM: Name:Olms' Gavel
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Speed)  Range:(Touch)  Area:0  Duration:20  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Absorb_Attribute/Strength)  Range:(Touch)  Area:0  Duration:20  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m7_ns_ragebuff" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_RageBuff
+  FNAM: Name:Darathes' Rage
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m7_ns_stagefright_rewardab" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_StageFright_RewardAb
+  FNAM: Name:Actor's Confidence
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m7_ns_tg_door02_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_TG_door02_sp
+  FNAM: Name:Nocturnal's Vigil
+  SPDT: Type:(Spell)  Spell_Cost:165  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:0  Duration:30  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_ns_q_dorlenesummon" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_q_DorleneSummon
+  FNAM: Name:Dorlene's Summon
+  SPDT: Type:(Spell)  Spell_Cost:119  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Dremora)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Daedroth)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Hunger)  Range:(Self)  Area:0  Duration:20  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:20  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m7_ns_q_faengornabsorb" Flags:0x0000 ()
+  NAME: ID:TR_m7_Ns_q_FaengornAbsorb
+  FNAM: Name:Necromancer's Embrace
+  SPDT: Type:(Spell)  Spell_Cost:102  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Touch)  Area:0  Duration:3  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Magicka)  Range:(Touch)  Area:0  Duration:3  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Touch)  Area:0  Duration:3  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_oth_bugtest2_spell" Flags:0x0000 ()
+  NAME: ID:TR_m7_Oth_BugTest2_spell
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:5
+
+Record: SPEL "tr_m7_oth_mg_3_callaid" Flags:0x0000 ()
+  NAME: ID:TR_m7_Oth_MG_3_CallAid
+  FNAM: Name:Kharal's Call Aid
+  SPDT: Type:(Spell)  Spell_Cost:63  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Dremora)  Range:(Self)  Area:0  Duration:45  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Dremora)  Range:(Self)  Area:0  Duration:45  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_othm_songsendel" Flags:0x0000 ()
+  NAME: ID:TR_m7_Othm_SongSendel
+  FNAM: Name:Sendel the Noble
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_othm_songworkers" Flags:0x0000 ()
+  NAME: ID:TR_m7_Othm_SongWorkers
+  FNAM: Name:Workers of the Land
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_othm_songzalabelk" Flags:0x0000 ()
+  NAME: ID:TR_m7_Othm_SongZalabelk
+  FNAM: Name:Sweet Zalabelk
+  SPDT: Type:(Spell)  Spell_Cost:450  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Touch)  Area:0  Duration:2100  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_othrano_staff_satarat_spl" Flags:0x0000 ()
+  NAME: ID:TR_m7_Othrano_Staff_Satarat_Spl
+  FNAM: Name:Satarat's Bloodstorm
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:0  Duration:5  Mag_Min:6  Mag_Max:6
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:5  Mag_Min:8  Mag_Max:8
+
+Record: SPEL "tr_m7_pedestal_muatra_bless" Flags:0x0000 ()
+  NAME: ID:TR_m7_Pedestal_Muatra_bless
+  FNAM: Name:Blessing of the Milk Taker
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Skill/Spear)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Fortify_Skill/Destruction)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_philaminusdamage" Flags:0x0000 ()
+  NAME: ID:TR_m7_PhilaminusDamage
+  FNAM: Name:Cold Snap
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Weakness_to_Frost)  Range:(Touch)  Area:0  Duration:10  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:10  Mag_Min:12  Mag_Max:28
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:0  Mag_Min:50  Mag_Max:94
+
+Record: SPEL "tr_m7_philaminusslow" Flags:0x0000 ()
+  NAME: ID:TR_m7_PhilaminusSlow
+  FNAM: Name:Hypothermia
+  SPDT: Type:(Spell)  Spell_Cost:90  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Target)  Area:0  Duration:20  Mag_Min:40  Mag_Max:80
+ *ENAM: Spell_Effect:(Drain_Skill/Athletics)  Range:(Target)  Area:0  Duration:20  Mag_Min:40  Mag_Max:80
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:0  Duration:20  Mag_Min:4  Mag_Max:13
+
+Record: SPEL "tr_m7_philosophercurse_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_PhilosopherCurse_sp
+  FNAM: Name:Curse of the Deep Sea
+  SPDT: Type:(Spell)  Spell_Cost:40  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Strength)  Range:(Target)  Area:0  Duration:30  Mag_Min:15  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Attribute/Willpower)  Range:(Target)  Area:0  Duration:30  Mag_Min:15  Mag_Max:30
+ *ENAM: Spell_Effect:(Absorb_Attribute/Agility)  Range:(Target)  Area:0  Duration:30  Mag_Min:15  Mag_Max:30
+
+Record: SPEL "tr_m7_prestidigitation" Flags:0x0000 ()
+  NAME: ID:TR_m7_Prestidigitation
+  FNAM: Name:Prestidigitation
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:15  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:15  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Skill/Sneak)  Range:(Self)  Area:0  Duration:15  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Skill/Security)  Range:(Self)  Area:0  Duration:15  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "tr_m7_qorinue-najan_buff" Flags:0x0000 ()
+  NAME: ID:TR_m7_Qorinue-Najan_Buff
+  FNAM: Name:Qorinue-Najan's Ghost Form
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_razarraspell" Flags:0x0000 ()
+  NAME: ID:TR_m7_RaZarraSpell
+  FNAM: Name:Incision
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:10  Mag_Min:1  Mag_Max:4
+
+Record: SPEL "tr_m7_renixiaatronachs" Flags:0x0000 ()
+  NAME: ID:TR_m7_RenixiaAtronachs
+  FNAM: Name:Renixia's Firebloom
+  SPDT: Type:(Spell)  Spell_Cost:55  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Flame_Atronach)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Flame_Atronach)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Flame_Atronach)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_renixiaclannfears" Flags:0x0000 ()
+  NAME: ID:TR_m7_RenixiaClannfears
+  FNAM: Name:Renixia's Hounds
+  SPDT: Type:(Spell)  Spell_Cost:95  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Summon_Clannfear)  Range:(Self)  Area:0  Duration:50  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Clannfear)  Range:(Self)  Area:0  Duration:50  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_renixiascamps" Flags:0x0000 ()
+  NAME: ID:TR_m7_RenixiaScamps
+  FNAM: Name:Renixia's Escape
+  SPDT: Type:(Spell)  Spell_Cost:54  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:15  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Summon_Scamp)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m7_renixiasummonspell" Flags:0x0000 ()
+  NAME: ID:TR_m7_RenixiaSummonSpell
+  FNAM: Name:Void Shear
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:2  Mag_Min:33  Mag_Max:56
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:30  Mag_Min:3  Mag_Max:7
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Target)  Area:0  Duration:30  Mag_Min:5  Mag_Max:10
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:0  Duration:30  Mag_Min:5  Mag_Max:11
+ *ENAM: Spell_Effect:(Absorb_Magicka)  Range:(Target)  Area:0  Duration:30  Mag_Min:3  Mag_Max:7
+
+Record: SPEL "tr_m7_rescueblessing" Flags:0x0000 ()
+  NAME: ID:TR_m7_RescueBlessing
+  FNAM: Name:Saint's Rescue Shrine Blessing
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Speechcraft)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fortify_Attribute/Personality)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m7_rirayneaturn" Flags:0x0000 ()
+  NAME: ID:TR_m7_RirayneaTurn
+  FNAM: Name:Scatter the Dead
+  SPDT: Type:(Spell)  Spell_Cost:21  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Turn_Undead)  Range:(Target)  Area:25  Duration:20  Mag_Min:70  Mag_Max:70
+
+Record: SPEL "tr_m7_secfamvaultbuff" Flags:0x0000 ()
+  NAME: ID:TR_m7_SecFamVaultBuff
+  FNAM: Name:Pervigilium
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Shock)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m7_shrine_conviction_bless" Flags:0x0000 ()
+  NAME: ID:TR_m7_Shrine_Conviction_bless
+  FNAM: Name:Blessing of Conviction
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Jump)  Range:(Target)  Area:0  Duration:300  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Skill/Acrobatics)  Range:(Target)  Area:0  Duration:300  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "tr_m7_sigisound" Flags:0x0000 ()
+  NAME: ID:TR_m7_SigiSound
+  FNAM: Name:Deafening Noise
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Sound)  Range:(Target)  Area:0  Duration:5  Mag_Min:35  Mag_Max:75
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:5  Mag_Min:25  Mag_Max:35
+
+Record: SPEL "tr_m7_sigillahshock" Flags:0x0000 ()
+  NAME: ID:TR_m7_SigillahShock
+  FNAM: Name:Sigillah's Mind Blast
+  SPDT: Type:(Spell)  Spell_Cost:70  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:15  Duration:0  Mag_Min:68  Mag_Max:124
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:15  Duration:0  Mag_Min:10  Mag_Max:27
+ *ENAM: Spell_Effect:(Absorb_Attribute/Intelligence)  Range:(Target)  Area:15  Duration:3  Mag_Min:40  Mag_Max:40
+
+Record: SPEL "tr_m7_simpleflight" Flags:0x0000 ()
+  NAME: ID:TR_m7_SimpleFlight
+  FNAM: Name:Simple Flight
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Levitate)  Range:(Self)  Area:0  Duration:20  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_springheel_acro" Flags:0x0000 ()
+  NAME: ID:TR_m7_Springheel_Acro
+  FNAM: Name:Springheel Boots
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Acrobatics)  Range:(Self)  Area:0  Duration:0  Mag_Min:1000  Mag_Max:1000
+
+Record: SPEL "tr_m7_springheel_attack" Flags:0x0000 ()
+  NAME: ID:TR_m7_Springheel_Attack
+  FNAM: Name:Springheel Boots
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m7_springheel_refresh" Flags:0x0000 ()
+  NAME: ID:TR_m7_Springheel_Refresh
+  FNAM: Name:Springheel Boots
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:2  Mag_Max:2
+
+Record: SPEL "tr_m7_tt_shrineseryndevotion" Flags:0x0000 ()
+  NAME: ID:TR_m7_TT_ShrineSerynDevotion
+  FNAM: Name:Saint Seryn's Devotion
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Cure_Poison)  Range:(Touch)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fortify_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Touch)  Area:0  Duration:2880  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_tv10_tomb_01_canespell" Flags:0x0000 ()
+  NAME: ID:TR_m7_TV10_Tomb_01_CaneSpell
+  FNAM: Name:Cane of Dervayn Athil
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Personality)  Range:(Self)  Area:0  Duration:20  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "tr_m7_tv4_mhas_heal" Flags:0x0000 ()
+  NAME: ID:TR_m7_TV4_Mhas_Heal
+  FNAM: Name:Mhas' Heal
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:10  Mag_Min:10  Mag_Max:50
+
+Record: SPEL "tr_m7_telorascurse" Flags:0x0000 ()
+  NAME: ID:TR_m7_TelorasCurse
+  FNAM: Name:Blood Curse
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Speed)  Range:(Target)  Area:0  Duration:10  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Absorb_Attribute/Strength)  Range:(Target)  Area:0  Duration:10  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:0  Duration:10  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m7_thirilbard" Flags:0x0000 ()
+  NAME: ID:TR_m7_ThirilBard
+  FNAM: Name:Trickster's Refrain
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Absorb_Attribute/Strength)  Range:(Target)  Area:0  Duration:15  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Absorb_Attribute/Intelligence)  Range:(Target)  Area:0  Duration:15  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Silence)  Range:(Target)  Area:0  Duration:15  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Absorb_Fatigue)  Range:(Target)  Area:0  Duration:15  Mag_Min:5  Mag_Max:12
+
+Record: SPEL "tr_m7_ussiranbonelordbolt" Flags:0x0000 ()
+  NAME: ID:TR_m7_UssiranBonelordBolt
+  FNAM: Name:Grave Curse of the Ussiran
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:2  Mag_Min:15  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Attribute/Speed)  Range:(Target)  Area:0  Duration:2  Mag_Min:2  Mag_Max:8
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:0  Duration:2  Mag_Min:10  Mag_Max:30
+
+Record: SPEL "tr_m7_ussiranbonelordbolt2" Flags:0x0000 ()
+  NAME: ID:TR_m7_UssiranBonelordBolt2
+  FNAM: Name:Dread Curse of the Ussiran
+  SPDT: Type:(Spell)  Spell_Cost:30  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:2  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Target)  Area:0  Duration:2  Mag_Min:2  Mag_Max:8
+
+Record: SPEL "tr_m7_ussiranbonelordshield" Flags:0x0000 ()
+  NAME: ID:TR_m7_UssiranBonelordShield
+  FNAM: Name:Blessing of the Ussiran
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m7_vandir_belchill" Flags:0x0000 ()
+  NAME: ID:TR_m7_Vandir_BelChill
+  FNAM: Name:Belchudzar's Seeping Chill
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:10  Duration:5  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Damage_Attribute/Strength)  Range:(Target)  Area:10  Duration:0  Mag_Min:2  Mag_Max:5
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:10  Duration:0  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "tr_m7_vanrythdamage" Flags:0x0000 ()
+  NAME: ID:TR_m7_VanrythDamage
+  FNAM: Name:Scorch
+  SPDT: Type:(Spell)  Spell_Cost:75  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:0  Mag_Min:45  Mag_Max:75
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Touch)  Area:0  Duration:15  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Damage_Attribute/Agility)  Range:(Touch)  Area:0  Duration:15  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:0  Duration:15  Mag_Min:5  Mag_Max:15
+
+Record: SPEL "tr_m7_varla_malator_ab" Flags:0x0000 ()
+  NAME: ID:TR_m7_Varla_MalaTor_ab
+  FNAM: Name:Varla Stone of Seared Bindings
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Security)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Fortify_Skill/Alteration)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Drain_Skill/Athletics)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m7_veldynheal" Flags:0x0000 ()
+  NAME: ID:TR_m7_VeldynHeal
+  FNAM: Name:Aid
+  SPDT: Type:(Spell)  Spell_Cost:80  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Touch)  Area:0  Duration:1  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Touch)  Area:0  Duration:30  Mag_Min:55  Mag_Max:55
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:5  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "tr_m7_vodrynpoison" Flags:0x0000 ()
+  NAME: ID:TR_m7_VodrynPoison
+  FNAM: Name:Blood Boil
+  SPDT: Type:(Spell)  Spell_Cost:59  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:0  Duration:3  Mag_Min:8  Mag_Max:16
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Target)  Area:0  Duration:3  Mag_Min:8  Mag_Max:16
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:0  Duration:3  Mag_Min:8  Mag_Max:16
+
+Record: SPEL "tr_m7_burdenofveloth_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_burdenofveloth_sp
+  FNAM: Name:Burden of Veloth
+  SPDT: Type:(Spell)  Spell_Cost:6  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Willpower)  Range:(Target)  Area:7  Duration:1  Mag_Min:10  Mag_Max:30
+
+Record: SPEL "tr_m7_devourofveloth_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_devourofveloth_sp
+  FNAM: Name:Devourment of Veloth
+  SPDT: Type:(Spell)  Spell_Cost:20  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:1  Mag_Min:30  Mag_Max:70
+
+Record: SPEL "tr_m7_prisonofveloth_sp" Flags:0x0000 ()
+  NAME: ID:TR_m7_prisonofveloth_sp
+  FNAM: Name:Imprisonment of Veloth
+  SPDT: Type:(Spell)  Spell_Cost:2  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Attribute/Willpower)  Range:(Touch)  Area:0  Duration:1  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_q_arnielopenspell" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_ArnielOpenSpell
+  FNAM: Name:Duront's Disintegrate Door
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Open)  Range:(Touch)  Area:0  Duration:1  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Touch)  Area:0  Duration:1  Mag_Min:75  Mag_Max:75
+
+Record: SPEL "tr_m7_q_hr_aldiuval_sujamma" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_HR_AldIuval_Sujamma
+  FNAM: Name:Sujamma
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Touch)  Area:0  Duration:60  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Drain_Attribute/Intelligence)  Range:(Touch)  Area:0  Duration:60  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "tr_m7_q_ns_ic1_blessingzen" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_Ns_IC1_BlessingZen
+  FNAM: Name:Providence of Zenithar
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Touch)  Area:0  Duration:120  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_q_ns_ic3_badluck" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_Ns_IC3_BadLuck
+  FNAM: Name:Qawi's Bad Luck
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Attribute/Luck)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "tr_m7_q_ns_ic8_finalesfx" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_Ns_IC8_FinaleSFX
+  FNAM: Name:Finale
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Touch)  Area:1  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_m7_q_palebitereffect" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_PaleBiterEffect
+  FNAM: Name:Pale Biter's Raiment
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Frost_Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m7_q_palebite" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_Palebite
+  FNAM: Name:Pale Bite
+  SPDT: Type:(Spell)  Spell_Cost:9  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:0  Duration:1  Mag_Min:10  Mag_Max:24
+
+Record: SPEL "tr_m7_q_renixiasummoneffect" Flags:0x0000 ()
+  NAME: ID:TR_m7_q_RenixiaSummonEffect
+  FNAM: Name:Summon Effect
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Bound_Gloves)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_orlukh_power" Flags:0x0000 ()
+  NAME: ID:TR_orlukh_power
+  FNAM: Name:Skin of Iron
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:20  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:20  Mag_Min:60  Mag_Max:60
+ *ENAM: Spell_Effect:(Drain_Skill/Acrobatics)  Range:(Self)  Area:0  Duration:20  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Drain_Skill/Athletics)  Range:(Self)  Area:0  Duration:20  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "tr_q_mightofvaros" Flags:0x0000 ()
+  NAME: ID:TR_q_mightofvaros
+  FNAM: Name:Might of Varos
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Fatigue)  Range:(Self)  Area:0  Duration:60  Mag_Min:100  Mag_Max:200
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:60  Mag_Min:10  Mag_Max:50
+
+Record: SPEL "tr_m3_akuband_bolt" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_bolt
+  FNAM: Name:Sparking Bolt
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:4  Mag_Max:18
+
+Record: SPEL "tr_m3_akuband_bolt_1" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_bolt_1
+  FNAM: Name:Electrocute
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:8
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_akuband_bolt_2" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_bolt_2
+  FNAM: Name:Electrocute
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:8
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_akuband_bolt_3" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_bolt_3
+  FNAM: Name:Electrocute
+  SPDT: Type:(Spell)  Spell_Cost:15  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:5  Mag_Min:4  Mag_Max:8
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_akuband_heal" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_heal
+  FNAM: Name:Repair
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:5  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "tr_m3_akuband_repair" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_repair
+  FNAM: Name:Caretaker's Touch
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:50  Duration:5  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Self)  Area:0  Duration:10  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "tr_m3_akuband_shield" Flags:0x0000 ()
+  NAME: ID:tr_m3_akuband_shield
+  FNAM: Name:Guardian's Barrier
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Fire_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:15  Mag_Max:15
+ *ENAM: Spell_Effect:(Frost_Shield)  Range:(Self)  Area:0  Duration:30  Mag_Min:15  Mag_Max:15
+
+Record: SPEL "tr_m7_bridgetrollregen" Flags:0x0000 ()
+  NAME: ID:tr_m7_BridgeTrollRegen
+  FNAM: Name:Bridge Troll Regen
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:30  Mag_Max:30

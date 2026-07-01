@@ -1,0 +1,3 @@
+GLOBAL: scripts/SetBonus/global.lua
+PLAYER: scripts/SetBonus/player.lua
+PLAYER, NPC, CREATURE: scripts/SetBonus/actor.lua

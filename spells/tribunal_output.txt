@@ -1,0 +1,338 @@
+
+Record: SPEL "dread curse: health" Flags:0x0000 ()
+  NAME: ID:dread curse: health
+  FNAM: Name:Dread Curse: Health
+  SPDT: Type:(Spell)  Spell_Cost:3  Flags:[0x0001 (Autocalc)]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:0  Duration:1  Mag_Min:5  Mag_Max:12
+
+Record: SPEL "almalexia's grace" Flags:0x0000 ()
+  NAME: ID:almalexia's grace
+  FNAM: Name:Almalexia's Grace
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0001 (Autocalc)]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Self)  Area:0  Duration:1  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "regenerate [ability]" Flags:0x0000 ()
+  NAME: ID:regenerate [ability]
+  FNAM: Name:Regenerate
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:5
+
+Record: SPEL "royal_blood" Flags:0x0000 ()
+  NAME: ID:Royal_Blood
+  FNAM: Name:Royal Blood
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Long_Blade)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Heavy_Armor)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Block)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "royal_resistance" Flags:0x0000 ()
+  NAME: ID:Royal_Resistance
+  FNAM: Name:Royal Resistance
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Shock)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "blood curse: fatigue" Flags:0x0000 ()
+  NAME: ID:blood curse: fatigue
+  FNAM: Name:Blood Curse: Fatigue
+  SPDT: Type:(Spell)  Spell_Cost:23  Flags:[0x0001 (Autocalc)]
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Target)  Area:0  Duration:5  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "resist paralysis_50" Flags:0x0000 ()
+  NAME: ID:resist paralysis_50
+  FNAM: Name:Resist Paralysis
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:30  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "resist fire_100" Flags:0x0000 ()
+  NAME: ID:resist fire_100
+  FNAM: Name:Resist Fire
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "her_mirror" Flags:0x0000 ()
+  NAME: ID:Her_Mirror
+  FNAM: Name:Her Mirror
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Self)  Area:0  Duration:0  Mag_Min:40  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:1  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Self)  Area:0  Duration:1  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Shock)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:45  Mag_Max:45
+ *ENAM: Spell_Effect:(Fortify_Skill/Medium_Armor)  Range:(Self)  Area:0  Duration:0  Mag_Min:45  Mag_Max:45
+
+Record: SPEL "her_hand" Flags:0x0000 ()
+  NAME: ID:Her_Hand
+  FNAM: Name:Her Hand
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:45  Mag_Max:45
+ *ENAM: Spell_Effect:(Fortify_Skill/Marksman)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:0  Mag_Min:70  Mag_Max:70
+ *ENAM: Spell_Effect:(Fortify_Skill/Long_Blade)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Block)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "her_ironskin" Flags:0x0000 ()
+  NAME: ID:her_ironskin
+  FNAM: Name:Her Ironskin
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Skill/Medium_Armor)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Fortify_Skill/Heavy_Armor)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Fortify_Skill/Light_Armor)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Fortify_Skill/Unarmored)  Range:(Self)  Area:0  Duration:0  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "her_tamed_lightning" Flags:0x0000 ()
+  NAME: ID:her_tamed_lightning
+  FNAM: Name:Her Tamed Lightning
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Lightning_Shield)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "her_reflected_glory" Flags:0x0000 ()
+  NAME: ID:Her_reflected_glory
+  FNAM: Name:Her Reflected Glory
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "trap_fire_killer" Flags:0x0000 ()
+  NAME: ID:trap_fire_killer
+  FNAM: Name:Master Fire Trap
+  SPDT: Type:(Spell)  Spell_Cost:3  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:1  Duration:10  Mag_Min:20  Mag_Max:30
+
+Record: SPEL "trap_frost_killer" Flags:0x0000 ()
+  NAME: ID:trap_frost_killer
+  FNAM: Name:Master Frost Trap
+  SPDT: Type:(Spell)  Spell_Cost:3  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:1  Duration:10  Mag_Min:20  Mag_Max:30
+
+Record: SPEL "trap_shock_killer" Flags:0x0000 ()
+  NAME: ID:trap_shock_killer
+  FNAM: Name:Master Shock Trap
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:1  Duration:10  Mag_Min:20  Mag_Max:30
+
+Record: SPEL "trap_poison_killer" Flags:0x0000 ()
+  NAME: ID:trap_poison_killer
+  FNAM: Name:Master Poison Trap
+  SPDT: Type:(Spell)  Spell_Cost:16  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:1  Duration:50  Mag_Min:5  Mag_Max:10
+
+Record: SPEL "almalexia's blessing" Flags:0x0000 ()
+  NAME: ID:almalexia's blessing
+  FNAM: Name:Almalexia's Blessing
+  SPDT: Type:(Spell)  Spell_Cost:60  Flags:[0x0001 (Autocalc)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Touch)  Area:0  Duration:240  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "resist paralysis_100" Flags:0x0000 ()
+  NAME: ID:resist paralysis_100
+  FNAM: Name:Resist Paralysis
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:30  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "resist normal weapons_50" Flags:0x0000 ()
+  NAME: ID:resist normal weapons_50
+  FNAM: Name:Resist Normal Weapons
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "prox_mine_fire" Flags:0x2000 (Blocked)
+  NAME: ID:prox_mine_fire
+  FNAM: Name:Proximity Mine Fire
+  SPDT: Type:(Spell)  Spell_Cost:33  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:10  Duration:0  Mag_Min:50  Mag_Max:200
+
+Record: SPEL "prox_mine_frost" Flags:0x2000 (Blocked)
+  NAME: ID:prox_mine_frost
+  FNAM: Name:Proximity Mine Frost
+  SPDT: Type:(Spell)  Spell_Cost:33  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:10  Duration:0  Mag_Min:50  Mag_Max:200
+
+Record: SPEL "prox_mine_shock" Flags:0x2000 (Blocked)
+  NAME: ID:prox_mine_shock
+  FNAM: Name:Proximity Mine Shock
+  SPDT: Type:(Spell)  Spell_Cost:46  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Touch)  Area:10  Duration:0  Mag_Min:50  Mag_Max:200
+
+Record: SPEL "prox_mine_poison" Flags:0x2000 (Blocked)
+  NAME: ID:prox_mine_poison
+  FNAM: Name:Proximity Mine Poison
+  SPDT: Type:(Spell)  Spell_Cost:59  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:10  Duration:0  Mag_Min:50  Mag_Max:200
+
+Record: SPEL "prox_mine_life" Flags:0x2000 (Blocked)
+  NAME: ID:prox_mine_life
+  FNAM: Name:Proximity Mine Life
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Health)  Range:(Touch)  Area:10  Duration:0  Mag_Min:50  Mag_Max:200
+
+Record: SPEL "relvel_damage" Flags:0x2000 (Blocked)
+  NAME: ID:relvel_damage
+  FNAM: Name:Gedna's Damage
+  SPDT: Type:(Spell)  Spell_Cost:10  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Poison)  Range:(Target)  Area:8  Duration:0  Mag_Min:100  Mag_Max:200
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:8  Duration:0  Mag_Min:100  Mag_Max:200
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:8  Duration:0  Mag_Min:100  Mag_Max:200
+
+Record: SPEL "relvel_shield" Flags:0x2000 (Blocked)
+  NAME: ID:relvel_shield
+  FNAM: Name:Gedna's Barrier
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:600  Mag_Max:600
+
+Record: SPEL "relvel_regenerate" Flags:0x2000 (Blocked)
+  NAME: ID:relvel_regenerate
+  FNAM: Name:Gedna's Refill
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:20
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:3
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:2
+
+Record: SPEL "proj_trap_spell" Flags:0x0000 ()
+  NAME: ID:proj_trap_spell
+  FNAM: Name:Projectile Trap Spell
+  SPDT: Type:(Spell)  Spell_Cost:5  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Touch)  Area:20  Duration:0  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:20  Duration:5  Mag_Min:10  Mag_Max:20
+
+Record: SPEL "heavy_eyes_unique" Flags:0x0000 ()
+  NAME: ID:heavy_eyes_unique
+  FNAM: Name:Harthoon's Heavy Eyes
+  SPDT: Type:(Spell)  Spell_Cost:50  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Blind)  Range:(Target)  Area:0  Duration:10  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Burden)  Range:(Target)  Area:0  Duration:10  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "fireball_bar_uni" Flags:0x0000 ()
+  NAME: ID:fireball_bar_uni
+  FNAM: Name:Barenziah's Fire
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:25  Duration:30  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "gaenor_spell" Flags:0x0000 ()
+  NAME: ID:gaenor_spell
+  FNAM: Name:Gaenor's Escape
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Dispel)  Range:(Target)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "crimson_plague" Flags:0x0000 ()
+  NAME: ID:crimson_plague
+  FNAM: Name:Crimson Plague
+  SPDT: Type:(Disease)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Drain_Skill/Acrobatics)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Drain_Skill/Athletics)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:20
+ *ENAM: Spell_Effect:(Drain_Attribute/Strength)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Drain_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "shockimperfect" Flags:0x0000 ()
+  NAME: ID:shockimperfect
+  FNAM: Name:Fabricant Shock
+  SPDT: Type:(Spell)  Spell_Cost:100  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:50  Duration:1  Mag_Min:60  Mag_Max:100
+ *ENAM: Spell_Effect:(Weakness_to_Shock)  Range:(Target)  Area:50  Duration:5  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "rotbone" Flags:0x0000 ()
+  NAME: ID:rotbone
+  FNAM: Name:Rotbone
+  SPDT: Type:(Disease)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:3  Mag_Max:3
+
+Record: SPEL "her_hand_2" Flags:0x0000 ()
+  NAME: ID:Her_Hand_2
+  FNAM: Name:Her Hand
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:45  Mag_Max:45
+ *ENAM: Spell_Effect:(Fortify_Skill/Heavy_Armor)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Self)  Area:0  Duration:0  Mag_Min:70  Mag_Max:70
+ *ENAM: Spell_Effect:(Fortify_Skill/Long_Blade)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Skill/Block)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attribute/Endurance)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Self)  Area:0  Duration:0  Mag_Min:70  Mag_Max:75
+
+Record: SPEL "her_mirror_2" Flags:0x0000 ()
+  NAME: ID:Her_Mirror_2
+  FNAM: Name:Her Mirror
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:3  Mag_Max:3
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:1  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Self)  Area:0  Duration:1  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Resist_Shock)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:45  Mag_Max:45
+
+Record: SPEL "gaenor_abilities" Flags:0x0000 ()
+  NAME: ID:gaenor_abilities
+  FNAM: Name:Gaenor's Abilities
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Luck)  Range:(Self)  Area:0  Duration:0  Mag_Min:500  Mag_Max:500
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:0  Mag_Min:80  Mag_Max:100
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:0  Mag_Min:50  Mag_Max:100
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "almalexia's shield" Flags:0x0000 ()
+  NAME: ID:almalexia's shield
+  FNAM: Name:Almalexia's Shield
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+ *ENAM: Spell_Effect:(Resist_Poison)  Range:(Self)  Area:0  Duration:0  Mag_Min:30  Mag_Max:30
+
+Record: SPEL "grace of almsivi" Flags:0x0000 ()
+  NAME: ID:grace of almsivi
+  FNAM: Name:Grace of Almsivi
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:30  Mag_Max:80
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:60  Mag_Max:100
+ *ENAM: Spell_Effect:(Cure_Common_Disease)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "almalexia's light" Flags:0x0000 ()
+  NAME: ID:almalexia's light
+  FNAM: Name:Almalexia's Light
+  SPDT: Type:(Power)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Attribute/Agility)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Endurance)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Intelligence)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Luck)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Personality)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Speed)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Strength)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Restore_Attribute/Willpower)  Range:(Self)  Area:0  Duration:1  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "dire shockball" Flags:0x0000 ()
+  NAME: ID:dire shockball
+  FNAM: Name:Dire Shockball
+  SPDT: Type:(Spell)  Spell_Cost:24  Flags:[0x0001 (Autocalc)]
+ *ENAM: Spell_Effect:(Shock_Damage)  Range:(Target)  Area:0  Duration:0  Mag_Min:40  Mag_Max:50
+
+Record: SPEL "almalexia's wrath" Flags:0x0000 ()
+  NAME: ID:almalexia's wrath
+  FNAM: Name:Almalexia's Wrath
+  SPDT: Type:(Spell)  Spell_Cost:150  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Absorb_Health)  Range:(Target)  Area:40  Duration:1  Mag_Min:40  Mag_Max:40
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Target)  Area:40  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Weakness_to_Fire)  Range:(Target)  Area:40  Duration:5  Mag_Min:75  Mag_Max:75
+
+Record: SPEL "regen_imperfect" Flags:0x0000 ()
+  NAME: ID:regen_imperfect
+  FNAM: Name:Rebuild
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "her_protection" Flags:0x0000 ()
+  NAME: ID:her_protection
+  FNAM: Name:Her Guard Against Terror
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20

@@ -1,0 +1,231 @@
+
+Record: SPEL "hroldar_death" Flags:0x0000 ()
+  NAME: ID:hroldar_death
+  FNAM: Name:Hroldar's Death Blast
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:30  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "ulfgar_ghost_sp" Flags:0x0000 ()
+  NAME: ID:Ulfgar_Ghost_sp
+  FNAM: Name:Ulfgar Ghost
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Self)  Area:0  Duration:9999  Mag_Min:70  Mag_Max:70
+
+Record: SPEL "ulfgar_ghost_ring" Flags:0x0000 ()
+  NAME: ID:ulfgar_ghost_ring
+  FNAM: Name:Ulfgar's Death Blast
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Touch)  Area:30  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "stone_erlendr" Flags:0x0000 ()
+  NAME: ID:stone_erlendr
+  FNAM: Name:Erlendr's Speed
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Speed)  Range:(Touch)  Area:0  Duration:180  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "stone_ulfgar" Flags:0x0000 ()
+  NAME: ID:stone_ulfgar
+  FNAM: Name:Ulfgar's Strength
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Strength)  Range:(Touch)  Area:0  Duration:180  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "stone_hunroor" Flags:0x0000 ()
+  NAME: ID:stone_hunroor
+  FNAM: Name:Hunroor's Agility
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Agility)  Range:(Touch)  Area:0  Duration:180  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "stone_nikulas" Flags:0x0000 ()
+  NAME: ID:stone_nikulas
+  FNAM: Name:Nikulas's Personality
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fortify_Attribute/Personality)  Range:(Touch)  Area:0  Duration:180  Mag_Min:10  Mag_Max:10
+
+Record: SPEL "immune to paralysis" Flags:0x0000 ()
+  NAME: ID:immune to paralysis
+  FNAM: Name:Immune to Paralysis
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "snowshield" Flags:0x0000 ()
+  NAME: ID:snowshield
+  FNAM: Name:Snow Shield
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:0  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "hrothmund blessing" Flags:0x0000 ()
+  NAME: ID:hrothmund blessing
+  FNAM: Name:Hrothmund's Blessing
+  SPDT: Type:(Spell)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Frost_Shield)  Range:(Touch)  Area:0  Duration:180  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Sanctuary)  Range:(Touch)  Area:0  Duration:180  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "colony_rug" Flags:0x0000 ()
+  NAME: ID:colony_rug
+  FNAM: Name:Trespasser's Bane
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Attribute/Agility)  Range:(Touch)  Area:0  Duration:600  Mag_Min:50  Mag_Max:100
+ *ENAM: Spell_Effect:(Drain_Attribute/Speed)  Range:(Touch)  Area:0  Duration:600  Mag_Min:20  Mag_Max:80
+ *ENAM: Spell_Effect:(Burden)  Range:(Touch)  Area:0  Duration:300  Mag_Min:100  Mag_Max:200
+
+Record: SPEL "werewolf blood" Flags:0x0000 ()
+  NAME: ID:werewolf blood
+  FNAM: Name:Sanies Lupinus
+  SPDT: Type:(Disease)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Drain_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "werewolf hunger" Flags:0x0000 ()
+  NAME: ID:werewolf hunger
+  FNAM: Name:Weak From Bloodlust
+  SPDT: Type:(Disease)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Damage_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Damage_Fatigue)  Range:(Self)  Area:0  Duration:0  Mag_Min:2  Mag_Max:2
+
+Record: SPEL "touchdrain agility" Flags:0x0000 ()
+  NAME: ID:touchdrain agility
+  FNAM: Name:TouchDrain Agility
+  SPDT: Type:(Spell)  Spell_Cost:19  Flags:[0x0001 (Autocalc)]
+ *ENAM: Spell_Effect:(Drain_Attribute/Agility)  Range:(Touch)  Area:0  Duration:30  Mag_Min:5  Mag_Max:20
+
+Record: SPEL "glenmoril_ring" Flags:0x0000 ()
+  NAME: ID:glenmoril_ring
+  FNAM: Name:Glenmoril Witch Teleport
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Chameleon)  Range:(Touch)  Area:30  Duration:0  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Poison)  Range:(Touch)  Area:30  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "werewolf_ritual_ring" Flags:0x0000 ()
+  NAME: ID:werewolf_ritual_ring
+  FNAM: Name:Werewolf Transformation
+  SPDT: Type:(Spell)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Fire_Damage)  Range:(Touch)  Area:30  Duration:0  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "werewolf vision" Flags:0x0000 ()
+  NAME: ID:werewolf vision
+  FNAM: Name:Eye of the Wolf
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Night_Eye)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+ *ENAM: Spell_Effect:(Detect_Animal)  Range:(Self)  Area:0  Duration:0  Mag_Min:4000  Mag_Max:4000
+
+Record: SPEL "werewolf regeneration" Flags:0x0000 ()
+  NAME: ID:werewolf regeneration
+  FNAM: Name:Spirit of the Wolf
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "bm_bearregen_unique" Flags:0x0000 ()
+  NAME: ID:BM_bearregen_unique
+  FNAM: Name:Regeneration
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "bm_draugr_curse" Flags:0x0000 ()
+  NAME: ID:bm_draugr_curse
+  FNAM: Name:Eddard's Wrath
+  SPDT: Type:(Spell)  Spell_Cost:200  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Touch)  Area:0  Duration:15  Mag_Min:4  Mag_Max:9
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Touch)  Area:0  Duration:15  Mag_Min:4  Mag_Max:9
+
+Record: SPEL "brittlewind" Flags:0x0000 ()
+  NAME: ID:brittlewind
+  FNAM: Name:Brittlewind
+  SPDT: Type:(Spell)  Spell_Cost:224  Flags:[0x0005 (Always_Succeeds, Autocalc)]
+ *ENAM: Spell_Effect:(Frost_Damage)  Range:(Target)  Area:10  Duration:10  Mag_Min:10  Mag_Max:10
+ *ENAM: Spell_Effect:(Disintegrate_Armor)  Range:(Target)  Area:10  Duration:10  Mag_Min:20  Mag_Max:20
+ *ENAM: Spell_Effect:(Disintegrate_Weapon)  Range:(Target)  Area:10  Duration:10  Mag_Min:20  Mag_Max:20
+
+Record: SPEL "bm_resistpara_unique" Flags:0x0000 ()
+  NAME: ID:BM_resistpara_UNIQUE
+  FNAM: Name:Resist Paralysis
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+
+Record: SPEL "bm_summonwolf" Flags:0x0000 ()
+  NAME: ID:BM_summonwolf
+  FNAM: Name:Call Wolf
+  SPDT: Type:(Spell)  Spell_Cost:68  Flags:[0x0005 (Always_Succeeds, Autocalc)]
+ *ENAM: Spell_Effect:(Call_Wolf)  Range:(Self)  Area:0  Duration:45  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "bm_summonbear" Flags:0x0000 ()
+  NAME: ID:BM_summonbear
+  FNAM: Name:Call Bear
+  SPDT: Type:(Spell)  Spell_Cost:68  Flags:[0x0005 (Always_Succeeds, Autocalc)]
+ *ENAM: Spell_Effect:(Call_Bear)  Range:(Self)  Area:0  Duration:45  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "bm_summonbonewolf" Flags:0x0000 ()
+  NAME: ID:bm_summonbonewolf
+  FNAM: Name:Summon Bonewolf
+  SPDT: Type:(Spell)  Spell_Cost:45  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Summon_Bonewolf)  Range:(Self)  Area:0  Duration:30  Mag_Min:1  Mag_Max:1
+
+Record: SPEL "bm_paralyze_hirc" Flags:0x0000 ()
+  NAME: ID:BM_paralyze_hirc
+  FNAM: Name:Hunter's Venom
+  SPDT: Type:(Spell)  Spell_Cost:46  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Paralyze)  Range:(Touch)  Area:1  Duration:10  Mag_Min:1  Mag_Max:1
+ *ENAM: Spell_Effect:(Burden)  Range:(Touch)  Area:1  Duration:10  Mag_Min:50  Mag_Max:50
+
+Record: SPEL "bm_strresist" Flags:0x0000 ()
+  NAME: ID:bm_strresist
+  FNAM: Name:Hircine Resists1
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Fortify_Attack)  Range:(Self)  Area:0  Duration:0  Mag_Min:25  Mag_Max:25
+
+Record: SPEL "bm_spdresist" Flags:0x0000 ()
+  NAME: ID:bm_spdresist
+  FNAM: Name:Hircine Resists1
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+ *ENAM: Spell_Effect:(Restore_Fatigue)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "bm_huntresist" Flags:0x0000 ()
+  NAME: ID:bm_huntresist
+  FNAM: Name:Hircine Resists1
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Fire)  Range:(Self)  Area:0  Duration:0  Mag_Min:75  Mag_Max:75
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:4  Mag_Max:4
+
+Record: SPEL "bm_fireregen" Flags:0x0000 ()
+  NAME: ID:bm_fireregen
+  FNAM: Name:Icy Blood
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:5  Mag_Max:5
+
+Record: SPEL "bm_frstgnt" Flags:0x0000 ()
+  NAME: ID:bm_frstgnt
+  FNAM: Name:Karstaag Resists1
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Resist_Frost)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Magicka)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Resist_Paralysis)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Normal_Weapons)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Reflect)  Range:(Self)  Area:0  Duration:1  Mag_Min:50  Mag_Max:50
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:0  Mag_Min:4  Mag_Max:4
+
+Record: SPEL "bm_hunterwind" Flags:0x0000 ()
+  NAME: ID:bm_hunterwind
+  FNAM: Name:Hunter's Wind
+  SPDT: Type:(Power)  Spell_Cost:1  Flags:[0x0004 (Always_Succeeds)]
+ *ENAM: Spell_Effect:(Restore_Health)  Range:(Self)  Area:0  Duration:1  Mag_Min:1000  Mag_Max:1000
+
+Record: SPEL "werewolf resists" Flags:0x0000 ()
+  NAME: ID:werewolf resists
+  FNAM: Name:Werewolf Resistances
+  SPDT: Type:(Ability)  Spell_Cost:0  Flags:[0x0000 ()]
+ *ENAM: Spell_Effect:(Resist_Common_Disease)  Range:(Self)  Area:0  Duration:0  Mag_Min:100  Mag_Max:100
+ *ENAM: Spell_Effect:(Resist_Blight_Disease)  Range:(Self)  Area:0  Duration:1  Mag_Min:100  Mag_Max:100
