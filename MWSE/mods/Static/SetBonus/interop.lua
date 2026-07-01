@@ -149,23 +149,31 @@ end
 ---@param set table
 function interop.buildSpellsForSet(set)
     if not set.bonuses then return end
+    set.conditionals = set.conditionals or {}
     for _, tier in ipairs({ "min", "mid", "max" }) do
-        local defs = set.bonuses[tier]
+        local defs = set.bonuses[tier] or {}
+        -- Split effects: unconditional -> base tier spell; conditional -> sub-spells.
+        local uncond, cond = {}, {}
+        for _, d in ipairs(defs) do
+            if d.condition then cond[#cond + 1] = d else uncond[#uncond + 1] = d end
+        end
         local spellId = set.spellPrefix .. "_" .. tier
-        if defs and #defs > 0 then
-            assert(#defs <= 8, string.format(
-                "[SetBonus] '%s' %s tier has %d effects (engine maximum is 8).", set.displayName, tier, #defs))
+
+        if #uncond > 0 then
+            assert(#uncond <= 8, string.format(
+                "[SetBonus] '%s' %s tier has %d unconditional effects (engine maximum is 8).",
+                set.displayName, tier, #uncond))
+            local spellName = set.displayName .. " Set Bonus"
+            if #spellName > 31 then spellName = set.displayName:sub(1, 21) .. " Set Bonus" end
             local spell = tes3.getObject(spellId) or tes3.createObject({
                 objectType = tes3.objectType.spell,
                 id = spellId,
-                name = set.displayName .. " Set Bonus",
+                name = spellName,
                 castType = tes3.spellType.ability,
             })
-            -- Write all 8 slots so a rebuild (replace/amend) refreshes existing spells
-            -- and clears any effect left over from a previous, larger definition.
             for i = 1, 8 do
                 local e = spell.effects[i]
-                local def = defs[i]
+                local def = uncond[i]
                 if def then
                     e.id = resolveEffect(def.effect, " in set '" .. set.displayName .. "'")
                     e.rangeType = resolveRange(def.range)
@@ -179,15 +187,43 @@ function interop.buildSpellsForSet(set)
                 end
             end
             set[tier .. "Bonus"] = spellId
-            log:debug("buildSpellsForSet: built '%s' for set '%s'", spellId, set.displayName)
         else
-            -- Tier has no effects (e.g. a blank replace): neutralise an existing spell.
             local spell = tes3.getObject(spellId)
-            if spell then
-                for i = 1, 8 do spell.effects[i].id = -1 end
-            end
+            if spell then for i = 1, 8 do spell.effects[i].id = -1 end end
+            set[tier .. "Bonus"] = nil
         end
+
+        -- Conditional sub-spells: one single-effect ability per conditional effect.
+        local list = {}
+        for j, def in ipairs(cond) do
+            local cid = spellId .. "_c" .. j
+            local cname = set.displayName .. " Bonus"
+            if #cname > 31 then cname = set.displayName:sub(1, 25) .. " Bonus" end
+            local spell = tes3.getObject(cid) or tes3.createObject({
+                objectType = tes3.objectType.spell,
+                id = cid,
+                name = cname,
+                castType = tes3.spellType.ability,
+            })
+            for i = 1, 8 do
+                local e = spell.effects[i]
+                if i == 1 then
+                    e.id = resolveEffect(def.effect, " in set '" .. set.displayName .. "'")
+                    e.rangeType = resolveRange(def.range)
+                    e.skill = resolveSkill(def.skill)
+                    e.attribute = resolveAttribute(def.attribute)
+                    e.min, e.max = scaledMinMax(def)
+                    e.duration = def.duration or 0
+                    e.radius = def.radius or 0
+                else
+                    e.id = -1
+                end
+            end
+            list[j] = { spellId = cid, condition = def.condition, def = def }
+        end
+        set.conditionals[tier] = list
     end
+    log:debug("buildSpellsForSet: built '%s'", set.displayName)
 end
 
 --- Rescale every already-built Lua-defined bonus spell (in place). `benefitScale`
@@ -207,15 +243,28 @@ function interop.applyScale(benefitScale, drawbackScale)
     for _, set in ipairs(config.setsArray) do
         if set.bonuses then
             for _, tier in ipairs({ "min", "mid", "max" }) do
-                local id = set[tier .. "Bonus"]
                 local defs = set.bonuses[tier]
-                if id and defs then
-                    local spell = tes3.getObject(id)
-                    if spell then
-                        for i, def in ipairs(defs) do
-                            local e = spell.effects[i]
-                            if e then
-                                e.min, e.max = scaledMinMax(def)
+                if defs then
+                    local id = set[tier .. "Bonus"]
+                    if id then
+                        local spell = tes3.getObject(id)
+                        if spell then
+                            local i = 0
+                            for _, def in ipairs(defs) do
+                                if not def.condition then
+                                    i = i + 1
+                                    local e = spell.effects[i]
+                                    if e then e.min, e.max = scaledMinMax(def) end
+                                end
+                            end
+                        end
+                    end
+                    local conds = set.conditionals and set.conditionals[tier]
+                    if conds then
+                        for _, entry in ipairs(conds) do
+                            local spell = tes3.getObject(entry.spellId)
+                            if spell and spell.effects[1] then
+                                spell.effects[1].min, spell.effects[1].max = scaledMinMax(entry.def)
                             end
                         end
                     end
@@ -459,4 +508,36 @@ function interop.initAll(pathDir)
                 log:error("initAll: could not load set file %s: %s", modulePath, tostring(set))
             end
         end
- 
+    end
+end
+
+-- -------------------------------------------------------------------------
+-- Deferred runtime spell creation: build all Lua-defined sets once the game
+-- is ready. Sets registered after this point are built immediately above.
+-- -------------------------------------------------------------------------
+event.register(tes3.event.initialized, function()
+    gameInitialized = true
+    for _, set in ipairs(config.setsArray) do
+        if set.bonuses then
+            local ok, err = pcall(interop.buildSpellsForSet, set)
+            if not ok then
+                log:error("initialized: buildSpellsForSet failed for '%s': %s", set.displayName, err)
+            end
+        end
+    end
+    -- Bulk-build the icon index for every item registered so far (file-scope sets).
+    -- Items added later at runtime link their icons via linkIconFor as they are added.
+    for itemId, setmap in pairs(config.setLinks) do
+        local obj = tes3.getObject(itemId)
+        local icon = obj and obj.icon
+        if icon then
+            icon = icon:lower()
+            local dst = config.iconLinks[icon] or {}
+            for setName in pairs(setmap) do dst[setName] = true end
+            config.iconLinks[icon] = dst
+        end
+    end
+    log:debug("interop initialized: %d set(s) registered.", #config.setsArray)
+end)
+
+return interop

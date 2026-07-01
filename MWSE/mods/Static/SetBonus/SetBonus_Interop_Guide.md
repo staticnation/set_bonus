@@ -247,6 +247,69 @@ setBonus.applyScale(benefitScale, drawbackScale)  -- rescale live (either arg ma
 remove/re-add to pick up the change -- the base mod does this automatically when
 the sliders move (via the `Static:RescaleBonuses` event).
 
+## Conditional effects (1.6+)
+
+Any effect in a tier can carry a `condition`, so it only applies while the wearer
+meets some runtime state (below 50% health, at night, above a skill level, in
+combat, and so on). The framework builds each conditional effect as its own small
+sub-spell and toggles it on/off as the condition flips, while the set is at that
+tier. Conditions are gated by the player's **Conditional bonuses** setting; when
+off, condition-gated effects are simply not applied.
+
+Conditions are **plain data** (not functions), so they behave identically on MWSE
+and OpenMW and serialize across OpenMW's event layer.
+
+Example -- a set that hits harder below half health, and turns you unseen at night:
+
+```lua
+max = {
+    { effect = "resistFrost", magnitude = 20 },   -- always on at max
+    { effect = "fortifyAttack", magnitude = 10,
+      condition = { kind = "health", op = "<", value = 0.5, fraction = true } },
+    { effect = "chameleon", magnitude = 15,
+      condition = { kind = "time", value = "night" } },
+}
+```
+
+### Condition descriptor
+
+A `condition` is one descriptor, an array of them (all must hold = AND), or
+`{ any = { ... } }` (OR) / `{ all = { ... } }` (AND).
+
+Thresholds (`op` is one of `<  <=  >  >=  ==  ~=`):
+
+| kind | fields | notes |
+|------|--------|-------|
+| `health` / `magicka` / `fatigue` | `op`, `value`, `fraction` | `fraction = true` compares 0-1 of max; otherwise absolute |
+| `attribute` | `id` (e.g. `"strength"`), `op`, `value` | |
+| `skill` | `id` (e.g. `"longBlade"`), `op`, `value` | |
+| `level` | `op`, `value` | |
+
+States (equality; `value` may be a single value or a list = any-of):
+
+| kind | value |
+|------|-------|
+| `time` | `"day"` / `"night"` |
+| `sun` | `"up"` / `"down"` (up = daytime and outdoors -- handy for vampires) |
+| `location` | `"interior"` / `"exterior"` |
+| `weather` | a weather name or list, e.g. `"rain"` or `{ "rain", "thunder" }` |
+| `race` | race id/name, or a list |
+| `class` | class id/name, or a list |
+| `combat` | `true` / `false` |
+
+Custom / external state: besides the built-in kinds, a `flag` condition reads
+per-reference state pushed by any mod:
+
+```lua
+event.trigger("Static:SetBonusFlag", { reference = ref, id = "myflag", value = true })
+-- read by: { kind = "flag", id = "myflag" }   (boolean, or compares `value` if given)
+```
+
+Notes: dynamic state (HP, time, weather, ...) is re-checked about once a second,
+plus immediately on tier change. Conditional effects obey the magnitude sliders
+like any other effect, and each condition is evaluated safely -- a malformed
+condition just reads as false, never an error.
+
 ## Notes & gotchas
 
 - **Item IDs and set names are case-insensitive** (stored lowercased internally).
