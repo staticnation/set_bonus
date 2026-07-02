@@ -31,6 +31,9 @@ Ships in two flavours from a single codebase — pick the one for your engine:
   and Bloodmoon.
 - **Three tiers per set** — bonuses scale up at 2, 4, and 6+ equipped pieces
   (thresholds are per-set configurable).
+- **Conditional bonuses (New in 1.6)** — dynamic effects that activate based 
+  on runtime states (health/magicka/fatigue thresholds, time of day, location, 
+  combat, etc.).
 - **Restrained, flat balance** — modest bonuses that barely grow at the top tier,
   so they enhance rather than trivialise. Vanilla magic effects only.
 - **Thematic drawbacks** — many sets carry a mild Weakness at mid/max (metal →
@@ -124,7 +127,8 @@ otherwise:
 ## For mod authors
 
 Other mods can register their own sets and let Set Bonus build and manage the
-spells for them.
+spells for them. As of 1.6, you can add conditional evaluation logic directly 
+to any effect.
 
 **MWSE** — `require` the interop from anywhere:
 
@@ -137,6 +141,25 @@ setBonus.registerSet{
         min = { { effect = "resistFire", magnitude = 10 } },
         max = { { effect = "resistFire", magnitude = 20 },
                 { effect = "fortifySkill", skill = "longBlade", magnitude = 12 } },
+    },
+}
+```
+
+an MWSE example with conditional evaluation:
+
+```lua
+local setBonus = require("Static.SetBonus.interop")
+setBonus.registerSet{
+    name = "Bloodmoon Reaver",
+    items = { "brv_helm", "brv_cuirass", "brv_greaves", "brv_boots" },
+    bonuses = {
+        max = {
+            { effect = "resistFrost", magnitude = 20 }, -- always on
+            { effect = "fortifyAttack", magnitude = 12, 
+              condition = { kind = "health", op = "<", value = 0.5, fraction = true } }, -- bloodied
+            { effect = "chameleon", magnitude = 20, 
+              condition = { { kind = "time", value = "night" }, { kind = "location", value = "exterior" } } } -- AND array
+        },
     },
 }
 ```
@@ -157,6 +180,34 @@ I.SetBonus.registerSet{
 }
 ```
 
+an OpenMW example with conditional evaluation:
+
+```lua
+local I = require('openmw.interfaces')
+I.SetBonus.registerSet{
+    name  = 'Bloodmoon Reaver',
+    items = { 'brv_helm', 'brv_cuirass', 'brv_greaves', 'brv_boots' },
+    bonuses = {
+        max = {
+            { effect = 'resistfrost', mag = 20 }, -- always on
+            { effect = 'fortifyattack', mag = 12, 
+              condition = { kind = 'health', op = '<', value = 0.5, fraction = true } }
+        },
+    },
+}
+```
+
+Supported Conditions: `health`, `magicka`, `fatigue`, `attribute`, `skill`, `level`, `time`, 
+`sun`, `location`, `race`, `class`.
+
+Custom Flags (OpenMW Combat/Weather): Because OpenMW 0.51 lacks global reads for 
+combat state and weather, these states fail-safe to `false` natively. Mods 
+detecting combat/weather can push state directly into Set Bonus to evaluate:
+
+OpenMW: `core.sendGlobalEvent('SetBonus_setFlag', { actor = someActor, id = 'combat', value = true })`
+
+MWSE: `event.trigger("Static:SetBonusFlag", { reference = ref, id = 'combat', value = true })`
+
 Both engines also offer `amendSet` (append items/effects, tweak thresholds),
 `addItems`, `registerSetLink`, query helpers, and a way to fully replace or
 disable a set. MWSE fires a `Static:SetBonusChanged` event on tier changes. See
@@ -169,31 +220,40 @@ the full guides:
 ## Repository layout
 
 ```
+SetBonus-metadata.toml       MWSE metadata file for mod managers
 MWSE/mods/Static/
-  logger.lua                 shared logger
-  SetBonus/                  core framework
-    main.lua                 runtime: counting, tiers, tooltips
-    interop.lua              public API + runtime spell building
-    config.lua  settings.lua  mcm.lua
-    example.lua              minimal author example
-    SetBonus_Interop_Guide.md
-  ArmorBonus/sets/*.lua      69 base set definitions (Lua-defined bonuses)
-  SetBonusTR/  SetBonusOAAB/  SetBonusNOD/  SetBonusAATL/
-                             self-detecting companion add-ons
-
+  SetBonus/                  Core MWSE framework logic
+    main.lua                 Handles runtime counting, tiers, and tooltips
+    interop.lua              Public API for other mods and spell building
+    config.lua               Handles mod configuration data
+    settings.lua             Manages user settings state
+    mcm.lua                  Mod Config Menu interface
+    conditions.lua           Engine for evaluating state-based conditions
+    logger.lua               Module-specific logger
+    example.lua              Minimal example for mod authors
+    SetBonus_Interop_Guide.md Documentation for mod authors
+  ArmorBonus/sets/*.lua      Lua definitions for 69 base armor sets
+  SetBonusTR/                Add-on for Tamriel Rebuilt support
+  SetBonusOAAB/              Add-on for OAAB_Data support
+  SetBonusNOD/               Add-on for NOD support
+  SetBonusAATL/              Add-on for AATL support
+                       
 OpenMW_SetBonus/
-  setbonus.omwscripts
+  setbonus.omwscripts        Main OpenMW content file
   scripts/SetBonus/
-    global.lua               builds spells, applies tiers, framework API
-    actor.lua                per-actor equipment watcher
-    player.lua               settings page + notifications
-    ietooltip.lua            optional Inventory Extender tooltip integration
-    data.lua                 all sets + item links (auto-generated from MWSE)
-  README.md  SetBonus_Interop_OpenMW.md
-OpenMW_SetBonus_Example/     drop-in example add-on
+    global.lua               Handles spell building, tiers, and framework API
+    actor.lua                Monitors actor equipment changes
+    player.lua               Manages settings and user notifications
+    ietooltip.lua            Hooks into Inventory Extender for tooltips
+    data.lua                 Auto-generated set and item link definitions
+    conditions.lua           OpenMW-side state evaluation engine
+    SetBonus_Interop_OpenMW.md Documentation for OpenMW mod authors
+OpenMW_SetBonus_Example/     Drop-in project example for OpenMW developers
 
-SetBonus_Changelog.md              version history
-Set_Bonus_Spell_Reference.md       full per-set effect reference
+SetBonus_Changelog.md        Full version history
+Set_Bonus_Spell_Reference.md Reference for all per-set effects
+README.md                    Primary project documentation
+
 ```
 
 The MWSE base sets are Lua-defined (no ESP needed); the OpenMW `data.lua` is
@@ -201,7 +261,7 @@ generated from the MWSE set definitions so the two stay in sync.
 
 ## Changelog
 
-See `SetBonus_Changelog.md`. Current release: **1.5.1** (optional Consistent
+See `SetBonus_Changelog.md`. Current release: **1.6** (optional Consistent
 Enchanting and Inventory Extender integrations).
 
 ## Credits & license

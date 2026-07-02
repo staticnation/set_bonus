@@ -24,6 +24,7 @@ This page hosts both. Grab the one that matches your setup:
 [list]
 [*][b]130+ armour sets[/b] across every vanilla material and culture, plus Tribunal & Bloodmoon.
 [*][b]Three tiers per set[/b] — bonuses scale up at [b]2[/b], [b]4[/b], and [b]6+[/b] equipped pieces.
+[*][b]Conditional bonuses (New in 1.6)[/b] — Sets can now contain sub-effects that toggle dynamically based on your runtime state, like dropping below 50% Health, fighting at night, or entering combat.
 [*][b]Restrained, flat balance[/b] — modest bonuses that barely grow at the top tier, so they enhance rather than trivialise. Vanilla magic effects only.
 [*][b]Thematic trade-offs[/b] — many sets carry a mild Weakness at mid/max (metal → shock, fur/hide → fire, chitin/glass → frost, Altmer → magicka), giving each set an identity and counterplay (it applies to NPCs too).
 [*][b]Players and NPCs[/b] — fully-kitted NPCs benefit too (toggleable).
@@ -71,6 +72,7 @@ It edits no armour or NPC records, so it's compatible with essentially everythin
 [/list]
 [b]OpenMW version[/b]
 [list]
+[*]Morrowind (GOTY)
 [*]OpenMW [b]0.51[/b] or newer (runtime spell creation is required)
 [/list]
 
@@ -98,11 +100,31 @@ setBonus.registerSet{
     name = "My Set",
     items = { "my_helm", "my_cuirass", "my_greaves", "my_boots" },
     bonuses = {
-        min = { { effect = "resistFire", magnitude = 10 } },
+        min = { { effect = "resistFire", magnitude = 5 } },
+        mid = { { effect = "resistFire", magnitude = 10 } },
         max = { { effect = "resistFire", magnitude = 20 },
                 { effect = "fortifySkill", skill = "longBlade", magnitude = 12 } },
     },
 }[/code]
+
+As of 1.6, add declarative condition blocks to gate effects by runtime state:
+
+[code]local setBonus = require("Static.SetBonus.interop")
+setBonus.registerSet{
+    name = "My Set",
+    items = { "my_helm", "my_cuirass", "my_greaves", "my_boots" },
+    bonuses = {
+        min = { { effect = "resistFire", magnitude = 5 } },
+        mid = { { effect = "resistFire", magnitude = 10 } },        
+        max = { 
+            { effect = "resistFire", magnitude = 20 }, 
+            { effect = "fortifySkill", skill = "longBlade", magnitude = 12 } }, -- unconditional base
+            -- Add conditions to gate effects by runtime state:
+            { effect = "fortifyAttack", magnitude = 15, condition = { kind = "health", op = "<", value = 0.5, fraction = true } },
+        },
+    },
+}[/code]
+
 You can also [b]addItems[/b] to extend existing sets, [b]amendSet[/b] to append items/effects and tweak thresholds, or [b]registerSet[/b] with an existing name to fully replace a set — an empty definition [i]disables[/i] one, so you can override or switch off any set, including this mod's own. Set custom tier thresholds and listen for a [b]Static:SetBonusChanged[/b] event. Full guide is in the download (SetBonus_Interop_Guide.md). The bundled TR/OAAB/NOD/AATL modules are built entirely on this API.
 
 [center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
@@ -114,12 +136,33 @@ I.SetBonus.registerSet{
     name  = 'My Set',
     items = { 'my_helm', 'my_cuirass', 'my_greaves', 'my_boots' },
     bonuses = {
-        min = { { effect = 'resistfire', mag = 10 } },
+        min = { { effect = 'resistfire', mag = 5 } },
+        mid = { { effect = 'resistfire', mag = 10 } },
         max = { { effect = 'resistfire', mag = 20 },
                 { effect = 'fortifyskill', skill = 'longblade', mag = 12 } },
     },
 }[/code]
+
+As of 1.6, add declarative condition blocks to gate effects by runtime state:
+
+[code]
+I.SetBonus.registerSet{
+    name  = 'My Set',
+    items = { 'my_helm', 'my_cuirass', 'my_greaves', 'my_boots' },
+    bonuses = {
+        min = { { effect = 'resistfire', mag = 5 } },
+        mid = { { effect = 'resistfire', mag = 10 } },
+        max = {
+            { effect = 'resistfire', mag = 20 }, 
+            { effect = 'fortifyskill', skill = 'longblade', mag = 12 } }, -- unconditional base
+            -- Add conditions to gate effects by runtime state:
+            { effect = 'fortifyattack', mag = 15, condition = { kind = 'health', op = '<', value = 0.5, 
+            fraction = true } },
+        },
+    },
+}
+[/code]
+
 Same helpers as MWSE — [b]addItems[/b], [b]amendSet[/b] (append items/effects, tweak thresholds), full-replace or [i]disable[/i] a set via [b]registerSet[/b] (empty = off), plus [b]getSet[/b]/[b]getSets[/b] queries. Everything's also available as global events for mods without a global script. Registered sets obey the magnitude sliders automatically. Full guide: SetBonus_Interop_OpenMW.md, with a ready-to-use example in the [b]OpenMW_SetBonus_Example[/b] folder.
 
 [center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
-[size=5][b]Full per-set spell reference below ▼[/b][/size][/center]
