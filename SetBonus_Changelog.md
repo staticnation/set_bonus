@@ -1,5 +1,27 @@
 # Set Bonus — Changelog
 
+## 1.6 — Conditional Effects Framework
+
+**Added**
+- **Conditional bonuses (MWSE & OpenMW):** Modders can now attach dynamic 
+evaluation states to specific effects within a set. The framework splits tier 
+abilities into an "always-on" base spell and small sub-spells that are smoothly 
+toggled on/off by a lightweight evaluation engine (~1s loop and event hooks) 
+as your state  changes. 
+- **Comprehensive Condition Vocabulary:** Declarative evaluations support 
+absolute and fractional thresholds (`<`, `>`, `==`, etc.) across `health`, 
+`magicka`, `fatigue`, `attribute`, `skill`, `level`, `time` (day/night), `sun`, 
+`location` (interior/exterior), `race`, and `class`. Includes array support for 
+`AND` and `any` (`OR`) structures.
+- **Custom Flag hooks:** For states the game engine doesn't expose globally 
+(such as OpenMW 0.51's combat or weather state), mods can push state directly 
+into the evaluator via `SetBonus_setFlag` (OpenMW) or `Static:SetBonusFlag` (MWSE).
+- **Settings Toggle:** "Conditional bonuses" can be toggled on or off in the 
+MWSE MCM / OpenMW Script Settings (defaults to ON). When off, the evaluation 
+loop rests and sub-spells are not applied. 
+- **Tooltip Labels:** Tooltips automatically parse condition blocks to label
+context-aware effects, e.g., `Fortify Attack 12 (when HP < 50%)`.
+
 ## 1.5.1 — Optional integrations: Consistent Enchanting & Inventory Extender
 
 **Added**
