@@ -1,0 +1,8 @@
+# Set Bonus -- English strings for the Script Settings UI.
+# Only the keys below are localized; every other name/description passed to the
+# settings API falls back to its literal text, so nothing else needs an entry.
+
+# "Tooltip detail" select options
+compact: "Compact (active / preview)"
+full: "Full (all tiers)"
+minimal: "Minimal (names only)"

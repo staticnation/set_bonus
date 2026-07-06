@@ -1,0 +1,4 @@
+# Set Bonus -- Conditional Rebalance (optional submodule, OpenMW).
+# Replaces every registered set's bonuses with the conditional-effects balance.
+# Requires the Set Bonus mod (setbonus.omwscripts) to be enabled.
+GLOBAL: scripts/SetBonusRebalance/main.lua

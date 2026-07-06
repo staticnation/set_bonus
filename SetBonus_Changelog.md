@@ -1,5 +1,129 @@
 # Set Bonus — Changelog
 
+## 1.7 — Conditional Rebalance (optional submodule, MWSE & OpenMW)
+
+**Added**
+
+- **Conditional Rebalance submodule** — an optional add-on that replaces every
+  set's bonuses with an alternative balance built on the 1.6 conditional-effects
+  framework. Each set keeps a lean always-on identity and gains **situational
+  spikes** (~1.5–2× stronger, active only while a state holds), themed to the
+  kind of set: heavy materials answer pain (*bloodied* / *last stand*), light
+  materials favour darkness and open sky, cultural sets are strongest for their
+  own race and homeland habits, faction sets mirror their trade, and the class
+  sets (Light/Medium/Heavy Armor, Cloth) turn purely reactive so they complement
+  rather than double the material sets that share their items. Weakness
+  drawbacks remain (a few are conditional now) and both magnitude sliders still
+  apply. Covers all 136 sets (69 base + 67 Tamriel Rebuilt); entries for sets
+  that aren't registered are skipped, so it's safe with any add-on combination.
+- **Stacking lanes for overlapping sets.** Items commonly belong to several
+  sets (a Chuzei helm is also Bonemold, Dunmer, and Native), so one outfit can
+  hold max tier in three or four sets at once. The rebalance splits every
+  co-activating cluster into distinct roles: the specific set keeps the
+  full-strength identity while broad umbrella sets (Dunmer, Native, Nordic,
+  Colovian, Imperial, Orsimer, and the class sets) carry only echo-strength
+  flats (~10 resist) plus cultural conditionals. Themed outfits now layer
+  complementary bonuses — tank + officer + kinship — instead of doubling the
+  same stat. `gen_rebalance.py` computes the item-overlap matrix from the set
+  data and enforces two rules: no full-strength always-on effect duplicated
+  across a co-maxable pair, and no same effect spiking on the same state.
+- **Wider condition vocabulary, on every set.** All 136 sets now carry at
+  least one conditional (271 total). Beyond the health/time/location motifs:
+  level gates (Artifacts wake for veterans, the Militia shelters recruits
+  below level 10, the Master's kit answers level 25), skill mastery
+  (Wenbone above Marksman 50, Mages Guild above Destruction 50), attribute
+  gates (Orcish above Strength 60, Domina above Personality 60), and AND/OR
+  states (Thieves Guild's night-time-indoors heists, Ayleid star-magic under
+  the open night sky, Scrap's desperation luck, Molecrab's shade-sanctuary).
+- Ships for both engines, applied through the public framework API only —
+  `MWSE/mods/Static/SetBonusRebalance/` (MWSE) and `OpenMW_SetBonusRebalance/`
+  (OpenMW). Item lists, thresholds, and generated spell IDs are untouched;
+  uninstall the submodule to return to the default balance.
+- For engine parity, the rebalance uses only conditions that evaluate natively
+  on both engines (health/magicka/fatigue thresholds, time, sun,
+  interior/exterior, race) — no `combat`/`weather`/`flag` conditions.
+- New docs: `SetBonus_Rebalance_Reference.md` (design notes + full per-set spell
+  list) and `gen_rebalance.py` (generates the OpenMW data file and the reference
+  from the canonical MWSE data, with schema validation).
+
+- **OpenMW batch registration** — the `I.SetBonus` interface is now **v2**
+  with `registerSets(list)` (and the `SetBonus_registerSets` global event):
+  register or replace many sets with one spell-build pass and a single actor
+  recompute, instead of a full recompute per `registerSet` call. The
+  Conditional Rebalance uses it to apply all 136 sets in one batch (falling
+  back to per-set calls on v1). `registerSet` behaviour is unchanged.
+- **OpenMW l10n** — added `l10n/SetBonus/en.yaml` so Script Settings option
+  values render as readable labels (the Tooltip detail choices); other mods'
+  translations can drop in alongside it.
+
+**Fixed**
+
+- **MWSE: generated spell ids no longer overflow the engine's 31-character
+  limit.** Long set names with conditional effects ("Redguard Iron Lamellar",
+  "Sacred Lands Bonemold") produced sub-spell ids like
+  `_sb_redguard_iron_lamellar_max_c1` (33 chars) and crashed the spell build.
+  Over-long ids are now shortened deterministically with a small hash, so the
+  same set always regenerates the same id (save-safe; short ids unchanged).
+- **MWSE: three TR sets (Dunmer, House Redoran, Watchman) silently failed to
+  register** because they were all gated on a single item id
+  (`T_A_DeChitinHelmOpen01_Hrpen`) that no longer exists in current
+  Tamriel_Data — which also silently skipped the umbrella↔vanilla union, so
+  vanilla chitin got no Dunmer bonus on MWSE (found in Static's playtest via
+  a trace log). Those sets now gate on any of several ids, and the TR add-on
+  logs a warning for every expected set it could not register, so TR id drift
+  can never be silent again.
+
+- **Cultural umbrellas now cover vanilla gear of the same craft.** TR's
+  cultural sets only listed TR-made items, so a vanilla chitin gauntlet gave
+  no Dunmer kinship while TR's identically-named mainland pauldron did. The
+  TR add-on now unions the matching vanilla sets into the umbrellas at
+  registration — **Dunmer** ← Chitin, Bonemold, Netch Leather, Dreugh,
+  Cephalopod, House Indoril; **Altmer** ← Glass; **Orsimer** ← Orcish — and
+  inherits anything other add-ons fold into those sets. The OpenMW data
+  carries the same union statically. (Dunmer's Willpower in the rebalance
+  dropped to echo strength since Her Hand now co-maxes with it and owns that
+  lane.)
+
+- **OpenMW tooltips now reflect interop changes.** The Inventory Extender
+  tooltip runs in the player VM with its own copy of `data.lua`, so sets
+  registered, replaced, or amended through the interop (including the
+  Conditional Rebalance) displayed with their original effects even though the
+  applied abilities were correct. The global script now pushes every
+  interop-touched set definition to player scripts (`SetBonus_syncSets`, on
+  change and on player join), and the tooltip merges them over its local data.
+
+**Changed**
+
+- **OpenMW: lighter equipment polling in busy cells** (community report on
+  1.6: visible Lua cost from `actor.lua` in large cities). NPCs and creatures
+  now poll their equipment every 2s instead of 0.5s (the player keeps 0.5s for
+  snappy feedback), each actor polls at a random phase so a whole cell no
+  longer checks on the same frame, and the per-poll signature reuses its
+  buffers instead of allocating. Behaviour is unchanged — recomputes still
+  only fire when equipment actually changes.
+- **OpenMW: the conditional-effects evaluation is sliced across frames.** The
+  1.6 loop reconciled every active actor's condition-gated sub-spells in one
+  frame each second — another spike that grew with city size. Each frame now
+  handles a small rolling slice (capped at 8 actors/frame, sized to still
+  cover the whole roster about once per second), so the cost is flat and
+  per-actor refresh latency stays ~1s. External flag pushes
+  (`SetBonus_setFlag`) still trigger an immediate full refresh.
+- **Compact item tooltips by default.** Community feedback: listing every
+  tier's effects (now with condition labels) made tooltips a wall of text —
+  and with the cultural umbrellas covering vanilla gear, items in 3-4 sets
+  became common (an Indoril Helmet is Dunmer, House Hlaalu, House Indoril,
+  and Tribunal Temple) while Morrowind tooltips don't scroll. A new **Tooltip
+  detail** option (MWSE MCM / OpenMW Script Settings) picks how much to show,
+  and set blocks are ordered by relevance (active first, then progress, then
+  name) on both engines:
+  - **Compact** (default): the active tier's effects, or a greyed first-tier
+    preview whenever the set isn't active — the set name itself turns green
+    while its bonus is active, so there are no status lines and no threshold
+    text ("need 2", "6+ pieces << active") at all.
+  - **Full**: every tier with thresholds and progress lines (the old
+    behaviour).
+  - **Minimal**: bare set names, green while active.
+
 ## 1.6 — Conditional Effects Framework
 
 **Added**

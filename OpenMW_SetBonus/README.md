@@ -49,12 +49,20 @@ OpenMW **0.51+** (or a recent dev build) — runtime spell-record creation is re
   Identical magnitudes to the MWSE version.
 - External-mod armour (Tamriel Rebuilt, OAAB, NOD, AATL) is already folded into the
   relevant sets' item lists; items simply never match if that mod isn't installed.
+- **Optional Conditional Rebalance** — prefer condition-driven bonuses over flat
+  stats? Add the `OpenMW_SetBonusRebalance` data directory and enable
+  `setbonus_rebalance.omwscripts` (after `setbonus.omwscripts`). It replaces every
+  set's effects with the alternative balance described in
+  `SetBonus_Rebalance_Reference.md`; disable it to return to the default balance.
 - **Settings page:** open *Options > Scripts > Set Bonus* in-game for three toggles:
   - *Tier-change notifications* (player) — show a message when your bonus tier changes.
-  - *Set info on item tooltips* (player) — show the set, your progress, and each
-    tier's effects on a set piece's tooltip. Requires the **Inventory Extender**
+  - *Set info on item tooltips* (player) — show the set, your progress, and the
+    tier effects on a set piece's tooltip. Requires the **Inventory Extender**
     mod, which provides the tooltip hook (`I.InventoryExtender.registerTooltipModifier`);
     without it OpenMW has no way to edit item tooltips from Lua, so this does nothing.
+  - *Tooltip detail* (player) — compact (default: the active tier's effects,
+    or a greyed first-tier preview when the set isn't active), full (every
+    tier with thresholds), or minimal (bare set names).
   - *Apply bonuses to NPCs* (global) — toggling off immediately clears NPC bonuses.
   - *Match enchanted/copied items by icon* (global) — on by default; also matches
     set pieces by inventory icon so a player-enchanted or copied item (new record
@@ -78,11 +86,13 @@ Other mods can register their own armour sets and let Set Bonus build and manage
 the spells for them — the same idea as the MWSE interop, adapted to OpenMW. Two
 entry points:
 
-- **Interface** `I.SetBonus` (from a global script): `registerSet`, `addItems`,
+- **Interface** `I.SetBonus` (from a global script): `registerSet`,
+  `registerSets` (batch, v2+ — one rebuild/recompute for many sets), `addItems`,
   `registerSetLink`, `getSet`/`getSets`/`getSetsForItem`/`isItemInSet`,
-  `benefitScale()`/`drawbackScale()`, `version`.
+  `benefitScale()`/`drawbackScale()`, `version` (now 2).
 - **Global events** for mods without a global script:
-  `SetBonus_registerSet` / `SetBonus_addItems` / `SetBonus_registerSetLink`
+  `SetBonus_registerSet` / `SetBonus_registerSets` (`{ sets = {...} }`) /
+  `SetBonus_addItems` / `SetBonus_registerSetLink`
   (payload is the same data table).
 
 Registered sets obey the player's magnitude sliders automatically. See

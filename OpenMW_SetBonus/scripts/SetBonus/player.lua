@@ -33,6 +33,19 @@ I.Settings.registerGroup{
             description = 'Show set-bonus info on item tooltips. Requires the Inventory Extender mod (which provides the tooltip hook); has no effect without it.',
             default = true,
         },
+        {
+            key = 'tooltipDetail',
+            renderer = 'select',
+            name = 'Tooltip detail',
+            description = 'How much of the set bonus to list on item tooltips. '
+                .. 'compact (default): the active tier, or a greyed preview of the first '
+                .. 'tier when the set is not active. '
+                .. 'The set name turns green while its bonus is active. '
+                .. 'full: every tier with thresholds. minimal: bare set names '
+                .. '(green while active).',
+            argument = { l10n = 'SetBonus', items = { 'compact', 'full', 'minimal' } },
+            default = 'compact',
+        },
     },
 }
 

@@ -1,5 +1,9 @@
 # Set Bonus — Spell Reference
 
+> This is the **default balance**. If the optional **Conditional Rebalance**
+> submodule is installed, every set's effects are replaced — see
+> `SetBonus_Rebalance_Reference.md` instead.
+
 Constant-effect armour set bonuses; default tiers at **2 / 4 / 6+** pieces (some override). All bonuses are **Lua-defined, built at runtime (no ESP)**, vanilla effects only. "/s" = per-second Restore. Values are tuned low and flat (so 6 pieces isn't far above 4), since you wear armour anyway; many sets carry a mild thematic **Weakness** drawback at mid/max (metal→shock, fur/hide→fire, chitin/glass→frost, etc.).
 
 ## Modules

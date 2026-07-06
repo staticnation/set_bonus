@@ -193,6 +193,47 @@ local function indexByName()
     for si, s in ipairs(data) do byName[s.name:lower()] = si end
 end
 
+-- ---------------------------------------------------------------------------
+-- Player-side sync. The Inventory Extender tooltip runs in the PLAYER VM with
+-- its own require'd copy of data.lua, so interop changes made here (register/
+-- replace/amend/addItems -- e.g. the Conditional Rebalance) would be invisible
+-- on tooltips. We track which sets the interop has touched and push those
+-- definitions to player scripts (SetBonus_syncSets), on change and whenever a
+-- player is added. Untouched sets are identical to the file, so only the
+-- dirty ones are ever sent.
+-- ---------------------------------------------------------------------------
+local dirty = {}  -- [setIndex] = true once touched via the interop (never cleared)
+local function markDirty(si)
+    if si then dirty[si] = true end
+end
+local function dirtyPayload()
+    local sets = {}
+    for si in pairs(dirty) do
+        local s = data[si]
+        if s then
+            sets[#sets + 1] = {
+                name = s.name,
+                thresholds = s.thresholds,
+                bonuses = s.bonuses,
+                items = s.items,
+            }
+        end
+    end
+    return { sets = sets }
+end
+local function syncDirtyTo(player)
+    if next(dirty) then
+        pcall(function() player:sendEvent('SetBonus_syncSets', dirtyPayload()) end)
+    end
+end
+local function syncDirtyAll()
+    if not next(dirty) then return end
+    local payload = dirtyPayload()
+    for _, pl in ipairs(world.players) do
+        pcall(function() pl:sendEvent('SetBonus_syncSets', payload) end)
+    end
+end
+
 local builtCount, failCount = 0, 0
 local function magFor(e)
     if NOSCALE[e.effect] then return e.mag
@@ -284,7 +325,9 @@ local function normalizeSet(sd)
     return sd
 end
 
-local function registerSet(sd)
+-- Normalise, index, and link one set WITHOUT rebuilding spells or recomputing
+-- actors; single and batch registration share this. Returns (setIndex, replaced).
+local function registerSetInner(sd)
     normalizeSet(sd)
     local key = sd.name:lower()
     local si = byName[key]
@@ -300,6 +343,13 @@ local function registerSet(sd)
     end
     linkItems(si)
     linkIconsForSet(si)
+    markDirty(si)
+    dbg(('registerSet: %s (%d items)%s'):format(sd.name, #sd.items, replaced and ' [replace]' or ''))
+    return si, replaced
+end
+
+local function registerSet(sd)
+    local si, replaced = registerSetInner(sd)
     if ready then
         buildSpellsForSet(si)
         if replaced then
@@ -309,8 +359,41 @@ local function registerSet(sd)
         end
         recomputeAll()
     end
-    dbg(('registerSet: %s (%d items)%s'):format(sd.name, #sd.items, replaced and ' [replace]' or ''))
+    syncDirtyAll()
     return sd
+end
+
+-- Batch registration (interface v2): register/replace MANY sets with one
+-- spell-build pass and ONE actor recompute at the end. A per-set registerSet
+-- loop triggers a full recompute per call, which is noticeable when a mod
+-- re-registers the whole roster (e.g. the Conditional Rebalance's 136 sets).
+-- Payload: an array of the same tables registerSet takes. Invalid entries are
+-- skipped with a log line; the valid ones still apply. Returns the count.
+local function registerSets(list)
+    if type(list) ~= 'table' then return 0 end
+    local indices, anyReplaced, n = {}, false, 0
+    for _, sd in ipairs(list) do
+        local ok, si, replaced = pcall(registerSetInner, sd)
+        if ok then
+            n = n + 1
+            indices[#indices + 1] = si
+            anyReplaced = anyReplaced or replaced
+        else
+            print('[SetBonus] registerSets: skipped entry: ' .. tostring(si))
+        end
+    end
+    if ready and n > 0 then
+        for _, si in ipairs(indices) do buildSpellsForSet(si) end
+        if anyReplaced then
+            -- redefinitions can change tiers/effects; purge stale records by name
+            cleaned = {}
+            stateOf = {}
+        end
+        recomputeAll()
+    end
+    syncDirtyAll()
+    dbg(('registerSets: %d set(s) in one batch'):format(n))
+    return n
 end
 
 local TIERS = { 'min', 'mid', 'max' }
@@ -361,12 +444,14 @@ local function amendSet(name, patch)
     end
     linkItems(si)
     linkIconsForSet(si)
+    markDirty(si)
     if ready then
         buildSpellsForSet(si)
         cleaned = {}
         stateOf = {}
         recomputeAll()
     end
+    syncDirtyAll()
     dbg(('amendSet: %s'):format(s.name))
 end
 
@@ -385,7 +470,9 @@ local function addItems(name, items)
     end
     linkItems(si)
     linkIconsForSet(si)
+    markDirty(si)
     if ready then recomputeAll() end
+    syncDirtyAll()
 end
 
 local function registerSetLink(t)
@@ -399,7 +486,9 @@ local function registerSetLink(t)
     if not have then s.items[#s.items + 1] = k end
     linkItems(si)
     linkIconsForSet(si)
+    markDirty(si)
     if ready then recomputeAll() end
+    syncDirtyAll()
 end
 
 local function getSetsForItem(itemId)
@@ -534,33 +623,62 @@ local function recompute(actor)
     stateOf[aid] = new
 end
 
--- Periodically re-toggle conditional sub-spells for state that changes without an
--- equip event (health, time, ...).
+-- Re-toggle conditional sub-spells for state that changes without an equip
+-- event (health, time, ...). The old loop walked EVERY active actor in one
+-- frame each second -- a once-a-second spike that grew with city size (same
+-- family as the actor.lua polling report). It is now sliced: each frame
+-- handles a few actors, sized so the whole roster is still covered about
+-- once per second, and capped so no single frame can spike regardless of
+-- how crowded the cell is. Per-actor refresh latency stays ~1s.
+local REEVAL_PERIOD = 1.0        -- target seconds to cover every active actor
+local REEVAL_MAX_PER_FRAME = 8   -- hard cap on actors reconciled per frame
+local condCursor = 1
+
+local function reevalActor(actor)
+    if not (actor and actor:isValid()) then return end
+    local st = stateOf[actor.id]
+    local desired = {}
+    if st and conditionalEnabled() then
+        for si, tier in pairs(st) do
+            local cl = SPELLCOND[si] and SPELLCOND[si][tier]
+            if cl then for _, e in ipairs(cl) do desired[#desired + 1] = e end end
+        end
+    end
+    if #desired > 0 or C.hasApplied(actor.id) then
+        C.reconcileActor(actor, desired)
+    end
+end
+
+-- Full pass in one go -- kept for explicit triggers (external flag pushes via
+-- SetBonus_setFlag) where an immediate, complete refresh is wanted.
 local function reevalConditions()
     if not ready then return end
     for _, actor in ipairs(world.activeActors) do
-        if actor:isValid() then
-            local st = stateOf[actor.id]
-            local desired = {}
-            if st and conditionalEnabled() then
-                for si, tier in pairs(st) do
-                    local cl = SPELLCOND[si] and SPELLCOND[si][tier]
-                    if cl then for _, e in ipairs(cl) do desired[#desired + 1] = e end end
-                end
-            end
-            if #desired > 0 or C.hasApplied(actor.id) then
-                C.reconcileActor(actor, desired)
-            end
-        end
+        reevalActor(actor)
     end
 end
-local condTimer = 0
+
+local function reevalSlice(dt)
+    if not ready then return end
+    local actors = world.activeActors
+    local n = #actors
+    if n == 0 then return end
+    local step = math.ceil(n * (dt or 0) / REEVAL_PERIOD)
+    if step < 1 then step = 1 end
+    if step > REEVAL_MAX_PER_FRAME then step = REEVAL_MAX_PER_FRAME end
+    for _ = 1, step do
+        if condCursor > n then condCursor = 1 end
+        reevalActor(actors[condCursor])
+        condCursor = condCursor + 1
+    end
+end
 
 return {
     interfaceName = 'SetBonus',
     interface = {
-        version = 1,
+        version = 2,
         registerSet = function(sd) return registerSet(sd) end,
+        registerSets = function(list) return registerSets(list) end,
         amendSet = function(name, patch) return amendSet(name, patch) end,
         addItems = function(name, items) return addItems(name, items) end,
         registerSetLink = function(t) return registerSetLink(t) end,
@@ -575,18 +693,21 @@ return {
         drawbackScale = function() return drawbackScaleVal() end,
     },
     engineHandlers = {
+        -- Push any interop-modified set definitions to a (re)joining player so
+        -- the player-side tooltip shows current data, not the shipped file.
+        onPlayerAdded = function(player)
+            syncDirtyTo(player)
+        end,
         onUpdate = function(dt)
             init()
-            condTimer = condTimer + (dt or 0)
-            if condTimer >= 1.0 then
-                condTimer = 0
-                reevalConditions()
-            end
+            reevalSlice(dt)
         end,
     },
     eventHandlers = {
         SetBonus_recompute = function(e) recompute(e.actor) end,
         SetBonus_registerSet = function(e) registerSet(e) end,
+        -- Batch event: { sets = { {...}, {...} } } or a plain array of sets.
+        SetBonus_registerSets = function(e) registerSets(e and e.sets or e) end,
         SetBonus_amendSet = function(e) amendSet(e.name, e.patch) end,
         SetBonus_addItems = function(e) addItems(e.name, e.items) end,
         SetBonus_registerSetLink = function(e) registerSetLink(e) end,

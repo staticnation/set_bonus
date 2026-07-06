@@ -105,7 +105,25 @@ I.SetBonus.getSetsForItem('my_iron_helm')  -- array of set names for an item, or
 I.SetBonus.isItemInSet('my_iron_helm', 'Iron')  -- boolean
 I.SetBonus.benefitScale()             -- current benefit multiplier (1.0 = default)
 I.SetBonus.drawbackScale()            -- current weakness multiplier (0 = drawbacks off)
-I.SetBonus.version                    -- interface version (1)
+I.SetBonus.version                    -- interface version (2)
+```
+
+### Batch registration (interface v2+)
+
+`registerSets(list)` registers or replaces **many** sets in one call — one
+spell-build pass and a single actor recompute at the end, instead of one full
+recompute per `registerSet`. Use it whenever you touch more than a handful of
+sets at once (the Conditional Rebalance submodule re-registers all 136 this
+way). The payload is simply an array of the same tables `registerSet` takes;
+invalid entries are skipped with a log line and the rest still apply. Returns
+the number of sets applied.
+
+```lua
+if I.SetBonus.version >= 2 then
+    I.SetBonus.registerSets{ setA, setB, setC }
+else
+    for _, s in ipairs({ setA, setB, setC }) do I.SetBonus.registerSet(s) end
+end
 ```
 
 ## Event equivalents (any script type)
@@ -113,11 +131,16 @@ I.SetBonus.version                    -- interface version (1)
 ```lua
 local core = require('openmw.core')
 core.sendGlobalEvent('SetBonus_registerSet', { name = 'My Set', items = {...}, bonuses = {...} })
+core.sendGlobalEvent('SetBonus_registerSets', { sets = { {...}, {...} } })  -- batch (v2+)
 core.sendGlobalEvent('SetBonus_addItems', { name = 'Iron', items = { 'my_iron_helm' } })
 core.sendGlobalEvent('SetBonus_registerSetLink', { item = 'my_iron_shield', set = 'Iron' })
 ```
 
 Events carry plain data only (no functions), so they serialize fine.
+
+Sets you register or modify through the interop are automatically pushed to
+player scripts (`SetBonus_syncSets`), so the Inventory Extender tooltip shows
+your definitions too — you don't need to do anything for that.
 
 ## Timing & load order
 
@@ -218,9 +241,18 @@ OpenMW notes:
   Then `{ kind = 'combat', value = true }`, `{ kind = 'weather', value = 'rain' }`,
   and `{ kind = 'flag', id = 'myflag' }` all evaluate against the pushed state.
   Setting a flag re-evaluates that actor immediately.
-- Conditions are re-checked about once a second (a throttled global `onUpdate`)
-  plus immediately on tier change, and each is evaluated safely (a bad condition
-  reads as false, never an error).
+- Conditions are re-checked on a rolling schedule — the global script walks a
+  small slice of the active actors each frame, covering everyone about once per
+  second (capped per frame so crowded cells can't spike) — plus immediately on
+  tier change and on `SetBonus_setFlag`. Each condition is evaluated safely (a
+  bad condition reads as false, never an error).
+- **Cross-engine parity tip:** if your mod ships for both engines, prefer the
+  kinds that evaluate natively on both — health/magicka/fatigue, attribute,
+  skill, level, time, sun, location, race, class — and treat `combat` /
+  `weather` / `flag` as OpenMW-optional extras (they read false until another
+  script pushes state). The bundled Conditional Rebalance follows this rule.
+- Conditional effects are labelled on Inventory Extender item tooltips
+  automatically, e.g. `Fortify Attack 12 (when HP < 50%)`.
 
 ## Magnitude scaling (automatic)
 

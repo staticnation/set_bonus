@@ -156,21 +156,51 @@ local function addSetRows(content, si, count, idx, total)
     local s = data[si]
     local t = s.thresholds
     local tier = tierFor(s, count)
+    local detail = opt(pcfg, 'tooltipDetail', 'compact')
+    local compact = detail ~= 'full'
     if idx == 1 then separator(content) else textRow(content, '', GREY, true) end
     local htext = 'Set Bonus: ' .. s.name
     if total > 1 then htext = htext .. string.format('  (%d of %d)', idx, total) end
-    textRow(content, htext, GOLD)
-    if tier then
-        textRow(content, ('Wearing %d piece%s - %s bonus active'):format(count, count == 1 and '' or 's', TLABEL[tier]), GREEN)
-    else
-        textRow(content, ('Wearing %d piece%s - need %d to activate'):format(count, count == 1 and '' or 's', t.min), GREY)
+    -- Outside full mode there are no status lines at all: the header itself
+    -- goes green when the set is active, and the effects below carry the rest
+    -- (white/red = active, grey = preview).
+    textRow(content, htext, (compact and tier) and GREEN or GOLD)
+    if not compact then
+        if tier then
+            textRow(content, ('Wearing %d piece%s - %s bonus active'):format(count, count == 1 and '' or 's', TLABEL[tier]), GREEN)
+        else
+            textRow(content, ('Wearing %d piece%s - need %d to activate'):format(count, count == 1 and '' or 's', t.min), GREY)
+        end
     end
-    for _, tk in ipairs(TIERS) do
+    -- Which tiers to list, per the tooltip-detail setting. 'compact' (default)
+    -- shows only the active tier plus the next one to reach (or just the first
+    -- tier as a preview when nothing is active); 'minimal' lists no effects.
+    local shown
+    if detail == 'minimal' then
+        shown = {}
+    elseif detail == 'full' then
+        shown = TIERS
+    else
+        -- Compact: an active set shows only its active tier; a set that isn't
+        -- active always shows the first tier greyed as a preview of what it
+        -- gives. (Bare name-only headers are what 'minimal' is for.)
+        shown = {}
+        if tier then
+            shown[#shown + 1] = tier
+        else
+            shown[#shown + 1] = 'min'
+        end
+    end
+    for _, tk in ipairs(shown) do
         local effs = s.bonuses[tk]
         if effs and #effs > 0 then
             local active, reached = (tier == tk), (count >= t[tk])
-            textRow(content, ('%d+ pieces%s'):format(t[tk], active and '  << active' or ''),
-                active and GREEN or (reached and WHITE or GREY))
+            -- Threshold headers ("N+ pieces << active") only exist in full
+            -- mode; in compact the status line and effect colours carry it.
+            if not compact then
+                textRow(content, ('%d+ pieces%s'):format(t[tk], active and '  << active' or ''),
+                    active and GREEN or (reached and WHITE or GREY))
+            end
             for _, e in ipairs(effs) do
                 local name = effectName(e)
                 local unit = isPercentName(name) and '%' or ''
@@ -196,10 +226,20 @@ local function modifier(item, layout)
         if not content then dbg('inner content not found'); return layout end
         local ordered = {}
         for si in pairs(sids) do ordered[#ordered + 1] = si end
-        table.sort(ordered, function(a, b) return data[a].name:lower() < data[b].name:lower() end)
         local eq = equippedEntries()
+        -- Active/progressed sets first, so a tall multi-set tooltip clips the
+        -- least useful blocks (mirrors the MWSE tooltip).
+        local counts = {}
+        for _, si in ipairs(ordered) do counts[si] = countForSet(si, eq) end
+        table.sort(ordered, function(a, b)
+            local ta = tierFor(data[a], counts[a]) ~= nil
+            local tb = tierFor(data[b], counts[b]) ~= nil
+            if ta ~= tb then return ta end
+            if counts[a] ~= counts[b] then return counts[a] > counts[b] end
+            return data[a].name:lower() < data[b].name:lower()
+        end)
         for idx, si in ipairs(ordered) do
-            addSetRows(content, si, countForSet(si, eq), idx, #ordered)
+            addSetRows(content, si, counts[si], idx, #ordered)
         end
         dbg('added', #ordered, 'block(s)')
         return layout
@@ -219,6 +259,34 @@ return {
                 registered = true
                 dbg('registered tooltip modifier with Inventory Extender; BASE=', BASE ~= nil)
             end
+        end,
+    },
+    eventHandlers = {
+        -- The global script owns the live set definitions; this player VM only
+        -- has the shipped data.lua. Whenever the interop registers, replaces,
+        -- or amends sets (e.g. the Conditional Rebalance), the global script
+        -- pushes the touched definitions here so tooltips show current data.
+        SetBonus_syncSets = function(e)
+            local ok, err = pcall(function()
+                if not (e and e.sets) then return end
+                local byname = {}
+                for si, s in ipairs(data) do byname[s.name:lower()] = si end
+                for _, s in ipairs(e.sets) do
+                    if type(s) == 'table' and type(s.name) == 'string' then
+                        local si = byname[s.name:lower()]
+                        if si then
+                            data[si] = s
+                        else
+                            data[#data + 1] = s
+                            byname[s.name:lower()] = #data
+                        end
+                    end
+                end
+                -- Item/icon membership may have changed; rebuild lazily.
+                itemLink, iconLink, built = {}, {}, false
+                dbg('syncSets: updated', #e.sets, 'set definition(s)')
+            end)
+            if not ok then dbg('syncSets failed:', tostring(err)) end
         end,
     },
 }

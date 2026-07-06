@@ -38,13 +38,18 @@ Ships in two flavours from a single codebase — pick the one for your engine:
   so they enhance rather than trivialise. Vanilla magic effects only.
 - **Thematic drawbacks** — many sets carry a mild Weakness at mid/max (metal →
   shock, fur/hide → fire, chitin/glass → frost, Altmer → magicka).
+- **Conditional Rebalance (New in 1.7)** — an optional submodule (both engines)
+  that replaces every set's bonuses with a spikier, condition-driven balance.
+  Don't like the default sets' effects? Drop it in; remove it to go back.
 - **Players and NPCs** — fully-kitted NPCs benefit too (toggleable).
 - **Two magnitude sliders** — scale the benefits and the weakness drawbacks
   independently; set drawbacks to 0 to turn them off entirely.
 - **Enchant-friendly** — set pieces are matched by inventory icon as well as by
   ID, so a player-enchanted or copied set item still counts (toggleable).
-- **Informative tooltips** *(MWSE)* — hover a set piece to see the set, your
-  progress, and each tier's effects with icons; the active tier is highlighted.
+- **Informative tooltips** — hover a set piece to see the set, your progress,
+  and its effects with the active tier highlighted. Compact by default (the
+  active tier's effects, or a greyed preview when the set isn't active);
+  switchable to full or minimal detail.
 - **No plugin required** — every bonus spell is built at runtime in Lua. No ESP,
   nothing to clutter your load order, no record conflicts.
 - **Mod-aware** — automatically extends to Tamriel Rebuilt, OAAB, NOD, and AATL
@@ -87,7 +92,9 @@ Toggle everything at runtime — **MWSE:** Mod Config Menu › Set Bonus.
 - Tier-change notifications
 - Apply bonuses to NPCs
 - Match enchanted/copied items by icon
-- Set info on item tooltips *(MWSE)*
+- Set info on item tooltips, with a detail level — compact (the default:
+  active tier, or a greyed first-tier preview when not active), full (all
+  tiers with thresholds), or minimal (bare set names)
 - Benefit magnitude scale, and a separate Weakness (drawback) scale
 - Debug logging
 
@@ -100,6 +107,48 @@ attributes 3 / 5 / 8, skills 5 / 8 / 12, health 8 / 12 / 18, fatigue 12 / 20 / 2
 attack 3 / 5 / 8. Most sets add a mild Weakness (~10 / 20) at mid/max. Both
 engines round magnitudes to whole numbers and never scale over-time effects down
 to zero. The full per-set breakdown is in `Set_Bonus_Spell_Reference.md`.
+
+## Optional: Conditional Rebalance submodule
+
+Prefer bonuses that react to the fight instead of flat stats? The **Conditional
+Rebalance** is an optional add-on that re-registers every set's bonuses through
+the framework's own interop: each set keeps a lean always-on identity and gains
+**situational spikes** (~1.5–2× stronger, active only while a state holds),
+themed to the kind of set —
+
+- **Heavy materials** answer pain: Iron hits harder *bloodied* (HP < 50%),
+  Daedric turns terrible on a *last stand* (HP < 25%), Dwemer plate reflects in
+  the deep halls it was made for (indoors).
+- **Light materials** favour darkness and open sky: Leather sneaks at night,
+  Hide runs outdoors, Glass is untouchable while unscratched.
+- **Cultural sets** reward their own: Nordic grants Nords extra Attack, Khajiit
+  gear pounces at night, Redguard kit surges when fatigue runs low.
+- **Faction sets** mirror their trade: Thieves Guild peaks on a night-time
+  indoor job, the Temple heals at wayshrines, guards fight best on the day shift.
+- **Class sets** (Light/Medium/Heavy Armor, Cloth) turn purely reactive so they
+  complement — not double — the material sets that share their items.
+
+Because items commonly belong to several sets at once (a Chuzei helm is also
+Bonemold, Dunmer, and Native), co-activating clusters are split into **lanes**:
+the specific set keeps the full-strength identity, umbrella sets add only
+echo-strength flats plus cultural conditionals, and the build script rejects
+any two co-maxable sets that duplicate a full-strength effect or spike the same
+effect on the same state. Conditions range from health/fatigue/magicka
+thresholds through time, sun, and location to race, level, skill/attribute
+mastery, and AND/OR combinations.
+
+Weakness drawbacks stay (a few are conditional too) and both magnitude sliders
+still apply. All 136 sets are covered; entries for absent add-ons are skipped.
+Only conditions that evaluate natively on **both engines** are used, so MWSE and
+OpenMW behave identically. Install alongside Set Bonus 1.6+:
+
+| Engine | Install | Uninstall |
+|--------|---------|-----------|
+| MWSE | copy `MWSE/mods/Static/SetBonusRebalance` in | delete the folder |
+| OpenMW | add `OpenMW_SetBonusRebalance` as a data dir, enable `setbonus_rebalance.omwscripts` | disable the content file |
+
+Full design notes and the complete per-set spell list:
+`SetBonus_Rebalance_Reference.md`.
 
 ## Companion modules
 
@@ -210,8 +259,15 @@ MWSE: `event.trigger("Static:SetBonusFlag", { reference = ref, id = 'combat', va
 
 Both engines also offer `amendSet` (append items/effects, tweak thresholds),
 `addItems`, `registerSetLink`, query helpers, and a way to fully replace or
-disable a set. MWSE fires a `Static:SetBonusChanged` event on tier changes. See
-the full guides:
+disable a set. On OpenMW, interface **v2** adds `registerSets(list)` (and the
+`SetBonus_registerSets` event) to register many sets with a single rebuild and
+actor recompute — the Conditional Rebalance applies all 136 sets that way.
+MWSE fires a `Static:SetBonusChanged` event on tier changes.
+
+Shipping for both engines? Prefer conditions that evaluate natively everywhere
+(health/magicka/fatigue, attribute, skill, level, time, sun, location, race,
+class) — `combat`/`weather`/`flag` need fed-in state on OpenMW. See the full
+guides:
 
 - `MWSE/mods/Static/SetBonus/SetBonus_Interop_Guide.md`
 - `OpenMW_SetBonus/SetBonus_Interop_OpenMW.md`
@@ -237,7 +293,10 @@ MWSE/mods/Static/
   SetBonusOAAB/              Add-on for OAAB_Data support
   SetBonusNOD/               Add-on for NOD support
   SetBonusAATL/              Add-on for AATL support
-                       
+  SetBonusRebalance/         Optional Conditional Rebalance submodule (MWSE)
+    main.lua                 Applies the rebalance through the interop
+    data.lua                 Canonical rebalance definitions (both engines)
+
 OpenMW_SetBonus/
   setbonus.omwscripts        Main OpenMW content file
   scripts/SetBonus/
@@ -250,8 +309,16 @@ OpenMW_SetBonus/
     SetBonus_Interop_OpenMW.md Documentation for OpenMW mod authors
 OpenMW_SetBonus_Example/     Drop-in project example for OpenMW developers
 
+OpenMW_SetBonusRebalance/    Optional Conditional Rebalance submodule (OpenMW)
+  setbonus_rebalance.omwscripts  Content file for the submodule
+  scripts/SetBonusRebalance/
+    main.lua                 Applies the rebalance via I.SetBonus
+    data.lua                 Generated from the MWSE rebalance data
+
 SetBonus_Changelog.md        Full version history
-Set_Bonus_Spell_Reference.md Reference for all per-set effects
+Set_Bonus_Spell_Reference.md Reference for all per-set effects (default balance)
+SetBonus_Rebalance_Reference.md Reference for the Conditional Rebalance submodule
+gen_rebalance.py             Generates the OpenMW rebalance data + reference doc
 README.md                    Primary project documentation
 
 ```
@@ -261,8 +328,8 @@ generated from the MWSE set definitions so the two stay in sync.
 
 ## Changelog
 
-See `SetBonus_Changelog.md`. Current release: **1.6** (optional Consistent
-Enchanting and Inventory Extender integrations).
+See `SetBonus_Changelog.md`. Current release: **1.7** (optional Conditional
+Rebalance submodule for both engines).
 
 ## Credits & license
 

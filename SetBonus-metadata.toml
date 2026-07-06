@@ -4,7 +4,7 @@ description = "MWSE Set Bonus mod and framework: wear several pieces of an armou
 homepage = "https://www.nexusmods.com/morrowind/mods/52911"
 repository = "https://github.com/staticnation/set_bonus"
 authors = ["StaticNation"]
-version = "1.5.1"
+version = "1.7"
 
 [dependencies.mwse]
 buildnumber = 3242
