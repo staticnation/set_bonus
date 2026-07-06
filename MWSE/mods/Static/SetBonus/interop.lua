@@ -125,6 +125,27 @@ local function tokenize(name)
     return (name:lower():gsub("[^%w]", "_"))
 end
 
+-- Spell record ids are capped at 31 characters by the engine. Long display
+-- names can overflow once the tier and conditional suffixes are appended
+-- ("_sb_redguard_iron_lamellar_max_c1" is 33), so over-long ids are shortened
+-- and kept unique with a small hash of the full id. Deterministic, so the same
+-- set always regenerates the same id (safe across saves and re-registration).
+local function hash4(s)
+    local h = 5381
+    for i = 1, #s do h = (h * 33 + s:byte(i)) % 1679616 end -- 36^4
+    local digits, out = "0123456789abcdefghijklmnopqrstuvwxyz", ""
+    for _ = 1, 4 do
+        local d = (h % 36) + 1
+        out = digits:sub(d, d) .. out
+        h = math.floor(h / 36)
+    end
+    return out
+end
+local function clampId(id)
+    if #id <= 31 then return id end
+    return id:sub(1, 26) .. "_" .. hash4(id)
+end
+
 -- Map an item's inventory ICON to a set, so player-enchanted (or otherwise copied)
 -- versions of a set piece -- which get a new object id but keep the same icon --
 -- still count toward the set. Only resolvable in-game; file-scope registrations
@@ -157,7 +178,7 @@ function interop.buildSpellsForSet(set)
         for _, d in ipairs(defs) do
             if d.condition then cond[#cond + 1] = d else uncond[#uncond + 1] = d end
         end
-        local spellId = set.spellPrefix .. "_" .. tier
+        local spellId = clampId(set.spellPrefix .. "_" .. tier)
 
         if #uncond > 0 then
             assert(#uncond <= 8, string.format(
@@ -196,7 +217,7 @@ function interop.buildSpellsForSet(set)
         -- Conditional sub-spells: one single-effect ability per conditional effect.
         local list = {}
         for j, def in ipairs(cond) do
-            local cid = spellId .. "_c" .. j
+            local cid = clampId(spellId .. "_c" .. j)
             local cname = set.displayName .. " Bonus"
             if #cname > 31 then cname = set.displayName:sub(1, 25) .. " Bonus" end
             local spell = tes3.getObject(cid) or tes3.createObject({

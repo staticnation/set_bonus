@@ -239,8 +239,9 @@ end
 event.register("Static:RescaleBonuses", rescaleBonuses)
 
 -- -------------------------------------------------------------------------
--- Item tooltip: set, current progress, and each tier's effects (active tier
--- highlighted). Multi-set items list each set they belong to.
+-- Item tooltip: set, current progress, and the tier effects (active tier
+-- highlighted). Multi-set items list each set they belong to. The
+-- "tooltipDetail" setting picks how many tiers are listed.
 -- -------------------------------------------------------------------------
 local COLOR = {
     gold  = { 0.86, 0.72, 0.36 },
@@ -285,7 +286,7 @@ local function addEffectRow(block, eff, active, condDesc)
     line.flowDirection = "left_to_right"
     line.autoWidth = true
     line.autoHeight = true
-    line.paddingLeft = 10
+    line.paddingLeft = 0
     local me = tes3.getMagicEffect(eff.id)
     if me and me.icon then
         pcall(function()
@@ -305,6 +306,8 @@ end
 local function addSetBlock(tooltip, set, count, index, total)
     local tier = tierFor(set, count)
     local t = set.thresholds or DEFAULT_THRESHOLDS
+    local detail = settings.tooltipDetail or "compact"
+    local compact = detail ~= "full"
     local block = tooltip:createBlock{}
     block.flowDirection = "top_to_bottom"
     block.autoWidth = true
@@ -317,29 +320,57 @@ local function addSetBlock(tooltip, set, count, index, total)
         headerText = headerText .. string.format("  (%d of %d)", index, total)
     end
     local header = block:createLabel{ text = headerText }
-    header.color = COLOR.gold
-    local status = block:createLabel{}
-    if tier then
-        status.text = string.format("Wearing %d piece%s - %s bonus active",
-            count, count == 1 and "" or "s", TIER_LABEL[tier])
-        status.color = COLOR.green
-    else
-        status.text = string.format("Wearing %d piece%s - need %d to activate",
-            count, count == 1 and "" or "s", t.min)
-        status.color = COLOR.grey
+    -- Outside full mode there are no status lines at all: the header itself
+    -- goes green when the set is active, and the effects below carry the rest
+    -- (white/red = active, grey = preview).
+    header.color = (compact and tier) and COLOR.green or COLOR.gold
+    if not compact then
+        local status = block:createLabel{}
+        if tier then
+            status.text = string.format("Wearing %d piece%s - %s bonus active",
+                count, count == 1 and "" or "s", TIER_LABEL[tier])
+            status.color = COLOR.green
+        else
+            status.text = string.format("Wearing %d piece%s - need %d to activate",
+                count, count == 1 and "" or "s", t.min)
+            status.color = COLOR.grey
+        end
     end
-    for _, tk in ipairs(TIER_KEYS) do
+    -- Which tiers to list, per the tooltip-detail setting. "compact" (default)
+    -- shows only the active tier plus the next one to reach (or just the first
+    -- tier as a preview when nothing is active); "minimal" lists no effects.
+    local shownKeys
+    if detail == "minimal" then
+        shownKeys = {}
+    elseif detail == "full" then
+        shownKeys = TIER_KEYS
+    else
+        -- Compact: an active set shows only its active tier; a set that isn't
+        -- active always shows the first tier greyed as a preview of what it
+        -- gives. (Bare name-only headers are what "minimal" is for.)
+        shownKeys = {}
+        if tier then
+            shownKeys[#shownKeys + 1] = tier
+        else
+            shownKeys[#shownKeys + 1] = "min"
+        end
+    end
+    for _, tk in ipairs(shownKeys) do
         local spell = set[tk .. "Bonus"] and tes3.getObject(set[tk .. "Bonus"])
         local conds = set.conditionals and set.conditionals[tk]
         local hasCond = conds and #conds > 0
         if spell or hasCond then
             local active = (tier == tk)
             local reached = count >= t[tk]
-            local head = block:createLabel{
-                text = string.format("%d+ pieces%s", t[tk], active and "  << active" or ""),
-            }
-            head.color = active and COLOR.green or (reached and COLOR.white or COLOR.grey)
-            head.borderTop = 3
+            -- Threshold headers ("N+ pieces << active") only exist in full
+            -- mode; in compact the status line and effect colours carry it.
+            if not compact then
+                local head = block:createLabel{
+                    text = string.format("%d+ pieces%s", t[tk], active and "  << active" or ""),
+                }
+                head.color = active and COLOR.green or (reached and COLOR.white or COLOR.grey)
+                head.borderTop = 3
+            end
             if spell then
                 for i = 1, #spell.effects do
                     local eff = spell.effects[i]
@@ -370,13 +401,33 @@ local function objectTooltip(e)
         if config.sets[setName] then ordered[#ordered + 1] = setName end
     end
     if #ordered == 0 then return end
+    -- Render sets the player is actually progressing first: active tiers,
+    -- then partial progress, then untouched sets -- so if a very tall tooltip
+    -- ever clips, it clips the least useful blocks.
+    local counts = {}
+    for _, setName in ipairs(ordered) do
+        counts[setName] = tes3.player and countEquippedForSet(tes3.player, setName) or 0
+    end
     table.sort(ordered, function(a, b)
+        local ta = tierFor(config.sets[a], counts[a]) ~= nil
+        local tb = tierFor(config.sets[b], counts[b]) ~= nil
+        if ta ~= tb then return ta end
+        if counts[a] ~= counts[b] then return counts[a] > counts[b] end
         return config.sets[a].displayName:lower() < config.sets[b].displayName:lower()
     end)
+    e.tooltip:createDivider()
+    local setContainer = e.tooltip:createBlock{}
+    setContainer.flowDirection = "top_to_bottom"
+    setContainer.autoWidth = true
+    setContainer.widthProportional = 1.0
+    setContainer.autoHeight = true
+    setContainer.childAlignX = 0
+    setContainer.paddingLeft = 4
+    setContainer.paddingRight = 4 
+    setContainer.paddingBottom = 4
+    setContainer.paddingTop = 4
     for i, setName in ipairs(ordered) do
-        local set = config.sets[setName]
-        local count = tes3.player and countEquippedForSet(tes3.player, setName) or 0
-        addSetBlock(e.tooltip, set, count, i, #ordered)
+        addSetBlock(setContainer, config.sets[setName], counts[setName], i, #ordered)
     end
 end
 event.register(tes3.event.uiObjectTooltip, objectTooltip)

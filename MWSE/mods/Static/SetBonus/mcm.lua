@@ -54,6 +54,22 @@ local function registerModConfig()
         configKey = "showTooltip",
     }
 
+    general:createDropdown{
+        label = "Tooltip detail",
+        description = "How much of the set bonus to list on item tooltips.\n\n" ..
+            "Compact (default): the active tier's effects, or a greyed preview of the " ..
+            "first tier when the set isn't active. The set name turns green while its " ..
+            "bonus is active; no status or threshold text.\n" ..
+            "Full: every tier's effects with piece thresholds and progress lines.\n" ..
+            "Minimal: bare set names (green while active).",
+        options = {
+            { label = "Compact (active / preview)", value = "compact" },
+            { label = "Full (all tiers)", value = "full" },
+            { label = "Minimal (names only)", value = "minimal" },
+        },
+        configKey = "tooltipDetail",
+    }
+
     general:createOnOffButton{
         label = "Conditional bonuses",
         description = "Enable condition-gated effects (e.g. a bonus only below 50% health, at " ..

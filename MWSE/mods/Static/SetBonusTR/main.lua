@@ -9,6 +9,21 @@ local setBonus = require("Static.SetBonus.interop")
 local log = require("Static.SetBonus.logger")
 
 local function present(id) return tes3.getObject(id) ~= nil end
+local function anyPresent(ids)
+    for _, id in ipairs(ids) do
+        if tes3.getObject(id) ~= nil then return true end
+    end
+    return false
+end
+-- Gate for the RedWatch-chitin family (Dunmer / House Redoran / Watchman):
+-- checks several ids because single gate items have been renamed between
+-- Tamriel_Data releases before (T_A_DeChitinHelmOpen01_Hrpen went missing).
+local REDWATCH_GATE = {
+    "T_A_DeChitinHelmOpen01_Hrpen", "T_De_Chitin_HelmOpen_01",
+    "T_De_Chitin_PauldrL_01", "T_De_RedWatchChitin_Boots_01",
+    "T_De_RedWatchChitin_Cuirass_01", "T_De_Bonemold_Chuzei_Boots",
+    "T_De_AlmaRula_Helm_UNI",
+}
 
 local function registerTRSets()
     if not (setBonus and setBonus.version and setBonus.version >= 2) then
@@ -1236,7 +1251,7 @@ local function registerTRSets()
             },
         }
     end
-    if present("T_A_DeChitinHelmOpen01_Hrpen") then
+    if anyPresent(REDWATCH_GATE) then
         setBonus.registerSet{
             name = "Dunmer",
             displayName = "Dunmer",
@@ -1432,7 +1447,7 @@ local function registerTRSets()
             },
         }
     end
-    if present("T_A_DeChitinHelmOpen01_Hrpen") then
+    if anyPresent(REDWATCH_GATE) then
         setBonus.registerSet{
             name = "House Redoran",
             displayName = "House Redoran",
@@ -2012,7 +2027,7 @@ local function registerTRSets()
             },
         }
     end
-    if present("T_A_DeChitinHelmOpen01_Hrpen") then
+    if anyPresent(REDWATCH_GATE) then
         setBonus.registerSet{
             name = "Watchman",
             displayName = "Watchman",
@@ -2642,6 +2657,54 @@ local function registerTRSets()
             "T_De_MoragTong_Cuirass_01", "T_De_MoragTong_Greaves_01", "T_De_MoragTong_PauldronL_01",
             "T_De_MoragTong_PauldronR_01",
         })
+    end
+
+    -- ---------------------------------------------------------------------
+    -- Cultural umbrellas cover the VANILLA gear of the same craft, not just
+    -- the TR-made pieces, so identical-looking items behave alike (a vanilla
+    -- chitin gauntlet counts as Dunmer-made exactly like TR's mainland one).
+    -- Done as a runtime union so items other add-ons fold into the source
+    -- sets are inherited automatically. This module runs after the base sets
+    -- and the OAAB/NOD/AATL companions, so the source lists are complete.
+    -- ---------------------------------------------------------------------
+    local function extendSet(umbrella, sources)
+        if not setBonus.getSet(umbrella) then return end
+        for _, src in ipairs(sources) do
+            local from = setBonus.getSet(src)
+            if from and from.items then
+                setBonus.addItems(umbrella, from.items)
+            end
+        end
+    end
+    extendSet("Dunmer", { "Chitin", "Bonemold", "Netch Leather", "Dreugh", "Cephalopod", "House Indoril" })
+    extendSet("Altmer", { "Glass" })
+    extendSet("Orsimer", { "Orcish" })
+
+    -- ---------------------------------------------------------------------
+    -- Visibility: TR item ids drift between Tamriel_Data releases, and a set
+    -- whose gate item vanished used to disappear silently. Report anything
+    -- this module was expected to register but didn't.
+    -- ---------------------------------------------------------------------
+    local expectedTRSets = {
+        "Alessian Bronze", "Alit Hide", "Altmer", "Ancient Nordic", "Anvil",
+        "Argonian", "Ayleid", "Bal-Darum", "Breton", "Cataphract", "Chap-thil",
+        "Chev-Aram", "Chuzei", "Colovian Leather", "Companions", "Crown Guard",
+        "Daedric Hide", "Domina", "Dunmer", "Ebonweave", "Falkreath Guard",
+        "Gah'Kogo", "Gilded Glass", "Gold", "Golden Saint", "Guar Hide",
+        "House Direnni", "House Redoran", "Kagouti Hide", "Kalantar",
+        "Klibanion", "Kragen", "Kvetchi", "Lamellar", "Mananaut",
+        "Manatee Leather", "Maormer", "Maradlai", "Militia", "Molecrab",
+        "Narsis Watch", "Navy", "Necrom Guard", "Nibenese", "Oloman",
+        "Quey Chitin", "Reach", "Reach Royal Guard", "Red Dome Templar",
+        "Redguard", "Redguard Iron Lamellar", "Reman", "Rihad Guard",
+        "Riverwatch", "Rourken", "Sacred Lands", "Saliache", "Shellmold",
+        "Shinathi Chitin", "Shipal-Arai", "Skingrad", "Sutch Mail", "Thirr",
+        "Toadscale", "Watchman", "Wenbone", "Wormmouth",
+    }
+    for _, n in ipairs(expectedTRSets) do
+        if not setBonus.getSet(n) then
+            log:warn("SetBonusTR: set '%s' was NOT registered -- its gate item is missing from this Tamriel_Data version.", n)
+        end
     end
 
 end

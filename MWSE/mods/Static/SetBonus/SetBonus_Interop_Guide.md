@@ -55,7 +55,7 @@ Thresholds default to `2 / 4 / 6` and can be overridden per set (see below).
 | `minBonus` / `midBonus` / `maxBonus` | one of these two | IDs of ability spells you defined in your own ESP. |
 | `thresholds`  | no       | `{ min = 2, mid = 4, max = 6 }`. Any omitted tier uses the default. |
 | `displayName` | no       | Pretty name for notifications / generated spell names. Defaults to `name`. |
-| `spellPrefix` | no       | Prefix for generated spell IDs (Lua-defined sets only). Defaults to `_sb_<name>`. |
+| `spellPrefix` | no       | Prefix for generated spell IDs (Lua-defined sets only). Defaults to `_sb_<name>`. Long names are safe: ids that would exceed the engine's 31-character record-id cap are shortened deterministically (1.7+). |
 
 You must provide **either** a `bonuses` table **or** the `min/mid/maxBonus` spell IDs.
 
@@ -308,7 +308,15 @@ event.trigger("Static:SetBonusFlag", { reference = ref, id = "myflag", value = t
 Notes: dynamic state (HP, time, weather, ...) is re-checked about once a second,
 plus immediately on tier change. Conditional effects obey the magnitude sliders
 like any other effect, and each condition is evaluated safely -- a malformed
-condition just reads as false, never an error.
+condition just reads as false, never an error. Item tooltips label conditional
+effects automatically, e.g. `Fortify Attack 12 (when HP < 50%)`.
+
+**Cross-engine parity tip:** `combat` and `weather` evaluate natively on MWSE,
+but OpenMW's Lua can't read either -- there they depend on another script
+pushing state (see the OpenMW guide) and read false otherwise. If your mod
+ships for both engines, prefer the kinds that work natively everywhere:
+health/magicka/fatigue, attribute, skill, level, time, sun, location, race,
+class. The bundled Conditional Rebalance follows this rule.
 
 ## Notes & gotchas
 
@@ -317,7 +325,12 @@ condition just reads as false, never an error.
   your sets at mod load (file scope) or any time before then; sets registered after
   the game is running are built immediately. To link into *another* mod's sets, run
   on `initialized` at a lower priority — see *Load order & event priority*.
-- **Effect maximum:** an ability can hold at most 8 effects per tier.
+- **Effect maximum:** an ability can hold at most 8 effects per tier
+  (unconditional effects; each conditional effect becomes its own sub-spell).
+- **Spell ids are clamped (1.7+):** generated ids append tier and conditional
+  suffixes (`_max_c2`); anything over the engine's 31-character cap is
+  shortened with a deterministic hash, so long set names can't break the
+  spell build and the same set always regenerates the same ids.
 - **Over-time effects** (Restore Health/Magicka/Fatigue) need `duration = 1` to tick;
   state effects (Resist/Fortify/Shield/etc.) use `duration = 0`.
 - Effect / skill / attribute names follow MWSE's tables:
