@@ -158,9 +158,10 @@ end
 -- in the 'initialized' handler below.
 local function iconMeshSig(obj)
     local icon = obj and obj.icon
-    if not icon then return nil end
-    local mesh = obj.mesh
-    return icon:lower() .. "|" .. (mesh and mesh:lower() or "")
+    local mesh = obj and obj.mesh
+    -- Require BOTH icon and mesh (see main.lua): never degrade to icon-only.
+    if not (icon and icon ~= "" and mesh and mesh ~= "") then return nil end
+    return icon:lower() .. "|" .. mesh:lower()
 end
 local function linkIconFor(itemId, setName)
     if not gameInitialized then return end

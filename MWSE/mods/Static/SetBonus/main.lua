@@ -45,9 +45,12 @@ end
 -- id-link.
 local function iconMeshSig(obj)
     local icon = obj and obj.icon
-    if not icon then return nil end
-    local mesh = obj.mesh
-    return icon:lower() .. "|" .. (mesh and mesh:lower() or "")
+    local mesh = obj and obj.mesh
+    -- Require BOTH icon and mesh: the fallback must never degrade to icon-only
+    -- (that's the cross-match bug it exists to prevent). A record with no mesh
+    -- falls back to id matching only.
+    if not (icon and icon ~= "" and mesh and mesh ~= "") then return nil end
+    return icon:lower() .. "|" .. mesh:lower()
 end
 local function objInSet(obj, setName, baseId)
     local id = obj.id and obj.id:lower()
