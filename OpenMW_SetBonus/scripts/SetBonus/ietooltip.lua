@@ -56,18 +56,25 @@ local function scaledMag(e)
 end
 
 -- ---- set membership index (built lazily, in-game) --------------------------
+-- Icon+mesh signature, not icon alone -- see global.lua for why (icon-replacer
+-- mods like NOD reuse the same icon across unrelated armor records; requiring
+-- the mesh too keeps the enchant/copy fallback from cross-matching those).
 local ICON_TYPES = { types.Armor, types.Clothing, types.Weapon }
 local function iconForId(id)
     for _, t in ipairs(ICON_TYPES) do
         local ok, rec = pcall(t.record, id)
-        if ok and rec and rec.icon and rec.icon ~= '' then return rec.icon:lower() end
+        if ok and rec and rec.icon and rec.icon ~= '' then
+            return rec.icon:lower() .. '|' .. (rec.model and rec.model:lower() or '')
+        end
     end
 end
 local function iconForObj(o)
     for _, t in ipairs(ICON_TYPES) do
         if t.objectIsInstance(o) then
             local r = t.record(o)
-            if r and r.icon and r.icon ~= '' then return r.icon:lower() end
+            if r and r.icon and r.icon ~= '' then
+                return r.icon:lower() .. '|' .. (r.model and r.model:lower() or '')
+            end
             return nil
         end
     end
@@ -87,7 +94,12 @@ end
 local function iconMatchOn() return opt(cfg, 'matchByIcon', true) end
 local function setsForRecord(id, icon)
     local sids = {}
-    if id and itemLink[id] then for si in pairs(itemLink[id]) do sids[si] = true end end
+    -- Icon is a FALLBACK ONLY: if the record id is known, trust it and ignore the
+    -- icon, so mod helms reusing a vanilla icon can't add unrelated sets.
+    if id and itemLink[id] then
+        for si in pairs(itemLink[id]) do sids[si] = true end
+        return sids
+    end
     if iconMatchOn() and icon and iconLink[icon] then for si in pairs(iconLink[icon]) do sids[si] = true end end
     return sids
 end
@@ -100,7 +112,10 @@ local function equippedEntries()
     return list
 end
 local function inSet(entry, si)
-    if entry.id and itemLink[entry.id] and itemLink[entry.id][si] then return true end
+    -- Icon fallback only when the id isn't recognised at all (see setsForRecord).
+    if entry.id and itemLink[entry.id] then
+        return itemLink[entry.id][si] == true
+    end
     if iconMatchOn() and entry.icon and iconLink[entry.icon] and iconLink[entry.icon][si] then return true end
     return false
 end

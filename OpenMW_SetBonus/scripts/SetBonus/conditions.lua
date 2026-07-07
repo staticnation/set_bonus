@@ -2,6 +2,15 @@
 -- Runs in the GLOBAL context (called from global.lua): evaluates declarative
 -- condition descriptors against an actor and toggles per-effect sub-spells on/off.
 -- Descriptor format is identical to the MWSE side (plain data), so sets are portable.
+--
+-- Supported kinds (all read natively in the GLOBAL context on both engines):
+--   health/magicka/fatigue (fraction), attribute, skill, level, encumbrance (fraction),
+--   bounty, faction (rank 1-indexed / expelled), time, sun, location, region,
+--   race, class, sex, birthsign, werewolf, stance (weapon/spell/none).
+--   faction/bounty/birthsign are player-scoped.
+--   weather/combat are external only (driven via SetBonus_setFlag) -- no global read in OpenMW.
+-- NOTE: OpenMW's swimming / on-ground / sneaking reads are LOCAL-only, so they are
+--   deliberately NOT exposed here (they'd break cross-engine parity); use a flag for those.
 local core  = require('openmw.core')
 local types = require('openmw.types')
 
@@ -85,6 +94,62 @@ local function evalOne(c, actor)
         local lv = ok and st and st.current
         local op = OPS[c.op or ">="]
         return lv ~= nil and op ~= nil and op(lv, c.value)
+    elseif kind == "encumbrance" then
+        local okc, cur = pcall(function() return types.Actor.getEncumbrance(actor) end)
+        if not okc or cur == nil then return false end
+        local v = cur
+        if c.fraction then
+            local okp, cap = pcall(function() return types.Actor.getCapacity(actor) end)
+            v = (okp and cap and cap > 0) and (cur / cap) or 0
+        end
+        local op = OPS[c.op or "<"]
+        return op ~= nil and op(v, c.value)
+    elseif kind == "faction" then
+        -- Player-scoped for parity with MWSE (which only exposes player standing).
+        -- getFactionRank is 1-indexed, 0 if not a member; throws on unknown id.
+        if not (types.Player.objectIsInstance(actor) and c.id) then return false end
+        if c.expelled ~= nil then
+            local ok, isExp = pcall(function() return types.NPC.isExpelled(actor, c.id) end)
+            if not ok then return false end
+            if (isExp == true) ~= (c.expelled ~= false) then return false end
+        end
+        if c.value ~= nil then
+            local ok, rank = pcall(function() return types.NPC.getFactionRank(actor, c.id) end)
+            if not ok or rank == nil then return false end
+            local op = OPS[c.op or ">="]
+            if not (op and op(rank, c.value)) then return false end
+        end
+        return (c.expelled ~= nil) or (c.value ~= nil)
+    elseif kind == "bounty" then
+        if not types.Player.objectIsInstance(actor) then return false end
+        local ok, b = pcall(function() return types.Player.getCrimeLevel(actor) end)
+        local op = OPS[c.op or ">="]
+        return ok and b ~= nil and op ~= nil and op(b, c.value)
+    elseif kind == "werewolf" then
+        local ok, w = pcall(function() return types.NPC.isWerewolf(actor) end)
+        local is = ok and w == true
+        return is == (c.value ~= false)
+    elseif kind == "sex" then
+        local ok, rec = pcall(function() return types.NPC.record(actor) end)
+        if not (ok and rec) then return false end
+        return eqAny(c.value, rec.isMale and "male" or "female")
+    elseif kind == "birthsign" then
+        if not types.Player.objectIsInstance(actor) then return false end
+        local ok, bs = pcall(function() return types.Player.getBirthSign(actor) end)
+        return ok and bs ~= nil and eqAny(c.value, bs)
+    elseif kind == "region" then
+        local cel = actor.cell
+        local reg = cel and cel.region
+        if reg == nil then return false end
+        -- Cell.region may be an id string or a record; accept either.
+        local rid = (type(reg) == "table" and (reg.id or reg.name)) or reg
+        return rid ~= nil and eqAny(c.value, rid)
+    elseif kind == "stance" then
+        local ok, st = pcall(function() return types.Actor.getStance(actor) end)
+        if not ok then return false end
+        local S = types.Actor.STANCE
+        local s = (st == S.Weapon) and "weapon" or ((st == S.Spell) and "spell" or "none")
+        return eqAny(c.value, s)
     elseif kind == "time" then
         local h = hourOfDay()
         return eqAny(c.value, (h >= 6 and h < 20) and "day" or "night")
@@ -158,6 +223,22 @@ local function describeOne(c)
     elseif k == "attribute" or k == "skill" then
         return string.format("%s %s %s", c.id or k, c.op or ">=", tostring(c.value))
     elseif k == "level" then return "Level " .. (c.op or ">=") .. " " .. tostring(c.value)
+    elseif k == "encumbrance" then
+        local v = c.fraction and (math.floor(c.value * 100 + 0.5) .. "%") or tostring(c.value)
+        return string.format("load %s %s", c.op or "<", v)
+    elseif k == "faction" then
+        local parts = {}
+        if c.value ~= nil then parts[#parts + 1] = (c.id or "faction") .. " rank " .. (c.op or ">=") .. " " .. tostring(c.value) end
+        if c.expelled ~= nil then parts[#parts + 1] = (c.expelled ~= false) and ("expelled: " .. (c.id or "faction")) or ("in good standing: " .. (c.id or "faction")) end
+        return table.concat(parts, " & ")
+    elseif k == "bounty" then return "bounty " .. (c.op or ">=") .. " " .. tostring(c.value)
+    elseif k == "werewolf" then return (c.value ~= false) and "werewolf" or "not werewolf"
+    elseif k == "sex" then return tostring(c.value)
+    elseif k == "birthsign" then
+        return "sign: " .. (type(c.value) == "table" and table.concat(c.value, "/") or tostring(c.value))
+    elseif k == "region" then
+        return type(c.value) == "table" and table.concat(c.value, "/") or tostring(c.value)
+    elseif k == "stance" then return "stance: " .. tostring(c.value)
     elseif k == "time" or k == "location" then return tostring(c.value)
     elseif k == "sun" then return "sun " .. tostring(c.value)
     elseif k == "weather" or k == "race" or k == "class" then

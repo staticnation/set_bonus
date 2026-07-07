@@ -212,17 +212,25 @@ A `condition` is one descriptor, an array (all must hold = AND), `{ any = {...} 
 (OR), or `{ all = {...} }` (AND).
 
 Thresholds (`op` is `<  <=  >  >=  ==  ~=`): `health` / `magicka` / `fatigue`
-(`value`, `fraction=true` for 0-1 of max), `attribute` (`id`), `skill` (`id`),
-`level`. State (equality; `value` may be a list = any-of): `time` (`day`/`night`),
-`sun` (`up`/`down`), `location` (`interior`/`exterior`), `weather`, `race`,
-`class`, `combat`.
+(`value`, `fraction=true` for 0-1 of max), `encumbrance` (`value`, `fraction=true`
+for 0-1 of carry capacity), `attribute` (`id`), `skill` (`id`), `level`, `bounty`
+(`value`; player-only), `faction` (`id` plus `op`+`value` for rank, 1-indexed with
+0 = not a member, and/or `expelled = true`/`false`; player-only). State (equality;
+`value` may be a list = any-of): `time` (`day`/`night`), `sun` (`up`/`down`),
+`location` (`interior`/`exterior`), `region` (region id), `race`, `class`, `sex`
+(`male`/`female`), `birthsign` (id, e.g. `'The Warrior'`; player-only), `werewolf`
+(`true`/`false`), `stance` (`weapon`/`spell`/`none`), `weather`, `combat`.
 
 OpenMW notes:
 
 - Skill/attribute `id`s are lowercased before lookup, so the MWSE spellings work
   too (`"longBlade"` -> `longblade`, `"strength"` -> `strength`).
-- Supported directly on OpenMW (0.51+): health/magicka/fatigue, attribute, skill,
-  level, location, race, class, time, sun (time/sun read the in-world `GameHour`).
+- Supported directly on OpenMW (0.51+): health/magicka/fatigue, encumbrance,
+  attribute, skill, level, bounty, faction, location, region, race, class, sex,
+  birthsign, werewolf, stance, time, sun (time/sun read the in-world `GameHour`;
+  faction/rank via `types.NPC.getFactionRank`/`isExpelled`, region via
+  `cell.region`, werewolf via `types.NPC.isWerewolf`, stance via
+  `types.Actor.getStance`). `faction`, `bounty`, and `birthsign` are player-scoped.
 - `combat`, `weather`, and any custom `flag` are **fed in by another script**,
   since OpenMW's Lua exposes neither current weather nor an actor's combat state.
   Push state with the `SetBonus_setFlag` global event and the matching condition
@@ -247,10 +255,12 @@ OpenMW notes:
   tier change and on `SetBonus_setFlag`. Each condition is evaluated safely (a
   bad condition reads as false, never an error).
 - **Cross-engine parity tip:** if your mod ships for both engines, prefer the
-  kinds that evaluate natively on both — health/magicka/fatigue, attribute,
-  skill, level, time, sun, location, race, class — and treat `combat` /
-  `weather` / `flag` as OpenMW-optional extras (they read false until another
-  script pushes state). The bundled Conditional Rebalance follows this rule.
+  kinds that evaluate natively on both — health/magicka/fatigue, encumbrance,
+  attribute, skill, level, bounty, faction, time, sun, location, region, race,
+  class, sex, birthsign, werewolf, stance — and treat `combat` / `weather` /
+  `flag` as OpenMW-optional extras (they read false until another script, or the
+  optional Flag Companion, pushes state). The bundled Conditional Rebalance
+  follows this rule.
 - Conditional effects are labelled on Inventory Extender item tooltips
   automatically, e.g. `Fortify Attack 12 (when HP < 50%)`.
 

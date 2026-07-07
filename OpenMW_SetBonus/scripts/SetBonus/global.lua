@@ -60,39 +60,52 @@ local function roundScale(base, scale)
     return v
 end
 
--- Icon matching: a player-enchanted or copied set piece gets a new record id but
--- keeps the base item's inventory icon, so we also index sets by icon path.
+-- Icon+mesh matching: a player-enchanted or copied set piece gets a new record id
+-- but keeps the base item's inventory icon AND model, so we index sets by that
+-- combined signature. Icon alone is not safe: icon-replacer/compilation mods
+-- (e.g. NOD) routinely point unrelated armor records at the same shared icon to
+-- save texture slots, which would otherwise false-match e.g. an unrelated House
+-- Hlaalu helm onto an Indoril set purely because they share an icon file. Two
+-- different armor pieces essentially never also share a mesh, so requiring both
+-- keeps the "enchanted/copied item" fallback narrow to actual copies.
 local ICON_TYPES = { types.Armor, types.Clothing, types.Weapon }
-local function iconForRecordId(id)
+local function iconMeshForRecordId(id)
     for _, t in ipairs(ICON_TYPES) do
         local ok, rec = pcall(t.record, id)
-        if ok and rec and rec.icon and rec.icon ~= '' then return rec.icon end
+        if ok and rec and rec.icon and rec.icon ~= '' then return rec.icon, rec.model end
     end
-    return nil
+    return nil, nil
 end
-local function iconForObject(obj)
+local function iconMeshForObject(obj)
     for _, t in ipairs(ICON_TYPES) do
         if t.objectIsInstance(obj) then
             local rec = t.record(obj)
-            if rec and rec.icon and rec.icon ~= '' then return rec.icon end
-            return nil
+            if rec and rec.icon and rec.icon ~= '' then return rec.icon, rec.model end
+            return nil, nil
         end
     end
-    return nil
+    return nil, nil
+end
+-- Combined lookup key: icon path is the primary signal, mesh path disambiguates
+-- unrelated items that happen to share an icon. Returns nil if there's no icon
+-- to key on at all (nothing to fall back to).
+local function iconMeshSig(icon, mesh)
+    if not icon then return nil end
+    return icon:lower() .. '|' .. (mesh and mesh:lower() or '')
 end
 local function listHas(list, si)
     if not list then return false end
     for _, x in ipairs(list) do if x == si then return true end end
     return false
 end
--- Map one set's item icons to its index (deduped).
+-- Map one set's item icon+mesh signatures to its index (deduped).
 local function linkIconsForSet(si)
     for _, it in ipairs(data[si].items) do
-        local icon = iconForRecordId(it)
-        if icon then
-            local k = icon:lower()
-            local list = iconLink[k]
-            if not list then list = {}; iconLink[k] = list end
+        local icon, mesh = iconMeshForRecordId(it)
+        local sig = iconMeshSig(icon, mesh)
+        if sig then
+            local list = iconLink[sig]
+            if not list then list = {}; iconLink[sig] = list end
             if not listHas(list, si) then list[#list + 1] = si end
         end
     end
@@ -122,7 +135,7 @@ local function registerSettings()
                 key = 'matchByIcon',
                 renderer = 'checkbox',
                 name = 'Match enchanted/copied items by icon',
-                description = 'Also match set pieces by their inventory icon, so a player-enchanted or copied set item (new internal ID, same icon) still counts toward the set. Turn off for strict ID-only matching.',
+                description = 'Also match set pieces by their inventory icon and model, so a player-enchanted or copied set item (new internal ID, same icon+model) still counts toward the set. Turn off for strict ID-only matching.',
                 default = true,
             },
             {
@@ -542,8 +555,8 @@ local function equippedList(actor)
         local obj = types.Actor.getEquipment(actor, slot)
         if obj then
             local id = obj.recordId and obj.recordId:lower() or nil
-            local icon = iconForObject(obj)
-            list[#list + 1] = { id = id, icon = icon and icon:lower() or nil }
+            local icon, mesh = iconMeshForObject(obj)
+            list[#list + 1] = { id = id, icon = iconMeshSig(icon, mesh) }
         end
     end
     return list
@@ -575,9 +588,14 @@ local function recompute(actor)
         local useIcon = matchByIconEnabled()
         local candidates = {}
         for _, it in ipairs(eq) do
+            -- Icon is a FALLBACK ONLY: if the item is recognised by its id, trust
+            -- that and ignore its icon, so mod helms that reuse a vanilla icon (e.g.
+            -- the Indoril helmet icon) can't pull an item into unrelated sets. Icon
+            -- still catches copies/enchants that have a new id and no id-link.
             local byId = it.id and itemLink[it.id]
-            if byId then for _, si in ipairs(byId) do candidates[si] = true end end
-            if useIcon and it.icon then
+            if byId then
+                for _, si in ipairs(byId) do candidates[si] = true end
+            elseif useIcon and it.icon then
                 local byIcon = iconLink[it.icon]
                 if byIcon then for _, si in ipairs(byIcon) do candidates[si] = true end end
             end
@@ -586,8 +604,9 @@ local function recompute(actor)
             local s = data[si]
             local count = 0
             for _, it in ipairs(eq) do
-                if listHas(it.id and itemLink[it.id], si)
-                    or (useIcon and listHas(it.icon and iconLink[it.icon], si)) then
+                local byId = it.id and itemLink[it.id]
+                if listHas(byId, si)
+                    or (not byId and useIcon and listHas(it.icon and iconLink[it.icon], si)) then
                     count = count + 1
                 end
             end

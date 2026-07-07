@@ -1383,6 +1383,35 @@ return {
     },
   },
   {
+    -- Snow Prince: the PRE-FALL Snow Elves (the Ice Armour). Proud and sighted,
+    -- so no daylight weakness -- the mirror of the post-fall "Falmer" below.
+    name = "Snow Prince",
+    thresholds = { min=2, mid=4, max=6 },
+    bonuses = {
+      min = {
+        {effect="resistfrost", mag=10},
+        {effect="fortifyattribute", attribute="agility", mag=3},
+      },
+      mid = {
+        {effect="resistfrost", mag=15},
+        {effect="fortifyattribute", attribute="agility", mag=5},
+        {effect="resistmagicka", mag=8},
+      },
+      max = {
+        {effect="resistfrost", mag=20},
+        {effect="fortifyattribute", attribute="agility", mag=8},
+        {effect="resistmagicka", mag=12},
+        {effect="sanctuary", mag=10},
+      },
+    },
+    items = {
+      "bm_ice_boots", "bm_ice_cuirass", "bm_ice_gauntletl", "bm_ice_gauntletr",
+      "bm_ice_greaves", "bm_ice_helmet", "bm_ice_pauldronl", "bm_ice_pauldronr",
+      "bm_ice_shield",
+    },
+  },
+  {
+    -- Falmer: the POST-FALL Betrayed -- blind, sun-shunning cave-dwellers.
     name = "Falmer",
     thresholds = { min=2, mid=4, max=6 },
     bonuses = {
