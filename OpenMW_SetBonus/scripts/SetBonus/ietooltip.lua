@@ -60,11 +60,12 @@ end
 -- mods like NOD reuse the same icon across unrelated armor records; requiring
 -- the mesh too keeps the enchant/copy fallback from cross-matching those).
 local ICON_TYPES = { types.Armor, types.Clothing, types.Weapon }
+-- Require BOTH icon and mesh: never degrade to icon-only (see global.lua).
 local function iconForId(id)
     for _, t in ipairs(ICON_TYPES) do
         local ok, rec = pcall(t.record, id)
-        if ok and rec and rec.icon and rec.icon ~= '' then
-            return rec.icon:lower() .. '|' .. (rec.model and rec.model:lower() or '')
+        if ok and rec and rec.icon and rec.icon ~= '' and rec.model and rec.model ~= '' then
+            return rec.icon:lower() .. '|' .. rec.model:lower()
         end
     end
 end
@@ -72,8 +73,8 @@ local function iconForObj(o)
     for _, t in ipairs(ICON_TYPES) do
         if t.objectIsInstance(o) then
             local r = t.record(o)
-            if r and r.icon and r.icon ~= '' then
-                return r.icon:lower() .. '|' .. (r.model and r.model:lower() or '')
+            if r and r.icon and r.icon ~= '' and r.model and r.model ~= '' then
+                return r.icon:lower() .. '|' .. r.model:lower()
             end
             return nil
         end

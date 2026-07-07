@@ -90,8 +90,10 @@ end
 -- unrelated items that happen to share an icon. Returns nil if there's no icon
 -- to key on at all (nothing to fall back to).
 local function iconMeshSig(icon, mesh)
-    if not icon then return nil end
-    return icon:lower() .. '|' .. (mesh and mesh:lower() or '')
+    -- Require BOTH icon and mesh: the fallback must never degrade to icon-only
+    -- (the cross-match bug it exists to prevent). Meshless records use id only.
+    if not (icon and icon ~= '' and mesh and mesh ~= '') then return nil end
+    return icon:lower() .. '|' .. mesh:lower()
 end
 local function listHas(list, si)
     if not list then return false end
