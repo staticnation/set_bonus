@@ -53,7 +53,9 @@ RESTORE = {"restoreHealth", "restoreMagicka", "restoreFatigue"}
 # Conditions that evaluate natively on BOTH engines. combat/weather/flag are
 # deliberately excluded for MWSE/OpenMW parity (OpenMW 0.51 cannot read them).
 COND_KINDS = {"health", "magicka", "fatigue", "attribute", "skill", "level",
-              "time", "sun", "location", "race", "class"}
+              "time", "sun", "location", "race", "class",
+              "encumbrance", "faction", "bounty",
+              "werewolf", "sex", "birthsign", "region", "stance"}
 OPS = {"<", "<=", ">", ">=", "==", "~="}
 
 errors = []
@@ -111,8 +113,9 @@ def check_condition(c, where):
         err(f"{where}: condition kind '{kind}' is not cross-engine safe "
             f"(allowed: {sorted(COND_KINDS)})")
         return
-    if kind in ("health", "magicka", "fatigue", "attribute", "skill", "level"):
-        op = c.get("op", "<" if kind in ("health", "magicka", "fatigue") else ">=")
+    if kind in ("health", "magicka", "fatigue", "attribute", "skill", "level",
+                "encumbrance", "bounty"):
+        op = c.get("op", "<" if kind in ("health", "magicka", "fatigue", "encumbrance") else ">=")
         if op not in OPS:
             err(f"{where}: bad op '{op}'")
         if not isinstance(c.get("value"), (int, float)):
@@ -121,12 +124,38 @@ def check_condition(c, where):
             err(f"{where}: unknown attribute id '{c.get('id')}'")
         if kind == "skill" and c.get("id") not in SKILLS:
             err(f"{where}: unknown skill id '{c.get('id')}'")
+    elif kind == "faction":
+        # Player-scoped; 1-indexed rank (0 = not a member) and/or expelled flag.
+        if not isinstance(c.get("id"), str) or not c["id"]:
+            err(f"{where}: faction needs a string 'id'")
+        has_rank = "value" in c
+        if has_rank:
+            if c.get("op", ">=") not in OPS:
+                err(f"{where}: bad op '{c.get('op')}'")
+            if not isinstance(c.get("value"), (int, float)):
+                err(f"{where}: faction rank 'value' must be numeric")
+        if "expelled" in c and not isinstance(c.get("expelled"), bool):
+            err(f"{where}: faction 'expelled' must be boolean")
+        if not has_rank and "expelled" not in c:
+            err(f"{where}: faction needs a rank 'value' and/or an 'expelled' flag")
     elif kind == "time" and c.get("value") not in ("day", "night"):
         err(f"{where}: time value must be day|night")
     elif kind == "sun" and c.get("value") not in ("up", "down"):
         err(f"{where}: sun value must be up|down")
     elif kind == "location" and c.get("value") not in ("interior", "exterior"):
         err(f"{where}: location value must be interior|exterior")
+    elif kind == "werewolf":
+        if "value" in c and not isinstance(c.get("value"), bool):
+            err(f"{where}: werewolf 'value' must be boolean (default true)")
+    elif kind == "sex" and c.get("value") not in ("male", "female"):
+        err(f"{where}: sex value must be male|female")
+    elif kind == "stance" and c.get("value") not in ("weapon", "spell", "none"):
+        err(f"{where}: stance value must be weapon|spell|none")
+    elif kind in ("birthsign", "region"):
+        v = c.get("value")
+        ok = isinstance(v, str) or (isinstance(v, list) and v and all(isinstance(x, str) for x in v))
+        if not ok:
+            err(f"{where}: {kind} value must be a string id or list of string ids")
 
 
 def check_effect(e, where):
@@ -284,7 +313,7 @@ def cond_lua(c):
     if isinstance(c, list):
         return "{ " + ", ".join(cond_lua(x) for x in c) + " }"
     parts = []
-    for key in ("kind", "op", "id", "value", "fraction", "any", "all"):
+    for key in ("kind", "op", "id", "value", "fraction", "expelled", "any", "all"):
         if key not in c:
             continue
         v = c[key]
@@ -401,6 +430,32 @@ def cond_text(c):
     if kind == "class":
         v = c["value"]
         return "class " + (" / ".join(v) if isinstance(v, list) else str(v))
+    if kind == "encumbrance":
+        v = c["value"]
+        val = f"{int(round(v * 100))}% load" if c.get("fraction") else f"{num(v)} carried"
+        return f"{c.get('op', '<')} {val}"
+    if kind == "faction":
+        parts = []
+        if "value" in c:
+            parts.append(f"{c['id']} rank {c.get('op', '>=')} {num(c['value'])}")
+        if "expelled" in c:
+            parts.append(f"expelled from {c['id']}" if c["expelled"] else f"in good standing with {c['id']}")
+        return " and ".join(parts)
+    if kind == "bounty":
+        return f"bounty {c.get('op', '>=')} {num(c['value'])}"
+    if kind == "werewolf":
+        return "in werewolf form" if c.get("value", True) else "not in werewolf form"
+    if kind == "sex":
+        return f"{c['value']} only"
+    if kind == "birthsign":
+        v = c["value"]
+        return "born under " + (" / ".join(v) if isinstance(v, list) else str(v))
+    if kind == "region":
+        v = c["value"]
+        return "in " + (" / ".join(v) if isinstance(v, list) else str(v))
+    if kind == "stance":
+        return {"weapon": "weapon drawn", "spell": "spell readied",
+                "none": "weapon sheathed"}.get(c["value"], str(c["value"]))
     return "?"
 
 

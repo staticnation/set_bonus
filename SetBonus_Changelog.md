@@ -1,5 +1,95 @@
 # Set Bonus — Changelog
 
+## 1.7.1 — Fully populated Armor-class sets (in progress)
+
+**Added**
+
+- **Heavy / Medium / Light Armor class sets, fully populated by weight class.**
+  Every armour piece across the base game and all supported add-ons (Tamriel
+  Rebuilt, OAAB, NOD, AATL — shields included) is now bucketed into its
+  Heavy/Medium/Light Armor set from the armour dumps by its engine weight tag,
+  instead of the previous hand-picked rosters. Base game 160 Heavy / 112 Medium
+  / 136 Light; combined with add-ons the OpenMW class sets carry 728 / 707 /
+  1105 items. Rosters are generated (and re-generatable) with
+  `gen_class_sets.py`, which de-dupes add-on ids against the base game and
+  writes the MWSE base set files, the managed `addItems` blocks in each add-on,
+  and the OpenMW `data.lua` arrays.
+- **Rebalance class sets re-tuned as echo umbrellas.** Because the class sets
+  now overlap nearly every material set, the Conditional Rebalance keeps them as
+  echo-strength umbrellas (echo-capped shared flats plus a class-*skill*
+  conditional that no material set carries — `fortifySkill heavyArmor` /
+  `mediumArmor` / `lightArmor`), so a full material outfit layers with its class
+  set instead of doubling it. `gen_rebalance.py` stacking validation stays clean.
+
+- **Eight new cross-engine condition kinds** — the conditional framework now
+  exposes every player/actor state both MWSE and OpenMW 0.51 can read natively in
+  the evaluation context, roughly tripling the vocabulary authors can build sets
+  on. All evaluate identically on both engines (no external driver), so set data
+  stays portable:
+    - `encumbrance` — carried weight as a fraction of capacity (or absolute).
+    - `faction` — rank (1-indexed; 0 = not a member) and/or `expelled` standing.
+    - `bounty` — the player's crime level.
+    - `region` — the wearer's current region id (e.g. Sheogorad, Solstheim).
+    - `birthsign` — the player's birthsign id.
+    - `sex` — male / female.
+    - `werewolf` — whether the actor is currently in werewolf form.
+    - `stance` — weapon drawn / spell readied / sheathed.
+  `faction`, `bounty`, and `birthsign` are player-scoped (evaluate false for
+  NPCs). `gen_rebalance.py` validates every new kind. Weather/combat/movement
+  remain external-flag-only (OpenMW can't read them in the global context) and
+  are still kept out of core data to preserve engine parity.
+- **Conditional Rebalance: situational drawbacks + a deeper conditional pass on
+  every set.** All weakness drawbacks across the submodule (base materials,
+  cultures, factions, and all Tamriel Rebuilt sets) are now **situational** rather
+  than flat — each one bites only in its thematic bad moment, at a slightly
+  steeper magnitude to offset the reduced uptime: heavy metals can't shed a bolt
+  under a full pack, leathers and furs catch fire near a hearth, resin/chitin go
+  brittle in the cold dark, Daedric punishes cowards who dodge the fight, Falmer
+  and vampiric gear suffer in daylight, and lawful/holy armour spurns a wanted
+  wearer. New ESO- and lore-inspired situational *spikes* thread the new kinds
+  through the sets: rank-scaling faction gear (Fighters/Mages/Thieves Guild,
+  Morag Tong, Hlaalu, Telvanni, Redoran, and the Temple lines reward standing),
+  werewolf-blood on Nordic/Orsimer/Companions, an unburdened-archer bonus on
+  Bosmer, homeland regions, stance-gated first strikes, and birthsign resonance.
+  The submodule now carries 460 conditional effects across all 137 sets;
+  `gen_rebalance.py` reports stacking rules clean.
+- **Snow Prince / Falmer split.** The Snow Prince's Ice Armour is now its own
+  **Snow Prince** set — the pre-fall Snow Elves: sighted, proud, and strongest
+  under open sky (no daylight penalty) — the deliberate mirror of the post-fall
+  **Falmer** set (the blind, sun-shunning Betrayed, which keeps its daylight
+  weakness). Fixes the lore mismatch of noble Snow Elf gear inheriting the
+  Betrayed's sun aversion. The Ice Armour still counts toward Nordic/Stalhrim/its
+  weight-class sets too (overlap intended). 137 sets total.
+- **Optional Flag Companion** (`SetBonusFlags`, both engines) — bridges runtime
+  state the core framework can't read cross-engine (combat, weather, movement,
+  swimming, sneaking) into Set Bonus's external flag hook, so author-defined sets
+  can use `{ kind = "flag", id = "..." }` conditions. MWSE provides all five;
+  OpenMW provides `swimming`/`moving` (its Lua API can't read weather or combat),
+  leaving the hook open for other mods to feed the rest. Purely opt-in — nothing
+  in the base mod or the Rebalance depends on it, and flag/combat/weather kinds
+  stay barred from the shipped rebalance data to preserve parity. See
+  `SetBonus_Flags_Companion.md`.
+
+**Fixed**
+
+- **Icon-only enchant/copy matching could cross-match unrelated items.** The
+  optional fallback that matches player-enchanted or copied set pieces (which
+  get a new internal ID but keep their source item's inventory icon) matched on
+  icon alone. An icon-replacer or compilation add-on that points an unrelated
+  armour record at the same icon as a set piece — e.g. a NOD helm reusing the
+  vanilla Indoril helmet icon — could therefore be wrongly counted toward that
+  set. The fallback now also requires the item's **mesh** to match: an
+  enchanted/copied item always inherits both its source's icon and mesh, while
+  two genuinely different armour pieces essentially never share a mesh even
+  when a texture pack points them at the same icon. Closes the false-positive
+  without weakening enchant/copy matching itself. Both engines; no setting
+  changes needed ("Match enchanted/copied items by icon" still covers it).
+
+**Planned (see `BRIEFING_SetBonus_1.7.1_Roadmap.md`)**
+
+- Per-set region conditionals for the Tamriel Rebuilt mainland (pending
+  confirmation of TR region record ids).
+
 ## 1.7 — Conditional Rebalance (optional submodule, MWSE & OpenMW)
 
 **Added**

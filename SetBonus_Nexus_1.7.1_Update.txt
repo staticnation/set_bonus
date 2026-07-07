@@ -1,0 +1,39 @@
+[center][size=5][b]Set Bonus 1.7.1 — Reactive Armour[/b][/size]
+[i]Every set now reacts to the moment — and every drawback bites only when it should.[/i]
+[color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+1.7.1 is a content-and-framework update. No new plugin, no save cleaning — drop it in over 1.7.
+
+[size=4][b]✦ Situational drawbacks[/b][/size]
+Every set's Weakness is now [b]conditional[/b] instead of a flat, always-on penalty. Each one only bites in its thematic bad moment (at a slightly steeper magnitude to make up for it):
+[list]
+[*]Metals can't shed a bolt while you're [b]overburdened[/b].
+[*]Leathers and furs catch fire near a [b]hearth[/b] (indoors).
+[*]Resin and chitin go brittle in the [b]cold dark[/b].
+[*]Daedric punishes [b]cowards[/b] who keep their weapon sheathed and unhurt.
+[*]Falmer relics still burn in [b]daylight[/b].
+[/list]
+Set the drawback slider to 0 to skip them entirely, as always.
+
+[size=4][b]✦ A much wider condition vocabulary[/b][/size]
+The conditional framework now reads eight new states — identically on [b]both engines[/b], no external tools:
+[list]
+[*][b]Carry weight[/b] — reward travelling light, or punish a full pack.
+[*][b]Faction rank & standing[/b] — guild and Great House gear that grows once you make rank; expulsion has teeth.
+[*][b]Bounty[/b] — lawful and holy armour spurns a wanted wearer.
+[*][b]Region[/b] — homeland gear that shines where it belongs.
+[*][b]Birthsign[/b], [b]werewolf form[/b], and [b]weapon stance[/b] — the stars, the beast-blood, and the drawn blade.
+[/list]
+These are threaded through the optional [b]Conditional Rebalance[/b]: rank-scaling faction sets, werewolf-blood on Nordic/Orsimer/Companions, Bosmer's light-pack archery, stance-gated assassin strikes, and more — 460 conditional effects across all 137 sets, stacking-verified.
+
+[size=4][b]✦ Full Armor-class sets[/b][/size]
+Heavy / Medium / Light Armor now include [b]every[/b] piece of their weight class across the base game and all supported add-ons (Tamriel Rebuilt, OAAB, NOD, AATL — shields included), generated straight from the armour data.
+
+[size=4][b]✦ Optional Flag Companion[/b][/size]
+A tiny new opt-in add-on that feeds [b]combat, weather, and movement[/b] to the framework, so mod authors can build sets that react to them. Not needed for the base mod. (MWSE gets all of it; OpenMW gets swimming/movement — its Lua can't read weather or combat — with the hook left open for a dedicated mod.)
+
+[size=4][b]✦ Also fixed[/b][/size]
+Enchanted/copied-item matching now checks an item's mesh in addition to its icon. Previously, an unrelated add-on item that happened to reuse a vanilla icon (some NOD pieces share the Indoril helmet icon, for instance) could be wrongly counted toward that set; it no longer can.
+
+[color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
+[b]Update:[/b] overwrite your existing install. If you run the optional Conditional Rebalance, refresh that folder too. Safe to update mid-playthrough.

@@ -24,13 +24,15 @@ This page hosts both. Grab the one that matches your setup:
 [list]
 [*][b]130+ armour sets[/b] across every vanilla material and culture, plus Tribunal & Bloodmoon.
 [*][b]Three tiers per set[/b] — bonuses scale up at [b]2[/b], [b]4[/b], and [b]6+[/b] equipped pieces.
-[*][b]Conditional bonuses (New in 1.6)[/b] — Sets can now contain sub-effects that toggle dynamically based on your runtime state, like dropping below 50% Health, fighting at night, or entering combat.
-[*][b]Conditional Rebalance (New in 1.7, optional)[/b] — don't like the default bonuses? An optional submodule (both engines) replaces every set's effects with a spikier, condition-driven balance built on the 1.6 framework. Delete it to go back — details below.
+[*][b]Conditional bonuses (New in 1.6, expanded in 1.7.1)[/b] — Sets can contain sub-effects that toggle dynamically with your runtime state: dropping below 50% Health, night vs day, indoors vs out, a region of the map, your carry weight, your rank or standing in a faction, your bounty, your birthsign, werewolf form, or having a weapon drawn — singly or combined with AND/OR.
+[*][b]Conditional Rebalance (New in 1.7, deepened in 1.7.1, optional)[/b] — don't like the default bonuses? An optional submodule (both engines) replaces every set's effects with a spikier, condition-driven balance. As of 1.7.1 every set's weakness drawback is [i]situational[/i] and the new state vocabulary is threaded throughout. Delete it to go back — details below.
+[*][b]Full Armor-class sets (New in 1.7.1)[/b] — the Heavy / Medium / Light Armor sets now include [i]every[/i] piece of their weight class across the base game and all supported add-ons, auto-generated from the armour data.
+[*][b]Flag Companion (New in 1.7.1, optional)[/b] — a small opt-in add-on that feeds combat, weather, and movement state to the framework so author-made sets can react to them. Not needed for the base mod; details below.
 [*][b]Restrained, flat balance[/b] — modest bonuses that barely grow at the top tier, so they enhance rather than trivialise. Vanilla magic effects only.
 [*][b]Thematic trade-offs[/b] — many sets carry a mild Weakness at mid/max (metal → shock, fur/hide → fire, chitin/glass → frost, Altmer → magicka), giving each set an identity and counterplay (it applies to NPCs too).
 [*][b]Players and NPCs[/b] — fully-kitted NPCs benefit too (toggleable).
 [*][b]Tune it to taste[/b] — two independent sliders scale the [b]benefits[/b] and the [b]weakness drawbacks[/b] separately (25–300% / 0–300%). Want the flavour without the downside? Set drawbacks to 0. Want a bigger power fantasy? Crank benefits up. Changes apply instantly.
-[*][b]Enchant-friendly[/b] — set pieces are matched by inventory icon as well as by ID, so a player-[i]enchanted[/i] copy of a set item still counts toward the bonus (toggleable).
+[*][b]Enchant-friendly[/b] — set pieces are matched by inventory icon and mesh, as well as by ID, so a player-[i]enchanted[/i] copy of a set item still counts toward the bonus (toggleable). Icon alone isn't used for this — a separate item that merely reuses the same icon (some texture-pack/compilation add-ons do this) won't be pulled in by mistake.
 [*][b]Informative tooltips[/b] — hover a set piece to see the set, your current progress, and its effects; the active tier is highlighted. [b]Compact by default (new in 1.7)[/b]: just the active tier's effects — or a greyed preview of what the set gives when it isn't active — with Full (all tiers) and Minimal (bare set names) modes in the options. Built in on MWSE; on OpenMW it works with [url=https://www.nexusmods.com/morrowind/mods/56680]Inventory Extender[/url] installed.
 [*][b]No plugin required[/b] — every bonus spell is built at runtime in Lua. Nothing to clutter your load order, no record conflicts.
 [*][b]In-game options[/b] — toggle notifications, NPC bonuses, icon matching, debug logging, and the magnitude sliders (MWSE: MCM; OpenMW: Options › Scripts).
@@ -49,19 +51,25 @@ Prefer different numbers? Two in-game sliders scale everything live: a [b]benefi
 
 [center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
 
-[size=5][b]✦ Optional: Conditional Rebalance submodule (New in 1.7)[/b][/size]
+[size=5][b]✦ Optional: Conditional Rebalance submodule (New in 1.7, deepened in 1.7.1)[/b][/size]
 Prefer bonuses that react to the fight instead of flat stats? The [b]Conditional Rebalance[/b] is an optional add-on for both engines that re-registers every set's bonuses through the framework's own interop. Each set keeps a lean always-on identity and gains [b]situational spikes[/b] — roughly 1.5–2× stronger than an always-on equivalent, active only while a state holds — themed to the kind of set:
 [list]
 [*][b]Heavy materials[/b] answer pain: Iron hits harder [i]bloodied[/i] (HP < 50%), Daedric turns terrible on a [i]last stand[/i] (HP < 25%), Dwemer plate reflects in the deep halls it was made for (indoors).
 [*][b]Light materials[/b] favour darkness and open sky: Leather sneaks at night, Hide runs outdoors, Glass is untouchable while unscratched.
 [*][b]Cultural sets[/b] reward their own: Nordic grants Nords extra Attack, Khajiit gear pounces at night, Redguard kit surges when fatigue runs low.
-[*][b]Faction sets[/b] mirror their trade: Thieves Guild peaks on a night-time indoor job, the Temple heals at wayshrines, guards fight best on the day shift.
+[*][b]Faction sets[/b] mirror their trade, and [b]scale with your standing (new in 1.7.1)[/b]: guild and Great House gear grows once you make rank, the Temple heals at wayshrines, Thieves Guild peaks on a night-time indoor job — and lawful or holy armour actively [b]spurns a wanted wearer[/b].
 [*][b]Class sets[/b] (Light/Medium/Heavy Armor, Cloth) turn purely reactive so they complement — not double — the material sets that share their items.
 [/list]
-Because items commonly belong to several sets at once (a Chuzei helm is also Bonemold, Dunmer, and Native), overlapping sets are split into [b]lanes[/b] instead of stacking the same stats: the specific set keeps the full-strength identity, the broad cultural umbrellas add only echo-strength flats plus kinship conditionals, and the build tooling rejects any two co-maxable sets that duplicate a full-strength effect or spike the same effect on the same state. Conditions run from health/fatigue/magicka thresholds through time, sun, and location to race, level, skill/attribute mastery, and AND/OR combinations — every set has at least one.
-Weakness drawbacks stay (a few are conditional now) and both magnitude sliders still apply. All 136 sets are covered (69 base + 67 Tamriel Rebuilt); entries for absent add-ons are skipped. Only conditions that evaluate natively on [b]both engines[/b] are used, so MWSE and OpenMW behave identically.
+[b]New in 1.7.1 — every drawback is now situational.[/b] Instead of a flat penalty, each set's Weakness bites only in its thematic bad moment (at a slightly steeper magnitude): metals can't shed a bolt under a full pack, leathers and furs catch fire near a hearth, resin and chitin go brittle in the cold dark, Daedric punishes cowards who dodge the fight, Falmer burns in daylight. The condition vocabulary also widened — alongside health/fatigue/magicka, time, sun and location it now reads [b]carry weight, faction rank & standing, bounty, region, birthsign, werewolf form, and weapon stance[/b], singly or in AND/OR blocks. Werewolf-blood wakes on Nordic/Orsimer/Companions, Bosmer favours a light pack, Redguard resonates with the Warrior's stars.
+Because items commonly belong to several sets at once (a Chuzei helm is also Bonemold, Dunmer, and Native), overlapping sets are split into [b]lanes[/b] instead of stacking the same stats: the specific set keeps the full-strength identity, the broad cultural umbrellas add only echo-strength flats plus kinship conditionals, and the build tooling rejects any two co-maxable sets that duplicate a full-strength effect or spike the same effect on the same state.
+Both magnitude sliders still apply. All 137 sets are covered (70 base + 67 Tamriel Rebuilt), with 460 conditional effects in total; entries for absent add-ons are skipped. Only conditions that evaluate natively on [b]both engines[/b] are used, so MWSE and OpenMW behave identically.
 [b]Install:[/b] MWSE — copy [i]MWSE\mods\Static\SetBonusRebalance[/i] in alongside Set Bonus. OpenMW — add [i]OpenMW_SetBonusRebalance[/i] as a data directory and enable [i]setbonus_rebalance.omwscripts[/i] [b]after[/b] setbonus.omwscripts. Uninstall to return to the default balance; no save cleaning needed.
 [i]Full design notes and the complete per-set spell list ship as SetBonus_Rebalance_Reference.md in the download.[/i]
+
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+[size=5][b]✦ Optional: Flag Companion (New in 1.7.1)[/b][/size]
+The framework only ships conditions that read the same on [b]both[/b] engines, so a few states — combat, weather, and movement — are deliberately left out of the shipped sets (OpenMW can't read them where bonuses are evaluated). This tiny opt-in add-on bridges that gap: it detects what each engine can and feeds it to Set Bonus's flag hook, so [b]your own[/b] sets can use [i]combat[/i], [i]swimming[/i], [i]sneaking[/i], [i]moving[/i], and [i]weather[/i] conditions. MWSE provides all five; OpenMW provides swimming/moving (its Lua can't read weather or combat) and leaves the hook open for a dedicated weather/combat mod to supply the rest. Nothing in the base mod or the Rebalance needs it. See SetBonus_Flags_Companion.md.
 
 [center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
 
