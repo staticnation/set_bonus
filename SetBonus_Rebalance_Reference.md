@@ -241,18 +241,18 @@ Mananaut's 2/3/5 are kept). "/s" = per-second Restore.
 
 ### Heavy Armor
 - **min:** Resist Normal Weapons 3
-- **mid:** Resist Normal Weapons 5, Fortify Health 15 *(HP < 50%)*
-- **max:** Resist Normal Weapons 8, Fortify Health 22 *(HP < 50%)*, Fortify Endurance 12 *(HP < 50%)*
+- **mid:** Resist Normal Weapons 3, Fortify Heavy Armor 8 *(HP < 50%)*
+- **max:** Resist Normal Weapons 3, Fortify Heavy Armor 14 *(HP < 50%)*
 
 ### Medium Armor
 - **min:** Fortify Fatigue 12
-- **mid:** Fortify Fatigue 20, Restore Fatigue 2 /s *(FP < 50%)*
-- **max:** Fortify Fatigue 28, Restore Fatigue 3 /s *(FP < 50%)*, Fortify Endurance 8
+- **mid:** Fortify Fatigue 12, Fortify Medium Armor 8 *(FP < 50%)*
+- **max:** Fortify Fatigue 12, Fortify Medium Armor 14 *(FP < 50%)*, Fortify Endurance 3
 
 ### Light Armor
 - **min:** Fortify Light Armor 5
 - **mid:** Fortify Light Armor 8, Sanctuary 8 *(FP > 75%)*
-- **max:** Fortify Light Armor 12, Sanctuary 12 *(FP > 75%)*, Fortify Agility 8
+- **max:** Fortify Light Armor 12, Sanctuary 12 *(FP > 75%)*, Fortify Agility 3
 
 ### Cloth
 - **min:** Restore Magicka 1 /s, Feather 5
