@@ -583,35 +583,39 @@ return {
 -- that share their items instead of doubling the same stats)
 -- =========================================================================
 
-{ name = "Heavy Armor", -- discipline of iron: answers pain with resolve
+{ name = "Heavy Armor", -- discipline of iron: the training holds when the blows land
+  -- umbrella over every heavy material set, so it keeps only an echo weapon-resist
+  -- flat plus a heavy-armour skill spike no material set touches (avoids R1/R2).
   bonuses = {
     min = { { effect = "resistNormalWeapons", magnitude = 3 } },
-    mid = { { effect = "resistNormalWeapons", magnitude = 5 },
-            { effect = "fortifyHealth", magnitude = 15, condition = BLOODIED } },
-    max = { { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "fortifyHealth", magnitude = 22, condition = BLOODIED },
-            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 12, condition = BLOODIED } },
+    mid = { { effect = "resistNormalWeapons", magnitude = 3 },
+            { effect = "fortifySkill", skill = "heavyArmor", magnitude = 8, condition = BLOODIED } },
+    max = { { effect = "resistNormalWeapons", magnitude = 3 },
+            { effect = "fortifySkill", skill = "heavyArmor", magnitude = 14, condition = BLOODIED } },
   } },
 
 { name = "Medium Armor", -- soldier's pace: a second wind when it counts
+  -- umbrella over every medium material set: echo fatigue flat + a medium-armour
+  -- skill spike that no material set carries (avoids R1 fatigue/endurance and R2).
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 } },
-    mid = { { effect = "fortifyFatigue", magnitude = 20 },
-            { effect = "restoreFatigue", magnitude = 2, condition = WINDED } },
-    max = { { effect = "fortifyFatigue", magnitude = 28 },
-            { effect = "restoreFatigue", magnitude = 3, condition = WINDED },
-            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 } },
+    mid = { { effect = "fortifyFatigue", magnitude = 12 },
+            { effect = "fortifySkill", skill = "mediumArmor", magnitude = 8, condition = WINDED } },
+    max = { { effect = "fortifyFatigue", magnitude = 12 },
+            { effect = "fortifySkill", skill = "mediumArmor", magnitude = 14, condition = WINDED },
+            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 3 } },
   } },
 
 { name = "Light Armor", -- dancer's discipline: untouchable on fresh legs
-  -- (purely reactive -- fatigue belongs to the leather/hide material sets)
+  -- umbrella over every light material set: a light-armour skill spike (unshared)
+  -- plus a Sanctuary reaction; Agility is echoed to the cap (materials keep the 8).
   bonuses = {
     min = { { effect = "fortifySkill", skill = "lightArmor", magnitude = 5 } },
     mid = { { effect = "fortifySkill", skill = "lightArmor", magnitude = 8 },
             { effect = "sanctuary", magnitude = 8, condition = RESTED } },
     max = { { effect = "fortifySkill", skill = "lightArmor", magnitude = 12 },
             { effect = "sanctuary", magnitude = 12, condition = RESTED },
-            { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 } },
+            { effect = "fortifyAttribute", attribute = "agility", magnitude = 3 } },
   } },
 
 { name = "Cloth", -- unarmoured: a clear mind is the only shield
