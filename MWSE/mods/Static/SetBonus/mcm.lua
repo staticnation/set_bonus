@@ -37,10 +37,11 @@ local function registerModConfig()
 
     general:createOnOffButton{
         label = "Match enchanted/copied items by icon",
-        description = "When on, set pieces are also matched by their inventory icon, so a " ..
-            "player-enchanted or otherwise copied version of a set item (which gets a new " ..
-            "internal ID but keeps the same icon) still counts toward the set. Turn off for " ..
-            "strict ID-only matching (rare items that merely share an icon won't count).",
+        description = "When on, set pieces are also matched by their inventory icon and " ..
+            "mesh together, so a player-enchanted or otherwise copied version of a set item " ..
+            "(which gets a new internal ID but keeps the same icon+mesh) still counts toward " ..
+            "the set. Turn off for strict ID-only matching (rare items that merely share an " ..
+            "icon won't count).",
         configKey = "matchByIcon",
         callback = function(self)
             event.trigger("Static:RescaleBonuses")

@@ -7,10 +7,19 @@
 --   threshold : { kind="health"|"magicka"|"fatigue", op="<"|"<="|">"|">="|"=="|"~=", value=n, fraction=true }
 --               { kind="attribute"|"skill", id="strength"|"longBlade", op=">=", value=n }
 --               { kind="level", op=">=", value=n }
+--               { kind="encumbrance", op="<"|">=", value=0.8, fraction=true }  -- fraction of capacity
+--               { kind="bounty", op=">=", value=1000 }                        -- player crime level
+--   standing  : { kind="faction", id="Telvanni", op=">=", value=6 }           -- rank (1-indexed, 0=not a member)
+--               { kind="faction", id="Telvanni", expelled=true }              -- and/or expelled flag
+--   identity  : { kind="race", value="Dark Elf" or {...} }  { kind="class", value="..." }
+--               { kind="sex", value="male"|"female" }  { kind="birthsign", value="Warrior" or {...} }
+--               { kind="werewolf", value=true }
 --   state     : { kind="time", value="day"|"night" }  { kind="location", value="interior"|"exterior" }
---               { kind="weather", value="rain" or {"rain","thunder"} }  { kind="sun", value="up"|"down" }
---               { kind="race", value="Dark Elf" or {...} }  { kind="class", value="..." }  { kind="combat", value=true }
+--               { kind="sun", value="up"|"down" }  { kind="region", value="Sheogorad" or {...} }
+--               { kind="stance", value="weapon"|"spell"|"none" }
+--   external  : { kind="weather", value="rain" or {...} }  { kind="combat", value=true }  -- MWSE-only / flag-driven
 --   combine   : an array is AND; { any = {...} } is OR; { all = {...} } is AND.
+-- faction/bounty/birthsign are player-scoped (evaluate false for NPCs).
 local config = require("Static.SetBonus.config")
 local settings = require("Static.SetBonus.settings")
 local log = require("Static.SetBonus.logger")
@@ -66,6 +75,58 @@ local function evalOne(c, ref)
         local lv = ref.object and ref.object.level
         local op = OPS[c.op or ">="]
         return lv ~= nil and op ~= nil and op(lv, c.value)
+    elseif kind == "encumbrance" then
+        if not mobile then return false end
+        local st = mobile.encumbrance
+        if not st then return false end
+        -- fraction = carried / capacity (current / base); absolute = carried weight.
+        local v = c.fraction and ((st.base > 0) and (st.current / st.base) or 0) or st.current
+        local op = OPS[c.op or "<"]
+        return op ~= nil and op(v, c.value)
+    elseif kind == "faction" then
+        -- Player-scoped: MWSE exposes only the player's rank/standing per faction.
+        -- Effective rank is 1-indexed (0 = not a member) to match OpenMW.
+        if ref ~= tes3.player or not c.id then return false end
+        local f = tes3.getFaction(c.id)
+        if not f then return false end
+        if c.expelled ~= nil then
+            local isExp = f.playerExpelled == true
+            if isExp ~= (c.expelled ~= false) then return false end
+        end
+        if c.value ~= nil then
+            local rank = f.playerJoined and ((f.playerRank or 0) + 1) or 0
+            local op = OPS[c.op or ">="]
+            if not (op and op(rank, c.value)) then return false end
+        end
+        return (c.expelled ~= nil) or (c.value ~= nil)
+    elseif kind == "bounty" then
+        if ref ~= tes3.player then return false end
+        local mp = tes3.mobilePlayer
+        local b = mp and mp.bounty
+        local op = OPS[c.op or ">="]
+        return b ~= nil and op ~= nil and op(b, c.value)
+    elseif kind == "werewolf" then
+        local w = (mobile and mobile.werewolf) == true
+        return w == (c.value ~= false)
+    elseif kind == "sex" then
+        local o = ref.object
+        local female = o and o.female
+        if female == nil then return false end
+        return eqAny(c.value, female and "female" or "male")
+    elseif kind == "birthsign" then
+        -- Player-scoped; MWSE exposes the birthsign on the mobile player.
+        if ref ~= tes3.player then return false end
+        local mp = tes3.mobilePlayer
+        local bs = mp and mp.birthsign
+        return bs ~= nil and eqAny(c.value, bs.id)
+    elseif kind == "region" then
+        local cell = ref.cell
+        local reg = cell and cell.region
+        return reg ~= nil and eqAny(c.value, reg.id)
+    elseif kind == "stance" then
+        if not mobile then return false end
+        local s = mobile.weaponDrawn and "weapon" or (mobile.spellReadied and "spell" or "none")
+        return eqAny(c.value, s)
     elseif kind == "time" then
         local hour = tes3.worldController and tes3.worldController.hour and tes3.worldController.hour.value or 12
         local day = hour >= 6 and hour < 20
@@ -134,6 +195,24 @@ local function describeOne(c)
         return string.format("%s %s %s", c.id or k, c.op or ">=", tostring(c.value))
     elseif k == "level" then
         return "Level " .. (c.op or ">=") .. " " .. tostring(c.value)
+    elseif k == "encumbrance" then
+        local v = c.fraction and (math.floor(c.value * 100 + 0.5) .. "%") or tostring(c.value)
+        return string.format("load %s %s", c.op or "<", v)
+    elseif k == "faction" then
+        local parts = {}
+        if c.value ~= nil then parts[#parts + 1] = (c.id or "faction") .. " rank " .. (c.op or ">=") .. " " .. tostring(c.value) end
+        if c.expelled ~= nil then parts[#parts + 1] = (c.expelled ~= false) and ("expelled: " .. (c.id or "faction")) or ("in good standing: " .. (c.id or "faction")) end
+        return table.concat(parts, " & ")
+    elseif k == "bounty" then
+        return "bounty " .. (c.op or ">=") .. " " .. tostring(c.value)
+    elseif k == "werewolf" then
+        return (c.value ~= false) and "werewolf" or "not werewolf"
+    elseif k == "sex" then return tostring(c.value)
+    elseif k == "birthsign" then
+        return "sign: " .. (type(c.value) == "table" and table.concat(c.value, "/") or tostring(c.value))
+    elseif k == "region" then
+        return type(c.value) == "table" and table.concat(c.value, "/") or tostring(c.value)
+    elseif k == "stance" then return "stance: " .. tostring(c.value)
     elseif k == "time" then return tostring(c.value)
     elseif k == "location" then return tostring(c.value)
     elseif k == "sun" then return "sun " .. tostring(c.value)

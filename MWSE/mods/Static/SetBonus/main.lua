@@ -34,19 +34,41 @@ local function enchantedBaseId(itemData)
     return type(b) == "string" and b:lower() or nil
 end
 
--- Does an equipped object belong to `setName`? By id, CE base id, or (if on) icon.
+-- Does an equipped object belong to `setName`? By id, CE base id, or (if on)
+-- icon+mesh. Icon+mesh is a FALLBACK ONLY: once the item is recognised by its
+-- (real or CE-base) id, we trust that and never let a shared inventory icon pull
+-- it into unrelated sets (e.g. NOD/TR helms that reuse the vanilla Indoril
+-- helmet icon -- icon alone isn't enough to rule that out, since icon-replacer
+-- mods routinely point unrelated armor at a shared icon; requiring the mesh too
+-- keeps this to actual copies/enchants, which always carry the source's mesh).
+-- Icon+mesh matching still catches copies/enchants that have a new id and no
+-- id-link.
+local function iconMeshSig(obj)
+    local icon = obj and obj.icon
+    if not icon then return nil end
+    local mesh = obj.mesh
+    return icon:lower() .. "|" .. (mesh and mesh:lower() or "")
+end
 local function objInSet(obj, setName, baseId)
     local id = obj.id and obj.id:lower()
-    if id and config.setLinks[id] and config.setLinks[id][setName] then return true end
-    if baseId and config.setLinks[baseId] and config.setLinks[baseId][setName] then return true end
-    if settings.matchByIcon and obj.icon then
-        local il = config.iconLinks[obj.icon:lower()]
+    local hasIdLink = false
+    if id and config.setLinks[id] then
+        if config.setLinks[id][setName] then return true end
+        hasIdLink = true
+    end
+    if baseId and config.setLinks[baseId] then
+        if config.setLinks[baseId][setName] then return true end
+        hasIdLink = true
+    end
+    if not hasIdLink and settings.matchByIcon then
+        local sig = iconMeshSig(obj)
+        local il = sig and config.iconLinks[sig]
         if il and il[setName] then return true end
     end
     return false
 end
 
--- All set names an equipped object belongs to (by id, CE base id, and/or icon).
+-- All set names an equipped object belongs to (by id, CE base id, and/or icon+mesh).
 local function setsForObject(obj, baseId)
     local names
     local function merge(src)
@@ -57,7 +79,8 @@ local function setsForObject(obj, baseId)
     local id = obj.id and obj.id:lower()
     if id then merge(config.setLinks[id]) end
     if baseId then merge(config.setLinks[baseId]) end
-    if settings.matchByIcon and obj.icon then merge(config.iconLinks[obj.icon:lower()]) end
+    -- Icon+mesh fallback only when the item has no id/CE link at all (see objInSet).
+    if not names and settings.matchByIcon then merge(config.iconLinks[iconMeshSig(obj)]) end
     return names
 end
 

@@ -281,9 +281,12 @@ Thresholds (`op` is one of `<  <=  >  >=  ==  ~=`):
 | kind | fields | notes |
 |------|--------|-------|
 | `health` / `magicka` / `fatigue` | `op`, `value`, `fraction` | `fraction = true` compares 0-1 of max; otherwise absolute |
+| `encumbrance` | `op`, `value`, `fraction` | `fraction = true` compares 0-1 of carry capacity; otherwise absolute weight |
 | `attribute` | `id` (e.g. `"strength"`), `op`, `value` | |
 | `skill` | `id` (e.g. `"longBlade"`), `op`, `value` | |
 | `level` | `op`, `value` | |
+| `bounty` | `op`, `value` | the player's crime level; **player-only** (false for NPCs) |
+| `faction` | `id` (faction id), plus `op` + `value` for rank and/or `expelled = true`/`false` | rank is 1-indexed (0 = not a member); **player-only**. e.g. `{ kind = "faction", id = "Telvanni", op = ">=", value = 6 }`, `{ kind = "faction", id = "Temple", expelled = true }` |
 
 States (equality; `value` may be a single value or a list = any-of):
 
@@ -292,10 +295,15 @@ States (equality; `value` may be a single value or a list = any-of):
 | `time` | `"day"` / `"night"` |
 | `sun` | `"up"` / `"down"` (up = daytime and outdoors -- handy for vampires) |
 | `location` | `"interior"` / `"exterior"` |
-| `weather` | a weather name or list, e.g. `"rain"` or `{ "rain", "thunder" }` |
+| `region` | region id/name, or a list (e.g. `"Sheogorad"`, `"Molag Amur"`) |
 | `race` | race id/name, or a list |
 | `class` | class id/name, or a list |
-| `combat` | `true` / `false` |
+| `sex` | `"male"` / `"female"` |
+| `birthsign` | birthsign id, or a list (e.g. `"The Warrior"`); **player-only** |
+| `werewolf` | `true` / `false` (current werewolf form) |
+| `stance` | `"weapon"` / `"spell"` / `"none"` (weapon drawn / spell readied / sheathed) |
+| `weather` | a weather name or list, e.g. `"rain"` or `{ "rain", "thunder" }` -- see parity note |
+| `combat` | `true` / `false` -- see parity note |
 
 Custom / external state: besides the built-in kinds, a `flag` condition reads
 per-reference state pushed by any mod:
@@ -311,12 +319,16 @@ like any other effect, and each condition is evaluated safely -- a malformed
 condition just reads as false, never an error. Item tooltips label conditional
 effects automatically, e.g. `Fortify Attack 12 (when HP < 50%)`.
 
-**Cross-engine parity tip:** `combat` and `weather` evaluate natively on MWSE,
-but OpenMW's Lua can't read either -- there they depend on another script
-pushing state (see the OpenMW guide) and read false otherwise. If your mod
-ships for both engines, prefer the kinds that work natively everywhere:
-health/magicka/fatigue, attribute, skill, level, time, sun, location, race,
-class. The bundled Conditional Rebalance follows this rule.
+**Cross-engine parity tip:** most kinds evaluate natively on **both** engines and
+are safe to ship cross-engine: health/magicka/fatigue, encumbrance, attribute,
+skill, level, bounty, faction, time, sun, location, region, race, class, sex,
+birthsign, werewolf, stance. Only `combat`, `weather`, and custom `flag` kinds
+differ -- they read natively on MWSE but OpenMW's Lua can't read combat or
+weather, so there they depend on another script (or the optional Flag Companion)
+pushing state and read false otherwise. If your mod ships for both engines,
+prefer the native list above; treat combat/weather/flag as opt-in extras. The
+bundled Conditional Rebalance follows this rule. (`faction`, `bounty`, and
+`birthsign` are player-scoped -- they read false on NPCs on both engines.)
 
 ## Notes & gotchas
 

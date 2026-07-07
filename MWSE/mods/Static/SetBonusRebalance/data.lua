@@ -48,6 +48,25 @@ local function race(id) return { kind = "race", value = id } end
 local function skillAtLeast(id, v) return { kind = "skill", id = id, op = ">=", value = v } end
 local function attrAtLeast(id, v) return { kind = "attribute", id = id, op = ">=", value = v } end
 
+-- 1.7.1 vocabulary: new cross-engine condition kinds (see conditions.lua). Built
+-- mostly on encumbrance/stance so added spikes and taxes don't collide with the
+-- race/time/sun conditionals the cultural & class umbrellas already carry.
+local LADEN      = { kind = "encumbrance", op = ">=", value = 0.75, fraction = true } -- weighed down
+local UNLADEN    = { kind = "encumbrance", op = "<",  value = 0.25, fraction = true } -- travelling light
+local WEAPON_OUT = { kind = "stance", value = "weapon" }  -- blade or bow drawn
+local SPELL_OUT  = { kind = "stance", value = "spell" }   -- spell readied
+local SHEATHED   = { kind = "stance", value = "none" }    -- weapon put away
+local BEAST      = { kind = "werewolf", value = true }
+local COWARD     = { FRESH, SHEATHED }                     -- unhurt AND weapon away: dodging the fight
+local WANTED     = { kind = "bounty", op = ">=", value = 1000 }
+local OUTLAW     = { kind = "bounty", op = ">=", value = 5000 }
+local FEMALE     = { kind = "sex", value = "female" }
+local MALE       = { kind = "sex", value = "male" }
+local function region(id) return { kind = "region", value = id } end
+local function sign(id)   return { kind = "birthsign", value = id } end
+local function factionRank(id, r) return { kind = "faction", id = id, op = ">=", value = r } end
+local function expelled(id)       return { kind = "faction", id = id, expelled = true } end
+
 -- Stacking lanes: items often belong to several sets at once (a Chuzei helm is
 -- also Bonemold, Dunmer, and Native), so overlapping sets are given distinct
 -- ROLES rather than copies of the same stats. Broad "umbrella" sets (Dunmer,
@@ -63,197 +82,202 @@ return {
 -- Base mod -- materials, heavy
 -- =========================================================================
 
-{ name = "Iron", -- first metal: stubborn, hits back when hurt
+{ name = "Iron", -- first metal: stubborn, and a coffin once your wind is gone
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifyAttack", magnitude = 8, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = WINDED } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttack", magnitude = 12, condition = BLOODIED },
             { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = WINDED } },
   } },
 
-{ name = "Steel", -- soldier's standard: tempered edge holds when dented
+{ name = "Steel", -- soldier's standard: disciplined edge, sluggish under a full pack
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 3 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifyAttack", magnitude = 5 },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttack", magnitude = 8 },
             { effect = "resistNormalWeapons", magnitude = 12, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
-{ name = "Ebony", -- elite heavy: unyielding under punishment
+{ name = "Ebony", -- the immovable object: an unbreakable wall once it digs in under its own weight
   bonuses = {
     min = { { effect = "resistFire", magnitude = 10 },
             { effect = "fortifyHealth", magnitude = 8 } },
     mid = { { effect = "resistFire", magnitude = 15 },
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistNormalWeapons", magnitude = 8, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistFire", magnitude = 20 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistNormalWeapons", magnitude = 12, condition = BLOODIED },
             { effect = "resistMagicka", magnitude = 12 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "fortifyHealth", magnitude = 8, condition = LADEN },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
-{ name = "Daedric", -- dread plate: most terrible at the brink of death
+{ name = "Daedric", -- the blood pact: most terrible at the brink of death; it punishes cowards
   bonuses = {
     min = { { effect = "spellAbsorption", magnitude = 3 } },
     mid = { { effect = "spellAbsorption", magnitude = 5 },
             { effect = "resistMagicka", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = LAST_STAND },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = COWARD } },
     max = { { effect = "spellAbsorption", magnitude = 8 },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "fortifyAttack", magnitude = 16, condition = LAST_STAND },
             { effect = "sanctuary", magnitude = 12, condition = LAST_STAND },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = COWARD } },
   } },
 
-{ name = "Dwemer", -- animunculi plate: strongest in the deep halls it was made for
+{ name = "Dwemer", -- animunculi plate: strongest in the deep halls; it overheats in open sun
   bonuses = {
     min = { { effect = "resistShock", magnitude = 10 } },
     mid = { { effect = "resistShock", magnitude = 15 },
-            { effect = "reflect", magnitude = 8, condition = INSIDE } },
+            { effect = "reflect", magnitude = 8, condition = INSIDE },
+            { effect = "weaknesstoFire", magnitude = 15, condition = SUN_UP } },
     max = { { effect = "resistShock", magnitude = 20 },
             { effect = "reflect", magnitude = 12, condition = INSIDE },
             { effect = "sanctuary", magnitude = 12, condition = INSIDE },
-            { effect = "resistMagicka", magnitude = 8 } },
+            { effect = "resistMagicka", magnitude = 8 },
+            { effect = "weaknesstoFire", magnitude = 25, condition = SUN_UP } },
   } },
 
-{ name = "Adamantium", -- rare anti-magic alloy: sheds spells when blood flows
+{ name = "Adamantium", -- the mage-breaker: sheds spells when blood flows, but grounds out a full reserve
   bonuses = {
     min = { { effect = "resistMagicka", magnitude = 5 } },
     mid = { { effect = "resistMagicka", magnitude = 8 },
             { effect = "reflect", magnitude = 8, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = CHARGED } },
     max = { { effect = "resistMagicka", magnitude = 12 },
             { effect = "reflect", magnitude = 12, condition = BLOODIED },
             { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = CHARGED } },
   } },
 
-{ name = "Orcish", -- brute plate: too angry to die; the forge honours the strong
+{ name = "Orcish", -- berserker's rage: too angry to die, but blind to magic in the bloodlust
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 3 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 5 },
             { effect = "restoreHealth", magnitude = 2, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoMagicka", magnitude = 15, condition = LAST_STAND } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
             { effect = "restoreHealth", magnitude = 3, condition = BLOODIED },
             { effect = "fortifyAttack", magnitude = 12, condition = attrAtLeast("strength", 60) },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoMagicka", magnitude = 25, condition = LAST_STAND } },
   } },
 
-{ name = "Bronze", -- antique soldiery: gleams and rallies under the open sun
+{ name = "Bronze", -- antique soldiery: gleams and rallies under the open sun, dulls in the dark
   bonuses = {
     min = { { effect = "resistShock", magnitude = 10 },
             { effect = "resistNormalWeapons", magnitude = 3 } },
     mid = { { effect = "resistShock", magnitude = 15 },
             { effect = "resistNormalWeapons", magnitude = 5 },
-            { effect = "fortifyAttack", magnitude = 8, condition = SUN_UP } },
+            { effect = "fortifyAttack", magnitude = 8, condition = SUN_UP },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistShock", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = SUN_UP },
-            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 } },
+            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
+            { effect = "weaknesstoNormalWeapons", magnitude = 20, condition = SUN_DOWN } },
   } },
 
-{ name = "Plate", -- full harness: encased and immovable
+{ name = "Plate", -- full harness: encased and immovable, but can't shed a bolt under load
   bonuses = {
     min = { { effect = "resistNormalWeapons", magnitude = 3 },
             { effect = "fortifyHealth", magnitude = 8 } },
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 12, condition = BLOODIED },
             { effect = "resistParalysis", magnitude = 20 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
-{ name = "Splint", -- articulated bands: braced to block through pain
+{ name = "Splint", -- articulated bands: braced to block through pain; gaps open when winded
   bonuses = {
     min = { { effect = "resistNormalWeapons", magnitude = 3 },
             { effect = "fortifyHealth", magnitude = 8 } },
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifySkill", skill = "block", magnitude = 12, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = WINDED } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifySkill", skill = "block", magnitude = 18, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = WINDED } },
   } },
 
-{ name = "Silver", -- blessed metal: keenest in the haunted hours
+{ name = "Silver", -- blessed metal: keenest in the haunted hours, soft and dull in daylight
   bonuses = {
     min = { { effect = "resistMagicka", magnitude = 5 } },
     mid = { { effect = "resistMagicka", magnitude = 8 },
             { effect = "turnUndead", magnitude = 15 },
             { effect = "spellAbsorption", magnitude = 8, condition = NIGHT },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = DAY } },
     max = { { effect = "resistMagicka", magnitude = 12 },
             { effect = "turnUndead", magnitude = 20 },
             { effect = "spellAbsorption", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoNormalWeapons", magnitude = 20, condition = DAY } },
   } },
 
-{ name = "Stalhrim", -- enchanted ice: wakes when the sun is gone
+{ name = "Stalhrim", -- enchanted ice: wakes when the sun is gone; reacts violently to indoor heat
   bonuses = {
     min = { { effect = "resistFrost", magnitude = 10 } },
     mid = { { effect = "resistFrost", magnitude = 15 },
             { effect = "restoreMagicka", magnitude = 1 },
             { effect = "fortifyAttribute", attribute = "willpower", magnitude = 8, condition = SUN_DOWN },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistFrost", magnitude = 20 },
             { effect = "restoreMagicka", magnitude = 2 },
             { effect = "fortifyAttribute", attribute = "willpower", magnitude = 12, condition = SUN_DOWN },
             { effect = "resistMagicka", magnitude = 12, condition = SUN_DOWN },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Dragonbone", -- relic of dragonfire: fury when wounded
+{ name = "Dragonbone", -- relic of dragonfire: fury when wounded; the fire wanes in the cold dark
   bonuses = {
     min = { { effect = "resistFire", magnitude = 10 },
             { effect = "fortifyHealth", magnitude = 8 } },
     mid = { { effect = "resistFire", magnitude = 15 },
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistNormalWeapons", magnitude = 5 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistFire", magnitude = 20 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = BLOODIED },
             { effect = "resistMagicka", magnitude = 12 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 -- =========================================================================
 -- Base mod -- materials, medium
 -- =========================================================================
 
-{ name = "Chain Mail", -- workhorse mail: rings hold when the wearer falters
+{ name = "Chain Mail", -- workhorse mail: rings hold when the wearer falters, snag under a full pack
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 8, condition = WINDED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistNormalWeapons", magnitude = 12, condition = WINDED },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Bonemold", -- Dunmer resin-bone: the tank lane of the Dunmer cluster
@@ -264,89 +288,93 @@ return {
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistBlightDisease", magnitude = 10 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8, condition = BLOODIED },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistBlightDisease", magnitude = 10 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 12, condition = BLOODIED },
             { effect = "resistNormalWeapons", magnitude = 12, condition = BLOODIED },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
-{ name = "Gah-Julan", -- prestige bonemold: the duellist lane (health/blight
-  -- belong to Bonemold, which its items also count toward)
+{ name = "Gah-Julan", -- prestige bonemold: the duellist's lane -- lethal fresh, crumbles once cut
+  -- (health/blight belong to Bonemold, which its items also count toward)
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
-            { effect = "fortifyAttack", magnitude = 8, condition = FRESH } },
+            { effect = "fortifyAttack", magnitude = 8, condition = FRESH },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = BLOODIED } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyAttack", magnitude = 12, condition = FRESH },
-            { effect = "sanctuary", magnitude = 8 } },
+            { effect = "sanctuary", magnitude = 8 },
+            { effect = "weaknesstoNormalWeapons", magnitude = 20, condition = BLOODIED } },
   } },
 
-{ name = "Armun-An", -- ashland bonemold: baked hard under open sky
+{ name = "Armun-An", -- ashland bonemold: baked hard under open sky, brittle in the cold dark
   bonuses = {
     min = { { effect = "resistFire", magnitude = 10 } },
     mid = { { effect = "resistFire", magnitude = 15 },
             { effect = "fortifyHealth", magnitude = 15, condition = OUTSIDE },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistFire", magnitude = 20 },
             { effect = "fortifyHealth", magnitude = 22, condition = OUTSIDE },
             { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
-{ name = "Dreugh", -- sea-monster carapace: storm shell hardens when cracked
+{ name = "Dreugh", -- sea-monster carapace: storm shell hardens when cracked; dries and stiffens on dry land
   bonuses = {
     min = { { effect = "resistShock", magnitude = 10 },
             { effect = "waterBreathing", magnitude = 1 } },
     mid = { { effect = "resistShock", magnitude = 15 },
             { effect = "waterBreathing", magnitude = 1 },
             { effect = "swiftSwim", magnitude = 30 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = OUTSIDE } },
     max = { { effect = "resistShock", magnitude = 20 },
             { effect = "waterBreathing", magnitude = 1 },
             { effect = "swiftSwim", magnitude = 40 },
             { effect = "reflect", magnitude = 12, condition = BLOODIED },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = OUTSIDE } },
   } },
 
-{ name = "Ring Mail", -- light rings: quick while they're still intact
+{ name = "Ring Mail", -- light rings: quick while intact, but they spring open once you're cut
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 3 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 5 },
             { effect = "resistNormalWeapons", magnitude = 8, condition = FRESH },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = BLOODIED } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "resistNormalWeapons", magnitude = 12, condition = FRESH },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = BLOODIED } },
   } },
 
-{ name = "Scale Mail", -- cheap scales: they buy you time when it matters
+{ name = "Scale Mail", -- cheap scales: they buy you time when it matters, drag under a full pack
   bonuses = {
     min = { { effect = "resistNormalWeapons", magnitude = 3 } },
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyFatigue", magnitude = 20 },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyHealth", magnitude = 15, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
-{ name = "Goblin", -- scavenged war-gear: fights hardest when exhausted
+{ name = "Goblin", -- scavenged war-gear: fights hardest when exhausted, clumsy while still fresh
   bonuses = {
     min = { { effect = "fortifyAttribute", attribute = "strength", magnitude = 3 },
             { effect = "resistCommonDisease", magnitude = 10 } },
     mid = { { effect = "fortifyAttribute", attribute = "strength", magnitude = 5 },
             { effect = "resistCommonDisease", magnitude = 15 },
-            { effect = "fortifyAttack", magnitude = 8, condition = WINDED } },
+            { effect = "fortifyAttack", magnitude = 8, condition = WINDED },
+            { effect = "weaknesstoShock", magnitude = 15, condition = FRESH } },
     max = { { effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
             { effect = "resistCommonDisease", magnitude = 20 },
             { effect = "fortifyAttack", magnitude = 12, condition = WINDED },
-            { effect = "fortifyFatigue", magnitude = 28 } },
+            { effect = "fortifyFatigue", magnitude = 28 },
+            { effect = "weaknesstoShock", magnitude = 25, condition = FRESH } },
   } },
 
 { name = "Trollbone", -- troll remains: the flesh remembers how to knit
@@ -355,12 +383,12 @@ return {
     mid = { { effect = "restoreHealth", magnitude = 1 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 5 },
             { effect = "restoreHealth", magnitude = 2, condition = BLOODIED },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "restoreHealth", magnitude = 1 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
             { effect = "restoreHealth", magnitude = 3, condition = BLOODIED },
             { effect = "fortifyHealth", magnitude = 18 },
-            { effect = "weaknesstoFire", magnitude = 10 },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE },
             { effect = "weaknesstoFire", magnitude = 15, condition = BLOODIED } },
   } },
 
@@ -368,89 +396,89 @@ return {
 -- Base mod -- materials, light
 -- =========================================================================
 
-{ name = "Leather", -- footpad's second skin: at home in the dark
+{ name = "Leather", -- footpad's second skin: at home in the dark, dries and cracks by the fire
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 },
             { effect = "fortifySkill", skill = "acrobatics", magnitude = 5 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "fortifySkill", skill = "acrobatics", magnitude = 8 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifySkill", skill = "acrobatics", magnitude = 12 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 18, condition = NIGHT },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Netch Leather", -- netch-hide: jelly wards poison, floats a falling
-  -- wearer (fatigue is Leather's lane where the items overlap)
+{ name = "Netch Leather", -- netch-hide: jelly wards poison, floats a falling wearer; hearth-heat
+  -- makes it run (fatigue is Leather's lane where the items overlap)
   bonuses = {
     min = { { effect = "resistPoison", magnitude = 10 },
             { effect = "slowFall", magnitude = 10 } },
     mid = { { effect = "resistPoison", magnitude = 15 },
             { effect = "slowFall", magnitude = 15 },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "slowFall", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Hide", -- trail hide: made for the long trek
+{ name = "Hide", -- trail hide: made for the long trek; dries and cracks near a fire
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 12, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 18, condition = OUTSIDE },
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 12, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Fur", -- winter pelts: warm blood under an open sky
+{ name = "Fur", -- winter pelts: warm blood under an open sky, singes by the hearth
   bonuses = {
     min = { { effect = "resistFrost", magnitude = 10 },
             { effect = "fortifyFatigue", magnitude = 12 } },
     mid = { { effect = "resistFrost", magnitude = 15 },
             { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "restoreFatigue", magnitude = 2, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistFrost", magnitude = 20 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "restoreFatigue", magnitude = 3, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Bear Fur", -- hunter's trophy: the wild lends its endurance
+{ name = "Bear Fur", -- hunter's trophy: the wild lends its endurance; the pelt singes indoors
   bonuses = {
     min = { { effect = "resistFrost", magnitude = 10 } },
     mid = { { effect = "resistFrost", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistFrost", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 12, condition = OUTSIDE },
             { effect = "fortifyHealth", magnitude = 22, condition = BLOODIED },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Bearskin", -- berserker's mantle: the bear wakes when blood is drawn
+{ name = "Bearskin", -- berserker's mantle: the bear wakes when blood is drawn, the fur catches by a fire
   bonuses = {
     min = { { effect = "resistFrost", magnitude = 10 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 3 } },
     mid = { { effect = "resistFrost", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 12, condition = BLOODIED },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistFrost", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 16, condition = BLOODIED },
             { effect = "fortifyHealth", magnitude = 22, condition = BLOODIED },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Wolf Fur", -- pack pelts: a night hunter's senses
+{ name = "Wolf Fur", -- pack pelts: a night hunter's senses; the coat singes by the hearth
   bonuses = {
     min = { { effect = "resistFrost", magnitude = 10 },
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 3 } },
@@ -458,69 +486,69 @@ return {
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 5 },
             { effect = "nightEye", magnitude = 40, condition = NIGHT },
             { effect = "fortifyAttack", magnitude = 8, condition = UNDER_STARS },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistFrost", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 8 },
             { effect = "nightEye", magnitude = 50, condition = NIGHT },
             { effect = "fortifyAttack", magnitude = 12, condition = UNDER_STARS },
             { effect = "fortifySkill", skill = "athletics", magnitude = 12 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Chitin", -- Dunmer shell: an ambush predator's casing
+{ name = "Chitin", -- Dunmer shell: an ambush predator's casing; the plates brittle in daylight
   bonuses = {
     min = { { effect = "resistBlightDisease", magnitude = 10 },
             { effect = "resistPoison", magnitude = 10 } },
     mid = { { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "resistPoison", magnitude = 15 },
             { effect = "resistParalysis", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = DAY } },
     max = { { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "resistParalysis", magnitude = 20 },
             { effect = "chameleon", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = DAY } },
   } },
 
-{ name = "Glass", -- volcanic glass: flawless while unscratched
+{ name = "Glass", -- volcanic glass: flawless while unscratched -- and shatter-prone once it isn't
   bonuses = {
     min = { { effect = "fortifyAttribute", attribute = "agility", magnitude = 3 },
             { effect = "resistFire", magnitude = 10 } },
     mid = { { effect = "fortifyAttribute", attribute = "agility", magnitude = 5 },
             { effect = "resistFire", magnitude = 15 },
             { effect = "sanctuary", magnitude = 12, condition = FRESH },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = BLOODIED } },
     max = { { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "resistFire", magnitude = 20 },
             { effect = "sanctuary", magnitude = 16, condition = FRESH },
             { effect = "chameleon", magnitude = 10 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = BLOODIED } },
   } },
 
-{ name = "Padded", -- quilted layers: comfort by the hearth
+{ name = "Padded", -- quilted layers: comfort by the hearth -- and quick to catch there
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistFrost", magnitude = 15 },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistFrost", magnitude = 20 },
             { effect = "restoreFatigue", magnitude = 2, condition = INSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Studded", -- riveted leather: a night watchman's compromise
+{ name = "Studded", -- riveted leather: a night watchman's compromise; the padding catches by a fire
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 },
             { effect = "resistNormalWeapons", magnitude = 3 } },
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 8, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Cephalopod", -- squid-shell: ink and escape
@@ -537,45 +565,47 @@ return {
             { effect = "resistFrost", magnitude = 20 } },
   } },
 
-{ name = "Newtscale", -- amphibian scale: slick when the pressure is on
+{ name = "Newtscale", -- amphibian scale: slick when the pressure is on; stiffens dry on land
   bonuses = {
     min = { { effect = "resistPoison", magnitude = 10 },
             { effect = "swiftSwim", magnitude = 20 } },
     mid = { { effect = "resistPoison", magnitude = 15 },
             { effect = "swiftSwim", magnitude = 30 },
             { effect = "waterBreathing", magnitude = 1 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = OUTSIDE } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "swiftSwim", magnitude = 40 },
             { effect = "waterBreathing", magnitude = 1 },
             { effect = "sanctuary", magnitude = 12, condition = DESPERATE },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = OUTSIDE } },
   } },
 
-{ name = "Resin Molded", -- sun-cured resin: hardens in the heat of day
+{ name = "Resin Molded", -- sun-cured resin: hardens in the heat of day, brittle in the cold dark
   bonuses = {
     min = { { effect = "resistBlightDisease", magnitude = 10 } },
     mid = { { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistFire", magnitude = 15, condition = SUN_UP },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistFire", magnitude = 22, condition = SUN_UP },
             { effect = "resistPoison", magnitude = 20 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
-{ name = "Scrap", -- junk plates: held together by luck and desperation
+{ name = "Scrap", -- junk plates: held together by luck and desperation -- and they rattle apart at ease
   bonuses = {
     min = { { effect = "fortifyAttribute", attribute = "luck", magnitude = 3 } },
     mid = { { effect = "fortifyAttribute", attribute = "luck", magnitude = 5 },
             { effect = "fortifyFatigue", magnitude = 20 },
-            { effect = "fortifyAttribute", attribute = "luck", magnitude = 8, condition = DESPERATE } },
+            { effect = "fortifyAttribute", attribute = "luck", magnitude = 8, condition = DESPERATE },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = RESTED } },
     max = { { effect = "fortifyAttribute", attribute = "luck", magnitude = 8 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyAttribute", attribute = "luck", magnitude = 12, condition = DESPERATE },
-            { effect = "resistNormalWeapons", magnitude = 8, condition = DESPERATE } },
+            { effect = "resistNormalWeapons", magnitude = 8, condition = DESPERATE },
+            { effect = "weaknesstoNormalWeapons", magnitude = 20, condition = RESTED } },
   } },
 
 -- =========================================================================
@@ -625,12 +655,12 @@ return {
     mid = { { effect = "restoreMagicka", magnitude = 1 },
             { effect = "feather", magnitude = 10 },
             { effect = "fortifySkill", skill = "alteration", magnitude = 12, condition = CHARGED },
-            { effect = "weaknesstoNormalWeapons", magnitude = 10 } },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = SPELL_OUT } },
     max = { { effect = "restoreMagicka", magnitude = 2 },
             { effect = "feather", magnitude = 15 },
             { effect = "fortifySkill", skill = "alteration", magnitude = 18, condition = CHARGED },
             { effect = "fortifyAttribute", attribute = "willpower", magnitude = 12, condition = CHARGED },
-            { effect = "weaknesstoNormalWeapons", magnitude = 20 } },
+            { effect = "weaknesstoNormalWeapons", magnitude = 25, condition = SPELL_OUT } },
   } },
 
 -- =========================================================================
@@ -645,7 +675,8 @@ return {
             { effect = "resistFrost", magnitude = 10 } },
     max = { { effect = "resistShock", magnitude = 20 },
             { effect = "resistFrost", magnitude = 10 },
-            { effect = "fortifyAttack", magnitude = 10, condition = race("Nord") } },
+            { effect = "fortifyAttack", magnitude = 10, condition = race("Nord") },
+            { effect = "fortifyHealth", magnitude = 12, condition = BEAST } },
   } },
 
 { name = "Imperial", -- legion umbrella: citizenship and diplomacy (martial
@@ -682,7 +713,8 @@ return {
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "fortifySkill", skill = "marksman", magnitude = 18, condition = OUTSIDE },
-            { effect = "fortifyAttack", magnitude = 10, condition = race("Wood Elf") } },
+            { effect = "fortifyAttack", magnitude = 10, condition = race("Wood Elf") },
+            { effect = "fortifySkill", skill = "marksman", magnitude = 8, condition = UNLADEN } },
   } },
 
 { name = "Khajiit", -- moon-blessed: claws and grace after dark
@@ -707,7 +739,8 @@ return {
             { effect = "resistMagicka", magnitude = 8 } },
     max = { { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
             { effect = "resistMagicka", magnitude = 12 },
-            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 12, condition = race("Orc") } },
+            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 12, condition = race("Orc") },
+            { effect = "restoreHealth", magnitude = 2, condition = { BEAST, BLOODIED } } },
   } },
 
 { name = "Native", -- Ashlander wastes-craft: the land provides
@@ -717,25 +750,43 @@ return {
     mid = { { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "resistPoison", magnitude = 15 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 12, condition = OUTSIDE },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 18, condition = OUTSIDE },
             { effect = "restoreFatigue", magnitude = 2, condition = OUTSIDE },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8, condition = region("Molag Amur") },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
-{ name = "Falmer", -- snow elf relics: they shun the sun that betrayed them
+{ name = "Snow Prince", -- PRE-FALL Snow Elves (the Ice Armour): sighted and proud, strongest under open
+  -- sky -- the exact mirror of the post-fall Falmer. Echo-umbrella over the Ice Armour's other sets
+  -- (Nordic/Stalhrim/class), so its strength sits in the daylight lane no other set uses.
+  bonuses = {
+    min = { { effect = "resistFrost", magnitude = 10 } },
+    mid = { { effect = "resistFrost", magnitude = 10 },
+            { effect = "resistMagicka", magnitude = 5 },
+            { effect = "fortifyAttack", magnitude = 10, condition = SUN_UP } },
+    max = { { effect = "resistFrost", magnitude = 10 },
+            { effect = "resistMagicka", magnitude = 5 },
+            { effect = "fortifyAttack", magnitude = 14, condition = SUN_UP },
+            { effect = "sanctuary", magnitude = 12, condition = SUN_UP },
+            { effect = "fortifyAttribute", attribute = "agility", magnitude = 8, condition = SUN_UP } },
+  } },
+
+{ name = "Falmer", -- POST-FALL Betrayed: blind, sun-shunning cave-dwellers -- daylight burns them
   bonuses = {
     min = { { effect = "resistFrost", magnitude = 10 },
             { effect = "chameleon", magnitude = 5 } },
     mid = { { effect = "resistFrost", magnitude = 15 },
             { effect = "chameleon", magnitude = 12, condition = SUN_DOWN },
-            { effect = "nightEye", magnitude = 40, condition = SUN_DOWN } },
+            { effect = "nightEye", magnitude = 40, condition = SUN_DOWN },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = SUN_UP } },
     max = { { effect = "resistFrost", magnitude = 20 },
             { effect = "chameleon", magnitude = 16, condition = SUN_DOWN },
             { effect = "nightEye", magnitude = 50, condition = SUN_DOWN },
-            { effect = "sanctuary", magnitude = 10 } },
+            { effect = "sanctuary", magnitude = 10 },
+            { effect = "weaknesstoNormalWeapons", magnitude = 25, condition = SUN_UP } },
   } },
 
 -- =========================================================================
@@ -753,7 +804,8 @@ return {
     max = { { effect = "fortifyAttack", magnitude = 8 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyFatigue", magnitude = 28 },
-            { effect = "fortifyAttribute", attribute = "strength", magnitude = 12, condition = BLOODIED } },
+            { effect = "fortifyAttribute", attribute = "strength", magnitude = 12, condition = BLOODIED },
+            { effect = "fortifyAttack", magnitude = 5, condition = factionRank("Fighters Guild", 6) } },
   } },
 
 { name = "Mages Guild", -- guild robes: knowledge is kept power
@@ -767,23 +819,27 @@ return {
             { effect = "fortifySkill", skill = "destruction", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "intelligence", magnitude = 12, condition = CHARGED },
             { effect = "fortifyMagicka", magnitude = 12, condition = skillAtLeast("destruction", 50) },
-            { effect = "resistMagicka", magnitude = 12 } },
+            { effect = "resistMagicka", magnitude = 12 },
+            { effect = "fortifyMagicka", magnitude = 8, condition = factionRank("Mages Guild", 6) } },
   } },
 
-{ name = "Thieves Guild", -- the job is on: night, indoors, gone by dawn
+{ name = "Thieves Guild", -- the job is on: night, indoors, gone by dawn -- and conspicuous in daylight
   bonuses = {
     min = { { effect = "fortifySkill", skill = "sneak", magnitude = 5 },
             { effect = "fortifySkill", skill = "security", magnitude = 5 } },
     mid = { { effect = "fortifySkill", skill = "sneak", magnitude = 8 },
             { effect = "fortifySkill", skill = "security", magnitude = 8 },
-            { effect = "chameleon", magnitude = 12, condition = HEIST } },
+            { effect = "chameleon", magnitude = 12, condition = HEIST },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = SUN_UP } },
     max = { { effect = "fortifySkill", skill = "sneak", magnitude = 12 },
             { effect = "fortifySkill", skill = "security", magnitude = 12 },
             { effect = "chameleon", magnitude = 16, condition = HEIST },
-            { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 } },
+            { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
+            { effect = "fortifySkill", skill = "security", magnitude = 8, condition = factionRank("Thieves Guild", 6) },
+            { effect = "weaknesstoNormalWeapons", magnitude = 20, condition = SUN_UP } },
   } },
 
-{ name = "Dark Brotherhood", -- night's blades: Sithis walks after dark
+{ name = "Dark Brotherhood", -- night's blades: Sithis walks after dark; the first strike lands from stillness
   bonuses = {
     min = { { effect = "fortifySkill", skill = "sneak", magnitude = 5 },
             { effect = "resistPoison", magnitude = 10 } },
@@ -793,7 +849,8 @@ return {
     max = { { effect = "fortifySkill", skill = "sneak", magnitude = 12 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "chameleon", magnitude = 16, condition = NIGHT },
-            { effect = "fortifyAttack", magnitude = 12, condition = NIGHT } },
+            { effect = "fortifyAttack", magnitude = 12, condition = NIGHT },
+            { effect = "fortifyAttack", magnitude = 8, condition = { NIGHT, SHEATHED } } },
   } },
 
 { name = "Morag Tong", -- lawful writs: executions are indoor work
@@ -806,10 +863,11 @@ return {
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifySkill", skill = "shortBlade", magnitude = 12 },
             { effect = "fortifyAttack", magnitude = 12, condition = INSIDE },
-            { effect = "chameleon", magnitude = 12, condition = INSIDE } },
+            { effect = "chameleon", magnitude = 12, condition = INSIDE },
+            { effect = "fortifyAttack", magnitude = 5, condition = factionRank("Morag Tong", 6) } },
   } },
 
-{ name = "House Hlaalu", -- the deal-makers: business happens indoors
+{ name = "House Hlaalu", -- the deal-makers: business happens indoors; standing opens doors
   bonuses = {
     min = { { effect = "fortifySkill", skill = "mercantile", magnitude = 5 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 3 } },
@@ -819,11 +877,12 @@ return {
     max = { { effect = "fortifySkill", skill = "mercantile", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
             { effect = "fortifySkill", skill = "speechcraft", magnitude = 18, condition = INSIDE },
-            { effect = "fortifyAttribute", attribute = "luck", magnitude = 8 } },
+            { effect = "fortifyAttribute", attribute = "luck", magnitude = 8 },
+            { effect = "fortifySkill", skill = "mercantile", magnitude = 8, condition = factionRank("Hlaalu", 6) } },
   } },
 
-{ name = "House Indoril", -- the faithful: the ward lane of the Temple
-  -- cluster (restoration is Tribunal Temple's lane, melee grace Her Hand's)
+{ name = "House Indoril", -- the faithful: the ward lane of the Temple cluster; the Temple rewards its own
+  -- (restoration is Tribunal Temple's lane, melee grace Her Hand's)
   bonuses = {
     min = { { effect = "resistMagicka", magnitude = 5 },
             { effect = "fortifyMagicka", magnitude = 8 } },
@@ -832,7 +891,8 @@ return {
             { effect = "turnUndead", magnitude = 30, condition = NIGHT } },
     max = { { effect = "resistMagicka", magnitude = 12 },
             { effect = "fortifyMagicka", magnitude = 18 },
-            { effect = "turnUndead", magnitude = 50, condition = NIGHT } },
+            { effect = "turnUndead", magnitude = 50, condition = NIGHT },
+            { effect = "fortifyMagicka", magnitude = 8, condition = factionRank("Temple", 6) } },
   } },
 
 { name = "House Dres", -- plantation lords: masters of the open fields
@@ -857,50 +917,54 @@ return {
             { effect = "fortifyAttribute", attribute = "intelligence", magnitude = 8 },
             { effect = "fortifySkill", skill = "mysticism", magnitude = 12 },
             { effect = "spellAbsorption", magnitude = 12, condition = DRAINED },
-            { effect = "fortifySkill", skill = "destruction", magnitude = 12, condition = CHARGED } },
+            { effect = "fortifySkill", skill = "destruction", magnitude = 12, condition = CHARGED },
+            { effect = "fortifyMagicka", magnitude = 8, condition = factionRank("Telvanni", 6) } },
   } },
 
-{ name = "Templar", -- legion templar: parade discipline, dawn to dusk
+{ name = "Templar", -- legion templar: parade discipline, dawn to dusk; the blessing spurns an outlaw
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
             { effect = "turnUndead", magnitude = 10 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "turnUndead", magnitude = 15 },
-            { effect = "fortifyAttack", magnitude = 8, condition = DAY } },
+            { effect = "fortifyAttack", magnitude = 8, condition = DAY },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = WANTED } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "turnUndead", magnitude = 20 },
             { effect = "fortifyAttack", magnitude = 12, condition = DAY },
-            { effect = "resistMagicka", magnitude = 12 } },
+            { effect = "resistMagicka", magnitude = 12 },
+            { effect = "fortifyHealth", magnitude = 8, condition = factionRank("Temple", 6) },
+            { effect = "weaknesstoNormalWeapons", magnitude = 25, condition = WANTED } },
   } },
 
-{ name = "Guard", -- town watch: sharpest on the day shift
+{ name = "Guard", -- town watch: sharpest on the day shift; the badge turns on a criminal wearer
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
             { effect = "resistNormalWeapons", magnitude = 3 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = DAY },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = WANTED } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = DAY },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = WANTED } },
   } },
 
-{ name = "Royal Guard", -- Helseth's own: the palace is their fortress
+{ name = "Royal Guard", -- Helseth's own: the palace is their fortress -- no place for the wanted
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
             { effect = "resistNormalWeapons", magnitude = 3 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "resistMagicka", magnitude = 8 },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoMagicka", magnitude = 15, condition = WANTED } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "reflect", magnitude = 12, condition = INSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoMagicka", magnitude = 25, condition = WANTED } },
   } },
 
 { name = "Her Hand", -- Almalexia's chosen: the champion lane -- her grace
@@ -914,7 +978,8 @@ return {
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttribute", attribute = "willpower", magnitude = 8 },
             { effect = "restoreHealth", magnitude = 3, condition = LAST_STAND },
-            { effect = "sanctuary", magnitude = 12, condition = LAST_STAND } },
+            { effect = "sanctuary", magnitude = 12, condition = LAST_STAND },
+            { effect = "fortifyAttribute", attribute = "willpower", magnitude = 8, condition = factionRank("Temple", 6) } },
   } },
 
 { name = "Tribunal Temple", -- pilgrim vestments: the healer lane -- rest
@@ -924,11 +989,14 @@ return {
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 3 } },
     mid = { { effect = "fortifySkill", skill = "restoration", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
-            { effect = "restoreHealth", magnitude = 2, condition = INSIDE } },
+            { effect = "restoreHealth", magnitude = 2, condition = INSIDE },
+            { effect = "weaknesstoFire", magnitude = 15, condition = WANTED } },
     max = { { effect = "fortifySkill", skill = "restoration", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
             { effect = "restoreHealth", magnitude = 2, condition = INSIDE },
-            { effect = "turnUndead", magnitude = 20 } },
+            { effect = "turnUndead", magnitude = 20 },
+            { effect = "fortifySkill", skill = "restoration", magnitude = 8, condition = factionRank("Temple", 6) },
+            { effect = "weaknesstoFire", magnitude = 25, condition = WANTED } },
   } },
 
 -- =========================================================================
@@ -970,12 +1038,12 @@ return {
     mid = { { effect = "resistFire", magnitude = 15 },
             { effect = "resistMagicka", magnitude = 8 },
             { effect = "sanctuary", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistFire", magnitude = 20 },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "sanctuary", magnitude = 12, condition = OUTSIDE },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Embossed", -- parade plate: made for halls and audiences
@@ -1023,12 +1091,12 @@ return {
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistMagicka", magnitude = 8 },
             { effect = "turnUndead", magnitude = 30, condition = SUN_UP },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "turnUndead", magnitude = 50, condition = SUN_UP },
             { effect = "fortifyAttack", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Alit Hide", -- loping predator: born to run down prey
@@ -1038,12 +1106,12 @@ return {
     mid = { { effect = "fortifyAttribute", attribute = "agility", magnitude = 5 },
             { effect = "resistPoison", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "speed", magnitude = 12, condition = OUTSIDE },
             { effect = "fortifyAttack", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Altmer", -- Summerset finery: brilliance while reserves run high
@@ -1053,12 +1121,12 @@ return {
     mid = { { effect = "restoreMagicka", magnitude = 1 },
             { effect = "fortifyAttribute", attribute = "intelligence", magnitude = 5 },
             { effect = "fortifySkill", skill = "destruction", magnitude = 12, condition = CHARGED },
-            { effect = "weaknesstoMagicka", magnitude = 10 } },
+            { effect = "weaknesstoMagicka", magnitude = 15, condition = CHARGED } },
     max = { { effect = "restoreMagicka", magnitude = 2 },
             { effect = "fortifyAttribute", attribute = "intelligence", magnitude = 8 },
             { effect = "fortifySkill", skill = "destruction", magnitude = 18, condition = CHARGED },
             { effect = "fortifyAttribute", attribute = "willpower", magnitude = 12, condition = race("High Elf") },
-            { effect = "weaknesstoMagicka", magnitude = 20 } },
+            { effect = "weaknesstoMagicka", magnitude = 25, condition = CHARGED } },
   } },
 
 { name = "Ancient Nordic", -- barrow-plate: it remembers the draugr hours
@@ -1146,12 +1214,12 @@ return {
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifyAttack", magnitude = 5 },
             { effect = "resistNormalWeapons", magnitude = 5 },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttack", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 8, condition = RESTED },
             { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Chap-thil", -- ashland chitin: the ash sun feeds it
@@ -1161,12 +1229,12 @@ return {
     mid = { { effect = "resistFire", magnitude = 15 },
             { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistParalysis", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistFire", magnitude = 20 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistParalysis", magnitude = 20 },
             { effect = "restoreFatigue", magnitude = 2, condition = SUN_UP },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Chev-Aram", -- duelling harness: poise while untouched
@@ -1190,12 +1258,12 @@ return {
     mid = { { effect = "fortifyAttack", magnitude = 5 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = FRESH },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "fortifyAttack", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = FRESH },
             { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Colovian Leather", -- western scout: quiet work in open country
@@ -1205,15 +1273,15 @@ return {
     mid = { { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 5 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 12, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 18, condition = OUTSIDE },
             { effect = "fortifySkill", skill = "acrobatics", magnitude = 12 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Companions", -- sworn mercenaries: shield-brothers stand fast
+{ name = "Companions", -- sworn mercenaries: shield-brothers stand fast; the blood of the beast runs in some
   bonuses = {
     min = { { effect = "fortifyAttack", magnitude = 3 },
             { effect = "fortifyFatigue", magnitude = 12 } },
@@ -1223,7 +1291,8 @@ return {
     max = { { effect = "fortifyAttack", magnitude = 8 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyHealth", magnitude = 22, condition = BLOODIED },
-            { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 } },
+            { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
+            { effect = "fortifyAttack", magnitude = 8, condition = BEAST } },
   } },
 
 { name = "Crown Guard", -- palace posting: sworn to the throne room
@@ -1234,12 +1303,12 @@ return {
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = INSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = INSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Daedric Hide", -- dread leather: the dark drapes it closer (wards
@@ -1248,11 +1317,11 @@ return {
     min = { { effect = "spellAbsorption", magnitude = 3 } },
     mid = { { effect = "spellAbsorption", magnitude = 3 },
             { effect = "sanctuary", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "spellAbsorption", magnitude = 3 },
             { effect = "sanctuary", magnitude = 16, condition = NIGHT },
             { effect = "restoreMagicka", magnitude = 2, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Domina", -- commander's panoply: presence while unbloodied
@@ -1301,13 +1370,13 @@ return {
             { effect = "resistFrost", magnitude = 15 },
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = DAY },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistFrost", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = DAY },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Gah'Kogo", -- goblin-work chitin: the skulker lane (poison stays an
@@ -1318,12 +1387,12 @@ return {
     mid = { { effect = "resistPoison", magnitude = 10 },
             { effect = "resistParalysis", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8, condition = NIGHT },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistPoison", magnitude = 10 },
             { effect = "resistParalysis", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 12, condition = NIGHT },
             { effect = "fortifySkill", skill = "sneak", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Gilded Glass", -- courtly glass: it sparkles under chandeliers
@@ -1334,12 +1403,12 @@ return {
             { effect = "resistFire", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
             { effect = "sanctuary", magnitude = 8, condition = INSIDE },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "resistFire", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
             { effect = "sanctuary", magnitude = 12, condition = INSIDE },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Gold", -- wealth worn openly: money talks indoors
@@ -1347,12 +1416,12 @@ return {
     min = { { effect = "fortifyAttribute", attribute = "personality", magnitude = 3 } },
     mid = { { effect = "fortifyAttribute", attribute = "personality", magnitude = 5 },
             { effect = "fortifySkill", skill = "mercantile", magnitude = 12, condition = INSIDE },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "fortifyAttribute", attribute = "personality", magnitude = 8 },
             { effect = "fortifySkill", skill = "mercantile", magnitude = 18, condition = INSIDE },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "luck", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Golden Saint", -- daedric radiance: wrath when the vessel cracks
@@ -1362,12 +1431,12 @@ return {
     mid = { { effect = "resistMagicka", magnitude = 8 },
             { effect = "spellAbsorption", magnitude = 5 },
             { effect = "reflect", magnitude = 8, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistMagicka", magnitude = 12 },
             { effect = "spellAbsorption", magnitude = 8 },
             { effect = "reflect", magnitude = 12, condition = BLOODIED },
             { effect = "fortifyAttack", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Guar Hide", -- pack-beast leather: bred to carry loads outdoors
@@ -1378,13 +1447,13 @@ return {
             { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 5 },
             { effect = "feather", magnitude = 10, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
             { effect = "feather", magnitude = 15, condition = OUTSIDE },
             { effect = "fortifySkill", skill = "athletics", magnitude = 12 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "House Direnni", -- hermetic clan-craft: studied wards (the deep
@@ -1401,7 +1470,7 @@ return {
             { effect = "reflect", magnitude = 8, condition = CHARGED } },
   } },
 
-{ name = "House Redoran", -- the duty-bound: the spear steadies in hard fights
+{ name = "House Redoran", -- the duty-bound: the spear steadies in hard fights; rank confers the House's resolve
   -- (blight resist stays an echo -- Chitin owns it where the items overlap)
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
@@ -1413,7 +1482,8 @@ return {
             { effect = "resistBlightDisease", magnitude = 10 },
             { effect = "fortifySkill", skill = "spear", magnitude = 18, condition = BLOODIED },
             { effect = "resistNormalWeapons", magnitude = 8 },
-            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 } },
+            { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
+            { effect = "fortifySkill", skill = "spear", magnitude = 8, condition = factionRank("Redoran", 6) } },
   } },
 
 { name = "Kagouti Hide", -- territorial beast: it bristles in the open
@@ -1424,12 +1494,12 @@ return {
             { effect = "fortifySkill", skill = "athletics", magnitude = 8 },
             { effect = "resistPoison", magnitude = 15 },
             { effect = "fortifyAttack", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyAttribute", attribute = "speed", magnitude = 8 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 12 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifyAttack", magnitude = 12, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Kalantar", -- fire-forged: strength kept in reserve
@@ -1452,11 +1522,11 @@ return {
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 5 },
             { effect = "fortifyHealth", magnitude = 15, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
             { effect = "fortifyHealth", magnitude = 22, condition = BLOODIED },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Kragen", -- merchant-clan mail: the trader lane (its items also
@@ -1467,11 +1537,11 @@ return {
     mid = { { effect = "fortifySkill", skill = "mercantile", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "luck", magnitude = 5 },
             { effect = "fortifySkill", skill = "mercantile", magnitude = 12, condition = INSIDE },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "fortifySkill", skill = "mercantile", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "luck", magnitude = 8 },
             { effect = "fortifySkill", skill = "mercantile", magnitude = 18, condition = INSIDE },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Kvetchi", -- marchers' kit: it keeps you moving when spent
@@ -1481,12 +1551,12 @@ return {
     mid = { { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistPoison", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "restoreFatigue", magnitude = 2, condition = WINDED },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Lamellar", -- laced plates: they take the hits you can't
@@ -1495,11 +1565,11 @@ return {
             { effect = "fortifyFatigue", magnitude = 12 } },
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyFatigue", magnitude = 20 },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyHealth", magnitude = 15, condition = WINDED },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Mananaut", -- void sailors: the stars are out past the sun
@@ -1524,13 +1594,13 @@ return {
     mid = { { effect = "waterBreathing", magnitude = 1 },
             { effect = "swiftSwim", magnitude = 30 },
             { effect = "fortifyFatigue", magnitude = 20 },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "waterBreathing", magnitude = 1 },
             { effect = "swiftSwim", magnitude = 40 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistFrost", magnitude = 20 },
             { effect = "restoreFatigue", magnitude = 2, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Maormer", -- sea elf raiders: they board by darkness
@@ -1557,7 +1627,7 @@ return {
             { effect = "sanctuary", magnitude = 12, condition = WINDED } },
   } },
 
-{ name = "Militia", -- home guard: it musters by day and shelters its greenest
+{ name = "Militia", -- home guard: it musters by day and shelters its greenest; it won't shield an outlaw
   bonuses = {
     min = { { effect = "fortifyFatigue", magnitude = 12 },
             { effect = "fortifyHealth", magnitude = 8 } },
@@ -1565,12 +1635,14 @@ return {
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = DAY },
-            { effect = "restoreHealth", magnitude = 1, condition = GREEN } },
+            { effect = "restoreHealth", magnitude = 1, condition = GREEN },
+            { effect = "weaknesstoNormalWeapons", magnitude = 15, condition = WANTED } },
     max = { { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = DAY },
-            { effect = "restoreHealth", magnitude = 1, condition = GREEN } },
+            { effect = "restoreHealth", magnitude = 1, condition = GREEN },
+            { effect = "weaknesstoNormalWeapons", magnitude = 25, condition = WANTED } },
   } },
 
 { name = "Molecrab", -- burrower's shell: safest under a roof of stone
@@ -1578,11 +1650,11 @@ return {
     min = { { effect = "resistNormalWeapons", magnitude = 3 } },
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "sanctuary", magnitude = 8, condition = SHADE },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "sanctuary", magnitude = 12, condition = SHADE },
             { effect = "fortifyHealth", magnitude = 18 },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Narsis Watch", -- Hlaalu watch: order is good for business
@@ -1623,13 +1695,13 @@ return {
             { effect = "resistMagicka", magnitude = 8 },
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "turnUndead", magnitude = 20, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "turnUndead", magnitude = 20 },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "turnUndead", magnitude = 30, condition = NIGHT },
             { effect = "fortifySkill", skill = "restoration", magnitude = 12 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Nibenese", -- eastern silk-and-scale: trade blessed by ancestors
@@ -1665,12 +1737,12 @@ return {
     mid = { { effect = "waterBreathing", magnitude = 1 },
             { effect = "resistPoison", magnitude = 15 },
             { effect = "resistNormalWeapons", magnitude = 5 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "waterBreathing", magnitude = 1 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "swiftSwim", magnitude = 60, condition = BLOODIED },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Reach", -- witch-warriors: old pacts stir after dark
@@ -1694,43 +1766,47 @@ return {
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistFrost", magnitude = 15 },
             { effect = "resistNormalWeapons", magnitude = 5 },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistFrost", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = BLOODIED },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
-{ name = "Red Dome Templar", -- warrior-priests: grace at death's door
+{ name = "Red Dome Templar", -- warrior-priests: grace at death's door; the Temple's writ withers an outlaw
   bonuses = {
     min = { { effect = "fortifyHealth", magnitude = 8 },
             { effect = "resistMagicka", magnitude = 5 } },
     mid = { { effect = "fortifyHealth", magnitude = 12 },
             { effect = "resistMagicka", magnitude = 8 },
             { effect = "turnUndead", magnitude = 15 },
-            { effect = "restoreHealth", magnitude = 2, condition = LAST_STAND } },
+            { effect = "restoreHealth", magnitude = 2, condition = LAST_STAND },
+            { effect = "weaknesstoMagicka", magnitude = 15, condition = WANTED } },
     max = { { effect = "fortifyHealth", magnitude = 18 },
             { effect = "resistMagicka", magnitude = 12 },
             { effect = "turnUndead", magnitude = 20 },
             { effect = "restoreHealth", magnitude = 3, condition = LAST_STAND },
-            { effect = "fortifySkill", skill = "restoration", magnitude = 12 } },
+            { effect = "fortifySkill", skill = "restoration", magnitude = 12 },
+            { effect = "turnUndead", magnitude = 15, condition = factionRank("Temple", 6) },
+            { effect = "weaknesstoMagicka", magnitude = 25, condition = WANTED } },
   } },
 
-{ name = "Redguard", -- Yokudan drill: adrenaline when the body empties
+{ name = "Redguard", -- Yokudan drill: adrenaline when the body empties; the Warrior's stars steady the blade
   bonuses = {
     min = { { effect = "resistPoison", magnitude = 10 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 3 } },
     mid = { { effect = "resistPoison", magnitude = 15 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = WINDED },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = WINDED },
             { effect = "restoreFatigue", magnitude = 2, condition = WINDED },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8, condition = race("Redguard") },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "fortifyAttack", magnitude = 5, condition = sign("The Warrior") },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Redguard Iron Lamellar", -- desert lamellar: it outlasts the tired
@@ -1740,13 +1816,13 @@ return {
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyHealth", magnitude = 12 },
             { effect = "fortifyAttack", magnitude = 5 },
-            { effect = "weaknesstoShock", magnitude = 10 } },
+            { effect = "weaknesstoShock", magnitude = 15, condition = LADEN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyHealth", magnitude = 18 },
             { effect = "fortifyAttack", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 8, condition = WINDED },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-            { effect = "weaknesstoShock", magnitude = 20 } },
+            { effect = "weaknesstoShock", magnitude = 25, condition = LADEN } },
   } },
 
 { name = "Reman", -- the emperor's legacy: dragonblood at the brink
@@ -1771,13 +1847,13 @@ return {
             { effect = "fortifyFatigue", magnitude = 20 },
             { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "fortifyAttack", magnitude = 8, condition = SUN_UP },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifyFatigue", magnitude = 28 },
             { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "fortifyAttack", magnitude = 12, condition = SUN_UP },
             { effect = "fortifyAttribute", attribute = "endurance", magnitude = 8 },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Riverwatch", -- river patrol: they walk their beat on the water
@@ -1830,12 +1906,12 @@ return {
     mid = { { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 8 },
             { effect = "resistPoison", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "fortifySkill", skill = "athletics", magnitude = 12 },
             { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 12, condition = FRESH },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Shellmold", -- shell-cast bonemold: it braces on impact
@@ -1844,11 +1920,11 @@ return {
             { effect = "resistShock", magnitude = 10 } },
     mid = { { effect = "resistNormalWeapons", magnitude = 5 },
             { effect = "resistShock", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistNormalWeapons", magnitude = 8 },
             { effect = "resistShock", magnitude = 20 },
             { effect = "fortifyHealth", magnitude = 15, condition = BLOODIED },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Shinathi Chitin", -- night-stalker chitin: quiet in the dark
@@ -1859,12 +1935,12 @@ return {
             { effect = "resistBlightDisease", magnitude = 15 },
             { effect = "resistParalysis", magnitude = 15 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "resistParalysis", magnitude = 20 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 18, condition = NIGHT },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Shipal-Arai", -- Ashlander war-kit: the spear lane (blight/poison
@@ -1875,12 +1951,12 @@ return {
     mid = { { effect = "fortifySkill", skill = "spear", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 5 },
             { effect = "resistParalysis", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "fortifySkill", skill = "spear", magnitude = 12 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8 },
             { effect = "resistParalysis", magnitude = 20 },
             { effect = "fortifyAttack", magnitude = 8, condition = OUTSIDE },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Skingrad", -- vine-county watch: they watch for vampires at night
@@ -1918,12 +1994,12 @@ return {
     mid = { { effect = "waterBreathing", magnitude = 1 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 5 },
             { effect = "swiftSwim", magnitude = 30 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "waterBreathing", magnitude = 1 },
             { effect = "fortifyAttribute", attribute = "strength", magnitude = 8 },
             { effect = "swiftSwim", magnitude = 40 },
             { effect = "fortifyAttack", magnitude = 8, condition = DAY },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 { name = "Toadscale", -- swamp scale: a nocturnal skin
@@ -1933,12 +2009,12 @@ return {
     mid = { { effect = "resistPoison", magnitude = 15 },
             { effect = "resistFrost", magnitude = 15 },
             { effect = "resistCommonDisease", magnitude = 15 },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "resistFrost", magnitude = 20 },
             { effect = "resistCommonDisease", magnitude = 20 },
             { effect = "sanctuary", magnitude = 12, condition = NIGHT },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Watchman", -- night watch: eyes that own the dark (health belongs
@@ -1963,12 +2039,12 @@ return {
             { effect = "fortifySkill", skill = "marksman", magnitude = 8 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 5 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 12, condition = OUTSIDE },
-            { effect = "weaknesstoFire", magnitude = 10 } },
+            { effect = "weaknesstoFire", magnitude = 15, condition = INSIDE } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "fortifySkill", skill = "marksman", magnitude = 12 },
             { effect = "fortifySkill", skill = "sneak", magnitude = 18, condition = OUTSIDE },
             { effect = "fortifyAttack", magnitude = 8, condition = skillAtLeast("marksman", 50) },
-            { effect = "weaknesstoFire", magnitude = 20 } },
+            { effect = "weaknesstoFire", magnitude = 25, condition = INSIDE } },
   } },
 
 { name = "Wormmouth", -- wormmouth hide: numb to venom, quick in the dark
@@ -1976,12 +2052,12 @@ return {
     min = { { effect = "resistPoison", magnitude = 10 } },
     mid = { { effect = "resistPoison", magnitude = 15 },
             { effect = "resistBlightDisease", magnitude = 15 },
-            { effect = "weaknesstoFrost", magnitude = 10 } },
+            { effect = "weaknesstoFrost", magnitude = 15, condition = SUN_DOWN } },
     max = { { effect = "resistPoison", magnitude = 20 },
             { effect = "resistBlightDisease", magnitude = 20 },
             { effect = "resistParalysis", magnitude = 20 },
             { effect = "fortifyAttribute", attribute = "agility", magnitude = 8, condition = NIGHT },
-            { effect = "weaknesstoFrost", magnitude = 20 } },
+            { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
 }

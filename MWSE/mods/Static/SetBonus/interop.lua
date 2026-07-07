@@ -146,18 +146,29 @@ local function clampId(id)
     return id:sub(1, 26) .. "_" .. hash4(id)
 end
 
--- Map an item's inventory ICON to a set, so player-enchanted (or otherwise copied)
--- versions of a set piece -- which get a new object id but keep the same icon --
--- still count toward the set. Only resolvable in-game; file-scope registrations
--- are covered by the bulk pass in the 'initialized' handler below.
+-- Map an item's inventory ICON+MESH to a set, so player-enchanted (or otherwise
+-- copied) versions of a set piece -- which get a new object id but keep the same
+-- icon and mesh -- still count toward the set. Icon alone is not safe: icon-
+-- replacer/compilation mods (e.g. NOD) routinely point unrelated armor records at
+-- the same shared icon to save texture slots (a House Hlaalu helm ending up on
+-- the same icon as the Indoril helm, say), which would false-match them into the
+-- wrong set. Two different armor pieces essentially never also share a mesh, so
+-- requiring both keeps this fallback narrow to actual copies/enchants.
+-- Only resolvable in-game; file-scope registrations are covered by the bulk pass
+-- in the 'initialized' handler below.
+local function iconMeshSig(obj)
+    local icon = obj and obj.icon
+    if not icon then return nil end
+    local mesh = obj.mesh
+    return icon:lower() .. "|" .. (mesh and mesh:lower() or "")
+end
 local function linkIconFor(itemId, setName)
     if not gameInitialized then return end
     local obj = tes3.getObject(itemId)
-    local icon = obj and obj.icon
-    if icon then
-        icon = icon:lower()
-        config.iconLinks[icon] = config.iconLinks[icon] or {}
-        config.iconLinks[icon][setName] = true
+    local sig = iconMeshSig(obj)
+    if sig then
+        config.iconLinks[sig] = config.iconLinks[sig] or {}
+        config.iconLinks[sig][setName] = true
     end
 end
 
@@ -546,16 +557,15 @@ event.register(tes3.event.initialized, function()
             end
         end
     end
-    -- Bulk-build the icon index for every item registered so far (file-scope sets).
-    -- Items added later at runtime link their icons via linkIconFor as they are added.
+    -- Bulk-build the icon+mesh index for every item registered so far (file-scope
+    -- sets). Items added later at runtime link via linkIconFor as they are added.
     for itemId, setmap in pairs(config.setLinks) do
         local obj = tes3.getObject(itemId)
-        local icon = obj and obj.icon
-        if icon then
-            icon = icon:lower()
-            local dst = config.iconLinks[icon] or {}
+        local sig = iconMeshSig(obj)
+        if sig then
+            local dst = config.iconLinks[sig] or {}
             for setName in pairs(setmap) do dst[setName] = true end
-            config.iconLinks[icon] = dst
+            config.iconLinks[sig] = dst
         end
     end
     log:debug("interop initialized: %d set(s) registered.", #config.setsArray)
