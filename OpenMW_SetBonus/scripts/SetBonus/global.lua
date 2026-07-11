@@ -574,10 +574,17 @@ local function recompute(actor)
     if not cleaned[aid] then
         -- Spell record ids are regenerated every session, so match our abilities by
         -- name to purge any left on the actor from a previous save (prevents stacking).
+        -- We create two naming conventions (see buildSpellsForSet): unconditional
+        -- tier spells are "<Set> Set Bonus", conditional per-effect sub-spells are
+        -- "<Set> Bonus". Both end in the suffix " Bonus", so match on that suffix
+        -- rather than the old " Set Bonus"-only check, which silently missed every
+        -- conditional sub-spell and let them accumulate one leftover copy per
+        -- save/reload (this is what produced the stacked duplicate effects).
+        local SUFFIX = " Bonus"
         local stale = {}
         for _, sp in pairs(spells) do
             local nm = sp.name
-            if nm and string.find(nm, " Set Bonus", 1, true) then stale[#stale + 1] = sp end
+            if nm and #nm >= #SUFFIX and nm:sub(-#SUFFIX) == SUFFIX then stale[#stale + 1] = sp end
         end
         for _, sp in ipairs(stale) do spells:remove(sp) end
         stateOf[aid] = {}
