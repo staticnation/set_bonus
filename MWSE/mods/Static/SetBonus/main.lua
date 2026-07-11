@@ -264,6 +264,34 @@ local function rescaleBonuses()
 end
 event.register("Static:RescaleBonuses", rescaleBonuses)
 
+-- Re-sync every reference's tier (and, via Static:SetBonusChanged, its conditional
+-- sub-spells) on every load. Necessary because conditions.lua's own tracking
+-- (`watch`/`appliedCond`) is wiped on every tes3.event.loaded, but `appliedTier`
+-- above is NOT (it only resets on a full game restart or a magnitude-scale
+-- change). Without this, a load that doesn't change a reference's *tier* never
+-- re-fires Static:SetBonusChanged, so conditions.lua never repopulates its
+-- tracking -- any conditional sub-spell that happened to be active at save time
+-- (e.g. a night-only Chameleon bonus) stays physically applied but untracked,
+-- and the periodic re-evaluation in conditions.lua silently skips it forever
+-- (it'll still be active in broad daylight, unrelated to the actual condition).
+-- actorLoaded() doesn't message the player, so this is silent even though it
+-- forces a full remove+reapply pass.
+local function resyncAllBonuses()
+    appliedTier = setmetatable({}, { __mode = "k" })
+    if tes3.player then actorLoaded({ reference = tes3.player }) end
+    if settings.npcBonuses then
+        for _, cell in ipairs(tes3.getActiveCells()) do
+            for ref in cell:iterateReferences() do
+                if ref ~= tes3.player and ref.mobile and ref.object and ref.object.equipment then
+                    actorLoaded({ reference = ref })
+                end
+            end
+        end
+    end
+    log:debug("resyncAllBonuses: reapplied tiers and conditional sub-spells after load.")
+end
+event.register(tes3.event.loaded, resyncAllBonuses)
+
 -- -------------------------------------------------------------------------
 -- Item tooltip: set, current progress, and the tier effects (active tier
 -- highlighted). Multi-set items list each set they belong to. The
