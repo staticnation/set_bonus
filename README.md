@@ -47,6 +47,9 @@ Ships in two flavours from a single codebase — pick the one for your engine:
 - **Full Armor-class sets (New in 1.7.1)** — the Heavy / Medium / Light Armor sets
   now include every piece of their weight class across the base game and all
   supported add-ons, generated straight from the armour data.
+- **Self-healing spell management (New in 1.7.2)** — The engine now automatically 
+  purges orphaned "ghost" spells and corrects desynced conditional tracking on load, 
+  ensuring consistent performance across save/reload cycles.
 - **Optional Flag Companion (New in 1.7.1)** — a small opt-in add-on that feeds
   combat, weather, and movement state to the framework so author-made sets can
   react to them. Not needed for the base mod.
@@ -365,7 +368,7 @@ generated from the MWSE set definitions so the two stay in sync.
 
 ## Changelog
 
-See `SetBonus_Changelog.md`. Current release: **1.7.1** (fully populated
+See `SetBonus_Changelog.md`. Current release: **1.7.2** (fully populated
 Armor-class sets, a much wider cross-engine condition vocabulary, situational
 Rebalance drawbacks, and the optional Flag Companion).
 

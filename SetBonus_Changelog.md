@@ -1,5 +1,32 @@
 # Set Bonus — Changelog
 
+### 1.7.2 — Reliability and Stability
+
+**Fixed**
+
+* **OpenMW: Fixed "ghost" ability stacking.** The once-per-session spell cleanup
+  in `global.lua` now correctly targets both base set spells and conditional 
+  sub-spells by matching the `" Bonus"` suffix. This ensures that any orphaned 
+  spells from previous sessions are purged on the first recompute, effectively 
+  self-healing saves that already suffer from stacked effects.
+
+* **MWSE: Fixed conditional effects getting "stuck" after loading.** Added a 
+forced resync on `tes3.event.loaded` that resets the `appliedTier` cache and 
+triggers a full reapply pass. This prevents conditional sub-spells from remaining 
+active or becoming untracked when a load occurs without a tier change.
+
+**Important Caveat**
+
+* **Conditional Rebalance installation:** When installing or updating the 
+  Conditional Rebalance mid-playthrough, it is possible for "ghost" conditional 
+  sub-spells to persist if the new version of a set defines fewer conditional 
+  effects for a tier than the previous version did. Because these orphaned spells 
+  are no longer part of the set definition, they cannot be automatically toggled 
+  off by the framework. To avoid this, it is recommended to either install this 
+  submodule at the start of a new playthrough or perform a "clean" pass by 
+  unequipping all set-bonus items before toggling the rebalance on an existing 
+  save.
+
 ## 1.7.1 — Fully populated Armor-class sets (in progress)
 
 **Added**
