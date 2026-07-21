@@ -252,35 +252,45 @@ local function setHasConditionals(set)
     return false
 end
 
-local function removeTierSubs(ref, set, tier)
-    local conds = set.conditionals and set.conditionals[tier]
-    if not conds then return end
+-- Authoritative sweep (mirrors OpenMW's reconcileActor): work out which of this
+-- set's sub-spells SHOULD be active right now, then remove every sub-spell the
+-- set owns -- across ALL tiers -- that isn't in that list, and add the ones that
+-- are. Because removal no longer depends on knowing which tier we just left, a
+-- stale sub-spell can't survive a tier drop, a full unequip, or a missed event.
+-- Pass tier = nil to strip the set entirely.
+local function reconcile(ref, set, tier)
+    if not (ref and ref.object) then return end
+    if not set.conditionals then return end
     local applied = appliedCond[ref]
-    if not applied then return end
-    for _, entry in ipairs(conds) do
-        if applied[entry.spellId] then
-            tes3.removeSpell{ reference = ref, spell = entry.spellId }
-            applied[entry.spellId] = nil
+
+    local want = {}
+    local conds = tier and set.conditionals[tier]
+    if conds then
+        for _, entry in ipairs(conds) do
+            if evalCond(entry.condition, ref) then want[entry.spellId] = true end
         end
     end
-end
 
-local function reconcile(ref, set, tier)
-    if not tier then return end
-    local conds = set.conditionals and set.conditionals[tier]
-    if not conds or #conds == 0 then return end
-    if not ref.object then return end
-    local applied = appliedCond[ref]
-    if not applied then applied = {}; appliedCond[ref] = applied end
-    for _, entry in ipairs(conds) do
-        local met = evalCond(entry.condition, ref)
-        local has = applied[entry.spellId] == true
-        if met and not has then
-            tes3.addSpell{ reference = ref, spell = entry.spellId }
-            applied[entry.spellId] = true
-        elseif not met and has then
-            tes3.removeSpell{ reference = ref, spell = entry.spellId }
-            applied[entry.spellId] = nil
+    -- Drop anything this set owns that isn't wanted, whichever tier it came from.
+    if applied then
+        for _, list in pairs(set.conditionals) do
+            for _, entry in ipairs(list) do
+                if applied[entry.spellId] and not want[entry.spellId] then
+                    tes3.removeSpell{ reference = ref, spell = entry.spellId }
+                    applied[entry.spellId] = nil
+                end
+            end
+        end
+    end
+
+    -- Add whatever is wanted but not yet on.
+    if next(want) then
+        if not applied then applied = {}; appliedCond[ref] = applied end
+        for spellId in pairs(want) do
+            if not applied[spellId] then
+                tes3.addSpell{ reference = ref, spell = spellId }
+                applied[spellId] = true
+            end
         end
     end
 end
@@ -293,8 +303,9 @@ event.register("Static:SetBonusChanged", function(e)
     if e.reference ~= tes3.player and not settings.npcBonuses then return end
     local w = watch[e.reference]
     if not w then w = {}; watch[e.reference] = w end
-    if e.oldTier and e.oldTier ~= e.newTier then removeTierSubs(e.reference, set, e.oldTier) end
-    w[e.setName] = e.newTier
+    -- Keep watching even at "no tier" (store false, not nil) so the 1s tick keeps
+    -- sweeping this set and can self-heal a leak if an event is ever missed.
+    w[e.setName] = e.newTier or false
     reconcile(e.reference, set, e.newTier)
 end)
 
@@ -305,7 +316,8 @@ local function tick()
         if ref and ref.object and ref.mobile then
             for setName, tier in pairs(sets) do
                 local set = config.sets[setName]
-                if set and tier then reconcile(ref, set, tier) end
+                -- tier may be false ("no tier") -- pass nil so reconcile strips it.
+                if set then reconcile(ref, set, tier or nil) end
             end
         end
     end

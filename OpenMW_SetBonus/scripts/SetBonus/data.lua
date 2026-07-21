@@ -1383,6 +1383,49 @@ return {
     },
   },
   {
+    -- MYTHIC prototypes: 1-2 piece artifacts, full power immediately, real cost.
+    name = "Boots of Blinding Speed",
+    thresholds = { min=1, mid=1, max=1 },
+    bonuses = {
+      max = {
+        {effect="fortifyattribute", attribute="speed", mag=30},
+        {effect="fortifyskill", skill="athletics", mag=20},
+        {effect="weaknesstonormalweapons", mag=30},
+        {effect="weaknesstonormalweapons", mag=20, condition={kind="sun", value="down"}},
+      },
+    },
+    items = { "boots of blinding speed[unique]", "boots of blinding speed_x" },
+  },
+  {
+    name = "Savior's Hide",
+    thresholds = { min=1, mid=1, max=1 },
+    bonuses = {
+      max = {
+        {effect="resistmagicka", mag=40},
+        {effect="spellabsorption", mag=15},
+        {effect="weaknesstonormalweapons", mag=40},
+        {effect="restorehealth", mag=2, dur=1, condition={kind="health", op="<", value=0.25, fraction=true}},
+      },
+    },
+    items = { "cuirass_savior_unique", "cuirass_savior_unique_x" },
+  },
+  {
+    name = "Fists of Randagulf",
+    thresholds = { min=1, mid=2, max=2 },
+    bonuses = {
+      min = {
+        {effect="fortifyattribute", attribute="strength", mag=10},
+      },
+      max = {
+        {effect="fortifyattribute", attribute="strength", mag=25},
+        {effect="fortifyskill", skill="handtohand", mag=40, condition={kind="stance", value="none"}},
+        {effect="fortifyattack", mag=15, condition={kind="stance", value="none"}},
+        {effect="weaknesstonormalweapons", mag=25, condition={kind="stance", value="weapon"}},
+      },
+    },
+    items = { "gauntlet_fists_l_unique", "gauntlet_fists_r_unique" },
+  },
+  {
     -- Snow Prince: the PRE-FALL Snow Elves (the Ice Armour). Proud and sighted,
     -- so no daylight weakness -- the mirror of the post-fall "Falmer" below.
     name = "Snow Prince",

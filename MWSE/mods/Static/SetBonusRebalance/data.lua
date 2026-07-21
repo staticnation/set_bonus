@@ -759,6 +759,32 @@ return {
             { effect = "weaknesstoFrost", magnitude = 25, condition = SUN_DOWN } },
   } },
 
+-- Mythic artifacts: 1-2 pieces, full power at once, with a cost you actually feel.
+{ name = "Boots of Blinding Speed", -- run like the wind, fight like you can't see -- because you can't
+  bonuses = {
+    max = { { effect = "fortifyAttribute", attribute = "speed", magnitude = 30 },
+            { effect = "fortifySkill", skill = "athletics", magnitude = 20 },
+            { effect = "weaknesstoNormalWeapons", magnitude = 30 },
+            { effect = "weaknesstoNormalWeapons", magnitude = 20, condition = SUN_DOWN } },
+  } },
+
+{ name = "Savior's Hide", -- turns magic aside almost entirely; steel goes straight through it
+  bonuses = {
+    max = { { effect = "resistMagicka", magnitude = 40 },
+            { effect = "spellAbsorption", magnitude = 15 },
+            { effect = "weaknesstoNormalWeapons", magnitude = 40 },
+            { effect = "restoreHealth", magnitude = 2, condition = LAST_STAND } },
+  } },
+
+{ name = "Fists of Randagulf", -- they honour bare hands and resent a drawn blade
+  bonuses = {
+    min = { { effect = "fortifyAttribute", attribute = "strength", magnitude = 10 } },
+    max = { { effect = "fortifyAttribute", attribute = "strength", magnitude = 25 },
+            { effect = "fortifySkill", skill = "handToHand", magnitude = 40, condition = SHEATHED },
+            { effect = "fortifyAttack", magnitude = 15, condition = SHEATHED },
+            { effect = "weaknesstoNormalWeapons", magnitude = 25, condition = WEAPON_OUT } },
+  } },
+
 { name = "Snow Prince", -- PRE-FALL Snow Elves (the Ice Armour): sighted and proud, strongest under open
   -- sky -- the exact mirror of the post-fall Falmer. Echo-umbrella over the Ice Armour's other sets
   -- (Nordic/Stalhrim/class), so its strength sits in the daylight lane no other set uses.
