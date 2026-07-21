@@ -6,7 +6,7 @@ A framework mod for **The Elder Scrolls III: Morrowind** that turns matched armo
 into a reward. Equip several pieces of the same set and gain a constant,
 lore-flavoured bonus that grows the more of the set you wear — Iron makes you
 tough, Glass keeps you nimble, Daedric wards off magic, Dark Brotherhood sharpens
-your sneak attacks. Over **130 sets** in all, each themed to its material,
+your sneak attacks. Over **140 sets** in all, each themed to its material,
 culture, or faction (with a nod to ESO-style set design).
 
 Because a single piece can belong to more than one set, bonuses **stack**, and
@@ -27,7 +27,7 @@ Ships in two flavours from a single codebase — pick the one for your engine:
 
 ## Features
 
-- **130+ armour sets** across every vanilla material and culture, plus Tribunal
+- **140 armour sets** across every vanilla material and culture, plus Tribunal
   and Bloodmoon.
 - **Three tiers per set** — bonuses scale up at 2, 4, and 6+ equipped pieces
   (thresholds are per-set configurable).
@@ -47,6 +47,15 @@ Ships in two flavours from a single codebase — pick the one for your engine:
 - **Full Armor-class sets (New in 1.7.1)** — the Heavy / Medium / Light Armor sets
   now include every piece of their weight class across the base game and all
   supported add-ons, generated straight from the armour data.
+- **Mythic artifact sets (New in 1.7.3)** — one- and two-piece artifacts that hit
+  full power the moment you equip them, each with a cost you feel: the Boots of
+  Blinding Speed (enormous Speed, you fight half-blind), the Savior's Hide
+  (turns magic aside, steel goes straight through), and the Fists of Randagulf
+  (massive Strength, but the real spikes need your **weapon sheathed**).
+- **Pre-fall / post-fall Snow Elves (New in 1.7.1)** — the Snow Prince's Ice
+  Armour is its own proud, sun-walking set, distinct from the blind, sun-shunning
+  **Falmer** (the Betrayed) — so noble Snow Elf gear no longer inherits the
+  Betrayed's daylight weakness.
 - **Self-healing spell management (New in 1.7.2)** — The engine now automatically 
   purges orphaned "ghost" spells and corrects desynced conditional tracking on load, 
   ensuring consistent performance across save/reload cycles.
@@ -358,7 +367,15 @@ OpenMW_SetBonusFlags/        Optional Flag Companion (OpenMW) — feeds
 SetBonus_Changelog.md        Full version history
 Set_Bonus_Spell_Reference.md Reference for all per-set effects (default balance)
 SetBonus_Rebalance_Reference.md Reference for the Conditional Rebalance submodule
-gen_rebalance.py             Generates the OpenMW rebalance data + reference doc
+SetBonus_Flags_Companion.md  Flag Companion guide (flag vocabulary + install)
+armor/                       tes3conv armour dumps, one per content file —
+                              the input for the roster tooling below
+
+gen_rebalance.py             Validates the Conditional Rebalance and generates
+                              the OpenMW rebalance data + reference doc
+gen_rebalance_bbcode.py      Same data as Nexus BBCode (forum-ready spell list)
+gen_class_sets.py            Populates Heavy/Medium/Light Armor from weight class
+gen_rosters.py               Rule-based armour -> set classifier (see below)
 README.md                    Primary project documentation
 
 ```
@@ -366,11 +383,49 @@ README.md                    Primary project documentation
 The MWSE base sets are Lua-defined (no ESP needed); the OpenMW `data.lua` is
 generated from the MWSE set definitions so the two stay in sync.
 
+## Build tooling
+
+All of these are plain Python 3 (`gen_rebalance.py` needs `pip install lupa`) and
+are safe to re-run — they're idempotent.
+
+| Script | What it does |
+|--------|--------------|
+| `gen_rebalance.py` | Validates the Conditional Rebalance (effect/condition schema, cross-engine parity, per-tier caps, item-overlap **stacking rules**, and simulated spell-id collisions), then writes the OpenMW rebalance `data.lua` and `SetBonus_Rebalance_Reference.md`. Run it after any set-data change — it refuses to write if validation fails. |
+| `gen_rebalance_bbcode.py` | Emits the same rebalance spell list as Nexus BBCode. |
+| `gen_class_sets.py` | Rebuilds the Heavy/Medium/Light Armor sets from each item's engine weight-class tag. |
+| `gen_rosters.py` | Classifies armour into sets by rule (below). |
+
+### Adding a new armour mod
+
+Rosters used to be hand-listed per set, which is slow and lets the MWSE and
+OpenMW item lists drift apart. `gen_rosters.py` replaces that:
+
+1. Dump the mod's armour with tes3conv to `armor/<mod>_armor_output.txt`.
+2. `python gen_rosters.py --report` — shows coverage plus every item that matched
+   **only** a weight class. That list is your to-do list of rules.
+3. Add a rule or two to `RULES` at the top of the script. Rules match the item id
+   *and* its display name, and they **accumulate** — an Indoril cuirass is
+   correctly House Indoril *and* Tribunal Temple *and* Dunmer. Weight-class sets
+   are added automatically from the engine's own Light/Medium/Heavy tag.
+4. `--set <name>` to eyeball one set's contents before committing.
+5. `--diff` to see exactly what would be added to each target, then `--write`.
+
+Writes are **strictly additive** — items are only ever added, never removed — so
+hand-curated rosters survive a re-run. Base-game items go to the MWSE base set
+files, add-on items to that add-on's managed `addItems` block, and everything to
+the OpenMW combined `data.lua`, so the base mod still works without add-ons. The
+Armor-class sets are left to `gen_class_sets.py`, which owns them.
+
+Re-run `gen_rebalance.py` afterwards to re-validate. Note that adding items
+changes how easily sets complete, so review `--diff` before applying.
+
 ## Changelog
 
-See `SetBonus_Changelog.md`. Current release: **1.7.2** (fully populated
-Armor-class sets, a much wider cross-engine condition vocabulary, situational
-Rebalance drawbacks, and the optional Flag Companion).
+See `SetBonus_Changelog.md`. Current release: **1.7.3** — Mythic artifact sets
+(Boots of Blinding Speed, Savior's Hide, Fists of Randagulf), the rule-based
+roster classifier, and a fix for conditional drawbacks lingering after a tier
+drop. Built on 1.7.1's fully populated Armor-class sets, the wider cross-engine
+condition vocabulary, situational Rebalance drawbacks, and the Flag Companion.
 
 ## Credits & license
 

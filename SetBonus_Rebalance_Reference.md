@@ -52,7 +52,7 @@ Mananaut's 2/3/5 are kept). "/s" = per-second Restore.
 
 ---
 
-## Base mod sets (70)
+## Base mod sets (73)
 
 ### Iron
 - **min:** Fortify Health 8
@@ -293,6 +293,16 @@ Mananaut's 2/3/5 are kept). "/s" = per-second Restore.
 - **min:** Resist Blight Disease 10, Resist Poison 10
 - **mid:** Resist Blight Disease 15, Resist Poison 15, Fortify Athletics 12 *(outdoors)*, Weakness to Frost 15 *(out of the sun)*
 - **max:** Resist Blight Disease 20, Resist Poison 20, Fortify Athletics 18 *(outdoors)*, Restore Fatigue 2 /s *(outdoors)*, Fortify Endurance 8 *(in Molag Amur)*, Weakness to Frost 25 *(out of the sun)*
+
+### Boots of Blinding Speed
+- **max:** Fortify Speed 30, Fortify Athletics 20, Weakness to Normal Weapons 30, Weakness to Normal Weapons 20 *(out of the sun)*
+
+### Savior's Hide
+- **max:** Resist Magicka 40, Spell Absorption 15, Weakness to Normal Weapons 40, Restore Health 2 /s *(HP < 25%)*
+
+### Fists of Randagulf
+- **min:** Fortify Strength 10
+- **max:** Fortify Strength 25, Fortify Hand To Hand 40 *(weapon sheathed)*, Fortify Attack 15 *(weapon sheathed)*, Weakness to Normal Weapons 25 *(weapon drawn)*
 
 ### Snow Prince
 - **min:** Resist Frost 10

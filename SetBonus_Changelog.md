@@ -1,5 +1,57 @@
 # Set Bonus — Changelog
 
+### 1.7.3 — Mythic artifacts + conditional drawback cleanup
+
+**Added**
+
+* **Mythic artifact sets (prototype).** Three one-to-two piece artifact sets that
+  reach full power the moment you equip them, each with a cost you actually feel:
+  **Boots of Blinding Speed** (enormous Speed and Athletics; you fight half-blind,
+  worse with no light), **Savior's Hide** (turns magic aside almost entirely, but
+  steel goes straight through — and it knits you back together at death's door),
+  and **Fists of Randagulf** (massive Strength; the Hand-to-Hand and Attack spikes
+  apply only with your **weapon sheathed**, and the gauntlets turn on you if you
+  draw a blade). Because a one-piece set's max threshold is 1, these can never
+  form a co-max pair with a 6-piece set, so they layer safely over the material
+  and class sets.
+
+* **`gen_rosters.py` — rule-based armour classifier.** Onboarding an armour mod no
+  longer means hand-listing item ids: dump the mod's armour to
+  `armor/<mod>_armor_output.txt`, add a rule or two, re-run. Rules match
+  id + display name and accumulate (an Indoril cuirass is House Indoril *and*
+  Tribunal Temple *and* Dunmer), while weight-class sets come straight from the
+  engine's own Light/Medium/Heavy tag. `--report` lists coverage plus every item
+  that matched *only* a weight class, which is the list of rules still to write;
+  `--set <name>` previews a single set. Currently classifies 3,829 records across
+  8 dumps into 77 sets from ~80 rules.
+  It also closes the loop into the mod itself: `--diff` shows exactly what it
+  would add to each target (MWSE base set files, each add-on's managed
+  `addItems` block, and the OpenMW combined `data.lua`), and `--write` applies
+  it. Writes are **strictly additive** — an item is only ever added, never
+  removed — so hand-curated rosters survive a re-run, and base vs add-on items
+  are routed to the right file so the base mod still works without add-ons
+  installed. The Heavy/Medium/Light Armor sets are left to `gen_class_sets.py`,
+  which already owns them.
+
+**Fixed**
+
+* **MWSE: Conditional drawbacks persisted after a tier drop or unequip.**
+  Reported with Adamantium: dropping from 4 pieces to 2 adjusted the positive
+  bonuses correctly, but the Weakness to Shock stayed on — and survived removing
+  every set piece and equipping other armour. 1.7.1 moved weakness drawbacks out
+  of the tier spell (which is swapped automatically) into condition-gated
+  **sub-spells**, and cleanup only cleared the sub-spells of the *specific tier
+  you left*; if the new tier carried no conditionals (Adamantium's `min` has
+  none) or the set dropped out entirely, cleanup bailed early and orphaned the
+  spell. This affected any set whose drawback became conditional in 1.7.1, not
+  only Adamantium. The reconciler is now **authoritative**, matching the OpenMW
+  port (which is why OpenMW was unaffected): it determines which sub-spells
+  should be active and removes every sub-spell the set owns — **across all
+  tiers** — that isn't among them, so removal no longer depends on knowing the
+  previous tier. Sets also stay watched at "no tier", so the one-second
+  re-evaluation sweeps them and self-heals an already-stuck effect within a
+  second of loading — no save cleaning or new character required.
+
 ### 1.7.2 — Reliability and Stability
 
 **Fixed**

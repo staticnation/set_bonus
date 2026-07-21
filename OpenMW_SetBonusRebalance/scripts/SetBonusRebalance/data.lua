@@ -939,6 +939,39 @@ return {
       },
     },
   },
+  { name = "Boots of Blinding Speed",
+    bonuses = {
+      max = {
+        { effect = "fortifyattribute", attribute = "speed", mag = 30 },
+        { effect = "fortifyskill", skill = "athletics", mag = 20 },
+        { effect = "weaknesstonormalweapons", mag = 30 },
+        { effect = "weaknesstonormalweapons", mag = 20, condition = { kind = "sun", value = "down" } },
+      },
+    },
+  },
+  { name = "Savior's Hide",
+    bonuses = {
+      max = {
+        { effect = "resistmagicka", mag = 40 },
+        { effect = "spellabsorption", mag = 15 },
+        { effect = "weaknesstonormalweapons", mag = 40 },
+        { effect = "restorehealth", mag = 2, dur = 1, condition = { kind = "health", op = "<", value = 0.25, fraction = true } },
+      },
+    },
+  },
+  { name = "Fists of Randagulf",
+    bonuses = {
+      min = {
+        { effect = "fortifyattribute", attribute = "strength", mag = 10 },
+      },
+      max = {
+        { effect = "fortifyattribute", attribute = "strength", mag = 25 },
+        { effect = "fortifyskill", skill = "handtohand", mag = 40, condition = { kind = "stance", value = "none" } },
+        { effect = "fortifyattack", mag = 15, condition = { kind = "stance", value = "none" } },
+        { effect = "weaknesstonormalweapons", mag = 25, condition = { kind = "stance", value = "weapon" } },
+      },
+    },
+  },
   { name = "Snow Prince",
     bonuses = {
       min = {
