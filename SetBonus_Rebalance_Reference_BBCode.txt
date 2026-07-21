@@ -4,7 +4,7 @@ The optional [b]Conditional Rebalance[/b] submodule replaces every set's effects
 
 [b]Conditions at a glance:[/b] [i]bloodied[/i] HP < 50% · [i]last stand[/i] HP < 25% · [i]unscathed[/i] HP > 75% · [i]winded[/i] FP < 50% · [i]fresh[/i] FP > 75% · [i]charged[/i] MP > 50% · [i]drained[/i] MP < 25% · night / day · sun up/down (up = daytime and outdoors) · indoors / outdoors · region · race · faction rank · bounty · birthsign · werewolf form · weapon stance · level & skill/attribute thresholds, singly or combined.
 
-[b]Base mod sets (70)[/b]
+[b]Base mod sets (73)[/b]
 [spoiler]
 [b]Iron[/b]
     [i]min[/i] — Fortify Health 8
@@ -245,6 +245,16 @@ The optional [b]Conditional Rebalance[/b] submodule replaces every set's effects
     [i]min[/i] — Resist Blight Disease 10, Resist Poison 10
     [i]mid[/i] — Resist Blight Disease 15, Resist Poison 15, Fortify Athletics 12 [i](outdoors)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
     [i]max[/i] — Resist Blight Disease 20, Resist Poison 20, Fortify Athletics 18 [i](outdoors)[/i], Restore Fatigue 2 /s [i](outdoors)[/i], Fortify Endurance 8 [i](in Molag Amur)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Boots of Blinding Speed[/b]
+    [i]max[/i] — Fortify Speed 30, Fortify Athletics 20, Weakness to Normal Weapons 30, Weakness to Normal Weapons 20 [i](out of the sun)[/i]
+
+[b]Savior's Hide[/b]
+    [i]max[/i] — Resist Magicka 40, Spell Absorption 15, Weakness to Normal Weapons 40, Restore Health 2 /s [i](HP < 25%)[/i]
+
+[b]Fists of Randagulf[/b]
+    [i]min[/i] — Fortify Strength 10
+    [i]max[/i] — Fortify Strength 25, Fortify Hand To Hand 40 [i](weapon sheathed)[/i], Fortify Attack 15 [i](weapon sheathed)[/i], Weakness to Normal Weapons 25 [i](weapon drawn)[/i]
 
 [b]Snow Prince[/b]
     [i]min[/i] — Resist Frost 10
