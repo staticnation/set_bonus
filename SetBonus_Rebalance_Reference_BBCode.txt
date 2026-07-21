@@ -1,0 +1,700 @@
+[center][color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
+[size=5][b]✦ Conditional Rebalance — Full Spell Reference[/b][/size][/center]
+The optional [b]Conditional Rebalance[/b] submodule replaces every set's effects with the balance below. Each set keeps a lean always-on identity and gains [b]situational spikes[/b] that apply only while a state holds (shown in [i]italics[/i]); a few weakness drawbacks are conditional too. Default tiers at [b]2 / 4 / 6+[/b] pieces. "/s" = per-second Restore. Both magnitude sliders still apply. Click to expand.
+
+[b]Conditions at a glance:[/b] [i]bloodied[/i] HP < 50% · [i]last stand[/i] HP < 25% · [i]unscathed[/i] HP > 75% · [i]winded[/i] FP < 50% · [i]fresh[/i] FP > 75% · [i]charged[/i] MP > 50% · [i]drained[/i] MP < 25% · night / day · sun up/down (up = daytime and outdoors) · indoors / outdoors · region · race · faction rank · bounty · birthsign · werewolf form · weapon stance · level & skill/attribute thresholds, singly or combined.
+
+[b]Base mod sets (70)[/b]
+[spoiler]
+[b]Iron[/b]
+    [i]min[/i] — Fortify Health 8
+    [i]mid[/i] — Fortify Health 12, Fortify Attack 8 [i](HP < 50%)[/i], Weakness to Shock 15 [i](FP < 50%)[/i]
+    [i]max[/i] — Fortify Health 18, Fortify Attack 12 [i](HP < 50%)[/i], Resist Normal Weapons 8, Weakness to Shock 25 [i](FP < 50%)[/i]
+
+[b]Steel[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Attack 3
+    [i]mid[/i] — Fortify Health 12, Fortify Attack 5, Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Fortify Health 18, Fortify Attack 8, Resist Normal Weapons 12 [i](HP < 50%)[/i], Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Ebony[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Health 8
+    [i]mid[/i] — Resist Fire 15, Fortify Health 12, Resist Normal Weapons 8 [i](HP < 50%)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Fire 20, Fortify Health 18, Resist Normal Weapons 12 [i](HP < 50%)[/i], Resist Magicka 12, Fortify Health 8 [i](>= 75% load)[/i], Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Daedric[/b]
+    [i]min[/i] — Spell Absorption 3
+    [i]mid[/i] — Spell Absorption 5, Resist Magicka 8, Fortify Attack 12 [i](HP < 25%)[/i], Weakness to Fire 15 [i](HP > 75% and weapon sheathed)[/i]
+    [i]max[/i] — Spell Absorption 8, Resist Magicka 12, Fortify Attack 16 [i](HP < 25%)[/i], Sanctuary 12 [i](HP < 25%)[/i], Weakness to Fire 25 [i](HP > 75% and weapon sheathed)[/i]
+
+[b]Dwemer[/b]
+    [i]min[/i] — Resist Shock 10
+    [i]mid[/i] — Resist Shock 15, Reflect 8 [i](indoors)[/i], Weakness to Fire 15 [i](under the sun)[/i]
+    [i]max[/i] — Resist Shock 20, Reflect 12 [i](indoors)[/i], Sanctuary 12 [i](indoors)[/i], Resist Magicka 8, Weakness to Fire 25 [i](under the sun)[/i]
+
+[b]Adamantium[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Reflect 8 [i](HP < 50%)[/i], Weakness to Shock 15 [i](MP > 50%)[/i]
+    [i]max[/i] — Resist Magicka 12, Reflect 12 [i](HP < 50%)[/i], Resist Normal Weapons 8, Weakness to Shock 25 [i](MP > 50%)[/i]
+
+[b]Orcish[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Strength 3
+    [i]mid[/i] — Fortify Health 12, Fortify Strength 5, Restore Health 2 /s [i](HP < 50%)[/i], Weakness to Magicka 15 [i](HP < 25%)[/i]
+    [i]max[/i] — Fortify Health 18, Fortify Strength 8, Restore Health 3 /s [i](HP < 50%)[/i], Fortify Attack 12 [i](Strength >= 60)[/i], Weakness to Magicka 25 [i](HP < 25%)[/i]
+
+[b]Bronze[/b]
+    [i]min[/i] — Resist Shock 10, Resist Normal Weapons 3
+    [i]mid[/i] — Resist Shock 15, Resist Normal Weapons 5, Fortify Attack 8 [i](under the sun)[/i], Weakness to Normal Weapons 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Shock 20, Resist Normal Weapons 8, Fortify Attack 12 [i](under the sun)[/i], Fortify Endurance 8, Weakness to Normal Weapons 20 [i](out of the sun)[/i]
+
+[b]Plate[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Fortify Endurance 8 [i](HP < 50%)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Fortify Endurance 12 [i](HP < 50%)[/i], Resist Paralysis 20, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Splint[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Fortify Block 12 [i](HP < 50%)[/i], Weakness to Shock 15 [i](FP < 50%)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Fortify Block 18 [i](HP < 50%)[/i], Weakness to Shock 25 [i](FP < 50%)[/i]
+
+[b]Silver[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Turn Undead 15, Spell Absorption 8 [i](at night)[/i], Weakness to Normal Weapons 15 [i](by day)[/i]
+    [i]max[/i] — Resist Magicka 12, Turn Undead 20, Spell Absorption 12 [i](at night)[/i], Weakness to Normal Weapons 20 [i](by day)[/i]
+
+[b]Stalhrim[/b]
+    [i]min[/i] — Resist Frost 10
+    [i]mid[/i] — Resist Frost 15, Restore Magicka 1 /s, Fortify Willpower 8 [i](out of the sun)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Frost 20, Restore Magicka 2 /s, Fortify Willpower 12 [i](out of the sun)[/i], Resist Magicka 12 [i](out of the sun)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Dragonbone[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Health 8
+    [i]mid[/i] — Resist Fire 15, Fortify Health 12, Resist Normal Weapons 5, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Fire 20, Fortify Health 18, Resist Normal Weapons 8, Fortify Attack 12 [i](HP < 50%)[/i], Resist Magicka 12, Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Chain Mail[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Resist Normal Weapons 8 [i](FP < 50%)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Resist Normal Weapons 12 [i](FP < 50%)[/i], Fortify Endurance 8, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Bonemold[/b]
+    [i]min[/i] — Fortify Health 8, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Health 12, Resist Blight Disease 10, Fortify Endurance 8 [i](HP < 50%)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Blight Disease 10, Fortify Endurance 12 [i](HP < 50%)[/i], Resist Normal Weapons 12 [i](HP < 50%)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Gah-Julan[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Attack 8 [i](HP > 75%)[/i], Weakness to Normal Weapons 15 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Fortify Attack 12 [i](HP > 75%)[/i], Sanctuary 8, Weakness to Normal Weapons 20 [i](HP < 50%)[/i]
+
+[b]Armun-An[/b]
+    [i]min[/i] — Resist Fire 10
+    [i]mid[/i] — Resist Fire 15, Fortify Health 15 [i](outdoors)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Fire 20, Fortify Health 22 [i](outdoors)[/i], Resist Normal Weapons 8, Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Dreugh[/b]
+    [i]min[/i] — Resist Shock 10, Water Breathing 1
+    [i]mid[/i] — Resist Shock 15, Water Breathing 1, Swift Swim 30, Weakness to Frost 15 [i](outdoors)[/i]
+    [i]max[/i] — Resist Shock 20, Water Breathing 1, Swift Swim 40, Reflect 12 [i](HP < 50%)[/i], Weakness to Frost 25 [i](outdoors)[/i]
+
+[b]Ring Mail[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Agility 3
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Agility 5, Resist Normal Weapons 8 [i](HP > 75%)[/i], Weakness to Shock 15 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Fortify Agility 8, Resist Normal Weapons 12 [i](HP > 75%)[/i], Weakness to Shock 25 [i](HP < 50%)[/i]
+
+[b]Scale Mail[/b]
+    [i]min[/i] — Resist Normal Weapons 3
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Fatigue 20, Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Fatigue 28, Fortify Health 15 [i](HP < 50%)[/i], Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Goblin[/b]
+    [i]min[/i] — Fortify Strength 3, Resist Common Disease 10
+    [i]mid[/i] — Fortify Strength 5, Resist Common Disease 15, Fortify Attack 8 [i](FP < 50%)[/i], Weakness to Shock 15 [i](HP > 75%)[/i]
+    [i]max[/i] — Fortify Strength 8, Resist Common Disease 20, Fortify Attack 12 [i](FP < 50%)[/i], Fortify Fatigue 28, Weakness to Shock 25 [i](HP > 75%)[/i]
+
+[b]Trollbone[/b]
+    [i]min[/i] — Restore Health 1 /s
+    [i]mid[/i] — Restore Health 1 /s, Fortify Endurance 5, Restore Health 2 /s [i](HP < 50%)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Restore Health 1 /s, Fortify Endurance 8, Restore Health 3 /s [i](HP < 50%)[/i], Fortify Health 18, Weakness to Fire 15 [i](indoors)[/i], Weakness to Fire 15 [i](HP < 50%)[/i]
+
+[b]Leather[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Acrobatics 5
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Acrobatics 8, Fortify Sneak 12 [i](at night)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Fortify Acrobatics 12, Fortify Sneak 18 [i](at night)[/i], Fortify Agility 8, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Netch Leather[/b]
+    [i]min[/i] — Resist Poison 10, Slow Fall 10
+    [i]mid[/i] — Resist Poison 15, Slow Fall 15, Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Poison 20, Slow Fall 20, Fortify Speed 8 [i](outdoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Hide[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Athletics 12 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Fortify Athletics 18 [i](outdoors)[/i], Fortify Speed 12 [i](outdoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Fur[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Frost 15, Fortify Fatigue 20, Restore Fatigue 2 /s [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Frost 20, Fortify Fatigue 28, Restore Fatigue 3 /s [i](outdoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Bear Fur[/b]
+    [i]min[/i] — Resist Frost 10
+    [i]mid[/i] — Resist Frost 15, Fortify Endurance 8 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Frost 20, Fortify Endurance 12 [i](outdoors)[/i], Fortify Health 22 [i](HP < 50%)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Bearskin[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Strength 3
+    [i]mid[/i] — Resist Frost 15, Fortify Strength 5, Fortify Attack 12 [i](HP < 50%)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Frost 20, Fortify Strength 8, Fortify Attack 16 [i](HP < 50%)[/i], Fortify Health 22 [i](HP < 50%)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Wolf Fur[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Speed 3
+    [i]mid[/i] — Resist Frost 15, Fortify Speed 5, Night Eye 40 [i](at night)[/i], Fortify Attack 8 [i](at night and outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Frost 20, Fortify Speed 8, Night Eye 50 [i](at night)[/i], Fortify Attack 12 [i](at night and outdoors)[/i], Fortify Athletics 12, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Chitin[/b]
+    [i]min[/i] — Resist Blight Disease 10, Resist Poison 10
+    [i]mid[/i] — Resist Blight Disease 15, Resist Poison 15, Resist Paralysis 15, Weakness to Frost 15 [i](by day)[/i]
+    [i]max[/i] — Resist Blight Disease 20, Resist Poison 20, Resist Paralysis 20, Chameleon 12 [i](at night)[/i], Weakness to Frost 25 [i](by day)[/i]
+
+[b]Glass[/b]
+    [i]min[/i] — Fortify Agility 3, Resist Fire 10
+    [i]mid[/i] — Fortify Agility 5, Resist Fire 15, Sanctuary 12 [i](HP > 75%)[/i], Weakness to Frost 15 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Agility 8, Resist Fire 20, Sanctuary 16 [i](HP > 75%)[/i], Chameleon 10, Weakness to Frost 25 [i](HP < 50%)[/i]
+
+[b]Padded[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 20, Resist Frost 15, Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Resist Frost 20, Restore Fatigue 2 /s [i](indoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Studded[/b]
+    [i]min[/i] — Fortify Fatigue 12, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Fatigue 20, Resist Normal Weapons 5, Fortify Sneak 8 [i](at night)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Resist Normal Weapons 8, Fortify Sneak 12 [i](at night)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Cephalopod[/b]
+    [i]min[/i] — Swift Swim 20, Water Breathing 1
+    [i]mid[/i] — Swift Swim 30, Water Breathing 1, Sanctuary 7
+    [i]max[/i] — Swift Swim 40, Water Breathing 1, Sanctuary 10, Chameleon 16 [i](HP < 50%)[/i], Resist Frost 20
+
+[b]Newtscale[/b]
+    [i]min[/i] — Resist Poison 10, Swift Swim 20
+    [i]mid[/i] — Resist Poison 15, Swift Swim 30, Water Breathing 1, Weakness to Frost 15 [i](outdoors)[/i]
+    [i]max[/i] — Resist Poison 20, Swift Swim 40, Water Breathing 1, Sanctuary 12 [i](HP < 25% or FP < 50%)[/i], Weakness to Frost 25 [i](outdoors)[/i]
+
+[b]Resin Molded[/b]
+    [i]min[/i] — Resist Blight Disease 10
+    [i]mid[/i] — Resist Blight Disease 15, Fortify Fatigue 20, Resist Fire 15 [i](under the sun)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Blight Disease 20, Fortify Fatigue 28, Resist Fire 22 [i](under the sun)[/i], Resist Poison 20, Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Scrap[/b]
+    [i]min[/i] — Fortify Luck 3
+    [i]mid[/i] — Fortify Luck 5, Fortify Fatigue 20, Fortify Luck 8 [i](HP < 25% or FP < 50%)[/i], Weakness to Normal Weapons 15 [i](FP > 75%)[/i]
+    [i]max[/i] — Fortify Luck 8, Fortify Fatigue 28, Fortify Luck 12 [i](HP < 25% or FP < 50%)[/i], Resist Normal Weapons 8 [i](HP < 25% or FP < 50%)[/i], Weakness to Normal Weapons 20 [i](FP > 75%)[/i]
+
+[b]Heavy Armor[/b]
+    [i]min[/i] — Resist Normal Weapons 3
+    [i]mid[/i] — Resist Normal Weapons 3, Fortify Heavy Armor 8 [i](HP < 50%)[/i]
+    [i]max[/i] — Resist Normal Weapons 3, Fortify Heavy Armor 14 [i](HP < 50%)[/i]
+
+[b]Medium Armor[/b]
+    [i]min[/i] — Fortify Fatigue 12
+    [i]mid[/i] — Fortify Fatigue 12, Fortify Medium Armor 8 [i](FP < 50%)[/i]
+    [i]max[/i] — Fortify Fatigue 12, Fortify Medium Armor 14 [i](FP < 50%)[/i], Fortify Endurance 3
+
+[b]Light Armor[/b]
+    [i]min[/i] — Fortify Light Armor 5
+    [i]mid[/i] — Fortify Light Armor 8, Sanctuary 8 [i](FP > 75%)[/i]
+    [i]max[/i] — Fortify Light Armor 12, Sanctuary 12 [i](FP > 75%)[/i], Fortify Agility 3
+
+[b]Cloth[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Feather 5
+    [i]mid[/i] — Restore Magicka 1 /s, Feather 10, Fortify Alteration 12 [i](MP > 50%)[/i], Weakness to Normal Weapons 15 [i](spell readied)[/i]
+    [i]max[/i] — Restore Magicka 2 /s, Feather 15, Fortify Alteration 18 [i](MP > 50%)[/i], Fortify Willpower 12 [i](MP > 50%)[/i], Weakness to Normal Weapons 25 [i](spell readied)[/i]
+
+[b]Nordic[/b]
+    [i]min[/i] — Resist Shock 10
+    [i]mid[/i] — Resist Shock 15, Resist Frost 10
+    [i]max[/i] — Resist Shock 20, Resist Frost 10, Fortify Attack 10 [i](Nord only)[/i], Fortify Health 12 [i](in werewolf form)[/i]
+
+[b]Imperial[/b]
+    [i]min[/i] — Fortify Personality 3, Fortify Speechcraft 5
+    [i]mid[/i] — Fortify Personality 5, Fortify Speechcraft 8
+    [i]max[/i] — Fortify Personality 8, Fortify Speechcraft 12, Fortify Attack 10 [i](Imperial only)[/i]
+
+[b]Colovian[/b]
+    [i]min[/i] — Fortify Endurance 3
+    [i]mid[/i] — Fortify Endurance 5, Fortify Attack 8 [i](FP > 75%)[/i], Resist Frost 10
+    [i]max[/i] — Fortify Endurance 8, Fortify Attack 12 [i](FP > 75%)[/i], Resist Frost 10
+
+[b]Bosmer[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Agility 3
+    [i]mid[/i] — Resist Poison 15, Fortify Agility 5, Fortify Marksman 12 [i](outdoors)[/i]
+    [i]max[/i] — Resist Poison 20, Fortify Agility 8, Fortify Marksman 18 [i](outdoors)[/i], Fortify Attack 10 [i](Wood Elf only)[/i], Fortify Marksman 8 [i](< 25% load)[/i]
+
+[b]Khajiit[/b]
+    [i]min[/i] — Night Eye 25, Fortify Agility 3
+    [i]mid[/i] — Night Eye 40, Fortify Agility 5, Fortify Acrobatics 12 [i](at night)[/i]
+    [i]max[/i] — Night Eye 50, Fortify Agility 8, Fortify Acrobatics 18 [i](at night)[/i], Fortify Hand To Hand 18 [i](at night)[/i], Fortify Luck 8 [i](Khajiit only)[/i]
+
+[b]Orsimer[/b]
+    [i]min[/i] — Fortify Endurance 3
+    [i]mid[/i] — Fortify Endurance 5, Resist Magicka 8
+    [i]max[/i] — Fortify Endurance 8, Resist Magicka 12, Fortify Endurance 12 [i](Orc only)[/i], Restore Health 2 /s [i](in werewolf form and HP < 50%)[/i]
+
+[b]Native[/b]
+    [i]min[/i] — Resist Blight Disease 10, Resist Poison 10
+    [i]mid[/i] — Resist Blight Disease 15, Resist Poison 15, Fortify Athletics 12 [i](outdoors)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Blight Disease 20, Resist Poison 20, Fortify Athletics 18 [i](outdoors)[/i], Restore Fatigue 2 /s [i](outdoors)[/i], Fortify Endurance 8 [i](in Molag Amur)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Snow Prince[/b]
+    [i]min[/i] — Resist Frost 10
+    [i]mid[/i] — Resist Frost 10, Resist Magicka 5, Fortify Attack 10 [i](under the sun)[/i]
+    [i]max[/i] — Resist Frost 10, Resist Magicka 5, Fortify Attack 14 [i](under the sun)[/i], Sanctuary 12 [i](under the sun)[/i], Fortify Agility 8 [i](under the sun)[/i]
+
+[b]Falmer[/b]
+    [i]min[/i] — Resist Frost 10, Chameleon 5
+    [i]mid[/i] — Resist Frost 15, Chameleon 12 [i](out of the sun)[/i], Night Eye 40 [i](out of the sun)[/i], Weakness to Normal Weapons 15 [i](under the sun)[/i]
+    [i]max[/i] — Resist Frost 20, Chameleon 16 [i](out of the sun)[/i], Night Eye 50 [i](out of the sun)[/i], Sanctuary 10, Weakness to Normal Weapons 25 [i](under the sun)[/i]
+
+[b]Fighters Guild[/b]
+    [i]min[/i] — Fortify Attack 3, Fortify Health 8
+    [i]mid[/i] — Fortify Attack 5, Fortify Health 12, Fortify Fatigue 20, Fortify Strength 8 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Attack 8, Fortify Health 18, Fortify Fatigue 28, Fortify Strength 12 [i](HP < 50%)[/i], Fortify Attack 5 [i](Fighters Guild rank >= 6)[/i]
+
+[b]Mages Guild[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Destruction 5
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Destruction 8, Fortify Intelligence 8 [i](MP > 50%)[/i]
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Destruction 12, Fortify Intelligence 12 [i](MP > 50%)[/i], Fortify Magicka 12 [i](Destruction >= 50)[/i], Resist Magicka 12, Fortify Magicka 8 [i](Mages Guild rank >= 6)[/i]
+
+[b]Thieves Guild[/b]
+    [i]min[/i] — Fortify Sneak 5, Fortify Security 5
+    [i]mid[/i] — Fortify Sneak 8, Fortify Security 8, Chameleon 12 [i](at night and indoors)[/i], Weakness to Normal Weapons 15 [i](under the sun)[/i]
+    [i]max[/i] — Fortify Sneak 12, Fortify Security 12, Chameleon 16 [i](at night and indoors)[/i], Fortify Agility 8, Fortify Security 8 [i](Thieves Guild rank >= 6)[/i], Weakness to Normal Weapons 20 [i](under the sun)[/i]
+
+[b]Dark Brotherhood[/b]
+    [i]min[/i] — Fortify Sneak 5, Resist Poison 10
+    [i]mid[/i] — Fortify Sneak 8, Resist Poison 15, Chameleon 12 [i](at night)[/i]
+    [i]max[/i] — Fortify Sneak 12, Resist Poison 20, Chameleon 16 [i](at night)[/i], Fortify Attack 12 [i](at night)[/i], Fortify Attack 8 [i](at night and weapon sheathed)[/i]
+
+[b]Morag Tong[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Short Blade 5
+    [i]mid[/i] — Resist Poison 15, Fortify Short Blade 8, Fortify Attack 8 [i](indoors)[/i]
+    [i]max[/i] — Resist Poison 20, Fortify Short Blade 12, Fortify Attack 12 [i](indoors)[/i], Chameleon 12 [i](indoors)[/i], Fortify Attack 5 [i](Morag Tong rank >= 6)[/i]
+
+[b]House Hlaalu[/b]
+    [i]min[/i] — Fortify Mercantile 5, Fortify Personality 3
+    [i]mid[/i] — Fortify Mercantile 8, Fortify Personality 5, Fortify Speechcraft 12 [i](indoors)[/i]
+    [i]max[/i] — Fortify Mercantile 12, Fortify Personality 8, Fortify Speechcraft 18 [i](indoors)[/i], Fortify Luck 8, Fortify Mercantile 8 [i](Hlaalu rank >= 6)[/i]
+
+[b]House Indoril[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Magicka 8
+    [i]mid[/i] — Resist Magicka 8, Fortify Magicka 12, Turn Undead 30 [i](at night)[/i]
+    [i]max[/i] — Resist Magicka 12, Fortify Magicka 18, Turn Undead 50 [i](at night)[/i], Fortify Magicka 8 [i](Temple rank >= 6)[/i]
+
+[b]House Dres[/b]
+    [i]min[/i] — Resist Poison 10
+    [i]mid[/i] — Resist Poison 15, Fortify Long Blade 12 [i](outdoors)[/i]
+    [i]max[/i] — Resist Poison 20, Fortify Long Blade 18 [i](outdoors)[/i], Fortify Endurance 8
+
+[b]House Telvanni[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Intelligence 3
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Intelligence 5, Fortify Mysticism 8, Spell Absorption 8 [i](MP < 25%)[/i]
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Intelligence 8, Fortify Mysticism 12, Spell Absorption 12 [i](MP < 25%)[/i], Fortify Destruction 12 [i](MP > 50%)[/i], Fortify Magicka 8 [i](Telvanni rank >= 6)[/i]
+
+[b]Templar[/b]
+    [i]min[/i] — Fortify Health 8, Turn Undead 10
+    [i]mid[/i] — Fortify Health 12, Turn Undead 15, Fortify Attack 8 [i](by day)[/i], Weakness to Normal Weapons 15 [i](bounty >= 1000)[/i]
+    [i]max[/i] — Fortify Health 18, Turn Undead 20, Fortify Attack 12 [i](by day)[/i], Resist Magicka 12, Fortify Health 8 [i](Temple rank >= 6)[/i], Weakness to Normal Weapons 25 [i](bounty >= 1000)[/i]
+
+[b]Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Attack 8 [i](by day)[/i], Weakness to Shock 15 [i](bounty >= 1000)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Attack 12 [i](by day)[/i], Fortify Endurance 8, Weakness to Shock 25 [i](bounty >= 1000)[/i]
+
+[b]Royal Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Resist Magicka 8, Weakness to Magicka 15 [i](bounty >= 1000)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Resist Magicka 12, Reflect 12 [i](indoors)[/i], Weakness to Magicka 25 [i](bounty >= 1000)[/i]
+
+[b]Her Hand[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Willpower 3
+    [i]mid[/i] — Fortify Health 12, Fortify Willpower 5, Restore Health 2 /s [i](HP < 25%)[/i]
+    [i]max[/i] — Fortify Health 18, Fortify Willpower 8, Restore Health 3 /s [i](HP < 25%)[/i], Sanctuary 12 [i](HP < 25%)[/i], Fortify Willpower 8 [i](Temple rank >= 6)[/i]
+
+[b]Tribunal Temple[/b]
+    [i]min[/i] — Fortify Restoration 5, Fortify Personality 3
+    [i]mid[/i] — Fortify Restoration 8, Fortify Personality 5, Restore Health 2 /s [i](indoors)[/i], Weakness to Fire 15 [i](bounty >= 1000)[/i]
+    [i]max[/i] — Fortify Restoration 12, Fortify Personality 8, Restore Health 2 /s [i](indoors)[/i], Turn Undead 20, Fortify Restoration 8 [i](Temple rank >= 6)[/i], Weakness to Fire 25 [i](bounty >= 1000)[/i]
+
+[b]Artifacts[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Luck 3
+    [i]mid[/i] — Resist Magicka 8, Fortify Luck 5, Spell Absorption 8 [i](HP < 25%)[/i]
+    [i]max[/i] — Resist Magicka 12, Fortify Luck 8, Spell Absorption 12 [i](HP < 25%)[/i], Reflect 12 [i](HP < 25%)[/i], Fortify Magicka 12 [i](level >= 20)[/i]
+
+[b]Master[/b]
+    [i]min[/i] — Fortify Luck 3, Fortify Fatigue 12
+    [i]mid[/i] — Fortify Luck 5, Fortify Fatigue 20, Sanctuary 12 [i](HP < 25%)[/i]
+    [i]max[/i] — Fortify Luck 8, Fortify Fatigue 28, Sanctuary 16 [i](HP < 25%)[/i], Fortify Attack 12 [i](HP < 25%)[/i], Fortify Attack 8 [i](level >= 25)[/i]
+
+[b]Dragonscale[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Agility 3
+    [i]mid[/i] — Resist Fire 15, Resist Magicka 8, Sanctuary 8 [i](outdoors)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Fire 20, Resist Magicka 12, Sanctuary 12 [i](outdoors)[/i], Fortify Agility 8, Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Embossed[/b]
+    [i]min[/i] — Fortify Personality 3
+    [i]mid[/i] — Fortify Personality 5, Fortify Speechcraft 12 [i](indoors)[/i]
+    [i]max[/i] — Fortify Personality 8, Fortify Speechcraft 18 [i](indoors)[/i], Fortify Luck 8
+
+[b]Engraved[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Spell Absorption 8 [i](MP < 25%)[/i]
+    [i]max[/i] — Resist Magicka 12, Spell Absorption 12 [i](MP < 25%)[/i], Fortify Personality 8
+
+[b]Kynareth[/b]
+    [i]min[/i] — Slow Fall 10, Resist Shock 10
+    [i]mid[/i] — Slow Fall 15, Resist Shock 15, Fortify Speed 8 [i](outdoors)[/i]
+    [i]max[/i] — Slow Fall 20, Resist Shock 20, Fortify Speed 12 [i](outdoors)[/i], Restore Fatigue 2 /s [i](outdoors)[/i]
+
+[/spoiler]
+
+[b]Tamriel Rebuilt add-on sets (67)[/b]
+[spoiler]
+[b]Alessian Bronze[/b]
+    [i]min[/i] — Fortify Health 8, Resist Magicka 5
+    [i]mid[/i] — Fortify Health 12, Resist Magicka 8, Turn Undead 30 [i](under the sun)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Magicka 12, Turn Undead 50 [i](under the sun)[/i], Fortify Attack 8, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Alit Hide[/b]
+    [i]min[/i] — Fortify Agility 3, Resist Poison 10
+    [i]mid[/i] — Fortify Agility 5, Resist Poison 15, Fortify Speed 8 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Agility 8, Resist Poison 20, Fortify Speed 12 [i](outdoors)[/i], Fortify Attack 8 [i](outdoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Altmer[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Intelligence 3
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Intelligence 5, Fortify Destruction 12 [i](MP > 50%)[/i], Weakness to Magicka 15 [i](MP > 50%)[/i]
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Intelligence 8, Fortify Destruction 18 [i](MP > 50%)[/i], Fortify Willpower 12 [i](High Elf only)[/i], Weakness to Magicka 25 [i](MP > 50%)[/i]
+
+[b]Ancient Nordic[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Health 8
+    [i]mid[/i] — Resist Frost 15, Fortify Health 12, Resist Normal Weapons 5, Turn Undead 30 [i](at night)[/i]
+    [i]max[/i] — Resist Frost 20, Fortify Health 18, Resist Normal Weapons 8, Turn Undead 50 [i](at night)[/i]
+
+[b]Anvil[/b]
+    [i]min[/i] — Water Breathing 1, Swift Swim 20
+    [i]mid[/i] — Water Breathing 1, Swift Swim 30, Resist Frost 15
+    [i]max[/i] — Water Breathing 1, Swift Swim 40, Resist Frost 20, Fortify Personality 8, Restore Fatigue 2 /s [i](outdoors)[/i]
+
+[b]Argonian[/b]
+    [i]min[/i] — Water Breathing 1, Resist Poison 10
+    [i]mid[/i] — Water Breathing 1, Resist Poison 15, Resist Common Disease 15, Swift Swim 30
+    [i]max[/i] — Water Breathing 1, Resist Poison 20, Resist Common Disease 20, Swift Swim 40, Restore Health 2 /s [i](Argonian only)[/i]
+
+[b]Ayleid[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Light 8
+    [i]mid[/i] — Restore Magicka 1 /s, Spell Absorption 8 [i](at night and outdoors)[/i]
+    [i]max[/i] — Restore Magicka 2 /s, Spell Absorption 12 [i](at night and outdoors)[/i], Resist Magicka 12
+
+[b]Bal-Darum[/b]
+    [i]min[/i] — Fortify Strength 3, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Strength 5, Resist Normal Weapons 5, Fortify Armorer 12 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Strength 8, Resist Normal Weapons 8, Fortify Armorer 18 [i](HP < 50%)[/i]
+
+[b]Breton[/b]
+    [i]min[/i] — Resist Magicka 5
+    [i]mid[/i] — Resist Magicka 8, Spell Absorption 5
+    [i]max[/i] — Resist Magicka 12, Spell Absorption 8, Fortify Conjuration 12 [i](MP > 50%)[/i], Fortify Willpower 8 [i](Breton only)[/i]
+
+[b]Cataphract[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Attack 3
+    [i]mid[/i] — Fortify Health 12, Fortify Attack 5, Resist Normal Weapons 5, Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Fortify Health 18, Fortify Attack 8, Fortify Attack 8 [i](FP > 75%)[/i], Resist Normal Weapons 8, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Chap-thil[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Fire 15, Fortify Fatigue 20, Resist Paralysis 15, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Fire 20, Fortify Fatigue 28, Resist Paralysis 20, Restore Fatigue 2 /s [i](under the sun)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Chev-Aram[/b]
+    [i]min[/i] — Fortify Attack 3, Fortify Agility 3
+    [i]mid[/i] — Fortify Attack 5, Fortify Agility 5, Sanctuary 8 [i](HP > 75%)[/i]
+    [i]max[/i] — Fortify Attack 8, Fortify Agility 8, Sanctuary 12 [i](HP > 75%)[/i], Fortify Health 18
+
+[b]Chuzei[/b]
+    [i]min[/i] — Fortify Attack 3, Fortify Personality 3
+    [i]mid[/i] — Fortify Attack 5, Fortify Personality 5, Fortify Attack 8 [i](HP > 75%)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Fortify Attack 8, Fortify Personality 8, Fortify Attack 12 [i](HP > 75%)[/i], Resist Normal Weapons 8, Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Colovian Leather[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Agility 3
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Agility 5, Fortify Sneak 12 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Fortify Agility 8, Fortify Sneak 18 [i](outdoors)[/i], Fortify Acrobatics 12, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Companions[/b]
+    [i]min[/i] — Fortify Attack 3, Fortify Fatigue 12
+    [i]mid[/i] — Fortify Attack 5, Fortify Fatigue 20, Fortify Health 15 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Attack 8, Fortify Fatigue 28, Fortify Health 22 [i](HP < 50%)[/i], Fortify Personality 8, Fortify Attack 8 [i](in werewolf form)[/i]
+
+[b]Crown Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Personality 5, Fortify Attack 8 [i](indoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Personality 8, Fortify Attack 12 [i](indoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Daedric Hide[/b]
+    [i]min[/i] — Spell Absorption 3
+    [i]mid[/i] — Spell Absorption 3, Sanctuary 12 [i](at night)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Spell Absorption 3, Sanctuary 16 [i](at night)[/i], Restore Magicka 2 /s [i](at night)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Domina[/b]
+    [i]min[/i] — Fortify Personality 3, Fortify Attack 3
+    [i]mid[/i] — Fortify Personality 5, Fortify Attack 5, Fortify Health 12
+    [i]max[/i] — Fortify Personality 8, Fortify Attack 8, Fortify Health 18, Sanctuary 12 [i](Personality >= 60)[/i]
+
+[b]Dunmer[/b]
+    [i]min[/i] — Resist Fire 10
+    [i]mid[/i] — Resist Fire 10, Fortify Willpower 3
+    [i]max[/i] — Resist Fire 10, Fortify Willpower 3, Fortify Attack 10 [i](Dark Elf only)[/i]
+
+[b]Ebonweave[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Fatigue 12
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Fatigue 20, Resist Magicka 8, Spell Absorption 8 [i](MP < 25%)[/i]
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Fatigue 28, Resist Magicka 12, Spell Absorption 12 [i](MP < 25%)[/i]
+
+[b]Falkreath Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Frost 10
+    [i]mid[/i] — Fortify Health 12, Resist Frost 15, Resist Normal Weapons 5, Fortify Attack 8 [i](by day)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Frost 20, Resist Normal Weapons 8, Fortify Attack 12 [i](by day)[/i], Fortify Endurance 8, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Gah'Kogo[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Agility 3
+    [i]mid[/i] — Resist Poison 10, Resist Paralysis 15, Fortify Agility 8 [i](at night)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Poison 10, Resist Paralysis 20, Fortify Agility 12 [i](at night)[/i], Fortify Sneak 12 [i](at night)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Gilded Glass[/b]
+    [i]min[/i] — Fortify Agility 3, Fortify Personality 3
+    [i]mid[/i] — Fortify Agility 5, Resist Fire 15, Fortify Personality 5, Sanctuary 8 [i](indoors)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Fortify Agility 8, Resist Fire 20, Fortify Personality 8, Sanctuary 12 [i](indoors)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Gold[/b]
+    [i]min[/i] — Fortify Personality 3
+    [i]mid[/i] — Fortify Personality 5, Fortify Mercantile 12 [i](indoors)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Fortify Personality 8, Fortify Mercantile 18 [i](indoors)[/i], Resist Magicka 12, Fortify Luck 8, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Golden Saint[/b]
+    [i]min[/i] — Resist Magicka 5, Spell Absorption 3
+    [i]mid[/i] — Resist Magicka 8, Spell Absorption 5, Reflect 8 [i](HP < 50%)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Magicka 12, Spell Absorption 8, Reflect 12 [i](HP < 50%)[/i], Fortify Attack 8, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Guar Hide[/b]
+    [i]min[/i] — Fortify Fatigue 12, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Fatigue 20, Resist Blight Disease 15, Fortify Endurance 5, Feather 10 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Resist Blight Disease 20, Fortify Endurance 8, Feather 15 [i](outdoors)[/i], Fortify Athletics 12, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]House Direnni[/b]
+    [i]min[/i] — Resist Magicka 5, Restore Magicka 1 /s
+    [i]mid[/i] — Resist Magicka 8, Restore Magicka 1 /s, Spell Absorption 5
+    [i]max[/i] — Resist Magicka 12, Restore Magicka 1 /s, Spell Absorption 8, Reflect 8 [i](MP > 50%)[/i]
+
+[b]House Redoran[/b]
+    [i]min[/i] — Fortify Health 8, Resist Blight Disease 10
+    [i]mid[/i] — Fortify Health 12, Resist Blight Disease 10, Fortify Spear 12 [i](HP < 50%)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Blight Disease 10, Fortify Spear 18 [i](HP < 50%)[/i], Resist Normal Weapons 8, Fortify Endurance 8, Fortify Spear 8 [i](Redoran rank >= 6)[/i]
+
+[b]Kagouti Hide[/b]
+    [i]min[/i] — Fortify Speed 3, Fortify Athletics 5
+    [i]mid[/i] — Fortify Speed 5, Fortify Athletics 8, Resist Poison 15, Fortify Attack 8 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Speed 8, Fortify Athletics 12, Resist Poison 20, Fortify Attack 12 [i](outdoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Kalantar[/b]
+    [i]min[/i] — Resist Fire 10, Fortify Attack 3
+    [i]mid[/i] — Resist Fire 15, Fortify Attack 5, Fortify Strength 5
+    [i]max[/i] — Resist Fire 20, Fortify Attack 8, Fortify Strength 8, Fortify Health 15 [i](HP < 50%)[/i]
+
+[b]Klibanion[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Endurance 3
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Endurance 5, Fortify Health 15 [i](HP < 50%)[/i], Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Endurance 8, Fortify Health 22 [i](HP < 50%)[/i], Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Kragen[/b]
+    [i]min[/i] — Fortify Mercantile 5, Fortify Luck 3
+    [i]mid[/i] — Fortify Mercantile 8, Fortify Luck 5, Fortify Mercantile 12 [i](indoors)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Fortify Mercantile 12, Fortify Luck 8, Fortify Mercantile 18 [i](indoors)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Kvetchi[/b]
+    [i]min[/i] — Resist Blight Disease 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Blight Disease 15, Fortify Fatigue 20, Resist Poison 15, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Blight Disease 20, Fortify Fatigue 28, Resist Poison 20, Restore Fatigue 2 /s [i](FP < 50%)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Lamellar[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Fatigue 12
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Fatigue 20, Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Fatigue 28, Fortify Health 15 [i](FP < 50%)[/i], Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Mananaut[/b]
+    [i]min[/i] — Resist Shock 10, Water Breathing 1
+    [i]mid[/i] — Resist Shock 15, Water Breathing 1, Fortify Intelligence 5, Slow Fall 15
+    [i]max[/i] — Resist Shock 20, Water Breathing 1, Fortify Intelligence 8, Slow Fall 20, Reflect 12 [i](out of the sun)[/i]
+
+[b]Manatee Leather[/b]
+    [i]min[/i] — Water Breathing 1, Swift Swim 20
+    [i]mid[/i] — Water Breathing 1, Swift Swim 30, Fortify Fatigue 20, Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Water Breathing 1, Swift Swim 40, Fortify Fatigue 28, Resist Frost 20, Restore Fatigue 2 /s [i](outdoors)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Maormer[/b]
+    [i]min[/i] — Water Breathing 1, Swift Swim 20
+    [i]mid[/i] — Water Breathing 1, Swift Swim 30, Resist Shock 15
+    [i]max[/i] — Water Breathing 1, Swift Swim 40, Resist Shock 20, Chameleon 16 [i](at night)[/i]
+
+[b]Maradlai[/b]
+    [i]min[/i] — Fortify Speed 3, Fortify Fatigue 12
+    [i]mid[/i] — Fortify Speed 5, Fortify Fatigue 20
+    [i]max[/i] — Fortify Speed 8, Fortify Fatigue 28, Sanctuary 12 [i](FP < 50%)[/i]
+
+[b]Militia[/b]
+    [i]min[/i] — Fortify Fatigue 12, Fortify Health 8
+    [i]mid[/i] — Fortify Fatigue 20, Fortify Health 12, Resist Normal Weapons 5, Fortify Attack 8 [i](by day)[/i], Restore Health 1 /s [i](level < 10)[/i], Weakness to Normal Weapons 15 [i](bounty >= 1000)[/i]
+    [i]max[/i] — Fortify Fatigue 28, Fortify Health 18, Resist Normal Weapons 8, Fortify Attack 12 [i](by day)[/i], Restore Health 1 /s [i](level < 10)[/i], Weakness to Normal Weapons 25 [i](bounty >= 1000)[/i]
+
+[b]Molecrab[/b]
+    [i]min[/i] — Resist Normal Weapons 3
+    [i]mid[/i] — Resist Normal Weapons 5, Sanctuary 8 [i](indoors or at night)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Sanctuary 12 [i](indoors or at night)[/i], Fortify Health 18, Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Narsis Watch[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Endurance 5, Fortify Attack 8 [i](by day)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Endurance 8, Fortify Attack 12 [i](by day)[/i], Fortify Mercantile 12
+
+[b]Navy[/b]
+    [i]min[/i] — Swift Swim 20, Water Breathing 1
+    [i]mid[/i] — Swift Swim 30, Water Breathing 1, Resist Frost 15, Fortify Attack 8 [i](outdoors)[/i]
+    [i]max[/i] — Swift Swim 40, Water Breathing 1, Resist Frost 20, Fortify Attack 12 [i](outdoors)[/i], Fortify Fatigue 28
+
+[b]Necrom Guard[/b]
+    [i]min[/i] — Turn Undead 10, Resist Magicka 5
+    [i]mid[/i] — Turn Undead 15, Resist Magicka 8, Fortify Health 12, Turn Undead 20 [i](at night)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Turn Undead 20, Resist Magicka 12, Fortify Health 18, Turn Undead 30 [i](at night)[/i], Fortify Restoration 12, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Nibenese[/b]
+    [i]min[/i] — Restore Magicka 1 /s, Fortify Mercantile 5
+    [i]mid[/i] — Restore Magicka 1 /s, Fortify Mercantile 8, Resist Magicka 8
+    [i]max[/i] — Restore Magicka 2 /s, Fortify Mercantile 12, Resist Magicka 12, Fortify Personality 8 [i](Imperial only)[/i]
+
+[b]Oloman[/b]
+    [i]min[/i] — Resist Fire 10, Resist Normal Weapons 3
+    [i]mid[/i] — Resist Fire 15, Resist Normal Weapons 5, Fortify Endurance 8 [i](HP < 50%)[/i]
+    [i]max[/i] — Resist Fire 20, Resist Normal Weapons 8, Fortify Endurance 12 [i](HP < 50%)[/i]
+
+[b]Quey Chitin[/b]
+    [i]min[/i] — Water Breathing 1, Resist Poison 10
+    [i]mid[/i] — Water Breathing 1, Resist Poison 15, Resist Normal Weapons 5, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Water Breathing 1, Resist Poison 20, Resist Normal Weapons 8, Swift Swim 60 [i](HP < 50%)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Reach[/b]
+    [i]min[/i] — Resist Frost 10, Fortify Endurance 3
+    [i]mid[/i] — Resist Frost 15, Fortify Endurance 5, Fortify Attack 5, Spell Absorption 8 [i](at night)[/i]
+    [i]max[/i] — Resist Frost 20, Fortify Endurance 8, Fortify Attack 8, Spell Absorption 12 [i](at night)[/i]
+
+[b]Reach Royal Guard[/b]
+    [i]min[/i] — Fortify Health 8, Resist Frost 10
+    [i]mid[/i] — Fortify Health 12, Resist Frost 15, Resist Normal Weapons 5, Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Frost 20, Resist Normal Weapons 8, Fortify Attack 12 [i](HP < 50%)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Red Dome Templar[/b]
+    [i]min[/i] — Fortify Health 8, Resist Magicka 5
+    [i]mid[/i] — Fortify Health 12, Resist Magicka 8, Turn Undead 15, Restore Health 2 /s [i](HP < 25%)[/i], Weakness to Magicka 15 [i](bounty >= 1000)[/i]
+    [i]max[/i] — Fortify Health 18, Resist Magicka 12, Turn Undead 20, Restore Health 3 /s [i](HP < 25%)[/i], Fortify Restoration 12, Turn Undead 15 [i](Temple rank >= 6)[/i], Weakness to Magicka 25 [i](bounty >= 1000)[/i]
+
+[b]Redguard[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Endurance 3
+    [i]mid[/i] — Resist Poison 15, Fortify Endurance 5, Fortify Attack 8 [i](FP < 50%)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Poison 20, Fortify Endurance 8, Fortify Attack 12 [i](FP < 50%)[/i], Restore Fatigue 2 /s [i](FP < 50%)[/i], Fortify Agility 8 [i](Redguard only)[/i], Fortify Attack 5 [i](born under The Warrior)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Redguard Iron Lamellar[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Fortify Health 8
+    [i]mid[/i] — Resist Normal Weapons 5, Fortify Health 12, Fortify Attack 5, Weakness to Shock 15 [i](>= 75% load)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Fortify Health 18, Fortify Attack 8, Fortify Attack 8 [i](FP < 50%)[/i], Fortify Endurance 8, Weakness to Shock 25 [i](>= 75% load)[/i]
+
+[b]Reman[/b]
+    [i]min[/i] — Fortify Health 8, Fortify Attack 3
+    [i]mid[/i] — Fortify Health 12, Fortify Attack 5, Fortify Personality 5
+    [i]max[/i] — Fortify Health 18, Fortify Attack 8, Fortify Personality 8, Resist Normal Weapons 8, Fortify Attack 16 [i](HP < 25%)[/i]
+
+[b]Rihad Guard[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Fatigue 12
+    [i]mid[/i] — Resist Poison 15, Fortify Fatigue 20, Resist Normal Weapons 5, Fortify Attack 8 [i](under the sun)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Poison 20, Fortify Fatigue 28, Resist Normal Weapons 8, Fortify Attack 12 [i](under the sun)[/i], Fortify Endurance 8, Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Riverwatch[/b]
+    [i]min[/i] — Fortify Health 8, Water Walking 1
+    [i]mid[/i] — Fortify Health 12, Water Walking 1, Resist Normal Weapons 5
+    [i]max[/i] — Fortify Health 18, Water Walking 1, Resist Normal Weapons 8, Resist Blight Disease 20, Fortify Attack 8 [i](outdoors)[/i]
+
+[b]Rourken[/b]
+    [i]min[/i] — Resist Shock 10, Fortify Health 8
+    [i]mid[/i] — Resist Shock 15, Fortify Health 12, Resist Normal Weapons 5, Reflect 8 [i](indoors)[/i]
+    [i]max[/i] — Resist Shock 20, Fortify Health 18, Resist Normal Weapons 8, Reflect 12 [i](indoors)[/i]
+
+[b]Sacred Lands[/b]
+    [i]min[/i] — Resist Magicka 5, Fortify Health 8
+    [i]mid[/i] — Resist Magicka 8, Fortify Health 12, Fortify Restoration 8, Restore Health 2 /s [i](outdoors)[/i]
+    [i]max[/i] — Resist Magicka 12, Fortify Health 18, Fortify Restoration 12, Restore Health 2 /s [i](outdoors)[/i], Turn Undead 20
+
+[b]Saliache[/b]
+    [i]min[/i] — Resist Blight Disease 10, Fortify Athletics 5
+    [i]mid[/i] — Resist Blight Disease 15, Fortify Athletics 8, Resist Poison 15, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Blight Disease 20, Fortify Athletics 12, Resist Poison 20, Fortify Agility 12 [i](HP > 75%)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Shellmold[/b]
+    [i]min[/i] — Resist Normal Weapons 3, Resist Shock 10
+    [i]mid[/i] — Resist Normal Weapons 5, Resist Shock 15, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Normal Weapons 8, Resist Shock 20, Fortify Health 15 [i](HP < 50%)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Shinathi Chitin[/b]
+    [i]min[/i] — Resist Poison 10, Resist Blight Disease 10
+    [i]mid[/i] — Resist Poison 15, Resist Blight Disease 15, Resist Paralysis 15, Fortify Sneak 12 [i](at night)[/i], Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Poison 20, Resist Blight Disease 20, Resist Paralysis 20, Fortify Sneak 18 [i](at night)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Shipal-Arai[/b]
+    [i]min[/i] — Fortify Spear 5, Fortify Agility 3
+    [i]mid[/i] — Fortify Spear 8, Fortify Agility 5, Resist Paralysis 15, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Fortify Spear 12, Fortify Agility 8, Resist Paralysis 20, Fortify Attack 8 [i](outdoors)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Skingrad[/b]
+    [i]min[/i] — Resist Poison 10, Resist Common Disease 10
+    [i]mid[/i] — Resist Poison 15, Resist Common Disease 15, Fortify Personality 5, Fortify Attack 8 [i](at night)[/i]
+    [i]max[/i] — Resist Poison 20, Resist Common Disease 20, Fortify Personality 8, Fortify Attack 12 [i](at night)[/i], Resist Magicka 12
+
+[b]Sutch Mail[/b]
+    [i]min[/i] — Fortify Health 8, Resist Normal Weapons 3
+    [i]mid[/i] — Fortify Health 12, Resist Normal Weapons 5, Fortify Attack 5
+    [i]max[/i] — Fortify Health 18, Resist Normal Weapons 8, Fortify Attack 8, Restore Fatigue 2 /s [i](FP < 50%)[/i]
+
+[b]Thirr[/b]
+    [i]min[/i] — Water Breathing 1, Fortify Strength 3
+    [i]mid[/i] — Water Breathing 1, Fortify Strength 5, Swift Swim 30, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Water Breathing 1, Fortify Strength 8, Swift Swim 40, Fortify Attack 8 [i](by day)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[b]Toadscale[/b]
+    [i]min[/i] — Resist Poison 10, Resist Frost 10
+    [i]mid[/i] — Resist Poison 15, Resist Frost 15, Resist Common Disease 15, Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Poison 20, Resist Frost 20, Resist Common Disease 20, Sanctuary 12 [i](at night)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Watchman[/b]
+    [i]min[/i] — Night Eye 25, Fortify Fatigue 12
+    [i]mid[/i] — Night Eye 40, Fortify Fatigue 20, Fortify Attack 8 [i](at night)[/i]
+    [i]max[/i] — Night Eye 50, Fortify Fatigue 28, Fortify Attack 12 [i](at night)[/i], Detect Animal 50
+
+[b]Wenbone[/b]
+    [i]min[/i] — Resist Poison 10, Fortify Marksman 5
+    [i]mid[/i] — Resist Poison 15, Fortify Marksman 8, Fortify Agility 5, Fortify Sneak 12 [i](outdoors)[/i], Weakness to Fire 15 [i](indoors)[/i]
+    [i]max[/i] — Resist Poison 20, Fortify Marksman 12, Fortify Sneak 18 [i](outdoors)[/i], Fortify Attack 8 [i](Marksman >= 50)[/i], Weakness to Fire 25 [i](indoors)[/i]
+
+[b]Wormmouth[/b]
+    [i]min[/i] — Resist Poison 10
+    [i]mid[/i] — Resist Poison 15, Resist Blight Disease 15, Weakness to Frost 15 [i](out of the sun)[/i]
+    [i]max[/i] — Resist Poison 20, Resist Blight Disease 20, Resist Paralysis 20, Fortify Agility 8 [i](at night)[/i], Weakness to Frost 25 [i](out of the sun)[/i]
+
+[/spoiler]
+
+[i]Sets from add-ons that aren't installed are skipped automatically.[/i]

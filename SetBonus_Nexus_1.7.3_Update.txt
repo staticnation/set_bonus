@@ -1,0 +1,30 @@
+[center][size=5][b]Set Bonus 1.7.3 — Mythic Artifacts[/b][/size]
+[i]A handful of artifacts that rewrite how you play — and a fix worth updating for.[/i]
+[color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
+
+Drop it in over any 1.7.x. No new plugin, no save cleaning, safe mid-playthrough.
+
+[size=4][b]✦ Mythic artifact sets[/b][/size]
+A new kind of set: one- and two-piece [b]artifacts[/b] that hit full power the moment you equip them, each with a cost you actually feel. No slow ramp, no partial tiers — put it on and live with the bargain.
+[list]
+[*][b]Boots of Blinding Speed[/b] — enormous Speed and Athletics, and you fight half-blind for it. Worse when there's no light to steer by.
+[*][b]Cuirass of the Savior's Hide[/b] — turns magic aside almost entirely, but it's hide, not plate: steel goes straight through. It does knit you back together at death's door.
+[*][b]Fists of Randagulf[/b] — massive Strength always, but the real spikes (Hand-to-Hand, Attack) only apply with your [b]weapon sheathed[/b]. Draw a blade and the gauntlets turn on you.
+[/list]
+Because a one-piece set completes at a single item, these layer cleanly over your material and class sets rather than competing with them.
+
+[size=4][b]✦ Snow Elves, before and after the fall[/b][/size]
+The Snow Prince's Ice Armour is now its own [b]Snow Prince[/b] set — proud, sighted, and strongest under open sky. It's the deliberate mirror of the [b]Falmer[/b] set (the blind, sun-shunning Betrayed), which keeps its daylight weakness. The Snow Prince died at the Moesring millennia before his people were broken, so his armour no longer inherits their aversion to the sun.
+
+[size=4][b]✦ Fixed: lingering weaknesses[/b][/size]
+The headline fix, reported by a player wearing Adamantium: dropping from 4 pieces to 2 correctly adjusted the positive bonuses, but the [b]Weakness to Shock stayed on[/b] — and survived taking the armour off entirely. When 1.7.1 made drawbacks situational, they moved into separate condition-gated spells, and cleanup only cleared the tier you'd just left; if the new tier had no conditions of its own, the old drawback was orphaned. Any set whose drawback became conditional could do this.
+
+Cleanup is now authoritative: it works out what [i]should[/i] be active and removes everything else the set owns, whatever tier it came from. [b]Already stuck?[/b] It clears itself within a second of loading 1.7.3 — no clean save, no new character.
+
+Also from 1.7.2: orphaned "ghost" abilities from older sessions are purged on load, and conditional tracking re-syncs after a save/reload.
+
+[size=4][b]✦ For mod authors[/b][/size]
+Adding armour to Set Bonus no longer means hand-listing item ids. A new rule-based classifier reads a mod's armour dump and files every piece into the right sets automatically — rules match id and name and stack up, so an Indoril cuirass lands in House Indoril, Tribunal Temple [i]and[/i] Dunmer at once, while weight-class sets come straight from the engine's own Light/Medium/Heavy tag. It currently sorts 3,800+ armour records across 8 content files. See the README if you want to wire your own mod in.
+
+[color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
+[b]Update:[/b] overwrite your existing install. If you run the optional Conditional Rebalance, refresh that folder too.
