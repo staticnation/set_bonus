@@ -18,6 +18,22 @@ local stateOf = {}    -- [actorId] = { [setIndex] = tier }
 local cleaned = {}    -- [actorId] = true once stale spells purged
 local ready = false
 
+-- Exact names of every spell WE generate, built from `data` (see buildSpellsForSet:
+-- unconditional tier spells are "<Set> Set Bonus", conditional per-effect sub-spells
+-- are "<Set> Bonus"). Used to purge leftover copies from a previous save without
+-- catching unrelated abilities that merely share the " Bonus" suffix. Cached and
+-- invalidated (set back to nil) at every `cleaned = {}` reset site, since a set
+-- redefinition can rename/add/drop sets.
+local knownSpellNames = nil
+local function buildKnownSpellNames()
+    local names = {}
+    for _, s in ipairs(data) do
+        names[s.name .. ' Set Bonus'] = true
+        names[s.name .. ' Bonus'] = true
+    end
+    return names
+end
+
 local cfg  -- global settings section
 
 local function npcBonusesEnabled()
@@ -370,6 +386,7 @@ local function registerSet(sd)
         if replaced then
             -- a redefinition can change tiers/effects; purge stale records by name
             cleaned = {}
+            knownSpellNames = nil
             stateOf = {}
         end
         recomputeAll()
@@ -402,6 +419,7 @@ local function registerSets(list)
         if anyReplaced then
             -- redefinitions can change tiers/effects; purge stale records by name
             cleaned = {}
+            knownSpellNames = nil
             stateOf = {}
         end
         recomputeAll()
@@ -463,6 +481,7 @@ local function amendSet(name, patch)
     if ready then
         buildSpellsForSet(si)
         cleaned = {}
+        knownSpellNames = nil
         stateOf = {}
         recomputeAll()
     end
@@ -532,6 +551,7 @@ local function init()
         if key == 'scale' or key == 'weaknessScale' then
             buildSpells()   -- rebuild records with the new scale(s)
             cleaned = {}     -- force per-actor purge-by-name + reapply
+            knownSpellNames = nil
             stateOf = {}
         end
         recomputeAll()
@@ -574,17 +594,19 @@ local function recompute(actor)
     if not cleaned[aid] then
         -- Spell record ids are regenerated every session, so match our abilities by
         -- name to purge any left on the actor from a previous save (prevents stacking).
-        -- We create two naming conventions (see buildSpellsForSet): unconditional
-        -- tier spells are "<Set> Set Bonus", conditional per-effect sub-spells are
-        -- "<Set> Bonus". Both end in the suffix " Bonus", so match on that suffix
-        -- rather than the old " Set Bonus"-only check, which silently missed every
-        -- conditional sub-spell and let them accumulate one leftover copy per
-        -- save/reload (this is what produced the stacked duplicate effects).
-        local SUFFIX = " Bonus"
+        -- Match against the EXACT names we generate (whitelist), not just a shared
+        -- " Bonus" suffix: a suffix-only check also deletes any unrelated ability
+        -- whose display name happens to end in " Bonus" -- e.g. tamriel_data's
+        -- Dagi-Raht/Reachman magicka-multiplier racial ("magicka mult bonus_5"),
+        -- which collided with the old suffix check and got stripped as if it were
+        -- one of ours. The whitelist still covers both of our own naming
+        -- conventions (tier spells AND conditional per-effect sub-spells), so
+        -- leftover copies from a previous save are still purged correctly.
+        if not knownSpellNames then knownSpellNames = buildKnownSpellNames() end
         local stale = {}
         for _, sp in pairs(spells) do
             local nm = sp.name
-            if nm and #nm >= #SUFFIX and nm:sub(-#SUFFIX) == SUFFIX then stale[#stale + 1] = sp end
+            if nm and knownSpellNames[nm] then stale[#stale + 1] = sp end
         end
         for _, sp in ipairs(stale) do spells:remove(sp) end
         stateOf[aid] = {}

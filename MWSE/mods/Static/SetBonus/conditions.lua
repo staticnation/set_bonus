@@ -263,6 +263,24 @@ local function reconcile(ref, set, tier)
     if not set.conditionals then return end
     local applied = appliedCond[ref]
 
+    -- If this ref isn't cached yet (e.g. the very first reconcile after a save
+    -- load, before any equip event has fired for it), poll the engine directly
+    -- for this set's sub-spells. Otherwise a spell that was already active when
+    -- the save was written -- baked into the save data -- is invisible to the
+    -- removal loop below (appliedCond starts empty every load) and never gets
+    -- cleared even though it may no longer be wanted (e.g. weapon now drawn).
+    if not applied then
+        applied = {}
+        for _, list in pairs(set.conditionals) do
+            for _, entry in ipairs(list) do
+                if tes3.hasSpell{ reference = ref, spell = entry.spellId } then
+                    applied[entry.spellId] = true
+                end
+            end
+        end
+        appliedCond[ref] = applied
+    end
+
     local want = {}
     local conds = tier and set.conditionals[tier]
     if conds then
@@ -272,25 +290,20 @@ local function reconcile(ref, set, tier)
     end
 
     -- Drop anything this set owns that isn't wanted, whichever tier it came from.
-    if applied then
-        for _, list in pairs(set.conditionals) do
-            for _, entry in ipairs(list) do
-                if applied[entry.spellId] and not want[entry.spellId] then
-                    tes3.removeSpell{ reference = ref, spell = entry.spellId }
-                    applied[entry.spellId] = nil
-                end
+    for _, list in pairs(set.conditionals) do
+        for _, entry in ipairs(list) do
+            if applied[entry.spellId] and not want[entry.spellId] then
+                tes3.removeSpell{ reference = ref, spell = entry.spellId }
+                applied[entry.spellId] = nil
             end
         end
     end
 
     -- Add whatever is wanted but not yet on.
-    if next(want) then
-        if not applied then applied = {}; appliedCond[ref] = applied end
-        for spellId in pairs(want) do
-            if not applied[spellId] then
-                tes3.addSpell{ reference = ref, spell = spellId }
-                applied[spellId] = true
-            end
+    for spellId in pairs(want) do
+        if not applied[spellId] then
+            tes3.addSpell{ reference = ref, spell = spellId }
+            applied[spellId] = true
         end
     end
 end
