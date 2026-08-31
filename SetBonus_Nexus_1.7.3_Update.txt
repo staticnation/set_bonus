@@ -1,17 +1,8 @@
-[center][size=5][b]Set Bonus 1.7.3 — Mythic Artifacts[/b][/size]
-[i]A handful of artifacts that rewrite how you play — and a fix worth updating for.[/i]
+[center][size=5][b]Set Bonus 1.7.3 — Stability & Snow Elves[/b][/size]
+[i]A fix worth updating for, plus a lore split and modder tooling.[/i]
 [color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
 
 Drop it in over any 1.7.x. No new plugin, no save cleaning, safe mid-playthrough.
-
-[size=4][b]✦ Mythic artifact sets[/b][/size]
-A new kind of set: one- and two-piece [b]artifacts[/b] that hit full power the moment you equip them, each with a cost you actually feel. No slow ramp, no partial tiers — put it on and live with the bargain.
-[list]
-[*][b]Boots of Blinding Speed[/b] — enormous Speed and Athletics, and you fight half-blind for it. Worse when there's no light to steer by.
-[*][b]Cuirass of the Savior's Hide[/b] — turns magic aside almost entirely, but it's hide, not plate: steel goes straight through. It does knit you back together at death's door.
-[*][b]Fists of Randagulf[/b] — massive Strength always, but the real spikes (Hand-to-Hand, Attack) only apply with your [b]weapon sheathed[/b]. Draw a blade and the gauntlets turn on you.
-[/list]
-Because a one-piece set completes at a single item, these layer cleanly over your material and class sets rather than competing with them.
 
 [size=4][b]✦ Snow Elves, before and after the fall[/b][/size]
 The Snow Prince's Ice Armour is now its own [b]Snow Prince[/b] set — proud, sighted, and strongest under open sky. It's the deliberate mirror of the [b]Falmer[/b] set (the blind, sun-shunning Betrayed), which keeps its daylight weakness. The Snow Prince died at the Moesring millennia before his people were broken, so his armour no longer inherits their aversion to the sun.

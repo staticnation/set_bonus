@@ -34,6 +34,25 @@ local function enchantedBaseId(itemData)
     return type(b) == "string" and b:lower() or nil
 end
 
+-- Weight-class umbrella sets (Light/Medium/Heavy Armor) are read straight off
+-- the item's own engine weight class instead of a pre-baked id roster. A
+-- vanilla-enchanted item is an engine copy (tes3armor:createCopy) that keeps
+-- every AODT field -- including weightClass -- from the item it was enchanted
+-- from, so this is immune to the new record id enchanting mints. It also needs
+-- no roster (gen_class_sets.py), no icon/mesh fallback, and no Consistent
+-- Enchanting integration for these three sets specifically: any armor object,
+-- known to the roster or not, self-reports its class correctly.
+local WEIGHT_CLASS_SET = {
+    [tes3.armorWeightClass.light] = "Light Armor",
+    [tes3.armorWeightClass.medium] = "Medium Armor",
+    [tes3.armorWeightClass.heavy] = "Heavy Armor",
+}
+local function weightClassSetName(obj)
+    if not (obj and obj.objectType == tes3.objectType.armor) then return nil end
+    return WEIGHT_CLASS_SET[obj.weightClass]
+end
+local WEIGHT_CLASS_SET_NAME = { ["Light Armor"] = true, ["Medium Armor"] = true, ["Heavy Armor"] = true }
+
 -- Does an equipped object belong to `setName`? By id, CE base id, or (if on)
 -- icon+mesh. Icon+mesh is a FALLBACK ONLY: once the item is recognised by its
 -- (real or CE-base) id, we trust that and never let a shared inventory icon pull
@@ -53,6 +72,12 @@ local function iconMeshSig(obj)
     return icon:lower() .. "|" .. mesh:lower()
 end
 local function objInSet(obj, setName, baseId)
+    -- Only short-circuit when setName IS one of the three weight-class sets --
+    -- an armor piece can also belong to an unrelated themed set (e.g. "Daedric")
+    -- at the same time, which must still fall through to id/icon matching below.
+    if WEIGHT_CLASS_SET_NAME[setName] then
+        return weightClassSetName(obj) == setName
+    end
     local id = obj.id and obj.id:lower()
     local hasIdLink = false
     if id and config.setLinks[id] then
@@ -79,11 +104,16 @@ local function setsForObject(obj, baseId)
         names = names or {}
         for s in pairs(src) do names[s] = true end
     end
+    -- The item's own weight class (see objInSet) always applies, alongside any
+    -- themed set (e.g. a Daedric Cuirass is both "Daedric" AND "Heavy Armor").
+    local wcSet = weightClassSetName(obj)
+    if wcSet then names = { [wcSet] = true } end
     local id = obj.id and obj.id:lower()
     if id then merge(config.setLinks[id]) end
     if baseId then merge(config.setLinks[baseId]) end
     -- Icon+mesh fallback only when the item has no id/CE link at all (see objInSet).
-    if not names and settings.matchByIcon then merge(config.iconLinks[iconMeshSig(obj)]) end
+    local hasIdLink = (id and config.setLinks[id]) or (baseId and config.setLinks[baseId])
+    if not hasIdLink and settings.matchByIcon then merge(config.iconLinks[iconMeshSig(obj)]) end
     return names
 end
 

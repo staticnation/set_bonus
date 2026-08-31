@@ -4,7 +4,7 @@
 [youtube]BHBtxWz5Xcg[/youtube]
 [color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color][/center]
 
-A framework that turns matched armour into a reward. Equip several pieces of the same set and gain a constant, lore-flavoured bonus that grows the more of the set you wear — Iron makes you tough, Glass keeps you nimble, Daedric wards off magic, Dark Brotherhood sharpens your sneak attacks. Over [b]140 sets[/b] in all, each themed to its material, culture, or faction (with a nod to ESO-style set design).
+A framework that turns matched armour into a reward. Equip several pieces of the same set and gain a constant, lore-flavoured bonus that grows the more of the set you wear — Iron makes you tough, Glass keeps you nimble, Daedric wards off magic, Dark Brotherhood sharpens your sneak attacks. Over [b]137 sets[/b] in all, each themed to its material, culture, or faction (with a nod to ESO-style set design).
 
 Because a single piece can belong to more than one set (a Tamriel Rebuilt Reachman cuirass is both [i]Wormmouth[/i] and [i]Reach[/i]), bonuses [b]stack[/b] — and magnitudes are tuned with that in mind, so committing to a theme is rewarding without breaking the game.
 
@@ -46,7 +46,7 @@ The conditional framework now reads eight new states — identically on [b]both 
 [*][b]Region[/b] — homeland gear that shines where it belongs.
 [*][b]Birthsign[/b], [b]werewolf form[/b], and [b]weapon stance[/b] — the stars, the beast-blood, and the drawn blade.
 [/list]
-These are threaded through the optional [b]Conditional Rebalance[/b]: rank-scaling faction sets, werewolf-blood on Nordic/Orsimer/Companions, Bosmer's light-pack archery, stance-gated assassin strikes, and more — 465 conditional effects across all 140 sets, stacking-verified.
+These are threaded through the optional [b]Conditional Rebalance[/b]: rank-scaling faction sets, werewolf-blood on Nordic/Orsimer/Companions, Bosmer's light-pack archery, stance-gated assassin strikes, and more — 460 conditional effects across all 137 sets, stacking-verified.
 
 [size=4][b]✦ Full Armor-class sets[/b][/size]
 Heavy / Medium / Light Armor now include [b]every[/b] piece of their weight class across the base game and all supported add-ons (Tamriel Rebuilt, OAAB, NOD, AATL — shields included), generated straight from the armour data.
@@ -64,7 +64,7 @@ Enchanted/copied-item matching now checks an item's mesh in addition to its icon
 [color=#888]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/color]
 [size=5][b]✦ Features[/b][/size]
 [list]
-[*][b]140 armour sets[/b] across every vanilla material and culture, plus Tribunal & Bloodmoon.
+[*][b]137 armour sets[/b] across every vanilla material and culture, plus Tribunal & Bloodmoon.
 [*][b]Three tiers per set[/b] — bonuses scale up at [b]2[/b], [b]4[/b], and [b]6+[/b] equipped pieces.
 [*][b]Conditional bonuses (New in 1.6, expanded in 1.7.1)[/b] — Sets can contain sub-effects that toggle dynamically with your runtime state: dropping below 50% Health, night vs day, indoors vs out, a region of the map, your carry weight, your rank or standing in a faction, your bounty, your birthsign, werewolf form, or having a weapon drawn — singly or combined with AND/OR.
 [*][b]Conditional Rebalance (New in 1.7, deepened in 1.7.1, optional)[/b] — don't like the default bonuses? An optional submodule (both engines) replaces every set's effects with a spikier, condition-driven balance. As of 1.7.1 every set's weakness drawback is [i]situational[/i] and the new state vocabulary is threaded throughout. Delete it to go back — details below.
@@ -74,7 +74,7 @@ Enchanted/copied-item matching now checks an item's mesh in addition to its icon
 [*][b]Thematic trade-offs[/b] — many sets carry a mild Weakness at mid/max (metal → shock, fur/hide → fire, chitin/glass → frost, Altmer → magicka), giving each set an identity and counterplay (it applies to NPCs too).
 [*][b]Players and NPCs[/b] — fully-kitted NPCs benefit too (toggleable).
 [*][b]Tune it to taste[/b] — two independent sliders scale the [b]benefits[/b] and the [b]weakness drawbacks[/b] separately (25–300% / 0–300%). Want the flavour without the downside? Set drawbacks to 0. Want a bigger power fantasy? Crank benefits up. Changes apply instantly.
-[*][b]Enchant-friendly[/b] — set pieces are matched by inventory icon and mesh, as well as by ID, so a player-[i]enchanted[/i] copy of a set item still counts toward the bonus (toggleable). Icon alone isn't used for this — a separate item that merely reuses the same icon (some texture-pack/compilation add-ons do this) won't be pulled in by mistake.
+[*][b]Enchant-friendly[/b] — set pieces are matched by inventory icon and mesh, as well as by ID, so a player-[i]enchanted[/i] copy of a set item still counts toward the bonus (toggleable). Icon alone isn't used for this — a separate item that merely reuses the same icon (some texture-pack/compilation add-ons do this) won't be pulled in by mistake. The three Armor-class sets (Heavy/Medium/Light) don't need this at all — they're read straight off the item's own weight, so an enchanted piece keeps its class automatically, always.
 [*][b]Informative tooltips[/b] — hover a set piece to see the set, your current progress, and its effects; the active tier is highlighted. [b]Compact by default (new in 1.7)[/b]: just the active tier's effects — or a greyed preview of what the set gives when it isn't active — with Full (all tiers) and Minimal (bare set names) modes in the options. Built in on MWSE; on OpenMW it works with [url=https://www.nexusmods.com/morrowind/mods/56680]Inventory Extender[/url] installed.
 [*][b]No plugin required[/b] — every bonus spell is built at runtime in Lua. Nothing to clutter your load order, no record conflicts.
 [*][b]In-game options[/b] — toggle notifications, NPC bonuses, icon matching, debug logging, and the magnitude sliders (MWSE: MCM; OpenMW: Options › Scripts).
@@ -104,7 +104,7 @@ Prefer bonuses that react to the fight instead of flat stats? The [b]Conditional
 [/list]
 [b]New in 1.7.1 — every drawback is now situational.[/b] Instead of a flat penalty, each set's Weakness bites only in its thematic bad moment (at a slightly steeper magnitude): metals can't shed a bolt under a full pack, leathers and furs catch fire near a hearth, resin and chitin go brittle in the cold dark, Daedric punishes cowards who dodge the fight, Falmer burns in daylight. The condition vocabulary also widened — alongside health/fatigue/magicka, time, sun and location it now reads [b]carry weight, faction rank & standing, bounty, region, birthsign, werewolf form, and weapon stance[/b], singly or in AND/OR blocks. Werewolf-blood wakes on Nordic/Orsimer/Companions, Bosmer favours a light pack, Redguard resonates with the Warrior's stars.
 Because items commonly belong to several sets at once (a Chuzei helm is also Bonemold, Dunmer, and Native), overlapping sets are split into [b]lanes[/b] instead of stacking the same stats: the specific set keeps the full-strength identity, the broad cultural umbrellas add only echo-strength flats plus kinship conditionals, and the build tooling rejects any two co-maxable sets that duplicate a full-strength effect or spike the same effect on the same state.
-Both magnitude sliders still apply. All 140 sets are covered (73 base + 67 Tamriel Rebuilt), with 465 conditional effects in total; entries for absent add-ons are skipped. Only conditions that evaluate natively on [b]both engines[/b] are used, so MWSE and OpenMW behave identically.
+Both magnitude sliders still apply. All 137 sets are covered (70 base + 67 Tamriel Rebuilt), with 460 conditional effects in total; entries for absent add-ons are skipped. Only conditions that evaluate natively on [b]both engines[/b] are used, so MWSE and OpenMW behave identically.
 [b]Install:[/b] MWSE — copy [i]MWSE\mods\Static\SetBonusRebalance[/i] in alongside Set Bonus. OpenMW — add [i]OpenMW_SetBonusRebalance[/i] as a data directory and enable [i]setbonus_rebalance.omwscripts[/i] [b]after[/b] setbonus.omwscripts. Uninstall to return to the default balance; no save cleaning needed.
 [i]Full design notes and the complete per-set spell list ship as SetBonus_Rebalance_Reference.md in the download.[/i]
 

@@ -156,6 +156,13 @@ end
 -- requiring both keeps this fallback narrow to actual copies/enchants.
 -- Only resolvable in-game; file-scope registrations are covered by the bulk pass
 -- in the 'initialized' handler below.
+-- Weight-class umbrella sets are defined strictly by an item's engine weight
+-- class (Light/Medium/Heavy Armor -- see gen_class_sets.py), so they must NEVER
+-- be matched by icon/mesh: a Light piece can share a Medium piece's look, which
+-- would file it in the wrong class set. They're kept out of the icon index; a
+-- copy/enchant still joins them by id (weight roster) if it belongs. (Cloth is
+-- not weight-based, so it stays eligible for icon matching.)
+local ICON_EXCLUDED = { ["Heavy Armor"] = true, ["Medium Armor"] = true, ["Light Armor"] = true }
 local function iconMeshSig(obj)
     local icon = obj and obj.icon
     local mesh = obj and obj.mesh
@@ -164,7 +171,7 @@ local function iconMeshSig(obj)
     return icon:lower() .. "|" .. mesh:lower()
 end
 local function linkIconFor(itemId, setName)
-    if not gameInitialized then return end
+    if not gameInitialized or ICON_EXCLUDED[setName] then return end
     local obj = tes3.getObject(itemId)
     local sig = iconMeshSig(obj)
     if sig then
@@ -564,9 +571,12 @@ event.register(tes3.event.initialized, function()
         local obj = tes3.getObject(itemId)
         local sig = iconMeshSig(obj)
         if sig then
-            local dst = config.iconLinks[sig] or {}
-            for setName in pairs(setmap) do dst[setName] = true end
-            config.iconLinks[sig] = dst
+            for setName in pairs(setmap) do
+                if not ICON_EXCLUDED[setName] then  -- class sets: id-only, never by look
+                    config.iconLinks[sig] = config.iconLinks[sig] or {}
+                    config.iconLinks[sig][setName] = true
+                end
+            end
         end
     end
     log:debug("interop initialized: %d set(s) registered.", #config.setsArray)

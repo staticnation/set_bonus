@@ -1,19 +1,38 @@
 # Set Bonus — Changelog
 
-### 1.7.3 — Mythic artifacts + conditional drawback cleanup
+### 1.7.4 — Enchanted gear losing its weight-class set
+
+**Fixed**
+
+* **Enchanting a Heavy/Medium/Light Armor piece dropped it from its weight-class
+  set entirely.** The 1.7.3 fix excluded these three sets from icon/mesh
+  matching (correctly — a Light piece can share a Medium piece's look) but left
+  them matched by id roster only. Vanilla enchanting mints a new record with a
+  new id, which was never in that roster and had no fallback left to catch it,
+  so an enchanted piece silently stopped counting toward its set. Both engines
+  now read the item's weight class directly at match time — `tes3armor.weightClass`
+  on MWSE, and a live recomputation of the engine's own formula (GMSTs
+  `fLightMaxMod`/`fMedMaxMod` against the per-slot base weight GMST) on OpenMW
+  — instead of consulting a roster at all. This is correct for any armor piece,
+  enchanted or not, known to a roster or not, and applies alongside (not instead
+  of) an item's themed-set membership, so a Daedric Cuirass still reads as both
+  "Daedric" and "Heavy Armor".
+* **OpenMW: the Inventory Extender tooltip had the same bug independently** — it
+  keeps its own item index rather than sharing `global.lua`'s — and now carries
+  the same fix.
+
+**Removed**
+
+* **The Heavy/Medium/Light Armor id rosters.** Now that matching doesn't consult
+  them, the MWSE base set files, the OpenMW `data.lua` entries, and every
+  add-on's generated roster block (TR/OAAB/NOD/AATL) ship with empty item lists
+  for these three sets — nothing else changes, they're still defined, thresholds
+  and bonuses intact. `gen_class_sets.py`, the tool that generated those
+  rosters, is deprecated and now refuses to run.
+
+### 1.7.3 — Roster tooling + conditional drawback cleanup
 
 **Added**
-
-* **Mythic artifact sets (prototype).** Three one-to-two piece artifact sets that
-  reach full power the moment you equip them, each with a cost you actually feel:
-  **Boots of Blinding Speed** (enormous Speed and Athletics; you fight half-blind,
-  worse with no light), **Savior's Hide** (turns magic aside almost entirely, but
-  steel goes straight through — and it knits you back together at death's door),
-  and **Fists of Randagulf** (massive Strength; the Hand-to-Hand and Attack spikes
-  apply only with your **weapon sheathed**, and the gauntlets turn on you if you
-  draw a blade). Because a one-piece set's max threshold is 1, these can never
-  form a co-max pair with a 6-piece set, so they layer safely over the material
-  and class sets.
 
 * **`gen_rosters.py` — rule-based armour classifier.** Onboarding an armour mod no
   longer means hand-listing item ids: dump the mod's armour to
@@ -33,7 +52,29 @@
   installed. The Heavy/Medium/Light Armor sets are left to `gen_class_sets.py`,
   which already owns them.
 
+**Changed**
+
+* **OpenMW: equipment polling is now timer- and event-driven.** Each actor's
+  gear watcher no longer runs an `onUpdate` handler every frame; it drives itself
+  from a self-rescheduling `async` simulation timer (a generation counter keeps
+  exactly one poll chain alive per actor across re-activation and save/load). And
+  when the `Combat` interface is present, actors also refresh on being hit
+  (`I.Combat.addOnHitHandler`, ~3s cooldown, free out of combat) — which catches
+  the only case gear realistically changes fast, so NPCs can poll every 30s
+  instead of 2s without feeling stale. Without the interface it degrades to the
+  2s poll. The player still polls fast (0.5s) for snappy tier feedback.
+
 **Fixed**
+
+* **Weight-class sets could pick up the wrong item by icon (both engines).** The
+  Light / Medium / Heavy Armor sets are defined strictly by an item's engine
+  weight class, but the enchant/copy icon+mesh fallback could still pull an item
+  into one by appearance — e.g. a Light bonemold hat showing a *Medium Armor* set
+  bonus because it shared a Medium piece's look. The three weight-class sets are
+  now excluded from the icon/mesh index entirely: they match by id (the weight
+  roster) only, so a piece's class-set membership always follows its real weight.
+  Material, cultural, and faction sets (and Cloth, which isn't weight-based) still
+  use icon+mesh matching for enchanted/copied pieces.
 
 * **MWSE: Conditional drawbacks persisted after a tier drop or unequip.**
   Reported with Adamantium: dropping from 4 pieces to 2 adjusted the positive

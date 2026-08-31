@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-"""Populate the Heavy / Medium / Light Armor class sets from the armour dumps.
+"""DEPRECATED -- no longer needed and NOT SAFE to re-run as-is.
 
-Reads armor/*.txt (tes3conv dumps), buckets every armour piece by its weight
-class (the `Weight:... (Light|Medium|Heavy)` tag), and writes:
+This script used to populate the Heavy / Medium / Light Armor class sets from
+id rosters scraped out of the armour dumps. As of the enchanted-gear matching
+fix, those three sets are matched at runtime by each item's own engine weight
+class (tes3armor.weightClass on MWSE; a GMST-based recomputation of it on
+OpenMW -- see SetBonus/main.lua and OpenMW_SetBonus/scripts/SetBonus/global.lua),
+not by a pre-baked id list. An enchanted or copied item mints a new id that
+could never be kept current in a roster; reading the weight class directly
+sidesteps that entirely, for any item, roster or no roster.
 
-  * MWSE base set files   -> base-game (Morrowind+Tribunal+Bloodmoon) class rosters
-  * add-on class blocks   -> TR/OAAB/NOD/AATL pieces added to the class sets
-                             (a managed, re-generatable block per add-on main.lua)
-  * OpenMW data.lua       -> the 3 class-set item arrays = base + all add-ons
+The five files this script used to (re)write now intentionally ship with
+`items = {}` (MWSE base sets) or empty class-set arrays (OpenMW data.lua), and
+the TR/OAAB/NOD/AATL managed blocks were removed outright. Re-running this
+script unmodified would undo that cleanup and reintroduce the stale-roster
+bug. Kept only for reference/history; if the weight-class matching is ever
+reverted, this is the tool that used to regenerate the roster it depended on.
 
-Idempotent: re-run any time the dumps change. Shields are included (they carry a
-weight class). Add-on ids are de-duplicated against base.
-
-Usage:  python gen_class_sets.py
+Usage: do not run.
 """
 import re, os, sys
 
@@ -28,6 +33,7 @@ SOURCES = {
 }
 CLASSES = ["Heavy", "Medium", "Light"]
 SET_OF  = {"Heavy": "Heavy Armor", "Medium": "Medium Armor", "Light": "Light Armor"}
+
 ADDONS  = [("SetBonusTR", "registerTRSets", "TR"),
            ("SetBonusOAAB", "registerOAAB", "OAAB"),
            ("SetBonusNOD", "registerNOD", "NOD"),
@@ -152,4 +158,10 @@ def main():
 
 
 if __name__ == "__main__":
+    sys.exit(
+        "gen_class_sets.py is deprecated and disabled -- see the module "
+        "docstring at the top of this file. Weight-class matching no longer "
+        "reads a roster, so there is nothing left for this script to "
+        "regenerate; running it would just undo the cleanup."
+    )
     main()

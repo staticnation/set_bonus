@@ -6,7 +6,7 @@ A framework mod for **The Elder Scrolls III: Morrowind** that turns matched armo
 into a reward. Equip several pieces of the same set and gain a constant,
 lore-flavoured bonus that grows the more of the set you wear — Iron makes you
 tough, Glass keeps you nimble, Daedric wards off magic, Dark Brotherhood sharpens
-your sneak attacks. Over **140 sets** in all, each themed to its material,
+your sneak attacks. Over **135 sets** in all, each themed to its material,
 culture, or faction (with a nod to ESO-style set design).
 
 Because a single piece can belong to more than one set, bonuses **stack**, and
@@ -27,7 +27,7 @@ Ships in two flavours from a single codebase — pick the one for your engine:
 
 ## Features
 
-- **140 armour sets** across every vanilla material and culture, plus Tribunal
+- **135+ armour sets** across every vanilla material and culture, plus Tribunal
   and Bloodmoon.
 - **Three tiers per set** — bonuses scale up at 2, 4, and 6+ equipped pieces
   (thresholds are per-set configurable).
@@ -47,11 +47,6 @@ Ships in two flavours from a single codebase — pick the one for your engine:
 - **Full Armor-class sets (New in 1.7.1)** — the Heavy / Medium / Light Armor sets
   now include every piece of their weight class across the base game and all
   supported add-ons, generated straight from the armour data.
-- **Mythic artifact sets (New in 1.7.3)** — one- and two-piece artifacts that hit
-  full power the moment you equip them, each with a cost you feel: the Boots of
-  Blinding Speed (enormous Speed, you fight half-blind), the Savior's Hide
-  (turns magic aside, steel goes straight through), and the Fists of Randagulf
-  (massive Strength, but the real spikes need your **weapon sheathed**).
 - **Pre-fall / post-fall Snow Elves (New in 1.7.1)** — the Snow Prince's Ice
   Armour is its own proud, sun-walking set, distinct from the blind, sun-shunning
   **Falmer** (the Betrayed) — so noble Snow Elf gear no longer inherits the
@@ -374,7 +369,7 @@ armor/                       tes3conv armour dumps, one per content file —
 gen_rebalance.py             Validates the Conditional Rebalance and generates
                               the OpenMW rebalance data + reference doc
 gen_rebalance_bbcode.py      Same data as Nexus BBCode (forum-ready spell list)
-gen_class_sets.py            Populates Heavy/Medium/Light Armor from weight class
+gen_class_sets.py            Deprecated — see script docstring
 gen_rosters.py               Rule-based armour -> set classifier (see below)
 README.md                    Primary project documentation
 
@@ -392,7 +387,7 @@ are safe to re-run — they're idempotent.
 |--------|--------------|
 | `gen_rebalance.py` | Validates the Conditional Rebalance (effect/condition schema, cross-engine parity, per-tier caps, item-overlap **stacking rules**, and simulated spell-id collisions), then writes the OpenMW rebalance `data.lua` and `SetBonus_Rebalance_Reference.md`. Run it after any set-data change — it refuses to write if validation fails. |
 | `gen_rebalance_bbcode.py` | Emits the same rebalance spell list as Nexus BBCode. |
-| `gen_class_sets.py` | Rebuilds the Heavy/Medium/Light Armor sets from each item's engine weight-class tag. |
+| `gen_class_sets.py` | **Deprecated, disabled.** Used to rebuild the Heavy/Medium/Light Armor rosters from each item's engine weight-class tag; those three sets are now matched live at runtime instead (see `SetBonus_Changelog.md`, 1.7.4), so there's nothing left for it to generate. |
 | `gen_rosters.py` | Classifies armour into sets by rule (below). |
 
 ### Adding a new armour mod
@@ -414,17 +409,19 @@ Writes are **strictly additive** — items are only ever added, never removed �
 hand-curated rosters survive a re-run. Base-game items go to the MWSE base set
 files, add-on items to that add-on's managed `addItems` block, and everything to
 the OpenMW combined `data.lua`, so the base mod still works without add-ons. The
-Armor-class sets are left to `gen_class_sets.py`, which owns them.
+three Armor-class sets are skipped entirely: they're matched live at runtime
+from each item's own weight class (see `SetBonus_Changelog.md`, 1.7.4), so
+`gen_rosters.py` has nothing to write there and never did.
 
 Re-run `gen_rebalance.py` afterwards to re-validate. Note that adding items
 changes how easily sets complete, so review `--diff` before applying.
 
 ## Changelog
 
-See `SetBonus_Changelog.md`. Current release: **1.7.3** — Mythic artifact sets
-(Boots of Blinding Speed, Savior's Hide, Fists of Randagulf), the rule-based
-roster classifier, and a fix for conditional drawbacks lingering after a tier
-drop. Built on 1.7.1's fully populated Armor-class sets, the wider cross-engine
+See `SetBonus_Changelog.md`. Current release: **1.7.4** — enchanted Heavy/Medium/
+Light Armor pieces losing their weight-class set is fixed; the id rosters those
+three sets used to depend on are gone.
+Built on 1.7.1's fully populated Armor-class sets, the wider cross-engine
 condition vocabulary, situational Rebalance drawbacks, and the Flag Companion.
 
 ## Credits & license
