@@ -116,8 +116,55 @@ local function listHas(list, si)
     for _, x in ipairs(list) do if x == si then return true end end
     return false
 end
+-- Weight-class umbrella sets are defined strictly by an item's engine weight
+-- class (Light/Medium/Heavy Armor), so they must NEVER be matched by icon/mesh:
+-- a Light piece can share a Medium piece's look and would be filed in the wrong
+-- class set. They're kept out of the icon index (id/weight roster only). Cloth
+-- is not weight-based, so it stays eligible.
+local ICON_EXCLUDED = { ['Heavy Armor'] = true, ['Medium Armor'] = true, ['Light Armor'] = true }
+
+-- Weight-class umbrella sets are read straight off each armor piece's own
+-- weight and slot, using the same formula the engine uses to decide Light vs
+-- Medium vs Heavy (GMSTs fLightMaxMod/fMedMaxMod against the per-slot base
+-- weight GMST), instead of the pre-baked item-id roster. A vanilla-enchanted
+-- item is a new record with a new id that the roster (and, deliberately, the
+-- icon/mesh fallback above) can't catch -- but it keeps the source item's
+-- weight and slot, so recomputing the class here is immune to that new id.
+-- No roster, icon/mesh fallback, or Consistent-Enchanting-style base-id
+-- tracking is needed for these three sets specifically.
+local ARMOR_SLOT_WEIGHT_GMST = {
+    [types.Armor.TYPE.Helmet] = 'iHelmWeight',
+    [types.Armor.TYPE.LPauldron] = 'iPauldronWeight',
+    [types.Armor.TYPE.RPauldron] = 'iPauldronWeight',
+    [types.Armor.TYPE.Cuirass] = 'iCuirassWeight',
+    [types.Armor.TYPE.LGauntlet] = 'iGauntletWeight',
+    [types.Armor.TYPE.RGauntlet] = 'iGauntletWeight',
+    [types.Armor.TYPE.LBracer] = 'iGauntletWeight',
+    [types.Armor.TYPE.RBracer] = 'iGauntletWeight',
+    [types.Armor.TYPE.Greaves] = 'iGreavesWeight',
+    [types.Armor.TYPE.Boots] = 'iBootsWeight',
+    [types.Armor.TYPE.Shield] = 'iShieldWeight',
+}
+local function armorWeightClassName(obj)
+    if not types.Armor.objectIsInstance(obj) then return nil end
+    local rec = types.Armor.record(obj)
+    local gmstName = rec and ARMOR_SLOT_WEIGHT_GMST[rec.type]
+    if not gmstName then return nil end
+    local baseWeight = core.getGMST(gmstName)
+    if type(baseWeight) ~= 'number' or baseWeight <= 0 then return nil end
+    local lightMod = core.getGMST('fLightMaxMod')
+    local medMod = core.getGMST('fMedMaxMod')
+    if type(lightMod) ~= 'number' then lightMod = 0.6 end
+    if type(medMod) ~= 'number' then medMod = 0.9 end
+    local w = rec.weight or 0
+    if w <= baseWeight * lightMod then return 'Light Armor'
+    elseif w <= baseWeight * medMod then return 'Medium Armor'
+    else return 'Heavy Armor' end
+end
+
 -- Map one set's item icon+mesh signatures to its index (deduped).
 local function linkIconsForSet(si)
+    if ICON_EXCLUDED[data[si].name] then return end
     for _, it in ipairs(data[si].items) do
         local icon, mesh = iconMeshForRecordId(it)
         local sig = iconMeshSig(icon, mesh)
@@ -578,7 +625,11 @@ local function equippedList(actor)
         if obj then
             local id = obj.recordId and obj.recordId:lower() or nil
             local icon, mesh = iconMeshForObject(obj)
-            list[#list + 1] = { id = id, icon = iconMeshSig(icon, mesh) }
+            list[#list + 1] = {
+                id = id,
+                icon = iconMeshSig(icon, mesh),
+                weightClass = armorWeightClassName(obj),
+            }
         end
     end
     return list
@@ -630,15 +681,29 @@ local function recompute(actor)
                 local byIcon = iconLink[it.icon]
                 if byIcon then for _, si in ipairs(byIcon) do candidates[si] = true end end
             end
+            -- The item's own computed weight class always counts, even for an
+            -- enchanted/unlisted piece with no id-link and no icon-link (weight
+            -- sets are deliberately excluded from the icon fallback -- see
+            -- ICON_EXCLUDED). This is on top of, not instead of, any themed set
+            -- matched above (a Daedric Cuirass is both "Daedric" AND "Heavy Armor").
+            if it.weightClass then
+                local wsi = byName[it.weightClass:lower()]
+                if wsi then candidates[wsi] = true end
+            end
         end
         for si in pairs(candidates) do
             local s = data[si]
+            local wcName = ICON_EXCLUDED[s.name] and s.name or nil
             local count = 0
             for _, it in ipairs(eq) do
-                local byId = it.id and itemLink[it.id]
-                if listHas(byId, si)
-                    or (not byId and useIcon and listHas(it.icon and iconLink[it.icon], si)) then
-                    count = count + 1
+                if wcName then
+                    if it.weightClass == wcName then count = count + 1 end
+                else
+                    local byId = it.id and itemLink[it.id]
+                    if listHas(byId, si)
+                        or (not byId and useIcon and listHas(it.icon and iconLink[it.icon], si)) then
+                        count = count + 1
+                    end
                 end
             end
             local tier = tierFor(s, count)

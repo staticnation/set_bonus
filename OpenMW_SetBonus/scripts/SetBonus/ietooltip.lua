@@ -80,39 +80,98 @@ local function iconForObj(o)
         end
     end
 end
-local itemLink, iconLink, built = {}, {}, false
+-- Weight-class umbrella sets are decided by engine weight class, so they must
+-- never be matched by icon/mesh (a Light piece can share a Medium piece's look).
+-- Excluded from the icon index here too, matching global.lua.
+local ICON_EXCLUDED = { ['Heavy Armor'] = true, ['Medium Armor'] = true, ['Light Armor'] = true }
+
+-- Weight class is read straight off each armor piece's own weight and slot
+-- (same formula the engine uses: GMSTs fLightMaxMod/fMedMaxMod against the
+-- per-slot base weight GMST) rather than from the item-id roster above. A
+-- vanilla-enchanted item is a new record the roster (and the icon/mesh
+-- fallback, deliberately, for these three sets) can't catch, but it keeps the
+-- source item's weight and slot -- so this mirrors global.lua's fix and keeps
+-- the tooltip correct for enchanted gear too.
+local ARMOR_SLOT_WEIGHT_GMST = {
+    [types.Armor.TYPE.Helmet] = 'iHelmWeight',
+    [types.Armor.TYPE.LPauldron] = 'iPauldronWeight',
+    [types.Armor.TYPE.RPauldron] = 'iPauldronWeight',
+    [types.Armor.TYPE.Cuirass] = 'iCuirassWeight',
+    [types.Armor.TYPE.LGauntlet] = 'iGauntletWeight',
+    [types.Armor.TYPE.RGauntlet] = 'iGauntletWeight',
+    [types.Armor.TYPE.LBracer] = 'iGauntletWeight',
+    [types.Armor.TYPE.RBracer] = 'iGauntletWeight',
+    [types.Armor.TYPE.Greaves] = 'iGreavesWeight',
+    [types.Armor.TYPE.Boots] = 'iBootsWeight',
+    [types.Armor.TYPE.Shield] = 'iShieldWeight',
+}
+local function armorWeightClassName(obj)
+    if not (obj and types.Armor.objectIsInstance(obj)) then return nil end
+    local rec = types.Armor.record(obj)
+    local gmstName = rec and ARMOR_SLOT_WEIGHT_GMST[rec.type]
+    if not gmstName then return nil end
+    local baseWeight = core.getGMST(gmstName)
+    if type(baseWeight) ~= 'number' or baseWeight <= 0 then return nil end
+    local lightMod = core.getGMST('fLightMaxMod')
+    local medMod = core.getGMST('fMedMaxMod')
+    if type(lightMod) ~= 'number' then lightMod = 0.6 end
+    if type(medMod) ~= 'number' then medMod = 0.9 end
+    local w = rec.weight or 0
+    if w <= baseWeight * lightMod then return 'Light Armor'
+    elseif w <= baseWeight * medMod then return 'Medium Armor'
+    else return 'Heavy Armor' end
+end
+
+local itemLink, iconLink, byName, built = {}, {}, {}, false
 local function build()
     for si, s in ipairs(data) do
+        byName[s.name:lower()] = si
+        local iconOk = not ICON_EXCLUDED[s.name]
         for _, it in ipairs(s.items) do
             local k = it:lower()
             itemLink[k] = itemLink[k] or {}; itemLink[k][si] = true
-            local ic = iconForId(it)
-            if ic then iconLink[ic] = iconLink[ic] or {}; iconLink[ic][si] = true end
+            if iconOk then
+                local ic = iconForId(it)
+                if ic then iconLink[ic] = iconLink[ic] or {}; iconLink[ic][si] = true end
+            end
         end
     end
     built = true
 end
 local function iconMatchOn() return opt(cfg, 'matchByIcon', true) end
-local function setsForRecord(id, icon)
+local function setsForRecord(id, icon, obj)
     local sids = {}
     -- Icon is a FALLBACK ONLY: if the record id is known, trust it and ignore the
     -- icon, so mod helms reusing a vanilla icon can't add unrelated sets.
     if id and itemLink[id] then
         for si in pairs(itemLink[id]) do sids[si] = true end
-        return sids
+    elseif iconMatchOn() and icon and iconLink[icon] then
+        for si in pairs(iconLink[icon]) do sids[si] = true end
     end
-    if iconMatchOn() and icon and iconLink[icon] then for si in pairs(iconLink[icon]) do sids[si] = true end end
+    -- The item's own weight class always applies too (alongside any themed set
+    -- matched above -- a Daedric Cuirass is both "Daedric" AND "Heavy Armor").
+    local wc = armorWeightClassName(obj)
+    local wsi = wc and byName[wc:lower()]
+    if wsi then sids[wsi] = true end
     return sids
 end
 local function equippedEntries()
     local list = {}
     for _, slot in pairs(types.Actor.EQUIPMENT_SLOT) do
         local o = types.Actor.getEquipment(self, slot)
-        if o then list[#list + 1] = { id = o.recordId and o.recordId:lower() or nil, icon = iconForObj(o) } end
+        if o then
+            list[#list + 1] = {
+                id = o.recordId and o.recordId:lower() or nil,
+                icon = iconForObj(o),
+                weightClass = armorWeightClassName(o),
+            }
+        end
     end
     return list
 end
 local function inSet(entry, si)
+    local wcName = ICON_EXCLUDED[data[si].name] and data[si].name or nil
+    if wcName then return entry.weightClass == wcName end
     -- Icon fallback only when the id isn't recognised at all (see setsForRecord).
     if entry.id and itemLink[entry.id] then
         return itemLink[entry.id][si] == true
@@ -235,7 +294,7 @@ local function modifier(item, layout)
         if not opt(pcfg, 'tooltip', true) then return layout end
         if not built then build() end
         local id = item.recordId and item.recordId:lower() or nil
-        local sids = setsForRecord(id, iconForObj(item))
+        local sids = setsForRecord(id, iconForObj(item), item)
         dbg('tooltip for', id, next(sids) and 'in a set' or 'no set')
         if not next(sids) then return layout end
         local content = innerContentOf(layout)
